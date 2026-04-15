@@ -1,0 +1,46 @@
+import pandas as pd
+from nba_api.stats.static import players
+from nba_api.stats.endpoints import playergamelog
+from datetime import datetime, timedelta
+
+def sistema_expertos_nba_pro(nombre_jugador):
+    try:
+        nba_players = players.get_players()
+        player = [p for p in nba_players if p['full_name'].lower() == nombre_jugador.lower()]
+        
+        if not player:
+            print(f"\n❌ Jugador '{nombre_jugador}' no encontrado.")
+            return
+
+        pid = player[0]['id']
+        log = playergamelog.PlayerGameLog(player_id=pid, season='2025-26').get_data_frames()[0]
+        u10 = log.head(10).copy()
+        
+        # --- LÓGICA DE FATIGA (Back-to-Back) ---
+        hoy = datetime.now()
+        ayer = (hoy - timedelta(days=1)).strftime('%b %d, %[1]Y').replace(' 0', ' ')
+        jugo_ayer = any(ayer in fecha for fecha in u10['GAME_DATE'].head(1))
+        
+        print(f"\n" + "═"*78)
+        print(f"🏀 REPORTE DE RENDIMIENTO: {player[0]['full_name'].upper()}")
+        if jugo_ayer:
+            print(f"⚠️ ¡ALERTA DE FATIGA!: Jugó ayer. Posible baja de minutos o descanso.")
+        else:
+            print(f"✅ DESCANSO: No jugó ayer. Piernas frescas para hoy.")
+        print("═"*78)
+        
+        # Tabla y Proyecciones (Igual que antes pero con ajuste de fatiga)
+        pts_avg = u10['PTS'].mean()
+        if jugo_ayer: pts_avg *= 0.85 # Reducción del 15% por cansancio
+        
+        print(f"📈 PROYECCIÓN AJUSTADA POR FATIGA:")
+        print(f"   🔹 PUNTOS: {pts_avg:.1f} {'⬇️ (Factor cansancio)' if jugo_ayer else ''}")
+        print(f"   👉 RECOMENDACIÓN: {'OJO con el UNDER (Menos)' if jugo_ayer else 'Sólido para el OVER (Más)'}")
+        print("═"*78 + "\n")
+
+    except Exception as e:
+        print(f"Error: {e}")
+
+if __name__ == "__main__":
+    target = input("Ingresa el jugador: ")
+    sistema_expertos_nba_pro(target)
