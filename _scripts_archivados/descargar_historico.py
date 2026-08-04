@@ -1,7 +1,7 @@
 ﻿import requests
 import pandas as pd
 
-API_KEY = "7be9c4250da301a68726beedbe2b382a"
+API_KEY = "[APIFOOTBALL_KEY_REMOVIDA]"
 BASE_URL = "https://v3.football.api-sports.io"
 
 LIGAS_HISTORICO = [

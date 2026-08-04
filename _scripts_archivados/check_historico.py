@@ -1,5 +1,5 @@
 ﻿import requests
-headers = {'x-apisports-key': '7be9c4250da301a68726beedbe2b382a'}
+headers = {'x-apisports-key': '[APIFOOTBALL_KEY_REMOVIDA]'}
 
 ligas = [
     (39, 'Premier League', [2023, 2024]),

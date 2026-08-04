@@ -1,0 +1,26 @@
+﻿import requests
+
+API_KEY = "[XAI_KEY_REMOVIDA]"
+
+headers = {
+    "Authorization": f"Bearer {API_KEY}",
+    "Content-Type": "application/json"
+}
+
+prompt = """Eres un analista experto de futbol. Este partido AUN NO SE HA JUGADO: Deportivo Pasto vs Aguilas Doradas (Liga Colombia), fecha: 2026-08-01.
+
+Busca informacion actual sobre la posicion en tabla del Clausura 2026 de ambos equipos. Da un ajuste con explicacion breve de 30-50 palabras. Al final escribe SOLO un JSON en una linea:
+
+{"ajuste_local": <numero entre -15 y 15>, "ajuste_visitante": <numero entre -15 y 15>, "explicacion": "<explicacion>"}"""
+
+payload = {
+    "model": "grok-4-fast",
+    "messages": [{"role": "user", "content": prompt}],
+    "max_tokens": 1000,
+    "search_parameters": {"mode": "auto"}
+}
+
+resp = requests.post("https://api.x.ai/v1/chat/completions", headers=headers, json=payload, timeout=45)
+print("Status:", resp.status_code)
+print("Respuesta completa:")
+print(resp.text[:2000])

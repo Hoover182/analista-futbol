@@ -1,10 +1,8 @@
 ﻿import requests
 import pandas as pd
-import time
 
-API_KEY = "7be9c4250da301a68726beedbe2b382a"
+API_KEY = "[APIFOOTBALL_KEY_REMOVIDA]"
 BASE_URL = "https://v3.football.api-sports.io"
-
 CSV_SALIDA = "futbol_partidos.csv"
 
 
@@ -19,26 +17,31 @@ def api_get(endpoint, params=None):
 
 df = pd.read_csv(CSV_SALIDA)
 
-# Solo partidos historicos sin stats (corners = 0 y tarjetas = 0 y fixture_id valido)
+# Partidos FT con corners = 0 Y tarjetas = 0 (datos incompletos)
 sin_stats = df[
     (df["corners_local"] == 0) &
+    (df["corners_visitante"] == 0) &
     (df["tarjetas_local"] == 0) &
+    (df["tarjetas_visitante"] == 0) &
     (df["fixture_id"].notna()) &
     (df["estado"] == "FT")
 ].copy()
 
-print(f"Partidos sin stats: {len(sin_stats)}")
-print(f"Requests necesarios: {len(sin_stats)}")
-print(f"Iniciando descarga...")
+print(f"Partidos con stats incompletas: {len(sin_stats)}")
+print(f"Iniciando actualizacion...")
 
 actualizados = 0
-errores = 0
+sin_datos = 0
 
 for idx, row in sin_stats.iterrows():
     fixture_id = int(row["fixture_id"])
     try:
         data = api_get("fixtures/statistics", params={"fixture": fixture_id})
         stats = data.get("response", [])
+
+        if not stats:
+            sin_datos += 1
+            continue
 
         corners_local = corners_visitante = 0
         tarjetas_local = tarjetas_visitante = 0
@@ -73,15 +76,14 @@ for idx, row in sin_stats.iterrows():
         df.at[idx, "tiros_total_visitante"] = tiros_total_visitante
 
         actualizados += 1
-        if actualizados % 100 == 0:
+        if actualizados % 200 == 0:
             df.to_csv(CSV_SALIDA, index=False, encoding="utf-8-sig")
             print(f"  {actualizados}/{len(sin_stats)} actualizados...")
 
     except Exception as e:
-        errores += 1
         continue
 
 df.to_csv(CSV_SALIDA, index=False, encoding="utf-8-sig")
-print(f"\n✅ Stats historicas completadas")
+print(f"\n✅ Completado")
 print(f"Actualizados: {actualizados}")
-print(f"Errores: {errores}")
+print(f"Sin datos en API: {sin_datos}")
