@@ -1,0 +1,1289 @@
+def _safe(v):
+    try:
+        f = float(v)
+        return 0.0 if f != f else round(f, 2)
+    except:
+        return 0.0
+
+import os
+JUGADORES_DATA_DIR = os.path.join(os.path.dirname(__file__), "jugadores_data")
+import sys
+import pandas as pd
+from datetime import datetime
+
+# Apuntar al CSV correcto
+CSV_PATH = os.path.join(os.path.dirname(__file__), "futbol_partidos.csv")
+
+# Agregar services al path para imports
+sys.path.insert(0, os.path.dirname(__file__))
+
+from data_loader import (
+    cargar_partidos_csv as _cargar_csv,
+    obtener_equipo_por_nombre,
+    filtrar_ligas_validas,
+    obtener_partidos_hoy_futbol,
+    obtener_partidos_mas_recientes,
+    obtener_partidos_rango_futbol,
+)
+from football_model import (
+    estadisticas_equipo_ultimos10,
+    ultimos_enfrentamientos_directos,
+    ajustar_medias_con_rival,
+    obtener_partidos_equipo,
+)
+from simulator import simular_partido_futbol
+
+LIGAS_IDS = {
+    "Champions League": (2, None),
+    "Europa League": (3, None),
+    "Conference League": (848, None),
+    "Premier League": (39, None),
+    "La Liga": (140, None),
+    "Serie A": (135, None),
+    "Bundesliga": (78, None),
+    "Ligue 1": (61, None),
+    "Primeira Liga": (94, None),
+    "Eredivisie": (88, None),
+    "MLS": (253, 2026),
+    "Liga MX": (262, None),
+    "Copa Libertadores": (13, 2026),
+    "Copa Sudamericana": (11, 2026),
+    "Liga Profesional Argentina": (128, 2026),
+    "Brasileirao": (71, 2026),
+    "Liga Colombia": (239, 2026),
+    "Liga Pro Ecuador": (242, 2026),
+    "Primera Division Chile": (265, 2026),
+    "Primera Division Uruguay": (268, 2026),
+    "Primera Division Peru": (281, 2026),
+    "Primera Division Venezuela": (337, 2026),
+    "Primera Division Bolivia": (344, 2026),
+    "Division Profesional Paraguay": (250, 2026),
+    "Liga MX": (262, None),
+    "MLS": (253, 2026),
+    "Copa Argentina": (130, 2026),
+    "Copa Chile": (267, 2026),
+    "Copa Colombia": (241, 2026),
+    "Copa Uruguay": (270, 2026),
+    "Copa do Brasil": (73, 2026),
+    "Recopa Sudamericana": (12, 2026),
+    "Mundial 2026": (1, 2026),
+}
+
+ORDEN_COMPETENCIAS = [
+    "Champions League", "Europa League", "Conference League",
+    "Premier League", "La Liga", "Serie A", "Bundesliga", "Ligue 1",
+    "Primeira Liga", "Eredivisie", "MLS", "Liga MX",
+    "Copa Libertadores", "Copa Sudamericana",
+    "Liga Profesional Argentina", "Brasileirao",
+    "Liga Colombia", "Liga Pro Ecuador",
+]
+
+OPUESTOS = {
+    "Over 1.5 goles": "Under 1.5 goles", "Under 1.5 goles": "Over 1.5 goles",
+    "Over 2.5 goles": "Under 2.5 goles", "Under 2.5 goles": "Over 2.5 goles",
+    "Over 3.5 goles": "Under 3.5 goles", "Under 3.5 goles": "Over 3.5 goles",
+    "Over 7.5 corners": "Under 7.5 corners", "Under 7.5 corners": "Over 7.5 corners",
+    "Over 8.5 corners": "Under 8.5 corners", "Under 8.5 corners": "Over 8.5 corners",
+    "Over 9.5 corners": "Under 9.5 corners", "Under 9.5 corners": "Over 9.5 corners",
+    "Over 2.5 tarjetas": "Under 2.5 tarjetas", "Under 2.5 tarjetas": "Over 2.5 tarjetas",
+    "Over 3.5 tarjetas": "Under 3.5 tarjetas", "Under 3.5 tarjetas": "Over 3.5 tarjetas",
+    "Gana local": "Gana visitante", "Gana visitante": "Gana local",
+}
+
+
+LIGAS_NIVEL_1 = [
+    "Premier League", "La Liga", "Serie A", "Bundesliga", "Ligue 1", "Primeira Liga",
+    "Eredivisie", "Pro League Belgica", "Premier League Egipto", "Pro League Arabia",
+    "Super Lig Turquia", "Liga Profesional Argentina", "Brasileirao", "Liga Colombia",
+    "Primera Division Chile", "Primera Division Uruguay", "Primera Division Peru",
+    "Liga Pro Ecuador", "Primera Division Venezuela", "Primera Division Bolivia",
+    "Division Profesional Paraguay", "Liga MX", "MLS",
+]
+
+_cache_equipos_nivel1 = None
+
+def obtener_equipos_nivel1(df):
+    """Devuelve el set de equipos que juegan en ligas de Primera division.
+    Se cachea en memoria porque el CSV no cambia dentro del mismo proceso."""
+    global _cache_equipos_nivel1
+    if _cache_equipos_nivel1 is not None:
+        return _cache_equipos_nivel1
+    equipos = set()
+    for liga in LIGAS_NIVEL_1:
+        sub = df[df["liga"] == liga]
+        equipos.update(sub["equipo_local"].unique())
+        equipos.update(sub["equipo_visitante"].unique())
+    _cache_equipos_nivel1 = equipos
+    return equipos
+
+
+import unicodedata
+
+_cache_equipos_todos = None
+
+
+def _normalizar_nombre(nombre):
+    """Quita tildes y pasa a minusculas para comparacion tolerante."""
+    sin_tildes = unicodedata.normalize('NFKD', nombre).encode('ascii', 'ignore').decode('ascii')
+    return sin_tildes.lower().strip()
+
+
+def resolver_nombre_equipo(df, nombre_input):
+    """Resuelve un nombre de equipo (posiblemente sin tilde o con mayusculas
+    distintas) al nombre exacto tal como esta guardado en el CSV.
+    Devuelve (nombre_resuelto, hubo_correccion_aproximada).
+    Si no encuentra nada ni por aproximacion, devuelve (nombre_input, False)."""
+    global _cache_equipos_todos
+    if _cache_equipos_todos is None:
+        equipos = set(df["equipo_local"].dropna().unique()) | set(df["equipo_visitante"].dropna().unique())
+        _cache_equipos_todos = {_normalizar_nombre(eq): eq for eq in equipos}
+
+    nombre_normalizado = _normalizar_nombre(nombre_input)
+
+    if nombre_normalizado in _cache_equipos_todos:
+        return _cache_equipos_todos[nombre_normalizado], False
+
+    from difflib import get_close_matches
+    candidatos = get_close_matches(nombre_normalizado, _cache_equipos_todos.keys(), n=1, cutoff=0.80)
+    if candidatos:
+        nombre_resuelto = _cache_equipos_todos[candidatos[0]]
+        return nombre_resuelto, True
+
+    return nombre_input, False
+
+
+def categoria_equipo(nombre, equipos_nivel1):
+    """Devuelve 'Primera' si el equipo juega habitualmente en una liga top,
+    o 'Categoria menor' si solo aparece en copas (posible Segunda/Tercera/amateur)."""
+    return "Primera" if nombre in equipos_nivel1 else "Categoria menor"
+
+
+def cargar_df():
+    import os
+    original = os.getcwd()
+    os.chdir(os.path.dirname(__file__))
+    df = _cargar_csv()
+    os.chdir(original)
+    if not df.empty:
+        df = filtrar_ligas_validas(df)
+    return df
+
+
+def get_temporada(liga_nombre):
+    hoy = datetime.now()
+    temporada_europea = hoy.year if hoy.month >= 8 else hoy.year - 1
+    if liga_nombre in LIGAS_IDS:
+        liga_id, temporada_fija = LIGAS_IDS[liga_nombre]
+        temporada = temporada_fija if temporada_fija else temporada_europea
+        return liga_id, temporada
+    return None, temporada_europea
+
+
+def simular(df, local, visitante):
+    local_resuelto, corr_local = resolver_nombre_equipo(df, local)
+    visitante_resuelto, corr_visitante = resolver_nombre_equipo(df, visitante)
+    if corr_local:
+        print(f"AVISO: '{local}' no coincide exacto, usando '{local_resuelto}' (correccion aproximada)")
+    if corr_visitante:
+        print(f"AVISO: '{visitante}' no coincide exacto, usando '{visitante_resuelto}' (correccion aproximada)")
+    local, visitante = local_resuelto, visitante_resuelto
+
+    stats_a = estadisticas_equipo_ultimos10(df, local)
+    stats_b = estadisticas_equipo_ultimos10(df, visitante)
+    if stats_a is None or stats_b is None:
+        return None, None, None
+    h2h = ultimos_enfrentamientos_directos(df, local, visitante, n=5)
+
+    # ---- Filtros adicionales de tarjetas (arbitro, presion, agresividad, clasico) ----
+    try:
+        from modelo_presion import calcular_tabla, calcular_presion, calcular_indice_agresividad, es_clasico
+        liga_partido = df[(df["equipo_local"] == local) | (df["equipo_visitante"] == local)]["liga"].iloc[0]
+        tabla_liga = calcular_tabla(df, liga_partido)
+
+        presion_local = calcular_presion(tabla_liga, local)
+        presion_visitante = calcular_presion(tabla_liga, visitante)
+        presion_promedio = (presion_local + presion_visitante) / 2
+
+        agresividad_local, _ = calcular_indice_agresividad(df, local, liga_partido)
+        agresividad_visitante, _ = calcular_indice_agresividad(df, visitante, liga_partido)
+        agresividad_promedio = (agresividad_local + agresividad_visitante) / 2
+
+        clasico = es_clasico(local, visitante)
+
+        # Multiplicador combinado: base 1.0, cada factor puede sumar hasta +25%
+        multiplicador_tarjetas = 1.0
+        multiplicador_tarjetas += presion_promedio * 0.15
+        multiplicador_tarjetas += agresividad_promedio * 0.10
+        # NOTA: peso de clasico calibrado para futbol sudamericano (mas fisico).
+        # Si se agregan ligas europeas, este peso deberia ser mas bajo alli,
+        # ya que los derbis europeos tienden a menos tarjetas que los sudamericanos.
+        if clasico:
+            multiplicador_tarjetas += 0.35
+        multiplicador_tarjetas = min(multiplicador_tarjetas, 1.5)
+
+        # ---- Multiplicador de corners basado en intensidad ofensiva reciente ----
+        from modelo_presion import calcular_indice_intensidad_ofensiva
+        intensidad_local, _ = calcular_indice_intensidad_ofensiva(df, local, liga_partido)
+        intensidad_visitante, _ = calcular_indice_intensidad_ofensiva(df, visitante, liga_partido)
+        intensidad_promedio = (intensidad_local + intensidad_visitante) / 2
+        # Base 1.0, hasta +/-20% segun que tan ofensivos vienen ambos equipos
+        multiplicador_corners = 0.9 + (intensidad_promedio * 0.3)
+        multiplicador_corners = max(0.8, min(multiplicador_corners, 1.3))
+
+        # ---- Multiplicador de goles basado en intensidad ofensiva individual ----
+        # A diferencia de corners/tarjetas (ajuste combinado), goles se ajusta
+        # por equipo por separado, porque afecta goles_a y goles_b antes de
+        # simular_partido_futbol(), propagandose de forma coherente a 1X2,
+        # handicap y ambos marcan. Rango mas angosto que corners (+/-10-15%
+        # vs +/-20%) porque un mismo % mueve mas la linea con una media base
+        # mas baja (~2.5 goles totales vs ~9-10 corners totales).
+        multiplicador_goles_local = 0.95 + (intensidad_local * 0.10)
+        multiplicador_goles_local = max(0.9, min(multiplicador_goles_local, 1.15))
+        multiplicador_goles_visitante = 0.95 + (intensidad_visitante * 0.10)
+        multiplicador_goles_visitante = max(0.9, min(multiplicador_goles_visitante, 1.15))
+    except Exception:
+        multiplicador_tarjetas = 1.0
+        multiplicador_corners = 1.0
+        multiplicador_goles_local = 1.0
+        multiplicador_goles_visitante = 1.0
+    goles_a, goles_b, corners_a, corners_b, tarjetas = ajustar_medias_con_rival(
+        stats_a, stats_b, h2h, equipo_local=local, equipo_visitante=visitante
+    )
+    goles_a = goles_a * multiplicador_goles_local
+    goles_b = goles_b * multiplicador_goles_visitante
+    sim = simular_partido_futbol(
+        goles_a, goles_b,
+        stats_a["std_goles_favor"], stats_b["std_goles_favor"],
+        corners_a, corners_b, tarjetas
+    )
+    # Aplicar el multiplicador de arbitro/presion/agresividad/clasico a las tarjetas
+    if multiplicador_tarjetas != 1.0 and "tarjetas_totales_proj" in sim:
+        sim["tarjetas_totales_proj"] = sim["tarjetas_totales_proj"] * multiplicador_tarjetas
+        if "tarjetas_ou" in sim:
+            import numpy as np
+            media_ajustada = max(sim["tarjetas_totales_proj"], 0.1)
+            valores_sim = np.random.poisson(media_ajustada, 10000)
+            for linea_ou in list(sim["tarjetas_ou"].keys()):
+                sim["tarjetas_ou"][linea_ou] = {
+                    "over": float(np.mean(valores_sim > linea_ou)),
+                    "under": float(np.mean(valores_sim < linea_ou)),
+                }
+
+    # Aplicar el multiplicador de intensidad ofensiva a los corners
+    if multiplicador_corners != 1.0 and "corners_totales_proj" in sim:
+        sim["corners_totales_proj"] = sim["corners_totales_proj"] * multiplicador_corners
+        if "corners_ou" in sim:
+            import numpy as np
+            media_ajustada_c = max(sim["corners_totales_proj"], 0.1)
+            valores_sim_c = np.random.poisson(media_ajustada_c, 10000)
+            for linea_ou in list(sim["corners_ou"].keys()):
+                sim["corners_ou"][linea_ou] = {
+                    "over": float(np.mean(valores_sim_c > linea_ou)),
+                    "under": float(np.mean(valores_sim_c < linea_ou)),
+                }
+
+    return sim, stats_a, stats_b
+
+
+def calcular_top3(sim, stats_a=None, stats_b=None):
+    stats_ok = (
+        stats_a and stats_b and
+        stats_a.get("n_partidos_stats", 0) >= 3 and
+        stats_b.get("n_partidos_stats", 0) >= 3
+    )
+    candidatos = [
+        ("Gana local", sim["prob_local"]),
+        ("Empate", sim["prob_empate"]),
+        ("Gana visitante", sim["prob_visitante"]),
+        ("1X (Local o Empate)", sim["prob_1x"]),
+        ("X2 (Empate o Visitante)", sim["prob_x2"]),
+        ("Ambos marcan", sim["prob_ambos_marcan"]),
+        ("Over 1.5 goles", sim["goles_ou"][1.5]["over"]),
+        ("Under 1.5 goles", sim["goles_ou"][1.5]["under"]),
+        ("Over 2.5 goles", sim["goles_ou"][2.5]["over"]),
+        ("Under 2.5 goles", sim["goles_ou"][2.5]["under"]),
+        ("Over 3.5 goles", sim["goles_ou"][3.5]["over"]),
+        ("Under 3.5 goles", sim["goles_ou"][3.5]["under"]),
+    ]
+    if stats_ok:
+        candidatos += [
+            ("Over 7.5 corners", sim["corners_ou"][7.5]["over"]),
+            ("Under 7.5 corners", sim["corners_ou"][7.5]["under"]),
+            ("Over 8.5 corners", sim["corners_ou"][8.5]["over"]),
+            ("Under 8.5 corners", sim["corners_ou"][8.5]["under"]),
+            ("Over 2.5 tarjetas", sim["tarjetas_ou"][2.5]["over"]),
+            ("Under 2.5 tarjetas", sim["tarjetas_ou"][2.5]["under"]),
+            ("Over 3.5 tarjetas", sim["tarjetas_ou"][3.5]["over"]),
+            ("Under 3.5 tarjetas", sim["tarjetas_ou"][3.5]["under"]),
+        ]
+    candidatos = sorted(candidatos, key=lambda x: x[1], reverse=True)
+    resultado = []
+    usados = set()
+    for nombre, prob in candidatos:
+        if prob < 0.60:
+            break
+        if nombre in usados or OPUESTOS.get(nombre) in usados:
+            continue
+        resultado.append({"mercado": nombre, "prob": round(prob * 100, 1)})
+        usados.add(nombre)
+        if len(resultado) == 3:
+            break
+    return resultado
+
+
+def get_partidos_hoy():
+    df = cargar_df()
+    if df.empty:
+        return []
+    partidos = obtener_partidos_hoy_futbol(df)
+    if partidos.empty:
+        return []
+    resultado = []
+    ligas_en_datos = partidos["liga"].unique().tolist()
+    ligas_ordenadas = [l for l in ORDEN_COMPETENCIAS if l in ligas_en_datos]
+    ligas_ordenadas += [l for l in ligas_en_datos if l not in ORDEN_COMPETENCIAS]
+    for liga in ligas_ordenadas:
+        partidos_liga = partidos[partidos["liga"] == liga]
+        for _, row in partidos_liga.iterrows():
+            fecha = str(row["fecha"].date()) if hasattr(row["fecha"], "date") else str(row["fecha"])[:10]
+            hora = str(row["fecha"].time())[:5] if hasattr(row["fecha"], "time") else ""
+            local = row["equipo_local"]
+            visitante = row["equipo_visitante"]
+            prob_local = prob_empate = prob_visitante = None
+            ajuste_ia = None
+            try:
+                sim, stats_a, stats_b = simular(df, local, visitante)
+                if sim is not None:
+                    prob_local = round(sim["prob_local"] * 100, 1)
+                    prob_empate = round(sim["prob_empate"] * 100, 1)
+                    prob_visitante = round(sim["prob_visitante"] * 100, 1)
+                    ajuste_info = _obtener_ajuste_ia(df, local, visitante)
+                    if ajuste_info:
+                        aj_l = ajuste_info.get("ajuste_local", 0)
+                        aj_v = ajuste_info.get("ajuste_visitante", 0)
+                        pl = prob_local + aj_l
+                        pv = prob_visitante + aj_v
+                        pe = prob_empate
+                        total = pl + pe + pv
+                        if total > 0:
+                            factor = 100 / total
+                            pl, pe, pv = pl * factor, pe * factor, pv * factor
+                        prob_local = round(max(1, min(98, pl)), 1)
+                        prob_visitante = round(max(1, min(98, pv)), 1)
+                        prob_empate = round(max(1, 100 - prob_local - prob_visitante), 1)
+                        ajuste_ia = ajuste_info
+            except Exception:
+                pass
+
+            resultado.append({
+                "liga": liga,
+                "local": local,
+                "visitante": visitante,
+                "fecha": fecha,
+                "hora": hora,
+                "prob_local": prob_local,
+                "prob_empate": prob_empate,
+                "prob_visitante": prob_visitante,
+                "ajuste_ia": ajuste_ia,
+            })
+    return resultado
+
+
+def get_partidos_rango(dias=4):
+    import pytz
+    df = cargar_df()
+    if df.empty:
+        return []
+    partidos = obtener_partidos_rango_futbol(df, dias=dias)
+    if partidos.empty:
+        return []
+
+    hoy = pd.Timestamp.now(tz="America/Bogota").normalize()
+    resultado = []
+    ligas_en_datos = partidos["liga"].unique().tolist()
+    ligas_ordenadas = [l for l in ORDEN_COMPETENCIAS if l in ligas_en_datos]
+    ligas_ordenadas += [l for l in ligas_en_datos if l not in ORDEN_COMPETENCIAS]
+
+    for liga in ligas_ordenadas:
+        partidos_liga = partidos[partidos["liga"] == liga]
+        for _, row in partidos_liga.iterrows():
+            fecha_normalizada = row["fecha"].normalize() if hasattr(row["fecha"], "normalize") else None
+            dia_offset = (fecha_normalizada - hoy).days if fecha_normalizada is not None else 0
+
+            fecha = str(row["fecha"].date()) if hasattr(row["fecha"], "date") else str(row["fecha"])[:10]
+            hora = str(row["fecha"].time())[:5] if hasattr(row["fecha"], "time") else ""
+            local = row["equipo_local"]
+            visitante = row["equipo_visitante"]
+            prob_local = prob_empate = prob_visitante = None
+            ajuste_ia = None
+            try:
+                sim, stats_a, stats_b = simular(df, local, visitante)
+                if sim is not None:
+                    prob_local = round(sim["prob_local"] * 100, 1)
+                    prob_empate = round(sim["prob_empate"] * 100, 1)
+                    prob_visitante = round(sim["prob_visitante"] * 100, 1)
+                    ajuste_info = _obtener_ajuste_ia(df, local, visitante)
+                    if ajuste_info:
+                        aj_l = ajuste_info.get("ajuste_local", 0)
+                        aj_v = ajuste_info.get("ajuste_visitante", 0)
+                        pl = prob_local + aj_l
+                        pv = prob_visitante + aj_v
+                        pe = prob_empate
+                        total = pl + pe + pv
+                        if total > 0:
+                            factor = 100 / total
+                            pl, pe, pv = pl * factor, pe * factor, pv * factor
+                        prob_local = round(max(1, min(98, pl)), 1)
+                        prob_visitante = round(max(1, min(98, pv)), 1)
+                        prob_empate = round(max(1, 100 - prob_local - prob_visitante), 1)
+                        ajuste_ia = ajuste_info
+            except Exception:
+                pass
+
+            resultado.append({
+                "liga": liga,
+                "local": local,
+                "visitante": visitante,
+                "fecha": fecha,
+                "hora": hora,
+                "dia_offset": dia_offset,
+                "prob_local": prob_local,
+                "prob_empate": prob_empate,
+                "prob_visitante": prob_visitante,
+                "ajuste_ia": ajuste_ia,
+            })
+    return resultado
+
+
+def get_top_picks():
+    df = cargar_df()
+    if df.empty:
+        return []
+    partidos = obtener_partidos_hoy_futbol(df)
+    if partidos.empty:
+        partidos = obtener_partidos_mas_recientes(df, n=20)
+    if partidos.empty:
+        return []
+    resultados = []
+    for _, row in partidos.iterrows():
+        local = row["equipo_local"]
+        visitante = row["equipo_visitante"]
+        liga = row["liga"]
+        sim, stats_a, stats_b = simular(df, local, visitante)
+        if sim is None:
+            continue
+        top3 = calcular_top3(sim, stats_a, stats_b)
+        if not top3:
+            continue
+        for pick in top3:
+            resultados.append({
+                "liga": liga,
+                "partido": f"{local} vs {visitante}",
+                "mercado": pick["mercado"],
+                "prob": pick["prob"],
+            })
+    resultados.sort(key=lambda x: x["prob"], reverse=True)
+    return resultados
+
+
+def _obtener_ajuste_ia(df, local, visitante):
+    """Busca el ajuste cualitativo de IA para este partido si existe.
+    Prioriza el partido mas reciente (o el pendiente NS) para evitar
+    traer el ajuste de un enfrentamiento historico viejo entre los mismos equipos."""
+    try:
+        fila = df[(df["equipo_local"] == local) & (df["equipo_visitante"] == visitante)]
+        if fila.empty:
+            return None
+        # Preferir partidos pendientes (NS), si no hay, tomar el mas reciente por fecha
+        pendientes = fila[fila["estado"] == "NS"]
+        if not pendientes.empty:
+            fila_ordenada = pendientes.sort_values("fecha", ascending=False)
+        else:
+            fila_ordenada = fila.sort_values("fecha", ascending=False)
+        r = fila_ordenada.iloc[0]
+        if "ajuste_ia_local" not in r.index or pd.isna(r.get("ajuste_ia_local")):
+            return None
+        return {
+            "ajuste_local": float(r["ajuste_ia_local"]),
+            "ajuste_visitante": float(r["ajuste_ia_visitante"]),
+            "explicacion": str(r["ajuste_ia_explicacion"]) if not pd.isna(r.get("ajuste_ia_explicacion")) else "",
+        }
+    except Exception:
+        return None
+
+
+def _calcular_goles_1t(df, local, visitante):
+    """Calcula proyecciones y Over/Under del primer tiempo para el partido."""
+    try:
+        s_local = stats_goles_1t(df, local)
+        s_visit = stats_goles_1t(df, visitante)
+        if s_local is None or s_visit is None:
+            return None
+        # Media de goles 1T: ataque propio + defensa rival
+        media_local = (s_local["goles_favor_1t"] + s_visit["goles_contra_1t"]) / 2
+        media_visit = (s_visit["goles_favor_1t"] + s_local["goles_contra_1t"]) / 2
+        sim_1t = simular_goles_1t(media_local, media_visit)
+        return {
+            "proj": f"{sim_1t['goles_local_proj_1t']:.2f} - {sim_1t['goles_visitante_proj_1t']:.2f}",
+            "ou": sim_1t["ou"],
+            "ambos_marcan_1t": sim_1t["ambos_marcan_1t"],
+            "media_local_gf_1t": round(s_local["goles_favor_1t"], 2),
+            "media_local_gc_1t": round(s_local["goles_contra_1t"], 2),
+            "media_visit_gf_1t": round(s_visit["goles_favor_1t"], 2),
+            "media_visit_gc_1t": round(s_visit["goles_contra_1t"], 2),
+        }
+    except Exception:
+        return None
+
+
+def stats_goles_1t(df, equipo, n=10):
+    """Calcula el promedio de goles a favor y en contra en el primer tiempo."""
+    import numpy as np
+    from football_model import obtener_partidos_equipo
+    partidos = obtener_partidos_equipo(df, equipo, n=n)
+    gf_1t = []
+    gc_1t = []
+    for _, r in partidos.iterrows():
+        if "goles_local_1t" not in r.index:
+            continue
+        if str(r["goles_local_1t"]) in ["nan", "None"]:
+            continue
+        es_local = r["equipo_local"] == equipo
+        if es_local:
+            gf = r["goles_local_1t"]
+            gc = r["goles_visitante_1t"]
+        else:
+            gf = r["goles_visitante_1t"]
+            gc = r["goles_local_1t"]
+        try:
+            gf_1t.append(float(gf))
+            gc_1t.append(float(gc))
+        except Exception:
+            continue
+    if len(gf_1t) < 2:
+        return None
+    return {
+        "goles_favor_1t": float(np.mean(gf_1t)),
+        "goles_contra_1t": float(np.mean(gc_1t)),
+        "n_partidos": len(gf_1t),
+    }
+
+
+def simular_goles_1t(media_local, media_visitante, iteraciones=10000):
+    """Simula goles del primer tiempo con Poisson y devuelve probabilidades Over/Under."""
+    import numpy as np
+    media_local = max(float(media_local), 0.05)
+    media_visitante = max(float(media_visitante), 0.05)
+    goles_local = np.random.poisson(media_local, iteraciones)
+    goles_visitante = np.random.poisson(media_visitante, iteraciones)
+    total = goles_local + goles_visitante
+    resultado = {}
+    for linea in [0.5, 1.5, 2.5]:
+        resultado[str(linea)] = {
+            "over": round(float(np.mean(total > linea)) * 100, 1),
+            "under": round(float(np.mean(total < linea)) * 100, 1),
+        }
+    # Ambos marcan en 1T
+    ambos_1t = round(float(np.mean((goles_local > 0) & (goles_visitante > 0))) * 100, 1)
+    return {
+        "ou": resultado,
+        "ambos_marcan_1t": ambos_1t,
+        "goles_local_proj_1t": round(float(np.mean(goles_local)), 2),
+        "goles_visitante_proj_1t": round(float(np.mean(goles_visitante)), 2),
+    }
+
+
+def get_analisis_partido(local_input, visitante_input):
+    df = cargar_df()
+    if df.empty:
+        return None, "No hay datos disponibles"
+    equipos_n1 = obtener_equipos_nivel1(df)
+    local = obtener_equipo_por_nombre(df, local_input)
+    visitante = obtener_equipo_por_nombre(df, visitante_input)
+    if local is None:
+        return None, f"Equipo no encontrado: {local_input}"
+    if visitante is None:
+        return None, f"Equipo no encontrado: {visitante_input}"
+    sim, stats_a, stats_b = simular(df, local, visitante)
+    if sim is None:
+        return None, "No hay datos suficientes para simular"
+    try:
+        liga_series = df[
+            (df["equipo_local"] == local) | (df["equipo_visitante"] == local)
+        ]["liga"]
+        liga = liga_series.iloc[0] if not liga_series.empty else "Desconocida"
+    except Exception:
+        liga = "Desconocida"
+    top3 = calcular_top3(sim, stats_a, stats_b)
+    ultimos_local = []
+    ultimos_visitante = []
+    try:
+        pl = obtener_partidos_equipo(df, local, n=20)
+        for _, r in pl.iterrows():
+            gl = int(r["goles_local"])
+            gv = int(r["goles_visitante"])
+            es_local = r["equipo_local"] == local
+            gf = gl if es_local else gv
+            gc = gv if es_local else gl
+            ultimos_local.append({
+                "fecha": str(r["fecha"])[:10],
+                "rival": r["equipo_visitante"] if es_local else r["equipo_local"],
+                "resultado": f"{gl}-{gv}",
+                "ganado": gf > gc,
+                "empate": gf == gc,
+                "corners": int(r["corners_local"] if es_local else r["corners_visitante"]) if "corners_local" in r.index and str(r["corners_local"]) != "nan" else 0,
+                "tarjetas": int(r["tarjetas_local"] if es_local else r["tarjetas_visitante"]) if "tarjetas_local" in r.index and str(r["tarjetas_local"]) != "nan" else 0,
+                "tiros_arco": int(r["tiros_arco_local"] if es_local else r["tiros_arco_visitante"]) if "tiros_arco_local" in r.index and str(r["tiros_arco_local"]) != "nan" else 0,
+                "tiros_total": int(r["tiros_total_local"] if es_local else r["tiros_total_visitante"]) if "tiros_total_local" in r.index and str(r["tiros_total_local"]) != "nan" else 0,
+                  "goles_favor_1t": int(r["goles_local_1t"] if es_local else r["goles_visitante_1t"]) if "goles_local_1t" in r.index and str(r["goles_local_1t"]) not in ["nan","None"] else None,
+                  "goles_contra_1t": int(r["goles_visitante_1t"] if es_local else r["goles_local_1t"]) if "goles_visitante_1t" in r.index and str(r["goles_visitante_1t"]) not in ["nan","None"] else None,
+                  "goles_favor_2t": int(r["goles_local_2t"] if es_local else r["goles_visitante_2t"]) if "goles_local_2t" in r.index and str(r["goles_local_2t"]) not in ["nan","None"] else None,
+                  "goles_contra_2t": int(r["goles_visitante_2t"] if es_local else r["goles_local_2t"]) if "goles_visitante_2t" in r.index and str(r["goles_visitante_2t"]) not in ["nan","None"] else None,
+                  "tarjetas_favor_1t": int(r["tarjetas_local_1t"] if es_local else r["tarjetas_visitante_1t"]) if "tarjetas_local_1t" in r.index and str(r["tarjetas_local_1t"]) not in ["nan","None"] else None,
+                  "tarjetas_favor_2t": int(r["tarjetas_local_2t"] if es_local else r["tarjetas_visitante_2t"]) if "tarjetas_local_2t" in r.index and str(r["tarjetas_local_2t"]) not in ["nan","None"] else None,
+                  "liga_partido": str(r["liga"]) if "liga" in r.index else "",
+                "categoria_rival": categoria_equipo(r["equipo_visitante"] if r["equipo_local"] == local else r["equipo_local"], equipos_n1),
+            })
+    except Exception:
+        pass
+    try:
+        pv = obtener_partidos_equipo(df, visitante, n=20)
+        for _, r in pv.iterrows():
+            gl = int(r["goles_local"])
+            gv = int(r["goles_visitante"])
+            es_local = r["equipo_local"] == visitante
+            gf = gl if es_local else gv
+            gc = gv if es_local else gl
+            ultimos_visitante.append({
+                "fecha": str(r["fecha"])[:10],
+                "rival": r["equipo_visitante"] if es_local else r["equipo_local"],
+                "resultado": f"{gf}-{gc}",
+                "ganado": gf > gc,
+                "empate": gf == gc,
+                "corners": int(r["corners_local"] if es_local else r["corners_visitante"]) if "corners_local" in r.index and str(r["corners_local"]) != "nan" else 0,
+                "tarjetas": int(r["tarjetas_local"] if es_local else r["tarjetas_visitante"]) if "tarjetas_local" in r.index and str(r["tarjetas_local"]) != "nan" else 0,
+                "tiros_arco": int(r["tiros_arco_local"] if es_local else r["tiros_arco_visitante"]) if "tiros_arco_local" in r.index and str(r["tiros_arco_local"]) != "nan" else 0,
+                "tiros_total": int(r["tiros_total_local"] if es_local else r["tiros_total_visitante"]) if "tiros_total_local" in r.index and str(r["tiros_total_local"]) != "nan" else 0,
+                "goles_favor_1t": int(r["goles_local_1t"] if es_local else r["goles_visitante_1t"]) if "goles_local_1t" in r.index and str(r["goles_local_1t"]) not in ["nan","None"] else None,
+                "goles_contra_1t": int(r["goles_visitante_1t"] if es_local else r["goles_local_1t"]) if "goles_visitante_1t" in r.index and str(r["goles_visitante_1t"]) not in ["nan","None"] else None,
+                "goles_favor_2t": int(r["goles_local_2t"] if es_local else r["goles_visitante_2t"]) if "goles_local_2t" in r.index and str(r["goles_local_2t"]) not in ["nan","None"] else None,
+                "goles_contra_2t": int(r["goles_visitante_2t"] if es_local else r["goles_local_2t"]) if "goles_visitante_2t" in r.index and str(r["goles_visitante_2t"]) not in ["nan","None"] else None,
+                "tarjetas_favor_1t": int(r["tarjetas_local_1t"] if es_local else r["tarjetas_visitante_1t"]) if "tarjetas_local_1t" in r.index and str(r["tarjetas_local_1t"]) not in ["nan","None"] else None,
+                "tarjetas_favor_2t": int(r["tarjetas_local_2t"] if es_local else r["tarjetas_visitante_2t"]) if "tarjetas_local_2t" in r.index and str(r["tarjetas_local_2t"]) not in ["nan","None"] else None,
+                "liga_partido": str(r["liga"]) if "liga" in r.index else "",
+                "categoria_rival": categoria_equipo(r["equipo_visitante"] if r["equipo_local"] == visitante else r["equipo_local"], equipos_n1),
+            })
+    except Exception:
+        pass
+
+    # Aplicar ajuste cualitativo de IA si existe (lesiones, forma, contexto)
+    ajuste_ia_info = _obtener_ajuste_ia(df, local, visitante)
+    prob_local_final = sim["prob_local"] * 100
+    prob_empate_final = sim["prob_empate"] * 100
+    prob_visitante_final = sim["prob_visitante"] * 100
+
+    if ajuste_ia_info:
+        aj_local = ajuste_ia_info.get("ajuste_local", 0)
+        aj_visit = ajuste_ia_info.get("ajuste_visitante", 0)
+        prob_local_final = prob_local_final + aj_local
+        prob_visitante_final = prob_visitante_final + aj_visit
+        # Mantener el empate igual y renormalizar para que sume 100
+        total = prob_local_final + prob_empate_final + prob_visitante_final
+        if total > 0:
+            factor = 100 / total
+            prob_local_final = prob_local_final * factor
+            prob_empate_final = prob_empate_final * factor
+            prob_visitante_final = prob_visitante_final * factor
+        # Evitar valores fuera de rango
+        prob_local_final = max(1, min(98, prob_local_final))
+        prob_visitante_final = max(1, min(98, prob_visitante_final))
+        prob_empate_final = max(1, 100 - prob_local_final - prob_visitante_final)
+
+    return {
+        "local": local,
+        "visitante": visitante,
+        "liga": liga,
+        "prob_local": round(prob_local_final, 1),
+        "prob_empate": round(prob_empate_final, 1),
+        "prob_visitante": round(prob_visitante_final, 1),
+        "prob_local_original": round(sim["prob_local"] * 100, 1),
+        "prob_empate_original": round(sim["prob_empate"] * 100, 1),
+        "prob_visitante_original": round(sim["prob_visitante"] * 100, 1),
+        "prob_1x": round(sim["prob_1x"] * 100, 1),
+        "prob_x2": round(sim["prob_x2"] * 100, 1),
+        "prob_ambos_marcan": round(sim["prob_ambos_marcan"] * 100, 1),
+        "goles_proj": f"{sim['goles_local_proj']:.2f} - {sim['goles_visitante_proj']:.2f}",
+        "corners_proj": round(sim["corners_totales_proj"], 2),
+        "tarjetas_proj": round(sim["tarjetas_totales_proj"], 2),
+        "goles_ou": {
+            str(k): {"over": round(v["over"]*100,1), "under": round(v["under"]*100,1)}
+            for k, v in sim["goles_ou"].items()
+        },
+        "corners_ou": {
+            str(k): {"over": round(v["over"]*100,1), "under": round(v["under"]*100,1)}
+            for k, v in sim["corners_ou"].items()
+        },
+        "tarjetas_ou": {
+            str(k): {"over": round(v["over"]*100,1), "under": round(v["under"]*100,1)}
+            for k, v in sim["tarjetas_ou"].items()
+        },
+        "goles_1t": _calcular_goles_1t(df, local, visitante),
+        "ajuste_ia": _obtener_ajuste_ia(df, local, visitante),
+        "top3": top3,
+        "ultimos_local": ultimos_local,
+        "ultimos_visitante": ultimos_visitante,
+        "stats_local_5": _stats_n_equipo(df, local, 5),
+        "stats_local_10": _stats_n_equipo(df, local, 10),
+        "stats_visitante_5": _stats_n_equipo(df, visitante, 5),
+        "stats_visitante_10": _stats_n_equipo(df, visitante, 10),
+        "cuotas": get_cuotas_partido(local, visitante, liga),
+        "stats_local_temporada": _stats_temporada_actual(df, local),
+        "stats_visitante_temporada": _stats_temporada_actual(df, visitante),
+        "tiros_arco_local": 0,
+        "stats_local": {
+            "goles_favor": round(stats_a["goles_favor"], 2),
+            "goles_contra": round(stats_a["goles_contra"], 2),
+            "corners_favor": round(stats_a["corners_favor"], 2),
+            "corners_contra": round(stats_a["corners_contra"], 2),
+            "tarjetas_favor": round(stats_a["tarjetas_favor"], 2),
+            "tiros_arco_favor": _safe(stats_a.get("tiros_arco_favor")),
+            "tiros_total_favor": _safe(stats_a.get("tiros_total_favor")),
+            "victorias": stats_a["victorias"],
+            "empates": stats_a["empates"],
+            "derrotas": stats_a["derrotas"],
+            "n_partidos": stats_a["n_partidos"],
+        },
+        "stats_visitante": {
+            "goles_favor": round(stats_b["goles_favor"], 2),
+            "goles_contra": round(stats_b["goles_contra"], 2),
+            "corners_favor": round(stats_b["corners_favor"], 2),
+            "corners_contra": round(stats_b["corners_contra"], 2),
+            "tarjetas_favor": round(stats_b["tarjetas_favor"], 2),
+            "tiros_arco_favor": _safe(stats_b.get("tiros_arco_favor")),
+            "tiros_total_favor": _safe(stats_b.get("tiros_total_favor")),
+            "victorias": stats_b["victorias"],
+            "empates": stats_b["empates"],
+            "derrotas": stats_b["derrotas"],
+            "n_partidos": stats_b["n_partidos"],
+        },
+        "tiros_arco_visitante": 0,
+        "tiros_total_local": 0,
+        "tiros_total_visitante": 0,
+    }, None
+def get_historial_jugador(equipo_input, jugador_nombre, n=5):
+    """Devuelve el desglose real (partido por partido) de un jugador especifico,
+    buscando en los ultimos n partidos de su equipo."""
+    import requests as _requests
+    from player_model import obtener_historial_jugador, API_KEY as _PM_API_KEY, BASE_URL as _PM_BASE_URL
+
+    df = cargar_df()
+    if df.empty:
+        return None, "No hay datos disponibles"
+    equipo = obtener_equipo_por_nombre(df, equipo_input)
+    if equipo is None:
+        return None, f"Equipo no encontrado: {equipo_input}"
+
+    try:
+        liga_series = df[
+            (df["equipo_local"] == equipo) | (df["equipo_visitante"] == equipo)
+        ]["liga"]
+        liga = liga_series.iloc[0] if not liga_series.empty else None
+    except Exception:
+        liga = None
+    if not liga:
+        return None, "Liga no encontrada"
+    liga_id, temporada = get_temporada(liga)
+    if not liga_id:
+        return None, f"No se pudo resolver liga_id para {liga}"
+
+    try:
+        headers = {"x-apisports-key": _PM_API_KEY}
+        resp_team = _requests.get(f"{_PM_BASE_URL}/teams", headers=headers, params={"search": equipo})
+        data_team = resp_team.json()
+        if not data_team.get("response"):
+            return None, "Equipo no encontrado en la API"
+        LIGA_PAIS = {
+            "Liga Profesional Argentina": "Argentina", "Brasileirao": "Brazil",
+            "Brasileirao Serie A": "Brazil", "Liga Colombia": "Colombia",
+            "Primera Division Chile": "Chile", "Primera Division Uruguay": "Uruguay",
+            "Primera Division Peru": "Peru", "Liga Pro Ecuador": "Ecuador",
+            "Primera Division Venezuela": "Venezuela", "Primera Division Bolivia": "Bolivia",
+            "Division Profesional Paraguay": "Paraguay", "Liga MX": "Mexico", "MLS": "USA",
+            "Copa Argentina": "Argentina", "Copa Chile": "Chile", "Copa Colombia": "Colombia",
+            "Copa Uruguay": "Uruguay", "Copa do Brasil": "Brazil",
+        }
+        pais_esperado = LIGA_PAIS.get(liga)
+        candidatos_team = data_team["response"]
+        team_id = None
+        if pais_esperado:
+            for c in candidatos_team:
+                if c["team"]["country"] == pais_esperado:
+                    team_id = c["team"]["id"]
+                    break
+        if team_id is None:
+            team_id = candidatos_team[0]["team"]["id"]
+
+        # Buscar un rango amplio de fixtures del equipo (no solo n), porque el
+        # jugador puede no haber participado en varios partidos recientes
+        # (lesion, suspension, no convocado). Se sigue buscando hacia atras
+        # hasta encontrar n partidos REALES donde el jugador jugo.
+        RANGO_BUSQUEDA = max(n * 4, 20)
+        resp_fixtures = _requests.get(
+            f"{_PM_BASE_URL}/fixtures", headers=headers,
+            params={"team": team_id, "season": temporada, "last": RANGO_BUSQUEDA}
+        )
+        data_fixtures = resp_fixtures.json()
+        fixture_ids = [f["fixture"]["id"] for f in data_fixtures.get("response", [])]
+        if not fixture_ids:
+            return [], None
+
+        historial = obtener_historial_jugador(jugador_nombre, fixture_ids, n=n, rango_busqueda=RANGO_BUSQUEDA)
+        return historial, None
+    except Exception as e:
+        return None, str(e)
+
+
+def buscar_jugador_general(query, limite=20):
+    """Busca jugadores por nombre en los equipos ya descargados localmente.
+    Devuelve lista de coincidencias con nombre, equipo, posicion y stats basicas."""
+    import json as _json
+    q = query.lower().strip()
+    if len(q) < 2:
+        return []
+
+    resultados = []
+    if not os.path.exists(JUGADORES_DATA_DIR):
+        return []
+
+    for archivo in os.listdir(JUGADORES_DATA_DIR):
+        if not archivo.endswith(".json") or archivo.startswith("fixture_"):
+            continue
+        try:
+            with open(os.path.join(JUGADORES_DATA_DIR, archivo), "r", encoding="utf-8") as f:
+                data = _json.load(f)
+        except Exception:
+            continue
+
+        equipo_nombre = data.get("equipo", "")
+        for jraw in data.get("jugadores", []):
+            info = jraw.get("player", {})
+            nombre = info.get("name", "")
+            if q not in nombre.lower():
+                continue
+            stats_list = jraw.get("statistics", [])
+            stats = stats_list[0] if stats_list else {}
+            games = stats.get("games", {}) or {}
+            resultados.append({
+                "nombre": nombre,
+                "equipo": equipo_nombre,
+                "posicion": games.get("position", "") or "",
+                "partidos": games.get("appearences", 0) or 0,
+                "foto": info.get("photo", ""),
+            })
+            if len(resultados) >= limite:
+                return resultados
+    return resultados
+
+
+def get_jugadores_partido(local_input, visitante_input):
+    """Devuelve jugadores agrupados por equipo: 5 atacantes y 5 defensivos por equipo."""
+    from player_model import obtener_jugadores_partido, obtener_fixture_id
+
+    df = cargar_df()
+    if df.empty:
+        return None, "No hay datos disponibles"
+
+    local = obtener_equipo_por_nombre(df, local_input)
+    visitante = obtener_equipo_por_nombre(df, visitante_input)
+    if local is None:
+        return None, f"Equipo no encontrado: {local_input}"
+    if visitante is None:
+        return None, f"Equipo no encontrado: {visitante_input}"
+
+    # Buscar liga del partido
+    try:
+        liga_series = df[
+            ((df["equipo_local"] == local) & (df["equipo_visitante"] == visitante)) |
+            ((df["equipo_local"] == visitante) & (df["equipo_visitante"] == local))
+        ]["liga"]
+        if liga_series.empty:
+            liga_series = df[
+                (df["equipo_local"] == local) | (df["equipo_visitante"] == local)
+            ]["liga"]
+        liga = liga_series.iloc[0] if not liga_series.empty else None
+    except Exception:
+        liga = None
+
+    if not liga:
+        return None, "Liga no encontrada para el partido"
+
+    liga_id, temporada = get_temporada(liga)
+    if not liga_id:
+        return None, f"No se pudo resolver liga_id para {liga}"
+
+    # Buscar fixture_id en el CSV o via API
+    fixture_id = None
+    try:
+        partido_row = df[
+            ((df["equipo_local"] == local) & (df["equipo_visitante"] == visitante)) |
+            ((df["equipo_local"] == visitante) & (df["equipo_visitante"] == local))
+        ].sort_values("fecha", ascending=False)
+        if not partido_row.empty and "fixture_id" in partido_row.columns:
+            fid = partido_row.iloc[0]["fixture_id"]
+            if fid and not pd.isna(fid):
+                fixture_id = int(fid)
+    except Exception:
+        pass
+
+    if not fixture_id:
+        try:
+            fecha_partido = datetime.now().strftime("%Y-%m-%d")
+            fixture_id = obtener_fixture_id(liga_id, temporada, local, visitante, fecha_partido, df)
+        except Exception as e:
+            return None, f"No se pudo obtener fixture_id: {e}"
+
+    if not fixture_id:
+        return None, "Fixture no encontrado en la API"
+
+    try:
+        data = obtener_jugadores_partido(fixture_id, liga_id, temporada, nombre_local=local, nombre_visitante=visitante)
+    except Exception as e:
+        return None, str(e)
+
+    if not data:
+        return None, "Sin datos de jugadores para este partido"
+
+    # Devolver dict estructurado: {local: {atacantes, defensivos}, visitante: {atacantes, defensivos}}
+    equipos_ordenados = {}
+    for nombre_equipo, secciones in data.items():
+        equipos_ordenados[nombre_equipo] = secciones
+
+    return {
+        "liga": liga,
+        "local": local,
+        "visitante": visitante,
+        "equipos": equipos_ordenados,
+    }, None
+
+
+def _stats_n_equipo(df, equipo, n):
+    import numpy as np
+    from football_model import obtener_partidos_equipo
+    try:
+        ps = obtener_partidos_equipo(df, equipo, n=n)
+        if ps.empty:
+            return None
+        gf_list, gc_list, cf_list, tf_list, ta_list = [], [], [], [], []
+        v = e = d = 0
+        for _, r in ps.iterrows():
+            es_local = r["equipo_local"] == equipo
+            gf = float(r["goles_local"] if es_local else r["goles_visitante"] or 0)
+            gc = float(r["goles_visitante"] if es_local else r["goles_local"] or 0)
+            gf_list.append(gf); gc_list.append(gc)
+            if gf > gc: v += 1
+            elif gf == gc: e += 1
+            else: d += 1
+            try:
+                cf = float(r["corners_local"] if es_local else r["corners_visitante"] or 0)
+                tf = float(r["tarjetas_local"] if es_local else r["tarjetas_visitante"] or 0)
+                ta = float(r["tiros_arco_local"] if es_local else r["tiros_arco_visitante"] or 0)
+                cf_list.append(cf); tf_list.append(tf); ta_list.append(ta)
+            except: pass
+        return {
+            "goles_favor": round(float(np.mean(gf_list)), 2) if gf_list else 0,
+            "goles_contra": round(float(np.mean(gc_list)), 2) if gc_list else 0,
+            "corners_favor": round(float(np.mean(cf_list)), 2) if cf_list else 0,
+            "tarjetas_favor": round(float(np.mean(tf_list)), 2) if tf_list else 0,
+            "tiros_arco_favor": round(float(np.mean(ta_list)), 2) if ta_list else 0,
+            "victorias": v, "empates": e, "derrotas": d, "n_partidos": len(ps)
+        }
+    except: return None
+
+
+def _stats_temporada_actual(df, equipo):
+    import numpy as np
+    from football_model import obtener_partidos_equipo
+    from datetime import datetime
+    try:
+        hoy = datetime.now()
+        inicio_temp = f"{hoy.year if hoy.month >= 8 else hoy.year - 1}-07-01"
+        ps = obtener_partidos_equipo(df, equipo, n=999)
+        ps = ps[ps["fecha"] >= inicio_temp]
+        if ps.empty:
+            return None
+        gf_list, gc_list, cf_list, tf_list, ta_list = [], [], [], [], []
+        v = e = d = 0
+        for _, r in ps.iterrows():
+            es_local = r["equipo_local"] == equipo
+            gf = float(r["goles_local"] if es_local else r["goles_visitante"] or 0)
+            gc = float(r["goles_visitante"] if es_local else r["goles_local"] or 0)
+            gf_list.append(gf); gc_list.append(gc)
+            if gf > gc: v += 1
+            elif gf == gc: e += 1
+            else: d += 1
+            try:
+                cf = float(r["corners_local"] if es_local else r["corners_visitante"] or 0)
+                tf = float(r["tarjetas_local"] if es_local else r["tarjetas_visitante"] or 0)
+                ta = float(r["tiros_arco_local"] if es_local else r["tiros_arco_visitante"] or 0)
+                cf_list.append(cf); tf_list.append(tf); ta_list.append(ta)
+            except: pass
+        return {
+            "goles_favor": round(float(np.mean(gf_list)), 2) if gf_list else 0,
+            "goles_contra": round(float(np.mean(gc_list)), 2) if gc_list else 0,
+            "corners_favor": round(float(np.mean(cf_list)), 2) if cf_list else 0,
+            "tarjetas_favor": round(float(np.mean(tf_list)), 2) if tf_list else 0,
+            "tiros_arco_favor": round(float(np.mean(ta_list)), 2) if ta_list else 0,
+            "victorias": v, "empates": e, "derrotas": d, "n_partidos": len(ps)
+        }
+    except: return None
+
+
+def get_cuotas_partido(local, visitante, liga_nombre):
+    import requests
+    ODDS_API_KEY = "016ac8cef97435449ec8f235ada4cbad"
+    LIGAS_ODDS = {
+        "Premier League": "soccer_epl",
+        "La Liga": "soccer_spain_la_liga",
+        "Serie A": "soccer_italy_serie_a",
+        "Bundesliga": "soccer_germany_bundesliga",
+        "Ligue 1": "soccer_france_ligue_one",
+        "Champions League": "soccer_uefa_champs_league",
+        "Europa League": "soccer_uefa_europa_league",
+        "Primeira Liga": "soccer_portugal_primeira_liga",
+        "Eredivisie": "soccer_netherlands_eredivisie",
+        "MLS": "soccer_usa_mls",
+        "Liga MX": "soccer_mexico_ligamx",
+        "Brasileirao": "soccer_brazil_campeonato",
+        "Liga Profesional Argentina": "soccer_argentina_primera_division",
+    }
+    sport_key = LIGAS_ODDS.get(liga_nombre)
+    if not sport_key:
+        return []
+    try:
+        url = f"https://api.the-odds-api.com/v4/sports/{sport_key}/odds/"
+        params = {
+            "apiKey": ODDS_API_KEY,
+            "regions": "eu",
+            "markets": "h2h,totals",
+            "oddsFormat": "decimal",
+        }
+        resp = requests.get(url, params=params, timeout=10)
+        if resp.status_code != 200:
+            return []
+        data = resp.json()
+        local_lower = local.lower()
+        visitante_lower = visitante.lower()
+        for partido in data:
+            home = partido.get("home_team", "").lower()
+            away = partido.get("away_team", "").lower()
+            if (local_lower[:6] in home or home[:6] in local_lower) and \
+               (visitante_lower[:6] in away or away[:6] in visitante_lower):
+                home_team_lower = partido["home_team"].lower()
+                away_team_lower = partido["away_team"].lower()
+                cuotas = []
+                for bm in partido.get("bookmakers", [])[:10]:
+                    casa_data = {
+                        "casa": bm["title"],
+                        "local": 0,
+                        "empate": 0,
+                        "visitante": 0,
+                        "totals": {},
+                    }
+                    for market in bm.get("markets", []):
+                        if market["key"] == "h2h":
+                            outcomes = {o["name"].lower(): o["price"] for o in market["outcomes"]}
+                            casa_data["local"] = outcomes.get(home_team_lower, 0)
+                            casa_data["empate"] = outcomes.get("draw", 0)
+                            casa_data["visitante"] = outcomes.get(away_team_lower, 0)
+                        elif market["key"] == "totals":
+                            for o in market["outcomes"]:
+                                punto = str(o.get("point", ""))
+                                if not punto:
+                                    continue
+                                if punto not in casa_data["totals"]:
+                                    casa_data["totals"][punto] = {"over": 0, "under": 0}
+                                nombre = o.get("name", "").lower()
+                                if nombre == "over":
+                                    casa_data["totals"][punto]["over"] = o["price"]
+                                elif nombre == "under":
+                                    casa_data["totals"][punto]["under"] = o["price"]
+                    if casa_data["local"] > 0 or casa_data["totals"]:
+                        cuotas.append(casa_data)
+                return cuotas
+        return []
+    except Exception:
+        return []
+
+# Cache global para value bets (TTL 30 min)
+_VB_CACHE = {"timestamp": 0, "data": []}
+_VB_TTL_SEGUNDOS = 30 * 60
+
+
+def get_value_bets_hoy():
+    """Recorre partidos de los proximos 7 dias con cuotas y devuelve top errores de cuota.
+    Cachea el resultado por 30 minutos para evitar recalcular en cada request.
+    """
+    import time
+    from datetime import datetime, timedelta
+
+    # Verificar cache
+    ahora = time.time()
+    if (ahora - _VB_CACHE["timestamp"]) < _VB_TTL_SEGUNDOS and _VB_CACHE["data"]:
+        return _VB_CACHE["data"]
+
+    df = cargar_df()
+    if df.empty:
+        return []
+
+    # Filtrar partidos entre hoy y +7 dias (sin resultado todavia)
+    hoy = datetime.now()
+    limite = hoy + timedelta(days=7)
+    df_fechas = df.copy()
+    df_fechas["fecha_dt"] = pd.to_datetime(df_fechas["fecha"], errors="coerce")
+    partidos = df_fechas[
+        (df_fechas["fecha_dt"] >= hoy.replace(hour=0, minute=0, second=0, microsecond=0))
+        & (df_fechas["fecha_dt"] <= limite)
+    ]
+    if partidos.empty:
+        _VB_CACHE["timestamp"] = ahora
+        _VB_CACHE["data"] = []
+        return []
+
+    LIGAS_CON_CUOTAS = {
+        "Premier League", "La Liga", "Serie A", "Bundesliga", "Ligue 1",
+        "Champions League", "Europa League", "Primeira Liga", "Eredivisie",
+        "MLS", "Liga MX", "Brasileirao", "Liga Profesional Argentina",
+    }
+
+    VALOR_MIN = 5.0
+    PROB_MIN = 30.0
+    CUOTA_MIN = 1.30
+    CUOTA_MAX = 6.0
+    MAX_POR_PARTIDO = 3
+    MAX_TOTAL = 50
+
+    # Deduplicar partidos por (local, visitante, liga) para no procesar duplicados
+    partidos_unicos = partidos.drop_duplicates(subset=["equipo_local", "equipo_visitante", "liga"])
+
+    resultado = []
+    for _, row in partidos_unicos.iterrows():
+        liga = row["liga"]
+        if liga not in LIGAS_CON_CUOTAS:
+            continue
+        local = row["equipo_local"]
+        visitante = row["equipo_visitante"]
+
+        fecha_str = ""
+        hora_str = ""
+        try:
+            fdt = row["fecha_dt"]
+            if pd.notna(fdt):
+                fecha_str = fdt.strftime("%Y-%m-%d")
+                hora_str = fdt.strftime("%H:%M")
+        except Exception:
+            pass
+
+        sim, stats_a, stats_b = simular(df, local, visitante)
+        if sim is None:
+            continue
+
+        cuotas = get_cuotas_partido(local, visitante, liga)
+        if not cuotas:
+            continue
+
+        prob_local = round(sim["prob_local"] * 100, 1)
+        prob_empate = round(sim["prob_empate"] * 100, 1)
+        prob_visitante = round(sim["prob_visitante"] * 100, 1)
+        goles_ou = {
+            str(k): {"over": round(v["over"] * 100, 1), "under": round(v["under"] * 100, 1)}
+            for k, v in sim["goles_ou"].items()
+        }
+
+        candidatos_partido = []
+        for casa in cuotas:
+            opciones = [
+                {"mercado": f"{local} gana", "cuota": casa.get("local", 0), "probIA": prob_local},
+                {"mercado": "Empate", "cuota": casa.get("empate", 0), "probIA": prob_empate},
+                {"mercado": f"{visitante} gana", "cuota": casa.get("visitante", 0), "probIA": prob_visitante},
+            ]
+            totals = casa.get("totals") or {}
+            for punto, vals in totals.items():
+                ou = goles_ou.get(punto)
+                if not ou:
+                    continue
+                if vals.get("over"):
+                    opciones.append({
+                        "mercado": f"Over {punto} goles",
+                        "cuota": vals["over"],
+                        "probIA": ou["over"],
+                    })
+                if vals.get("under"):
+                    opciones.append({
+                        "mercado": f"Under {punto} goles",
+                        "cuota": vals["under"],
+                        "probIA": ou["under"],
+                    })
+
+            for o in opciones:
+                cuota = o["cuota"]
+                probIA = o["probIA"]
+                if not cuota or cuota < CUOTA_MIN or cuota > CUOTA_MAX:
+                    continue
+                if probIA < PROB_MIN:
+                    continue
+                prob_implicita = (1 / cuota) * 100
+                valor = probIA - prob_implicita
+                if valor < VALOR_MIN:
+                    continue
+                candidatos_partido.append({
+                    "liga": liga,
+                    "local": local,
+                    "visitante": visitante,
+                    "fecha": fecha_str,
+                    "hora": hora_str,
+                    "casa": casa["casa"],
+                    "mercado": o["mercado"],
+                    "cuota": round(cuota, 2),
+                    "probIA": probIA,
+                    "valor": round(valor, 1),
+                })
+
+        candidatos_partido.sort(key=lambda x: x["valor"], reverse=True)
+        vistos = set()
+        seleccionados = []
+        for c in candidatos_partido:
+            if c["mercado"] in vistos:
+                continue
+            vistos.add(c["mercado"])
+            seleccionados.append(c)
+            if len(seleccionados) >= MAX_POR_PARTIDO:
+                break
+        resultado.extend(seleccionados)
+
+    resultado.sort(key=lambda x: x["valor"], reverse=True)
+    resultado = resultado[:MAX_TOTAL]
+
+    # Guardar en cache
+    _VB_CACHE["timestamp"] = ahora
+    _VB_CACHE["data"] = resultado
+    return resultado
+
+
+def chat_ia(mensajes, contexto=""):
+    try:
+        import anthropic
+        client = anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY", ""))
+        system = "Eres SportAI Pro, asistente estadistico deportivo. El contexto que recibes contiene TODOS los datos reales del partido: promedios, historicos partido por partido, y probabilidades ya calculadas por el modelo. LEE CUIDADOSAMENTE todo el contexto antes de responder, los datos que necesitas casi siempre estan ahi (busca lineas como PROMEDIO CORNERS, DATOS 1T, ULTIMOS PARTIDOS, etc). REGLA CRITICA: usa SIEMPRE los numeros exactos que aparecen en el contexto, nunca los cambies ni los redondees diferente. Solo si un dato especifico verdaderamente no aparece en NINGUNA parte del contexto, di que no esta disponible - pero antes de decir eso, revisa TODO el contexto con cuidado porque casi siempre el dato esta ahi con otro nombre o formato. REGLAS ADICIONALES: 1) NUNCA uses asteriscos, negritas, cursivas ni markdown. Solo texto plano con emojis. 2) USA EMOJIS DE FORMA CONSISTENTE Y VISUAL: cada seccion o subtitulo de tu respuesta DEBE empezar con un emoji relevante (ejemplo: usa un emoji de grafico como cabecera de analisis, un circulo amarillo para tarjetas, una pelota para goles, una bandera para corners, un trofeo para conclusiones, una lupa para desglose de datos). Dentro de cada seccion, resalta los numeros o datos mas importantes con un emoji corto al lado (una flecha hacia arriba o hacia abajo segun si el dato es alto o bajo, un check para lo que respalda tu conclusion). No dejes ningun bloque largo de texto sin al menos un emoji cada 2-3 lineas. El objetivo es que el usuario pueda escanear visualmente la respuesta sin tener que leer cada palabra. IMPORTANTE DE FORMATO: usa saltos de linea doble SOLO entre secciones grandes distintas (por ejemplo entre el bloque de 1X2 y el bloque de goles, o entre goles y corners). Dentro de una misma seccion, agrupa los datos relacionados en lineas seguidas SIN saltos dobles entre ellos (ejemplo: Over 0.5: 87%, seguido en la siguiente linea simple de Over 1.5: 61%, sin linea en blanco entre ambas). Se compacto: agrupa 3 a 5 lineas relacionadas por seccion antes de saltar a la siguiente seccion con doble salto de linea. 3) NUNCA uses la frase no puedo recomendarte apostar ni similares, y NUNCA digas apostar o no apostar. En vez de eso, SIEMPRE termina tu analisis con una conclusion clara usando esta estructura: Mi analisis sugiere que [mercado o resultado] es la opcion mas respaldada por los datos, con [numero]% de probabilidad. 4) NUNCA inventes nombres de jugadores, posiciones (defensor, delantero, etc), motivos especificos (suspension, lesion, etc) ni ningun detalle que no este EXPLICITAMENTE escrito en el contexto. Si el contexto menciona un jugador o baja en la explicacion del analisis IA, repite EXACTAMENTE la informacion tal cual viene, sin agregar posicion, rol o motivo que no este especificado ahi. 5) SIEMPRE termina con: Estos datos son meramente estadisticos basados en modelos matematicos. Cualquier resultado puede ocurrir en el futbol. Apuesta con responsabilidad. 7) IMPORTANTE - RIVALES DE COPA: cuando un partido del historico tenga la etiqueta RIVAL DE CATEGORIA MENOR, significa que el rival de ese partido especifico NO juega en Primera Division. Si mencionas ese partido, aclara que fue contra un equipo de categoria menor, y NO uses ese resultado como referencia principal de la forma del equipo. Prioriza los partidos SIN esa etiqueta para evaluar la forma real. 8B) ANTIGUEDAD DE ENFRENTAMIENTOS DIRECTOS: si mencionas un enfrentamiento historico entre ambos equipos, prioriza SIEMPRE el mas reciente disponible en el contexto. Si el enfrentamiento directo mas reciente que tenes es de hace mas de 1 aÃƒÆ’Ã‚Â±o, acompanialo siempre de su fecha exacta y aclara explicitamente que es un dato antiguo poco representativo de la forma actual (ejemplo correcto: el ultimo cruce entre ambos fue hace casi 2 anos, en noviembre de 2024, por lo que no es muy representativo del momento actual). Nunca presentes un enfrentamiento viejo como si fuera information reciente o relevante sin esa aclaracion. 8) Responde en espanol. 9) MERCADOS COMBINADOS NO PRE-CALCULADOS: si te preguntan por un mercado que no aparece calculado directamente en el contexto (por ejemplo ambos equipos reciben 2+ tarjetas, o el partido termina con mas de X corners totales combinados), NUNCA digas simplemente que no tienes ese dato disponible. En vez de eso, usa los datos individuales que SI tienes en el contexto (promedios, proyecciones Over/Under de cada equipo) para razonar y dar tu MEJOR ESTIMACION de esa probabilidad combinada, explicando brevemente tu razonamiento matematico, y siempre cerrando con tu conclusion habitual de opinion clara y probabilidad estimada. Es preferible dar una estimacion razonada basada en los datos que tenes, que decir que no lo podes calcular. 10) DATOS DE JUGADORES: si te preguntan sobre un jugador especifico de alguno de los dos equipos (goles, tarjetas, tiros, rendimiento), revisa si hay informacion de jugadores en el contexto y usala. Si te preguntan especificamente por una probabilidad Over/Under de un jugador (por ejemplo Over 1.5 goles de tal jugador), y tenes su promedio por partido disponible en el contexto (goles_pg, asist_pg, tarjetas_pg, faltas_pg), CALCULA vos mismo una estimacion razonable de esa probabilidad usando el promedio como base para un calculo estadistico interno, y da tu mejor estimacion numerica con opinion clara. IMPORTANTE: nunca menciones terminos tecnicos como Poisson, distribucion de probabilidad, o modelo estadistico al usuario; simplemente presenta el resultado final de forma natural, como si fuera un dato mas (ejemplo correcto: segun su rendimiento reciente, estimo un 28% de probabilidad; ejemplo incorrecto: usando una distribucion de Poisson calculo), en vez de derivar al usuario a la seccion Jugadores. Solo si NO tenes el promedio de ese jugador en el contexto (ni el jugador aparece mencionado en absoluto), dilo claramente y sugeri revisar la seccion Jugadores del partido."
+        if contexto:
+            system += "\n\n" + contexto
+        msgs = [{"role": m["role"], "content": m["text"]} for m in mensajes if m.get("role") in ("user", "assistant")]
+        response = client.messages.create(
+            model="claude-haiku-4-5-20251001",
+            max_tokens=800,
+            temperature=0.4,
+            system=system,
+            messages=msgs
+        )
+        return response.content[0].text, None
+    except Exception as e:
+        return None, str(e)
