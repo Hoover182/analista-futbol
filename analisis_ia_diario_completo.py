@@ -1,3 +1,4 @@
+import os
 import requests
 import pandas as pd
 import json
@@ -5,7 +6,7 @@ import re
 import time
 from datetime import datetime, timedelta
 
-API_KEY = "[XAI_KEY_REMOVIDA_POR_SEGURIDAD]"
+API_KEY = os.environ.get("XAI_API_KEY", "")
 CSV = "futbol_partidos.csv"
 
 def analizar_partido_ia(local, visitante, liga, fecha):
