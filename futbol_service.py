@@ -667,10 +667,7 @@ def get_analisis_partido(local_input, visitante_input):
     if sim is None:
         return None, "No hay datos suficientes para simular"
     try:
-        liga_series = df[
-            (df["equipo_local"] == local) | (df["equipo_visitante"] == local)
-        ]["liga"]
-        liga = liga_series.iloc[0] if not liga_series.empty else "Desconocida"
+        liga = obtener_liga_partido(df, local, visitante) or "Desconocida"
     except Exception:
         liga = "Desconocida"
     top3 = calcular_top3(sim, stats_a, stats_b)
@@ -971,15 +968,7 @@ def get_jugadores_partido(local_input, visitante_input):
 
     # Buscar liga del partido
     try:
-        liga_series = df[
-            ((df["equipo_local"] == local) & (df["equipo_visitante"] == visitante)) |
-            ((df["equipo_local"] == visitante) & (df["equipo_visitante"] == local))
-        ]["liga"]
-        if liga_series.empty:
-            liga_series = df[
-                (df["equipo_local"] == local) | (df["equipo_visitante"] == local)
-            ]["liga"]
-        liga = liga_series.iloc[0] if not liga_series.empty else None
+        liga = obtener_liga_partido(df, local, visitante)
     except Exception:
         liga = None
 
