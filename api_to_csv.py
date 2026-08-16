@@ -155,6 +155,22 @@ def normalizar_nombre_equipo(nombre):
     return NOMBRES_EQUIPO_NORMALIZADOS.get(nombre, nombre)
 
 
+MAPEO_LIGAS_H2H = {
+    "S" + chr(252) + "per Lig": "Super Lig Turquia",
+    "Jupiler Pro League":            "Pro League Belgica",
+    "Copa de la Liga Profesional":   "Liga Profesional Argentina",
+}
+
+
+def normalizar_liga_h2h(nombre):
+    """Cuando actualizar_h2h_desactualizado() trae un partido de una de las
+    45 ligas rastreadas pero con el nombre crudo que devuelve la API (en vez
+    del nombre canonico usado en LIGAS), lo mapea al nombre canonico. Ligas
+    reales no rastreadas y amistosos/copas de exhibicion se dejan tal cual
+    para no perder ese historial."""
+    return MAPEO_LIGAS_H2H.get(nombre, nombre)
+
+
 def construir_fila(fixture, liga_nombre):
     f         = fixture.get("fixture", {})
     teams     = fixture.get("teams", {})
@@ -434,7 +450,7 @@ def actualizar_h2h_desactualizado(df):
                     "fecha": f["fixture"]["date"][:19],
                     "fixture_id": fid,
                     "estado": estado,
-                    "liga": f["league"]["name"],
+                    "liga": normalizar_liga_h2h(f["league"]["name"]),
                     "equipo_local": nombre_local_real,
                     "equipo_visitante": nombre_visit_real,
                     "goles_local": f["goals"]["home"],
