@@ -306,12 +306,55 @@ def actualizar_h2h_desactualizado(df):
         "Division Profesional Paraguay", "Liga MX", "MLS",
     ]
 
+    # Pais que devuelve la API (campo "country") para cada liga nivel 1. Se usa
+    # para desambiguar equipos con nombres genericos que existen en varios
+    # paises (Platense, Nacional, Cerro, etc), donde buscar_team_id() podia
+    # devolver el equipo equivocado por tomar ciegamente el primer resultado.
+    LIGA_A_PAIS = {
+        "Premier League":                "England",
+        "La Liga":                       "Spain",
+        "Serie A":                       "Italy",
+        "Bundesliga":                    "Germany",
+        "Ligue 1":                       "France",
+        "Primeira Liga":                 "Portugal",
+        "Eredivisie":                    "Netherlands",
+        "Pro League Belgica":            "Belgium",
+        "Premier League Egipto":         "Egypt",
+        "Pro League Arabia":             "Saudi-Arabia",
+        "Super Lig Turquia":             "Turkey",
+        "Liga Profesional Argentina":    "Argentina",
+        "Brasileirao":                   "Brazil",
+        "Liga Colombia":                 "Colombia",
+        "Primera Division Chile":        "Chile",
+        "Primera Division Uruguay":      "Uruguay",
+        "Primera Division Peru":         "Peru",
+        "Liga Pro Ecuador":              "Ecuador",
+        "Primera Division Venezuela":    "Venezuela",
+        "Primera Division Bolivia":      "Bolivia",
+        "Division Profesional Paraguay": "Paraguay",
+        "Liga MX":                       "Mexico",
+        "MLS":                           "USA",
+    }
+
     df["fecha_dt"] = pd.to_datetime(df["fecha"], errors="coerce", utc=True)
     equipos_n1 = set()
     for liga in LIGAS_NIVEL_1:
         sub = df[df["liga"] == liga]
         equipos_n1.update(sub["equipo_local"].dropna().unique())
         equipos_n1.update(sub["equipo_visitante"].dropna().unique())
+
+    # Pais esperado de cada equipo nivel 1, segun en que liga(s) nivel 1 jugo
+    # dentro de nuestro CSV. Un equipo puede tener mas de un pais esperado si
+    # el nombre se repite sin querer entre dos ligas (caso raro); en ese caso
+    # no se filtra por pais para evitar descartar el candidato correcto.
+    pais_esperado_por_equipo = {}
+    for liga in LIGAS_NIVEL_1:
+        pais = LIGA_A_PAIS.get(liga)
+        if not pais:
+            continue
+        sub = df[df["liga"] == liga]
+        for nombre in pd.concat([sub["equipo_local"], sub["equipo_visitante"]]).dropna().unique():
+            pais_esperado_por_equipo.setdefault(nombre, set()).add(pais)
 
     pares_todos = set()
     for _, row in df.iterrows():
@@ -351,16 +394,40 @@ def actualizar_h2h_desactualizado(df):
             intentos.append(nombre.split()[0])
         if sin_acentos != nombre and sin_acentos not in intentos:
             intentos.append(sin_acentos)
+
+        # Si sabemos en que pais deberia estar este equipo (por la liga nivel 1
+        # donde jugo en nuestro CSV), preferimos el candidato de ese pais en
+        # vez de tomar ciegamente el primer resultado de la busqueda, que para
+        # nombres genericos (Platense, Nacional, Cerro...) suele traer el
+        # equipo equivocado de otro pais.
+        paises_esperados = pais_esperado_por_equipo.get(nombre)
+        primer_resultado_fallback = None
+
         for intento in intentos:
             resp = requests.get("https://v3.football.api-sports.io/teams", headers=headers, params={"search": intento}, timeout=15)
             data = resp.json()
-            if data.get("response"):
-                tid = data["response"][0]["team"]["id"]
-                cache_team_id[nombre] = tid
-                return tid
+            candidatos = data.get("response") or []
+            if candidatos:
+                if primer_resultado_fallback is None:
+                    primer_resultado_fallback = candidatos[0]["team"]["id"]
+                if paises_esperados:
+                    for c in candidatos:
+                        if c["team"].get("country") in paises_esperados:
+                            tid = c["team"]["id"]
+                            cache_team_id[nombre] = tid
+                            return tid
+                else:
+                    tid = candidatos[0]["team"]["id"]
+                    cache_team_id[nombre] = tid
+                    return tid
             time.sleep(0.15)
-        cache_team_id[nombre] = None
-        return None
+
+        # No se encontro un candidato del pais esperado en ningun intento:
+        # usamos el primer resultado como antes, para no perder cobertura en
+        # equipos donde no tenemos pais esperado claro o la API no incluye
+        # esa variante.
+        cache_team_id[nombre] = primer_resultado_fallback
+        return primer_resultado_fallback
 
     fixture_ids_existentes = set(df["fixture_id"].dropna().astype(int))
     filas_nuevas = []
