@@ -33,6 +33,67 @@ def obtener_partidos_equipo(df, equipo, n=10):
     return partidos.sort_values("fecha", ascending=False).head(n)
 
 
+# Las 23 ligas domesticas top de nivel 1 (mismo criterio que LIGAS_NIVEL_1 en
+# api_to_csv.py). Se usan para calcular la liga "principal" de un equipo por
+# moda, en vez de por el ultimo partido jugado (que puede ser de copa,
+# amistoso o continental y no representa su competencia habitual).
+LIGAS_DOMESTICAS_NIVEL1 = [
+    "Premier League", "La Liga", "Serie A", "Bundesliga", "Ligue 1", "Primeira Liga",
+    "Eredivisie", "Pro League Belgica", "Premier League Egipto", "Pro League Arabia",
+    "Super Lig Turquia", "Liga Profesional Argentina", "Brasileirao", "Liga Colombia",
+    "Primera Division Chile", "Primera Division Uruguay", "Primera Division Peru",
+    "Liga Pro Ecuador", "Primera Division Venezuela", "Primera Division Bolivia",
+    "Division Profesional Paraguay", "Liga MX", "MLS",
+]
+
+
+def _liga_principal_equipo(df, equipo):
+    """Liga domestica de nivel 1 mas frecuente del equipo (moda entre sus
+    partidos en esas 23 ligas), o None si no tiene ninguno."""
+    partidos_dom = df[
+        ((df["equipo_local"] == equipo) | (df["equipo_visitante"] == equipo)) &
+        (df["liga"].isin(LIGAS_DOMESTICAS_NIVEL1))
+    ]
+    if partidos_dom.empty:
+        return None
+    return partidos_dom["liga"].value_counts().idxmax()
+
+
+def obtener_liga_partido(df, local, visitante):
+    """Determina la liga del partido que se esta analizando (Boca vs River
+    en Liga Profesional Argentina, por ejemplo), en 3 niveles de confianza:
+
+    1) Si hay un partido programado (NS) para este cruce exacto, esa fila
+       ES el partido que se va a simular - su liga es la fuente mas
+       confiable. Si hay mas de uno (ej. revancha de copa el mismo dia que
+       liga), se usa el mas proximo en fecha al momento actual.
+    2) Si no hay NS para este cruce, se usa la liga domestica nivel1 mas
+       frecuente del equipo local (moda), mas estable que "el ultimo
+       partido jugado" porque no cambia semana a semana por congestion de
+       fixturas entre liga/copa/continental.
+    3) Ultimo recurso: el ultimo partido jugado del equipo local en
+       cualquier competencia (comportamiento previo a este fix)."""
+    cruce = df[
+        ((df["equipo_local"] == local) & (df["equipo_visitante"] == visitante)) |
+        ((df["equipo_local"] == visitante) & (df["equipo_visitante"] == local))
+    ]
+    pendientes = cruce[cruce["estado"] == "NS"] if "estado" in cruce.columns else cruce.iloc[0:0]
+    if not pendientes.empty:
+        fechas = pd.to_datetime(pendientes["fecha"], errors="coerce", utc=True)
+        if fechas.notna().any():
+            ahora = pd.Timestamp.now(tz="UTC")
+            idx_mas_cercano = (fechas - ahora).abs().idxmin()
+            return pendientes.loc[idx_mas_cercano, "liga"]
+        return pendientes.iloc[0]["liga"]
+
+    liga_dom = _liga_principal_equipo(df, local)
+    if liga_dom:
+        return liga_dom
+
+    partidos = obtener_partidos_equipo(df, local, n=1)
+    return partidos.iloc[0]["liga"] if not partidos.empty else None
+
+
 def obtener_partidos_con_stats(df, equipo, n=10):
     """Retorna SOLO partidos con stats reales (corners o tarjetas > 0)."""
     partidos = df[
@@ -88,7 +149,11 @@ def _promedio_liga_con_stats(df, liga):
     return resultado
 
 
-def estadisticas_equipo_ultimos10(df, equipo, min_partidos=3):
+def estadisticas_equipo_ultimos10(df, equipo, liga=None, min_partidos=3):
+    """liga: liga del partido que se esta analizando (ver obtener_liga_partido).
+    Si no se pasa (compatibilidad con llamadas existentes que no la conocen),
+    se infiere con _liga_principal_equipo() en vez de usar el ultimo partido
+    jugado del equipo, que puede ser de una competencia distinta."""
     partidos = obtener_partidos_equipo(df, equipo, n=10)
     partidos_stats = obtener_partidos_con_stats(df, equipo, n=10)
 
@@ -186,7 +251,7 @@ def estadisticas_equipo_ultimos10(df, equipo, min_partidos=3):
     n_partidos_stats = len(partidos_stats)
     pocos_datos = n_partidos < min_partidos
 
-    liga = partidos["liga"].iloc[0] if not partidos.empty else ""
+    liga = liga or _liga_principal_equipo(df, equipo) or (partidos["liga"].iloc[0] if not partidos.empty else "")
     prom_liga = _promedio_liga_con_stats(df, liga)
 
     # Sin stats reales usar promedio de liga
@@ -228,11 +293,7 @@ def estadisticas_equipo_ultimos10(df, equipo, min_partidos=3):
         media_tt_c = np.mean(tiros_total_contra) if tiros_total_contra else 0.0
 
     # Detectar si es torneo de selecciones para usar constantes correctas
-    try:
-        liga_equipo = partidos["liga"].iloc[0] if not partidos.empty else ""
-        es_torneo_selecc = liga_equipo in TORNEOS_SELECCIONES
-    except Exception:
-        es_torneo_selecc = False
+    es_torneo_selecc = liga in TORNEOS_SELECCIONES
 
     # Aplicar limites realistas segun tipo de competicion
     if es_torneo_selecc:
