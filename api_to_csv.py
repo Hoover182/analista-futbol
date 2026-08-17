@@ -143,8 +143,11 @@ def obtener_datos_mitad(fixture_id, local, visitante):
 
 NOMBRES_EQUIPO_NORMALIZADOS = {
     "1. FC Heidenheim": "FC Heidenheim",
-    "Borussia Monchengladbach": "Borussia Monchengladbach",
+    "Borussia Monchengladbach": "Borussia Mönchengladbach",
     "Vfl Bochum": "VfL Bochum",
+    "Al Masry": "AL Masry",
+    "como": "Como",
+    "Fortuna Dusseldorf": "Fortuna Düsseldorf",
 }
 
 
@@ -195,7 +198,7 @@ def construir_fila(fixture, liga_nombre):
     if estado in ("FT", "AET"):
         stats = obtener_estadisticas_partido(fixture_id)
         for equipo_stats in stats:
-            nombre_equipo = equipo_stats.get("team", {}).get("name", "")
+            nombre_equipo = normalizar_nombre_equipo(equipo_stats.get("team", {}).get("name", ""))
             es_local = nombre_equipo == local
             for stat in equipo_stats.get("statistics", []):
                 tipo  = stat.get("type", "")
@@ -482,8 +485,8 @@ def actualizar_h2h_desactualizado(df):
                 estado = f["fixture"]["status"]["short"]
                 if estado not in ("FT", "AET", "PEN"):
                     continue
-                nombre_local_real = f["teams"]["home"]["name"]
-                nombre_visit_real = f["teams"]["away"]["name"]
+                nombre_local_real = normalizar_nombre_equipo(f["teams"]["home"]["name"])
+                nombre_visit_real = normalizar_nombre_equipo(f["teams"]["away"]["name"])
                 corners_l = corners_v = None
                 tarjetas_l = tarjetas_v = None
                 tiros_arco_l = tiros_arco_v = None
@@ -502,7 +505,7 @@ def actualizar_h2h_desactualizado(df):
                         rojas_l = rojas_v = 0
                         posesion_l = posesion_v = 0
                     for equipo_stats in stats_partido:
-                        nombre_equipo_stats = equipo_stats.get("team", {}).get("name", "")
+                        nombre_equipo_stats = normalizar_nombre_equipo(equipo_stats.get("team", {}).get("name", ""))
                         es_local_stats = nombre_equipo_stats == nombre_local_real
                         for stat in equipo_stats.get("statistics", []):
                             tipo = stat.get("type", "")
