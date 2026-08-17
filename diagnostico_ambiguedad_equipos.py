@@ -2,6 +2,7 @@ import re
 import time
 import json
 import os
+import unicodedata
 
 import pandas as pd
 import requests
@@ -74,6 +75,15 @@ else:
 pendientes = sorted(n for n in equipos_n1 if n not in resultados)
 print(f"Equipos nivel1 totales: {len(equipos_n1)} | ya verificados: {len(resultados)} | pendientes: {len(pendientes)}")
 
+
+def sanitizar_busqueda(nombre):
+    # El campo "search" de api-sports solo acepta caracteres alfanumericos
+    # ASCII y espacios: rechaza tildes/dieresis/caracteres turcos, puntos,
+    # guiones y apostrofes con un error 400-like en "errors.search".
+    sin_tildes = unicodedata.normalize("NFKD", nombre).encode("ascii", "ignore").decode("ascii")
+    solo_alnum = re.sub(r"[^A-Za-z0-9\s]", " ", sin_tildes)
+    return re.sub(r"\s+", " ", solo_alnum).strip()
+
 llamadas_hechas = 0
 detenido_por_cuota = False
 
@@ -91,10 +101,18 @@ for nombre in pendientes:
             detenido_por_cuota = True
             break
 
-    resp = requests.get("https://v3.football.api-sports.io/teams", headers=headers, params={"search": nombre}, timeout=15)
+    busqueda = sanitizar_busqueda(nombre)
+    resp = requests.get("https://v3.football.api-sports.io/teams", headers=headers, params={"search": busqueda}, timeout=15)
     llamadas_hechas += 1
     data_teams = resp.json()
-    if data_teams.get("errors"):
+    errores = data_teams.get("errors")
+    if errores:
+        if isinstance(errores, dict) and set(errores.keys()) <= {"search"}:
+            # Error de validacion del campo search (nombre saneado sigue sin
+            # ser aceptado, p.ej. muy corto). No es cuota: lo dejamos
+            # pendiente y seguimos con el resto.
+            print(f"  omitido (search invalido tras sanear): {nombre!r} -> {busqueda!r} :: {errores}")
+            continue
         # Cuota agotada u otro error de cuenta a mitad de la corrida: no
         # guardamos este equipo (quedaria con candidatos=0 falso), lo dejamos
         # pendiente para la proxima corrida.
