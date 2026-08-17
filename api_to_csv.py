@@ -356,6 +356,17 @@ def actualizar_h2h_desactualizado(df):
         for nombre in pd.concat([sub["equipo_local"], sub["equipo_visitante"]]).dropna().unique():
             pais_esperado_por_equipo.setdefault(nombre, set()).add(pais)
 
+    # Excepciones donde el mapeo liga->pais es incorrecto para un equipo
+    # puntual (la MLS es "USA" pero estos 3 clubes tienen sede en Canada).
+    # Sin este override, el pais "esperado" (USA) hace que se prefiera el
+    # equipo reserva homonimo de EE.UU. (ej. "Toronto FC II") en vez del
+    # club real.
+    pais_esperado_por_equipo.update({
+        "Toronto FC": {"Canada"},
+        "Vancouver Whitecaps": {"Canada"},
+        "CF Montreal": {"Canada"},
+    })
+
     pares_todos = set()
     for _, row in df.iterrows():
         if row["equipo_local"] in equipos_n1 and row["equipo_visitante"] in equipos_n1:
@@ -383,8 +394,17 @@ def actualizar_h2h_desactualizado(df):
 
     cache_team_id = {}
 
+    # Equipos que /teams?search= no encuentra bajo ningun nombre/variante
+    # (verificado consultando /teams?league=...), asi que se fija el id.
+    EQUIPOS_ID_OVERRIDE = {
+        "Al-Ettifaq": 2934,  # Pro League Arabia (id liga 307), Saudi-Arabia
+    }
+
     def buscar_team_id(nombre):
         if nombre in cache_team_id:
+            return cache_team_id[nombre]
+        if nombre in EQUIPOS_ID_OVERRIDE:
+            cache_team_id[nombre] = EQUIPOS_ID_OVERRIDE[nombre]
             return cache_team_id[nombre]
         import unicodedata
         sin_acentos = unicodedata.normalize("NFKD", nombre).encode("ascii", "ignore").decode("ascii")
