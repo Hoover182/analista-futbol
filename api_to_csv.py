@@ -241,16 +241,29 @@ def construir_fila(fixture, liga_nombre):
     estado    = f.get("status", {}).get("short", "")
     arbitro   = f.get("referee") or ""
 
-    corners_l = corners_v = 0
-    tarjetas_l = tarjetas_v = 0
-    tiros_arco_l = tiros_arco_v = 0
-    tiros_total_l = tiros_total_v = 0
-    faltas_l = faltas_v = 0
-    rojas_l = rojas_v = 0
-    posesion_l = posesion_v = 0
+    # None (no 0) hasta que se confirme que la API tiene stats para este
+    # fixture -- si "stats" viene vacio (partido sin datos detallados en la
+    # API, comun en copas de menor cobertura), estos campos deben quedar
+    # como dato faltante, no como un 0 real que arruina los promedios.
+    # Mismo patron que ya usa el bloque H2H de actualizar_h2h_desactualizado().
+    corners_l = corners_v = None
+    tarjetas_l = tarjetas_v = None
+    tiros_arco_l = tiros_arco_v = None
+    tiros_total_l = tiros_total_v = None
+    faltas_l = faltas_v = None
+    rojas_l = rojas_v = None
+    posesion_l = posesion_v = None
 
     if estado in ("FT", "AET"):
         stats = obtener_estadisticas_partido(fixture_id)
+        if stats:
+            corners_l = corners_v = 0
+            tarjetas_l = tarjetas_v = 0
+            tiros_arco_l = tiros_arco_v = 0
+            tiros_total_l = tiros_total_v = 0
+            faltas_l = faltas_v = 0
+            rojas_l = rojas_v = 0
+            posesion_l = posesion_v = 0
         for equipo_stats in stats:
             nombre_equipo = normalizar_nombre_equipo(equipo_stats.get("team", {}).get("name", ""))
             es_local = nombre_equipo == local
