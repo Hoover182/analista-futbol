@@ -637,7 +637,7 @@ def actualizar_h2h_desactualizado(df, pares_forzados=None):
 
 
 
-def descargar_y_guardar_csv(dias_adelante=4, descarga_inicial=False):
+def descargar_y_guardar_csv(dias_adelante=4, descarga_inicial=False, incluir_h2h=True):
     hoy               = datetime.now().date()
     date_to           = (hoy + timedelta(days=dias_adelante)).isoformat()
     temporada_europea = hoy.year if hoy.month >= 8 else hoy.year - 1
@@ -703,11 +703,12 @@ def descargar_y_guardar_csv(dias_adelante=4, descarga_inicial=False):
     print(f"Partidos nuevos: {len(df_nuevo)}")
     print(f"Partidos totales: {len(df_combined)}")
 
-    print("\nRevisando H2H desactualizado (mas de 1 mes sin partidos nuevos)...")
-    try:
-        actualizar_h2h_desactualizado(df_combined)
-    except Exception as e:
-        print(f"  Error revisando H2H desactualizado: {e}")
+    if incluir_h2h:
+        print("\nRevisando H2H desactualizado (mas de 1 mes sin partidos nuevos)...")
+        try:
+            actualizar_h2h_desactualizado(df_combined)
+        except Exception as e:
+            print(f"  Error revisando H2H desactualizado: {e}")
 
 
 if __name__ == "__main__":
