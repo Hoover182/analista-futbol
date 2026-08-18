@@ -9,7 +9,7 @@ LIGAS_VALIDAS = [
     # Europa - Copas
     "Champions League", "Europa League", "Conference League",
     "FA Cup", "Copa del Rey", "Coppa Italia", "DFB Pokal", "Coupe de France",
-    "Taca de Portugal", "KNVB Beker", "Copa Belgica", "Turkiye Kupasi",
+    "Taça de Portugal", "KNVB Beker", "Copa Belgica", "Turkiye Kupasi",
     # Africa/Asia
     "Premier League Egipto", "Copa Egipto", "Pro League Arabia",
     # America - Ligas
