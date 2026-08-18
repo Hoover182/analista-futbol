@@ -458,7 +458,45 @@ def actualizar_h2h_desactualizado(df, pares_forzados=None):
     # Equipos que /teams?search= no encuentra bajo ningun nombre/variante
     # (verificado consultando /teams?league=...), asi que se fija el id.
     EQUIPOS_ID_OVERRIDE = {
-        "Al-Ettifaq": 2934,  # Pro League Arabia (id liga 307), Saudi-Arabia
+        "Al-Ettifaq": 2934,     # Pro League Arabia (id liga 307), Saudi-Arabia
+        "Kasımpaşa": 1004,      # Super Lig Turquia (id liga 203), Turkey
+        "St. Louis City": 20787,  # el fragmento "Louis City" tambien matchea
+                                  # "St. Louis City II" (id 18740, reserva),
+                                  # mismo pais (USA) -- el filtro de pais no
+                                  # alcanza a desambiguar, se fija el id.
+    }
+
+    # Equipos donde /teams?search= con el nombre tal cual (o las variantes
+    # genericas de mas abajo) no encuentra nada, pero SI se encuentran con
+    # un fragmento especifico -- verificado en vivo contra buscar_team_id()
+    # real para cada uno. No hay una transformacion generica que sirva para
+    # todos (sacar el guion/punto no alcanza), cada equipo necesita su
+    # propio fragmento nucleo. El filtro de pais mas abajo sigue aplicando
+    # sobre estos resultados, asi que sigue siendo necesario para desambiguar
+    # (ej. "Faisaly" trae tambien un equipo de Jordania, "Ittihad" trae 15
+    # candidatos de 8 paises distintos).
+    EQUIPOS_BUSQUEDA_OVERRIDE = {
+        "1. FC Heidenheim":    "Heidenheim",
+        "1. FC Köln":          "Koln",
+        "FC St. Pauli":        "Pauli",
+        "A. Italiano":         "Italiano",
+        "Al-Ahli Jeddah":      "Ahli Jeddah",
+        "Al-Faisaly FC":       "Faisaly",
+        "Al-Fateh":            "Fateh",
+        "Al-Fayha":            "Fayha",
+        "Al-Hazm":             "Hazm",
+        "Al-Hilal Saudi FC":   "Hilal Saudi",
+        "Al-Ittihad FC":       "Ittihad",
+        "Al-Qadisiyah FC":     "Qadisiyah",
+        "Atletico-MG":         "Atletico Mineiro",
+        "Chapecoense-sc":      "Chapecoense",
+        "D. La Serena":        "La Serena",
+        "Gençlerbirliği S.K.": "Genclerbirligi",
+        "Independ. Rivadavia": "Rivadavia",
+        "O'Higgins":           "Higgins",
+        "St. Truiden":         "Truiden",
+        "U. Catolica":         "Catolica",
+        "U.N.A.M. - Pumas":    "Pumas",
     }
 
     def buscar_team_id(nombre):
@@ -469,7 +507,10 @@ def actualizar_h2h_desactualizado(df, pares_forzados=None):
             return cache_team_id[nombre]
         import unicodedata
         sin_acentos = unicodedata.normalize("NFKD", nombre).encode("ascii", "ignore").decode("ascii")
-        intentos = [nombre]
+        intentos = []
+        if nombre in EQUIPOS_BUSQUEDA_OVERRIDE:
+            intentos.append(EQUIPOS_BUSQUEDA_OVERRIDE[nombre])
+        intentos.append(nombre)
         if "." in nombre:
             intentos.append(nombre.replace(".", ""))
             intentos.append(nombre.split()[0])
