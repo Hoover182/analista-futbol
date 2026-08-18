@@ -165,6 +165,60 @@ MAPEO_LIGAS_H2H = {
 }
 
 
+LIGAS_NIVEL_1 = [
+    "Premier League", "La Liga", "Serie A", "Bundesliga", "Ligue 1", "Primeira Liga",
+    "Eredivisie", "Pro League Belgica", "Premier League Egipto", "Pro League Arabia",
+    "Super Lig Turquia", "Liga Profesional Argentina", "Brasileirao", "Liga Colombia",
+    "Primera Division Chile", "Primera Division Uruguay", "Primera Division Peru",
+    "Liga Pro Ecuador", "Primera Division Venezuela", "Primera Division Bolivia",
+    "Division Profesional Paraguay", "Liga MX", "MLS",
+]
+
+MIN_PARTIDOS_H2H = 5  # igual al "last" que pide la consulta headtohead
+
+
+def identificar_pares_incompletos(df, min_partidos=MIN_PARTIDOS_H2H, dias_frescura=30):
+    """Encuentra pares de equipos nivel1 cuyo H2H mas reciente es reciente
+    (por eso actualizar_h2h_desactualizado() no los volveria a tocar con el
+    chequeo normal de antiguedad) pero tienen menos de min_partidos partidos
+    guardados -- el caso donde un partido nuevo traido por la descarga
+    regular de la liga "tapa" un hueco de partidos viejos nunca backfillado.
+    No incluye pares que nunca tuvieron ningun H2H terminado (categoria
+    distinta, se deja fuera a proposito)."""
+    import pandas as pd
+    from datetime import timedelta
+
+    fecha_dt = pd.to_datetime(df["fecha"], errors="coerce", utc=True)
+
+    equipos_n1 = set()
+    for liga in LIGAS_NIVEL_1:
+        sub = df[df["liga"] == liga]
+        equipos_n1.update(sub["equipo_local"].dropna().unique())
+        equipos_n1.update(sub["equipo_visitante"].dropna().unique())
+
+    pares_todos = set()
+    for _, row in df.iterrows():
+        if row["equipo_local"] in equipos_n1 and row["equipo_visitante"] in equipos_n1:
+            pares_todos.add(tuple(sorted([row["equipo_local"], row["equipo_visitante"]])))
+
+    limite = pd.Timestamp.now(tz="UTC") - timedelta(days=dias_frescura)
+    resultado = []
+    for local, visitante in pares_todos:
+        mask_par = (
+            ((df["equipo_local"] == local) & (df["equipo_visitante"] == visitante)) |
+            ((df["equipo_local"] == visitante) & (df["equipo_visitante"] == local))
+        )
+        mask_terminado = df["estado"].isin(["FT", "AET", "PEN"])
+        h2h_par = fecha_dt[mask_par & mask_terminado]
+        if h2h_par.empty:
+            continue
+        fecha_mas_reciente = h2h_par.max()
+        es_reciente = pd.notna(fecha_mas_reciente) and fecha_mas_reciente >= limite
+        if es_reciente and len(h2h_par) < min_partidos:
+            resultado.append((local, visitante))
+    return resultado
+
+
 def normalizar_liga_h2h(nombre):
     """Cuando actualizar_h2h_desactualizado() trae un partido de una de las
     45 ligas rastreadas pero con el nombre crudo que devuelve la API (en vez
@@ -290,24 +344,22 @@ def obtener_ultima_fecha_liga(liga_nombre):
         return None
 
 
-def actualizar_h2h_desactualizado(df):
+def actualizar_h2h_desactualizado(df, pares_forzados=None):
     """Revisa pares de equipos de nivel 1 cuyo H2H mas reciente tiene mas
-    de 1 mes de antiguedad, y vuelve a consultar la API por si hay
-    partidos nuevos que agregar. Limite configurable por corrida
-    para no agotar la cuota diaria completa en una sola ejecucion."""
+    de 1 mes de antiguedad, o que tienen menos de MIN_PARTIDOS_H2H partidos
+    guardados aunque el mas reciente sea fresco (ver identificar_pares_incompletos),
+    y vuelve a consultar la API por si hay partidos nuevos que agregar.
+    Limite configurable por corrida para no agotar la cuota diaria completa
+    en una sola ejecucion.
+
+    pares_forzados: si se pasa una lista de pares (local, visitante), se usa
+    tal cual en vez de calcular los desactualizados/incompletos -- para
+    backfills dirigidos a un subconjunto puntual (ver
+    backfill_h2h_incompleto.py)."""
     import pandas as pd
     import time
     from datetime import datetime, timedelta
     headers = {"x-apisports-key": API_KEY}
-
-    LIGAS_NIVEL_1 = [
-        "Premier League", "La Liga", "Serie A", "Bundesliga", "Ligue 1", "Primeira Liga",
-        "Eredivisie", "Pro League Belgica", "Premier League Egipto", "Pro League Arabia",
-        "Super Lig Turquia", "Liga Profesional Argentina", "Brasileirao", "Liga Colombia",
-        "Primera Division Chile", "Primera Division Uruguay", "Primera Division Peru",
-        "Liga Pro Ecuador", "Primera Division Venezuela", "Primera Division Bolivia",
-        "Division Profesional Paraguay", "Liga MX", "MLS",
-    ]
 
     # Pais que devuelve la API (campo "country") para cada liga nivel 1. Se usa
     # para desambiguar equipos con nombres genericos que existen en varios
@@ -377,20 +429,26 @@ def actualizar_h2h_desactualizado(df):
 
     limite_antiguedad = pd.Timestamp.now(tz="UTC") - timedelta(days=30)
 
-    pares_desactualizados = []
-    for local, visitante in pares_todos:
-        h2h_par = df[
-            ((df["equipo_local"] == local) & (df["equipo_visitante"] == visitante)) |
-            ((df["equipo_local"] == visitante) & (df["equipo_visitante"] == local))
-        ]
-        h2h_par = h2h_par[h2h_par["estado"].isin(["FT", "AET", "PEN"])]
-        if h2h_par.empty:
-            continue
-        fecha_mas_reciente = h2h_par["fecha_dt"].max()
-        if pd.isna(fecha_mas_reciente) or fecha_mas_reciente < limite_antiguedad:
-            pares_desactualizados.append((local, visitante))
+    if pares_forzados is not None:
+        pares_desactualizados = pares_forzados
+        print(f"  Pares forzados (backfill dirigido): {len(pares_desactualizados)}")
+    else:
+        pares_desactualizados = []
+        for local, visitante in pares_todos:
+            h2h_par = df[
+                ((df["equipo_local"] == local) & (df["equipo_visitante"] == visitante)) |
+                ((df["equipo_local"] == visitante) & (df["equipo_visitante"] == local))
+            ]
+            h2h_par = h2h_par[h2h_par["estado"].isin(["FT", "AET", "PEN"])]
+            viejo = h2h_par.empty
+            if not viejo:
+                fecha_mas_reciente = h2h_par["fecha_dt"].max()
+                viejo = pd.isna(fecha_mas_reciente) or fecha_mas_reciente < limite_antiguedad
+            incompleto = len(h2h_par) < MIN_PARTIDOS_H2H
+            if viejo or incompleto:
+                pares_desactualizados.append((local, visitante))
 
-    print(f"  Pares con H2H de mas de 1 mes de antiguedad: {len(pares_desactualizados)}")
+        print(f"  Pares con H2H desactualizado (viejo o con menos de {MIN_PARTIDOS_H2H} partidos): {len(pares_desactualizados)}")
 
     if not pares_desactualizados:
         return
