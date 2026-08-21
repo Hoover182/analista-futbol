@@ -6,6 +6,10 @@ LIGAS_VALIDAS = [
     # Europa - Ligas
     "Premier League", "La Liga", "Serie A", "Bundesliga", "Ligue 1",
     "Primeira Liga", "Eredivisie", "Pro League Belgica", "Super Lig Turquia",
+    # Segundas divisiones -- solo para historial/forma de equipos que cruzan
+    # a copas nacionales que si trackeamos (Coppa Italia, Copa do Brasil), no
+    # para mostrar partidos ni predicciones de estas ligas en la app.
+    "Serie B Italia", "Serie B Brasil",
     # Europa - Copas
     "Champions League", "Europa League", "Conference League",
     "FA Cup", "Copa del Rey", "Coppa Italia", "DFB Pokal", "Coupe de France",
