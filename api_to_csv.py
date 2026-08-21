@@ -174,6 +174,175 @@ LIGAS_NIVEL_1 = [
     "Division Profesional Paraguay", "Liga MX", "MLS",
 ]
 
+# Pais que devuelve la API (campo "country") para cada liga nivel 1. Se usa
+# para desambiguar equipos con nombres genericos que existen en varios
+# paises (Platense, Nacional, Cerro, etc), donde buscar_team_id() podia
+# devolver el equipo equivocado por tomar ciegamente el primer resultado.
+LIGA_A_PAIS = {
+    "Premier League":                "England",
+    "La Liga":                       "Spain",
+    "Serie A":                       "Italy",
+    "Bundesliga":                    "Germany",
+    "Ligue 1":                       "France",
+    "Primeira Liga":                 "Portugal",
+    "Eredivisie":                    "Netherlands",
+    "Pro League Belgica":            "Belgium",
+    "Premier League Egipto":         "Egypt",
+    "Pro League Arabia":             "Saudi-Arabia",
+    "Super Lig Turquia":             "Turkey",
+    "Liga Profesional Argentina":    "Argentina",
+    "Brasileirao":                   "Brazil",
+    "Liga Colombia":                 "Colombia",
+    "Primera Division Chile":        "Chile",
+    "Primera Division Uruguay":      "Uruguay",
+    "Primera Division Peru":         "Peru",
+    "Liga Pro Ecuador":              "Ecuador",
+    "Primera Division Venezuela":    "Venezuela",
+    "Primera Division Bolivia":      "Bolivia",
+    "Division Profesional Paraguay": "Paraguay",
+    "Liga MX":                       "Mexico",
+    "MLS":                           "USA",
+}
+
+
+def construir_pais_esperado_por_equipo(df):
+    """Pais esperado de cada equipo nivel 1, segun en que liga(s) nivel 1 jugo
+    dentro del CSV. Un equipo puede tener mas de un pais esperado si el nombre
+    se repite sin querer entre dos ligas (caso raro); en ese caso no se filtra
+    por pais para evitar descartar el candidato correcto.
+    Extraido de actualizar_h2h_desactualizado() para poder reutilizarlo desde
+    otros scripts (ej. descarga de jugadores) sin duplicar la logica."""
+    import pandas as pd
+
+    pais_esperado_por_equipo = {}
+    for liga in LIGAS_NIVEL_1:
+        pais = LIGA_A_PAIS.get(liga)
+        if not pais:
+            continue
+        sub = df[df["liga"] == liga]
+        for nombre in pd.concat([sub["equipo_local"], sub["equipo_visitante"]]).dropna().unique():
+            pais_esperado_por_equipo.setdefault(nombre, set()).add(pais)
+
+    # Excepciones donde el mapeo liga->pais es incorrecto para un equipo
+    # puntual (la MLS es "USA" pero estos 3 clubes tienen sede en Canada).
+    # Sin este override, el pais "esperado" (USA) hace que se prefiera el
+    # equipo reserva homonimo de EE.UU. (ej. "Toronto FC II") en vez del
+    # club real.
+    pais_esperado_por_equipo.update({
+        "Toronto FC": {"Canada"},
+        "Vancouver Whitecaps": {"Canada"},
+        "CF Montreal": {"Canada"},
+    })
+    return pais_esperado_por_equipo
+
+
+# Equipos que /teams?search= no encuentra bajo ningun nombre/variante
+# (verificado consultando /teams?league=...), asi que se fija el id.
+EQUIPOS_ID_OVERRIDE = {
+    "Al-Ettifaq": 2934,     # Pro League Arabia (id liga 307), Saudi-Arabia
+    "Kasımpaşa": 1004,      # Super Lig Turquia (id liga 203), Turkey
+    "St. Louis City": 20787,  # el fragmento "Louis City" tambien matchea
+                              # "St. Louis City II" (id 18740, reserva),
+                              # mismo pais (USA) -- el filtro de pais no
+                              # alcanza a desambiguar, se fija el id.
+}
+
+# Equipos donde /teams?search= con el nombre tal cual (o las variantes
+# genericas de mas abajo) no encuentra nada, pero SI se encuentran con
+# un fragmento especifico -- verificado en vivo contra buscar_team_id()
+# real para cada uno. No hay una transformacion generica que sirva para
+# todos (sacar el guion/punto no alcanza), cada equipo necesita su
+# propio fragmento nucleo. El filtro de pais mas abajo sigue aplicando
+# sobre estos resultados, asi que sigue siendo necesario para desambiguar
+# (ej. "Faisaly" trae tambien un equipo de Jordania, "Ittihad" trae 15
+# candidatos de 8 paises distintos).
+EQUIPOS_BUSQUEDA_OVERRIDE = {
+    "1. FC Heidenheim":    "Heidenheim",
+    "1. FC Köln":          "Koln",
+    "FC St. Pauli":        "Pauli",
+    "A. Italiano":         "Italiano",
+    "Al-Ahli Jeddah":      "Ahli Jeddah",
+    "Al-Faisaly FC":       "Faisaly",
+    "Al-Fateh":            "Fateh",
+    "Al-Fayha":            "Fayha",
+    "Al-Hazm":             "Hazm",
+    "Al-Hilal Saudi FC":   "Hilal Saudi",
+    "Al-Ittihad FC":       "Ittihad",
+    "Al-Qadisiyah FC":     "Qadisiyah",
+    "Atletico-MG":         "Atletico Mineiro",
+    "Chapecoense-sc":      "Chapecoense",
+    "D. La Serena":        "La Serena",
+    "Gençlerbirliği S.K.": "Genclerbirligi",
+    "Independ. Rivadavia": "Rivadavia",
+    "O'Higgins":           "Higgins",
+    "St. Truiden":         "Truiden",
+    "U. Catolica":         "Catolica",
+    "U.N.A.M. - Pumas":    "Pumas",
+}
+
+
+def buscar_team_id(nombre, pais_esperado_por_equipo, cache_team_id, headers):
+    """Resuelve el team_id de api-football para 'nombre', prefiriendo el
+    candidato del pais esperado (si se conoce) en vez de tomar ciegamente
+    el primer resultado de busqueda -- evita traer el equipo equivocado
+    para nombres genericos que existen en varios paises.
+    Extraido de actualizar_h2h_desactualizado() para poder reutilizarlo
+    desde otros scripts (ej. descarga de jugadores) sin duplicar la logica.
+    'cache_team_id' se pasa por referencia para compartir cache entre
+    llamadas del mismo script."""
+    if nombre in cache_team_id:
+        return cache_team_id[nombre]
+    if nombre in EQUIPOS_ID_OVERRIDE:
+        cache_team_id[nombre] = EQUIPOS_ID_OVERRIDE[nombre]
+        return cache_team_id[nombre]
+    import unicodedata
+    import time
+    sin_acentos = unicodedata.normalize("NFKD", nombre).encode("ascii", "ignore").decode("ascii")
+    intentos = []
+    if nombre in EQUIPOS_BUSQUEDA_OVERRIDE:
+        intentos.append(EQUIPOS_BUSQUEDA_OVERRIDE[nombre])
+    intentos.append(nombre)
+    if "." in nombre:
+        intentos.append(nombre.replace(".", ""))
+        intentos.append(nombre.split()[0])
+    if sin_acentos != nombre and sin_acentos not in intentos:
+        intentos.append(sin_acentos)
+
+    # Si sabemos en que pais deberia estar este equipo (por la liga nivel 1
+    # donde jugo en nuestro CSV), preferimos el candidato de ese pais en
+    # vez de tomar ciegamente el primer resultado de la busqueda, que para
+    # nombres genericos (Platense, Nacional, Cerro...) suele traer el
+    # equipo equivocado de otro pais.
+    paises_esperados = pais_esperado_por_equipo.get(nombre)
+    primer_resultado_fallback = None
+
+    for intento in intentos:
+        resp = requests.get("https://v3.football.api-sports.io/teams", headers=headers, params={"search": intento}, timeout=15)
+        data = resp.json()
+        candidatos = data.get("response") or []
+        if candidatos:
+            if primer_resultado_fallback is None:
+                primer_resultado_fallback = candidatos[0]["team"]["id"]
+            if paises_esperados:
+                for c in candidatos:
+                    if c["team"].get("country") in paises_esperados:
+                        tid = c["team"]["id"]
+                        cache_team_id[nombre] = tid
+                        return tid
+            else:
+                tid = candidatos[0]["team"]["id"]
+                cache_team_id[nombre] = tid
+                return tid
+        time.sleep(0.15)
+
+    # No se encontro un candidato del pais esperado en ningun intento:
+    # usamos el primer resultado como antes, para no perder cobertura en
+    # equipos donde no tenemos pais esperado claro o la API no incluye
+    # esa variante.
+    cache_team_id[nombre] = primer_resultado_fallback
+    return primer_resultado_fallback
+
+
 MIN_PARTIDOS_H2H = 5  # igual al "last" que pide la consulta headtohead
 
 
@@ -383,36 +552,6 @@ def actualizar_h2h_desactualizado(df, pares_forzados=None):
     from datetime import datetime, timedelta
     headers = {"x-apisports-key": API_KEY}
 
-    # Pais que devuelve la API (campo "country") para cada liga nivel 1. Se usa
-    # para desambiguar equipos con nombres genericos que existen en varios
-    # paises (Platense, Nacional, Cerro, etc), donde buscar_team_id() podia
-    # devolver el equipo equivocado por tomar ciegamente el primer resultado.
-    LIGA_A_PAIS = {
-        "Premier League":                "England",
-        "La Liga":                       "Spain",
-        "Serie A":                       "Italy",
-        "Bundesliga":                    "Germany",
-        "Ligue 1":                       "France",
-        "Primeira Liga":                 "Portugal",
-        "Eredivisie":                    "Netherlands",
-        "Pro League Belgica":            "Belgium",
-        "Premier League Egipto":         "Egypt",
-        "Pro League Arabia":             "Saudi-Arabia",
-        "Super Lig Turquia":             "Turkey",
-        "Liga Profesional Argentina":    "Argentina",
-        "Brasileirao":                   "Brazil",
-        "Liga Colombia":                 "Colombia",
-        "Primera Division Chile":        "Chile",
-        "Primera Division Uruguay":      "Uruguay",
-        "Primera Division Peru":         "Peru",
-        "Liga Pro Ecuador":              "Ecuador",
-        "Primera Division Venezuela":    "Venezuela",
-        "Primera Division Bolivia":      "Bolivia",
-        "Division Profesional Paraguay": "Paraguay",
-        "Liga MX":                       "Mexico",
-        "MLS":                           "USA",
-    }
-
     df["fecha_dt"] = pd.to_datetime(df["fecha"], errors="coerce", utc=True)
     equipos_n1 = set()
     for liga in LIGAS_NIVEL_1:
@@ -420,29 +559,11 @@ def actualizar_h2h_desactualizado(df, pares_forzados=None):
         equipos_n1.update(sub["equipo_local"].dropna().unique())
         equipos_n1.update(sub["equipo_visitante"].dropna().unique())
 
-    # Pais esperado de cada equipo nivel 1, segun en que liga(s) nivel 1 jugo
-    # dentro de nuestro CSV. Un equipo puede tener mas de un pais esperado si
-    # el nombre se repite sin querer entre dos ligas (caso raro); en ese caso
-    # no se filtra por pais para evitar descartar el candidato correcto.
-    pais_esperado_por_equipo = {}
-    for liga in LIGAS_NIVEL_1:
-        pais = LIGA_A_PAIS.get(liga)
-        if not pais:
-            continue
-        sub = df[df["liga"] == liga]
-        for nombre in pd.concat([sub["equipo_local"], sub["equipo_visitante"]]).dropna().unique():
-            pais_esperado_por_equipo.setdefault(nombre, set()).add(pais)
-
-    # Excepciones donde el mapeo liga->pais es incorrecto para un equipo
-    # puntual (la MLS es "USA" pero estos 3 clubes tienen sede en Canada).
-    # Sin este override, el pais "esperado" (USA) hace que se prefiera el
-    # equipo reserva homonimo de EE.UU. (ej. "Toronto FC II") en vez del
-    # club real.
-    pais_esperado_por_equipo.update({
-        "Toronto FC": {"Canada"},
-        "Vancouver Whitecaps": {"Canada"},
-        "CF Montreal": {"Canada"},
-    })
+    # LIGA_A_PAIS, EQUIPOS_ID_OVERRIDE, EQUIPOS_BUSQUEDA_OVERRIDE y
+    # buscar_team_id() ahora son de nivel de modulo (ver arriba de este
+    # archivo) para poder reutilizarlos desde otros scripts sin duplicar
+    # la logica de desambiguacion por pais.
+    pais_esperado_por_equipo = construir_pais_esperado_por_equipo(df)
 
     pares_todos = set()
     for _, row in df.iterrows():
@@ -477,102 +598,6 @@ def actualizar_h2h_desactualizado(df, pares_forzados=None):
 
     cache_team_id = {}
 
-    # Equipos que /teams?search= no encuentra bajo ningun nombre/variante
-    # (verificado consultando /teams?league=...), asi que se fija el id.
-    EQUIPOS_ID_OVERRIDE = {
-        "Al-Ettifaq": 2934,     # Pro League Arabia (id liga 307), Saudi-Arabia
-        "Kasımpaşa": 1004,      # Super Lig Turquia (id liga 203), Turkey
-        "St. Louis City": 20787,  # el fragmento "Louis City" tambien matchea
-                                  # "St. Louis City II" (id 18740, reserva),
-                                  # mismo pais (USA) -- el filtro de pais no
-                                  # alcanza a desambiguar, se fija el id.
-    }
-
-    # Equipos donde /teams?search= con el nombre tal cual (o las variantes
-    # genericas de mas abajo) no encuentra nada, pero SI se encuentran con
-    # un fragmento especifico -- verificado en vivo contra buscar_team_id()
-    # real para cada uno. No hay una transformacion generica que sirva para
-    # todos (sacar el guion/punto no alcanza), cada equipo necesita su
-    # propio fragmento nucleo. El filtro de pais mas abajo sigue aplicando
-    # sobre estos resultados, asi que sigue siendo necesario para desambiguar
-    # (ej. "Faisaly" trae tambien un equipo de Jordania, "Ittihad" trae 15
-    # candidatos de 8 paises distintos).
-    EQUIPOS_BUSQUEDA_OVERRIDE = {
-        "1. FC Heidenheim":    "Heidenheim",
-        "1. FC Köln":          "Koln",
-        "FC St. Pauli":        "Pauli",
-        "A. Italiano":         "Italiano",
-        "Al-Ahli Jeddah":      "Ahli Jeddah",
-        "Al-Faisaly FC":       "Faisaly",
-        "Al-Fateh":            "Fateh",
-        "Al-Fayha":            "Fayha",
-        "Al-Hazm":             "Hazm",
-        "Al-Hilal Saudi FC":   "Hilal Saudi",
-        "Al-Ittihad FC":       "Ittihad",
-        "Al-Qadisiyah FC":     "Qadisiyah",
-        "Atletico-MG":         "Atletico Mineiro",
-        "Chapecoense-sc":      "Chapecoense",
-        "D. La Serena":        "La Serena",
-        "Gençlerbirliği S.K.": "Genclerbirligi",
-        "Independ. Rivadavia": "Rivadavia",
-        "O'Higgins":           "Higgins",
-        "St. Truiden":         "Truiden",
-        "U. Catolica":         "Catolica",
-        "U.N.A.M. - Pumas":    "Pumas",
-    }
-
-    def buscar_team_id(nombre):
-        if nombre in cache_team_id:
-            return cache_team_id[nombre]
-        if nombre in EQUIPOS_ID_OVERRIDE:
-            cache_team_id[nombre] = EQUIPOS_ID_OVERRIDE[nombre]
-            return cache_team_id[nombre]
-        import unicodedata
-        sin_acentos = unicodedata.normalize("NFKD", nombre).encode("ascii", "ignore").decode("ascii")
-        intentos = []
-        if nombre in EQUIPOS_BUSQUEDA_OVERRIDE:
-            intentos.append(EQUIPOS_BUSQUEDA_OVERRIDE[nombre])
-        intentos.append(nombre)
-        if "." in nombre:
-            intentos.append(nombre.replace(".", ""))
-            intentos.append(nombre.split()[0])
-        if sin_acentos != nombre and sin_acentos not in intentos:
-            intentos.append(sin_acentos)
-
-        # Si sabemos en que pais deberia estar este equipo (por la liga nivel 1
-        # donde jugo en nuestro CSV), preferimos el candidato de ese pais en
-        # vez de tomar ciegamente el primer resultado de la busqueda, que para
-        # nombres genericos (Platense, Nacional, Cerro...) suele traer el
-        # equipo equivocado de otro pais.
-        paises_esperados = pais_esperado_por_equipo.get(nombre)
-        primer_resultado_fallback = None
-
-        for intento in intentos:
-            resp = requests.get("https://v3.football.api-sports.io/teams", headers=headers, params={"search": intento}, timeout=15)
-            data = resp.json()
-            candidatos = data.get("response") or []
-            if candidatos:
-                if primer_resultado_fallback is None:
-                    primer_resultado_fallback = candidatos[0]["team"]["id"]
-                if paises_esperados:
-                    for c in candidatos:
-                        if c["team"].get("country") in paises_esperados:
-                            tid = c["team"]["id"]
-                            cache_team_id[nombre] = tid
-                            return tid
-                else:
-                    tid = candidatos[0]["team"]["id"]
-                    cache_team_id[nombre] = tid
-                    return tid
-            time.sleep(0.15)
-
-        # No se encontro un candidato del pais esperado en ningun intento:
-        # usamos el primer resultado como antes, para no perder cobertura en
-        # equipos donde no tenemos pais esperado claro o la API no incluye
-        # esa variante.
-        cache_team_id[nombre] = primer_resultado_fallback
-        return primer_resultado_fallback
-
     fixture_ids_existentes = set(df["fixture_id"].dropna().astype(int))
     filas_nuevas = []
     procesados = 0
@@ -585,8 +610,8 @@ def actualizar_h2h_desactualizado(df, pares_forzados=None):
             print(f"  Limite de {LIMITE_LLAMADAS_H2H} llamadas alcanzado, se completara en la proxima corrida")
             break
         try:
-            tid_local = buscar_team_id(local)
-            tid_visitante = buscar_team_id(visitante)
+            tid_local = buscar_team_id(local, pais_esperado_por_equipo, cache_team_id, headers)
+            tid_visitante = buscar_team_id(visitante, pais_esperado_por_equipo, cache_team_id, headers)
             if not tid_local or not tid_visitante:
                 errores += 1
                 continue
