@@ -54,15 +54,21 @@ def reconsultar_stats(fixture_id, local):
     if not stats:
         return resultado
 
-    for k in claves:
-        resultado[k] = 0
+    # rojas_l/rojas_v: la API devuelve "Red Cards": null (no 0) en la enorme
+    # mayoria de partidos sin expulsiones -- null API -> 0 confirmado a
+    # proposito para esta metrica unicamente, ver mismo comentario en
+    # construir_fila() de api_to_csv.py. El resto de las claves queda en
+    # None (el default de arriba) hasta confirmar un valor real -- NO poner
+    # en 0 pensando que es el mismo comportamiento que rojas.
+    resultado["rojas_l"] = resultado["rojas_v"] = 0
 
     for equipo_stats in stats:
         nombre_equipo = normalizar_nombre_equipo(equipo_stats.get("team", {}).get("name", ""))
         es_local = nombre_equipo == local
         for stat in equipo_stats.get("statistics", []):
-            tipo = stat.get("type", "")
-            valor = _safe_int(stat.get("value"))
+            tipo        = stat.get("type", "")
+            valor_bruto = stat.get("value")
+            valor       = _safe_int(valor_bruto) if valor_bruto is not None else None
             if tipo == "Corner Kicks":
                 resultado["corners_l" if es_local else "corners_v"] = valor
             elif tipo == "Yellow Cards":
@@ -70,11 +76,14 @@ def reconsultar_stats(fixture_id, local):
             elif tipo == "Fouls":
                 resultado["faltas_l" if es_local else "faltas_v"] = valor
             elif tipo == "Ball Possession":
-                val_limpio = str(stat.get("value") or "0").replace("%", "")
-                val_num = int(val_limpio) if val_limpio.isdigit() else 0
+                if valor_bruto is not None:
+                    val_limpio = str(valor_bruto).replace("%", "")
+                    val_num = int(val_limpio) if val_limpio.isdigit() else None
+                else:
+                    val_num = None
                 resultado["posesion_l" if es_local else "posesion_v"] = val_num
             elif tipo == "Red Cards":
-                resultado["rojas_l" if es_local else "rojas_v"] = valor
+                resultado["rojas_l" if es_local else "rojas_v"] = _safe_int(valor_bruto)  # null -> 0 a proposito
             elif tipo == "Shots on Goal":
                 resultado["tiros_arco_l" if es_local else "tiros_arco_v"] = valor
             elif tipo == "Total Shots":
