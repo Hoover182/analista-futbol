@@ -19,6 +19,7 @@ LIGAS_VALIDAS = [
     # entre paises antes (Primera Division, Serie A).
     "Championship", "Segunda Division Espana", "Ligue 2", "Eerste Divisie",
     "2. Bundesliga", "3. Liga", "Second League Egipto", "Primera B Colombia",
+    "Primera B Metropolitana",
     # Europa - Copas
     "Champions League", "Europa League", "Conference League",
     "FA Cup", "Copa del Rey", "Coppa Italia", "DFB Pokal", "Coupe de France",
