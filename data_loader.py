@@ -10,6 +10,15 @@ LIGAS_VALIDAS = [
     # a copas nacionales que si trackeamos (Coppa Italia, Copa do Brasil), no
     # para mostrar partidos ni predicciones de estas ligas en la app.
     "Serie B Italia", "Serie B Brasil",
+    # Mismo criterio: equipos puntuales que aparecen como rival de un
+    # equipo trackeado en un partido programado (ej. Hull City vs Manchester
+    # United), pero que ellos mismos no jugaban en ninguna liga trackeada --
+    # sin esto el modelo no tenia historial propio para calcular una
+    # prediccion. Nombres con sufijo de pais a proposito ("Segunda Division
+    # Espana", no "Segunda División") porque el nombre generico ya choco
+    # entre paises antes (Primera Division, Serie A).
+    "Championship", "Segunda Division Espana", "Ligue 2", "Eerste Divisie",
+    "2. Bundesliga", "3. Liga", "Second League Egipto", "Primera B Colombia",
     # Europa - Copas
     "Champions League", "Europa League", "Conference League",
     "FA Cup", "Copa del Rey", "Coppa Italia", "DFB Pokal", "Coupe de France",
