@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 from fifa_ranking import ajuste_fifa
+from liga_ranking import ajuste_liga_clubes
 from value_bet import normalizar_std
 
 # Minimos y maximos realistas por equipo
@@ -53,6 +54,35 @@ def _liga_principal_equipo(df, equipo):
     partidos_dom = df[
         ((df["equipo_local"] == equipo) | (df["equipo_visitante"] == equipo)) &
         (df["liga"].isin(LIGAS_DOMESTICAS_NIVEL1))
+    ]
+    if partidos_dom.empty:
+        return None
+    return partidos_dom["liga"].value_counts().idxmax()
+
+
+# Segundas divisiones -- solo existen en el CSV como historial de equipos
+# puntuales que aparecen de rival de un equipo trackeado (ver LIGAS_VALIDAS
+# en data_loader.py). Se suman a LIGAS_DOMESTICAS_NIVEL1 para poder
+# resolver la "liga de referencia" tambien de esos equipos (ej. Coventry
+# -> Championship), no solo de los de primera.
+LIGAS_SEGUNDA_DIVISION = [
+    "Championship", "Segunda Division Espana", "Ligue 2", "Eerste Divisie",
+    "2. Bundesliga", "3. Liga", "Second League Egipto", "Primera B Colombia",
+    "Primera B Metropolitana", "Serie B Italia", "Serie B Brasil",
+]
+
+LIGAS_DOMESTICAS_TODAS = LIGAS_DOMESTICAS_NIVEL1 + LIGAS_SEGUNDA_DIVISION
+
+
+def _liga_referencia_equipo(df, equipo):
+    """Liga domestica (de cualquier nivel, no solo primera) mas frecuente
+    del equipo -- usada para el ajuste de fuerza de liga entre clubes
+    (ver liga_ranking.ajuste_liga_clubes). A diferencia de
+    _liga_principal_equipo(), tambien resuelve equipos de segunda
+    division como Coventry (Championship)."""
+    partidos_dom = df[
+        ((df["equipo_local"] == equipo) | (df["equipo_visitante"] == equipo)) &
+        (df["liga"].isin(LIGAS_DOMESTICAS_TODAS))
     ]
     if partidos_dom.empty:
         return None
@@ -340,7 +370,8 @@ def estadisticas_equipo_ultimos10(df, equipo, liga=None, min_partidos=3):
         "victorias": victorias,
         "empates": empates,
         "derrotas": derrotas,
-        "puntos": victorias * 3 + empates
+        "puntos": victorias * 3 + empates,
+        "liga_referencia": _liga_referencia_equipo(df, equipo)
     }
 
 
@@ -421,6 +452,21 @@ def ajustar_medias_con_rival(stats_a, stats_b, h2h, equipo_local=None, equipo_vi
     corners_a      = float(np.clip(corners_a,      CORNERS_MIN,  CORNERS_MAX))
     corners_b      = float(np.clip(corners_b,      CORNERS_MIN,  CORNERS_MAX))
     tarjetas_total = float(np.clip(tarjetas_total, 1.5,          8.0))
+
+    # Ajuste de fuerza de liga - solo aplica entre clubes (no selecciones)
+    # cuando se conoce la liga domestica de referencia de ambos equipos y
+    # son distintas (ej. Premier League vs Championship en una copa). Sin
+    # esto, un equipo de segunda division en racha ofensiva se comparaba
+    # a nivel de goles crudos contra un equipo de primera de otro pais,
+    # sin ningun contexto de que juega en una liga mas debil.
+    liga_ref_a = stats_a.get("liga_referencia")
+    liga_ref_b = stats_b.get("liga_referencia")
+    factor_liga_a, factor_liga_b = ajuste_liga_clubes(liga_ref_a, liga_ref_b)
+    if factor_liga_a != 1.0 or factor_liga_b != 1.0:
+        goles_a   = goles_a   * factor_liga_a
+        goles_b   = goles_b   * factor_liga_b
+        corners_a = corners_a * factor_liga_a
+        corners_b = corners_b * factor_liga_b
 
     # Ajuste FIFA - solo aplica para selecciones nacionales
     try:
