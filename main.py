@@ -230,7 +230,7 @@ def _simular_partido(df, local, visitante):
 
     h2h = ultimos_enfrentamientos_directos(df, local, visitante, n=5)
     goles_a, goles_b, corners_a, corners_b, tarjetas_total = ajustar_medias_con_rival(
-        stats_a, stats_b, h2h
+        stats_a, stats_b, h2h, equipo_local=local, equipo_visitante=visitante
     )
 
     sim = simular_partido_futbol(
