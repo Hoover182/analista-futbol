@@ -53,6 +53,17 @@ LIGAS = [
     {"liga": "Copa Colombia",              "id": 241, "temporada": 2026, "inicio": "2026-01-01"},
     {"liga": "Copa Uruguay",               "id": 270, "temporada": 2026, "inicio": "2026-01-01"},
     {"liga": "Mundial 2026",                "id": 1,   "temporada": 2026, "inicio": "2026-06-01"},
+    # Supercopas de las 5 grandes ligas europeas. La API devuelve el mismo
+    # nombre generico "Super Cup" para Italia (547), Espana (556) y Alemania
+    # (529) -- mismo patron de colision que Serie A/Primera Division, ya
+    # verificado en vivo (confirmo 12 filas historicas mezcladas bajo ese
+    # nombre generico). Community Shield (528) y Trophee des Champions (526)
+    # son unicos en la API, sin sufijo necesario.
+    {"liga": "Community Shield",           "id": 528, "temporada": None, "inicio": "2025-08-01"},
+    {"liga": "Trophée des Champions",      "id": 526, "temporada": None, "inicio": "2025-08-01"},
+    {"liga": "Super Cup Italia",           "id": 547, "temporada": None, "inicio": "2025-08-01"},
+    {"liga": "Super Cup Espana",           "id": 556, "temporada": None, "inicio": "2025-08-01"},
+    {"liga": "Super Cup Alemania",         "id": 529, "temporada": None, "inicio": "2025-08-01"},
 ]
 
 CSV_SALIDA = "futbol_partidos.csv"

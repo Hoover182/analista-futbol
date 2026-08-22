@@ -24,6 +24,13 @@ LIGAS_VALIDAS = [
     "Champions League", "Europa League", "Conference League",
     "FA Cup", "Copa del Rey", "Coppa Italia", "DFB Pokal", "Coupe de France",
     "Taça de Portugal", "KNVB Beker", "Copa Belgica", "Turkiye Kupasi",
+    # Supercopas de las 5 grandes ligas. "Super Cup Italia/Espana/Alemania"
+    # son nombres canonicos nuestros (con sufijo de pais) porque la API
+    # devuelve el mismo "Super Cup" generico para ~50 paises distintos --
+    # ver ID_A_LIGA en api_to_csv.py. Community Shield y Trophée des
+    # Champions ya son unicos en la API, sin sufijo.
+    "Community Shield", "Trophée des Champions",
+    "Super Cup Italia", "Super Cup Espana", "Super Cup Alemania",
     # Africa/Asia
     "Premier League Egipto", "Copa Egipto", "Pro League Arabia",
     # America - Ligas
