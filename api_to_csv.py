@@ -164,6 +164,16 @@ MAPEO_LIGAS_H2H = {
     "Copa de la Liga Profesional":   "Liga Profesional Argentina",
 }
 
+# La API devuelve el mismo "name" para ligas de paises distintos (ej. Brasil
+# e Italia comparten literalmente "Serie A", distinguibles solo por id/country
+# -- verificado en vivo: id=71/country=Brazil vs id=135/country=Italy). Mapear
+# por nombre en normalizar_liga_h2h() etiquetaba mal cualquier partido de H2H
+# de la liga contaminante. ID_A_LIGA usa el id real (unico por competencia,
+# a diferencia del nombre) como fuente de verdad, construido desde la misma
+# lista LIGAS que ya usa la descarga regular de fixtures -- no un mapeo
+# nuevo por separado.
+ID_A_LIGA = {comp["id"]: comp["liga"] for comp in LIGAS}
+
 
 LIGAS_NIVEL_1 = [
     "Premier League", "La Liga", "Serie A", "Bundesliga", "Ligue 1", "Primeira Liga",
@@ -388,12 +398,20 @@ def identificar_pares_incompletos(df, min_partidos=MIN_PARTIDOS_H2H, dias_frescu
     return resultado
 
 
-def normalizar_liga_h2h(nombre):
+def normalizar_liga_h2h(nombre, liga_id=None):
     """Cuando actualizar_h2h_desactualizado() trae un partido de una de las
     45 ligas rastreadas pero con el nombre crudo que devuelve la API (en vez
     del nombre canonico usado en LIGAS), lo mapea al nombre canonico. Ligas
     reales no rastreadas y amistosos/copas de exhibicion se dejan tal cual
-    para no perder ese historial."""
+    para no perder ese historial.
+
+    Prioriza liga_id sobre el nombre: la API puede devolver el mismo "name"
+    para ligas de paises distintos (ej. "Serie A" para Brasil e Italia,
+    distinguibles solo por id/country), asi que mapear por nombre solo
+    puede etiquetar mal el partido. Si liga_id no viene o no es una de
+    nuestras 45 ligas trackeadas, cae al mapeo por nombre de siempre."""
+    if liga_id in ID_A_LIGA:
+        return ID_A_LIGA[liga_id]
     return MAPEO_LIGAS_H2H.get(nombre, nombre)
 
 
@@ -687,7 +705,7 @@ def actualizar_h2h_desactualizado(df, pares_forzados=None):
                     "fecha": f["fixture"]["date"][:19],
                     "fixture_id": fid,
                     "estado": estado,
-                    "liga": normalizar_liga_h2h(f["league"]["name"]),
+                    "liga": normalizar_liga_h2h(f["league"]["name"], f["league"].get("id")),
                     "equipo_local": nombre_local_real,
                     "equipo_visitante": nombre_visit_real,
                     "goles_local": f["goals"]["home"],
