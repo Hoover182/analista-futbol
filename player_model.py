@@ -1,4 +1,4 @@
-﻿import requests
+import requests
 import numpy as np
 import pandas as pd
 from datetime import datetime, timedelta
@@ -6,14 +6,8 @@ from datetime import datetime, timedelta
 API_KEY = "7be9c4250da301a68726beedbe2b382a"
 BASE_URL = "https://v3.football.api-sports.io"
 
-MINUTOS_MIN = 45
-
-MEDIA_MIN_TIROS_ARCO  = 0.3
-MEDIA_MIN_TIROS_TOTAL = 0.5
-MEDIA_MIN_ASISTENCIAS = 0.1
-MEDIA_MIN_FUERA_JUEGO = 0.1
-MEDIA_MIN_TARJETAS    = 0.1
-MEDIA_MIN_FALTAS      = 0.5
+MINUTOS_MIN_TEMPORADA = 90
+MAX_JUGADORES_POR_SECCION = 5
 
 POSICIONES_PORTERO   = ["goalkeeper", "gk", "g", "portero"]
 POSICIONES_DEFENSA   = ["defender", "d", "cb", "lb", "rb", "wb", "defensa"]
@@ -29,14 +23,8 @@ def api_get(endpoint, params=None):
         if response.status_code == 200:
             return response.json()
         return {}
-    except requests.exceptions.Timeout:
-        print(f"  Timeout en {endpoint}")
-        return {}
-    except requests.exceptions.ConnectionError:
-        print(f"  Error de conexion en {endpoint}")
-        return {}
     except Exception as e:
-        print(f"  Error inesperado en {endpoint}: {e}")
+        print(f"  Error en {endpoint}: {e}")
         return {}
 
 
@@ -55,28 +43,32 @@ def clasificar_posicion(pos):
     return "otro"
 
 
+def simular_jugador(media, lineas):
+    media = max(float(media), 0.05)
+    valores = np.random.poisson(media, 10000).astype(float)
+    resultado = {}
+    for linea in lineas:
+        resultado[str(linea)] = {
+            "over":  round(float(np.mean(valores > linea)) * 100, 1),
+            "under": round(float(np.mean(valores < linea)) * 100, 1)
+        }
+    return resultado
+
+
 def obtener_fixture_id(liga_id, temporada, equipo_local, equipo_visitante, fecha, df=None):
-    # Primero intentar desde el CSV filtrando por fecha
     if df is not None and "fixture_id" in df.columns:
         try:
-            fecha_dt = pd.to_datetime(fecha, errors="coerce", utc=True)
-            if pd.notna(fecha_dt):
-                fecha_min = fecha_dt - pd.Timedelta(days=2)
-                fecha_max = fecha_dt + pd.Timedelta(days=2)
-                partido = df[
-                    (df["equipo_local"] == equipo_local) &
-                    (df["equipo_visitante"] == equipo_visitante) &
-                    (df["fecha"] >= fecha_min) &
-                    (df["fecha"] <= fecha_max)
-                ].sort_values("fecha", ascending=False)
-                if not partido.empty:
-                    fid = partido.iloc[0]["fixture_id"]
-                    if fid and not pd.isna(fid):
-                        return int(fid)
+            partido = df[
+                (df["equipo_local"] == equipo_local) &
+                (df["equipo_visitante"] == equipo_visitante)
+            ].sort_values("fecha", ascending=False)
+            if not partido.empty:
+                fid = partido.iloc[0]["fixture_id"]
+                if fid and not pd.isna(fid):
+                    return int(fid)
         except Exception:
             pass
 
-    # Si no encuentra en CSV busca en la API
     try:
         if isinstance(fecha, str):
             fecha_dt = datetime.strptime(fecha[:10], "%Y-%m-%d")
@@ -108,133 +100,338 @@ def obtener_fixture_id(liga_id, temporada, equipo_local, equipo_visitante, fecha
     return None
 
 
-def obtener_stats_jugadores_partido(fixture_id):
-    if not fixture_id:
-        return []
+import os
+import json
+from datetime import datetime, timedelta
 
-    data = api_get("fixtures/players", params={"fixture": fixture_id})
-    jugadores = []
+CACHE_JUGADORES_DIR = os.path.join(os.path.dirname(__file__), "cache_jugadores")
+CACHE_DIAS_VALIDEZ = 3
 
-    for equipo in data.get("response", []):
-        nombre_equipo = equipo.get("team", {}).get("name", "")
-        for jugador in equipo.get("players", []):
-            info  = jugador.get("player", {})
-            stats = jugador.get("statistics", [{}])[0]
-            games = stats.get("games", {})
-            pos   = games.get("position", "") or ""
-
-            tipo_pos = clasificar_posicion(pos)
-            if tipo_pos in ["portero", "otro"]:
-                continue
-
-            minutos = games.get("minutes") or 0
-            if minutos < MINUTOS_MIN:
-                continue
-
-            jugadores.append({
-                "equipo":            nombre_equipo,
-                "nombre":            info.get("name", "Desconocido"),
-                "posicion":          pos,
-                "posicion_tipo":     tipo_pos,
-                "minutos":           minutos,
-                "goles":             stats.get("goals", {}).get("total")     or 0,
-                "asistencias":       stats.get("goals", {}).get("assists")   or 0,
-                "tiros_total":       stats.get("shots", {}).get("total")     or 0,
-                "tiros_arco":        stats.get("shots", {}).get("on")        or 0,
-                "tarjetas_amarillas":stats.get("cards", {}).get("yellow")    or 0,
-                "tarjetas_rojas":    stats.get("cards", {}).get("red")       or 0,
-                "faltas_cometidas":  stats.get("fouls", {}).get("committed") or 0,
-                "fuera_juego":       stats.get("offsides")                   or 0,
-            })
-
-    return jugadores
+def _cache_path(team_id, liga_id, temporada):
+    os.makedirs(CACHE_JUGADORES_DIR, exist_ok=True)
+    return os.path.join(CACHE_JUGADORES_DIR, f"team_{team_id}_{liga_id}_{temporada}.json")
 
 
-def obtener_stats_historicos_jugador(jugador_nombre, liga_id, temporada):
-    if not jugador_nombre:
+def _leer_cache_jugadores(team_id, liga_id, temporada):
+    path = _cache_path(team_id, liga_id, temporada)
+    if not os.path.exists(path):
+        return None
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        fecha_guardado = datetime.fromisoformat(data["_fecha_cache"])
+        if datetime.now() - fecha_guardado > timedelta(days=CACHE_DIAS_VALIDEZ):
+            return None
+        return data["response"]
+    except Exception:
         return None
 
-    busqueda = jugador_nombre[:15].strip()
-    data = api_get("players", params={
-        "search": busqueda,
-        "league": liga_id,
-        "season": temporada
-    })
 
-    nombre_lower = jugador_nombre.lower()
-
-    for p in data.get("response", []):
-        nombre_api = p.get("player", {}).get("name", "").lower()
-        if jugador_nombre.lower()[:6] in nombre_api or nombre_api[:6] in nombre_lower:
-            stats    = p.get("statistics", [{}])[0]
-            games    = stats.get("games", {})
-            partidos = max(games.get("appearences") or 1, 1)
-            return {
-                "goles_pg":       (stats.get("goals", {}).get("total")     or 0) / partidos,
-                "asist_pg":       (stats.get("goals", {}).get("assists")   or 0) / partidos,
-                "tiros_total_pg": (stats.get("shots", {}).get("total")     or 0) / partidos,
-                "tiros_arco_pg":  (stats.get("shots", {}).get("on")        or 0) / partidos,
-                "tarjetas_pg":    (stats.get("cards", {}).get("yellow")    or 0) / partidos,
-                "faltas_pg":      (stats.get("fouls", {}).get("committed") or 0) / partidos,
-                "fuera_juego_pg": (stats.get("offsides")                   or 0) / partidos,
-            }
-
-    return None
+def _guardar_cache_jugadores(team_id, liga_id, temporada, response):
+    path = _cache_path(team_id, liga_id, temporada)
+    try:
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump({"_fecha_cache": datetime.now().isoformat(), "response": response}, f)
+    except Exception:
+        pass
 
 
-def simular_jugador(media, lineas):
-    media = max(float(media), 0.1)
-    valores = np.random.poisson(media, 10000).astype(float)
-    resultado = {}
-    for linea in lineas:
-        resultado[linea] = {
-            "over":  float(np.mean(valores > linea)),
-            "under": float(np.mean(valores < linea))
-        }
+JUGADORES_DATA_DIR = os.path.join(os.path.dirname(__file__), "jugadores_data")
+
+def _leer_jugadores_data_por_nombre(nombre_equipo):
+    """Busca el archivo descargado masivamente por nombre de equipo."""
+    path = os.path.join(JUGADORES_DATA_DIR, f"{nombre_equipo.replace('/', '_')}.json")
+    if not os.path.exists(path):
+        return None
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        return data.get("jugadores", [])
+    except Exception:
+        return None
+
+
+def _cache_path_fixture_players(fixture_id):
+    return os.path.join(CACHE_JUGADORES_DIR, f"fixture_{fixture_id}_players.json")
+
+
+def obtener_stats_jugadores_fixture(fixture_id):
+    """Devuelve las estadisticas reales de todos los jugadores de un partido especifico."""
+    path = _cache_path_fixture_players(fixture_id)
+    if os.path.exists(path):
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception:
+            pass
+    data = api_get("fixtures/players", params={"fixture": fixture_id})
+    response = data.get("response", [])
+    try:
+        os.makedirs(CACHE_JUGADORES_DIR, exist_ok=True)
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(response, f)
+    except Exception:
+        pass
+    return response
+
+
+def _normalizar_nombre(nombre):
+    """Quita acentos y pasa a minusculas para comparar nombres de forma flexible."""
+    import unicodedata
+    nfkd = unicodedata.normalize("NFKD", nombre)
+    sin_acentos = "".join(c for c in nfkd if not unicodedata.combining(c))
+    return sin_acentos.lower().strip()
+
+
+def _nombres_coinciden(nombre_a, nombre_b):
+    """Compara nombres de forma flexible: exacto, o coincidencia de apellido
+    (util cuando un lado tiene nombre abreviado tipo 'J. Ordonez' y el otro
+    tiene el nombre completo 'Jorge Ordonez')."""
+    a = _normalizar_nombre(nombre_a)
+    b = _normalizar_nombre(nombre_b)
+    if a == b:
+        return True
+    partes_a = a.replace(".", "").split()
+    partes_b = b.replace(".", "").split()
+    if not partes_a or not partes_b:
+        return False
+    apellido_a = partes_a[-1]
+    apellido_b = partes_b[-1]
+    if apellido_a != apellido_b or len(apellido_a) < 3:
+        return False
+    inicial_a = partes_a[0][0] if partes_a[0] else ""
+    inicial_b = partes_b[0][0] if partes_b[0] else ""
+    return inicial_a == inicial_b
+
+
+def obtener_historial_jugador(nombre_jugador, fixture_ids, n=5, rango_busqueda=None):
+    """Busca el desglose real de un jugador especifico en una lista de fixture_ids.
+    Recorre hasta 'rango_busqueda' fixtures (o todos si no se especifica) pero se
+    detiene apenas encuentra n partidos donde el jugador realmente participo,
+    para no gastar requests de mas.
+    Devuelve lista de dicts: [{fixture_id, rival, tiros_total, tiros_arco, goles, asistencias, tarjetas_amarillas}, ...]"""
+    resultado = []
+    limite = rango_busqueda if rango_busqueda else n
+    for fid in fixture_ids[:limite]:
+        if len(resultado) >= n:
+            break
+        datos_fixture = obtener_stats_jugadores_fixture(fid)
+        nombres_equipos = [eq.get("team", {}).get("name", "") for eq in datos_fixture]
+        for equipo in datos_fixture:
+            equipo_jugador = equipo.get("team", {}).get("name", "")
+            rival = next((n for n in nombres_equipos if n != equipo_jugador), "")
+            for j in equipo.get("players", []):
+                nombre = j.get("player", {}).get("name", "")
+                if not _nombres_coinciden(nombre, nombre_jugador):
+                    continue
+                stats = j.get("statistics", [{}])[0] if j.get("statistics") else {}
+                shots = stats.get("shots", {}) or {}
+                goals = stats.get("goals", {}) or {}
+                cards = stats.get("cards", {}) or {}
+                games_stats = stats.get("games", {}) or {}
+                fouls = stats.get("fouls", {}) or {}
+                resultado.append({
+                    "fixture_id": fid,
+                    "rival": rival,
+                    "tiros_total": shots.get("total"),
+                    "tiros_arco": shots.get("on"),
+                    "goles": goals.get("total"),
+                    "asistencias": goals.get("assists"),
+                    "tarjetas_amarillas": cards.get("yellow"),
+                    "fuera_juego": stats.get("offsides"),
+                    "faltas": fouls.get("committed"),
+                    "minutos": games_stats.get("minutes"),
+                })
     return resultado
 
 
-def analizar_jugadores_partido(fixture_id, liga_id, temporada):
-    jugadores = obtener_stats_jugadores_partido(fixture_id)
-    if not jugadores:
-        return []
+def obtener_squad_equipo(team_id, liga_id, temporada, nombre_equipo=None):
+    if nombre_equipo:
+        datos_masivos = _leer_jugadores_data_por_nombre(nombre_equipo)
+        if datos_masivos:
+            return datos_masivos
+    cacheado = _leer_cache_jugadores(team_id, liga_id, temporada)
+    if cacheado is not None:
+        return cacheado
+    data = api_get("players", params={
+        "team": team_id,
+        "league": liga_id,
+        "season": temporada
+    })
+    response = data.get("response", [])
+    if response:
+        _guardar_cache_jugadores(team_id, liga_id, temporada, response)
+    return response
 
-    resultados = []
-    for j in jugadores:
-        hist = obtener_stats_historicos_jugador(j["nombre"], liga_id, temporada)
 
-        if hist:
-            tiros_arco_media  = j["tiros_arco"]        * 0.4 + hist["tiros_arco_pg"]  * 0.6
-            tiros_total_media = j["tiros_total"]        * 0.4 + hist["tiros_total_pg"] * 0.6
-            asist_media       = j["asistencias"]        * 0.4 + hist["asist_pg"]       * 0.6
-            tarjetas_media    = j["tarjetas_amarillas"] * 0.4 + hist["tarjetas_pg"]    * 0.6
-            faltas_media      = j["faltas_cometidas"]   * 0.4 + hist["faltas_pg"]      * 0.6
-            fuera_juego_media = j["fuera_juego"]        * 0.4 + hist.get("fuera_juego_pg", 0) * 0.6
-        else:
-            tiros_arco_media  = max(j["tiros_arco"],         MEDIA_MIN_TIROS_ARCO)
-            tiros_total_media = max(j["tiros_total"],        MEDIA_MIN_TIROS_TOTAL)
-            asist_media       = max(j["asistencias"],        MEDIA_MIN_ASISTENCIAS)
-            tarjetas_media    = max(j["tarjetas_amarillas"], MEDIA_MIN_TARJETAS)
-            faltas_media      = max(j["faltas_cometidas"],   MEDIA_MIN_FALTAS)
-            fuera_juego_media = max(j["fuera_juego"],        MEDIA_MIN_FUERA_JUEGO)
+def _procesar_jugador(p, nombre_equipo):
+    info = p.get("player", {})
+    stats_list = p.get("statistics", [])
+    if not stats_list:
+        return None
 
-        resultados.append({
-            "nombre":        j["nombre"],
-            "equipo":        j["equipo"],
-            "posicion":      j["posicion"],
-            "posicion_tipo": j["posicion_tipo"],
-            "minutos":       j["minutos"],
-            "goles_partido": j["goles"],
-            "asist_partido": j["asistencias"],
-            "tiros_arco":  simular_jugador(tiros_arco_media,  [0.5, 1.5, 2.5, 3.5]),
-            "tiros_total": simular_jugador(tiros_total_media, [0.5, 1.5, 2.5, 3.5]),
-            "asistencias": simular_jugador(asist_media,       [0.5, 1.5, 2.5]),
-            "fuera_juego": simular_jugador(fuera_juego_media, [0.5, 1.5]),
-            "tarjetas":    simular_jugador(tarjetas_media,    [0.5, 1.5]),
-            "faltas":      simular_jugador(faltas_media,      [0.5, 1.5, 2.5, 3.5]),
-        })
+    stats = stats_list[0]
+    games = stats.get("games", {})
+    pos = games.get("position", "") or ""
+    tipo_pos = clasificar_posicion(pos)
 
-    return resultados
+    if tipo_pos in ["portero", "otro"]:
+        return None
+
+    minutos = games.get("minutes") or 0
+    if minutos < MINUTOS_MIN_TEMPORADA:
+        return None
+
+    partidos = max(games.get("appearences") or 1, 1)
+
+    goles_val       = stats.get("goals", {}).get("total")
+    asist_val       = stats.get("goals", {}).get("assists")
+    tarjetas_val    = stats.get("cards", {}).get("yellow")
+    faltas_val      = stats.get("fouls", {}).get("committed")
+
+    # Promedios "crudos" (null -> 0) para alimentar la simulacion Poisson
+    # (mas abajo, _goles_media etc.), que ya tiene un piso de seguridad por
+    # metrica y necesita un numero siempre, no None -- "asumir el piso
+    # cuando no sabemos" es la mejor aproximacion disponible ahi. Distinto
+    # criterio para lo que se MUESTRA al usuario (goles_pg/asist_pg/
+    # tarjetas_pg/faltas_pg en el dict de retorno): ahi SI se distingue
+    # null de 0 real mas abajo, para no mostrar "0.0 goles por partido"
+    # falso cuando en realidad no hay dato para ese jugador.
+    goles_pg       = (goles_val or 0) / partidos
+    asist_pg       = (asist_val or 0) / partidos
+    tiros_total_pg = (stats.get("shots", {}).get("total")     or 0) / partidos
+    tiros_arco_pg  = (stats.get("shots", {}).get("on")        or 0) / partidos
+    tarjetas_pg    = (tarjetas_val or 0) / partidos
+    faltas_pg      = (faltas_val or 0) / partidos
+    fuera_juego_pg = (stats.get("offsides")                   or 0) / partidos
+
+    return {
+        "nombre":        info.get("name", "Desconocido"),
+        "equipo":        nombre_equipo,
+        "posicion":      pos,
+        "posicion_tipo": tipo_pos,
+        "minutos":       minutos,
+        "partidos":      partidos,
+        "goles_pg":      round(goles_val / partidos, 2)    if goles_val    is not None else None,
+        "asist_pg":      round(asist_val / partidos, 2)    if asist_val    is not None else None,
+        "tarjetas_pg":   round(tarjetas_val / partidos, 2) if tarjetas_val is not None else None,
+        "faltas_pg":     round(faltas_val / partidos, 2)   if faltas_val   is not None else None,
+        "_score_ataque":   goles_pg + asist_pg,
+        "_score_defensa":  tarjetas_pg + faltas_pg,
+        "_goles_media": max(goles_pg, 0.05),
+        "_tiros_arco_media":  max(tiros_arco_pg,  0.1),
+        "_tiros_total_media": max(tiros_total_pg, 0.2),
+        "_asist_media":       max(asist_pg,       0.05),
+        "_tarjetas_media":    max(tarjetas_pg,    0.05),
+        "_faltas_media":      max(faltas_pg,      0.3),
+        "_fuera_juego_media": max(fuera_juego_pg, 0.05),
+    }
+
+
+def _agregar_simulaciones_ataque(j):
+    return {
+        "nombre":   j["nombre"],
+        "posicion": j["posicion"],
+        "partidos": j["partidos"],
+        "minutos":  j["minutos"],
+        "goles_pg": j["goles_pg"],
+        "asist_pg": j["asist_pg"],
+        "tiros_arco":  simular_jugador(j["_tiros_arco_media"],  [0.5, 1.5, 2.5, 3.5]),
+        "tiros_total": simular_jugador(j["_tiros_total_media"], [0.5, 1.5, 2.5, 3.5]),
+        "asistencias": simular_jugador(j["_asist_media"],       [0.5, 1.5, 2.5]),
+        "fuera_juego": simular_jugador(j["_fuera_juego_media"], [0.5, 1.5]),
+    }
+
+
+def _agregar_simulaciones_defensa(j):
+    return {
+        "nombre":      j["nombre"],
+        "posicion":    j["posicion"],
+        "partidos":    j["partidos"],
+        "minutos":     j["minutos"],
+        "tarjetas_pg": j["tarjetas_pg"],
+        "faltas_pg":   j["faltas_pg"],
+        "tarjetas": simular_jugador(j["_tarjetas_media"], [0.5, 1.5]),
+        "faltas":   simular_jugador(j["_faltas_media"],   [0.5, 1.5, 2.5, 3.5]),
+    }
+
+
+def obtener_jugadores_partido(fixture_id, liga_id, temporada, nombre_local=None, nombre_visitante=None):
+    """
+    Devuelve TODOS los jugadores del partido (sin limite, sin separar ataque/defensa).
+    Cada jugador trae TODAS las stats: tiros arco, totales, asistencias, fuera juego, tarjetas, faltas.
+    Formato: {equipo_local: {jugadores: [...]}, equipo_visitante: {jugadores: [...]}}
+    """
+    data_fixture = api_get("fixtures", params={"id": fixture_id})
+    equipos_info = []
+
+    for f in data_fixture.get("response", []):
+        home_id   = f.get("teams", {}).get("home", {}).get("id")
+        home_name = f.get("teams", {}).get("home", {}).get("name", "")
+        away_id   = f.get("teams", {}).get("away", {}).get("id")
+        away_name = f.get("teams", {}).get("away", {}).get("name", "")
+        if home_id:
+            equipos_info.append({"id": home_id, "nombre": nombre_local or home_name})
+        if away_id:
+            equipos_info.append({"id": away_id, "nombre": nombre_visitante or away_name})
+
+    if not equipos_info:
+        return {}
+
+    resultado = {}
+    for equipo in equipos_info:
+        team_id = equipo["id"]
+        nombre_equipo = equipo["nombre"]
+
+        squad = obtener_squad_equipo(team_id, liga_id, temporada, nombre_equipo=nombre_equipo)
+        jugadores_equipo = []
+        for p in squad:
+            j = _procesar_jugador(p, nombre_equipo)
+            if j:
+                # Combinar TODAS las stats: ataque + defensa
+                jugador_completo = {
+                    "nombre":      j["nombre"],
+                    "posicion":    j["posicion"],
+                    "posicion_tipo": j["posicion_tipo"],
+                    "partidos":    j["partidos"],
+                    "minutos":     j["minutos"],
+                    "goles_pg":    j["goles_pg"],
+                    "asist_pg":    j["asist_pg"],
+                    "tarjetas_pg": j["tarjetas_pg"],
+                    "faltas_pg":   j["faltas_pg"],
+                    "goles": simular_jugador(j["_goles_media"], [0.5, 1.5]),
+                    "tiros_arco":  simular_jugador(j["_tiros_arco_media"],  [0.5, 1.5, 2.5, 3.5]),
+                    "tiros_total": simular_jugador(j["_tiros_total_media"], [0.5, 1.5, 2.5, 3.5]),
+                    "asistencias": simular_jugador(j["_asist_media"],       [0.5, 1.5, 2.5]),
+                    "fuera_juego": simular_jugador(j["_fuera_juego_media"], [0.5, 1.5]),
+                    "tarjetas":    simular_jugador(j["_tarjetas_media"],    [0.5, 1.5]),
+                    "faltas":      simular_jugador(j["_faltas_media"],      [0.5, 1.5, 2.5, 3.5]),
+                }
+                jugadores_equipo.append(jugador_completo)
+
+        # Ordenar por minutos (titulares primero) para que el listado sea util
+        jugadores_equipo.sort(key=lambda x: x["minutos"], reverse=True)
+
+        resultado[nombre_equipo] = {"jugadores": jugadores_equipo}
+
+    return resultado
+
+
+def analizar_jugadores_partido(fixture_id, liga_id, temporada, equipo_local=None, equipo_visitante=None):
+    """Wrapper para compatibilidad con el CLI (main.py, opcion 8), que
+    espera una lista plana en vez del formato {equipo: {jugadores: [...]}}
+    que devuelve obtener_jugadores_partido(). Cada jugador ya trae su propio
+    "posicion_tipo" real (delantero/medio/defensa/otro) calculado en
+    _procesar_jugador() -- version anterior de esta funcion pisaba eso con
+    un "atacante"/"defensa" fijo leyendo de claves ("secciones['atacantes']"/
+    "secciones['defensivos']") que no existen en el formato actual, dejando
+    la funcion rota (nunca se noto porque nada la llamaba en esta forma)."""
+    data = obtener_jugadores_partido(fixture_id, liga_id, temporada, equipo_local, equipo_visitante)
+    lista_plana = []
+    for equipo_nombre, secciones in data.items():
+        for j in secciones["jugadores"]:
+            lista_plana.append({**j, "equipo": equipo_nombre})
+    return lista_plana
 
 
 def imprimir_picks_jugadores(jugadores):
@@ -259,22 +456,22 @@ def imprimir_picks_jugadores(jugadores):
             print(f"  🎯 TIROS AL ARCO")
             print(f"  {'LINEA':<8} {'OVER':>10} {'UNDER':>10}")
             for linea, vals in j["tiros_arco"].items():
-                print(f"  {linea:<8} {vals['over']*100:>9.1f}% {vals['under']*100:>9.1f}%")
+                print(f"  {linea:<8} {vals['over']:>9.1f}% {vals['under']:>9.1f}%")
 
             print(f"\n  💥 DISPAROS TOTALES")
             print(f"  {'LINEA':<8} {'OVER':>10} {'UNDER':>10}")
             for linea, vals in j["tiros_total"].items():
-                print(f"  {linea:<8} {vals['over']*100:>9.1f}% {vals['under']*100:>9.1f}%")
+                print(f"  {linea:<8} {vals['over']:>9.1f}% {vals['under']:>9.1f}%")
 
             print(f"\n  🅰️  ASISTENCIAS")
             print(f"  {'LINEA':<8} {'OVER':>10} {'UNDER':>10}")
             for linea, vals in j["asistencias"].items():
-                print(f"  {linea:<8} {vals['over']*100:>9.1f}% {vals['under']*100:>9.1f}%")
+                print(f"  {linea:<8} {vals['over']:>9.1f}% {vals['under']:>9.1f}%")
 
             print(f"\n  🚫 FUERA DE JUEGO")
             print(f"  {'LINEA':<8} {'OVER':>10} {'UNDER':>10}")
             for linea, vals in j["fuera_juego"].items():
-                print(f"  {linea:<8} {vals['over']*100:>9.1f}% {vals['under']*100:>9.1f}%")
+                print(f"  {linea:<8} {vals['over']:>9.1f}% {vals['under']:>9.1f}%")
 
     if disciplinarios:
         print("\n┌─────────────────────────────────────────────────────────┐")
@@ -288,9 +485,9 @@ def imprimir_picks_jugadores(jugadores):
             print(f"  🟨 TARJETAS AMARILLAS")
             print(f"  {'LINEA':<8} {'OVER':>10} {'UNDER':>10}")
             for linea, vals in j["tarjetas"].items():
-                print(f"  {linea:<8} {vals['over']*100:>9.1f}% {vals['under']*100:>9.1f}%")
+                print(f"  {linea:<8} {vals['over']:>9.1f}% {vals['under']:>9.1f}%")
 
             print(f"\n  🦵 FALTAS COMETIDAS")
             print(f"  {'LINEA':<8} {'OVER':>10} {'UNDER':>10}")
             for linea, vals in j["faltas"].items():
-                print(f"  {linea:<8} {vals['over']*100:>9.1f}% {vals['under']*100:>9.1f}%")
+                print(f"  {linea:<8} {vals['over']:>9.1f}% {vals['under']:>9.1f}%")
