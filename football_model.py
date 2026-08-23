@@ -34,21 +34,35 @@ def obtener_partidos_equipo(df, equipo, n=10):
     return partidos.sort_values("fecha", ascending=False).head(n)
 
 
-def obtener_partidos_equipo_por_condicion(df, equipo, condicion, n=10):
-    """Ultimos partidos de un equipo SOLO en la condicion que va a tener
-    en el partido que se esta simulando -- a diferencia de
-    obtener_partidos_equipo(), que mezcla local y visitante. Medido en
-    vivo (sesion de diseno): 32.9% de los equipos trackeados tienen una
-    diferencia >0.5 goles a favor entre jugar de local y de visitante,
-    diferencia promedio 0.33 goles -- un efecto real, no un ajuste
-    cosmetico."""
-    if condicion == "local":
-        partidos = df[df["equipo_local"] == equipo].copy()
-    else:
-        partidos = df[df["equipo_visitante"] == equipo].copy()
+def _historial_equipo(df, equipo):
+    """TODO el historial FT/AET/PEN de un equipo (local o visitante),
+    ordenado por fecha descendente, SIN truncar a n -- un unico
+    filtrado sobre el DataFrame completo (~20k filas), reutilizado
+    despues para derivar la ventana mezclada, la ventana por condicion,
+    y las versiones "con stats reales" de cada una, sin volver a barrer
+    el DataFrame entero por cada una (antes: 4 pasadas completas por
+    equipo por partido -- con ~70 partidos/dia x 2 equipos, eran ~560
+    pasadas por request. Medido: bajo el tiempo de estadisticas_equipo_
+    ultimos10() con condicion de val a val (ver commit))."""
+    partidos = df[
+        (df["equipo_local"] == equipo) |
+        (df["equipo_visitante"] == equipo)
+    ].copy()
     if "estado" in partidos.columns:
         partidos = partidos[partidos["estado"].isin(["FT", "AET", "PEN"])]
-    return partidos.sort_values("fecha", ascending=False).head(n)
+    return partidos.sort_values("fecha", ascending=False)
+
+
+def _con_stats(partidos, n=10):
+    """Subconjunto con stats reales (corners o tarjetas > 0) de un
+    historial YA filtrado por equipo -- mismo criterio que
+    obtener_partidos_con_stats(), pero operando sobre un subset chico
+    en vez de barrer el DataFrame completo de nuevo."""
+    con_stats = partidos[
+        (partidos["corners_local"] + partidos["corners_visitante"] > 0) |
+        (partidos["tarjetas_local"] + partidos["tarjetas_visitante"] > 0)
+    ]
+    return con_stats.head(n)
 
 
 # Las 23 ligas domesticas top de nivel 1 (mismo criterio que LIGAS_NIVEL_1 en
@@ -156,23 +170,6 @@ def obtener_partidos_con_stats(df, equipo, n=10):
     return partidos_con_stats.sort_values("fecha", ascending=False).head(n)
 
 
-def obtener_partidos_con_stats_por_condicion(df, equipo, condicion, n=10):
-    """Version de obtener_partidos_con_stats() filtrada por condicion
-    (local/visitante), mismo criterio que obtener_partidos_equipo_por_
-    condicion() para goles."""
-    if condicion == "local":
-        partidos = df[df["equipo_local"] == equipo].copy()
-    else:
-        partidos = df[df["equipo_visitante"] == equipo].copy()
-    if "estado" in partidos.columns:
-        partidos = partidos[partidos["estado"].isin(["FT", "AET", "PEN"])]
-    partidos_con_stats = partidos[
-        (partidos["corners_local"] + partidos["corners_visitante"] > 0) |
-        (partidos["tarjetas_local"] + partidos["tarjetas_visitante"] > 0)
-    ]
-    return partidos_con_stats.sort_values("fecha", ascending=False).head(n)
-
-
 def _promedio_liga_con_stats(df, liga):
     """Calcula promedios de liga usando SOLO partidos con stats reales."""
     df_liga = df[df["liga"] == liga].copy()
@@ -213,16 +210,26 @@ def _promedio_liga_con_stats(df, liga):
     return resultado
 
 
-def _promedios_ponderados_condicion(df, equipo, condicion, n=10):
+def _promedios_ponderados_condicion(historial, equipo, condicion, n=10):
     """Promedios ponderados por fuerza FIFA del rival para los ultimos n
     partidos de un equipo EN UNA CONDICION especifica (local o
     visitante) -- mismo criterio de ponderacion y de exclusion null por
     metrica que la ventana general de estadisticas_equipo_ultimos10(),
     pero sin fallback a promedio de liga (ese ya lo aporta el blend con
     la ventana mezclada en el caller). Devuelve None por metrica si no
-    hay ningun partido con ese dato, nunca un 0 falso."""
-    partidos = obtener_partidos_equipo_por_condicion(df, equipo, condicion, n=n)
-    partidos_stats = obtener_partidos_con_stats_por_condicion(df, equipo, condicion, n=n)
+    hay ningun partido con ese dato, nunca un 0 falso.
+
+    historial: TODO el historial del equipo ya filtrado por
+    _historial_equipo() (no el DataFrame completo) -- evita volver a
+    barrer las ~20k filas del CSV para sacar la version por condicion,
+    ya que la ventana mezclada de mas arriba ya tuvo que filtrar lo
+    mismo."""
+    if condicion == "local":
+        historial_condicion = historial[historial["equipo_local"] == equipo]
+    else:
+        historial_condicion = historial[historial["equipo_visitante"] == equipo]
+    partidos = historial_condicion.head(n)
+    partidos_stats = _con_stats(historial_condicion, n=n)
 
     try:
         from fifa_ranking import get_puntos_fifa, es_seleccion_nacional
@@ -318,8 +325,9 @@ def estadisticas_equipo_ultimos10(df, equipo, liga=None, min_partidos=3, condici
     vivo: 32.9% de los equipos trackeados tienen una diferencia >0.5
     goles a favor entre jugar de local y de visitante. Si no se pasa
     (compatibilidad), comportamiento identico al de antes de este fix."""
-    partidos = obtener_partidos_equipo(df, equipo, n=10)
-    partidos_stats = obtener_partidos_con_stats(df, equipo, n=10)
+    historial = _historial_equipo(df, equipo)
+    partidos = historial.head(10)
+    partidos_stats = _con_stats(historial, n=10)
 
     if partidos.empty:
         return None
@@ -500,7 +508,7 @@ def estadisticas_equipo_ultimos10(df, equipo, liga=None, min_partidos=3, condici
     MIN_PARTIDOS_CONDICION = 10
     n_partidos_condicion = 0
     if condicion in ("local", "visitante"):
-        prom_condicion = _promedios_ponderados_condicion(df, equipo, condicion, n=10)
+        prom_condicion = _promedios_ponderados_condicion(historial, equipo, condicion, n=10)
         n_partidos_condicion = prom_condicion["n_partidos"]
         if n_partidos_condicion > 0:
             peso_cond = min(n_partidos_condicion / MIN_PARTIDOS_CONDICION, 1.0)
