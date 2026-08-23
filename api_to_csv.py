@@ -98,6 +98,15 @@ def _safe_int(valor):
         return 0
 
 
+def _safe_float(valor):
+    try:
+        if valor is None or valor == "None":
+            return None
+        return float(valor)
+    except (TypeError, ValueError):
+        return None
+
+
 def obtener_estadisticas_partido(fixture_id):
     data = api_get("fixtures/statistics", params={"fixture": fixture_id})
     return data.get("response", [])
@@ -451,6 +460,7 @@ def construir_fila(fixture, liga_nombre):
     faltas_l = faltas_v = None
     rojas_l = rojas_v = None
     posesion_l = posesion_v = None
+    xg_l = xg_v = None
 
     if estado in ("FT", "AET"):
         stats = obtener_estadisticas_partido(fixture_id)
@@ -500,6 +510,16 @@ def construir_fila(fixture, liga_nombre):
                 elif tipo == "Total Shots":
                     if es_local: tiros_total_l  = valor
                     else:         tiros_total_v  = valor
+                elif tipo == "expected_goals":
+                    # Cobertura muy despareja entre competencias (100% en
+                    # Premier League/La Liga/Serie A, 0% en Champions
+                    # League y en casi todas las copas -- verificado en
+                    # vivo). None cuando no viene, nunca 0 -- el fallback
+                    # a goles reales en estadisticas_equipo_ultimos10()
+                    # depende de que esto sea None y no un cero falso.
+                    valor_xg = _safe_float(valor_bruto)
+                    if es_local: xg_l = valor_xg
+                    else:         xg_v = valor_xg
 
     # Obtener datos de mitad (goles y tarjetas por 1T/2T)
     mitad = {"goles_local_1t": None, "goles_local_2t": None,
@@ -535,6 +555,8 @@ def construir_fila(fixture, liga_nombre):
         "tiros_arco_visitante": tiros_arco_v,
         "tiros_total_local":    tiros_total_l,
         "tiros_total_visitante":tiros_total_v,
+        "xg_local":             xg_l,
+        "xg_visitante":         xg_v,
         "goles_local_1t":       mitad["goles_local_1t"],
         "goles_local_2t":       mitad["goles_local_2t"],
         "goles_visitante_1t":   mitad["goles_visitante_1t"],
@@ -669,6 +691,7 @@ def actualizar_h2h_desactualizado(df, pares_forzados=None):
                 faltas_l = faltas_v = None
                 rojas_l = rojas_v = None
                 posesion_l = posesion_v = None
+                xg_l = xg_v = None
                 try:
                     stats_partido = obtener_estadisticas_partido(fid)
                     if stats_partido:
@@ -709,6 +732,12 @@ def actualizar_h2h_desactualizado(df, pares_forzados=None):
                             elif tipo == "Total Shots":
                                 if es_local_stats: tiros_total_l = valor
                                 else: tiros_total_v = valor
+                            elif tipo == "expected_goals":
+                                # None cuando no viene, nunca 0 -- mismo
+                                # criterio que construir_fila().
+                                valor_xg = _safe_float(valor_bruto)
+                                if es_local_stats: xg_l = valor_xg
+                                else: xg_v = valor_xg
                 except Exception:
                     pass
 
@@ -733,6 +762,8 @@ def actualizar_h2h_desactualizado(df, pares_forzados=None):
                     "faltas_visitante": faltas_v,
                     "tarjetas_rojas_local": rojas_l,
                     "tarjetas_rojas_visitante": rojas_v,
+                    "xg_local": xg_l,
+                    "xg_visitante": xg_v,
                 })
                 fixture_ids_existentes.add(fid)
                 agregados += 1
