@@ -9,7 +9,7 @@ from data_loader import (
 )
 from football_model import (
     estadisticas_equipo_ultimos10, ultimos_enfrentamientos_directos,
-    ajustar_medias_con_rival, obtener_partidos_equipo
+    ajustar_medias_con_rival, obtener_partidos_equipo, obtener_liga_partido
 )
 from simulator import simular_partido_futbol, proyectar_tiempos
 from value_bet import calcular_value, clasificar
@@ -223,8 +223,9 @@ def _simular_partido(df, local, visitante):
     Funcion auxiliar reutilizable — calcula stats, H2H y simulacion.
     Retorna (sim, stats_a, stats_b) o (None, None, None) si falla.
     """
-    stats_a = estadisticas_equipo_ultimos10(df, local, condicion="local")
-    stats_b = estadisticas_equipo_ultimos10(df, visitante, condicion="visitante")
+    liga_partido = obtener_liga_partido(df, local, visitante)
+    stats_a = estadisticas_equipo_ultimos10(df, local, liga=liga_partido, condicion="local")
+    stats_b = estadisticas_equipo_ultimos10(df, visitante, liga=liga_partido, condicion="visitante")
     if stats_a is None or stats_b is None:
         return None, None, None
 
