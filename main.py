@@ -223,8 +223,8 @@ def _simular_partido(df, local, visitante):
     Funcion auxiliar reutilizable — calcula stats, H2H y simulacion.
     Retorna (sim, stats_a, stats_b) o (None, None, None) si falla.
     """
-    stats_a = estadisticas_equipo_ultimos10(df, local)
-    stats_b = estadisticas_equipo_ultimos10(df, visitante)
+    stats_a = estadisticas_equipo_ultimos10(df, local, condicion="local")
+    stats_b = estadisticas_equipo_ultimos10(df, visitante, condicion="visitante")
     if stats_a is None or stats_b is None:
         return None, None, None
 
