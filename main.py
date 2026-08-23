@@ -9,7 +9,8 @@ from data_loader import (
 )
 from football_model import (
     estadisticas_equipo_ultimos10, ultimos_enfrentamientos_directos,
-    ajustar_medias_con_rival, obtener_partidos_equipo, obtener_liga_partido
+    ajustar_medias_con_rival, obtener_partidos_equipo, obtener_liga_partido,
+    n_efectivo_estimacion
 )
 from simulator import simular_partido_futbol, proyectar_tiempos
 from value_bet import calcular_value, clasificar
@@ -234,10 +235,22 @@ def _simular_partido(df, local, visitante):
         stats_a, stats_b, h2h, equipo_local=local, equipo_visitante=visitante
     )
 
+    # Confianza (k) en cada promedio para la mezcla Gamma-Poisson -- ver
+    # n_efectivo_estimacion() y la conversacion de calibracion (backtest
+    # de 1459 partidos reales).
+    k_goles_a = n_efectivo_estimacion(stats_a["n_partidos"], stats_a["n_partidos_condicion"])
+    k_goles_b = n_efectivo_estimacion(stats_b["n_partidos"], stats_b["n_partidos_condicion"])
+    k_corners_a = n_efectivo_estimacion(stats_a["n_partidos_stats"], stats_a["n_partidos_condicion"])
+    k_corners_b = n_efectivo_estimacion(stats_b["n_partidos_stats"], stats_b["n_partidos_condicion"])
+    k_tarjetas = min(k_corners_a, k_corners_b)
+
     sim = simular_partido_futbol(
         goles_a, goles_b,
         stats_a["std_goles_favor"], stats_b["std_goles_favor"],
-        corners_a, corners_b, tarjetas_total
+        corners_a, corners_b, tarjetas_total,
+        k_goles_a=k_goles_a, k_goles_b=k_goles_b,
+        k_corners_a=k_corners_a, k_corners_b=k_corners_b,
+        k_tarjetas=k_tarjetas,
     )
 
     return sim, stats_a, stats_b
