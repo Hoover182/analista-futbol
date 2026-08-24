@@ -20,6 +20,14 @@ LIGAS_VALIDAS = [
     "Championship", "Segunda Division Espana", "Ligue 2", "Eerste Divisie",
     "2. Bundesliga", "3. Liga", "Second League Egipto", "Primera B Colombia",
     "Primera B Metropolitana",
+    # Mismo criterio, sumado para el backfill puntual de equipos recien
+    # ascendidos a una liga top (temporada de ascenso en su segunda
+    # division) -- ver conversacion sobre Racing Santander/Getafe. Sufijo
+    # de pais en las que ya chocaron entre si esta sesion ("Segunda
+    # Division" generico entre Espana/Uruguay/Peru).
+    "Segunda Liga Portugal", "Challenger Pro League", "1. Lig Turquia",
+    "Segunda Division Uruguay", "Segunda Division Peru", "Liga Pro Serie B",
+    "Nacional B Bolivia",
     # Europa - Copas
     "Champions League", "Europa League", "Conference League",
     "FA Cup", "Copa del Rey", "Coppa Italia", "DFB Pokal", "Coupe de France",

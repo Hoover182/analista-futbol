@@ -65,7 +65,7 @@ LIGAS_IDS = {
     "Primera Division Peru":       (281, 2026),
     "Liga Pro Ecuador":            (242, 2026),
     "Primera Division Venezuela":  (337, 2026),
-    "Primera Division Bolivia":    (258, 2026),
+    "Primera Division Bolivia":    (344, 2026),
     "Division Profesional Paraguay": (250, 2026),
 }
 
