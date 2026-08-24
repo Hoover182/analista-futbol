@@ -68,6 +68,40 @@ LIGAS = [
 
 CSV_SALIDA = "futbol_partidos.csv"
 
+# Cache de team_id de api-football (equipo -> id) persistido a disco entre
+# corridas del cron -- el id de un equipo no cambia de un dia a otro, asi
+# que sin esto actualizar_h2h_desactualizado() volvia a resolver ~500
+# equipos de nivel 1 desde cero TODOS los dias via buscar_team_id() (hasta
+# varios requests por equipo cuando el primer intento de busqueda no da
+# con el pais esperado). Medido en vivo: era el mayor gasto de cuota del
+# cron diario. Mismo directorio que CSV_SALIDA -- si el CSV persiste
+# entre corridas del cron (crece dia a dia sin re-descarga completa), este
+# archivo tambien deberia.
+CACHE_TEAM_IDS_PATH = "cache_team_ids.json"
+
+
+def _cargar_cache_team_ids():
+    import json
+    import os
+    if not os.path.exists(CACHE_TEAM_IDS_PATH):
+        return {}
+    try:
+        with open(CACHE_TEAM_IDS_PATH, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return {}
+
+
+def _guardar_cache_team_ids(cache):
+    import json
+    # Solo se persisten resoluciones EXITOSAS (id no nulo). Un equipo que
+    # no se pudo resolver en esta corrida (podria ser un fallo transitorio
+    # de la API, no que el equipo no exista) no debe quedar bloqueado para
+    # siempre -- la proxima corrida lo reintenta.
+    limpio = {nombre: tid for nombre, tid in cache.items() if tid is not None}
+    with open(CACHE_TEAM_IDS_PATH, "w", encoding="utf-8") as f:
+        json.dump(limpio, f, ensure_ascii=False, indent=2)
+
 
 def api_get(endpoint, params=None):
     headers = {"x-apisports-key": API_KEY}
@@ -647,14 +681,40 @@ def actualizar_h2h_desactualizado(df, pares_forzados=None):
     if not pares_desactualizados:
         return
 
-    cache_team_id = {}
+    # Priorizar los pares con un partido programado (NS) en las proximas
+    # 48 horas -- el H2H fresco importa mas para un cruce que se va a
+    # simular pronto que para uno sin partido cercano. Se calcula el set
+    # de pares "urgentes" en un solo recorrido del CSV (no un chequeo por
+    # par) y se reordena la lista completa; sort() es estable, asi que
+    # dentro de cada grupo (urgente / no urgente) se conserva el orden
+    # original. Si LIMITE_LLAMADAS_H2H se agota a mitad de camino, lo que
+    # queda sin procesar es lo menos urgente.
+    ahora_utc = pd.Timestamp.now(tz="UTC")
+    ventana_urgente = ahora_utc + timedelta(days=2)
+    proximos = df[
+        (df["estado"] == "NS") &
+        (df["fecha_dt"] >= ahora_utc) &
+        (df["fecha_dt"] <= ventana_urgente)
+    ]
+    pares_urgentes = {
+        tuple(sorted([row["equipo_local"], row["equipo_visitante"]]))
+        for _, row in proximos.iterrows()
+    }
+    pares_desactualizados.sort(key=lambda par: 0 if par in pares_urgentes else 1)
+    print(f"  Pares urgentes (con partido en las proximas 48h): {sum(1 for p in pares_desactualizados if p in pares_urgentes)}")
+
+    # Cache de team_id precargado desde disco -- ver _cargar_cache_team_ids().
+    # El id de un equipo no cambia de un dia a otro, asi que esto evita
+    # volver a resolverlos todos desde cero en cada corrida.
+    cache_team_id = _cargar_cache_team_ids()
+    print(f"  Cache de team_id precargado: {len(cache_team_id)} equipos")
 
     fixture_ids_existentes = set(df["fixture_id"].dropna().astype(int))
     filas_nuevas = []
     procesados = 0
     agregados = 0
     errores = 0
-    LIMITE_LLAMADAS_H2H = 4000  # limite conservador para no agotar cuota diaria
+    LIMITE_LLAMADAS_H2H = 3000  # bajado de 4000 -- ver conversacion de calibracion de cuota diaria del cron
 
     for local, visitante in pares_desactualizados:
         if procesados >= LIMITE_LLAMADAS_H2H:
@@ -775,6 +835,9 @@ def actualizar_h2h_desactualizado(df, pares_forzados=None):
             errores += 1
 
     print(f"  Procesados: {procesados} | Enfrentamientos H2H nuevos agregados: {agregados} | Errores: {errores}")
+
+    _guardar_cache_team_ids(cache_team_id)
+    print(f"  Cache de team_id guardado: {len([v for v in cache_team_id.values() if v is not None])} equipos")
 
     if filas_nuevas:
         df_nuevo_h2h = pd.DataFrame(filas_nuevas)
