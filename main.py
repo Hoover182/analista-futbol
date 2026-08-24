@@ -15,6 +15,7 @@ from football_model import (
 from simulator import simular_partido_futbol, proyectar_tiempos
 from value_bet import calcular_value, clasificar
 from api_to_csv import descargar_y_guardar_csv
+from elo_ranking import cargar_elo_ratings, peso_elo_confianza
 from live_betting import mostrar_apuestas_en_vivo
 from player_model import (
     analizar_jugadores_partido, imprimir_picks_jugadores, obtener_fixture_id
@@ -244,6 +245,18 @@ def _simular_partido(df, local, visitante):
     k_corners_b = n_efectivo_estimacion(stats_b["n_partidos_stats"], stats_b["n_partidos_condicion"])
     k_tarjetas = min(k_corners_a, k_corners_b)
 
+    # Elo casero -- SOLO influye en prob_local/prob_empate/prob_visitante
+    # (ver elo_ranking.py y simular_partido_futbol). Si el equipo no tiene
+    # rating todavia (archivo no generado, o equipo nunca visto), queda
+    # en None y simular_partido_futbol() simplemente no aplica el ajuste.
+    elo_ratings = cargar_elo_ratings()
+    elo_local = elo_ratings.get(local, {}).get("rating")
+    elo_visitante = elo_ratings.get(visitante, {}).get("rating")
+    peso_elo = peso_elo_confianza(
+        elo_ratings.get(local, {}).get("n_partidos"),
+        elo_ratings.get(visitante, {}).get("n_partidos"),
+    )
+
     sim = simular_partido_futbol(
         goles_a, goles_b,
         stats_a["std_goles_favor"], stats_b["std_goles_favor"],
@@ -251,6 +264,7 @@ def _simular_partido(df, local, visitante):
         k_goles_a=k_goles_a, k_goles_b=k_goles_b,
         k_corners_a=k_corners_a, k_corners_b=k_corners_b,
         k_tarjetas=k_tarjetas,
+        elo_local=elo_local, elo_visitante=elo_visitante, peso_elo=peso_elo,
     )
 
     return sim, stats_a, stats_b
