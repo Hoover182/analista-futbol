@@ -1205,6 +1205,140 @@ def backfillear_equipos_desconocidos_internacionales():
         print(f"  CSV actualizado con {len(filas_nuevas)} partidos nuevos de equipos desconocidos")
 
 
+CUOTAS_CACHE_PATH = "cuotas_cache.json"
+CASAS_CUOTAS = ("Betano", "1xBet")  # unicas casas relevantes para el
+                                     # publico de Colombia/Latinoamerica,
+                                     # confirmado en vivo -- ver conversacion
+                                     # de diseno del Top3 por edge
+DIAS_ADELANTE_CUOTAS = 7
+LIMITE_LLAMADAS_CUOTAS = 150  # backstop -- estimado real ~60-100/dia
+
+# Mapea el nombre interno del mercado (igual al que ya usa calcular_top3()
+# en el backend) al (nombre del "bet" de la API, valor de la seleccion).
+# Solo los 4 mercados donde se confirmo cobertura real (98.2% 1X2/goles/
+# corners, 63.6% tarjetas) -- "1X"/"X2"/"Ambos marcan" no tienen mercado
+# equivalente confirmado, quedan sin cuota y el fallback los excluye.
+MAPEO_MERCADOS_CUOTAS = {
+    "Gana local":        ("Match Winner", "Home"),
+    "Empate":             ("Match Winner", "Draw"),
+    "Gana visitante":    ("Match Winner", "Away"),
+    "Over 1.5 goles":    ("Goals Over/Under", "Over 1.5"),
+    "Under 1.5 goles":   ("Goals Over/Under", "Under 1.5"),
+    "Over 2.5 goles":    ("Goals Over/Under", "Over 2.5"),
+    "Under 2.5 goles":   ("Goals Over/Under", "Under 2.5"),
+    "Over 3.5 goles":    ("Goals Over/Under", "Over 3.5"),
+    "Under 3.5 goles":   ("Goals Over/Under", "Under 3.5"),
+    "Over 7.5 corners":  ("Corners Over Under", "Over 7.5"),
+    "Under 7.5 corners": ("Corners Over Under", "Under 7.5"),
+    "Over 8.5 corners":  ("Corners Over Under", "Over 8.5"),
+    "Under 8.5 corners": ("Corners Over Under", "Under 8.5"),
+    "Over 2.5 tarjetas":  ("Cards Over/Under", "Over 2.5"),
+    "Under 2.5 tarjetas": ("Cards Over/Under", "Under 2.5"),
+    "Over 3.5 tarjetas":  ("Cards Over/Under", "Over 3.5"),
+    "Under 3.5 tarjetas": ("Cards Over/Under", "Under 3.5"),
+}
+
+
+def actualizar_cuotas_cache():
+    """Descarga cuotas reales de Betano y 1xBet para los partidos NS de
+    los proximos DIAS_ADELANTE_CUOTAS dias, y arma cuotas_cache.json
+    indexado por fixture_id -> {mercado_interno: cuota}. Cuando ambas
+    casas tienen el mercado se guarda el PROMEDIO (no la mejor cuota --
+    elegir siempre la mejor de las dos sesga el edge hacia arriba,
+    ver conversacion de diseno); si solo una lo tiene, se usa esa sola.
+
+    Corre como ultimo paso del cron. El backend lee este archivo local
+    (calcular_top3() en futbol_service.py) -- nunca llama a la API de
+    cuotas en vivo por request de usuario, mismo patron que
+    elo_ratings.json/ligas_auto_detectadas.json."""
+    import json
+    import time
+    headers = {"x-apisports-key": API_KEY}
+
+    df = pd.read_csv(CSV_SALIDA, encoding="utf-8-sig")
+    df["fecha_dt"] = pd.to_datetime(df["fecha"], errors="coerce", utc=True)
+    ahora = pd.Timestamp.now(tz="UTC")
+    proximos = df[
+        (df["estado"] == "NS") &
+        (df["fecha_dt"] >= ahora) &
+        (df["fecha_dt"] <= ahora + timedelta(days=DIAS_ADELANTE_CUOTAS))
+    ]
+    if proximos.empty:
+        print("  Sin partidos NS proximos para buscar cuotas")
+        return
+
+    id_por_liga = {comp["liga"]: comp["id"] for comp in LIGAS}
+    id_por_liga.update({v: int(k) for k, v in _cargar_ligas_auto_detectadas().items()})
+
+    ligas_a_consultar = {}
+    for liga in proximos["liga"].unique():
+        liga_id = id_por_liga.get(liga)
+        if liga_id:
+            ligas_a_consultar[liga] = liga_id
+
+    if not ligas_a_consultar:
+        print("  Ninguna de las ligas con partidos proximos tiene id de API conocido")
+        return
+
+    hoy = datetime.now().date()
+    temporada = hoy.year if hoy.month >= 8 else hoy.year - 1
+
+    cuotas_cache = {}
+    llamadas = 0
+    for liga_nombre, liga_id in ligas_a_consultar.items():
+        if llamadas >= LIMITE_LLAMADAS_CUOTAS:
+            print(f"  Limite de {LIMITE_LLAMADAS_CUOTAS} llamadas alcanzado, se completara en la proxima corrida")
+            break
+        pagina = 1
+        total_paginas = 1
+        while pagina <= total_paginas and pagina <= 6:
+            if llamadas >= LIMITE_LLAMADAS_CUOTAS:
+                break
+            try:
+                resp = requests.get(
+                    f"{BASE_URL}/odds",
+                    headers=headers,
+                    params={"league": liga_id, "season": temporada, "page": pagina},
+                    timeout=15
+                )
+                llamadas += 1
+                data = resp.json()
+                for p in data.get("response", []):
+                    fid = p.get("fixture", {}).get("id")
+                    if fid is None:
+                        continue
+                    precios_por_mercado = {}  # mercado_interno -> [cuotas de cada casa]
+                    for bm in p.get("bookmakers", []):
+                        if bm.get("name") not in CASAS_CUOTAS:
+                            continue
+                        for bet in bm.get("bets", []):
+                            for mercado_interno, (bet_nombre, valor) in MAPEO_MERCADOS_CUOTAS.items():
+                                if bet.get("name") != bet_nombre:
+                                    continue
+                                for v in bet.get("values", []):
+                                    if v.get("value") == valor:
+                                        try:
+                                            precios_por_mercado.setdefault(mercado_interno, []).append(float(v["odd"]))
+                                        except (TypeError, ValueError):
+                                            pass
+                    if precios_por_mercado:
+                        cuotas_cache[str(fid)] = {
+                            mercado: round(sum(precios) / len(precios), 2)
+                            for mercado, precios in precios_por_mercado.items()
+                        }
+                paging = data.get("paging", {})
+                total_paginas = paging.get("total", 1)
+                pagina += 1
+            except Exception as e:
+                print(f"  ERROR consultando cuotas de {liga_nombre}: {e}")
+                break
+            time.sleep(0.1)
+
+    with open(CUOTAS_CACHE_PATH, "w", encoding="utf-8") as f:
+        json.dump(cuotas_cache, f, ensure_ascii=False, indent=2)
+    print(f"  cuotas_cache.json actualizado: {len(cuotas_cache)} partidos con cuota real ({llamadas} llamadas, {len(ligas_a_consultar)} ligas)")
+
+
 def descargar_y_guardar_csv(dias_adelante=4, descarga_inicial=False, incluir_h2h=True):
     hoy               = datetime.now().date()
     date_to           = (hoy + timedelta(days=dias_adelante)).isoformat()
@@ -1295,6 +1429,12 @@ def descargar_y_guardar_csv(dias_adelante=4, descarga_inicial=False, incluir_h2h
             backfillear_equipos_desconocidos_internacionales()
         except Exception as e:
             print(f"  Error revisando equipos desconocidos: {e}")
+
+        print("\nActualizando cuotas_cache.json (Betano/1xBet, Top3 por edge)...")
+        try:
+            actualizar_cuotas_cache()
+        except Exception as e:
+            print(f"  Error actualizando cuotas: {e}")
 
 
 if __name__ == "__main__":
