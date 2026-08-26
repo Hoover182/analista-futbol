@@ -106,7 +106,13 @@ PALABRAS_NO_COMPETITIVAS = (
     "reserve", "women", "academy",
 )
 
-UMBRAL_HISTORIAL_MINIMO_DESCONOCIDOS = 5  # igual a MIN_PARTIDOS_H2H mas abajo
+UMBRAL_HISTORIAL_MINIMO_DESCONOCIDOS = 10  # igual a min_partidos_condicion en
+                                            # n_efectivo_estimacion() (football_model.py)
+                                            # -- mide "confianza plena del historial
+                                            # PROPIO de este equipo", distinto de
+                                            # MIN_PARTIDOS_H2H (completitud de cruces
+                                            # entre DOS equipos especificos), de donde
+                                            # se tomo prestado el 5 original por error.
 N_EQUIPOS_DESCONOCIDOS_MAX = 8
 LIMITE_LLAMADAS_EQUIPOS_DESCONOCIDOS = 150
 ULTIMOS_N_EQUIPO_DESCONOCIDO = 15
@@ -652,6 +658,91 @@ def obtener_ultima_fecha_liga(liga_nombre):
         return None
 
 
+GRACIA_HORAS_RESYNC = 3   # tiempo de sobra para que cualquier partido
+                          # (con alargue/penales incluido) haya terminado
+DIAS_MAX_RESYNC = 10      # mas alla de esto, probablemente pospuesto o
+                          # cancelado -- no reintentar para siempre
+LOTE_IDS_RESYNC = 20      # limite de /fixtures?ids= de la API, confirmado en vivo
+LIMITE_LLAMADAS_RESYNC = 15  # hasta ~300 partidos por corrida (15*20)
+
+
+def resincronizar_resultados_ns():
+    """Vuelve a consultar el estado real de partidos que siguen marcados
+    NS en el CSV pero cuyo horario programado ya paso hace mas de
+    GRACIA_HORAS_RESYNC -- indica que el resultado real (FT, en curso,
+    pospuesto) todavia no se reflejo, tipicamente porque el cron anterior
+    corrio antes de que el partido empezara.
+
+    Corre PRIMERO en la secuencia del cron (antes de
+    actualizar_h2h_desactualizado() y backfillear_equipos_desconocidos_
+    internacionales()) para que ambos trabajen con estados frescos.
+
+    Sin este paso, un partido de una liga TRACKEADA se autocorrige solo
+    al dia siguiente (la descarga regular por liga lo vuelve a traer),
+    pero uno de una liga AUTO-DETECTADA (ver ligas_auto_detectadas.json)
+    nunca se refresca solo -- esas ligas a proposito no estan en el loop
+    de descarga diaria (LIGAS), asi que sin este resync quedarian en NS
+    para siempre despues del backfill inicial."""
+    import time
+    headers = {"x-apisports-key": API_KEY}
+
+    df = pd.read_csv(CSV_SALIDA, encoding="utf-8-sig")
+    df["fecha_dt"] = pd.to_datetime(df["fecha"], errors="coerce", utc=True)
+    ahora = pd.Timestamp.now(tz="UTC")
+
+    candidatos = df[
+        (df["estado"] == "NS") &
+        (df["fecha_dt"] < ahora - timedelta(hours=GRACIA_HORAS_RESYNC)) &
+        (df["fecha_dt"] >= ahora - timedelta(days=DIAS_MAX_RESYNC))
+    ]
+    if candidatos.empty:
+        print("  Sin partidos NS desactualizados para resincronizar")
+        return
+
+    fixture_ids = candidatos["fixture_id"].dropna().astype(int).tolist()
+    print(f"  Partidos NS con horario ya pasado (candidatos a resincronizar): {len(fixture_ids)}")
+
+    actualizaciones = {}
+    llamadas = 0
+
+    for i in range(0, len(fixture_ids), LOTE_IDS_RESYNC):
+        if llamadas >= LIMITE_LLAMADAS_RESYNC:
+            print(f"  Limite de {LIMITE_LLAMADAS_RESYNC} llamadas alcanzado, se completara en la proxima corrida")
+            break
+        lote = fixture_ids[i:i + LOTE_IDS_RESYNC]
+        try:
+            resp = requests.get(
+                f"{BASE_URL}/fixtures",
+                headers=headers,
+                params={"ids": "-".join(str(fid) for fid in lote)},
+                timeout=15
+            )
+            llamadas += 1
+            for f in resp.json().get("response", []):
+                fid = f["fixture"]["id"]
+                fila_actual = df.loc[df["fixture_id"] == fid]
+                if fila_actual.empty:
+                    continue
+                liga_original = fila_actual["liga"].iloc[0]
+                actualizaciones[fid] = construir_fila(f, liga_original)
+        except Exception as e:
+            print(f"  ERROR consultando lote de resync: {e}")
+        time.sleep(0.15)
+
+    if not actualizaciones:
+        print(f"  {llamadas} llamadas hechas, ningun partido resuelto todavia (siguen en curso o sin cambios)")
+        return
+
+    for fid, fila_nueva in actualizaciones.items():
+        idx = df.index[df["fixture_id"] == fid]
+        for campo, valor in fila_nueva.items():
+            if campo in df.columns:
+                df.loc[idx, campo] = valor
+
+    df.to_csv(CSV_SALIDA, index=False, encoding="utf-8-sig")
+    print(f"  {len(actualizaciones)} partidos resincronizados de {len(fixture_ids)} candidatos ({llamadas} llamadas)")
+
+
 def actualizar_h2h_desactualizado(df, pares_forzados=None):
     """Revisa pares de equipos de nivel 1 cuyo H2H mas reciente tiene mas
     de 1 mes de antiguedad, o que tienen menos de MIN_PARTIDOS_H2H partidos
@@ -959,11 +1050,19 @@ def backfillear_equipos_desconocidos_internacionales():
     df["fecha_dt"] = pd.to_datetime(df["fecha"], errors="coerce", utc=True)
     ahora_utc = pd.Timestamp.now(tz="UTC")
     ventana = ahora_utc + timedelta(days=2)
+    # Ventana simetrica: tambien agarra partidos que YA deberian haber
+    # arrancado segun su horario programado pero siguen en NS (sin
+    # resincronizar todavia -- ver resincronizar_resultados_ns(), que
+    # corre antes en el cron y deberia resolver la mayoria de estos casos
+    # de antemano; esto es la red de seguridad, no el mecanismo principal).
+    # El orden ascendente de candidatos mas abajo ya hace que estos casos
+    # atrasados salgan primero en la cola sin logica extra.
+    ventana_atras = ahora_utc - timedelta(hours=48)
 
     proximos_intl = df[
         (df["estado"] == "NS") &
         (df["liga"].isin(LIGAS_INTL_FOCUS_DESCONOCIDOS)) &
-        (df["fecha_dt"] >= ahora_utc) &
+        (df["fecha_dt"] >= ventana_atras) &
         (df["fecha_dt"] <= ventana)
     ]
 
@@ -1173,6 +1272,18 @@ def descargar_y_guardar_csv(dias_adelante=4, descarga_inicial=False, incluir_h2h
     print(f"Partidos totales: {len(df_combined)}")
 
     if incluir_h2h:
+        print("\nResincronizando partidos NS con horario ya pasado...")
+        try:
+            resincronizar_resultados_ns()
+            # Se relee del disco: resincronizar_resultados_ns() puede haber
+            # actualizado estado/goles/stats de filas ya presentes en
+            # df_combined, y tanto el H2H como el backfill de equipos
+            # desconocidos deben trabajar con esos datos frescos, no con
+            # la version en memoria de antes del resync.
+            df_combined = pd.read_csv(CSV_SALIDA, encoding="utf-8-sig")
+        except Exception as e:
+            print(f"  Error resincronizando resultados NS: {e}")
+
         print("\nRevisando H2H desactualizado (mas de 1 mes sin partidos nuevos)...")
         try:
             actualizar_h2h_desactualizado(df_combined)
