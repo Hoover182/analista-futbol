@@ -11,8 +11,7 @@ CSV_SALIDA = "futbol_partidos.csv"
 CHECKPOINT = "diagnostico_ambiguedad_equipos.json"
 MARGEN_SEGURIDAD = 15  # dejar de llamar cuando queden menos de N requests libres hoy
 
-contenido = open("api_to_csv.py", encoding="utf-8").read()
-API_KEY = re.search(r'API_KEY\s*=\s*"([^"]+)"', contenido).group(1)
+API_KEY = os.environ.get("APIFOOTBALL_KEY", "")
 headers = {"x-apisports-key": API_KEY}
 
 LIGAS_NIVEL_1 = [

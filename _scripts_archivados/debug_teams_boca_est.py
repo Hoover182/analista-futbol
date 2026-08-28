@@ -1,6 +1,6 @@
 ﻿import requests
 
-API_KEY = "7be9c4250da301a68726beedbe2b382a"
+API_KEY = "[APIFOOTBALL_KEY_REMOVIDA]"
 headers = {"x-apisports-key": API_KEY}
 
 resp = requests.get("https://v3.football.api-sports.io/teams", headers=headers, params={"search": "Boca Juniors"})

@@ -3,7 +3,7 @@ import pandas as pd
 import requests
 import time
 
-API_KEY = "7be9c4250da301a68726beedbe2b382a"
+API_KEY = "[APIFOOTBALL_KEY_REMOVIDA]"
 headers = {"x-apisports-key": API_KEY}
 
 df = pd.read_csv("futbol_partidos.csv", encoding="utf-8-sig", low_memory=False)

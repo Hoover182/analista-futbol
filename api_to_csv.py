@@ -1,10 +1,11 @@
+import os
 import requests
 import pandas as pd
 from datetime import datetime, timedelta
 
 from data_loader import LIGAS_VALIDAS
 
-API_KEY  = "7be9c4250da301a68726beedbe2b382a"
+API_KEY  = os.environ.get("APIFOOTBALL_KEY", "")
 BASE_URL = "https://v3.football.api-sports.io"
 
 ESTADOS_GUARDAR = {"FT", "AET", "PEN", "NS", "1H", "HT", "2H", "ET", "SUSP"}

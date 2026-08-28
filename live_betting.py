@@ -1,8 +1,9 @@
-﻿import requests
+﻿import os
+import requests
 import numpy as np
 from simulator import simular_partido_futbol
 
-API_KEY = "7be9c4250da301a68726beedbe2b382a"
+API_KEY = os.environ.get("APIFOOTBALL_KEY", "")
 BASE_URL = "https://v3.football.api-sports.io"
 
 # Ligas validas para apuestas en vivo
