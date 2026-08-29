@@ -10,6 +10,19 @@ set -euo pipefail
 
 cd "$(dirname "$0")"
 
+# El contenedor donde corre el Cron Job no trae configurado un remoto
+# "origin" como lo haria un "git clone" normal (probablemente Render lo
+# saca del checkout de ejecucion por seguridad). Sin esto, cualquier uso
+# de "origin" mas abajo (fetch, rebase, push) revienta con "'origin' does
+# not appear to be a git repository" -- confirmado en la corrida real de
+# hoy, la falla era en el primer "git fetch origin main", no en el push.
+REPO_URL="https://x-access-token:${GIT_PUSH_TOKEN}@github.com/Hoover182/analista-futbol.git"
+if git remote get-url origin >/dev/null 2>&1; then
+  git remote set-url origin "$REPO_URL"
+else
+  git remote add origin "$REPO_URL"
+fi
+
 ARCHIVOS=(futbol_partidos.csv cache_team_ids.json ligas_auto_detectadas.json cuotas_cache.json)
 
 git config user.name "Cron analista-futbol"
@@ -39,5 +52,4 @@ if [ "${DRY_RUN:-false}" = "true" ]; then
   exit 0
 fi
 
-git remote set-url origin "https://x-access-token:${GIT_PUSH_TOKEN}@github.com/Hoover182/analista-futbol.git"
 git push origin HEAD:main
