@@ -23,12 +23,20 @@ else
   git remote add origin "$REPO_URL"
 fi
 
-ARCHIVOS=(futbol_partidos.csv cache_team_ids.json ligas_auto_detectadas.json cuotas_cache.json)
-
 git config user.name "Cron analista-futbol"
 git config user.email "cron@analista-futbol.local"
 
-git add "${ARCHIVOS[@]}"
+# "git add -u" (no "-A"/"."): stagea SOLO cambios a archivos ya
+# trackeados, nunca agrega archivos nuevos/sin trackear -- evita el
+# riesgo de comitear algo inesperado, pero sin necesitar una lista
+# hardcodeada de nombres de archivo. Se cambio de una lista fija de 4
+# archivos a esto porque dos corridas reales seguidas encontraron un
+# archivo trackeado modificado que la lista no contemplaba, ensuciando
+# el arbol antes del rebase (mismo sintoma las dos veces: "cannot
+# rebase: You have unstaged changes"). Con -u, cualquier archivo ya
+# trackeado que estos scripts (o algo del contenedor) modifiquen queda
+# comiteado, sin adivinar nombres de antemano.
+git add -u
 
 if git diff --cached --quiet; then
   echo "Sin cambios para commitear."
