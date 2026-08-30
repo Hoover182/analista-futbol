@@ -267,6 +267,19 @@ MAPEO_LIGAS_H2H = {
 # nuevo por separado.
 ID_A_LIGA = {comp["id"]: comp["liga"] for comp in LIGAS}
 
+# Mismo problema que Serie A/Brasileirao arriba, pero para una liga que
+# NUNCA fue nivel 1 (no esta en LIGAS -- no se descarga como competencia
+# completa, solo aparece de rebote via H2H de equipos rastreados que
+# jugaron ahi). Sin esto, normalizar_liga_h2h() caia al mapeo por
+# nombre (que tampoco tenia "Serie B"), dejando el nombre crudo sin
+# distinguir pais -- confirmado en vivo, 37 partidos de Brasil e Italia
+# mezclados bajo "Serie B" a secas. Verificado en vivo: id=72/country=
+# Brazil vs id=136/country=Italy comparten literalmente "Serie B".
+ID_A_LIGA.update({
+    72: "Serie B Brasil",
+    136: "Serie B Italia",
+})
+
 
 LIGAS_NIVEL_1 = [
     "Premier League", "La Liga", "Serie A", "Bundesliga", "Ligue 1", "Primeira Liga",
