@@ -1226,6 +1226,21 @@ CASAS_CUOTAS = ("Betano", "1xBet")  # unicas casas relevantes para el
                                      # de diseno del Top3 por edge
 DIAS_ADELANTE_CUOTAS = 7
 LIMITE_LLAMADAS_CUOTAS = 150  # backstop -- estimado real ~60-100/dia
+LIMITE_LLAMADAS_CUOTAS_1X2 = 100  # backstop del pedido explicito de 1X2 (ver
+                                    # abajo) -- estimado real ~43-50/dia con
+                                    # datos de hoy, presupuesto aparte del
+                                    # general para que uno no le coma cuota al
+                                    # otro (decision: robustez sobre ahorro,
+                                    # ver conversacion de diseno)
+BET_ID_MATCH_WINNER = 1  # id del mercado "Match Winner" en la taxonomia de
+                          # apuestas de api-football -- NO verificado en vivo
+                          # (sin key funcional al momento de escribir esto,
+                          # ver diagnostico); por eso el parseo de abajo NO
+                          # confia solo en este id, tambien re-chequea
+                          # bet["name"] == "Match Winner" como en el mapeo
+                          # general -- si el id estuviera mal, en el peor caso
+                          # el filtro server-side no hace nada y el chequeo
+                          # por nombre sigue filtrando bien de este lado
 
 # Mapea el nombre interno del mercado (igual al que ya usa calcular_top3()
 # en el backend) al (nombre del "bet" de la API, valor de la seleccion).
@@ -1251,6 +1266,109 @@ MAPEO_MERCADOS_CUOTAS = {
     "Over 3.5 tarjetas":  ("Cards Over/Under", "Over 3.5"),
     "Under 3.5 tarjetas": ("Cards Over/Under", "Under 3.5"),
 }
+
+
+def _actualizar_cuotas_1x2_explicito(df, ligas_a_consultar, headers, temporada):
+    """Cuota 1X2 (Gana local/Empate/Gana visitante) pedida de forma EXPLICITA
+    y SEPARADA del resto de los mercados -- un pedido por cada combinacion
+    real (liga, dia) con al menos un partido NS en la ventana de
+    DIAS_ADELANTE_CUOTAS, filtrando por date= y bet=BET_ID_MATCH_WINNER
+    directamente en el pedido a la API, en vez de pedir todo el odds de la
+    temporada por paginas y filtrar despues.
+
+    Por que existe esto ademas del mecanismo general de abajo: se diagnostico
+    con evidencia real (ver conversacion) que ese mecanismo general no filtra
+    por fecha en el pedido ni en la respuesta, y trunca en pagina 6 sin
+    avisar -- si una liga acumulo mas de 6 paginas de cuotas en la temporada,
+    los partidos de hoy pueden quedar afuera sin ningun error visible. Esto
+    le pasaba especialmente al 1X2 (Gana local/Empate/Gana visitante), el
+    mercado que alimenta las barras de "Partidos de hoy" en el frontend --
+    de ahi que se lo saque a un camino propio, mas caro en llamadas (una por
+    combinacion liga+dia en vez de por pagina de temporada completa) pero
+    apuntando exactamente a lo que hace falta. Decision explicita: robustez
+    sobre ahorro de cuota, ver conversacion de diseno.
+
+    Devuelve un dict fixture_id -> {"Gana local"/"Empate"/"Gana visitante": cuota}
+    para que actualizar_cuotas_cache() lo mezcle (con prioridad) sobre lo que
+    haya encontrado el mecanismo general para esos mismos 3 mercados."""
+    import time
+    ahora = pd.Timestamp.now(tz="UTC")
+    proximos = df[
+        (df["estado"] == "NS") &
+        (df["fecha_dt"] >= ahora) &
+        (df["fecha_dt"] <= ahora + timedelta(days=DIAS_ADELANTE_CUOTAS)) &
+        (df["liga"].isin(ligas_a_consultar))
+    ].copy()
+    if proximos.empty:
+        return {}
+    proximos["dia"] = proximos["fecha_dt"].dt.date
+    combos = proximos.groupby(["dia", "liga"]).size().reset_index(name="n")
+
+    cuotas_1x2 = {}
+    llamadas = 0
+    for _, fila in combos.iterrows():
+        if llamadas >= LIMITE_LLAMADAS_CUOTAS_1X2:
+            print(f"  Limite de {LIMITE_LLAMADAS_CUOTAS_1X2} llamadas de 1X2 explicito alcanzado, se completara en la proxima corrida")
+            break
+        liga_id = ligas_a_consultar[fila["liga"]]
+        fecha_str = fila["dia"].isoformat()
+        pagina = 1
+        total_paginas = 1
+        while pagina <= total_paginas:
+            if llamadas >= LIMITE_LLAMADAS_CUOTAS_1X2:
+                break
+            try:
+                resp = requests.get(
+                    f"{BASE_URL}/odds",
+                    headers=headers,
+                    params={
+                        "league": liga_id,
+                        "season": temporada,
+                        "date": fecha_str,
+                        "bet": BET_ID_MATCH_WINNER,
+                        "page": pagina,
+                    },
+                    timeout=15
+                )
+                llamadas += 1
+                data = resp.json()
+                if data.get("errors"):
+                    print(f"  ERROR de la API pidiendo 1X2 de {fila['liga']} ({fecha_str}): {data['errors']}")
+                    break
+                for p in data.get("response", []):
+                    fid = p.get("fixture", {}).get("id")
+                    if fid is None:
+                        continue
+                    precios = {"Gana local": [], "Empate": [], "Gana visitante": []}
+                    for bm in p.get("bookmakers", []):
+                        if bm.get("name") not in CASAS_CUOTAS:
+                            continue
+                        for bet in bm.get("bets", []):
+                            if bet.get("name") != "Match Winner":
+                                continue
+                            for v in bet.get("values", []):
+                                mercado = {"Home": "Gana local", "Draw": "Empate", "Away": "Gana visitante"}.get(v.get("value"))
+                                if mercado is None:
+                                    continue
+                                try:
+                                    precios[mercado].append(float(v["odd"]))
+                                except (TypeError, ValueError):
+                                    pass
+                    if any(precios.values()):
+                        cuotas_1x2[str(fid)] = {
+                            mercado: round(sum(vals) / len(vals), 2)
+                            for mercado, vals in precios.items() if vals
+                        }
+                paging = data.get("paging", {})
+                total_paginas = paging.get("total", 1)
+                pagina += 1
+            except Exception as e:
+                print(f"  ERROR consultando 1X2 explicito de {fila['liga']} ({fecha_str}): {e}")
+                break
+            time.sleep(0.1)
+
+    print(f"  cuotas 1X2 explicitas: {len(cuotas_1x2)} partidos con Match Winner real ({llamadas} llamadas, {len(combos)} combinaciones liga+dia)")
+    return cuotas_1x2
 
 
 def actualizar_cuotas_cache():
@@ -1348,9 +1466,13 @@ def actualizar_cuotas_cache():
                 break
             time.sleep(0.1)
 
+    cuotas_1x2 = _actualizar_cuotas_1x2_explicito(df, ligas_a_consultar, headers, temporada)
+    for fid, valores in cuotas_1x2.items():
+        cuotas_cache.setdefault(fid, {}).update(valores)
+
     with open(CUOTAS_CACHE_PATH, "w", encoding="utf-8") as f:
         json.dump(cuotas_cache, f, ensure_ascii=False, indent=2)
-    print(f"  cuotas_cache.json actualizado: {len(cuotas_cache)} partidos con cuota real ({llamadas} llamadas, {len(ligas_a_consultar)} ligas)")
+    print(f"  cuotas_cache.json actualizado: {len(cuotas_cache)} partidos con cuota real ({llamadas} llamadas generales + 1X2 explicito arriba, {len(ligas_a_consultar)} ligas)")
 
 
 def descargar_y_guardar_csv(dias_adelante=4, descarga_inicial=False, incluir_h2h=True):
