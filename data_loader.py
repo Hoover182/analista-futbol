@@ -78,6 +78,17 @@ LIGAS_VALIDAS = [
     "Copa Libertadores", "Copa Sudamericana", "Recopa Sudamericana",
     "Copa Argentina", "Copa do Brasil", "Copa Chile", "Copa Colombia",
     "Copa Uruguay",
+    # 18 competencias nuevas confirmadas id por id contra la API en vivo
+    # (ver conversacion de diseno) -- mismos 18 nombres que en LIGAS de
+    # api_to_csv.py, ver ese archivo para el detalle de por que cada una
+    # tiene el sufijo de pais que tiene.
+    "EFL Cup Inglaterra", "Liga 3 Portugal", "Taça da Liga Portugal",
+    "2. Lig Turquia", "Super Cup Turquia", "Division 1 Arabia Saudita",
+    "King Cup Arabia Saudita", "Super Cup Arabia Saudita",
+    "Liga de Expansion MX", "Primera Nacional Argentina",
+    "Primera C Argentina", "Serie D Brasil", "Supercopa do Brasil",
+    "Superliga Colombia", "Super Cup Chile", "Super Copa Uruguay",
+    "Copa de la Division Profesional Bolivia", "Supercopa de Ecuador",
 ]
 
 # Estados de partidos NO terminados (en juego o por jugar)

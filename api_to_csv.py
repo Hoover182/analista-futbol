@@ -67,6 +67,40 @@ LIGAS = [
     {"liga": "Super Cup Italia",           "id": 547, "temporada": None, "inicio": "2025-08-01"},
     {"liga": "Super Cup Espana",           "id": 556, "temporada": None, "inicio": "2025-08-01"},
     {"liga": "Super Cup Alemania",         "id": 529, "temporada": None, "inicio": "2025-08-01"},
+    # 18 competencias nuevas confirmadas id por id contra la API en vivo
+    # (ver conversacion de diseno) para completar paises con cobertura
+    # parcial. Excluidos a proposito de esta tanda: "Primera B"/"Segunda
+    # Division" genericas (Colombia/Chile/Mexico/Uruguay) y 5 casos sin
+    # confirmar (Primera/Segunda Federacion Espana, National Francia,
+    # Liga Premier Mexico, Copa de la Liga Profesional Argentina) --
+    # quedan para otra sesion. Sufijo de pais donde la API devuelve un
+    # nombre generico ("Super Cup", "Superliga") que ya colisiona o podria
+    # colisionar con otro pais, mismo criterio que las supercopas de
+    # arriba.
+    {"liga": "EFL Cup Inglaterra",                    "id": 48,  "temporada": None, "inicio": "2025-08-01"},
+    {"liga": "Liga 3 Portugal",                       "id": 865, "temporada": None, "inicio": "2025-08-01"},
+    # Taça da Liga y 2. Lig Turquia: la API todavia no creo la edicion
+    # "2026" de estas 2 competencias puntuales (confirmado en vivo -- season=2026
+    # devuelve 0 partidos, season=2025 devuelve los partidos reales de la
+    # edicion en curso). temporada=None igual, mismo criterio que el resto
+    # de ligas agosto-mayo -- se autocorrige solo apenas la API cree la
+    # edicion 2026, sin tocar este archivo de nuevo.
+    {"liga": "Taça da Liga Portugal",                 "id": 97,  "temporada": None, "inicio": "2025-08-01"},
+    {"liga": "2. Lig Turquia",                        "id": 205, "temporada": None, "inicio": "2025-08-01"},
+    {"liga": "Super Cup Turquia",                     "id": 551, "temporada": None, "inicio": "2025-08-01"},
+    {"liga": "Division 1 Arabia Saudita",             "id": 308, "temporada": None, "inicio": "2025-08-01"},
+    {"liga": "King Cup Arabia Saudita",                "id": 504, "temporada": None, "inicio": "2025-08-01"},
+    {"liga": "Super Cup Arabia Saudita",              "id": 826, "temporada": None, "inicio": "2025-08-01"},
+    {"liga": "Liga de Expansion MX",                  "id": 263, "temporada": None, "inicio": "2026-01-01"},
+    {"liga": "Primera Nacional Argentina",            "id": 129, "temporada": 2026, "inicio": "2026-01-01"},
+    {"liga": "Primera C Argentina",                   "id": 132, "temporada": 2026, "inicio": "2026-01-01"},
+    {"liga": "Serie D Brasil",                        "id": 76,  "temporada": 2026, "inicio": "2026-01-01"},
+    {"liga": "Supercopa do Brasil",                   "id": 632, "temporada": 2026, "inicio": "2026-01-01"},
+    {"liga": "Superliga Colombia",                    "id": 713, "temporada": 2026, "inicio": "2026-01-01"},
+    {"liga": "Super Cup Chile",                       "id": 527, "temporada": 2026, "inicio": "2026-01-01"},
+    {"liga": "Super Copa Uruguay",                    "id": 842, "temporada": 2026, "inicio": "2026-01-01"},
+    {"liga": "Copa de la Division Profesional Bolivia","id": 964, "temporada": 2026, "inicio": "2026-01-01"},
+    {"liga": "Supercopa de Ecuador",                  "id": 853, "temporada": 2026, "inicio": "2026-01-01"},
 ]
 
 CSV_SALIDA = "futbol_partidos.csv"
