@@ -581,6 +581,7 @@ def construir_fila(fixture, liga_nombre):
     rojas_l = rojas_v = None
     posesion_l = posesion_v = None
     xg_l = xg_v = None
+    atajadas_l = atajadas_v = None
 
     if estado in ("FT", "AET"):
         stats = obtener_estadisticas_partido(fixture_id)
@@ -630,6 +631,12 @@ def construir_fila(fixture, liga_nombre):
                 elif tipo == "Total Shots":
                     if es_local: tiros_total_l  = valor
                     else:         tiros_total_v  = valor
+                elif tipo == "Goalkeeper Saves":
+                    # Cobertura confirmada en vivo para ligas de club (no
+                    # exclusivo de Mundial 2026) -- ver conversacion de
+                    # diseno de atajadas. None si no viene, nunca 0.
+                    if es_local: atajadas_l     = valor
+                    else:         atajadas_v     = valor
                 elif tipo == "expected_goals":
                     # Cobertura muy despareja entre competencias (100% en
                     # Premier League/La Liga/Serie A, 0% en Champions
@@ -677,6 +684,8 @@ def construir_fila(fixture, liga_nombre):
         "tiros_total_visitante":tiros_total_v,
         "xg_local":             xg_l,
         "xg_visitante":         xg_v,
+        "atajadas_local":       atajadas_l,
+        "atajadas_visitante":   atajadas_v,
         "goles_local_1t":       mitad["goles_local_1t"],
         "goles_local_2t":       mitad["goles_local_2t"],
         "goles_visitante_1t":   mitad["goles_visitante_1t"],
@@ -923,6 +932,7 @@ def actualizar_h2h_desactualizado(df, pares_forzados=None):
                 rojas_l = rojas_v = None
                 posesion_l = posesion_v = None
                 xg_l = xg_v = None
+                atajadas_l = atajadas_v = None
                 try:
                     stats_partido = obtener_estadisticas_partido(fid)
                     if stats_partido:
@@ -963,6 +973,9 @@ def actualizar_h2h_desactualizado(df, pares_forzados=None):
                             elif tipo == "Total Shots":
                                 if es_local_stats: tiros_total_l = valor
                                 else: tiros_total_v = valor
+                            elif tipo == "Goalkeeper Saves":
+                                if es_local_stats: atajadas_l = valor
+                                else: atajadas_v = valor
                             elif tipo == "expected_goals":
                                 # None cuando no viene, nunca 0 -- mismo
                                 # criterio que construir_fila().
@@ -995,6 +1008,8 @@ def actualizar_h2h_desactualizado(df, pares_forzados=None):
                     "tarjetas_rojas_visitante": rojas_v,
                     "xg_local": xg_l,
                     "xg_visitante": xg_v,
+                    "atajadas_local": atajadas_l,
+                    "atajadas_visitante": atajadas_v,
                 })
                 fixture_ids_existentes.add(fid)
                 agregados += 1
@@ -1322,9 +1337,13 @@ def _actualizar_cuotas_1x2_explicito(df, ligas_a_consultar, headers, temporada):
     apuntando exactamente a lo que hace falta. Decision explicita: robustez
     sobre ahorro de cuota, ver conversacion de diseno.
 
-    Devuelve un dict fixture_id -> {"Gana local"/"Empate"/"Gana visitante": cuota}
-    para que actualizar_cuotas_cache() lo mezcle (con prioridad) sobre lo que
-    haya encontrado el mecanismo general para esos mismos 3 mercados."""
+    Devuelve un dict fixture_id -> {casa -> {"Gana local"/"Empate"/
+    "Gana visitante": cuota}} -- una entrada por casa que realmente cotizo,
+    sin promediar (ver conversacion de diseno: el frontend elige que casa
+    mostrar por partido, con fallback automatico a la otra si la
+    preferida no cubre ese partido puntual) -- para que
+    actualizar_cuotas_cache() lo mezcle (con prioridad) sobre lo que haya
+    encontrado el mecanismo general para esos mismos 3 mercados."""
     import time
     ahora = pd.Timestamp.now(tz="UTC")
     proximos = df[
@@ -1373,9 +1392,10 @@ def _actualizar_cuotas_1x2_explicito(df, ligas_a_consultar, headers, temporada):
                     fid = p.get("fixture", {}).get("id")
                     if fid is None:
                         continue
-                    precios = {"Gana local": [], "Empate": [], "Gana visitante": []}
+                    precios_por_casa = {}  # casa -> {"Gana local"/"Empate"/"Gana visitante": [cuotas]}
                     for bm in p.get("bookmakers", []):
-                        if bm.get("name") not in CASAS_CUOTAS:
+                        casa = bm.get("name")
+                        if casa not in CASAS_CUOTAS:
                             continue
                         for bet in bm.get("bets", []):
                             if bet.get("name") != "Match Winner":
@@ -1385,13 +1405,13 @@ def _actualizar_cuotas_1x2_explicito(df, ligas_a_consultar, headers, temporada):
                                 if mercado is None:
                                     continue
                                 try:
-                                    precios[mercado].append(float(v["odd"]))
+                                    precios_por_casa.setdefault(casa, {}).setdefault(mercado, []).append(float(v["odd"]))
                                 except (TypeError, ValueError):
                                     pass
-                    if any(precios.values()):
+                    if precios_por_casa:
                         cuotas_1x2[str(fid)] = {
-                            mercado: round(sum(vals) / len(vals), 2)
-                            for mercado, vals in precios.items() if vals
+                            casa: {mercado: round(sum(vals) / len(vals), 2) for mercado, vals in mercados.items()}
+                            for casa, mercados in precios_por_casa.items()
                         }
                 paging = data.get("paging", {})
                 total_paginas = paging.get("total", 1)
@@ -1405,13 +1425,29 @@ def _actualizar_cuotas_1x2_explicito(df, ligas_a_consultar, headers, temporada):
     return cuotas_1x2
 
 
+def _mezclar_cuotas_por_casa(base, nuevo):
+    """Merge profundo de {casa: {mercado: cuota}} -- nuevo tiene prioridad
+    mercado por mercado, sin pisar la casa entera. Necesario porque el
+    1X2 explicito y el mecanismo general de mas abajo pueden aportar
+    mercados distintos de la MISMA casa para el mismo partido (ej. el
+    general trae "Over 2.5 goles" de Betano, el explicito trae "Gana
+    local" de Betano) -- un update() de nivel superior perderia uno de
+    los dos."""
+    for casa, mercados in nuevo.items():
+        base.setdefault(casa, {}).update(mercados)
+
+
 def actualizar_cuotas_cache():
     """Descarga cuotas reales de Betano y 1xBet para los partidos NS de
     los proximos DIAS_ADELANTE_CUOTAS dias, y arma cuotas_cache.json
-    indexado por fixture_id -> {mercado_interno: cuota}. Cuando ambas
-    casas tienen el mercado se guarda el PROMEDIO (no la mejor cuota --
-    elegir siempre la mejor de las dos sesga el edge hacia arriba,
-    ver conversacion de diseno); si solo una lo tiene, se usa esa sola.
+    indexado por fixture_id -> {casa -> {mercado_interno: cuota}} --
+    cuota real de CADA casa por separado, sin promediar. El frontend
+    (o calcular_top3()/_calcular_cuotas_1x2() en el backend) elige que
+    casa mostrar por partido, con fallback automatico a la otra si la
+    preferida no cubre ese partido/mercado puntual -- ver conversacion
+    de diseno (antes se guardaba un promedio combinado; se descarto
+    porque el rediseño de la pantalla necesita poder mostrar y elegir
+    la casa real, no un numero en el que no se puede apostar).
 
     Corre como ultimo paso del cron. El backend lee este archivo local
     (calcular_top3() en futbol_service.py) -- nunca llama a la API de
@@ -1473,9 +1509,10 @@ def actualizar_cuotas_cache():
                     fid = p.get("fixture", {}).get("id")
                     if fid is None:
                         continue
-                    precios_por_mercado = {}  # mercado_interno -> [cuotas de cada casa]
+                    precios_por_casa = {}  # casa -> mercado_interno -> [cuotas]
                     for bm in p.get("bookmakers", []):
-                        if bm.get("name") not in CASAS_CUOTAS:
+                        casa = bm.get("name")
+                        if casa not in CASAS_CUOTAS:
                             continue
                         for bet in bm.get("bets", []):
                             for mercado_interno, (bet_nombre, valor) in MAPEO_MERCADOS_CUOTAS.items():
@@ -1484,13 +1521,13 @@ def actualizar_cuotas_cache():
                                 for v in bet.get("values", []):
                                     if v.get("value") == valor:
                                         try:
-                                            precios_por_mercado.setdefault(mercado_interno, []).append(float(v["odd"]))
+                                            precios_por_casa.setdefault(casa, {}).setdefault(mercado_interno, []).append(float(v["odd"]))
                                         except (TypeError, ValueError):
                                             pass
-                    if precios_por_mercado:
+                    if precios_por_casa:
                         cuotas_cache[str(fid)] = {
-                            mercado: round(sum(precios) / len(precios), 2)
-                            for mercado, precios in precios_por_mercado.items()
+                            casa: {m: round(sum(vals) / len(vals), 2) for m, vals in mercados.items()}
+                            for casa, mercados in precios_por_casa.items()
                         }
                 paging = data.get("paging", {})
                 total_paginas = paging.get("total", 1)
@@ -1501,8 +1538,8 @@ def actualizar_cuotas_cache():
             time.sleep(0.1)
 
     cuotas_1x2 = _actualizar_cuotas_1x2_explicito(df, ligas_a_consultar, headers, temporada)
-    for fid, valores in cuotas_1x2.items():
-        cuotas_cache.setdefault(fid, {}).update(valores)
+    for fid, valores_por_casa in cuotas_1x2.items():
+        _mezclar_cuotas_por_casa(cuotas_cache.setdefault(fid, {}), valores_por_casa)
 
     with open(CUOTAS_CACHE_PATH, "w", encoding="utf-8") as f:
         json.dump(cuotas_cache, f, ensure_ascii=False, indent=2)
