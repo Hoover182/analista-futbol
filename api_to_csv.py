@@ -1546,6 +1546,165 @@ def actualizar_cuotas_cache():
     print(f"  cuotas_cache.json actualizado: {len(cuotas_cache)} partidos con cuota real ({llamadas} llamadas generales + 1X2 explicito arriba, {len(ligas_a_consultar)} ligas)")
 
 
+JUGADORES_PARTIDOS_CSV = "jugadores_partidos.csv"
+LIMITE_LLAMADAS_JUGADORES = 250  # backstop propio, no compite con el resto
+                                  # del cron -- estimado real 70-220
+                                  # partidos terminados/dia (medido en vivo
+                                  # sobre 14 dias de futbol_partidos.csv)
+
+
+def _parsear_jugadores_fixture(response, fixture_id, liga, fecha, home_id, home_name, away_id, away_name):
+    """Convierte la respuesta de fixtures/players en filas para
+    jugadores_partidos.csv. Matchea por team.id contra home_id/away_id
+    (resueltos via cache_team_ids.json por el caller) en vez de asumir
+    que el array viene siempre en orden local/visitante -- ese orden no
+    esta documentado como garantizado por la API.
+
+    Descarta jugadores con minutos None o 0: sin minutos jugados el
+    resto de las stats vienen todas null, no hay dato real que loguear
+    (mismo criterio que el resto del pipeline: no inventar una fila con
+    puros null)."""
+    filas = []
+    if home_id is None or away_id is None:
+        return filas
+
+    equipos_por_id = {eq.get("team", {}).get("id"): eq for eq in response}
+    if home_id not in equipos_por_id or away_id not in equipos_por_id:
+        return filas
+
+    mapa_condicion = {
+        home_id: ("local", home_name, away_name),
+        away_id: ("visitante", away_name, home_name),
+    }
+
+    for team_id, (condicion, nombre_equipo, nombre_rival) in mapa_condicion.items():
+        eq = equipos_por_id[team_id]
+        for j in eq.get("players", []):
+            info = j.get("player", {})
+            player_id = info.get("id")
+            if not player_id:
+                # La API a veces no devuelve player.id para jugadores de
+                # perfil bajo (suplentes de ligas menores) aunque si trae
+                # sus stats del partido -- sin id no hay forma de
+                # identificarlo de forma estable entre partidos (name
+                # matching es justo lo que se queria evitar, ver
+                # conversacion de diseno), asi que se descarta la fila en
+                # vez de guardar un id=0 falso que mezclaria jugadores
+                # reales distintos bajo la misma clave.
+                continue
+            stats_list = j.get("statistics", [])
+            if not stats_list:
+                continue
+            stats = stats_list[0]
+            games = stats.get("games", {}) or {}
+            minutos = games.get("minutes")
+            if not minutos:
+                continue
+            shots = stats.get("shots", {}) or {}
+            goals = stats.get("goals", {}) or {}
+            cards = stats.get("cards", {}) or {}
+            filas.append({
+                "fixture_id":         fixture_id,
+                "player_id":          info.get("id"),
+                "jugador":            info.get("name"),
+                "equipo":             nombre_equipo,
+                "rival":              nombre_rival,
+                "liga":               liga,
+                "fecha":              fecha,
+                "condicion":          condicion,
+                "posicion":           games.get("position"),
+                "titular":            not bool(games.get("substitute")),
+                "minutos":            minutos,
+                "goles":              goals.get("total"),
+                "asistencias":        goals.get("assists"),
+                "tiros_arco":         shots.get("on"),
+                "tiros_total":        shots.get("total"),
+                "tarjetas_amarillas": cards.get("yellow"),
+                "tarjetas_rojas":     cards.get("red"),
+            })
+    return filas
+
+
+def actualizar_jugadores_partidos(df_antes, df_despues):
+    """Recolecta stats de jugador por partido (fixtures/players, 1
+    llamada trae ambos planteles) para los fixtures que pasaron a
+    FT/AET/PEN EN ESTA CORRIDA -- comparando estado antes/despues de
+    descargar_y_guardar_csv(), no barriendo todo el CSV de nuevo cada
+    dia. Resumible sin checkpoint aparte: un fixture_id ya presente en
+    jugadores_partidos.csv se salta solo, asi que si el limite de
+    llamadas corta a mitad de camino, la proxima corrida retoma justo
+    donde quedo.
+
+    Corre como ultimo paso del cron, despues de cuotas -- mismo patron
+    que el resto de los pasos opcionales (nunca bloquea el resto del
+    pipeline si falla, ver el try/except del caller)."""
+    import time
+
+    if df_antes is None or df_antes.empty:
+        estados_antes = {}
+    else:
+        estados_antes = df_antes.set_index("fixture_id")["estado"].to_dict()
+
+    ESTADOS_TERMINADOS = ("FT", "AET", "PEN")
+    recien_terminados = df_despues[
+        df_despues["estado"].isin(ESTADOS_TERMINADOS) &
+        df_despues["fixture_id"].apply(lambda fid: estados_antes.get(fid) not in ESTADOS_TERMINADOS)
+    ]
+
+    if recien_terminados.empty:
+        print("  Sin partidos nuevos terminados para jugadores_partidos.csv")
+        return
+
+    ya_procesados = set()
+    if os.path.exists(JUGADORES_PARTIDOS_CSV):
+        try:
+            ya_procesados = set(pd.read_csv(JUGADORES_PARTIDOS_CSV, usecols=["fixture_id"])["fixture_id"].unique())
+        except Exception:
+            pass
+
+    pendientes = recien_terminados[~recien_terminados["fixture_id"].isin(ya_procesados)]
+    if pendientes.empty:
+        print("  Todos los partidos recien terminados ya tienen jugadores_partidos.csv")
+        return
+
+    cache_ids = _cargar_cache_team_ids()
+
+    filas_nuevas = []
+    llamadas = 0
+    partidos_con_datos = 0
+    for _, row in pendientes.iterrows():
+        if llamadas >= LIMITE_LLAMADAS_JUGADORES:
+            print(f"  Limite de {LIMITE_LLAMADAS_JUGADORES} llamadas de jugadores alcanzado, se completara en la proxima corrida")
+            break
+        fid = int(row["fixture_id"])
+        home_id = cache_ids.get(row["equipo_local"])
+        away_id = cache_ids.get(row["equipo_visitante"])
+        data = api_get("fixtures/players", params={"fixture": fid})
+        llamadas += 1
+        response = data.get("response", [])
+        if response:
+            filas = _parsear_jugadores_fixture(
+                response, fid, row["liga"], row["fecha"],
+                home_id, row["equipo_local"], away_id, row["equipo_visitante"],
+            )
+            if filas:
+                partidos_con_datos += 1
+            filas_nuevas.extend(filas)
+        time.sleep(0.1)
+
+    if filas_nuevas:
+        df_nuevo = pd.DataFrame(filas_nuevas)
+        if os.path.exists(JUGADORES_PARTIDOS_CSV):
+            df_actual = pd.read_csv(JUGADORES_PARTIDOS_CSV)
+            df_combinado = pd.concat([df_actual, df_nuevo], ignore_index=True)
+        else:
+            df_combinado = df_nuevo
+        df_combinado = df_combinado.drop_duplicates(subset=["fixture_id", "player_id"], keep="last")
+        df_combinado.to_csv(JUGADORES_PARTIDOS_CSV, index=False, encoding="utf-8-sig")
+
+    print(f"  jugadores_partidos.csv actualizado: {len(filas_nuevas)} filas nuevas de {partidos_con_datos}/{llamadas} partidos consultados con datos")
+
+
 def descargar_y_guardar_csv(dias_adelante=4, descarga_inicial=False, incluir_h2h=True):
     hoy               = datetime.now().date()
     date_to           = (hoy + timedelta(days=dias_adelante)).isoformat()
@@ -1600,9 +1759,11 @@ def descargar_y_guardar_csv(dias_adelante=4, descarga_inicial=False, incluir_h2h
 
     try:
         df_existente = pd.read_csv(CSV_SALIDA)
+        df_antes_jugadores = df_existente.copy()
         df_combined  = pd.concat([df_existente, df_nuevo], ignore_index=True)
         df_combined  = df_combined.drop_duplicates(subset=["fixture_id"], keep="last")
     except FileNotFoundError:
+        df_antes_jugadores = pd.DataFrame(columns=["fixture_id", "estado"])
         df_combined = df_nuevo
 
     df_combined = df_combined.sort_values(["fecha", "liga"]).reset_index(drop=True)
@@ -1642,6 +1803,12 @@ def descargar_y_guardar_csv(dias_adelante=4, descarga_inicial=False, incluir_h2h
             actualizar_cuotas_cache()
         except Exception as e:
             print(f"  Error actualizando cuotas: {e}")
+
+        print("\nActualizando jugadores_partidos.csv (stats por partido de partidos recien terminados)...")
+        try:
+            actualizar_jugadores_partidos(df_antes_jugadores, df_combined)
+        except Exception as e:
+            print(f"  Error actualizando jugadores_partidos.csv: {e}")
 
 
 if __name__ == "__main__":
