@@ -52,7 +52,7 @@ LIGAS_IDS = {
     "Liga MX":                     (262, None),
     "Copa Libertadores":           (13,  2026),
     "Copa Sudamericana":           (11,  2026),
-    "Recopa Sudamericana":         (12,  2026),
+    "Recopa Sudamericana":         (541, 2026),
     "Liga Profesional Argentina":  (128, 2026),
     "Copa Argentina":              (130, 2026),
     "Brasileirao":                 (71,  2026),
