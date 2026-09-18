@@ -1,4 +1,5 @@
 import os
+import re
 import requests
 import pandas as pd
 from datetime import datetime, timedelta
@@ -1293,9 +1294,11 @@ BET_ID_MATCH_WINNER = 1  # id del mercado "Match Winner" en la taxonomia de
 
 # Mapea el nombre interno del mercado (igual al que ya usa calcular_top3()
 # en el backend) al (nombre del "bet" de la API, valor de la seleccion).
-# Solo los 4 mercados donde se confirmo cobertura real (98.2% 1X2/goles/
-# corners, 63.6% tarjetas) -- "1X"/"X2"/"Ambos marcan" no tienen mercado
-# equivalente confirmado, quedan sin cuota y el fallback los excluye.
+# Solo 1X2 y goles 1.5/2.5/3.5 -- lineas fijas. Corners, tarjetas y tiros
+# NO van aca: ofrecen una cuota por CADA linea .5 distinta segun el
+# partido, se leen con _extraer_cuotas_linea_variable() de abajo.
+# "1X"/"X2"/"Ambos marcan" no tienen mercado equivalente confirmado,
+# quedan sin cuota y el fallback los excluye.
 MAPEO_MERCADOS_CUOTAS = {
     "Gana local":        ("Match Winner", "Home"),
     "Empate":             ("Match Winner", "Draw"),
@@ -1306,15 +1309,46 @@ MAPEO_MERCADOS_CUOTAS = {
     "Under 2.5 goles":   ("Goals Over/Under", "Under 2.5"),
     "Over 3.5 goles":    ("Goals Over/Under", "Over 3.5"),
     "Under 3.5 goles":   ("Goals Over/Under", "Under 3.5"),
-    "Over 7.5 corners":  ("Corners Over Under", "Over 7.5"),
-    "Under 7.5 corners": ("Corners Over Under", "Under 7.5"),
-    "Over 8.5 corners":  ("Corners Over Under", "Over 8.5"),
-    "Under 8.5 corners": ("Corners Over Under", "Under 8.5"),
-    "Over 2.5 tarjetas":  ("Cards Over/Under", "Over 2.5"),
-    "Under 2.5 tarjetas": ("Cards Over/Under", "Under 2.5"),
-    "Over 3.5 tarjetas":  ("Cards Over/Under", "Over 3.5"),
-    "Under 3.5 tarjetas": ("Cards Over/Under", "Under 3.5"),
 }
+
+
+# Mercados de la API con una cuota por CADA linea que ofrezca la casa
+# (nombre del "bet" -> sufijo del nombre interno, mismo que ya usa
+# calcular_top3() en el backend: "Over 9.5 corners", "Under 4.5 tarjetas",
+# "Over 6.5 tiros al arco", "Over 23.5 tiros totales"). Verificado con
+# respuestas reales de /odds (Betano y 1xBet, 2026-09-18): las casas
+# devuelven decenas de lineas por mercado, no solo las 2-3 que se
+# guardaban antes. Atajadas NO esta: solo existe como apuesta por arquero
+# ("Jugador - N"), no como total del partido. Por equipo tampoco.
+MERCADOS_LINEA_VARIABLE = {
+    "Corners Over Under": "corners",
+    "Cards Over/Under":   "tarjetas",
+    "Total ShotOnGoal":   "tiros al arco",
+    "Total Shots":        "tiros totales",
+}
+# Solo lineas terminadas en .5: las enteras y de cuarto (8, 8.25, 9.0...)
+# tienen "push"/media devolucion y no son comparables con la probabilidad
+# Over/Under sin push que calcula el modelo.
+_RE_LINEA_OU = re.compile(r"^(Over|Under) (\d+\.5)$")
+
+
+def _extraer_cuotas_linea_variable(bet):
+    """Cuotas de un bet de linea variable -> lista de (mercado_interno, cuota),
+    o [] si el bet no es uno de MERCADOS_LINEA_VARIABLE. Funcion pura,
+    testeable contra una respuesta guardada sin llamar a la API."""
+    sufijo = MERCADOS_LINEA_VARIABLE.get(bet.get("name"))
+    if sufijo is None:
+        return []
+    salida = []
+    for v in bet.get("values", []):
+        m = _RE_LINEA_OU.match(str(v.get("value", "")).strip())
+        if not m:
+            continue
+        try:
+            salida.append((f"{m.group(1)} {m.group(2)} {sufijo}", float(v["odd"])))
+        except (TypeError, ValueError, KeyError):
+            pass
+    return salida
 
 
 def _actualizar_cuotas_1x2_explicito(df, ligas_a_consultar, headers, temporada):
@@ -1515,6 +1549,8 @@ def actualizar_cuotas_cache():
                         if casa not in CASAS_CUOTAS:
                             continue
                         for bet in bm.get("bets", []):
+                            for mercado_interno, odd in _extraer_cuotas_linea_variable(bet):
+                                precios_por_casa.setdefault(casa, {}).setdefault(mercado_interno, []).append(odd)
                             for mercado_interno, (bet_nombre, valor) in MAPEO_MERCADOS_CUOTAS.items():
                                 if bet.get("name") != bet_nombre:
                                     continue
