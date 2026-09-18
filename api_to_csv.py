@@ -1471,6 +1471,26 @@ def _mezclar_cuotas_por_casa(base, nuevo):
         base.setdefault(casa, {}).update(mercados)
 
 
+def _escribir_cuotas_cache(cuotas_cache, path=None):
+    """Guarda cuotas_cache.json. Si el resultado nuevo viene VACIO y el
+    archivo actual ya tiene datos, NO lo pisa: un cache vacio casi siempre
+    significa que todas las consultas fallaron (ej. limite diario de
+    api-football, ya paso), no que no haya cuotas, y el cron lo pushea al
+    repo. Devuelve True si escribio, False si conservo el anterior."""
+    import json
+    path = path or CUOTAS_CACHE_PATH
+    if not cuotas_cache and os.path.exists(path):
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                if json.load(f):
+                    return False
+        except (ValueError, OSError):
+            pass  # archivo previo ilegible: no hay nada valioso que conservar
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(cuotas_cache, f, ensure_ascii=False, indent=2)
+    return True
+
+
 def actualizar_cuotas_cache():
     """Descarga cuotas reales de Betano y 1xBet para los partidos NS de
     los proximos DIAS_ADELANTE_CUOTAS dias, y arma cuotas_cache.json
@@ -1577,8 +1597,10 @@ def actualizar_cuotas_cache():
     for fid, valores_por_casa in cuotas_1x2.items():
         _mezclar_cuotas_por_casa(cuotas_cache.setdefault(fid, {}), valores_por_casa)
 
-    with open(CUOTAS_CACHE_PATH, "w", encoding="utf-8") as f:
-        json.dump(cuotas_cache, f, ensure_ascii=False, indent=2)
+    if not _escribir_cuotas_cache(cuotas_cache):
+        print("  ADVERTENCIA: no se obtuvo ninguna cuota real (posible limite diario de la API o error de red) -- "
+              f"se CONSERVA el {CUOTAS_CACHE_PATH} anterior en vez de pisarlo con un cache vacio")
+        return
     print(f"  cuotas_cache.json actualizado: {len(cuotas_cache)} partidos con cuota real ({llamadas} llamadas generales + 1X2 explicito arriba, {len(ligas_a_consultar)} ligas)")
 
 
