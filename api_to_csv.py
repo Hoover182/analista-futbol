@@ -206,6 +206,20 @@ def _safe_int(valor):
         return 0
 
 
+def _goles_90(fixture):
+    """Marcador a 90' (score.fulltime de api-football), sin prorroga ni
+    tanda. Verificado en vivo: en AET goals = fulltime + extratime; en PEN
+    goals = fulltime (+ extratime) y la tanda va aparte en score.penalty.
+    Se lee fulltime directo (extratime viene null si no hubo goles).
+    Devuelve (None, None) si la API no lo trae -- nunca 0, a diferencia
+    de _safe_int -- para no falsear partidos no terminados."""
+    ft = (fixture.get("score") or {}).get("fulltime") or {}
+    h, a = ft.get("home"), ft.get("away")
+    if h is None or a is None:
+        return None, None
+    return int(h), int(a)
+
+
 def _safe_float(valor):
     try:
         if valor is None or valor == "None":
@@ -566,6 +580,7 @@ def construir_fila(fixture, liga_nombre):
     visitante = normalizar_nombre_equipo(teams.get("away", {}).get("name", "Desconocido"))
     goles_l   = _safe_int(goals.get("home"))
     goles_v   = _safe_int(goals.get("away"))
+    goles_90_l, goles_90_v = _goles_90(fixture)
     estado    = f.get("status", {}).get("short", "")
     arbitro   = f.get("referee") or ""
 
@@ -675,6 +690,8 @@ def construir_fila(fixture, liga_nombre):
         "equipo_visitante":     visitante,
         "goles_local":          goles_l,
         "goles_visitante":      goles_v,
+        "goles_90_local":       goles_90_l,
+        "goles_90_visitante":   goles_90_v,
         "corners_local":        corners_l,
         "corners_visitante":    corners_v,
         "tarjetas_local":       tarjetas_l,
@@ -790,6 +807,13 @@ def resincronizar_resultados_ns():
     if not actualizaciones:
         print(f"  {llamadas} llamadas hechas, ningun partido resuelto todavia (siguen en curso o sin cambios)")
         return
+
+    # El loop de abajo solo escribe campos que ya existen en df.columns:
+    # sin esto, goles_90 se perderia en silencio si el resync corre antes
+    # que cualquier fila nueva haya creado las columnas.
+    for col in ("goles_90_local", "goles_90_visitante"):
+        if col not in df.columns:
+            df[col] = pd.NA
 
     for fid, fila_nueva in actualizaciones.items():
         idx = df.index[df["fixture_id"] == fid]
@@ -995,6 +1019,8 @@ def actualizar_h2h_desactualizado(df, pares_forzados=None):
                     "equipo_visitante": nombre_visit_real,
                     "goles_local": f["goals"]["home"],
                     "goles_visitante": f["goals"]["away"],
+                    "goles_90_local": _goles_90(f)[0],
+                    "goles_90_visitante": _goles_90(f)[1],
                     "corners_local": corners_l,
                     "corners_visitante": corners_v,
                     "tarjetas_local": tarjetas_l,
