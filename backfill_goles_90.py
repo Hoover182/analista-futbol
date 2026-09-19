@@ -73,9 +73,20 @@ def _n(x):
 
 
 def evaluar(fixture, estado_csv):
-    """(goles_90_local, goles_90_visitante, None) o (None, None, motivo)."""
+    """(goles_90_local, goles_90_visitante, None) o (None, None, motivo).
+
+    Reglas (ajustadas con los casos reales de la primera corrida):
+      - AET y PEN son intercambiables entre CSV y API: ambos significan que
+        se paso de los 90', y el CSV puede tener el rotulo atrasado (ej.
+        partidos del Mundial 2026 que la API ya marca PEN). fulltime no
+        depende de ese rotulo; estado del CSV nunca se modifica.
+      - Coherencia: goals >= fulltime en ambos lados y goals == fulltime +
+        extratime, o goals == extratime (en partidos viejos la API pone en
+        extratime el marcador acumulado, no solo los goles de prorroga).
+        Si no cuadra ninguna (ej. fulltime 4-0 con goals 2-0) no se escribe.
+    """
     st = fixture["fixture"]["status"]["short"]
-    if st != estado_csv:
+    if not (st == estado_csv or (st in ESTADOS and estado_csv in ESTADOS)):
         return None, None, f"estado API {st} != CSV {estado_csv}"
     sc = fixture.get("score") or {}
     ft = sc.get("fulltime") or {}
@@ -83,9 +94,14 @@ def evaluar(fixture, estado_csv):
         return None, None, "sin score.fulltime"
     et = sc.get("extratime") or {}
     g = fixture.get("goals") or {}
-    if (_n(g.get("home")), _n(g.get("away"))) != (_n(ft["home"]) + _n(et.get("home")), _n(ft["away"]) + _n(et.get("away"))):
-        return None, None, f"goals {g.get('home')}-{g.get('away')} != fulltime+extratime"
-    return int(ft["home"]), int(ft["away"]), None
+    gl, gv = _n(g.get("home")), _n(g.get("away"))
+    fl, fv = _n(ft["home"]), _n(ft["away"])
+    el, ev = _n(et.get("home")), _n(et.get("away"))
+    if gl < fl or gv < fv:
+        return None, None, f"goals {gl}-{gv} < fulltime {fl}-{fv}"
+    if (gl, gv) not in ((fl + el, fv + ev), (el, ev)):
+        return None, None, f"goals {gl}-{gv} != fulltime {fl}-{fv} + extratime {el}-{ev}"
+    return fl, fv, None
 
 
 def guardar(df, mtime_inicial):
