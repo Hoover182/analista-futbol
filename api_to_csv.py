@@ -1,3 +1,4 @@
+import json
 import os
 import re
 import requests
@@ -177,11 +178,44 @@ def _guardar_cache_team_ids(cache):
         json.dump(limpio, f, ensure_ascii=False, indent=2)
 
 
+# Contador de pedidos a api-football por paso del cron. Antes el consumo
+# real por paso no se media: solo se sabia el total del dia (/status).
+# Medido el 2026-09-26 con el CSV de ese dia: el paso de H2H pedia 3000
+# pares por corrida (tope) de 3740 seleccionados, y 2848 ya tenian sus 5
+# cruces -- ~3000 pedidos para 5 filas nuevas. Ver actualizar_h2h_desactualizado().
+_PEDIDOS = {"paso": "sin paso", "por_paso": {}, "restantes_dia": None}
+
+
+def _paso(nombre):
+    _PEDIDOS["paso"] = nombre
+
+
+def _get_api(url, **kwargs):
+    """requests.get para api-football que cuenta el pedido en el paso actual
+    y guarda cuantos quedan en el dia (header x-ratelimit-requests-remaining,
+    confirmado en vivo el 2026-09-26)."""
+    resp = requests.get(url, **kwargs)
+    paso = _PEDIDOS["paso"]
+    _PEDIDOS["por_paso"][paso] = _PEDIDOS["por_paso"].get(paso, 0) + 1
+    restantes = getattr(resp, "headers", {}).get("x-ratelimit-requests-remaining")
+    if restantes is not None:
+        _PEDIDOS["restantes_dia"] = restantes
+    return resp
+
+
+def _imprimir_resumen_pedidos():
+    total = sum(_PEDIDOS["por_paso"].values())
+    print(f"\n=== Pedidos a api-football en esta corrida: {total} "
+          f"(quedan en el dia: {_PEDIDOS['restantes_dia'] or 'desconocido'}) ===")
+    for paso, n in _PEDIDOS["por_paso"].items():
+        print(f"  {paso}: {n}")
+
+
 def api_get(endpoint, params=None):
     headers = {"x-apisports-key": API_KEY}
     url = f"{BASE_URL}/{endpoint}"
     try:
-        response = requests.get(url, headers=headers, params=params, timeout=30)
+        response = _get_api(url, headers=headers, params=params, timeout=30)
         if response.status_code == 200:
             return response.json()
         print(f"  Error API {response.status_code} en {endpoint}")
@@ -482,7 +516,7 @@ def buscar_team_id(nombre, pais_esperado_por_equipo, cache_team_id, headers):
     primer_resultado_fallback = None
 
     for intento in intentos:
-        resp = requests.get("https://v3.football.api-sports.io/teams", headers=headers, params={"search": intento}, timeout=15)
+        resp = _get_api("https://v3.football.api-sports.io/teams", headers=headers, params={"search": intento}, timeout=15)
         data = resp.json()
         candidatos = data.get("response") or []
         if candidatos:
@@ -786,7 +820,7 @@ def resincronizar_resultados_ns():
             break
         lote = fixture_ids[i:i + LOTE_IDS_RESYNC]
         try:
-            resp = requests.get(
+            resp = _get_api(
                 f"{BASE_URL}/fixtures",
                 headers=headers,
                 params={"ids": "-".join(str(fid) for fid in lote)},
@@ -825,21 +859,93 @@ def resincronizar_resultados_ns():
     print(f"  {len(actualizaciones)} partidos resincronizados de {len(fixture_ids)} candidatos ({llamadas} llamadas)")
 
 
+# H2H: solo pares con partido en los proximos DIAS_VENTANA_H2H dias y con
+# menos de MIN_PARTIDOS_H2H cruces guardados. Antes se revisaban TODOS los
+# pares de nivel 1 con el ultimo cruce de hace mas de 30 dias o incompletos:
+# 3740 pares por corrida (tope 3000), 2848 de ellos ya con sus 5 cruces --
+# se pedian todos los dias sin traer nada (2026-09-26: ~3000 pedidos, 5
+# filas nuevas). Un partido nuevo entre dos equipos rastreados ya lo trae
+# la descarga regular por liga, asi que el refresco de pares "viejos" se
+# elimino por decision del usuario.
+DIAS_VENTANA_H2H = 3
+# Un par ya consultado no se vuelve a pedir durante estos dias: si la API
+# devolvio menos de MIN_PARTIDOS_H2H cruces es porque no hay mas, y se usa
+# lo que hay -- nunca se inventan partidos. Sin esta memoria, un par con
+# solo 3 cruces en la historia se pediria en cada corrida para siempre
+# (y 4 corridas por dia lo multiplicarian por 4).
+DIAS_REINTENTO_H2H = 7
+H2H_CONSULTADOS_PATH = "h2h_consultados.json"
+LIMITE_LLAMADAS_H2H = 300  # backstop; lo esperado es ~50 pares por corrida
+
+
+def _clave_par(a, b):
+    return " | ".join(sorted([a, b]))
+
+
+def _cargar_h2h_consultados(path=None):
+    path = path or H2H_CONSULTADOS_PATH
+    if not os.path.exists(path):
+        return {}
+    try:
+        with open(path, encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return {}
+
+
+def _guardar_h2h_consultados(consultados, ahora, path=None):
+    """Guarda la memoria descartando entradas que ya no bloquean nada (mas
+    viejas que DIAS_REINTENTO_H2H), para que el archivo no crezca sin fin."""
+    limite = ahora - timedelta(days=DIAS_REINTENTO_H2H)
+    vigentes = {k: v for k, v in consultados.items() if pd.Timestamp(v) >= limite}
+    with open(path or H2H_CONSULTADOS_PATH, "w", encoding="utf-8") as f:
+        json.dump(dict(sorted(vigentes.items())), f, ensure_ascii=False, indent=2)
+
+
+def seleccionar_pares_h2h(df, consultados, ahora, equipos_n1):
+    """Pares (local, visitante) a consultar, del partido mas cercano al mas
+    lejano: partido NS de dos equipos de nivel 1 entre ahora y
+    ahora + DIAS_VENTANA_H2H dias, con menos de MIN_PARTIDOS_H2H cruces
+    terminados guardados, y no consultado en los ultimos DIAS_REINTENTO_H2H
+    dias. Devuelve (pares, omitidos_por_memoria)."""
+    df = df.reset_index(drop=True)  # las mascaras de abajo se alinean por indice
+    fecha_dt = pd.to_datetime(df["fecha"], errors="coerce", utc=True)
+    proximos = df[
+        (df["estado"] == "NS") & (fecha_dt >= ahora) &
+        (fecha_dt <= ahora + timedelta(days=DIAS_VENTANA_H2H)) &
+        df["equipo_local"].isin(equipos_n1) & df["equipo_visitante"].isin(equipos_n1)
+    ].assign(_f=fecha_dt).sort_values("_f")
+
+    terminados = df[df["estado"].isin(["FT", "AET", "PEN"])]
+    cruces = {}
+    for a, b in zip(terminados["equipo_local"], terminados["equipo_visitante"]):
+        k = _clave_par(a, b)
+        cruces[k] = cruces.get(k, 0) + 1
+
+    limite_memoria = ahora - timedelta(days=DIAS_REINTENTO_H2H)
+    pares, vistos, omitidos = [], set(), 0
+    for local, visitante in zip(proximos["equipo_local"], proximos["equipo_visitante"]):
+        k = _clave_par(local, visitante)
+        if k in vistos or cruces.get(k, 0) >= MIN_PARTIDOS_H2H:
+            continue
+        vistos.add(k)
+        ultima = consultados.get(k)
+        if ultima and pd.Timestamp(ultima) >= limite_memoria:
+            omitidos += 1
+            continue
+        pares.append((local, visitante))
+    return pares, omitidos
+
+
 def actualizar_h2h_desactualizado(df, pares_forzados=None):
-    """Revisa pares de equipos de nivel 1 cuyo H2H mas reciente tiene mas
-    de 1 mes de antiguedad, o que tienen menos de MIN_PARTIDOS_H2H partidos
-    guardados aunque el mas reciente sea fresco (ver identificar_pares_incompletos),
-    y vuelve a consultar la API por si hay partidos nuevos que agregar.
-    Limite configurable por corrida para no agotar la cuota diaria completa
-    en una sola ejecucion.
+    """Completa el H2H (ultimos MIN_PARTIDOS_H2H cruces) de los partidos de
+    los proximos DIAS_VENTANA_H2H dias -- ver seleccionar_pares_h2h().
 
     pares_forzados: si se pasa una lista de pares (local, visitante), se usa
-    tal cual en vez de calcular los desactualizados/incompletos -- para
+    tal cual en vez de seleccionarlos (sin ventana ni memoria) -- para
     backfills dirigidos a un subconjunto puntual (ver
     backfill_h2h_incompleto.py)."""
-    import pandas as pd
     import time
-    from datetime import datetime, timedelta
     headers = {"x-apisports-key": API_KEY}
 
     df["fecha_dt"] = pd.to_datetime(df["fecha"], errors="coerce", utc=True)
@@ -855,58 +961,20 @@ def actualizar_h2h_desactualizado(df, pares_forzados=None):
     # la logica de desambiguacion por pais.
     pais_esperado_por_equipo = construir_pais_esperado_por_equipo(df)
 
-    pares_todos = set()
-    for _, row in df.iterrows():
-        if row["equipo_local"] in equipos_n1 and row["equipo_visitante"] in equipos_n1:
-            pares_todos.add(tuple(sorted([row["equipo_local"], row["equipo_visitante"]])))
-
-    limite_antiguedad = pd.Timestamp.now(tz="UTC") - timedelta(days=30)
+    ahora_utc = pd.Timestamp.now(tz="UTC")
+    consultados = _cargar_h2h_consultados()
 
     if pares_forzados is not None:
-        pares_desactualizados = pares_forzados
+        pares_desactualizados = list(pares_forzados)
         print(f"  Pares forzados (backfill dirigido): {len(pares_desactualizados)}")
     else:
-        pares_desactualizados = []
-        for local, visitante in pares_todos:
-            h2h_par = df[
-                ((df["equipo_local"] == local) & (df["equipo_visitante"] == visitante)) |
-                ((df["equipo_local"] == visitante) & (df["equipo_visitante"] == local))
-            ]
-            h2h_par = h2h_par[h2h_par["estado"].isin(["FT", "AET", "PEN"])]
-            viejo = h2h_par.empty
-            if not viejo:
-                fecha_mas_reciente = h2h_par["fecha_dt"].max()
-                viejo = pd.isna(fecha_mas_reciente) or fecha_mas_reciente < limite_antiguedad
-            incompleto = len(h2h_par) < MIN_PARTIDOS_H2H
-            if viejo or incompleto:
-                pares_desactualizados.append((local, visitante))
-
-        print(f"  Pares con H2H desactualizado (viejo o con menos de {MIN_PARTIDOS_H2H} partidos): {len(pares_desactualizados)}")
+        pares_desactualizados, omitidos = seleccionar_pares_h2h(df, consultados, ahora_utc, equipos_n1)
+        print(f"  Pares con partido en los proximos {DIAS_VENTANA_H2H} dias y menos de {MIN_PARTIDOS_H2H} "
+              f"cruces: {len(pares_desactualizados)} a consultar, {omitidos} omitidos (consultados hace "
+              f"menos de {DIAS_REINTENTO_H2H} dias)")
 
     if not pares_desactualizados:
         return
-
-    # Priorizar los pares con un partido programado (NS) en las proximas
-    # 48 horas -- el H2H fresco importa mas para un cruce que se va a
-    # simular pronto que para uno sin partido cercano. Se calcula el set
-    # de pares "urgentes" en un solo recorrido del CSV (no un chequeo por
-    # par) y se reordena la lista completa; sort() es estable, asi que
-    # dentro de cada grupo (urgente / no urgente) se conserva el orden
-    # original. Si LIMITE_LLAMADAS_H2H se agota a mitad de camino, lo que
-    # queda sin procesar es lo menos urgente.
-    ahora_utc = pd.Timestamp.now(tz="UTC")
-    ventana_urgente = ahora_utc + timedelta(days=2)
-    proximos = df[
-        (df["estado"] == "NS") &
-        (df["fecha_dt"] >= ahora_utc) &
-        (df["fecha_dt"] <= ventana_urgente)
-    ]
-    pares_urgentes = {
-        tuple(sorted([row["equipo_local"], row["equipo_visitante"]]))
-        for _, row in proximos.iterrows()
-    }
-    pares_desactualizados.sort(key=lambda par: 0 if par in pares_urgentes else 1)
-    print(f"  Pares urgentes (con partido en las proximas 48h): {sum(1 for p in pares_desactualizados if p in pares_urgentes)}")
 
     # Cache de team_id precargado desde disco -- ver _cargar_cache_team_ids().
     # El id de un equipo no cambia de un dia a otro, asi que esto evita
@@ -919,7 +987,6 @@ def actualizar_h2h_desactualizado(df, pares_forzados=None):
     procesados = 0
     agregados = 0
     errores = 0
-    LIMITE_LLAMADAS_H2H = 3000  # bajado de 4000 -- ver conversacion de calibracion de cuota diaria del cron
 
     for local, visitante in pares_desactualizados:
         if procesados >= LIMITE_LLAMADAS_H2H:
@@ -932,13 +999,17 @@ def actualizar_h2h_desactualizado(df, pares_forzados=None):
                 errores += 1
                 continue
 
-            resp_h2h = requests.get(
+            resp_h2h = _get_api(
                 "https://v3.football.api-sports.io/fixtures/headtohead",
                 headers=headers,
                 params={"h2h": f"{tid_local}-{tid_visitante}", "last": 5},
                 timeout=15
             )
             data_h2h = resp_h2h.json()
+            # Solo una respuesta valida cuenta como consultada: un error de la
+            # API (cuota, 5xx) deja el par para reintentar en la proxima corrida.
+            if resp_h2h.status_code == 200 and not data_h2h.get("errors"):
+                consultados[_clave_par(local, visitante)] = ahora_utc.strftime("%Y-%m-%dT%H:%M:%SZ")
 
             for f in data_h2h.get("response", []):
                 fid = f["fixture"]["id"]
@@ -1051,6 +1122,7 @@ def actualizar_h2h_desactualizado(df, pares_forzados=None):
 
     _guardar_cache_team_ids(cache_team_id)
     print(f"  Cache de team_id guardado: {len([v for v in cache_team_id.values() if v is not None])} equipos")
+    _guardar_h2h_consultados(consultados, ahora_utc)
 
     if filas_nuevas:
         df_nuevo_h2h = pd.DataFrame(filas_nuevas)
@@ -1209,7 +1281,7 @@ def backfillear_equipos_desconocidos_internacionales():
                 errores += 1
                 continue
 
-            resp = requests.get(
+            resp = _get_api(
                 f"{BASE_URL}/fixtures",
                 headers=headers,
                 params={"team": team_id, "last": ULTIMOS_N_EQUIPO_DESCONOCIDO},
@@ -1431,7 +1503,7 @@ def _actualizar_cuotas_1x2_explicito(df, ligas_a_consultar, headers, temporada):
             if llamadas >= LIMITE_LLAMADAS_CUOTAS_1X2:
                 break
             try:
-                resp = requests.get(
+                resp = _get_api(
                     f"{BASE_URL}/odds",
                     headers=headers,
                     params={
@@ -1577,7 +1649,7 @@ def actualizar_cuotas_cache():
             if llamadas >= LIMITE_LLAMADAS_CUOTAS:
                 break
             try:
-                resp = requests.get(
+                resp = _get_api(
                     f"{BASE_URL}/odds",
                     headers=headers,
                     params={"league": liga_id, "season": temporada, "page": pagina},
@@ -1796,6 +1868,7 @@ def descargar_y_guardar_csv(dias_adelante=4, descarga_inicial=False, incluir_h2h
     filas             = []
     total_ligas       = len(LIGAS)
 
+    _paso("fixtures por liga")
     for i, comp in enumerate(LIGAS, 1):
         liga_nombre = comp["liga"]
         temporada   = comp["temporada"] if comp["temporada"] else temporada_europea
@@ -1858,6 +1931,7 @@ def descargar_y_guardar_csv(dias_adelante=4, descarga_inicial=False, incluir_h2h
     print(f"Partidos totales: {len(df_combined)}")
 
     if incluir_h2h:
+        _paso("resincronizar NS")
         print("\nResincronizando partidos NS con horario ya pasado...")
         try:
             resincronizar_resultados_ns()
@@ -1870,24 +1944,28 @@ def descargar_y_guardar_csv(dias_adelante=4, descarga_inicial=False, incluir_h2h
         except Exception as e:
             print(f"  Error resincronizando resultados NS: {e}")
 
-        print("\nRevisando H2H desactualizado (mas de 1 mes sin partidos nuevos)...")
+        _paso("H2H")
+        print(f"\nCompletando H2H de los partidos de los proximos {DIAS_VENTANA_H2H} dias...")
         try:
             actualizar_h2h_desactualizado(df_combined)
         except Exception as e:
             print(f"  Error revisando H2H desactualizado: {e}")
 
+        _paso("equipos desconocidos")
         print("\nRevisando equipos desconocidos en copas internacionales (Champions/Europa/Conference/Libertadores/Sudamericana)...")
         try:
             backfillear_equipos_desconocidos_internacionales()
         except Exception as e:
             print(f"  Error revisando equipos desconocidos: {e}")
 
+        _paso("cuotas")
         print("\nActualizando cuotas_cache.json (Betano/1xBet, Top3 por edge)...")
         try:
             actualizar_cuotas_cache()
         except Exception as e:
             print(f"  Error actualizando cuotas: {e}")
 
+        _paso("jugadores")
         print("\nActualizando jugadores_partidos.csv (stats por partido de partidos recien terminados)...")
         try:
             actualizar_jugadores_partidos(df_antes_jugadores, df_combined)
@@ -1896,4 +1974,7 @@ def descargar_y_guardar_csv(dias_adelante=4, descarga_inicial=False, incluir_h2h
 
 
 if __name__ == "__main__":
-    descargar_y_guardar_csv()
+    try:
+        descargar_y_guardar_csv()
+    finally:
+        _imprimir_resumen_pedidos()
