@@ -4,10 +4,37 @@ import pandas as pd
 import json
 import re
 import time
+from collections import Counter
 from datetime import datetime, timedelta
 
 API_KEY = os.environ.get("XAI_API_KEY", "")
 CSV = "futbol_partidos.csv"
+
+# Errores de xAI que se repetirian igual en todos los partidos (clave
+# invalida, sin creditos, sin permiso): con el primero se corta la corrida
+# en vez de gastar tiempo en N errores identicos.
+CODIGOS_DE_CUENTA = (401, 402, 403)
+_ERROR_DE_CUENTA = re.compile(r"^xAI respondio HTTP (\d{3})")
+
+
+def _mensaje_error_xai(resp):
+    """El motivo que manda xAI en una respuesta de error, recortado."""
+    try:
+        cuerpo = resp.json()
+    except ValueError:
+        return f"(no es JSON) {resp.text[:300]!r}"
+    err = cuerpo.get("error") if isinstance(cuerpo, dict) else None
+    if isinstance(err, dict):
+        err = err.get("message") or err
+    codigo = cuerpo.get("code") if isinstance(cuerpo, dict) else None
+    texto = str(err if err is not None else cuerpo)[:300]
+    return f"{codigo}: {texto}" if codigo else texto
+
+
+def es_error_de_cuenta(error):
+    m = _ERROR_DE_CUENTA.match(error or "")
+    return bool(m) and int(m.group(1)) in CODIGOS_DE_CUENTA
+
 
 def analizar_partido_ia(local, visitante, liga, fecha):
     headers = {
@@ -36,14 +63,29 @@ Tu tarea:
         "tools": [{"type": "web_search", "filters": {"allowed_domains": ["365scores.com", "espn.com", "fotmob.com", "sofascore.com", "flashscore.com"]}}]
     }
 
+    # Cada falla devuelve el motivo REAL (status HTTP y mensaje de xAI, o por
+    # que el texto no trae el JSON), no un mensaje generico: durante 2 meses
+    # una clave faltante se reporto como "No se encontro JSON valido".
     try:
         resp = requests.post("https://api.x.ai/v1/responses", headers=headers, json=payload, timeout=45)
+    except requests.exceptions.RequestException as e:
+        return None, f"sin respuesta de xAI ({type(e).__name__}: {e})"
+    if resp.status_code != 200:
+        return None, f"xAI respondio HTTP {resp.status_code}: {_mensaje_error_xai(resp)}"
+    try:
         data = resp.json()
+    except ValueError:
+        return None, f"xAI respondio HTTP 200 pero el cuerpo no es JSON: {resp.text[:200]!r}"
+
+    try:
         texto_final = ""
         for block in data.get("output", []):
             for c in block.get("content", []) or []:
                 if c.get("type") == "output_text":
                     texto_final += c.get("text", "")
+        if not texto_final.strip():
+            return None, (f"xAI respondio HTTP 200 pero sin texto de salida "
+                          f"(status={data.get('status')!r}, incomplete_details={data.get('incomplete_details')!r})")
 
         # Extraer el JSON del texto de forma mas robusta
         # 1. Intentar encontrar bloque completo con regex tolerante a saltos de linea
@@ -67,13 +109,18 @@ Tu tarea:
 
         if resultado and "ajuste_local" in resultado:
             return resultado, None
-        else:
-            return None, "No se encontro JSON valido en la respuesta"
+        return None, f"el texto de xAI no termina en el JSON esperado; final del texto: {texto_final[-200:]!r}"
     except Exception as e:
-        return None, str(e)
+        return None, f"error procesando la respuesta de xAI ({type(e).__name__}: {e})"
 
 
 def main():
+    if not API_KEY:
+        # No se corta el cron: el resto (descarga de datos, git sync) tiene
+        # que seguir aunque el Analisis IA no pueda correr.
+        print("ERROR: falta la variable de entorno XAI_API_KEY -- se saltea el Analisis IA. "
+              "Cargarla en el Environment del Cron Job de Render.")
+        return
     df = pd.read_csv(CSV)
     df["fecha_dt"] = pd.to_datetime(df["fecha"], errors="coerce")
 
@@ -128,6 +175,7 @@ def main():
 
     procesados = 0
     errores = 0
+    motivos = Counter()
     for idx, row in partidos_hoy.iterrows():
         local = row["equipo_local"]
         visitante = row["equipo_visitante"]
@@ -149,12 +197,19 @@ def main():
         else:
             print(f"  ERROR: {error}")
             errores += 1
+            motivos[error] += 1
+            if es_error_de_cuenta(error):
+                print("  Se corta el Analisis IA: es un error de la cuenta/clave de xAI y se repetiria "
+                      f"en los {len(partidos_hoy) - procesados - errores} partidos que faltan.")
+                break
 
         time.sleep(1)  # Evitar rate limits
 
     df = df.drop(columns=["fecha_dt"])
     df.to_csv(CSV, index=False, encoding="utf-8-sig")
     print(f"\nOK: {procesados} procesados, {errores} errores")
+    for motivo, n in motivos.most_common():
+        print(f"  {n} x {motivo}")
 
 
 if __name__ == "__main__":
