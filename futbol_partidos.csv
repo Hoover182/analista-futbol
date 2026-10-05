@@ -26540,7 +26540,7 @@
 2026-08-26T16:00:00,1602996.0,FT,Pro League Arabia,Al-Faisaly FC,Al-Fateh,1,1,2.0,4.0,4.0,2.0,4.0,7.0,12.0,14.0,,,,,,,1.0,0.0,12.0,15.0,,,46.0,54.0,,,,,6.0,3.0,1.0,0.0,1.0,0.0,3.0,1.0,1.0,1.0,,,,,"Sami Ahmed Al-Jurays, Saudi Arabia",1.39,1.72,,
 2026-08-26T16:05:00,1603974.0,FT,Division 1 Arabia Saudita,Al Zulfi,Al Wehda Club,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0,,,,,O. Al Shehri,,,,
 2026-08-26T16:10:00,1603975.0,FT,Division 1 Arabia Saudita,Al Bukayriyah,Al Okhdood,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,1.0,1.0,0.0,0.0,1.0,0.0,2.0,,,,,I. Al Hiqwi,,,,
-2026-08-26T16:45:00,1623429.0,PEN,Conference League,Rapid Vienna,Heart Of Midlothian,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Elcin Masiyev, Azerbaijan",,,1.0,1.0
+2026-08-26T16:45:00,1623429.0,PEN,Conference League,Rapid Vienna,Heart Of Midlothian,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,E. Masiyev,,,1.0,1.0
 2026-08-26T17:00:00,1612211.0,FT,Premier League Egipto,Petrojet,El Geish,2,3,14.0,0.0,0.0,2.0,5.0,5.0,16.0,8.0,,,,,,,0.0,1.0,11.0,7.0,,,54.0,46.0,,,,,2.0,2.0,0.0,2.0,2.0,1.0,0.0,0.0,2.0,0.0,,,,,E. S. Shaban,1.13,0.29,,
 2026-08-26T17:00:00,1612210.0,FT,Premier League Egipto,National Bank of Egypt,Zamalek SC,0,3,5.0,2.0,4.0,3.0,2.0,6.0,17.0,12.0,,,,,,,0.0,0.0,10.0,16.0,,,56.0,44.0,,,,,2.0,3.0,0.0,0.0,0.0,3.0,1.0,3.0,2.0,1.0,,,,,M. El Ghazy,1.2,0.86,,
 2026-08-26T18:00:00,1500019.0,FT,Primera C Argentina,Central Ballester,Sportivo Barracas,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,,,,,,,,
@@ -28565,22 +28565,22 @@
 2026-09-30T22:30:00,1619696.0,FT,Copa de la Division Profesional Bolivia,Real Tomayapo,Nacional Potosí,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,1.0,0.0,1.0,1.0,2.0,0.0,0.0,,,,,A. I. Quisbert,,,1.0,1.0
 2026-09-30T23:00:00,1643184.0,FT,Copa Chile,Concepción,O'Higgins,0,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0,,,,,C. Garay,,,0.0,1.0
 2026-09-30T23:00:00,1611274.0,FT,Primera Division Uruguay,Atletico Torque,Penarol,1,1,0.0,5.0,1.0,3.0,4.0,2.0,11.0,4.0,,,,,,,0.0,0.0,,,,,51.0,49.0,,,,,,,1.0,0.0,1.0,0.0,1.0,0.0,1.0,2.0,,,,,Javier Feres,,,1.0,1.0
-2026-09-30T23:30:00,1490500.0,FT,MLS,New York Red Bulls,St. Louis City,0,3,4.0,3.0,1.0,1.0,5.0,8.0,10.0,15.0,,,,,,,0.0,0.0,12.0,12.0,,,45.0,55.0,,,,,5.0,4.0,0.0,0.0,1.0,2.0,0.0,1.0,1.0,0.0,,,,,Rubiel Vazquez,,,0.0,3.0
+2026-09-30T23:30:00,1490500.0,FT,MLS,New York Red Bulls,St. Louis City,0,3,4.0,3.0,1.0,1.0,5.0,8.0,10.0,15.0,,,,,,,0.0,0.0,12.0,12.0,,,45.0,55.0,,,,,5.0,4.0,0.0,0.0,1.0,2.0,0.0,1.0,1.0,0.0,,,,,"Rubiel Vazquez, USA",,,0.0,3.0
 2026-10-01T00:30:00,1619697.0,FT,Copa de la Division Profesional Bolivia,Oriente Petrolero,The Strongest,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1.0,0.0,1.0,0.0,0.0,3.0,2.0,0.0,,,,,J. Revollo,,,1.0,1.0
 2026-10-01T01:00:00,1549703.0,FT,Liga Colombia,Atletico Nacional,Junior,3,1,7.0,5.0,5.0,5.0,6.0,2.0,19.0,9.0,,,,,,,0.0,0.0,13.0,16.0,,,58.0,42.0,,,,,1.0,3.0,2.0,1.0,1.0,0.0,1.0,4.0,1.0,4.0,,,,,Andres Rojas,,,3.0,1.0
 2026-10-01T22:30:00,1619698.0,FT,Copa de la Division Profesional Bolivia,Bolívar,Gualberto Villarroel SJ,3,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1.0,2.0,0.0,2.0,2.0,2.0,2.0,1.0,,,,,R. Villegas,,,3.0,2.0
 2026-10-02T00:15:00,1637268.0,FT,Copa Argentina,Platense,Estudiantes L.P.,1,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,1.0,0.0,0.0,2.0,3.0,1.0,1.0,,,,,F. Tello,,,1.0,0.0
 2026-10-02T00:30:00,1619699.0,FT,Copa de la Division Profesional Bolivia,Blooming,Independiente Petrolero,0,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,0.0,1.0,1.0,2.0,1.0,1.0,,,,,C. Condori,,,0.0,1.0
-2026-10-02T01:30:00,1490463.0,FT,MLS,Seattle Sounders,Sporting Kansas City,2,1,11.0,6.0,1.0,1.0,7.0,11.0,21.0,22.0,,,,,,,0.0,0.0,7.0,4.0,,,58.0,42.0,,,,,9.0,5.0,0.0,2.0,1.0,0.0,0.0,1.0,0.0,1.0,,,,,Jair Marrufo,,,2.0,1.0
+2026-10-02T01:30:00,1490463.0,FT,MLS,Seattle Sounders,Sporting Kansas City,2,1,11.0,6.0,1.0,1.0,7.0,11.0,21.0,22.0,,,,,,,0.0,0.0,7.0,4.0,,,59.0,41.0,,,,,9.0,5.0,0.0,2.0,1.0,0.0,0.0,1.0,0.0,1.0,,,,,"Jair Antonio Maruffo, USA",1.7,2.05,2.0,1.0
 2026-10-02T19:00:00,1619700.0,FT,Copa de la Division Profesional Bolivia,San Antonio Bulo Bulo,ABB,0,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,1.0,1.0,2.0,2.0,0.0,4.0,,,,,J. Choque,,,0.0,2.0
 2026-10-02T21:30:00,1500140.0,FT,Primera C Argentina,Defensores de Cambaceres,Victoriano Arenas,0,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,,,,,,,,0.0,1.0
 2026-10-02T22:00:00,1498856.0,FT,Primera Nacional Argentina,Ferro Carril Oeste,Deportivo Madryn,0,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,0.0,2.0,1.0,3.0,1.0,2.0,,,,,,,,0.0,2.0
-2026-10-02T22:15:00,1493161.0,FT,Liga Profesional Argentina,Independiente,Instituto Cordoba,1,4,3.0,7.0,3.0,3.0,2.0,6.0,8.0,13.0,,,,,,,1.0,0.0,13.0,9.0,,,47.0,53.0,,,,,2.0,1.0,1.0,0.0,1.0,3.0,2.0,1.0,3.0,0.0,,,,,Hernan Mastrangelo,,,1.0,4.0
-2026-10-02T23:00:00,1492318.0,FT,Brasileirao,Sao Paulo,Santos,1,2,14.0,1.0,1.0,3.0,8.0,4.0,20.0,9.0,,,,,,,0.0,0.0,13.0,10.0,,,60.0,40.0,,,,,2.0,7.0,1.0,0.0,1.0,1.0,1.0,0.0,2.0,1.0,,,,,Matheus Delgado Candancan,,,1.0,2.0
+2026-10-02T22:15:00,1493161.0,FT,Liga Profesional Argentina,Independiente,Instituto Cordoba,1,4,3.0,7.0,3.0,3.0,2.0,6.0,8.0,13.0,,,,,,,1.0,0.0,13.0,9.0,,,47.0,53.0,,,,,2.0,1.0,1.0,0.0,1.0,3.0,2.0,1.0,3.0,0.0,,,,,"Hernan Mastrangelo, Argentina",,,1.0,4.0
+2026-10-02T23:00:00,1492318.0,FT,Brasileirao,Sao Paulo,Santos,1,2,14.0,1.0,1.0,3.0,8.0,4.0,20.0,9.0,,,,,,,0.0,0.0,13.0,10.0,,,60.0,40.0,,,,,2.0,7.0,1.0,0.0,1.0,1.0,1.0,0.0,2.0,1.0,,,,,M. Delgado,,,1.0,2.0
 2026-10-02T23:00:00,1505529.0,FT,Primera Division Chile,Universidad de Concepcion,Huachipato,0,2,5.0,5.0,4.0,1.0,2.0,5.0,10.0,14.0,,,,,,,2.0,0.0,15.0,7.0,,,48.0,52.0,,,,,3.0,2.0,0.0,0.0,1.0,1.0,0.0,4.0,0.0,1.0,,,,,"Matias Assadi, Chile",,,0.0,2.0
 2026-10-03T00:00:00,1619701.0,FT,Copa de la Division Profesional Bolivia,Real Potosí,Aurora,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1.0,0.0,1.0,0.0,0.0,0.0,1.0,2.0,,,,,I. N. Mendez Chavez,,,1.0,1.0
-2026-10-03T00:30:00,1493155.0,FT,Liga Profesional Argentina,Boca Juniors,Union Santa Fe,3,0,2.0,1.0,2.0,5.0,7.0,1.0,25.0,4.0,,,,,,,0.0,0.0,7.0,11.0,,,69.0,31.0,,,,,1.0,4.0,1.0,2.0,0.0,0.0,2.0,0.0,3.0,2.0,,,,,Sebastian Nicolas Martinez,,,3.0,0.0
-2026-10-03T00:30:00,1493162.0,FT,Liga Profesional Argentina,Independ. Rivadavia,Gimnasia L.P.,1,1,5.0,3.0,2.0,2.0,6.0,4.0,21.0,15.0,,,,,,,0.0,0.0,8.0,6.0,,,47.0,53.0,,,,,3.0,5.0,1.0,0.0,0.0,1.0,1.0,1.0,0.0,2.0,,,,,Brian Ferreyra,,,1.0,1.0
+2026-10-03T00:30:00,1493155.0,FT,Liga Profesional Argentina,Boca Juniors,Union Santa Fe,3,0,2.0,1.0,2.0,5.0,7.0,1.0,25.0,4.0,,,,,,,0.0,0.0,7.0,11.0,,,69.0,31.0,,,,,1.0,4.0,1.0,2.0,0.0,0.0,2.0,0.0,3.0,2.0,,,,,S. Martinez,,,3.0,0.0
+2026-10-03T00:30:00,1493162.0,FT,Liga Profesional Argentina,Independ. Rivadavia,Gimnasia L.P.,1,1,5.0,3.0,2.0,2.0,6.0,4.0,21.0,15.0,,,,,,,0.0,0.0,8.0,6.0,,,47.0,53.0,,,,,3.0,5.0,1.0,0.0,0.0,1.0,1.0,1.0,0.0,2.0,,,,,B. Ferreyra,,,1.0,1.0
 2026-10-03T00:45:00,1549806.0,FT,Liga Colombia,Deportivo Cali,Alianza Valledupar,3,1,3.0,5.0,4.0,5.0,4.0,4.0,8.0,13.0,,,,,,,1.0,0.0,10.0,14.0,,,62.0,38.0,,,,,3.0,1.0,0.0,3.0,0.0,1.0,1.0,3.0,1.0,4.0,,,,,Jairo Londono,,,3.0,1.0
 2026-10-03T01:00:00,1581439.0,FT,Liga de Expansion MX,Correcaminos Uat,Cruz Azul Hidalgo,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,0.0,0.0,2.0,0.0,3.0,2.0,,,,,F. Portillo,,,0.0,0.0
 2026-10-03T01:00:00,1581440.0,FT,Liga de Expansion MX,Tepatitlán,CDS Tampico Madero,3,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,3.0,0.0,1.0,1.0,1.0,1.0,1.0,,,,,J. L. Alba Dorado,,,3.0,1.0
@@ -28640,10 +28640,8 @@
 2026-10-03T16:00:00,1639186.0,FT,Copa del Rey,Ceuta 6 de Junio,Lebrijana,1,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,1.0,2.0,0.0,0.0,0.0,0.0,0.0,,,,,,,,1.0,2.0
 2026-10-03T17:30:00,1557301.0,FT,Copa Belgica,Gent W,Zulte-Waregem W,1,3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1.0,3.0
 2026-10-03T17:30:00,1557300.0,FT,Copa Belgica,Standard Liege W,Genk W,0,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,,0.0,2.0
-2026-10-03T17:45:00,1493156.0,FT,Liga Profesional Argentina,Defensa Y Justicia,San Lorenzo,3,0,3.0,8.0,2.0,3.0,4.0,5.0,18.0,19.0,,,,,,,0.0,0.0,13.0,10.0,,,51.0,49.0,,,,,5.0,1.0,3.0,0.0,0.0,0.0,0.0,2.0,1.0,2.0,,,,,Luis Lobo Medina,,,3.0,0.0
+2026-10-03T17:45:00,1493156.0,FT,Liga Profesional Argentina,Defensa Y Justicia,San Lorenzo,3,0,3.0,8.0,2.0,3.0,4.0,5.0,18.0,19.0,,,,,,,0.0,0.0,13.0,10.0,,,51.0,49.0,,,,,5.0,1.0,3.0,0.0,0.0,0.0,0.0,2.0,1.0,2.0,,,,,"Luis Lobo Medina, Argentina",2.79,0.64,3.0,0.0
 2026-10-03T18:00:00,1500144.0,FT,Primera C Argentina,Juventud Unida,Berazategui,3,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,3.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,,3.0,2.0
-2026-10-03T18:00:00,1500142.0,NS,Primera C Argentina,El Porvenir,Canuelas,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-03T18:00:00,1500141.0,NS,Primera C Argentina,Deportivo Paraguayo,Mercedes,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 2026-10-03T18:00:00,1641617.0,FT,Primera Division Uruguay,Albion FC,Defensor Sporting,3,2,2.0,9.0,5.0,2.0,7.0,6.0,9.0,9.0,,,,,,,0.0,0.0,,,,,41.0,59.0,,,,,,,2.0,1.0,0.0,2.0,2.0,3.0,2.0,0.0,,,,,Jose Burgos,,,3.0,2.0
 2026-10-03T18:00:00,1498854.0,FT,Primera Nacional Argentina,Colon Santa Fe,CA Estudiantes,1,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,1.0,0.0,0.0,1.0,1.0,0.0,2.0,,,,,,,,1.0,0.0
 2026-10-03T18:00:00,1498863.0,FT,Primera Nacional Argentina,Temperley,Gimnasia Jujuy,2,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2.0,0.0,1.0,0.0,1.0,2.0,1.0,1.0,,,,,,,,2.0,1.0
@@ -28651,79 +28649,81 @@
 2026-10-03T18:00:00,1498864.0,FT,Primera Nacional Argentina,Tristan Suarez,Quilmes,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,0.0,0.0,0.0,2.0,0.0,1.0,,,,,,,,0.0,0.0
 2026-10-03T18:00:00,1498847.0,FT,Primera Nacional Argentina,Acassuso,Ciudad de Bolívar,0,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,0.0,1.0,1.0,0.0,1.0,2.0,,,,,,,,0.0,1.0
 2026-10-03T18:00:00,1498861.0,FT,Primera Nacional Argentina,San Miguel,Atletico Mitre,0,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,0.0,2.0,0.0,3.0,0.0,3.0,,,,,,,,0.0,2.0
-2026-10-03T19:00:00,1619702.0,FT,Copa de la Division Profesional Bolivia,Always Ready,Real Tomayapo,4,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2.0,2.0,0.0,0.0,0.0,0.0,1.0,3.0,,,,,,,,4.0,0.0
+2026-10-03T19:00:00,1619702.0,FT,Copa de la Division Profesional Bolivia,Always Ready,Real Tomayapo,4,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2.0,2.0,0.0,0.0,0.0,0.0,1.0,3.0,,,,,C. Condori,,,4.0,0.0
 2026-10-03T19:00:00,1549803.0,FT,Liga Colombia,Águilas Doradas,Jaguares,2,0,7.0,5.0,4.0,4.0,8.0,0.0,26.0,4.0,,,,,,,0.0,1.0,11.0,7.0,,,60.0,40.0,,,,,0.0,5.0,0.0,2.0,0.0,0.0,1.0,3.0,0.0,4.0,,,,,Jose Alexander Ortiz Novoa,,,2.0,0.0
-2026-10-03T20:00:00,1493153.0,FT,Liga Profesional Argentina,Atletico Tucuman,Barracas Central,2,3,4.0,4.0,2.0,3.0,8.0,5.0,10.0,9.0,,,,,,,0.0,0.0,12.0,6.0,,,41.0,59.0,,,,,2.0,6.0,1.0,1.0,0.0,3.0,1.0,1.0,1.0,2.0,,,,,Nicolas Ramirez,,,2.0,3.0
-2026-10-03T20:00:00,1493163.0,FT,Liga Profesional Argentina,Newells Old Boys,Lanus,0,0,3.0,5.0,0.0,3.0,3.0,3.0,7.0,11.0,,,,,,,0.0,0.0,11.0,13.0,,,47.0,53.0,,,,,3.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,2.0,,,,,Dario Herrera,,,0.0,0.0
+2026-10-03T20:00:00,1493153.0,FT,Liga Profesional Argentina,Atletico Tucuman,Barracas Central,2,3,4.0,4.0,2.0,3.0,8.0,5.0,10.0,9.0,,,,,,,0.0,0.0,12.0,6.0,,,41.0,59.0,,,,,2.0,6.0,1.0,1.0,0.0,3.0,1.0,1.0,1.0,2.0,,,,,"Nicolas Ramirez, Argentina",0.7,1.35,2.0,3.0
+2026-10-03T20:00:00,1493163.0,FT,Liga Profesional Argentina,Newells Old Boys,Lanus,0,0,3.0,5.0,0.0,3.0,3.0,3.0,8.0,11.0,,,,,,,0.0,0.0,11.0,13.0,,,51.0,49.0,,,,,3.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,2.0,,,,,"Dario Herrera, Argentina",0.61,0.67,0.0,0.0
 2026-10-03T21:00:00,1641618.0,FT,Primera Division Uruguay,Deportivo Maldonado,Central Espanol,3,0,3.0,2.0,2.0,2.0,3.0,1.0,7.0,4.0,,,,,,,0.0,0.0,,,,,58.0,42.0,,,,,,,1.0,2.0,0.0,0.0,0.0,2.0,0.0,2.0,,,,,Javier Feres,,,3.0,0.0
 2026-10-03T21:05:00,1549807.0,FT,Liga Colombia,Deportes Tolima,Chico,0,0,10.0,0.0,2.0,1.0,6.0,1.0,18.0,1.0,,,,,,,0.0,0.0,17.0,8.0,,,75.0,25.0,,,,,1.0,6.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,,,,,Andres Rojas,,,0.0,0.0
-2026-10-03T21:15:00,1619703.0,FT,Copa de la Division Profesional Bolivia,Nacional Potosí,Real Oruro,2,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1.0,1.0,0.0,0.0,0.0,1.0,0.0,2.0,,,,,,,,2.0,0.0
-2026-10-03T21:30:00,1492310.0,FT,Brasileirao,Atletico-MG,RB Bragantino,1,0,5.0,10.0,1.0,1.0,3.0,7.0,8.0,23.0,,,,,,,0.0,0.0,16.0,9.0,,,40.0,60.0,,,,,7.0,2.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0,,,,,Lucas Casagrande,,,1.0,0.0
-2026-10-03T23:10:00,1607641.0,PEN,Copa Colombia,Barranquilla,Millonarios,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1.0,0.0,1.0,0.0,3.0,1.0,2.0,2.0,,,,,,,,1.0,1.0
-2026-10-03T23:30:00,1619704.0,FT,Copa de la Division Profesional Bolivia,The Strongest,Universitario de Vinto,5,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4.0,1.0,0.0,2.0,1.0,0.0,1.0,2.0,,,,,,,,5.0,2.0
+2026-10-03T21:15:00,1619703.0,FT,Copa de la Division Profesional Bolivia,Nacional Potosí,Real Oruro,2,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1.0,1.0,0.0,0.0,0.0,1.0,0.0,2.0,,,,,D. Rodriguez,,,2.0,0.0
+2026-10-03T21:30:00,1492310.0,FT,Brasileirao,Atletico-MG,RB Bragantino,1,0,5.0,10.0,1.0,1.0,3.0,7.0,8.0,23.0,,,,,,,0.0,0.0,16.0,9.0,,,40.0,60.0,,,,,7.0,2.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0,,,,,L. Casagrande,0.5,1.27,1.0,0.0
+2026-10-03T23:10:00,1607641.0,PEN,Copa Colombia,Barranquilla,Millonarios,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1.0,0.0,1.0,0.0,3.0,1.0,2.0,2.0,,,,,A. Moncada,,,1.0,1.0
+2026-10-03T23:30:00,1619704.0,FT,Copa de la Division Profesional Bolivia,The Strongest,Universitario de Vinto,5,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4.0,1.0,0.0,2.0,1.0,0.0,1.0,2.0,,,,,G. A. Vargas Carreno,,,5.0,2.0
 2026-10-04T01:00:00,1581437.0,FT,Liga de Expansion MX,Monarcas,Tlaxcala,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1.0,0.0,0.0,1.0,1.0,2.0,3.0,1.0,,,,,A. Lopez,,,1.0,1.0
 2026-10-04T01:00:00,1581438.0,FT,Liga de Expansion MX,Cancún,Tapatío,1,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,1.0,0.0,0.0,1.0,3.0,2.0,0.0,,,,,O. Ortega,,,1.0,0.0
 2026-10-04T01:00:00,1581436.0,FT,Liga de Expansion MX,Durango,Mineros de Zacatecas,4,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2.0,2.0,0.0,2.0,1.0,1.0,0.0,2.0,,,,,A. Barba,,,4.0,2.0
 2026-10-04T01:00:00,1581480.0,FT,Liga de Expansion MX,Piratas,Alebrijes de Oaxaca,4,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1.0,3.0,0.0,0.0,0.0,0.0,2.0,1.0,,,,,E. Miranda,,,4.0,0.0
-2026-10-04T10:00:00,1591630.0,NS,2. Lig Turquia, Kahramanmaraş İstiklal Spor,Ankara Demirspor,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-04T11:00:00,1639192.0,NS,Copa del Rey,Güímar,Hortaleza,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-04T12:00:00,1591328.0,NS,2. Lig Turquia,Kastamonuspor,Arnavutköy Belediyespor,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-04T12:00:00,1591323.0,NS,2. Lig Turquia,68 Aksaray Belediyespor,Ankaraspor,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-04T12:00:00,1591628.0,NS,2. Lig Turquia,İskenderunspor,24 Erzincanspor,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-04T12:00:00,1591625.0,NS,2. Lig Turquia,Adana 01 FK,12 Bingölspor,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-04T12:30:00,1591631.0,NS,2. Lig Turquia,Kütahyaspor,Yeni Orduspor,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-04T13:00:00,1641619.0,NS,Primera Division Uruguay,Danubio,Cerro Largo,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Hernan Heras,,,,
-2026-10-04T14:00:00,1639188.0,NS,Copa del Rey,Prat,San Rafael,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-04T14:00:00,1639187.0,NS,Copa del Rey,Noja,Ribadesella CF,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-04T14:00:00,1639189.0,NS,Copa del Rey,CD San Jose,Auriense,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-04T15:00:00,1557302.0,NS,Copa Belgica,OH Leuven W,RAAL La Louviere W,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-04T15:30:00,1639183.0,NS,Copa del Rey,Alcazar,Talayuela,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-04T16:00:00,1591626.0,NS,2. Lig Turquia,Ankaragücü,İnegölspor,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-04T16:00:00,1591324.0,NS,2. Lig Turquia,Elazığspor,Çorluspor 1947,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-04T16:00:00,1639184.0,NS,Copa del Rey,Atlético Melilla,Pinatar,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-04T16:00:00,1639190.0,NS,Copa del Rey,Tavernes,Maracena,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-04T16:00:00,1641620.0,NS,Primera Division Uruguay,Boston River,Juventud,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Leodan Gonzalez,,,,
-2026-10-04T17:45:00,1493160.0,NS,Liga Profesional Argentina,Huracan,Aldosivi,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,8.0,-6.0,"Huracán domina con 16 puntos, sexto en el Grupo B y racha invicta de cinco partidos incluyendo triunfos ante River Plate y Racing Club, mientras Aldosivi suma solo 8 puntos con seis derrotas y pelea el descenso.",2026-10-04T10:05:42.103695,Nazareno Arasa,,,,
-2026-10-04T17:45:00,1493164.0,NS,Liga Profesional Argentina,Sarmiento Junin,River Plate,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,6.0,-4.0,"Sarmiento Junín supera a River Plate en la tabla del Clausura con 16 puntos versus 13 tras 10 partidos, juega de local y muestra mejor balance general pese a forma irregular, mientras River sufre lesiones clave como Almada y cambio de técnico reciente.",2026-10-04T10:06:14.425621,,,,,
-2026-10-04T18:00:00,1581435.0,NS,Liga de Expansion MX,Leones Negros UDG,Dorados,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,D. S. Perez Borja,,,,
-2026-10-04T18:00:00,1500137.0,NS,Primera C Argentina,Central Cordoba,Yupanqui,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-04T18:00:00,1500148.0,NS,Primera C Argentina,Sacachispas,Estrella Del Sur,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-04T18:00:00,1500146.0,NS,Primera C Argentina,Lugano,Argentino Rosario,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-04T18:00:00,1500147.0,NS,Primera C Argentina,Puerto Nuevo,JJ Urquiza,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-04T18:00:00,1498848.0,NS,Primera Nacional Argentina,Agropecuario,Midland,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-04T18:30:00,1643185.0,NS,Copa Chile,O'Higgins,Concepción,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-04T18:30:00,1498851.0,NS,Primera Nacional Argentina,Chacarita Juniors,Patronato,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-04T18:30:00,1498862.0,NS,Primera Nacional Argentina,San Telmo,Almirante Brown,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-04T19:00:00,1619705.0,NS,Copa de la Division Profesional Bolivia,Gualberto Villarroel SJ,Blooming,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-04T19:00:00,1549808.0,NS,Liga Colombia,Deportivo Pasto,Fortaleza FC,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3.0,-2.0,"Deportivo Pasto local con dos victorias recientes de 1-0 ante Once Caldas y América de Cali pese a posición 19 con 8 puntos, frente a Fortaleza FC 17 con 9 puntos, muchos empates y Richardson Rivas lesionado.",2026-10-04T10:06:58.789405,Bryan Loayza,,,,
-2026-10-04T19:00:00,1641621.0,NS,Primera Division Uruguay,Cerro,Wanderers,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Mathias De Armas,,,,
-2026-10-04T19:30:00,1498850.0,NS,Primera Nacional Argentina,Central Norte,Racing Cordoba,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-04T20:00:00,1493165.0,NS,Liga Profesional Argentina,Talleres Cordoba,Belgrano Cordoba,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Facundo Tello,,,,
-2026-10-04T20:00:00,1498859.0,NS,Primera Nacional Argentina,San Martin S.J.,Almagro,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-04T20:00:00,1498852.0,NS,Primera Nacional Argentina,Chaco For Ever,Defensores De Belgrano,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-04T20:00:00,1498853.0,NS,Primera Nacional Argentina,Club Atlético Güemes,Colegiales,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-04T20:30:00,1498849.0,NS,Primera Nacional Argentina,Atletico DE Rafaela,Atlanta,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-04T21:00:00,1498857.0,NS,Primera Nacional Argentina,Godoy Cruz,Los Andes,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-04T21:05:00,1549849.0,NS,Liga Colombia,Internacional de Bogota,Once Caldas,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4.0,-3.0,"Internacional de Bogotá local con 12 puntos igual que Once Caldas pero más empates y ventaja de casa; visitante irregular con 5 derrotas en 11, racha negativa y cambio reciente de técnico tras salida de Herrera, pese a refuerzos como Colorado.",2026-10-04T10:07:49.436314,,,,,
-2026-10-04T21:05:00,1549805.0,NS,Liga Colombia,Cucuta,Deportivo Pereira,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Diego Ulloa Angulo,,,,
-2026-10-04T21:15:00,1619706.0,NS,Copa de la Division Profesional Bolivia,Guabirá,Oriente Petrolero,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-04T21:30:00,1498860.0,NS,Primera Nacional Argentina,San Martin Tucuman,Gimnasia Y Tiro,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-04T22:15:00,1493152.0,NS,Liga Profesional Argentina,Argentinos JRS,Tigre,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Andres Gariano,,,,
-2026-10-04T22:30:00,1641622.0,NS,Primera Division Uruguay,Racing Montevideo,Penarol,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Esteban Ostojich,,,,
-2026-10-04T23:10:00,1549804.0,NS,Liga Colombia,Bucaramanga,Junior,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,10.0,-8.0,"Atlético Bucaramanga invicto quinto con 20 puntos en 10 partidos de 5 victorias y 5 empates tras ganar a Once Caldas, mientras Junior decimosexto con 9 puntos de 2 victorias 3 empates 5 derrotas, lesiones clave y racha irregular bajo Viera.",2026-10-04T10:08:48.320905,Wilmar Roldan,,,,
-2026-10-04T23:30:00,1619707.0,NS,Copa de la Division Profesional Bolivia,Independiente Petrolero,Bolívar,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-05T00:30:00,1493159.0,NS,Liga Profesional Argentina,Estudiantes de Rio Cuarto,Racing Club,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,-6.0,4.0,"Estudiantes de Río Cuarto llega con mala racha de tres derrotas seguidas y solo 6 puntos en 10 partidos más varias lesiones graves, mientras Racing Club suma 8 puntos con dos victorias aunque irregular y con bajas, manteniendo ligera superioridad de plantel.",2026-10-04T10:09:19.687629,Felipe Viola,,,,
-2026-10-05T01:15:00,1549811.0,NS,Liga Colombia,Llaneros,America de Cali,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,-8.0,10.0,"América de Cali lidera el Clausura con 24 puntos de 11 partidos y solo una derrota, reforzado con Quiñones y Tortolero. Llaneros FC está noveno con 14 puntos y forma irregular con tres derrotas en últimos cuatro de liga.",2026-10-04T10:09:33.002853,Carlos Ortega,,,,
+2026-10-04T10:00:00,1591630.0,FT,2. Lig Turquia, Kahramanmaraş İstiklal Spor,Ankara Demirspor,1,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,,,,,,,1.0,0.0
+2026-10-04T11:00:00,1639192.0,PST,Copa del Rey,Güímar,Hortaleza,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2026-10-04T12:00:00,1591328.0,FT,2. Lig Turquia,Kastamonuspor,Arnavutköy Belediyespor,2,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,,,,,,,,2.0,1.0
+2026-10-04T12:00:00,1591323.0,FT,2. Lig Turquia,68 Aksaray Belediyespor,Ankaraspor,0,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,,,,,,,,0.0,1.0
+2026-10-04T12:00:00,1591628.0,FT,2. Lig Turquia,İskenderunspor,24 Erzincanspor,2,3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,2.0,1.0,2.0,0.0,0.0,0.0,0.0,,,,,,,,2.0,3.0
+2026-10-04T12:00:00,1591625.0,FT,2. Lig Turquia,Adana 01 FK,12 Bingölspor,1,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,,,,,,,,1.0,0.0
+2026-10-04T12:30:00,1591631.0,FT,2. Lig Turquia,Kütahyaspor,Yeni Orduspor,0,4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,3.0,1.0,0.0,0.0,0.0,0.0,,,,,,,,0.0,4.0
+2026-10-04T13:00:00,1641619.0,FT,Primera Division Uruguay,Danubio,Cerro Largo,2,1,4.0,3.0,5.0,4.0,3.0,4.0,13.0,10.0,,,,,,,0.0,0.0,,,,,51.0,49.0,,,,,,,2.0,0.0,1.0,0.0,1.0,4.0,2.0,2.0,,,,,Hernan Heras,,,2.0,1.0
+2026-10-04T14:00:00,1639188.0,PST,Copa del Rey,Prat,San Rafael,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2026-10-04T14:00:00,1639187.0,FT,Copa del Rey,Noja,Ribadesella CF,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,,,,,,,,1.0,1.0
+2026-10-04T14:00:00,1639189.0,FT,Copa del Rey,CD San Jose,Auriense,1,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,,,,,,,,1.0,0.0
+2026-10-04T15:00:00,1557302.0,FT,Copa Belgica,OH Leuven W,RAAL La Louviere W,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,,,,,,,0.0,0.0
+2026-10-04T15:30:00,1639183.0,FT,Copa del Rey,Alcazar,Talayuela,1,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,,,,,,,1.0,0.0
+2026-10-04T16:00:00,1591626.0,FT,2. Lig Turquia,Ankaragücü,İnegölspor,4,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2.0,2.0,0.0,1.0,0.0,0.0,0.0,0.0,,,,,,,,4.0,1.0
+2026-10-04T16:00:00,1591324.0,FT,2. Lig Turquia,Elazığspor,Çorluspor 1947,2,3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2.0,3.0
+2026-10-04T16:00:00,1639184.0,FT,Copa del Rey,Atlético Melilla,Pinatar,0,3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,3.0
+2026-10-04T16:00:00,1639190.0,PEN,Copa del Rey,Tavernes,Maracena,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,,,,,,,0.0,0.0
+2026-10-04T16:00:00,1641620.0,FT,Primera Division Uruguay,Boston River,Juventud,0,0,3.0,4.0,2.0,3.0,4.0,3.0,11.0,7.0,,,,,,,0.0,0.0,,,,,45.0,55.0,,,,,,,0.0,0.0,0.0,0.0,1.0,1.0,0.0,3.0,,,,,Leodan Gonzalez,,,0.0,0.0
+2026-10-14T22:00:00,1493164.0,NS,Liga Profesional Argentina,Sarmiento Junin,River Plate,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,6.0,-4.0,"Sarmiento Junín supera a River Plate en la tabla del Clausura con 16 puntos versus 13 tras 10 partidos, juega de local y muestra mejor balance general pese a forma irregular, mientras River sufre lesiones clave como Almada y cambio de técnico reciente.",2026-10-04T10:06:14.425621,,,,,
+2026-10-04T17:45:00,1493160.0,FT,Liga Profesional Argentina,Huracan,Aldosivi,1,0,6.0,5.0,2.0,3.0,7.0,4.0,17.0,13.0,,,,,,,0.0,1.0,10.0,10.0,,,51.0,49.0,,,,,4.0,5.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,4.0,,,,,"Nazareno Arasa, Argentina",,,1.0,0.0
+2026-10-04T18:00:00,1581435.0,FT,Liga de Expansion MX,Leones Negros UDG,Dorados,6,3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3.0,3.0,0.0,3.0,0.0,1.0,1.0,0.0,,,,,D. S. Perez Borja,,,6.0,3.0
+2026-10-04T18:00:00,1500137.0,FT,Primera C Argentina,Central Cordoba,Yupanqui,1,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,,,,,,,,1.0,0.0
+2026-10-04T18:00:00,1500148.0,FT,Primera C Argentina,Sacachispas,Estrella Del Sur,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,,,,,,,0.0,0.0
+2026-10-04T18:00:00,1500146.0,FT,Primera C Argentina,Lugano,Argentino Rosario,2,3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1.0,1.0,0.0,3.0,0.0,0.0,0.0,0.0,,,,,,,,2.0,3.0
+2026-10-04T18:00:00,1500147.0,FT,Primera C Argentina,Puerto Nuevo,JJ Urquiza,1,4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,1.0,2.0,2.0,0.0,0.0,0.0,0.0,,,,,,,,1.0,4.0
+2026-10-04T18:00:00,1498848.0,FT,Primera Nacional Argentina,Agropecuario,Midland,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,0.0,0.0,1.0,1.0,0.0,4.0,,,,,,,,0.0,0.0
+2026-10-04T18:30:00,1643185.0,FT,Copa Chile,O'Higgins,Concepción,2,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,2.0,0.0,0.0,0.0,1.0,1.0,1.0,,,,,,,,2.0,0.0
+2026-10-04T18:30:00,1498851.0,FT,Primera Nacional Argentina,Chacarita Juniors,Patronato,1,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,1.0,0.0,0.0,0.0,4.0,0.0,2.0,,,,,,,,1.0,0.0
+2026-10-04T18:30:00,1498862.0,FT,Primera Nacional Argentina,San Telmo,Almirante Brown,3,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2.0,1.0,1.0,1.0,1.0,2.0,0.0,1.0,,,,,,,,3.0,2.0
+2026-10-04T19:00:00,1619705.0,FT,Copa de la Division Profesional Bolivia,Gualberto Villarroel SJ,Blooming,3,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1.0,2.0,2.0,0.0,0.0,1.0,1.0,1.0,,,,,,,,3.0,2.0
+2026-10-04T19:00:00,1549808.0,FT,Liga Colombia,Deportivo Pasto,Fortaleza FC,0,0,3.0,1.0,3.0,1.0,0.0,6.0,5.0,12.0,,,,,,,0.0,0.0,19.0,13.0,,,49.0,51.0,,,,,6.0,0.0,0.0,0.0,0.0,0.0,0.0,3.0,0.0,1.0,,,,,Bryan Loayza,,,0.0,0.0
+2026-10-04T19:00:00,1641621.0,FT,Primera Division Uruguay,Cerro,Wanderers,0,2,5.0,1.0,2.0,4.0,5.0,3.0,12.0,5.0,,,,,,,0.0,0.0,,,,,60.0,40.0,,,,,,,0.0,0.0,2.0,0.0,1.0,1.0,2.0,2.0,,,,,Mathias De Armas,,,0.0,2.0
+2026-10-04T19:30:00,1498850.0,FT,Primera Nacional Argentina,Central Norte,Racing Cordoba,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1.0,0.0,0.0,1.0,0.0,0.0,1.0,2.0,,,,,,,,1.0,1.0
+2026-10-04T20:00:00,1493165.0,FT,Liga Profesional Argentina,Talleres Cordoba,Belgrano Cordoba,0,1,4.0,5.0,3.0,3.0,6.0,2.0,16.0,11.0,,,,,,,0.0,0.0,12.0,11.0,,,51.0,49.0,,,,,1.0,6.0,0.0,0.0,0.0,1.0,0.0,3.0,1.0,2.0,,,,,"Facundo Raul Tello Figueroa, Argentina",,,0.0,1.0
+2026-10-04T20:00:00,1498859.0,FT,Primera Nacional Argentina,San Martin S.J.,Almagro,1,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,1.0,0.0,2.0,0.0,1.0,1.0,1.0,,,,,,,,1.0,2.0
+2026-10-04T20:00:00,1498853.0,FT,Primera Nacional Argentina,Club Atlético Güemes,Colegiales,0,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,0.0,1.0,1.0,1.0,0.0,3.0,,,,,,,,0.0,1.0
+2026-10-04T20:20:00,1498852.0,FT,Primera Nacional Argentina,Chaco For Ever,Defensores De Belgrano,2,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2.0,0.0,0.0,2.0,1.0,1.0,1.0,2.0,,,,,,,,2.0,2.0
+2026-10-04T20:30:00,1498849.0,FT,Primera Nacional Argentina,Atletico DE Rafaela,Atlanta,2,3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1.0,1.0,1.0,2.0,0.0,4.0,1.0,0.0,,,,,,,,2.0,3.0
+2026-10-04T21:00:00,1498857.0,FT,Primera Nacional Argentina,Godoy Cruz,Los Andes,2,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,2.0,0.0,1.0,0.0,1.0,1.0,1.0,,,,,,,,2.0,1.0
+2026-10-04T21:05:00,1549849.0,FT,Liga Colombia,Internacional de Bogota,Once Caldas,1,1,1.0,5.0,1.0,2.0,3.0,5.0,18.0,7.0,,,,,,,0.0,0.0,19.0,8.0,,,54.0,46.0,,,,,4.0,2.0,1.0,0.0,1.0,0.0,0.0,1.0,1.0,1.0,,,,,Jonnathan Ortiz,,,1.0,1.0
+2026-10-04T21:05:00,1549805.0,FT,Liga Colombia,Cucuta,Deportivo Pereira,4,0,6.0,0.0,6.0,3.0,6.0,0.0,13.0,4.0,,,,,,,0.0,1.0,14.0,6.0,,,68.0,32.0,,,,,0.0,2.0,3.0,1.0,0.0,0.0,3.0,3.0,3.0,0.0,,,,,Diego Ulloa Angulo,,,4.0,0.0
+2026-10-04T21:15:00,1619706.0,FT,Copa de la Division Profesional Bolivia,Guabirá,Oriente Petrolero,2,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,2.0,1.0,0.0,0.0,1.0,0.0,4.0,,,,,,,,2.0,1.0
+2026-10-04T21:30:00,1498860.0,FT,Primera Nacional Argentina,San Martin Tucuman,Gimnasia Y Tiro,1,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,1.0,0.0,0.0,2.0,2.0,1.0,0.0,,,,,,,,1.0,0.0
+2026-10-04T22:15:00,1493152.0,FT,Liga Profesional Argentina,Argentinos JRS,Tigre,2,1,4.0,3.0,2.0,2.0,5.0,4.0,13.0,13.0,,,,,,,0.0,0.0,14.0,11.0,,,45.0,55.0,,,,,3.0,3.0,2.0,0.0,0.0,1.0,0.0,2.0,0.0,2.0,,,,,"Carlos Andres Gariano, Argentina",0.66,1.71,2.0,1.0
+2026-10-04T22:30:00,1641622.0,FT,Primera Division Uruguay,Racing Montevideo,Penarol,0,1,4.0,3.0,4.0,5.0,3.0,5.0,5.0,13.0,,,,,,,0.0,0.0,,,,,43.0,57.0,,,,,,,0.0,0.0,0.0,1.0,2.0,2.0,2.0,3.0,,,,,Esteban Ostojich,,,0.0,1.0
+2026-10-04T23:10:00,1549804.0,FT,Liga Colombia,Bucaramanga,Junior,3,1,2.0,7.0,2.0,1.0,4.0,8.0,12.0,24.0,,,,,,,1.0,0.0,8.0,7.0,,,42.0,58.0,,,,,7.0,2.0,3.0,0.0,1.0,0.0,0.0,2.0,1.0,0.0,,,,,Wilmar Roldan,,,3.0,1.0
+2026-10-04T23:30:00,1619707.0,FT,Copa de la Division Profesional Bolivia,Independiente Petrolero,Bolívar,0,3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,1.0,2.0,0.0,4.0,0.0,2.0,,,,,,,,0.0,3.0
+2026-10-05T00:30:00,1493159.0,FT,Liga Profesional Argentina,Estudiantes de Rio Cuarto,Racing Club,1,2,9.0,8.0,2.0,2.0,2.0,5.0,10.0,7.0,,,,,,,0.0,0.0,12.0,15.0,,,47.0,53.0,,,,,2.0,1.0,0.0,1.0,2.0,0.0,0.0,2.0,1.0,1.0,,,,,Felipe Viola,0.71,1.44,1.0,2.0
+2026-10-05T01:15:00,1549811.0,FT,Liga Colombia,Llaneros,America de Cali,1,2,7.0,4.0,3.0,2.0,5.0,6.0,12.0,13.0,,,,,,,0.0,0.0,12.0,12.0,,,40.0,60.0,,,,,4.0,4.0,1.0,0.0,0.0,2.0,1.0,2.0,0.0,2.0,,,,,Carlos Ortega,,,1.0,2.0
 2026-10-05T16:00:00,1591330.0,NS,2. Lig Turquia,Şanlıurfaspor,Güzide Gebzespor,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 2026-10-05T18:00:00,1500192.0,NS,Primera C Argentina,Sportivo Barracas,Leones de Rosario,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 2026-10-05T18:00:00,1500139.0,NS,Primera C Argentina,Lujan,General Lamadrid,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-05T19:45:00,1493157.0,NS,Liga Profesional Argentina,Deportivo Riestra,Central Cordoba de Santiago,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,6.0,-4.0,"Deportivo Riestra tiene mejor puntaje y forma relativa con más empates recientes como local sin lesionados clave, mientras Central Córdoba de Santiago sufre más derrotas, peores puntos y ausencias por lesión de Santos y Juárez.",2026-10-04T10:09:57.009426,Andres Merlos,,,,
+2026-10-05T18:00:00,1500142.0,NS,Primera C Argentina,El Porvenir,Canuelas,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2026-10-05T18:00:00,1500141.0,NS,Primera C Argentina,Deportivo Paraguayo,Mercedes,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2026-10-05T19:45:00,1493157.0,NS,Liga Profesional Argentina,Deportivo Riestra,Central Cordoba de Santiago,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4.0,-3.0,"Deportivo Riestra llega mejor posicionado con 10 puntos y forma de empates recientes sin lesionados, frente a Central Córdoba de Santiago con 8 puntos, más derrotas y dos lesionados clave, más el factor local.",2026-10-05T10:06:05.734282,Andres Merlos,,,,
 2026-10-05T20:00:00,1498858.0,NS,Primera Nacional Argentina,Nueva Chicago,Deportivo Maipu,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-05T22:00:00,1493166.0,NS,Liga Profesional Argentina,Velez Sarsfield,Platense,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,10.0,-8.0,"Vélez Sarsfield está invicto con 5 victorias y 5 empates en 10 partidos del Clausura y 20 puntos. Platense tiene 2 victorias, 3 empates y 5 derrotas con 9 puntos y múltiples lesionados, lo que justifica el fuerte favoritismo local.",2026-10-04T10:10:18.722865,Sebastian Zunino,,,,
-2026-10-05T22:00:00,1493158.0,NS,Liga Profesional Argentina,Estudiantes L.P.,Gimnasia M.,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,-6.0,7.0,"Estudiantes de La Plata suma solo 10 puntos con 3 victorias en 10 partidos y varias lesiones importantes, mientras Gimnasia Mendoza lidera mejor con 17 puntos de 5 victorias y refuerzos ofensivos como Agustín Módica.",2026-10-04T10:10:43.785895,Yael Falcon Perez,,,,
-2026-10-05T23:00:00,1641623.0,NS,Primera Division Uruguay,Club Nacional,Atletico Torque,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-06T00:00:00,1549809.0,NS,Liga Colombia,Independiente Medellin,Santa Fe,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,6.0,-4.0,"Independiente Medellín local sexto con 20 puntos y menos lesiones clave, frente a Independiente Santa Fe séptimo con 19 puntos pero varias ausencias por lesión que debilitan su plantel visitante.",2026-10-04T10:11:10.459088,,,,,
-2026-10-06T00:15:00,1493154.0,NS,Liga Profesional Argentina,Banfield,Rosario Central,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,-7.0,8.0,"Banfield local con mala racha de cinco sin victorias en liga y solo 9 puntos en 10 partidos, mientras Rosario Central pelea arriba con 18 puntos, mejor forma y refuerzos ofensivos como Tomás Badaloni pese a algunas bajas por lesión.",2026-10-04T10:11:40.661465,Leandro Rey Hilfer,,,,
+2026-10-05T22:00:00,1493166.0,NS,Liga Profesional Argentina,Velez Sarsfield,Platense,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,12.0,-9.0,"Vélez Sarsfield invicto con 5 victorias y 5 empates en 10 partidos del Clausura y 20 puntos, frente a Platense con solo 2 victorias en 10 juegos, 9 puntos y numerosas lesiones clave que debilitan su plantel.",2026-10-05T10:06:32.221583,Sebastian Zunino,,,,
+2026-10-05T22:00:00,1493158.0,NS,Liga Profesional Argentina,Estudiantes L.P.,Gimnasia M.,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,-6.0,5.0,Estudiantes de La Plata suma solo 10 puntos en 10 partidos del Clausura con mala racha de tres derrotas recientes y lesiones en Correa y Palacios. Gimnasia Mendoza lidera mejor con 17 puntos en 10 partidos y campaña sólida pese a racha irregular reciente.,2026-10-05T10:06:59.361613,Yael Falcon Perez,,,,
+2026-10-05T23:00:00,1641623.0,NS,Primera Division Uruguay,Club Nacional,Atletico Torque,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Gustavo Tejera,,,,
+2026-10-06T00:00:00,1549809.0,NS,Liga Colombia,Independiente Medellin,Santa Fe,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4.0,1.0,Independiente Medellín local sexto con 20 puntos de 11 partidos y ventaja de casa supera levemente a Santa Fe séptimo con 19 puntos; forma irregular del local por lesiones clave frente a racha más sólida del visitante.,2026-10-05T10:07:26.552448,,,,,
+2026-10-06T00:15:00,1493154.0,NS,Liga Profesional Argentina,Banfield,Rosario Central,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,-8.0,10.0,"Banfield llega irregular con solo 2 victorias en 10 partidos y mala racha sin triunfos en liga, mientras Rosario Central suma 18 puntos en 4° lugar con 5 victorias, buen momento ofensivo y refuerzos como Badaloni.",2026-10-05T10:07:51.715549,Leandro Rey Hilfer,,,,
 2026-10-06T11:00:00,1640692.0,NS,Turkiye Kupasi,Kırklarelispor,Bayburtspor,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 2026-10-06T11:00:00,1640677.0,NS,Turkiye Kupasi,Bitlis Özgüzelderespor,Silifke Belediyespor,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 2026-10-06T14:00:00,1640700.0,NS,Turkiye Kupasi,Sakaryaspor,Arit Kayadibi,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -28741,7 +28741,7 @@
 2026-10-06T22:00:00,1619709.0,NS,Copa de la Division Profesional Bolivia,Real Potosí,San Antonio Bulo Bulo,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 2026-10-06T23:30:00,1642247.0,NS,Copa Chile,Colo Colo,D. Puerto Montt,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 2026-10-07T00:00:00,1619710.0,NS,Copa de la Division Profesional Bolivia,Aurora,ABB,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-07T00:30:00,1490326.0,NS,MLS,Chicago Fire,Vancouver Whitecaps,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2.0,8.0,"Vancouver Whitecaps lidera el Oeste con 50 puntos y mejor diferencia de goles, pese a lesiones de Thomas Müller y otros. Chicago Fire quinto Este con 42 puntos y forma mixta, potenciado en casa por Robert Lewandowski.",2026-10-04T10:12:07.732449,S. Boiko,,,,
+2026-10-07T00:30:00,1490326.0,NS,MLS,Chicago Fire,Vancouver Whitecaps,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,-4.0,8.0,"Vancouver Whitecaps lidera el Oeste con 50 puntos y mejor diferencia de gol, pese a lesiones como Thomas Müller. Chicago Fire quinto este con 42 puntos y forma irregular de 1 victoria en últimos 5, aunque con refuerzo Lewandowski y factor local.",2026-10-05T10:08:19.956670,Serhiy Boiko,,,,
 2026-10-07T11:00:00,1640675.0,NS,Turkiye Kupasi,Adanaspor,Adana Adaletgucu,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 2026-10-07T11:00:00,1640687.0,NS,Turkiye Kupasi,Hatayspor,Karaköprü Belediyespor,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 2026-10-07T11:00:00,1640705.0,NS,Turkiye Kupasi,Zonguldak Kömürspor,Düzcespor,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -28770,20 +28770,47 @@
 2026-10-07T22:00:00,1643186.0,NS,Copa Chile,Antofagasta,Universidad de Chile,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 2026-10-07T22:00:00,1638395.0,NS,Copa Chile,Coquimbo Unido,Cobreloa,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 2026-10-07T22:00:00,1619712.0,NS,Copa de la Division Profesional Bolivia,Independiente Petrolero,Gualberto Villarroel SJ,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-07T22:30:00,1492395.0,NS,Brasileirao,Internacional,Corinthians,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-07T22:30:00,1492392.0,NS,Brasileirao,RB Bragantino,Mirassol,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4.0,-2.0,"RB Bragantino es local y está mejor posicionado undécimo con 36 puntos frente al decimoquinto de Mirassol con 32, pese a racha irregular de una victoria en cinco partidos y varias lesiones. Mirassol llega con mejor forma reciente de victorias y empates.",2026-10-04T10:12:54.813067,,,,,
-2026-10-07T22:30:00,1492397.0,NS,Brasileirao,Remo,Gremio,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-07T23:00:00,1492399.0,NS,Brasileirao,Vitoria,Chapecoense-sc,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-07T23:30:00,1492391.0,NS,Brasileirao,Botafogo,Vasco DA Gama,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4.0,2.0,"Botafogo local en puesto 12 con 35 puntos y Tite nuevo, pero forma mixta y lesiones clave. Vasco en 16º con 31 puntos muestra mejor racha reciente con goleada 5-0 y refuerzos como Colidio y Sosa, equilibrando el choque.",2026-10-04T10:13:37.610475,,,,,
+2026-10-07T22:30:00,1492395.0,NS,Brasileirao,Internacional,Corinthians,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4.0,-5.0,"Internacional de local en puesto 18 con 28 puntos y forma irregular de una victoria en recientes, frente a Corinthians 14º con 32 puntos pero racha de derrotas consecutivas y lesiones clave, pese a fichajes como Lingard.",2026-10-05T10:08:53.605140,Felipe Fernandes de Lima,,,,
+2026-10-07T22:30:00,1492392.0,NS,Brasileirao,RB Bragantino,Mirassol,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,-6.0,4.0,"RB Bragantino llega irregular en undécimo con 36 puntos y mala racha de derrotas más lesiones clave, mientras Mirassol en decimoquinto con 32 puntos muestra mejor forma reciente con victorias y juega motivado como visitante.",2026-10-05T10:09:21.715953,Raphael Claus,,,,
+2026-10-07T22:30:00,1492397.0,NS,Brasileirao,Remo,Gremio,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,-8.0,4.0,"Remo llega con cinco derrotas consecutivas y 23 puntos en zona de descenso, con varias bajas clave. Gremio tiene 29 puntos, mejor posición y una victoria reciente, pese a también pelear abajo.",2026-10-05T10:09:51.539981,Davi de Oliveira Lacerda,,,,
+2026-10-07T23:00:00,1492399.0,NS,Brasileirao,Vitoria,Chapecoense-sc,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,8.0,-10.0,"Vitória llega de local en mitad de tabla con 33 puntos y reforzado, frente a Chapecoense último con solo 18 puntos, muchas lesiones y racha irregular en zona de descenso.",2026-10-05T10:10:06.423144,Edina Alves Batista,,,,
+2026-10-07T23:30:00,1492391.0,NS,Brasileirao,Botafogo,Vasco DA Gama,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4.0,2.0,"Botafogo de local en puesto 12 con 35 puntos supera a Vasco en 16 con 31, pese a lesiones clave; Vasco llega con racha fuerte de triunfos recientes como 5-0 y refuerzos ofensivos, equilibrando el choque.",2026-10-05T10:10:30.470422,Bruno Arleu,,,,
 2026-10-08T00:00:00,1619713.0,NS,Copa de la Division Profesional Bolivia,Oriente Petrolero,Universitario de Vinto,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-08T00:30:00,1492393.0,NS,Brasileirao,Cruzeiro,Sao Paulo,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-08T01:20:00,1549764.0,NS,Liga Colombia,Atletico Nacional,Deportes Tolima,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2026-10-08T00:30:00,1492393.0,NS,Brasileirao,Cruzeiro,Sao Paulo,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,6.0,-4.0,"Cruzeiro sexto con 45 puntos y mejor racha reciente incluyendo victoria 3-1 en Vitória, juega en casa reforzado; Sao Paulo undécimo con 36 puntos, forma irregular y lesiones clave como Lucas Moura limitan su potencial visitante.",2026-10-05T10:10:54.805365,,,,,
+2026-10-08T01:20:00,1549764.0,NS,Liga Colombia,Atletico Nacional,Deportes Tolima,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,8.0,-4.0,"Atlético Nacional lidera en forma con 7 victorias en 10 partidos y refuerzos como James Rodríguez, pese a lesiones clave. Deportes Tolima irregular con solo 5 victorias en 12 y rachas de empates-derrotas recientes, aunque con técnico nuevo.",2026-10-05T10:11:25.376377,,,,,
 2026-10-08T11:00:00,1640680.0,NS,Turkiye Kupasi,Talasgücü Belediyespor,Kahta 02 Spor,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 2026-10-08T14:00:00,1640679.0,NS,Turkiye Kupasi,Denizli İYG,Serik Spor,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 2026-10-08T17:00:00,1604012.0,NS,Division 1 Arabia Saudita,Al Okhdood,Al Ula,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 2026-10-08T17:00:00,1640697.0,NS,Turkiye Kupasi,Orduspor 1967,Karadeniz Ereğli BSK,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 2026-10-08T19:00:00,1619714.0,NS,Copa de la Division Profesional Bolivia,Always Ready,Nacional Potosí,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-08T22:30:00,1492398.0,NS,Brasileirao,Santos,Flamengo,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2026-10-08T23:00:00,1492390.0,NS,Brasileirao,Atletico Paranaense,Atletico-MG,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2026-10-08T22:30:00,1492398.0,NS,Brasileirao,Santos,Flamengo,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,-9.0,12.0,"Flamengo lidera invicto en forma con 18 victorias y 60 puntos en 28 partidos, mientras Santos octavo con 41 puntos muestra racha de tres triunfos pero inferior nivel y plantel afectado.",2026-10-05T10:11:48.026343,,,,,
+2026-10-08T23:00:00,1492390.0,NS,Brasileirao,Atletico Paranaense,Atletico-MG,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,8.0,-6.0,"Athletico Paranaense llega tercero con 49 puntos en 28 partidos y ventaja de local, mientras Atlético-MG está séptimo con 43 puntos, forma mixta de 2 victorias en últimos 5 y varias lesiones importantes en defensa y arco.",2026-10-05T10:12:20.206457,,,,,
+2026-10-09T00:00:00,1619715.0,NS,Copa de la Division Profesional Bolivia,Blooming,Bolívar,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2026-10-09T00:30:00,1492396.0,NS,Brasileirao,Palmeiras,Bahia,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2026-10-09T00:30:00,1492394.0,NS,Brasileirao,Fluminense,Coritiba,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2026-10-09T01:00:00,1581444.0,NS,Liga de Expansion MX,Alebrijes de Oaxaca,Correcaminos Uat,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2026-10-09T13:50:00,1603041.0,NS,Pro League Arabia,Al Kholood,Al-Qadisiyah FC,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2026-10-09T14:55:00,1603037.0,NS,Pro League Arabia,Al-Fateh,Al-Ahli Jeddah,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2026-10-09T17:00:00,1584424.0,NS,Super Lig Turquia,Galatasaray,Kasımpaşa,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2026-10-09T17:30:00,1493167.0,NS,Liga Profesional Argentina,Aldosivi,Sarmiento Junin,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2026-10-09T17:45:00,1575516.0,NS,Primeira Liga,Moreirense,GIL Vicente,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2026-10-09T18:00:00,1552180.0,NS,Eredivisie,PSV Eindhoven,Heerenveen,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2026-10-09T18:00:00,1603042.0,NS,Pro League Arabia,Al-Nassr,Al Diriyah,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2026-10-09T18:30:00,1575176.0,NS,Bundesliga,Borussia Dortmund,Werder Bremen,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2026-10-09T18:45:00,1552775.0,NS,Ligue 1,Lens,Lyon,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2026-10-09T18:45:00,1558644.0,NS,Pro League Belgica,SK Beveren,Lommel United,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2026-10-09T19:00:00,1570408.0,NS,La Liga,Malaga,Espanyol,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2026-10-09T19:00:00,1619320.0,NS,Primera Division Bolivia,San Antonio Bulo Bulo,Real Tomayapo,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2026-10-09T19:15:00,1575512.0,NS,Primeira Liga,SC Braga,Sporting CP,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2026-10-09T20:00:00,1597783.0,NS,Liga 3 Portugal,União Santarém,Lusitano Évora 1911,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2026-10-09T21:00:00,1493170.0,NS,Liga Profesional Argentina,Gimnasia L.P.,Atletico Tucuman,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2026-10-09T22:30:00,1493172.0,NS,Liga Profesional Argentina,Instituto Cordoba,Boca Juniors,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2026-10-09T23:00:00,1581442.0,NS,Liga de Expansion MX,Tapatío,CA La Paz,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2026-10-09T23:00:00,1643168.0,NS,Primera Division Uruguay,Deportivo Maldonado,Liverpool Montevideo,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 2026-10-29T03:00:00,1550952.0,NS,Liga MX,Club America,Club Tijuana,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 2026-11-14T23:00:00,1550951.0,NS,Liga MX,Club Queretaro,Monterrey,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2026-04-04T21:30:00,1492208.0,FT,Brasileirao,Sao Paulo,Cruzeiro,4,1,6.0,4.0,2.0,0.0,5.0,7.0,11.0,14.0,,,,,,,0.0,0.0,21.0,14.0,,,,,,,,,6.0,1.0,,,,,,,,,,,,,,2.01,1.52,4.0,1.0
+2025-08-31T00:00:00,1351258.0,FT,Brasileirao,Cruzeiro,Sao Paulo,1,0,6.0,9.0,2.0,4.0,7.0,6.0,12.0,14.0,,,,,,,0.0,0.0,11.0,10.0,,,,,,,,,5.0,6.0,,,,,,,,,,,,,,0.87,1.11,1.0,0.0
+2025-04-13T20:30:00,1351066.0,FT,Brasileirao,Sao Paulo,Cruzeiro,1,1,4.0,6.0,5.0,6.0,2.0,2.0,11.0,14.0,,,,,,,0.0,0.0,14.0,21.0,,,,,,,,,1.0,1.0,,,,,,,,,,,,,,0.49,0.87,1.0,1.0
+2025-01-16T00:30:00,1334026.0,FT,Friendlies Clubs,Cruzeiro,Sao Paulo,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1.0,1.0
+2024-09-15T21:30:00,1180606.0,FT,Brasileirao,Cruzeiro,Sao Paulo,0,1,7.0,7.0,4.0,3.0,1.0,4.0,14.0,14.0,,,,,,,0.0,0.0,11.0,10.0,,,,,,,,,3.0,1.0,,,,,,,,,,,,,,0.58,1.07,0.0,1.0
