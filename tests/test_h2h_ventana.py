@@ -38,7 +38,7 @@ def csv_base():
         fila(2, "2026-09-26T23:00:00", "Once Caldas", "Bucaramanga", estado="NS"),  # en la ventana pero completo
         fila(3, "2026-10-01T20:00:00", "Chico", "Once Caldas", estado="NS"),        # a 5 dias: fuera de ventana
         fila(4, "2026-09-25T20:00:00", "Chico", "Junior", estado="NS"),             # ya paso
-        fila(5, "2026-09-28T20:00:00", "Chico", "Rival B", estado="NS", liga="Primera B"),  # rival no nivel 1
+        fila(5, "2026-09-28T20:00:00", "Chico", "Rival B", estado="NS", liga="Primera B"),  # rival no nivel 1: entra desde 2026-10-09
         fila(6, "2026-09-29T01:00:00", "Bucaramanga", "Junior", estado="NS"),       # 0 cruces, en la ventana
     ]
     return pd.DataFrame(filas)
@@ -46,11 +46,12 @@ def csv_base():
 
 class Seleccion(unittest.TestCase):
     def sel(self, consultados=None, df=None):
-        return A.seleccionar_pares_h2h(csv_base() if df is None else df, consultados or {}, AHORA, N1)
+        return A.seleccionar_pares_h2h(csv_base() if df is None else df, consultados or {}, AHORA)
 
     def test_solo_ventana_de_3_dias_e_incompletos(self):
         pares, omitidos = self.sel()
-        self.assertEqual(pares, [("Deportivo Pasto", "Chico"), ("Bucaramanga", "Junior")])  # orden: mas cercano primero
+        # orden: mas cercano primero; Chico-Rival B entra aunque Rival B no sea de nivel 1
+        self.assertEqual(pares, [("Deportivo Pasto", "Chico"), ("Chico", "Rival B"), ("Bucaramanga", "Junior")])
         self.assertEqual(omitidos, 0)
 
     def test_par_completo_y_viejo_ya_no_se_pide(self):
@@ -70,7 +71,7 @@ class Seleccion(unittest.TestCase):
     def test_memoria_reciente_omite_el_par(self):
         mem = {A._clave_par("Chico", "Deportivo Pasto"): "2026-09-22T12:00:00Z"}   # hace 4 dias
         pares, omitidos = self.sel(mem)
-        self.assertEqual(pares, [("Bucaramanga", "Junior")])
+        self.assertEqual(pares, [("Chico", "Rival B"), ("Bucaramanga", "Junior")])
         self.assertEqual(omitidos, 1)
 
     def test_memoria_vencida_vuelve_a_pedir(self):
@@ -143,7 +144,9 @@ class ActualizarH2H(unittest.TestCase):
 
     def test_pide_solo_los_pares_de_la_ventana(self):
         self.correr()
-        self.assertEqual(len(self.h2h_pedidos()), 2)   # Pasto-Chico y Bucaramanga-Junior; nada de pares viejos
+        # Pasto-Chico y Bucaramanga-Junior; nada de pares viejos. Chico-Rival B
+        # se saltea: Rival B no tiene id en el cache ni pais esperado.
+        self.assertEqual(len(self.h2h_pedidos()), 2)
 
     def test_agrega_solo_el_cruce_nuevo(self):
         self.correr()

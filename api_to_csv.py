@@ -167,6 +167,30 @@ def _cargar_cache_team_ids():
         return {}
 
 
+def registrar_team_ids_de_fixtures(fixtures, cache_team_id):
+    """Guarda en el cache el team_id que la API ya trae en cada partido
+    descargado (teams.home.id / teams.away.id), con el mismo nombre
+    normalizado que usa construir_fila(). Es el id exacto del equipo que
+    juega ese partido, sin buscar por nombre y sin gastar pedidos. Nunca
+    pisa un id que ya estaba: si no coincide, lo devuelve como conflicto
+    para que quede en el log. Devuelve (nuevos, conflictos)."""
+    nuevos, conflictos = 0, {}
+    for f in fixtures:
+        for lado in ("home", "away"):
+            equipo = (f.get("teams") or {}).get(lado) or {}
+            nombre = normalizar_nombre_equipo(equipo.get("name") or "")
+            tid = equipo.get("id")
+            if not nombre or not tid:
+                continue
+            actual = cache_team_id.get(nombre)
+            if actual is None:
+                cache_team_id[nombre] = tid
+                nuevos += 1
+            elif actual != tid:
+                conflictos[nombre] = (actual, tid)
+    return nuevos, conflictos
+
+
 def _guardar_cache_team_ids(cache):
     import json
     # Solo se persisten resoluciones EXITOSAS (id no nulo). Un equipo que
@@ -361,6 +385,11 @@ ID_A_LIGA = {comp["id"]: comp["liga"] for comp in LIGAS}
 ID_A_LIGA.update({
     72: "Serie B Brasil",
     136: "Serie B Italia",
+    # Segunda Division de Espana (Spain, id 141): los cruces de H2H de esa
+    # liga quedaban con el nombre crudo "Segunda División", que el backend
+    # descartaba -- caso Malaga-Espanyol (2026-10-09): el cruce de 2021 no
+    # aparecia y la nota decia "hace 8 anos" por el de 2018.
+    141: "Segunda Division Espana",
 })
 
 
@@ -480,7 +509,7 @@ EQUIPOS_BUSQUEDA_OVERRIDE = {
 }
 
 
-def buscar_team_id(nombre, pais_esperado_por_equipo, cache_team_id, headers):
+def buscar_team_id(nombre, pais_esperado_por_equipo, cache_team_id, headers, exigir_pais=False):
     """Resuelve el team_id de api-football para 'nombre', prefiriendo el
     candidato del pais esperado (si se conoce) en vez de tomar ciegamente
     el primer resultado de busqueda -- evita traer el equipo equivocado
@@ -488,7 +517,14 @@ def buscar_team_id(nombre, pais_esperado_por_equipo, cache_team_id, headers):
     Extraido de actualizar_h2h_desactualizado() para poder reutilizarlo
     desde otros scripts (ej. descarga de jugadores) sin duplicar la logica.
     'cache_team_id' se pasa por referencia para compartir cache entre
-    llamadas del mismo script."""
+    llamadas del mismo script.
+
+    exigir_pais=True (equipos fuera de nivel 1, ver
+    actualizar_h2h_desactualizado): sin pais esperado no se busca, y si
+    ningun candidato es de ese pais devuelve None en vez del primer
+    resultado. Medido el 2026-10-09: "San Rafael" (rival del Prat en Copa
+    del Rey) devuelve primero Huracan San Rafael de Argentina; el primer
+    resultado habria guardado el equipo equivocado en el cache."""
     if nombre in cache_team_id:
         return cache_team_id[nombre]
     if nombre in EQUIPOS_ID_OVERRIDE:
@@ -514,6 +550,8 @@ def buscar_team_id(nombre, pais_esperado_por_equipo, cache_team_id, headers):
     # equipo equivocado de otro pais.
     paises_esperados = pais_esperado_por_equipo.get(nombre)
     primer_resultado_fallback = None
+    if exigir_pais and not paises_esperados:
+        return None
 
     for intento in intentos:
         resp = _get_api("https://v3.football.api-sports.io/teams", headers=headers, params={"search": intento}, timeout=15)
@@ -537,7 +575,10 @@ def buscar_team_id(nombre, pais_esperado_por_equipo, cache_team_id, headers):
     # No se encontro un candidato del pais esperado en ningun intento:
     # usamos el primer resultado como antes, para no perder cobertura en
     # equipos donde no tenemos pais esperado claro o la API no incluye
-    # esa variante.
+    # esa variante -- salvo con exigir_pais, donde es preferible no tener
+    # el id a guardar el de otro equipo.
+    if exigir_pais:
+        return None
     cache_team_id[nombre] = primer_resultado_fallback
     return primer_resultado_fallback
 
@@ -902,9 +943,10 @@ def _guardar_h2h_consultados(consultados, ahora, path=None):
         json.dump(dict(sorted(vigentes.items())), f, ensure_ascii=False, indent=2)
 
 
-def seleccionar_pares_h2h(df, consultados, ahora, equipos_n1):
+def seleccionar_pares_h2h(df, consultados, ahora):
     """Pares (local, visitante) a consultar, del partido mas cercano al mas
-    lejano: partido NS de dos equipos de nivel 1 entre ahora y
+    lejano: partido NS (de cualquier equipo, no solo de nivel 1 -- desde
+    2026-10-09) entre ahora y
     ahora + DIAS_VENTANA_H2H dias, con menos de MIN_PARTIDOS_H2H cruces
     terminados guardados, y no consultado en los ultimos DIAS_REINTENTO_H2H
     dias. Devuelve (pares, omitidos_por_memoria)."""
@@ -912,8 +954,7 @@ def seleccionar_pares_h2h(df, consultados, ahora, equipos_n1):
     fecha_dt = pd.to_datetime(df["fecha"], errors="coerce", utc=True)
     proximos = df[
         (df["estado"] == "NS") & (fecha_dt >= ahora) &
-        (fecha_dt <= ahora + timedelta(days=DIAS_VENTANA_H2H)) &
-        df["equipo_local"].isin(equipos_n1) & df["equipo_visitante"].isin(equipos_n1)
+        (fecha_dt <= ahora + timedelta(days=DIAS_VENTANA_H2H))
     ].assign(_f=fecha_dt).sort_values("_f")
 
     terminados = df[df["estado"].isin(["FT", "AET", "PEN"])]
@@ -968,7 +1009,7 @@ def actualizar_h2h_desactualizado(df, pares_forzados=None):
         pares_desactualizados = list(pares_forzados)
         print(f"  Pares forzados (backfill dirigido): {len(pares_desactualizados)}")
     else:
-        pares_desactualizados, omitidos = seleccionar_pares_h2h(df, consultados, ahora_utc, equipos_n1)
+        pares_desactualizados, omitidos = seleccionar_pares_h2h(df, consultados, ahora_utc)
         print(f"  Pares con partido en los proximos {DIAS_VENTANA_H2H} dias y menos de {MIN_PARTIDOS_H2H} "
               f"cruces: {len(pares_desactualizados)} a consultar, {omitidos} omitidos (consultados hace "
               f"menos de {DIAS_REINTENTO_H2H} dias)")
@@ -987,16 +1028,23 @@ def actualizar_h2h_desactualizado(df, pares_forzados=None):
     procesados = 0
     agregados = 0
     errores = 0
+    sin_id = 0
 
     for local, visitante in pares_desactualizados:
         if procesados >= LIMITE_LLAMADAS_H2H:
             print(f"  Limite de {LIMITE_LLAMADAS_H2H} llamadas alcanzado, se completara en la proxima corrida")
             break
         try:
-            tid_local = buscar_team_id(local, pais_esperado_por_equipo, cache_team_id, headers)
-            tid_visitante = buscar_team_id(visitante, pais_esperado_por_equipo, cache_team_id, headers)
+            # Equipos fuera de nivel 1: el id normalmente ya esta en el cache
+            # desde la descarga de sus partidos; si no, solo se acepta el
+            # candidato del pais esperado, nunca el primer resultado.
+            tid_local = buscar_team_id(local, pais_esperado_por_equipo, cache_team_id, headers,
+                                       exigir_pais=local not in equipos_n1)
+            tid_visitante = buscar_team_id(visitante, pais_esperado_por_equipo, cache_team_id, headers,
+                                           exigir_pais=visitante not in equipos_n1)
             if not tid_local or not tid_visitante:
-                errores += 1
+                sin_id += 1
+                print(f"  Sin team_id confiable, se saltea: {local} vs {visitante}")
                 continue
 
             resp_h2h = _get_api(
@@ -1118,7 +1166,8 @@ def actualizar_h2h_desactualizado(df, pares_forzados=None):
         except Exception:
             errores += 1
 
-    print(f"  Procesados: {procesados} | Enfrentamientos H2H nuevos agregados: {agregados} | Errores: {errores}")
+    print(f"  Procesados: {procesados} | Enfrentamientos H2H nuevos agregados: {agregados} | "
+          f"Errores: {errores} | Sin team_id confiable: {sin_id}")
 
     _guardar_cache_team_ids(cache_team_id)
     print(f"  Cache de team_id guardado: {len([v for v in cache_team_id.values() if v is not None])} equipos")
@@ -1869,6 +1918,7 @@ def descargar_y_guardar_csv(dias_adelante=4, descarga_inicial=False, incluir_h2h
     total_ligas       = len(LIGAS)
 
     _paso("fixtures por liga")
+    fixtures_descargados = []
     for i, comp in enumerate(LIGAS, 1):
         liga_nombre = comp["liga"]
         temporada   = comp["temporada"] if comp["temporada"] else temporada_europea
@@ -1897,6 +1947,7 @@ def descargar_y_guardar_csv(dias_adelante=4, descarga_inicial=False, incluir_h2h
             })
             partidos = data.get("response", [])
             print(f"  {len(partidos)} partidos encontrados")
+            fixtures_descargados.extend(partidos)
 
             for fixture in partidos:
                 estado = fixture.get("fixture", {}).get("status", {}).get("short", "")
@@ -1910,6 +1961,17 @@ def descargar_y_guardar_csv(dias_adelante=4, descarga_inicial=False, incluir_h2h
     if not filas:
         print("No se descargaron datos.")
         return
+
+    # team_id de cada equipo, tal como viene en sus partidos: el H2H de los
+    # proximos dias (actualizar_h2h_desactualizado) lo encuentra en el
+    # cache sin buscar por nombre, tambien para equipos fuera de nivel 1.
+    cache_ids = _cargar_cache_team_ids()
+    nuevos_ids, conflictos_ids = registrar_team_ids_de_fixtures(fixtures_descargados, cache_ids)
+    _guardar_cache_team_ids(cache_ids)
+    print(f"\nteam_id desde los partidos descargados: {nuevos_ids} nuevos, "
+          f"{len(conflictos_ids)} distintos del cache (no se pisan)")
+    for nombre, (viejo, nuevo) in list(conflictos_ids.items())[:10]:
+        print(f"  CONFLICTO team_id {nombre}: cache={viejo} partido={nuevo}")
 
     df_nuevo = pd.DataFrame(filas)
     df_nuevo = df_nuevo.drop_duplicates(subset=["fixture_id"])
