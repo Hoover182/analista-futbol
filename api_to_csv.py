@@ -143,16 +143,29 @@ PALABRAS_NO_COMPETITIVAS = (
     "reserve", "women", "academy",
 )
 
-UMBRAL_HISTORIAL_MINIMO_DESCONOCIDOS = 10  # igual a min_partidos_condicion en
-                                            # n_efectivo_estimacion() (football_model.py)
-                                            # -- mide "confianza plena del historial
-                                            # PROPIO de este equipo", distinto de
-                                            # MIN_PARTIDOS_H2H (completitud de cruces
-                                            # entre DOS equipos especificos), de donde
-                                            # se tomo prestado el 5 original por error.
-N_EQUIPOS_DESCONOCIDOS_MAX = 8
-LIMITE_LLAMADAS_EQUIPOS_DESCONOCIDOS = 150
-ULTIMOS_N_EQUIPO_DESCONOCIDO = 15
+# Equipos desconocidos en copas internacionales (2026-10-10). Antes: 8
+# equipos y 150 pedidos por corrida, ultimos 15 partidos, y solo equipos con
+# menos de 10 filas en total. Medido: de 72 desconocidos con partido
+# internacional desde el 27/08, 53 tenian menos de 10 partidos -- 49 nunca
+# se procesaron (el 27/08 jugaron 56 el mismo dia) y los que llegaban a 10
+# no se volvian a actualizar.
+N_EQUIPOS_DESCONOCIDOS_MAX = 60
+LIMITE_LLAMADAS_EQUIPOS_DESCONOCIDOS = 700
+# Se piden mas partidos de los que se guardan: entre los ultimos vienen
+# amistosos, juveniles y partidos sin terminar, que se descartan.
+PARTIDOS_A_PEDIR_EQUIPO_DESCONOCIDO = 20
+PARTIDOS_OFICIALES_EQUIPO_DESCONOCIDO = 10
+# Maximo de pedidos que puede costar un equipo: 1 de partidos + 2 por
+# partido nuevo (construir_fila pide estadisticas y eventos; medido con la
+# API real el 2026-10-10: 34 filas = 68 pedidos). No se empieza un equipo
+# sin ese presupuesto, para no dejarlo a medias.
+PEDIDOS_MAX_POR_EQUIPO_DESCONOCIDO = 1 + 2 * PARTIDOS_OFICIALES_EQUIPO_DESCONOCIDO
+
+# team_id de cada equipo tal como vino en los partidos descargados en ESTA
+# corrida (registrar_team_ids_de_fixtures). Es el id exacto del equipo que
+# juega ese partido; el paso de equipos desconocidos lo usa en vez de buscar
+# por nombre.
+_IDS_DE_PARTIDOS = {}
 
 
 def _cargar_cache_team_ids():
@@ -182,6 +195,7 @@ def registrar_team_ids_de_fixtures(fixtures, cache_team_id):
             tid = equipo.get("id")
             if not nombre or not tid:
                 continue
+            _IDS_DE_PARTIDOS[nombre] = tid
             actual = cache_team_id.get(nombre)
             if actual is None:
                 cache_team_id[nombre] = tid
@@ -1237,170 +1251,168 @@ def _registrar_liga_auto_detectada(liga_id, nombre_crudo, pais_api, auto_cache):
     return True
 
 
-def backfillear_equipos_desconocidos_internacionales():
-    """Detecta equipos que juegan Champions/Europa/Conference League o
-    Copa Libertadores/Sudamericana en las proximas 48h contra un equipo
-    trackeado, pero vienen de una liga domestica que nunca seguimos (ej.
-    Bodo/Glimt de Noruega) y por eso tienen muy poco historial propio en
-    el CSV. Les baja sus ultimos partidos (de CUALQUIER liga, no solo la
-    domestica -- no sabemos cual es de antemano) para que el modelo tenga
-    con que calcular una prediccion real. El nivelado de fuerza entre
-    ligas de distinto nivel ya lo resuelven el Elo casero y
-    ajuste_liga_clubes una vez que hay historial -- no hace falta ningun
-    peso especial aca, solo conseguir el historial.
+def seleccionar_equipos_desconocidos(df, ahora):
+    """Equipos a revisar, del partido mas proximo al mas lejano: juegan
+    Champions/Europa/Conference/Libertadores/Sudamericana (partido NS) entre
+    48 h atras y 48 h adelante, y no tienen ningun partido en las ligas que
+    seguimos fuera de esas copas -- su historial no llega por la descarga
+    regular. Entran SIEMPRE, tengan los partidos que tengan: asi se
+    actualizan antes de cada partido internacional (antes solo entraban
+    con menos de 10 filas y despues no se tocaban mas)."""
+    fecha_dt = pd.to_datetime(df["fecha"], errors="coerce", utc=True)
+    # Ventana simetrica: tambien agarra partidos que YA deberian haber
+    # arrancado segun su horario programado pero siguen en NS (sin
+    # resincronizar todavia -- ver resincronizar_resultados_ns(), que
+    # corre antes en el cron; esto es la red de seguridad).
+    proximos = df[
+        (df["estado"] == "NS") & df["liga"].isin(LIGAS_INTL_FOCUS_DESCONOCIDOS) &
+        (fecha_dt >= ahora - timedelta(hours=48)) & (fecha_dt <= ahora + timedelta(days=2))
+    ].assign(_f=fecha_dt)
 
-    Limite doble (equipos Y requests) para no comerse la cuota diaria,
-    mismo criterio que LIMITE_LLAMADAS_H2H. Relee el CSV de disco (no
-    recibe el df en memoria del caller) para incluir lo que
-    actualizar_h2h_desactualizado() haya agregado justo antes en la misma
-    corrida."""
+    ligas_seguidas = {c["liga"] for c in LIGAS} - set(LIGAS_INTL_FOCUS_DESCONOCIDOS)
+    seguidos = df[df["liga"].isin(ligas_seguidas)]
+    equipos_seguidos = set(seguidos["equipo_local"]) | set(seguidos["equipo_visitante"])
+
+    fecha_por_equipo = {}
+    for _, row in proximos.iterrows():
+        for equipo in (row["equipo_local"], row["equipo_visitante"]):
+            if equipo in equipos_seguidos:
+                continue
+            if equipo not in fecha_por_equipo or row["_f"] < fecha_por_equipo[equipo]:
+                fecha_por_equipo[equipo] = row["_f"]
+    return sorted(fecha_por_equipo, key=lambda e: fecha_por_equipo[e])
+
+
+def completar_historial_equipo(team_id, fixture_ids_existentes, auto_ligas, headers):
+    """Filas que le faltan a un equipo para tener sus
+    PARTIDOS_OFICIALES_EQUIPO_DESCONOCIDO partidos oficiales terminados mas
+    recientes (cualquier competicion; sin amistosos, juveniles, reserva ni
+    femenino). Un equipo que ya los tiene cuesta 1 pedido y no agrega nada.
+    Devuelve (filas, pedidos, oficiales_encontrados, ligas_nuevas); pedidos
+    es lo que realmente se pidio a la API (contador de _get_api)."""
+    pedidos_antes = sum(_PEDIDOS["por_paso"].values())
+    resp = _get_api(
+        f"{BASE_URL}/fixtures",
+        headers=headers,
+        params={"team": team_id, "last": PARTIDOS_A_PEDIR_EQUIPO_DESCONOCIDO},
+        timeout=15
+    )
+    partidos = resp.json().get("response", [])
+    partidos.sort(key=lambda f: f["fixture"]["date"], reverse=True)
+    oficiales = [
+        f for f in partidos
+        if f["fixture"]["status"]["short"] in ("FT", "AET", "PEN")
+        and not any(palabra in f["league"]["name"].lower() for palabra in PALABRAS_NO_COMPETITIVAS)
+    ][:PARTIDOS_OFICIALES_EQUIPO_DESCONOCIDO]
+
+    filas, ligas_nuevas = [], False
+    for f in oficiales:
+        fid = f["fixture"]["id"]
+        if fid in fixture_ids_existentes:
+            continue
+        liga_cruda = f["league"]["name"]
+        liga_id_api = f["league"].get("id")
+
+        # IMPORTANTE: se resuelve por id ANTES que por nombre, y SIEMPRE --
+        # normalizar_liga_h2h() a secas no alcanza aca, porque su fallback
+        # por nombre puede devolver un string que por pura coincidencia YA
+        # es una liga trackeada de OTRO pais (ej. "Bundesliga" de Austria,
+        # id distinto al 78 de Alemania, pero mismo nombre crudo: 4 partidos
+        # de Red Bull Salzburg se colaron como Bundesliga alemana antes de
+        # este criterio).
+        if liga_id_api in ID_A_LIGA:
+            liga_nombre = ID_A_LIGA[liga_id_api]
+        elif liga_id_api is not None and str(liga_id_api) in auto_ligas:
+            liga_nombre = auto_ligas[str(liga_id_api)]
+        elif liga_id_api is not None:
+            if _registrar_liga_auto_detectada(liga_id_api, liga_cruda, f["league"].get("country"), auto_ligas):
+                ligas_nuevas = True
+                liga_nombre = auto_ligas[str(liga_id_api)]
+            else:
+                # Colision con una liga ya trackeada bajo otro id, o id no
+                # numerico -- se descarta el partido en vez de guardarlo
+                # con un nombre que se confundiria con la liga real.
+                continue
+        else:
+            # Sin id de liga en la respuesta (raro): no hay forma segura de
+            # desambiguar, se descarta.
+            continue
+
+        filas.append(construir_fila(f, liga_nombre))
+        fixture_ids_existentes.add(fid)
+    pedidos = sum(_PEDIDOS["por_paso"].values()) - pedidos_antes
+    return filas, pedidos, len(oficiales), ligas_nuevas
+
+
+def backfillear_equipos_desconocidos_internacionales():
+    """Completa y mantiene al dia el historial de los equipos que juegan
+    Champions/Europa/Conference League o Copa Libertadores/Sudamericana en
+    las proximas 48h y vienen de una liga que no seguimos (ej. Bodo/Glimt
+    de Noruega): sus ultimos PARTIDOS_OFICIALES_EQUIPO_DESCONOCIDO partidos
+    oficiales de cualquier competicion, para que el modelo tenga forma real.
+    El nivelado de fuerza entre ligas ya lo resuelven el Elo casero y
+    ajuste_liga_clubes una vez que hay historial.
+
+    El team_id sale del propio partido internacional descargado en esta
+    corrida (_IDS_DE_PARTIDOS), nunca de una busqueda por nombre: la
+    busqueda rechazaba nombres con simbolos ("Bodo/Glimt") y el primer
+    resultado dejo ids de otro club en el cache (Viking -> Vikingur
+    Reykjavik de Islandia, OFI -> Levski Sofia; medido el 2026-10-10). Si
+    el cache tenia otro id, se corrige. Sin id del partido el equipo se
+    saltea.
+
+    Relee el CSV de disco para incluir lo que actualizar_h2h_desactualizado()
+    haya agregado justo antes en la misma corrida."""
     import time
     headers = {"x-apisports-key": API_KEY}
 
     df = pd.read_csv(CSV_SALIDA, encoding="utf-8-sig")
-    df["fecha_dt"] = pd.to_datetime(df["fecha"], errors="coerce", utc=True)
-    ahora_utc = pd.Timestamp.now(tz="UTC")
-    ventana = ahora_utc + timedelta(days=2)
-    # Ventana simetrica: tambien agarra partidos que YA deberian haber
-    # arrancado segun su horario programado pero siguen en NS (sin
-    # resincronizar todavia -- ver resincronizar_resultados_ns(), que
-    # corre antes en el cron y deberia resolver la mayoria de estos casos
-    # de antemano; esto es la red de seguridad, no el mecanismo principal).
-    # El orden ascendente de candidatos mas abajo ya hace que estos casos
-    # atrasados salgan primero en la cola sin logica extra.
-    ventana_atras = ahora_utc - timedelta(hours=48)
-
-    proximos_intl = df[
-        (df["estado"] == "NS") &
-        (df["liga"].isin(LIGAS_INTL_FOCUS_DESCONOCIDOS)) &
-        (df["fecha_dt"] >= ventana_atras) &
-        (df["fecha_dt"] <= ventana)
-    ]
-
-    if proximos_intl.empty:
-        print("  Sin partidos NS de copas internacionales en las proximas 48h")
+    candidatos = seleccionar_equipos_desconocidos(df, pd.Timestamp.now(tz="UTC"))
+    if not candidatos:
+        print("  Sin equipos de ligas no seguidas en los partidos internacionales de las proximas 48h")
         return
+    print(f"  Equipos de ligas no seguidas en copas internacionales: {len(candidatos)}")
 
-    partidos_terminados = df[df["estado"].isin(("FT", "AET", "PEN"))]
-    conteo_por_equipo = {}
-    for col in ("equipo_local", "equipo_visitante"):
-        for equipo, n in partidos_terminados[col].value_counts().items():
-            conteo_por_equipo[equipo] = conteo_por_equipo.get(equipo, 0) + n
-
-    candidatos_fecha = {}
-    for _, row in proximos_intl.iterrows():
-        for equipo in (row["equipo_local"], row["equipo_visitante"]):
-            if conteo_por_equipo.get(equipo, 0) >= UMBRAL_HISTORIAL_MINIMO_DESCONOCIDOS:
-                continue
-            fecha = row["fecha_dt"]
-            if equipo not in candidatos_fecha or fecha < candidatos_fecha[equipo]:
-                candidatos_fecha[equipo] = fecha
-
-    if not candidatos_fecha:
-        print("  Sin equipos con poco historial en los partidos internacionales proximos")
-        return
-
-    # Mas urgente (partido mas proximo) primero.
-    candidatos = sorted(candidatos_fecha, key=lambda e: candidatos_fecha[e])
-    print(f"  Equipos con menos de {UMBRAL_HISTORIAL_MINIMO_DESCONOCIDOS} partidos detectados en copas internacionales: {len(candidatos)}")
-
-    pais_esperado_por_equipo = construir_pais_esperado_por_equipo(df)
     cache_team_id = _cargar_cache_team_ids()
     auto_ligas = _cargar_ligas_auto_detectadas()
-
     fixture_ids_existentes = set(df["fixture_id"].dropna().astype(int))
     filas_nuevas = []
-    equipos_procesados = 0
-    requests_usados = 0
-    errores = 0
+    equipos_procesados = requests_usados = errores = sin_id = ids_corregidos = 0
     ligas_nuevas_agregadas = False
 
     for equipo in candidatos:
         if equipos_procesados >= N_EQUIPOS_DESCONOCIDOS_MAX:
             print(f"  Limite de {N_EQUIPOS_DESCONOCIDOS_MAX} equipos alcanzado, se completara en la proxima corrida")
             break
-        if requests_usados >= LIMITE_LLAMADAS_EQUIPOS_DESCONOCIDOS:
+        if requests_usados + PEDIDOS_MAX_POR_EQUIPO_DESCONOCIDO > LIMITE_LLAMADAS_EQUIPOS_DESCONOCIDOS:
             print(f"  Limite de {LIMITE_LLAMADAS_EQUIPOS_DESCONOCIDOS} requests alcanzado, se completara en la proxima corrida")
             break
+        team_id = _IDS_DE_PARTIDOS.get(equipo)
+        if not team_id:
+            sin_id += 1
+            print(f"  {equipo}: sin team_id del partido en esta corrida, se saltea")
+            continue
+        en_cache = cache_team_id.get(equipo)
+        if en_cache != team_id:
+            if en_cache is not None:
+                ids_corregidos += 1
+                print(f"  {equipo}: team_id corregido {en_cache} -> {team_id} (el del cache era de otro equipo)")
+            cache_team_id[equipo] = team_id
         try:
-            if equipo not in cache_team_id:
-                requests_usados += 1
-            team_id = buscar_team_id(equipo, pais_esperado_por_equipo, cache_team_id, headers)
-            if not team_id:
-                errores += 1
-                continue
-
-            resp = _get_api(
-                f"{BASE_URL}/fixtures",
-                headers=headers,
-                params={"team": team_id, "last": ULTIMOS_N_EQUIPO_DESCONOCIDO},
-                timeout=15
-            )
-            requests_usados += 1
-            partidos = resp.json().get("response", [])
-            partidos.sort(key=lambda f: f["fixture"]["date"], reverse=True)
-
-            agregados = 0
-            for f in partidos:
-                fid = f["fixture"]["id"]
-                if fid in fixture_ids_existentes:
-                    continue
-                estado = f["fixture"]["status"]["short"]
-                if estado not in ("FT", "AET", "PEN"):
-                    continue
-                liga_cruda = f["league"]["name"]
-                if any(palabra in liga_cruda.lower() for palabra in PALABRAS_NO_COMPETITIVAS):
-                    continue
-
-                liga_id_api = f["league"].get("id")
-
-                # IMPORTANTE: se resuelve por id ANTES que por nombre, y
-                # SIEMPRE (no solo la primera vez que aparece este id en
-                # esta corrida) -- normalizar_liga_h2h() a secas no
-                # alcanza aca, porque su fallback por nombre puede
-                # devolver un string que por pura coincidencia YA es una
-                # liga trackeada de OTRO pais (ej. "Bundesliga" de
-                # Austria, id distinto al 78 de Alemania, pero mismo
-                # nombre crudo -- se detecto en vivo en la prueba de este
-                # backfill: 4 partidos de Red Bull Salzburg se colaron
-                # como si fueran Bundesliga alemana antes de este fix).
-                if liga_id_api in ID_A_LIGA:
-                    liga_nombre = ID_A_LIGA[liga_id_api]
-                elif liga_id_api is not None and str(liga_id_api) in auto_ligas:
-                    liga_nombre = auto_ligas[str(liga_id_api)]
-                elif liga_id_api is not None:
-                    if _registrar_liga_auto_detectada(liga_id_api, liga_cruda, f["league"].get("country"), auto_ligas):
-                        ligas_nuevas_agregadas = True
-                        liga_nombre = auto_ligas[str(liga_id_api)]
-                    else:
-                        # Colision con una liga ya trackeada bajo otro id,
-                        # o id no numerico -- se descarta el partido en
-                        # vez de guardarlo con un nombre que se
-                        # confundiria con la liga real (fallar cerrado).
-                        continue
-                else:
-                    # Sin id de liga en la respuesta de la API (raro) --
-                    # no hay forma segura de desambiguar, se descarta.
-                    continue
-
-                fila = construir_fila(f, liga_nombre)
-                requests_usados += 1
-                filas_nuevas.append(fila)
-                fixture_ids_existentes.add(fid)
-                agregados += 1
-
-                if requests_usados >= LIMITE_LLAMADAS_EQUIPOS_DESCONOCIDOS:
-                    break
-
-            print(f"  {equipo}: {agregados} partidos nuevos agregados (de {len(partidos)} encontrados)")
+            filas, pedidos, oficiales, ligas_nuevas = completar_historial_equipo(
+                team_id, fixture_ids_existentes, auto_ligas, headers)
+            requests_usados += pedidos
+            filas_nuevas.extend(filas)
+            ligas_nuevas_agregadas = ligas_nuevas_agregadas or ligas_nuevas
+            print(f"  {equipo}: {len(filas)} partidos nuevos (de sus {oficiales} oficiales mas recientes)")
             equipos_procesados += 1
             time.sleep(0.15)
-
         except Exception as e:
             errores += 1
             print(f"  ERROR con {equipo}: {e}")
 
-    print(f"  Equipos procesados: {equipos_procesados} | Requests usados: {requests_usados} | Errores: {errores}")
+    print(f"  Equipos procesados: {equipos_procesados} | Requests usados: {requests_usados} | Errores: {errores} | "
+          f"Sin team_id: {sin_id} | Ids corregidos: {ids_corregidos}")
 
     _guardar_cache_team_ids(cache_team_id)
     if ligas_nuevas_agregadas:
