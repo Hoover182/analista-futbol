@@ -196,6 +196,9 @@ def registrar_team_ids_de_fixtures(fixtures, cache_team_id):
             if not nombre or not tid:
                 continue
             _IDS_DE_PARTIDOS[nombre] = tid
+            fixture_id = (f.get("fixture") or {}).get("id")
+            if fixture_id is not None:
+                _IDS_POR_FIXTURE.setdefault(int(fixture_id), {})[nombre] = tid
             actual = cache_team_id.get(nombre)
             if actual is None:
                 cache_team_id[nombre] = tid
@@ -203,6 +206,58 @@ def registrar_team_ids_de_fixtures(fixtures, cache_team_id):
             elif actual != tid:
                 conflictos[nombre] = (actual, tid)
     return nuevos, conflictos
+
+
+# team_id de los DOS equipos de cada partido descargado en esta corrida, por
+# fixture_id: {fixture_id: {nombre: team_id}}. A diferencia de
+# _IDS_DE_PARTIDOS (por nombre), no se confunde si dos clubes distintos
+# comparten nombre: es el id de quien juega ESE partido.
+_IDS_POR_FIXTURE = {}
+
+
+def ids_de_partidos_proximos(df, ahora):
+    """{equipo: team_id} de los partidos NS de la ventana de H2H (ahora ..
+    ahora + DIAS_VENTANA_H2H), tomado de _IDS_POR_FIXTURE. Si en la ventana
+    un mismo nombre aparece con dos ids distintos (homonimos), se omite: no
+    hay forma segura de saber a cual corresponde el cache."""
+    fecha_dt = pd.to_datetime(df["fecha"], errors="coerce", utc=True)
+    proximos = df[(df["estado"] == "NS") & (fecha_dt >= ahora) & (fecha_dt <= ahora + timedelta(days=DIAS_VENTANA_H2H))]
+    ids, ambiguos = {}, set()
+    for fid, local, visitante in zip(proximos["fixture_id"], proximos["equipo_local"], proximos["equipo_visitante"]):
+        try:
+            del_partido = _IDS_POR_FIXTURE.get(int(fid)) or {}
+        except (TypeError, ValueError):
+            continue
+        for equipo in (local, visitante):
+            tid = del_partido.get(equipo)
+            if not tid:
+                continue
+            if equipo in ids and ids[equipo] != tid:
+                ambiguos.add(equipo)
+            ids[equipo] = tid
+    return {e: t for e, t in ids.items() if e not in ambiguos}
+
+
+def corregir_cache_con_partidos(cache_team_id, ids_proximos):
+    """Pone en el cache el id del partido cuando el guardado es otro o
+    falta. Devuelve {equipo: (id_anterior, id_del_partido)} solo de los que
+    TENIAN otro id (los corregidos)."""
+    corregidos = {}
+    for equipo, tid in ids_proximos.items():
+        anterior = cache_team_id.get(equipo)
+        if anterior is not None and anterior != tid:
+            corregidos[equipo] = (anterior, tid)
+        cache_team_id[equipo] = tid
+    return corregidos
+
+
+def destrabar_pares(consultados, equipos):
+    """Saca de la memoria de pares consultados los de esos equipos: se
+    habian consultado con el id de otro club. Devuelve cuantos saco."""
+    claves = [k for k in consultados if set(k.split(" | ")) & set(equipos)]
+    for k in claves:
+        del consultados[k]
+    return len(claves)
 
 
 def _guardar_cache_team_ids(cache):
@@ -1019,6 +1074,26 @@ def actualizar_h2h_desactualizado(df, pares_forzados=None):
     ahora_utc = pd.Timestamp.now(tz="UTC")
     consultados = _cargar_h2h_consultados()
 
+    # Id exacto de cada equipo, del propio partido que esta por jugarse
+    # (2026-10-12). La busqueda por nombre habia dejado en el cache el id de
+    # un club homonimo del MISMO pais -- por eso el chequeo de pais no lo
+    # frenaba -- en 9 equipos (Atletico-MG 117 en vez de 1062, Austin = Austin
+    # Bold, Charlotte = Charlotte Independence, Masr = AL Masry...): la
+    # consulta de cruces volvia vacia, el par quedaba "consultado" 7 dias y
+    # el H2H incompleto (Atletico-MG vs Santos: 3 cruces de 5). Si el cache
+    # tenia otro id se corrige, y los pares de ese equipo salen de la
+    # memoria para consultarse de nuevo, ahora con el id correcto.
+    cache_team_id = _cargar_cache_team_ids()
+    if pares_forzados is None:
+        corregidos = corregir_cache_con_partidos(cache_team_id, ids_de_partidos_proximos(df, ahora_utc))
+        if corregidos:
+            destrabados = destrabar_pares(consultados, corregidos)
+            for equipo, (anterior, nuevo) in sorted(corregidos.items()):
+                print(f"  team_id corregido {equipo}: {anterior} -> {nuevo} (el del cache era de otro equipo)")
+            print(f"  Pares que vuelven a consultarse por tener un equipo corregido: {destrabados}")
+            _guardar_cache_team_ids(cache_team_id)
+            _guardar_h2h_consultados(consultados, ahora_utc)
+
     if pares_forzados is not None:
         pares_desactualizados = list(pares_forzados)
         print(f"  Pares forzados (backfill dirigido): {len(pares_desactualizados)}")
@@ -1031,10 +1106,10 @@ def actualizar_h2h_desactualizado(df, pares_forzados=None):
     if not pares_desactualizados:
         return
 
-    # Cache de team_id precargado desde disco -- ver _cargar_cache_team_ids().
-    # El id de un equipo no cambia de un dia a otro, asi que esto evita
-    # volver a resolverlos todos desde cero en cada corrida.
-    cache_team_id = _cargar_cache_team_ids()
+    # Cache de team_id precargado desde disco (arriba) -- ver
+    # _cargar_cache_team_ids(). El id de un equipo no cambia de un dia a
+    # otro, asi que esto evita volver a resolverlos todos desde cero en cada
+    # corrida.
     print(f"  Cache de team_id precargado: {len(cache_team_id)} equipos")
 
     fixture_ids_existentes = set(df["fixture_id"].dropna().astype(int))
