@@ -1938,7 +1938,12 @@ def actualizar_jugadores_partidos(df_antes, df_despues):
         estados_antes = df_antes.set_index("fixture_id")["estado"].to_dict()
 
     ESTADOS_TERMINADOS = ("FT", "AET", "PEN")
+    # Una fila sin fixture_id (hay una de MLS de 2025-03-29) no se puede
+    # pedir y nunca matchea en estados_antes: sin este filtro contaba
+    # siempre como recien terminada, iba primera por vieja y el
+    # int(NaN) cortaba el paso entero antes del primer pedido.
     recien_terminados = df_despues[
+        df_despues["fixture_id"].notna() &
         df_despues["estado"].isin(ESTADOS_TERMINADOS) &
         df_despues["fixture_id"].apply(lambda fid: estados_antes.get(fid) not in ESTADOS_TERMINADOS)
     ]
