@@ -94280,3 +94280,1277 @@
 1535174,354036,G. Bazan,Blooming,Carabobo FC,Copa Sudamericana,2026-04-30T22:00:00,visitante,,True,45,0.0,0.0,0.0,0.0,0,0
 1535174,125635,R. Hinojosa,Blooming,Carabobo FC,Copa Sudamericana,2026-04-30T22:00:00,visitante,F,True,89,0.0,0.0,0.0,7.0,1,0
 1535174,311439,Miguel Villarroel,Blooming,Carabobo FC,Copa Sudamericana,2026-04-30T22:00:00,visitante,F,True,69,0.0,0.0,1.0,1.0,0,0
+1603046,442120,Khalid Al Harbi,Al-Faisaly FC,Al Kholood,Pro League Arabia,2026-10-15T13:40:00,local,D,True,1,0.0,0.0,0.0,0.0,0,0
+1603046,47532,A. Ba,Al-Faisaly FC,Al Kholood,Pro League Arabia,2026-10-15T13:40:00,local,D,True,14,0.0,0.0,0.0,2.0,0,0
+1603046,3408,C. Bassogog,Al-Faisaly FC,Al Kholood,Pro League Arabia,2026-10-15T13:40:00,local,F,True,29,0.0,0.0,0.0,0.0,0,0
+1603046,634645,Saud Haddad,Al-Faisaly FC,Al Kholood,Pro League Arabia,2026-10-15T13:40:00,local,D,True,1,0.0,0.0,0.0,0.0,0,0
+1603046,44543,Abdullah Almuqrin,Al-Faisaly FC,Al Kholood,Pro League Arabia,2026-10-15T13:40:00,local,F,True,29,0.0,1.0,1.0,1.0,0,0
+1603046,47352,Fernando Pacheco,Al-Faisaly FC,Al Kholood,Pro League Arabia,2026-10-15T13:40:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1603046,44600,Yaseen Barnawi,Al-Faisaly FC,Al Kholood,Pro League Arabia,2026-10-15T13:40:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1603046,8450,A. Seck,Al-Faisaly FC,Al Kholood,Pro League Arabia,2026-10-15T13:40:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1603046,21097,Andrei Girotto,Al-Faisaly FC,Al Kholood,Pro League Arabia,2026-10-15T13:40:00,local,D,True,90,0.0,0.0,0.0,0.0,1,0
+1603046,44300,Mohammed Ali Al Shanqiti,Al-Faisaly FC,Al Kholood,Pro League Arabia,2026-10-15T13:40:00,local,D,True,89,0.0,0.0,0.0,1.0,0,0
+1603046,10033,Flávio,Al-Faisaly FC,Al Kholood,Pro League Arabia,2026-10-15T13:40:00,local,M,True,90,0.0,1.0,0.0,0.0,0,0
+1603046,432033,Eid Al Muwallad,Al-Faisaly FC,Al Kholood,Pro League Arabia,2026-10-15T13:40:00,local,M,True,76,0.0,0.0,0.0,0.0,0,0
+1603046,755,Jaime Seoane,Al-Faisaly FC,Al Kholood,Pro League Arabia,2026-10-15T13:40:00,local,M,True,61,0.0,0.0,1.0,1.0,0,0
+1603046,8627,T. Bongonda,Al-Faisaly FC,Al Kholood,Pro League Arabia,2026-10-15T13:40:00,local,F,True,61,0.0,0.0,0.0,2.0,0,0
+1603046,21506,Alexandre Mendy,Al-Faisaly FC,Al Kholood,Pro League Arabia,2026-10-15T13:40:00,local,F,True,89,3.0,0.0,4.0,6.0,0,0
+1603046,44604,Abdulaziz Al Bishi,Al-Faisaly FC,Al Kholood,Pro League Arabia,2026-10-15T13:40:00,local,F,True,90,0.0,0.0,0.0,3.0,0,0
+1603046,465792,Abdulrahman Al Obaid,Al Kholood,Al-Faisaly FC,Pro League Arabia,2026-10-15T13:40:00,visitante,D,True,1,0.0,0.0,0.0,0.0,0,0
+1603046,409633,Muhannad Al Yahya,Al Kholood,Al-Faisaly FC,Pro League Arabia,2026-10-15T13:40:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1603046,44738,Ramzi Solan,Al Kholood,Al-Faisaly FC,Pro League Arabia,2026-10-15T13:40:00,visitante,D,True,89,0.0,1.0,0.0,0.0,1,0
+1603046,633732,Mansour Camara,Al Kholood,Al-Faisaly FC,Pro League Arabia,2026-10-15T13:40:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1603046,37925,S. Pinas,Al Kholood,Al-Faisaly FC,Pro League Arabia,2026-10-15T13:40:00,visitante,D,True,90,1.0,0.0,1.0,3.0,0,0
+1603046,409612,Yaseen Al Zubaidi,Al Kholood,Al-Faisaly FC,Pro League Arabia,2026-10-15T13:40:00,visitante,M,True,64,0.0,0.0,0.0,3.0,0,0
+1603046,44314,Abdulrahman Al Dosari,Al Kholood,Al-Faisaly FC,Pro League Arabia,2026-10-15T13:40:00,visitante,M,True,64,0.0,0.0,0.0,0.0,0,0
+1603046,302051,S. Cissé,Al Kholood,Al-Faisaly FC,Pro League Arabia,2026-10-15T13:40:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1603046,19475,J. Buckley,Al Kholood,Al-Faisaly FC,Pro League Arabia,2026-10-15T13:40:00,visitante,M,True,90,0.0,0.0,0.0,1.0,0,0
+1603046,309364,Coba,Al Kholood,Al-Faisaly FC,Pro League Arabia,2026-10-15T13:40:00,visitante,M,True,90,0.0,0.0,0.0,4.0,0,0
+1603046,183747,Iker Kortajarena,Al Kholood,Al-Faisaly FC,Pro League Arabia,2026-10-15T13:40:00,visitante,F,True,90,0.0,0.0,1.0,3.0,0,0
+1603046,127688,J. Domingues,Al Kholood,Al-Faisaly FC,Pro League Arabia,2026-10-15T13:40:00,visitante,F,True,90,1.0,0.0,2.0,4.0,0,0
+1603046,442470,Muhammad Sawan,Al Kholood,Al-Faisaly FC,Pro League Arabia,2026-10-15T13:40:00,visitante,M,True,26,0.0,0.0,0.0,0.0,0,0
+1603046,379115,A. Essomba,Al Kholood,Al-Faisaly FC,Pro League Arabia,2026-10-15T13:40:00,visitante,F,True,26,0.0,0.0,0.0,0.0,0,0
+1603049,104726,Marwan Al Haidari,Al Khaleej Saihat,Al-Fayha,Pro League Arabia,2026-10-15T14:50:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1603049,44014,Saeed Al Hamsal,Al Khaleej Saihat,Al-Fayha,Pro League Arabia,2026-10-15T14:50:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1603049,44558,Abdullah Al Hafith,Al Khaleej Saihat,Al-Fayha,Pro League Arabia,2026-10-15T14:50:00,local,D,True,89,0.0,0.0,0.0,0.0,0,0
+1603049,2627,Mohammed Al Khabrani,Al Khaleej Saihat,Al-Fayha,Pro League Arabia,2026-10-15T14:50:00,local,D,True,90,0.0,0.0,1.0,1.0,0,0
+1603049,21486,Pedro Rebocho,Al Khaleej Saihat,Al-Fayha,Pro League Arabia,2026-10-15T14:50:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1603049,414,Omar Mascarell,Al Khaleej Saihat,Al-Fayha,Pro League Arabia,2026-10-15T14:50:00,local,M,True,90,0.0,0.0,0.0,0.0,0,0
+1603049,44724,Majed Kanabah,Al Khaleej Saihat,Al-Fayha,Pro League Arabia,2026-10-15T14:50:00,local,M,True,90,0.0,0.0,0.0,0.0,0,0
+1603049,44495,Saleh  Al Amri,Al Khaleej Saihat,Al-Fayha,Pro League Arabia,2026-10-15T14:50:00,local,M,True,74,0.0,0.0,0.0,1.0,0,0
+1603049,310869,Nawaf Al Saadi,Al Khaleej Saihat,Al-Fayha,Pro League Arabia,2026-10-15T14:50:00,local,F,True,16,0.0,0.0,0.0,0.0,0,0
+1603049,2643,Mansour Hamzi,Al Khaleej Saihat,Al-Fayha,Pro League Arabia,2026-10-15T14:50:00,local,F,True,32,0.0,1.0,0.0,1.0,0,0
+1603049,566293,M. Benegas,Al Khaleej Saihat,Al-Fayha,Pro League Arabia,2026-10-15T14:50:00,local,F,True,16,1.0,0.0,1.0,4.0,0,0
+1603049,44599,Ahmad Asiri,Al Khaleej Saihat,Al-Fayha,Pro League Arabia,2026-10-15T14:50:00,local,D,True,1,0.0,0.0,0.0,0.0,0,0
+1603049,44485,Fawaz Al Saqour,Al Khaleej Saihat,Al-Fayha,Pro League Arabia,2026-10-15T14:50:00,local,D,True,2,0.0,0.0,0.0,0.0,0,0
+1603049,44755,Fahad Al Rashidi,Al Khaleej Saihat,Al-Fayha,Pro League Arabia,2026-10-15T14:50:00,local,M,True,58,0.0,0.0,0.0,0.0,0,0
+1603049,18881,J. King,Al Khaleej Saihat,Al-Fayha,Pro League Arabia,2026-10-15T14:50:00,local,F,True,74,1.0,0.0,2.0,2.0,0,0
+1603049,30437,M. Barrow,Al Khaleej Saihat,Al-Fayha,Pro League Arabia,2026-10-15T14:50:00,local,F,True,88,0.0,0.0,1.0,2.0,0,0
+1603049,576305,R. Enad,Al-Fayha,Al Khaleej Saihat,Pro League Arabia,2026-10-15T14:50:00,visitante,F,True,16,0.0,0.0,0.0,0.0,0,0
+1603049,673788,Fahad Majed Alhubayshi,Al-Fayha,Al Khaleej Saihat,Pro League Arabia,2026-10-15T14:50:00,visitante,M,True,16,0.0,0.0,0.0,0.0,0,0
+1603049,44487,Nawaf Al-Harthi,Al-Fayha,Al Khaleej Saihat,Pro League Arabia,2026-10-15T14:50:00,visitante,M,True,39,0.0,0.0,0.0,1.0,1,0
+1603049,197962,Mansor Al Beshe,Al-Fayha,Al Khaleej Saihat,Pro League Arabia,2026-10-15T14:50:00,visitante,M,True,5,0.0,0.0,0.0,0.0,0,0
+1603049,197068,Malek Al Abdulmanam,Al-Fayha,Al Khaleej Saihat,Pro League Arabia,2026-10-15T14:50:00,visitante,F,True,5,0.0,0.0,0.0,1.0,0,0
+1603049,2968,O. Mosquera,Al-Fayha,Al Khaleej Saihat,Pro League Arabia,2026-10-15T14:50:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1603049,44361,Mohammed Al Baqawi,Al-Fayha,Al Khaleej Saihat,Pro League Arabia,2026-10-15T14:50:00,visitante,D,True,74,0.0,0.0,0.0,0.0,0,0
+1603049,44652,Mukhir Al Rashidi,Al-Fayha,Al Khaleej Saihat,Pro League Arabia,2026-10-15T14:50:00,visitante,D,True,85,0.0,0.0,0.0,1.0,0,0
+1603049,30444,O. Colley,Al-Fayha,Al Khaleej Saihat,Pro League Arabia,2026-10-15T14:50:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1603049,44653,Ahmed Bamasud,Al-Fayha,Al Khaleej Saihat,Pro League Arabia,2026-10-15T14:50:00,visitante,D,True,90,0.0,0.0,0.0,2.0,0,0
+1603049,483647,Ali Al Hussain,Al-Fayha,Al Khaleej Saihat,Pro League Arabia,2026-10-15T14:50:00,visitante,M,True,85,0.0,0.0,0.0,1.0,0,0
+1603049,47343,Alfa Semedo,Al-Fayha,Al Khaleej Saihat,Pro League Arabia,2026-10-15T14:50:00,visitante,F,True,90,0.0,0.0,0.0,2.0,0,0
+1603049,10170,Hugo Moura,Al-Fayha,Al Khaleej Saihat,Pro League Arabia,2026-10-15T14:50:00,visitante,M,True,90,0.0,0.0,0.0,0.0,0,0
+1603049,47473,Jason,Al-Fayha,Al Khaleej Saihat,Pro League Arabia,2026-10-15T14:50:00,visitante,M,True,90,0.0,0.0,0.0,0.0,1,0
+1603049,237103,Lázaro,Al-Fayha,Al Khaleej Saihat,Pro League Arabia,2026-10-15T14:50:00,visitante,F,True,35,0.0,0.0,0.0,2.0,0,0
+1603049,415164,Yago Santana,Al-Fayha,Al Khaleej Saihat,Pro League Arabia,2026-10-15T14:50:00,visitante,M,True,90,0.0,0.0,0.0,0.0,0,0
+1603047,90956,M. Konaté,Al-Hazm,Al-Fateh,Pro League Arabia,2026-10-15T15:15:00,local,M,True,5,0.0,0.0,0.0,0.0,0,0
+1603047,502291,Aboubacar Diakite,Al-Hazm,Al-Fateh,Pro League Arabia,2026-10-15T15:15:00,local,F,True,5,0.0,0.0,0.0,0.0,0,0
+1603047,135059,A. Ben Hmida,Al-Hazm,Al-Fateh,Pro League Arabia,2026-10-15T15:15:00,local,D,True,24,0.0,0.0,0.0,0.0,0,0
+1603047,383176,Mohammed Issa,Al-Hazm,Al-Fateh,Pro League Arabia,2026-10-15T15:15:00,local,D,True,16,0.0,0.0,0.0,0.0,0,0
+1603047,576884,M. Al Hamdani,Al-Hazm,Al-Fateh,Pro League Arabia,2026-10-15T15:15:00,local,F,True,5,0.0,0.0,0.0,0.0,0,0
+1603047,66347,J. Staněk,Al-Hazm,Al-Fateh,Pro League Arabia,2026-10-15T15:15:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1603047,431654,Sultan Tanker,Al-Hazm,Al-Fateh,Pro League Arabia,2026-10-15T15:15:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1603047,335131,Bonheur Mugisha,Al-Hazm,Al-Fateh,Pro League Arabia,2026-10-15T15:15:00,local,D,True,90,0.0,0.0,0.0,1.0,0,0
+1603047,44624,Abdulrahman Al-Dakheel,Al-Hazm,Al-Fateh,Pro League Arabia,2026-10-15T15:15:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1603047,368151,Abdulaziz Al-Harbi,Al-Hazm,Al-Fateh,Pro League Arabia,2026-10-15T15:15:00,local,M,True,74,0.0,0.0,0.0,1.0,0,0
+1603047,4455,S. Bendebka,Al-Hazm,Al-Fateh,Pro League Arabia,2026-10-15T15:15:00,local,M,True,85,1.0,0.0,1.0,1.0,0,0
+1603047,494586,A. Bah,Al-Hazm,Al-Fateh,Pro League Arabia,2026-10-15T15:15:00,local,M,True,90,0.0,0.0,0.0,1.0,0,0
+1603047,270187,Ahmed Al Nakhli,Al-Hazm,Al-Fateh,Pro League Arabia,2026-10-15T15:15:00,local,M,True,90,0.0,0.0,1.0,1.0,0,0
+1603047,44605,Abdul Aziz Sulaiman Al Dhuwayhi,Al-Hazm,Al-Fateh,Pro League Arabia,2026-10-15T15:15:00,local,F,True,85,1.0,0.0,3.0,3.0,0,0
+1603047,4609,A. Sayoud,Al-Hazm,Al-Fateh,Pro League Arabia,2026-10-15T15:15:00,local,F,True,85,0.0,1.0,0.0,4.0,0,0
+1603047,328451,Ahmed Al Shamrani,Al-Hazm,Al-Fateh,Pro League Arabia,2026-10-15T15:15:00,local,F,True,66,0.0,0.0,0.0,0.0,1,0
+1603047,442341,Abdul Rahman Al Khaibari,Al-Fateh,Al-Hazm,Pro League Arabia,2026-10-15T15:15:00,visitante,D,True,23,0.0,0.0,0.0,0.0,0,0
+1603047,350379,Faisal Al Abdulwahed,Al-Fateh,Al-Hazm,Pro League Arabia,2026-10-15T15:15:00,visitante,M,True,10,1.0,0.0,1.0,1.0,0,0
+1603047,402455,Fahad Al Zubaidi,Al-Fateh,Al-Hazm,Pro League Arabia,2026-10-15T15:15:00,visitante,F,True,10,0.0,0.0,0.0,0.0,0,0
+1603047,528296,R. Kelder,Al-Fateh,Al-Hazm,Pro League Arabia,2026-10-15T15:15:00,visitante,D,True,1,0.0,0.0,0.0,0.0,0,0
+1603047,322179,M. Lixandru,Al-Fateh,Al-Hazm,Pro League Arabia,2026-10-15T15:15:00,visitante,M,True,33,0.0,0.0,0.0,0.0,0,0
+1603047,30733,A. Šemper,Al-Fateh,Al-Hazm,Pro League Arabia,2026-10-15T15:15:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1603047,7061,K. Boateng,Al-Fateh,Al-Hazm,Pro League Arabia,2026-10-15T15:15:00,visitante,D,True,90,0.0,0.0,0.0,0.0,1,0
+1603047,50042,M. Saâdane,Al-Fateh,Al-Hazm,Pro League Arabia,2026-10-15T15:15:00,visitante,D,True,90,0.0,0.0,0.0,1.0,0,0
+1603047,662673,Abdulaziz Al Suwailem,Al-Fateh,Al-Hazm,Pro League Arabia,2026-10-15T15:15:00,visitante,D,True,90,0.0,0.0,0.0,2.0,0,0
+1603047,404324,Sattam Al Tumbukti,Al-Fateh,Al-Hazm,Pro League Arabia,2026-10-15T15:15:00,visitante,M,True,57,0.0,0.0,0.0,0.0,0,0
+1603047,44509,Ali Al Hassan,Al-Fateh,Al-Hazm,Pro League Arabia,2026-10-15T15:15:00,visitante,M,True,90,0.0,0.0,0.0,1.0,0,0
+1603047,1272,Z. Youssouf,Al-Fateh,Al-Hazm,Pro League Arabia,2026-10-15T15:15:00,visitante,M,True,57,0.0,0.0,0.0,0.0,0,0
+1603047,431625,Abdulelah Al Khaibari,Al-Fateh,Al-Hazm,Pro League Arabia,2026-10-15T15:15:00,visitante,M,True,80,0.0,0.0,0.0,1.0,1,0
+1603047,50395,M. Batna,Al-Fateh,Al-Hazm,Pro League Arabia,2026-10-15T15:15:00,visitante,F,True,90,1.0,2.0,2.0,4.0,0,0
+1603047,21155,W. Kanga,Al-Fateh,Al-Hazm,Pro League Arabia,2026-10-15T15:15:00,visitante,F,True,90,1.0,0.0,1.0,2.0,0,0
+1603047,40446,L. Haraslín,Al-Fateh,Al-Hazm,Pro League Arabia,2026-10-15T15:15:00,visitante,F,True,89,0.0,0.0,2.0,3.0,0,0
+1636445,939,David von Ballmoos,FC Lugano,FK Crvena Zvezda,Conference League,2026-10-15T16:45:00,local,G,True,90,,0.0,,,0,0
+1636445,26626,Antonios Papadopoulos,FC Lugano,FK Crvena Zvezda,Conference League,2026-10-15T16:45:00,local,D,True,90,,0.0,,,0,0
+1636445,503,Lars Lukas Mai,FC Lugano,FK Crvena Zvezda,Conference League,2026-10-15T16:45:00,local,D,True,90,,0.0,,,1,0
+1636445,1411,Hannes Delcroix,FC Lugano,FK Crvena Zvezda,Conference League,2026-10-15T16:45:00,local,D,True,79,,0.0,,,0,0
+1636445,416964,Bekhruz Karimov,FC Lugano,FK Crvena Zvezda,Conference League,2026-10-15T16:45:00,local,M,True,73,,0.0,,1.0,0,0
+1636445,125708,Uran Bislimi,FC Lugano,FK Crvena Zvezda,Conference League,2026-10-15T16:45:00,local,M,True,90,,0.0,,,0,0
+1636445,48520,Anto Grgić,FC Lugano,FK Crvena Zvezda,Conference League,2026-10-15T16:45:00,local,M,True,90,1.0,0.0,1.0,3.0,0,0
+1636445,193645,Yanis Cimignani,FC Lugano,FK Crvena Zvezda,Conference League,2026-10-15T16:45:00,local,M,True,90,,1.0,,1.0,0,0
+1636445,2809,Renato Steffen,FC Lugano,FK Crvena Zvezda,Conference League,2026-10-15T16:45:00,local,F,True,63,,1.0,,,1,0
+1636445,303004,Daniel Dos Santos,FC Lugano,FK Crvena Zvezda,Conference League,2026-10-15T16:45:00,local,F,True,79,,0.0,,1.0,0,0
+1636445,2812,Albian Ajeti,FC Lugano,FK Crvena Zvezda,Conference League,2026-10-15T16:45:00,local,F,True,63,1.0,0.0,2.0,2.0,0,0
+1636445,458180,Elias Pihlström,FC Lugano,FK Crvena Zvezda,Conference League,2026-10-15T16:45:00,local,F,False,27,,0.0,,,0,0
+1636445,25192,Kevin Behrens,FC Lugano,FK Crvena Zvezda,Conference League,2026-10-15T16:45:00,local,F,False,27,,0.0,1.0,1.0,0,0
+1636445,454964,Dereck Moncada,FC Lugano,FK Crvena Zvezda,Conference League,2026-10-15T16:45:00,local,F,False,17,1.0,0.0,1.0,1.0,0,0
+1636445,19133,Ezgjan Alioski,FC Lugano,FK Crvena Zvezda,Conference League,2026-10-15T16:45:00,local,D,False,11,,0.0,,1.0,0,0
+1636445,351925,Beckham Castro,FC Lugano,FK Crvena Zvezda,Conference League,2026-10-15T16:45:00,local,F,False,11,,0.0,,1.0,0,0
+1636445,41089,Matheus,FK Crvena Zvezda,FC Lugano,Conference League,2026-10-15T16:45:00,visitante,G,True,90,,0.0,,,0,0
+1636445,264495,Vladimir Lučić,FK Crvena Zvezda,FC Lugano,Conference League,2026-10-15T16:45:00,visitante,D,True,75,,0.0,1.0,2.0,0,0
+1636445,491074,Matej Gaštarov,FK Crvena Zvezda,FC Lugano,Conference League,2026-10-15T16:45:00,visitante,D,True,90,,1.0,1.0,1.0,1,0
+1636445,495936,Stefan Gudelj,FK Crvena Zvezda,FC Lugano,Conference League,2026-10-15T16:45:00,visitante,D,True,90,,0.0,,,1,0
+1636445,36920,Yuta Nakayama,FK Crvena Zvezda,FC Lugano,Conference League,2026-10-15T16:45:00,visitante,D,True,90,,0.0,,1.0,0,0
+1636445,21584,Mihailo Ristić,FK Crvena Zvezda,FC Lugano,Conference League,2026-10-15T16:45:00,visitante,D,True,75,,0.0,1.0,2.0,0,0
+1636445,17789,Timi Max Elšnik,FK Crvena Zvezda,FC Lugano,Conference League,2026-10-15T16:45:00,visitante,M,True,90,1.0,0.0,1.0,2.0,0,0
+1636445,31054,Rade Krunić,FK Crvena Zvezda,FC Lugano,Conference League,2026-10-15T16:45:00,visitante,M,True,81,1.0,0.0,1.0,1.0,0,0
+1636445,187926,Tomás Händel,FK Crvena Zvezda,FC Lugano,Conference League,2026-10-15T16:45:00,visitante,M,True,64,,0.0,,,0,0
+1636445,462208,Vasilije Kostov,FK Crvena Zvezda,FC Lugano,Conference League,2026-10-15T16:45:00,visitante,M,True,90,,0.0,,,1,0
+1636445,284072,Ahmadou Bamba Dieng,FK Crvena Zvezda,FC Lugano,Conference League,2026-10-15T16:45:00,visitante,F,True,81,,0.0,,6.0,0,0
+1636445,146008,Muhammed-Cham Saračević,FK Crvena Zvezda,FC Lugano,Conference League,2026-10-15T16:45:00,visitante,M,False,26,,1.0,,,0,0
+1636445,610938,Matej Strika,FK Crvena Zvezda,FC Lugano,Conference League,2026-10-15T16:45:00,visitante,D,False,15,,0.0,,,0,0
+1636445,394173,Kristiyan Balov,FK Crvena Zvezda,FC Lugano,Conference League,2026-10-15T16:45:00,visitante,F,False,15,,0.0,,,0,0
+1636445,408543,Mahmudu Bajo,FK Crvena Zvezda,FC Lugano,Conference League,2026-10-15T16:45:00,visitante,M,False,9,,0.0,,1.0,1,0
+1636445,18830,Marko Arnautović,FK Crvena Zvezda,FC Lugano,Conference League,2026-10-15T16:45:00,visitante,F,False,9,,0.0,,,0,0
+1636419,292514,Toni Silić,HNK Hajduk Split,Ajax,Conference League,2026-10-15T16:45:00,local,G,True,90,,0.0,,,0,0
+1636419,386438,Mathieu Acapandié,HNK Hajduk Split,Ajax,Conference League,2026-10-15T16:45:00,local,D,True,90,,0.0,,,0,0
+1636419,53517,Dennis Hadžikadunić,HNK Hajduk Split,Ajax,Conference League,2026-10-15T16:45:00,local,D,True,90,,0.0,,,0,0
+1636419,7577,Dario Marešić,HNK Hajduk Split,Ajax,Conference League,2026-10-15T16:45:00,local,D,True,90,,0.0,1.0,1.0,0,0
+1636419,340566,Šimun Hrgović,HNK Hajduk Split,Ajax,Conference League,2026-10-15T16:45:00,local,D,True,89,,0.0,,,0,0
+1636419,181474,Alberto del Moral,HNK Hajduk Split,Ajax,Conference League,2026-10-15T16:45:00,local,M,True,69,,0.0,,,1,0
+1636419,326088,Khalil Fayad,HNK Hajduk Split,Ajax,Conference League,2026-10-15T16:45:00,local,M,True,89,,0.0,,1.0,0,0
+1636419,111386,Abdoulie Sanyang Bamba,HNK Hajduk Split,Ajax,Conference League,2026-10-15T16:45:00,local,M,True,89,1.0,0.0,1.0,1.0,0,0
+1636419,181394,Dalisson de Almeida,HNK Hajduk Split,Ajax,Conference League,2026-10-15T16:45:00,local,M,True,90,,0.0,1.0,1.0,0,0
+1636419,375290,Marin Šotiček,HNK Hajduk Split,Ajax,Conference League,2026-10-15T16:45:00,local,M,True,90,1.0,1.0,2.0,2.0,0,0
+1636419,14352,Michele Šego,HNK Hajduk Split,Ajax,Conference League,2026-10-15T16:45:00,local,F,True,89,,1.0,2.0,3.0,1,0
+1636419,2922,Leander Dendoncker,HNK Hajduk Split,Ajax,Conference League,2026-10-15T16:45:00,local,M,False,21,,0.0,,,0,0
+1636419,8935,Alec Van Hoorenbeeck,HNK Hajduk Split,Ajax,Conference League,2026-10-15T16:45:00,local,D,False,1,,0.0,,,0,0
+1636419,50027,Dario Melnjak,HNK Hajduk Split,Ajax,Conference League,2026-10-15T16:45:00,local,D,False,14,,0.0,,,0,0
+1636419,602741,Anđelo Šutalo,HNK Hajduk Split,Ajax,Conference League,2026-10-15T16:45:00,local,M,False,14,,0.0,1.0,1.0,0,0
+1636419,324750,Carlos Martín,HNK Hajduk Split,Ajax,Conference League,2026-10-15T16:45:00,local,F,False,1,,0.0,,,0,0
+1636419,127,Marc-André Ter Stegen,Ajax,HNK Hajduk Split,Conference League,2026-10-15T16:45:00,visitante,G,True,90,,0.0,,,0,0
+1636419,261,Thilo Kehrer,Ajax,HNK Hajduk Split,Conference League,2026-10-15T16:45:00,visitante,D,True,90,,1.0,1.0,1.0,0,0
+1636419,453706,Aaron Bouwman,Ajax,HNK Hajduk Split,Conference League,2026-10-15T16:45:00,visitante,D,True,90,,0.0,,1.0,0,0
+1636419,294684,Youri Baas,Ajax,HNK Hajduk Split,Conference League,2026-10-15T16:45:00,visitante,D,True,90,,0.0,,,0,0
+1636419,491250,Jofre Torrents ,Ajax,HNK Hajduk Split,Conference League,2026-10-15T16:45:00,visitante,D,True,75,,0.0,,,0,0
+1636419,25321,Davy Klaassen,Ajax,HNK Hajduk Split,Conference League,2026-10-15T16:45:00,visitante,M,True,75,1.0,0.0,2.0,2.0,0,0
+1636419,74,Sofyan Amrabat,Ajax,HNK Hajduk Split,Conference League,2026-10-15T16:45:00,visitante,M,True,90,,0.0,,,0,0
+1636419,984,Julian Brandt,Ajax,HNK Hajduk Split,Conference League,2026-10-15T16:45:00,visitante,M,True,90,,0.0,,,0,0
+1636419,2182,Viktor Tsygankov,Ajax,HNK Hajduk Split,Conference League,2026-10-15T16:45:00,visitante,F,True,76,,0.0,,,0,0
+1636419,110153,Tolu Arokodare,Ajax,HNK Hajduk Split,Conference League,2026-10-15T16:45:00,visitante,F,True,90,,0.0,1.0,3.0,0,0
+1636419,515967,Abdellah Ouazane,Ajax,HNK Hajduk Split,Conference League,2026-10-15T16:45:00,visitante,F,True,76,,0.0,,,0,0
+1636419,329715,Oscar Gloukh,Ajax,HNK Hajduk Split,Conference League,2026-10-15T16:45:00,visitante,M,False,15,,0.0,,,0,0
+1636419,443829,Jorthy Mokio,Ajax,HNK Hajduk Split,Conference League,2026-10-15T16:45:00,visitante,M,False,15,,0.0,,,0,0
+1636419,56283,Lucas Rosa,Ajax,HNK Hajduk Split,Conference League,2026-10-15T16:45:00,visitante,D,False,14,,0.0,,,0,0
+1636419,267771,Marcos Leonardo,Ajax,HNK Hajduk Split,Conference League,2026-10-15T16:45:00,visitante,F,False,14,,0.0,,,0,0
+1636464,126,Iñaki Peña,Panathinaikos,Borac Banja Luka,Conference League,2026-10-15T16:45:00,local,G,True,90,,0.0,,,0,0
+1636464,1627,Davide Calabria,Panathinaikos,Borac Banja Luka,Conference League,2026-10-15T16:45:00,local,D,True,90,,0.0,,,0,0
+1636464,194,Stefan de Vrij,Panathinaikos,Borac Banja Luka,Conference League,2026-10-15T16:45:00,local,D,True,90,,0.0,,,0,0
+1636464,24873,Rick Van Drongelen,Panathinaikos,Borac Banja Luka,Conference League,2026-10-15T16:45:00,local,D,True,90,,0.0,,,0,0
+1636464,26828,Georgios Kyriakopoulos,Panathinaikos,Borac Banja Luka,Conference League,2026-10-15T16:45:00,local,D,True,90,,0.0,2.0,2.0,0,0
+1636464,122428,Kings Kangwa,Panathinaikos,Borac Banja Luka,Conference League,2026-10-15T16:45:00,local,M,True,90,1.0,0.0,1.0,3.0,0,0
+1636464,297139,Etienne Camara,Panathinaikos,Borac Banja Luka,Conference League,2026-10-15T16:45:00,local,M,True,90,,0.0,,1.0,0,0
+1636464,323785,Vicente Taborda,Panathinaikos,Borac Banja Luka,Conference League,2026-10-15T16:45:00,local,M,True,67,,0.0,3.0,3.0,0,0
+1636464,129678,Azzedine Ounahi,Panathinaikos,Borac Banja Luka,Conference League,2026-10-15T16:45:00,local,M,True,80,,0.0,2.0,3.0,0,0
+1636464,490156,Santino Andino,Panathinaikos,Borac Banja Luka,Conference League,2026-10-15T16:45:00,local,M,True,80,,1.0,,1.0,0,0
+1636464,37186,Cyriel Dessers,Panathinaikos,Borac Banja Luka,Conference League,2026-10-15T16:45:00,local,F,True,67,1.0,0.0,1.0,6.0,0,0
+1636464,342918,Andreas Tetteh,Panathinaikos,Borac Banja Luka,Conference League,2026-10-15T16:45:00,local,F,False,23,,0.0,,,0,0
+1636464,93059,Levi García,Panathinaikos,Borac Banja Luka,Conference League,2026-10-15T16:45:00,local,F,False,23,,0.0,,1.0,0,0
+1636464,427373,Adriano Jagušić,Panathinaikos,Borac Banja Luka,Conference League,2026-10-15T16:45:00,local,M,False,10,,0.0,,,0,0
+1636464,277896,Elmin Rastoder,Panathinaikos,Borac Banja Luka,Conference League,2026-10-15T16:45:00,local,F,False,10,,0.0,,,0,0
+1636464,446130,Mladen Jurkas,Borac Banja Luka,Panathinaikos,Conference League,2026-10-15T16:45:00,visitante,G,True,90,,0.0,,,0,0
+1636464,125692,Branimir Cipetić,Borac Banja Luka,Panathinaikos,Conference League,2026-10-15T16:45:00,visitante,D,True,84,,0.0,,,0,0
+1636464,37578,Bart Meijers,Borac Banja Luka,Panathinaikos,Conference League,2026-10-15T16:45:00,visitante,D,True,90,,0.0,,,1,0
+1636464,45936,Siniša Saničanin,Borac Banja Luka,Panathinaikos,Conference League,2026-10-15T16:45:00,visitante,D,True,90,,0.0,,1.0,0,0
+1636464,109542,Sebastian Herrera,Borac Banja Luka,Panathinaikos,Conference League,2026-10-15T16:45:00,visitante,D,True,90,,0.0,,,1,0
+1636464,105633,Sandi Ogrinec,Borac Banja Luka,Panathinaikos,Conference League,2026-10-15T16:45:00,visitante,M,True,90,,0.0,,,0,0
+1636464,49855,Miloš Jojić,Borac Banja Luka,Panathinaikos,Conference League,2026-10-15T16:45:00,visitante,M,True,90,1.0,0.0,1.0,1.0,0,0
+1636464,61413,Ante Roguljić,Borac Banja Luka,Panathinaikos,Conference League,2026-10-15T16:45:00,visitante,M,True,74,,0.0,,,0,0
+1636464,77040,Amer Hiroš,Borac Banja Luka,Panathinaikos,Conference League,2026-10-15T16:45:00,visitante,M,True,74,,0.0,,,1,0
+1636464,80207,Stefan Savić,Borac Banja Luka,Panathinaikos,Conference League,2026-10-15T16:45:00,visitante,M,True,90,,0.0,1.0,2.0,0,0
+1636464,128717,Luka Juričić,Borac Banja Luka,Panathinaikos,Conference League,2026-10-15T16:45:00,visitante,F,True,87,,1.0,,,0,0
+1636464,286376,Viktor Rogan,Borac Banja Luka,Panathinaikos,Conference League,2026-10-15T16:45:00,visitante,D,False,16,,0.0,,,0,0
+1636464,567431,Matej Deket,Borac Banja Luka,Panathinaikos,Conference League,2026-10-15T16:45:00,visitante,F,False,16,,0.0,,,0,0
+1636464,316338,David Vuković,Borac Banja Luka,Panathinaikos,Conference League,2026-10-15T16:45:00,visitante,F,False,10,,0.0,,,0,0
+1636464,76932,Stojan Vranješ,Borac Banja Luka,Panathinaikos,Conference League,2026-10-15T16:45:00,visitante,M,False,3,,0.0,,,0,0
+1636414,8716,Davy Roef,Gent,Aarhus,Conference League,2026-10-15T16:45:00,local,G,True,90,,0.0,,,0,0
+1636414,60353,Maksim Paskotsi,Gent,Aarhus,Conference League,2026-10-15T16:45:00,local,D,True,90,,0.0,,,0,0
+1636414,19850,Christian Burgess,Gent,Aarhus,Conference League,2026-10-15T16:45:00,local,D,True,90,,0.0,,2.0,0,0
+1636414,37639,Siebe Van der Heyden,Gent,Aarhus,Conference League,2026-10-15T16:45:00,local,D,True,45,,0.0,,1.0,0,0
+1636414,381830,Tibe De Vlieger,Gent,Aarhus,Conference League,2026-10-15T16:45:00,local,M,True,90,,0.0,,2.0,1,0
+1636414,267728,Michel Ange Balikwisha,Gent,Aarhus,Conference League,2026-10-15T16:45:00,local,M,True,90,,0.0,1.0,2.0,0,0
+1636414,331087,Matties Volckaert,Gent,Aarhus,Conference League,2026-10-15T16:45:00,local,M,True,66,,0.0,,,0,0
+1636414,299972,Mathias Delorge,Gent,Aarhus,Conference League,2026-10-15T16:45:00,local,M,True,77,,0.0,,1.0,1,0
+1636414,161935,Tiago Araújo,Gent,Aarhus,Conference League,2026-10-15T16:45:00,local,M,True,90,,1.0,1.0,1.0,0,0
+1636414,635056,Ibrahima Cisse,Gent,Aarhus,Conference League,2026-10-15T16:45:00,local,F,True,90,,0.0,,4.0,0,0
+1636414,328978,Momodou Sonko,Gent,Aarhus,Conference League,2026-10-15T16:45:00,local,F,True,90,,0.0,1.0,2.0,0,0
+1636414,417857,Mamadou Diallo,Gent,Aarhus,Conference League,2026-10-15T16:45:00,local,D,False,45,,0.0,,1.0,0,0
+1636414,477549,Hyllarion Goore,Gent,Aarhus,Conference League,2026-10-15T16:45:00,local,F,False,24,1.0,0.0,1.0,1.0,0,0
+1636414,20144,Leonardo Lopes,Gent,Aarhus,Conference League,2026-10-15T16:45:00,local,M,False,13,,0.0,,,0,0
+1636414,39301,Mads Hedenstad,Aarhus,Gent,Conference League,2026-10-15T16:45:00,visitante,G,True,90,,0.0,,,0,0
+1636414,137131,Colin Rösler,Aarhus,Gent,Conference League,2026-10-15T16:45:00,visitante,D,True,90,,0.0,,,0,0
+1636414,57141,Daníel Grétarsson,Aarhus,Gent,Conference League,2026-10-15T16:45:00,visitante,D,True,45,,0.0,1.0,1.0,0,0
+1636414,151738,Eric Kahl,Aarhus,Gent,Conference League,2026-10-15T16:45:00,visitante,D,True,77,,0.0,,,0,0
+1636414,315567,Jacob Andersen,Aarhus,Gent,Conference League,2026-10-15T16:45:00,visitante,M,True,90,,0.0,,,0,0
+1636414,94322,Callum McCowatt,Aarhus,Gent,Conference League,2026-10-15T16:45:00,visitante,M,True,90,,0.0,,,0,0
+1636414,57425,Markus Solbakken,Aarhus,Gent,Conference League,2026-10-15T16:45:00,visitante,M,True,77,,0.0,,,1,0
+1636414,108490,Kristian Arnstad,Aarhus,Gent,Conference League,2026-10-15T16:45:00,visitante,M,True,62,,0.0,,,0,0
+1636414,37880,Mikael Anderson,Aarhus,Gent,Conference League,2026-10-15T16:45:00,visitante,M,True,21,,0.0,,,0,0
+1636414,514279,Stefen Tchamche,Aarhus,Gent,Conference League,2026-10-15T16:45:00,visitante,F,True,90,,0.0,,2.0,0,0
+1636414,606217,James Bogere,Aarhus,Gent,Conference League,2026-10-15T16:45:00,visitante,F,True,90,,0.0,,,1,0
+1636414,470281,Frederik Emmery,Aarhus,Gent,Conference League,2026-10-15T16:45:00,visitante,F,False,69,,0.0,,,0,0
+1636414,15668,Tobias Mølgaard,Aarhus,Gent,Conference League,2026-10-15T16:45:00,visitante,D,False,45,,0.0,,,0,0
+1636414,39315,Magnus Knudsen,Aarhus,Gent,Conference League,2026-10-15T16:45:00,visitante,M,False,28,,0.0,,,0,0
+1636414,15584,Frederik Tingager,Aarhus,Gent,Conference League,2026-10-15T16:45:00,visitante,D,False,13,,0.0,,,0,0
+1636414,50009,Jens Jønsson,Aarhus,Gent,Conference League,2026-10-15T16:45:00,visitante,M,False,13,,0.0,,,0,0
+1636482,43040,Laurenţiu Popescu,Universitatea Craiova,Getafe,Conference League,2026-10-15T16:45:00,local,G,True,90,,0.0,,,0,0
+1636482,172883,Oleksandr Romanchuk,Universitatea Craiova,Getafe,Conference League,2026-10-15T16:45:00,local,D,True,90,,0.0,,1.0,1,0
+1636482,46136,Nikola Stevanović,Universitatea Craiova,Getafe,Conference League,2026-10-15T16:45:00,local,D,True,90,,0.0,,1.0,0,0
+1636482,104481,Vladimir Screciu,Universitatea Craiova,Getafe,Conference League,2026-10-15T16:45:00,local,D,True,90,,0.0,,1.0,1,0
+1636482,142018,Samuel Teles,Universitatea Craiova,Getafe,Conference League,2026-10-15T16:45:00,local,M,True,90,,0.0,,1.0,0,0
+1636482,41727,João Lameira,Universitatea Craiova,Getafe,Conference League,2026-10-15T16:45:00,local,M,True,75,,0.0,,,1,0
+1636482,43071,Tudor Băluță,Universitatea Craiova,Getafe,Conference League,2026-10-15T16:45:00,local,M,True,90,,0.0,,,0,0
+1636482,43048,Nicușor Bancu,Universitatea Craiova,Getafe,Conference League,2026-10-15T16:45:00,local,M,True,90,,0.0,,,0,0
+1636482,43050,Alexandru Cicâldău,Universitatea Craiova,Getafe,Conference League,2026-10-15T16:45:00,local,F,True,85,,1.0,,1.0,1,0
+1636482,190548,Assad Al-Hamlawi,Universitatea Craiova,Getafe,Conference League,2026-10-15T16:45:00,local,F,True,75,1.0,0.0,2.0,3.0,0,0
+1636482,119077,Ștefan Baiaram,Universitatea Craiova,Getafe,Conference League,2026-10-15T16:45:00,local,F,True,70,,0.0,,,0,0
+1636482,409845,David Matei,Universitatea Craiova,Getafe,Conference League,2026-10-15T16:45:00,local,M,False,20,,0.0,1.0,1.0,0,0
+1636482,104553,Alexandru Crețu,Universitatea Craiova,Getafe,Conference League,2026-10-15T16:45:00,local,M,False,15,,0.0,,,0,0
+1636482,190985,Simon Elisor,Universitatea Craiova,Getafe,Conference League,2026-10-15T16:45:00,local,F,False,15,,0.0,,,0,0
+1636482,450410,Luca Băsceanu,Universitatea Craiova,Getafe,Conference League,2026-10-15T16:45:00,local,M,False,9,,0.0,1.0,1.0,0,0
+1636482,47247,David Soria,Getafe,Universitatea Craiova,Conference League,2026-10-15T16:45:00,visitante,G,True,90,,0.0,,,0,0
+1636482,388013,Andrés García,Getafe,Universitatea Craiova,Conference League,2026-10-15T16:45:00,visitante,D,True,45,,0.0,,1.0,0,0
+1636482,47250,Djené,Getafe,Universitatea Craiova,Conference League,2026-10-15T16:45:00,visitante,D,True,90,,0.0,,,0,0
+1636482,484474,Jean Ives Valou,Getafe,Universitatea Craiova,Conference League,2026-10-15T16:45:00,visitante,D,True,90,,0.0,,1.0,0,0
+1636482,471478,Davinchi,Getafe,Universitatea Craiova,Conference League,2026-10-15T16:45:00,visitante,D,True,59,,0.0,,,0,0
+1636482,1489,Nemanja Gudelj,Getafe,Universitatea Craiova,Conference League,2026-10-15T16:45:00,visitante,M,True,90,1.0,0.0,1.0,1.0,0,0
+1636482,162249,Francho Serrano,Getafe,Universitatea Craiova,Conference League,2026-10-15T16:45:00,visitante,M,True,90,,0.0,1.0,1.0,0,0
+1636482,187987,Ramón Terrats,Getafe,Universitatea Craiova,Conference League,2026-10-15T16:45:00,visitante,M,True,82,,0.0,,1.0,0,0
+1636482,343205,Mario Martín,Getafe,Universitatea Craiova,Conference League,2026-10-15T16:45:00,visitante,M,True,69,,0.0,,,0,0
+1636482,195512,Martín Satriano,Getafe,Universitatea Craiova,Conference League,2026-10-15T16:45:00,visitante,M,True,90,,0.0,1.0,3.0,0,0
+1636482,47472,Borja Mayoral,Getafe,Universitatea Craiova,Conference League,2026-10-15T16:45:00,visitante,F,True,90,,0.0,,1.0,0,0
+1636482,18794,Kiko Femenía,Getafe,Universitatea Craiova,Conference League,2026-10-15T16:45:00,visitante,D,False,45,,0.0,,,0,0
+1636482,64268,Johan Mojica,Getafe,Universitatea Craiova,Conference League,2026-10-15T16:45:00,visitante,D,False,31,,0.0,,,1,0
+1636482,465838,Alberto Risco,Getafe,Universitatea Craiova,Conference League,2026-10-15T16:45:00,visitante,M,False,21,,0.0,,,0,0
+1636482,316516,Sebastián Boselli,Getafe,Universitatea Craiova,Conference League,2026-10-15T16:45:00,visitante,D,False,8,,0.0,,,0,0
+1636401,325077,Fedor Lapoukhov,CSKA Sofia,Monaco,Conference League,2026-10-15T16:45:00,local,G,True,90,,0.0,,,0,0
+1636401,197253,Pastor,CSKA Sofia,Monaco,Conference League,2026-10-15T16:45:00,local,D,True,90,,0.0,,,0,0
+1636401,26856,Dinis Almeida,CSKA Sofia,Monaco,Conference League,2026-10-15T16:45:00,local,D,True,85,,0.0,,,0,0
+1636401,6302,Facundo Rodríguez,CSKA Sofia,Monaco,Conference League,2026-10-15T16:45:00,local,D,True,90,,0.0,1.0,1.0,0,0
+1636401,5641,Ángelo Martino,CSKA Sofia,Monaco,Conference League,2026-10-15T16:45:00,local,D,True,90,,0.0,1.0,3.0,1,0
+1636401,1853,Bruno Jordão,CSKA Sofia,Monaco,Conference League,2026-10-15T16:45:00,local,M,True,90,,0.0,,3.0,0,0
+1636401,15518,Ioannis Pittas,CSKA Sofia,Monaco,Conference League,2026-10-15T16:45:00,local,M,True,85,,0.0,2.0,2.0,0,0
+1636401,7782,Max Ebong,CSKA Sofia,Monaco,Conference League,2026-10-15T16:45:00,local,M,True,85,,0.0,,,1,0
+1636401,30535,Stefano Sensi,CSKA Sofia,Monaco,Conference League,2026-10-15T16:45:00,local,M,True,90,,1.0,,1.0,1,0
+1636401,159774,Léo Pereira,CSKA Sofia,Monaco,Conference League,2026-10-15T16:45:00,local,M,True,73,,0.0,,,0,0
+1636401,278358,Leandro Godoy,CSKA Sofia,Monaco,Conference League,2026-10-15T16:45:00,local,F,True,73,,0.0,,3.0,0,0
+1636401,42996,Cătălin Itu,CSKA Sofia,Monaco,Conference League,2026-10-15T16:45:00,local,M,False,17,,0.0,,,0,0
+1636401,37728,Joël Zwarts,CSKA Sofia,Monaco,Conference League,2026-10-15T16:45:00,local,F,False,17,1.0,0.0,1.0,1.0,0,0
+1636401,375004,Teodor Ivanov,CSKA Sofia,Monaco,Conference League,2026-10-15T16:45:00,local,D,False,11,,0.0,,,0,0
+1636401,174609,Isaac Solet,CSKA Sofia,Monaco,Conference League,2026-10-15T16:45:00,local,M,False,11,,0.0,,,0,0
+1636401,174834,James Eto'o,CSKA Sofia,Monaco,Conference League,2026-10-15T16:45:00,local,M,False,11,,0.0,,,0,0
+1636401,963,Lukáš Hrádecký,Monaco,CSKA Sofia,Conference League,2026-10-15T16:45:00,visitante,G,True,90,,0.0,,,0,0
+1636401,231,Jordan Teze,Monaco,CSKA Sofia,Conference League,2026-10-15T16:45:00,visitante,D,True,90,,0.0,,,0,0
+1636401,428084,Sadibou Sané,Monaco,CSKA Sofia,Conference League,2026-10-15T16:45:00,visitante,D,True,90,,0.0,,,0,0
+1636401,47480,Mohammed Salisu,Monaco,CSKA Sofia,Conference League,2026-10-15T16:45:00,visitante,D,True,59,,0.0,,,0,0
+1636401,371916,Christian Mawissa,Monaco,CSKA Sofia,Conference League,2026-10-15T16:45:00,visitante,D,True,90,,0.0,,,0,0
+1636401,1101,Takumi Minamino,Monaco,CSKA Sofia,Conference League,2026-10-15T16:45:00,visitante,M,True,59,,0.0,,,0,0
+1636401,374058,Lamine Camara,Monaco,CSKA Sofia,Conference League,2026-10-15T16:45:00,visitante,M,True,59,,0.0,,,0,0
+1636401,374361,Edan Diop,Monaco,CSKA Sofia,Conference League,2026-10-15T16:45:00,visitante,M,True,90,,0.0,1.0,1.0,1,0
+1636401,340152,Stanis Idumbo Muzambo,Monaco,CSKA Sofia,Conference League,2026-10-15T16:45:00,visitante,M,True,64,,1.0,,,0,0
+1636401,386276,Paris Brunner,Monaco,CSKA Sofia,Conference League,2026-10-15T16:45:00,visitante,F,True,90,1.0,1.0,3.0,4.0,0,0
+1636401,135775,Ansu Fati,Monaco,CSKA Sofia,Conference League,2026-10-15T16:45:00,visitante,F,True,77,1.0,0.0,1.0,1.0,0,0
+1636401,294722,Nazinho,Monaco,CSKA Sofia,Conference League,2026-10-15T16:45:00,visitante,D,False,31,,0.0,,,0,0
+1636401,2810,Denis Zakaria,Monaco,CSKA Sofia,Conference League,2026-10-15T16:45:00,visitante,M,False,31,,0.0,,1.0,0,0
+1636401,109,Aleksandr Golovin,Monaco,CSKA Sofia,Conference League,2026-10-15T16:45:00,visitante,M,False,31,,0.0,,,0,0
+1636401,161622,Matthis Abline,Monaco,CSKA Sofia,Conference League,2026-10-15T16:45:00,visitante,F,False,26,,0.0,,,0,0
+1636401,671702,Anis Soubeir,Monaco,CSKA Sofia,Conference League,2026-10-15T16:45:00,visitante,M,False,13,,0.0,,,0,0
+1636440,7060,Johannes Kreidl,KuPS,Trabzonspor,Conference League,2026-10-15T16:45:00,local,G,True,90,,0.0,,,0,0
+1636440,370733,Akseli Puukko,KuPS,Trabzonspor,Conference League,2026-10-15T16:45:00,local,D,True,90,,0.0,,,0,0
+1636440,710,Kasim Adams,KuPS,Trabzonspor,Conference League,2026-10-15T16:45:00,local,D,True,90,,0.0,,,1,0
+1636440,263910,Arttu Lötjönen,KuPS,Trabzonspor,Conference League,2026-10-15T16:45:00,local,D,True,90,,0.0,,,0,0
+1636440,358156,Niilo Kujasalo,KuPS,Trabzonspor,Conference League,2026-10-15T16:45:00,local,D,True,90,,0.0,,1.0,0,0
+1636440,355318,Samuel Pasanen,KuPS,Trabzonspor,Conference League,2026-10-15T16:45:00,local,M,True,74,,0.0,1.0,1.0,0,0
+1636440,55376,Petteri Pennanen,KuPS,Trabzonspor,Conference League,2026-10-15T16:45:00,local,M,True,64,1.0,0.0,1.0,1.0,0,0
+1636440,264134,Joslyn Luyeye-Lutumba,KuPS,Trabzonspor,Conference League,2026-10-15T16:45:00,local,M,True,63,,0.0,,,0,0
+1636440,15857,Julius Eskesen,KuPS,Trabzonspor,Conference League,2026-10-15T16:45:00,local,M,True,90,,0.0,,,1,0
+1636440,434046,Bob Nii Armah,KuPS,Trabzonspor,Conference League,2026-10-15T16:45:00,local,M,True,63,,0.0,1.0,1.0,0,0
+1636440,40431,Piotr Parzyszek,KuPS,Trabzonspor,Conference League,2026-10-15T16:45:00,local,F,True,74,,0.0,2.0,5.0,1,0
+1636440,8944,Gustav Engvall,KuPS,Trabzonspor,Conference League,2026-10-15T16:45:00,local,F,False,27,1.0,0.0,2.0,2.0,0,0
+1636440,339601,Ayman Aiki,KuPS,Trabzonspor,Conference League,2026-10-15T16:45:00,local,F,False,27,,0.0,,,0,0
+1636440,55374,Tommi Jyry,KuPS,Trabzonspor,Conference League,2026-10-15T16:45:00,local,M,False,26,,0.0,,,0,0
+1636440,127751,Saikou Touray,KuPS,Trabzonspor,Conference League,2026-10-15T16:45:00,local,M,False,16,,0.0,,1.0,0,0
+1636440,52727,Jaime Moreno,KuPS,Trabzonspor,Conference League,2026-10-15T16:45:00,local,F,False,16,,0.0,1.0,2.0,0,0
+1636440,526,André Onana,Trabzonspor,KuPS,Conference League,2026-10-15T16:45:00,visitante,G,True,90,,0.0,,,0,0
+1636440,332056,Wagner Pina,Trabzonspor,KuPS,Conference League,2026-10-15T16:45:00,visitante,D,True,90,,0.0,,,0,0
+1636440,62490,Samet Akaydın,Trabzonspor,KuPS,Conference League,2026-10-15T16:45:00,visitante,D,True,90,,0.0,,,1,0
+1636440,72048,Cenk Özkaçar,Trabzonspor,KuPS,Conference League,2026-10-15T16:45:00,visitante,D,True,90,,0.0,1.0,3.0,0,0
+1636440,158431,Melih Kabasakal,Trabzonspor,KuPS,Conference League,2026-10-15T16:45:00,visitante,D,True,90,,0.0,,1.0,0,0
+1636440,274355,Benjamin Bouchouari,Trabzonspor,KuPS,Conference League,2026-10-15T16:45:00,visitante,M,True,90,,0.0,,,0,0
+1636440,21087,Batista Mendy,Trabzonspor,KuPS,Conference League,2026-10-15T16:45:00,visitante,M,True,55,,0.0,,,1,0
+1636440,49942,Ozan Tufan,Trabzonspor,KuPS,Conference League,2026-10-15T16:45:00,visitante,M,True,55,,0.0,,1.0,0,0
+1636440,306,Mohamed Salah,Trabzonspor,KuPS,Conference League,2026-10-15T16:45:00,visitante,F,True,55,1.0,1.0,2.0,3.0,0,0
+1636440,15812,Paul Onuachu,Trabzonspor,KuPS,Conference League,2026-10-15T16:45:00,visitante,F,True,10,1.0,0.0,1.0,1.0,0,0
+1636440,161790,Aral Şimşir,Trabzonspor,KuPS,Conference League,2026-10-15T16:45:00,visitante,F,True,74,,0.0,1.0,3.0,0,0
+1636440,340625,Franculino Djú,Trabzonspor,KuPS,Conference League,2026-10-15T16:45:00,visitante,F,False,80,2.0,0.0,3.0,4.0,0,0
+1636440,299,Fabinho,Trabzonspor,KuPS,Conference League,2026-10-15T16:45:00,visitante,M,False,35,,0.0,,,0,0
+1636440,22408,Tim Jabol-Folcarelli,Trabzonspor,KuPS,Conference League,2026-10-15T16:45:00,visitante,M,False,35,,0.0,,,0,0
+1636440,454973,Noah Saviolo,Trabzonspor,KuPS,Conference League,2026-10-15T16:45:00,visitante,F,False,35,,0.0,,,0,0
+1636440,3638,Ernest Muçi,Trabzonspor,KuPS,Conference League,2026-10-15T16:45:00,visitante,M,False,16,,1.0,,,0,0
+1636453,161270,Alexander Lundin,Mjallby AIF,Inter Club d'Escaldes,Conference League,2026-10-15T16:45:00,local,G,True,90,,0.0,,,0,0
+1636453,55362,Tony Miettinen,Mjallby AIF,Inter Club d'Escaldes,Conference League,2026-10-15T16:45:00,local,D,True,90,,0.0,,,0,0
+1636453,107245,Axel Norén,Mjallby AIF,Inter Club d'Escaldes,Conference League,2026-10-15T16:45:00,local,D,True,90,1.0,0.0,1.0,1.0,0,0
+1636453,305443,Abdullah Iqbal,Mjallby AIF,Inter Club d'Escaldes,Conference League,2026-10-15T16:45:00,local,D,True,88,,1.0,,,0,0
+1636453,161057,Villiam Granath,Mjallby AIF,Inter Club d'Escaldes,Conference League,2026-10-15T16:45:00,local,M,True,90,,0.0,,2.0,1,0
+1636453,201898,Jeppe Kjaer,Mjallby AIF,Inter Club d'Escaldes,Conference League,2026-10-15T16:45:00,local,M,True,88,,0.0,2.0,3.0,0,0
+1636453,47721,Jesper Gustavsson,Mjallby AIF,Inter Club d'Escaldes,Conference League,2026-10-15T16:45:00,local,M,True,90,,0.0,,,0,0
+1636453,281660,Mads Enggård,Mjallby AIF,Inter Club d'Escaldes,Conference League,2026-10-15T16:45:00,local,M,True,62,,0.0,,,1,0
+1636453,264106,Martin Agnarsson,Mjallby AIF,Inter Club d'Escaldes,Conference League,2026-10-15T16:45:00,local,M,True,90,,0.0,,,0,0
+1636453,47720,Viktor Gustafson,Mjallby AIF,Inter Club d'Escaldes,Conference League,2026-10-15T16:45:00,local,F,True,76,,0.0,,,1,0
+1636453,47729,Jacob Bergström,Mjallby AIF,Inter Club d'Escaldes,Conference League,2026-10-15T16:45:00,local,F,True,90,1.0,0.0,3.0,4.0,0,0
+1636453,263203,Áki Samuelsen,Mjallby AIF,Inter Club d'Escaldes,Conference League,2026-10-15T16:45:00,local,F,False,28,,0.0,1.0,1.0,0,0
+1636453,519717,Olle Lindberg,Mjallby AIF,Inter Club d'Escaldes,Conference League,2026-10-15T16:45:00,local,M,False,14,,0.0,,,0,0
+1636453,377040,Ludvig Tidstrand,Mjallby AIF,Inter Club d'Escaldes,Conference League,2026-10-15T16:45:00,local,M,False,2,,0.0,,,0,0
+1636453,48089,Tom Pettersson,Mjallby AIF,Inter Club d'Escaldes,Conference League,2026-10-15T16:45:00,local,D,False,2,,0.0,,,0,0
+1636453,2034,Javier Díaz,Inter Club d'Escaldes,Mjallby AIF,Conference League,2026-10-15T16:45:00,visitante,G,True,90,,0.0,,,0,0
+1636453,154802,Maurizio Pochettino,Inter Club d'Escaldes,Mjallby AIF,Conference League,2026-10-15T16:45:00,visitante,D,True,90,,0.0,,,0,0
+1636453,270474,Álex Sánchez,Inter Club d'Escaldes,Mjallby AIF,Conference League,2026-10-15T16:45:00,visitante,D,True,73,,0.0,,,0,0
+1636453,588653,Anwar Hernandez,Inter Club d'Escaldes,Mjallby AIF,Conference League,2026-10-15T16:45:00,visitante,D,True,90,,0.0,,,0,0
+1636453,122740,Jilmar Torres,Inter Club d'Escaldes,Mjallby AIF,Conference League,2026-10-15T16:45:00,visitante,D,True,89,,0.0,,,1,0
+1636453,122616,Víctor Alonso,Inter Club d'Escaldes,Mjallby AIF,Conference League,2026-10-15T16:45:00,visitante,M,True,73,,0.0,,,0,0
+1636453,183974,Domi Berlanga,Inter Club d'Escaldes,Mjallby AIF,Conference League,2026-10-15T16:45:00,visitante,M,True,90,,0.0,,2.0,0,0
+1636453,332316,Pablo Molina,Inter Club d'Escaldes,Mjallby AIF,Conference League,2026-10-15T16:45:00,visitante,M,True,89,,0.0,,,0,0
+1636453,183999,David López,Inter Club d'Escaldes,Mjallby AIF,Conference League,2026-10-15T16:45:00,visitante,M,True,90,,0.0,,1.0,0,0
+1636453,188205,Soule Sidibe,Inter Club d'Escaldes,Mjallby AIF,Conference League,2026-10-15T16:45:00,visitante,M,True,61,,0.0,,,0,0
+1636453,182702,Faysal Chouaib,Inter Club d'Escaldes,Mjallby AIF,Conference League,2026-10-15T16:45:00,visitante,F,True,90,,0.0,,1.0,0,0
+1636453,581145,Borja Arellano,Inter Club d'Escaldes,Mjallby AIF,Conference League,2026-10-15T16:45:00,visitante,F,False,29,,0.0,,3.0,0,0
+1636453,15161,Robin Lafarge,Inter Club d'Escaldes,Mjallby AIF,Conference League,2026-10-15T16:45:00,visitante,D,False,17,,0.0,,,0,0
+1636453,609969,Lamine Diaby,Inter Club d'Escaldes,Mjallby AIF,Conference League,2026-10-15T16:45:00,visitante,D,False,17,,0.0,,,0,0
+1636453,169264,Adrian Da Cunha,Inter Club d'Escaldes,Mjallby AIF,Conference League,2026-10-15T16:45:00,visitante,D,False,1,,0.0,,,0,0
+1636453,187206,Rafinha,Inter Club d'Escaldes,Mjallby AIF,Conference League,2026-10-15T16:45:00,visitante,F,False,1,,0.0,,,0,0
+1636404,3588,Mario Dajsinani,Egnatia Rrogozhinë,FC Midtjylland,Conference League,2026-10-15T16:45:00,local,G,True,90,,0.0,,,0,0
+1636404,132,Guillem Jaime,Egnatia Rrogozhinë,FC Midtjylland,Conference League,2026-10-15T16:45:00,local,D,True,66,,0.0,,1.0,0,0
+1636404,3713,Eneo Bitri,Egnatia Rrogozhinë,FC Midtjylland,Conference League,2026-10-15T16:45:00,local,D,True,90,,0.0,,,0,0
+1636404,4227,Eljon Sota,Egnatia Rrogozhinë,FC Midtjylland,Conference League,2026-10-15T16:45:00,local,D,True,90,,0.0,,,0,0
+1636404,405801,Andrey Yago,Egnatia Rrogozhinë,FC Midtjylland,Conference League,2026-10-15T16:45:00,local,D,True,90,,0.0,,,0,0
+1636404,157998,Altin Kryeziu,Egnatia Rrogozhinë,FC Midtjylland,Conference League,2026-10-15T16:45:00,local,M,True,90,,1.0,,1.0,0,0
+1636404,3661,Albano Aleksi,Egnatia Rrogozhinë,FC Midtjylland,Conference League,2026-10-15T16:45:00,local,M,True,90,,0.0,,,0,0
+1636404,93030,Karim Loukili,Egnatia Rrogozhinë,FC Midtjylland,Conference League,2026-10-15T16:45:00,local,M,True,81,,0.0,,,0,0
+1636404,140971,Ildi Gruda,Egnatia Rrogozhinë,FC Midtjylland,Conference League,2026-10-15T16:45:00,local,F,True,81,1.0,0.0,2.0,2.0,0,0
+1636404,634358,Daniel Adjessa,Egnatia Rrogozhinë,FC Midtjylland,Conference League,2026-10-15T16:45:00,local,F,True,72,,0.0,,1.0,0,0
+1636404,260819,Alessandro Albanese,Egnatia Rrogozhinë,FC Midtjylland,Conference League,2026-10-15T16:45:00,local,F,True,66,,0.0,3.0,4.0,0,0
+1636404,321420,Geralb Smajli,Egnatia Rrogozhinë,FC Midtjylland,Conference League,2026-10-15T16:45:00,local,D,False,24,,0.0,,,0,0
+1636404,422597,Ibrahim Diabaté,Egnatia Rrogozhinë,FC Midtjylland,Conference League,2026-10-15T16:45:00,local,M,False,24,,0.0,,1.0,1,0
+1636404,14021,Jurguens Montenegro,Egnatia Rrogozhinë,FC Midtjylland,Conference League,2026-10-15T16:45:00,local,F,False,18,,0.0,,,0,0
+1636404,395753,Numan Ajetovikj,Egnatia Rrogozhinë,FC Midtjylland,Conference League,2026-10-15T16:45:00,local,D,False,9,,0.0,,,0,0
+1636404,10032,Fernando Medeiros,Egnatia Rrogozhinë,FC Midtjylland,Conference League,2026-10-15T16:45:00,local,M,False,9,,0.0,,,0,0
+1636404,37729,Nordin Bakker,FC Midtjylland,Egnatia Rrogozhinë,Conference League,2026-10-15T16:45:00,visitante,G,True,90,,0.0,,,0,0
+1636404,533,Rasmus Kristensen,FC Midtjylland,Egnatia Rrogozhinë,Conference League,2026-10-15T16:45:00,visitante,D,True,90,,1.0,,,0,0
+1636404,404026,Ousmane Diao,FC Midtjylland,Egnatia Rrogozhinë,Conference League,2026-10-15T16:45:00,visitante,D,True,90,,0.0,,,0,0
+1636404,19345,Mads Bech Sørensen,FC Midtjylland,Egnatia Rrogozhinë,Conference League,2026-10-15T16:45:00,visitante,D,True,90,,0.0,1.0,1.0,0,0
+1636404,356814,David Martínez Morales,FC Midtjylland,Egnatia Rrogozhinë,Conference League,2026-10-15T16:45:00,visitante,M,True,45,,0.0,,2.0,0,0
+1636404,26519,Hong Hyun-seok,FC Midtjylland,Egnatia Rrogozhinë,Conference League,2026-10-15T16:45:00,visitante,M,True,45,,0.0,,,0,0
+1636404,2734,Philip Billing,FC Midtjylland,Egnatia Rrogozhinë,Conference League,2026-10-15T16:45:00,visitante,M,True,90,,0.0,,1.0,0,0
+1636404,338045,Denil Castillo,FC Midtjylland,Egnatia Rrogozhinë,Conference League,2026-10-15T16:45:00,visitante,M,True,77,,0.0,,,0,0
+1636404,496782,Julius Emefile,FC Midtjylland,Egnatia Rrogozhinë,Conference League,2026-10-15T16:45:00,visitante,M,True,90,,0.0,,,0,0
+1636404,34211,Gue-sung Cho,FC Midtjylland,Egnatia Rrogozhinë,Conference League,2026-10-15T16:45:00,visitante,F,True,45,1.0,0.0,1.0,2.0,0,0
+1636404,16126,Mileta Rajović,FC Midtjylland,Egnatia Rrogozhinë,Conference League,2026-10-15T16:45:00,visitante,F,True,56,,0.0,2.0,3.0,0,0
+1636404,397740,Kjell Wätjen,FC Midtjylland,Egnatia Rrogozhinë,Conference League,2026-10-15T16:45:00,visitante,M,False,45,,0.0,,,0,0
+1636404,438628,Stanley Iheanacho,FC Midtjylland,Egnatia Rrogozhinë,Conference League,2026-10-15T16:45:00,visitante,F,False,45,,0.0,1.0,2.0,0,0
+1636404,351146,Friday Etim,FC Midtjylland,Egnatia Rrogozhinë,Conference League,2026-10-15T16:45:00,visitante,F,False,45,,0.0,,,0,0
+1636404,443703,Sofus Johannesen,FC Midtjylland,Egnatia Rrogozhinë,Conference League,2026-10-15T16:45:00,visitante,M,False,34,,0.0,,,0,0
+1636404,15894,Mikael Uhre,FC Midtjylland,Egnatia Rrogozhinë,Conference League,2026-10-15T16:45:00,visitante,F,False,13,,0.0,,,0,0
+1636468,56115,Kenan Pirić,Riga,Kairat Almaty,Conference League,2026-10-15T16:45:00,local,G,True,90,,0.0,,,0,0
+1636468,72502,Maksims Tonisevs,Riga,Kairat Almaty,Conference League,2026-10-15T16:45:00,local,D,True,90,,1.0,,,0,0
+1636468,313790,Baba Musah,Riga,Kairat Almaty,Conference League,2026-10-15T16:45:00,local,D,True,90,,0.0,,,0,0
+1636468,474271,Karl Gameni Wassom,Riga,Kairat Almaty,Conference League,2026-10-15T16:45:00,local,D,True,90,,0.0,,,0,0
+1636468,70397,Raivis Jurkovskis,Riga,Kairat Almaty,Conference League,2026-10-15T16:45:00,local,D,True,90,,0.0,,,0,0
+1636468,348567,Ahmed Ankrah,Riga,Kairat Almaty,Conference League,2026-10-15T16:45:00,local,M,True,90,,0.0,,3.0,0,0
+1636468,190497,Iago Siqueira Augusto,Riga,Kairat Almaty,Conference League,2026-10-15T16:45:00,local,M,True,90,,0.0,1.0,1.0,0,0
+1636468,308634,Meïssa Diop,Riga,Kairat Almaty,Conference League,2026-10-15T16:45:00,local,M,True,86,,0.0,1.0,2.0,0,0
+1636468,278074,Salah Oulad M'Hand,Riga,Kairat Almaty,Conference League,2026-10-15T16:45:00,local,M,True,90,1.0,0.0,3.0,3.0,0,0
+1636468,367083,Raki Aouani,Riga,Kairat Almaty,Conference League,2026-10-15T16:45:00,local,M,True,86,,0.0,,1.0,0,0
+1636468,122421,Muhammed Badamosi,Riga,Kairat Almaty,Conference League,2026-10-15T16:45:00,local,F,True,61,,0.0,1.0,2.0,0,0
+1636468,270988,Reginaldo Ramires,Riga,Kairat Almaty,Conference League,2026-10-15T16:45:00,local,F,False,29,,0.0,2.0,2.0,0,0
+1636468,341914,Coli Saco,Riga,Kairat Almaty,Conference League,2026-10-15T16:45:00,local,M,False,8,,0.0,,,0,0
+1636468,129777,Samuel Pedro,Riga,Kairat Almaty,Conference League,2026-10-15T16:45:00,local,F,False,8,,0.0,,,0,0
+1636468,265533,Temirlan Anarbekov,Kairat Almaty,Riga,Conference League,2026-10-15T16:45:00,visitante,G,True,90,,0.0,,,0,0
+1636468,111532,Erkin Tapalov,Kairat Almaty,Riga,Conference League,2026-10-15T16:45:00,visitante,D,True,90,,0.0,,1.0,1,0
+1636468,2074,Aleksandr Martynovich,Kairat Almaty,Riga,Conference League,2026-10-15T16:45:00,visitante,D,True,90,,0.0,,,1,0
+1636468,265528,Aleksandr Shirobokov,Kairat Almaty,Riga,Conference League,2026-10-15T16:45:00,visitante,D,True,90,,0.0,,,0,0
+1636468,96329,Luís Mata,Kairat Almaty,Riga,Conference League,2026-10-15T16:45:00,visitante,D,True,90,,0.0,1.0,1.0,0,0
+1636468,381634,Gustavo Mendonca,Kairat Almaty,Riga,Conference League,2026-10-15T16:45:00,visitante,M,True,79,,0.0,,,0,0
+1636468,19349,Jaakko Oksanen,Kairat Almaty,Riga,Conference League,2026-10-15T16:45:00,visitante,M,True,90,,0.0,,,1,0
+1636468,323820,Aleksandr Mrynskiy,Kairat Almaty,Riga,Conference League,2026-10-15T16:45:00,visitante,M,True,79,,0.0,,,0,0
+1636468,47067,Marc Gual,Kairat Almaty,Riga,Conference League,2026-10-15T16:45:00,visitante,M,True,90,1.0,0.0,2.0,4.0,0,0
+1636468,264531,Oiva Jukkola,Kairat Almaty,Riga,Conference League,2026-10-15T16:45:00,visitante,M,True,90,,0.0,1.0,3.0,0,0
+1636468,301363,Edmilson,Kairat Almaty,Riga,Conference League,2026-10-15T16:45:00,visitante,F,True,73,,0.0,,,0,0
+1636468,453670,Ismail Bekbolat,Kairat Almaty,Riga,Conference League,2026-10-15T16:45:00,visitante,F,False,17,,0.0,,,0,0
+1636468,322050,Damir Kasabulat,Kairat Almaty,Riga,Conference League,2026-10-15T16:45:00,visitante,D,False,11,,0.0,,,0,0
+1636468,490788,Azamat Tuyakbayev,Kairat Almaty,Riga,Conference League,2026-10-15T16:45:00,visitante,M,False,11,,0.0,,,0,0
+1636293,9700,Abner,Lyon,Crystal Palace,Europa League,2026-10-15T16:45:00,local,D,True,90,0.0,0.0,1.0,1.0,0,0
+1636293,80752,T. Tessmann,Lyon,Crystal Palace,Europa League,2026-10-15T16:45:00,local,M,True,12,0.0,0.0,0.0,0.0,0,0
+1636293,66387,P. Šulc,Lyon,Crystal Palace,Europa League,2026-10-15T16:45:00,local,M,True,20,1.0,0.0,1.0,1.0,0,0
+1636293,405237,K. Boudache,Lyon,Crystal Palace,Europa League,2026-10-15T16:45:00,local,F,True,20,0.0,0.0,0.0,1.0,0,0
+1636293,162189,M. Bidstrup,Lyon,Crystal Palace,Europa League,2026-10-15T16:45:00,local,M,True,1,0.0,0.0,0.0,0.0,0,0
+1636293,519,C. Tolisso,Lyon,Crystal Palace,Europa League,2026-10-15T16:45:00,local,M,True,89,1.0,0.0,1.0,2.0,0,0
+1636293,61142,D. Greif,Lyon,Crystal Palace,Europa League,2026-10-15T16:45:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1636293,396380,Z. Athekame,Lyon,Crystal Palace,Europa League,2026-10-15T16:45:00,local,D,True,90,0.0,0.0,0.0,1.0,0,0
+1636293,7147,F. Bacher,Lyon,Crystal Palace,Europa League,2026-10-15T16:45:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636293,193293,R. Kluivert,Lyon,Crystal Palace,Europa League,2026-10-15T16:45:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636293,519664,K. Merah,Lyon,Crystal Palace,Europa League,2026-10-15T16:45:00,local,M,True,70,0.0,0.0,0.0,0.0,0,0
+1636293,162590,T. Morton,Lyon,Crystal Palace,Europa League,2026-10-15T16:45:00,local,M,True,90,0.0,0.0,0.0,0.0,0,0
+1636293,33321,Keito Nakamura,Lyon,Crystal Palace,Europa League,2026-10-15T16:45:00,local,F,True,90,0.0,2.0,0.0,2.0,1,0
+1636293,361352,N. Nartey,Lyon,Crystal Palace,Europa League,2026-10-15T16:45:00,local,M,True,78,0.0,0.0,0.0,0.0,0,0
+1636293,350856,E. Nuamah,Lyon,Crystal Palace,Europa League,2026-10-15T16:45:00,local,F,True,70,1.0,0.0,1.0,3.0,0,0
+1636293,307117,D. Osorio,Crystal Palace,Lyon,Europa League,2026-10-15T16:45:00,visitante,M,True,15,0.0,0.0,0.0,1.0,0,0
+1636293,1468,E. Nketiah,Crystal Palace,Lyon,Europa League,2026-10-15T16:45:00,visitante,F,True,28,0.0,0.0,0.0,0.0,0,0
+1636293,18929,D. McNeil,Crystal Palace,Lyon,Europa League,2026-10-15T16:45:00,visitante,F,True,4,0.0,0.0,0.0,0.0,0,0
+1636293,338735,A. Khalaili,Crystal Palace,Lyon,Europa League,2026-10-15T16:45:00,visitante,D,True,15,0.0,0.0,0.0,0.0,0,0
+1636293,2601,D. Kamada,Crystal Palace,Lyon,Europa League,2026-10-15T16:45:00,visitante,M,True,28,1.0,0.0,2.0,3.0,0,0
+1636293,288102,A. Wharton,Crystal Palace,Lyon,Europa League,2026-10-15T16:45:00,visitante,M,True,90,0.0,1.0,0.0,0.0,0,0
+1636293,38747,Q. Timber,Crystal Palace,Lyon,Europa League,2026-10-15T16:45:00,visitante,M,True,86,0.0,0.0,0.0,0.0,0,0
+1636293,2218,I. Sarr,Crystal Palace,Lyon,Europa League,2026-10-15T16:45:00,visitante,M,True,62,0.0,0.0,0.0,1.0,1,0
+1636293,126949,C. Richards,Crystal Palace,Lyon,Europa League,2026-10-15T16:45:00,visitante,D,True,90,0.0,0.0,1.0,1.0,1,0
+1636293,184226,Yeremy Pino,Crystal Palace,Lyon,Europa League,2026-10-15T16:45:00,visitante,M,True,75,1.0,0.0,1.0,1.0,1,0
+1636293,182201,T. Mitchell,Crystal Palace,Lyon,Europa League,2026-10-15T16:45:00,visitante,M,True,90,0.0,0.0,0.0,1.0,0,0
+1636293,162712,Óscar Mingueza,Crystal Palace,Lyon,Europa League,2026-10-15T16:45:00,visitante,M,True,75,0.0,0.0,0.0,0.0,0,0
+1636293,2032,J. Strand Larsen,Crystal Palace,Lyon,Europa League,2026-10-15T16:45:00,visitante,F,True,62,0.0,0.0,0.0,4.0,0,0
+1636293,21998,A. Disasi,Crystal Palace,Lyon,Europa League,2026-10-15T16:45:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636293,412759,J. Canvot,Crystal Palace,Lyon,Europa League,2026-10-15T16:45:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636293,22157,W. Benítez,Crystal Palace,Lyon,Europa League,2026-10-15T16:45:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1636222,199793,S. Maikuma,AZ Alkmaar,Hapoel Beer Sheva,Europa League,2026-10-15T16:45:00,local,D,True,61,0.0,0.0,0.0,0.0,1,0
+1636222,335633,Weslley Patati,AZ Alkmaar,Hapoel Beer Sheva,Europa League,2026-10-15T16:45:00,local,F,True,4,0.0,0.0,0.0,0.0,0,0
+1636222,36910,C. Stengs,AZ Alkmaar,Hapoel Beer Sheva,Europa League,2026-10-15T16:45:00,local,M,True,29,0.0,0.0,1.0,1.0,1,0
+1636222,342954,M. Meerdink,AZ Alkmaar,Hapoel Beer Sheva,Europa League,2026-10-15T16:45:00,local,F,True,14,1.0,0.0,2.0,2.0,0,0
+1636222,179839,D. Kasius,AZ Alkmaar,Hapoel Beer Sheva,Europa League,2026-10-15T16:45:00,local,D,True,29,0.0,0.0,0.0,0.0,1,0
+1636222,390002,M. Chávez,AZ Alkmaar,Hapoel Beer Sheva,Europa League,2026-10-15T16:45:00,local,D,True,14,0.0,0.0,0.0,0.0,0,0
+1636222,8470,J. De Busser,AZ Alkmaar,Hapoel Beer Sheva,Europa League,2026-10-15T16:45:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1636222,338839,W. Goes,AZ Alkmaar,Hapoel Beer Sheva,Europa League,2026-10-15T16:45:00,local,D,True,90,0.0,0.0,0.0,1.0,0,0
+1636222,47430,W. Hoedt,AZ Alkmaar,Hapoel Beer Sheva,Europa League,2026-10-15T16:45:00,local,D,True,90,0.0,0.0,0.0,1.0,0,0
+1636222,93064,M. de Wit,AZ Alkmaar,Hapoel Beer Sheva,Europa League,2026-10-15T16:45:00,local,D,True,76,0.0,0.0,0.0,0.0,0,0
+1636222,340597,D. Kwakman,AZ Alkmaar,Hapoel Beer Sheva,Europa League,2026-10-15T16:45:00,local,M,True,90,0.0,0.0,1.0,2.0,0,0
+1636222,371909,V. Byskov,AZ Alkmaar,Hapoel Beer Sheva,Europa League,2026-10-15T16:45:00,local,M,True,90,0.0,1.0,2.0,2.0,0,0
+1636222,38820,P. Koopmeiners,AZ Alkmaar,Hapoel Beer Sheva,Europa League,2026-10-15T16:45:00,local,M,True,90,1.0,0.0,1.0,1.0,0,0
+1636222,444790,A. Oufkir,AZ Alkmaar,Hapoel Beer Sheva,Europa League,2026-10-15T16:45:00,local,M,True,61,0.0,0.0,0.0,2.0,1,0
+1636222,581945,B. Kovacs,AZ Alkmaar,Hapoel Beer Sheva,Europa League,2026-10-15T16:45:00,local,F,True,76,0.0,0.0,0.0,2.0,0,0
+1636222,338840,R. Daal,AZ Alkmaar,Hapoel Beer Sheva,Europa League,2026-10-15T16:45:00,local,M,True,86,0.0,0.0,0.0,1.0,0,0
+1636222,32266,J. East,Hapoel Beer Sheva,AZ Alkmaar,Europa League,2026-10-15T16:45:00,visitante,F,True,28,0.0,0.0,1.0,2.0,0,0
+1636222,371922,N. Yehoshua,Hapoel Beer Sheva,AZ Alkmaar,Europa League,2026-10-15T16:45:00,visitante,M,True,28,0.0,0.0,0.0,0.0,0,0
+1636222,307834,João Victor,Hapoel Beer Sheva,AZ Alkmaar,Europa League,2026-10-15T16:45:00,visitante,F,True,12,0.0,0.0,0.0,0.0,0,0
+1636222,105605,M. Vítor,Hapoel Beer Sheva,AZ Alkmaar,Europa League,2026-10-15T16:45:00,visitante,D,True,37,0.0,0.0,1.0,1.0,0,0
+1636222,39435,A. Ugarriza,Hapoel Beer Sheva,AZ Alkmaar,Europa League,2026-10-15T16:45:00,visitante,F,True,12,0.0,0.0,0.0,0.0,1,0
+1636222,335770,D. Diop,Hapoel Beer Sheva,AZ Alkmaar,Europa League,2026-10-15T16:45:00,visitante,D,True,90,0.0,0.0,0.0,0.0,1,0
+1636222,44829,O. Marciano,Hapoel Beer Sheva,AZ Alkmaar,Europa League,2026-10-15T16:45:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1636222,215821,G. Mizrahi,Hapoel Beer Sheva,AZ Alkmaar,Europa League,2026-10-15T16:45:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636222,137521,Z. Ahmed,Hapoel Beer Sheva,AZ Alkmaar,Europa League,2026-10-15T16:45:00,visitante,F,True,78,0.0,1.0,0.0,1.0,0,0
+1636222,45983,I. Zlatanović,Hapoel Beer Sheva,AZ Alkmaar,Europa League,2026-10-15T16:45:00,visitante,F,True,78,0.0,0.0,0.0,0.0,0,0
+1636222,399719,M. Abu Rumi,Hapoel Beer Sheva,AZ Alkmaar,Europa League,2026-10-15T16:45:00,visitante,F,True,62,0.0,0.0,0.0,0.0,0,0
+1636222,304026,A. Forson,Hapoel Beer Sheva,AZ Alkmaar,Europa League,2026-10-15T16:45:00,visitante,M,True,90,1.0,0.0,2.0,2.0,0,0
+1636222,80354,Lucas Ventura,Hapoel Beer Sheva,AZ Alkmaar,Europa League,2026-10-15T16:45:00,visitante,M,True,90,0.0,0.0,0.0,0.0,0,0
+1636222,105786,E. Peretz,Hapoel Beer Sheva,AZ Alkmaar,Europa League,2026-10-15T16:45:00,visitante,M,True,62,0.0,0.0,0.0,0.0,1,0
+1636222,41967,Pedro Amador,Hapoel Beer Sheva,AZ Alkmaar,Europa League,2026-10-15T16:45:00,visitante,D,True,90,0.0,0.0,0.0,0.0,1,0
+1636222,111288,I. Nachmias,Hapoel Beer Sheva,AZ Alkmaar,Europa League,2026-10-15T16:45:00,visitante,D,True,53,0.0,0.0,0.0,0.0,0,0
+1636279,40165,M. Lis,Lech Poznan,Bayer Leverkusen,Europa League,2026-10-15T16:45:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1636279,161176,P. Wålemark,Lech Poznan,Bayer Leverkusen,Europa League,2026-10-15T16:45:00,local,M,True,60,0.0,0.0,1.0,1.0,0,0
+1636279,40565,M. Skrzypczak,Lech Poznan,Bayer Leverkusen,Europa League,2026-10-15T16:45:00,local,D,True,90,0.0,0.0,0.0,0.0,1,0
+1636279,15491,Joel Pereira,Lech Poznan,Bayer Leverkusen,Europa League,2026-10-15T16:45:00,local,D,True,90,0.0,0.0,0.0,1.0,0,0
+1636279,27760,L. Palma,Lech Poznan,Bayer Leverkusen,Europa League,2026-10-15T16:45:00,local,F,True,90,0.0,0.0,0.0,2.0,0,0
+1636279,429408,W. Mońka,Lech Poznan,Bayer Leverkusen,Europa League,2026-10-15T16:45:00,local,D,True,15,0.0,0.0,0.0,0.0,0,0
+1636279,269892,A. Kozubal,Lech Poznan,Bayer Leverkusen,Europa League,2026-10-15T16:45:00,local,M,True,90,0.0,0.0,0.0,1.0,0,0
+1636279,25619,M. Ishak,Lech Poznan,Bayer Leverkusen,Europa League,2026-10-15T16:45:00,local,M,True,60,0.0,0.0,1.0,2.0,0,0
+1636279,394956,M. Gurgul,Lech Poznan,Bayer Leverkusen,Europa League,2026-10-15T16:45:00,local,D,True,90,0.0,0.0,1.0,1.0,0,0
+1636279,48010,G. Berggren,Lech Poznan,Bayer Leverkusen,Europa League,2026-10-15T16:45:00,local,M,True,74,0.0,0.0,0.0,1.0,0,0
+1636279,47910,L. Bengtsson,Lech Poznan,Bayer Leverkusen,Europa League,2026-10-15T16:45:00,local,M,True,60,0.0,0.0,0.0,0.0,0,0
+1636279,363792,T. Yegbe,Lech Poznan,Bayer Leverkusen,Europa League,2026-10-15T16:45:00,local,D,True,75,0.0,0.0,0.0,0.0,0,0
+1636279,162029,Pablo Rodríguez,Lech Poznan,Bayer Leverkusen,Europa League,2026-10-15T16:45:00,local,M,True,16,0.0,0.0,0.0,1.0,0,0
+1636279,40529,F. Jagiełło,Lech Poznan,Bayer Leverkusen,Europa League,2026-10-15T16:45:00,local,M,True,30,0.0,0.0,0.0,0.0,0,0
+1636279,55342,D. Håkans,Lech Poznan,Bayer Leverkusen,Europa League,2026-10-15T16:45:00,local,M,True,30,0.0,0.0,0.0,0.0,0,0
+1636279,386756,Y. Agnero,Lech Poznan,Bayer Leverkusen,Europa League,2026-10-15T16:45:00,local,F,True,30,0.0,0.0,0.0,0.0,0,0
+1636279,26232,M. Flekken,Bayer Leverkusen,Lech Poznan,Europa League,2026-10-15T16:45:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1636279,162037,M. Tillman,Bayer Leverkusen,Lech Poznan,Europa League,2026-10-15T16:45:00,visitante,M,True,90,1.0,0.0,2.0,4.0,0,0
+1636279,663,M. Terrier,Bayer Leverkusen,Lech Poznan,Europa League,2026-10-15T16:45:00,visitante,F,True,18,0.0,0.0,0.0,0.0,0,0
+1636279,231029,N. Tella,Bayer Leverkusen,Lech Poznan,Europa League,2026-10-15T16:45:00,visitante,M,True,62,0.0,0.0,1.0,3.0,0,0
+1636279,41150,E. Tapsoba,Bayer Leverkusen,Lech Poznan,Europa League,2026-10-15T16:45:00,visitante,D,True,90,0.0,0.0,0.0,1.0,0,0
+1636279,380587,I. Maza,Bayer Leverkusen,Lech Poznan,Europa League,2026-10-15T16:45:00,visitante,M,True,90,1.0,0.0,1.0,4.0,0,0
+1636279,757,Lucas Vázquez,Bayer Leverkusen,Lech Poznan,Europa League,2026-10-15T16:45:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636279,162032,Miguel Gutiérrez,Bayer Leverkusen,Lech Poznan,Europa League,2026-10-15T16:45:00,visitante,D,True,62,0.0,0.0,0.0,0.0,0,0
+1636279,47516,Aleix García,Bayer Leverkusen,Lech Poznan,Europa League,2026-10-15T16:45:00,visitante,M,True,62,0.0,0.0,0.0,2.0,0,0
+1636279,237087,E. Fernández,Bayer Leverkusen,Lech Poznan,Europa League,2026-10-15T16:45:00,visitante,M,True,90,0.0,0.0,0.0,0.0,0,0
+1636279,174918,L. Badé,Bayer Leverkusen,Lech Poznan,Europa League,2026-10-15T16:45:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636279,794,P. Schick,Bayer Leverkusen,Lech Poznan,Europa League,2026-10-15T16:45:00,visitante,F,True,58,2.0,0.0,2.0,3.0,0,0
+1636279,345388,Afonso Moreira,Bayer Leverkusen,Lech Poznan,Europa League,2026-10-15T16:45:00,visitante,F,True,14,0.0,1.0,3.0,3.0,0,0
+1636279,6231,F. Medina,Bayer Leverkusen,Lech Poznan,Europa League,2026-10-15T16:45:00,visitante,D,True,28,0.0,0.0,0.0,0.0,0,0
+1636279,277,M. Diaby,Bayer Leverkusen,Lech Poznan,Europa League,2026-10-15T16:45:00,visitante,F,True,28,0.0,0.0,0.0,0.0,1,0
+1636279,24903,R. Andrich,Bayer Leverkusen,Lech Poznan,Europa League,2026-10-15T16:45:00,visitante,M,True,28,0.0,0.0,1.0,2.0,1,0
+1636332,464055,E. Baidoo,Red Bull Salzburg,AC Milan,Europa League,2026-10-15T16:45:00,local,M,True,60,0.0,0.0,0.0,1.0,0,0
+1636332,445566,Christian Zawieschitzky,Red Bull Salzburg,AC Milan,Europa League,2026-10-15T16:45:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1636332,129072,Y. Vertessen,Red Bull Salzburg,AC Milan,Europa League,2026-10-15T16:45:00,local,F,True,30,0.0,0.0,0.0,3.0,0,0
+1636332,286784,D. Redzic,Red Bull Salzburg,AC Milan,Europa League,2026-10-15T16:45:00,local,F,True,17,0.0,0.0,0.0,0.0,0,0
+1636332,327861,T. Drexler,Red Bull Salzburg,AC Milan,Europa League,2026-10-15T16:45:00,local,D,True,9,0.0,0.0,0.0,0.0,0,0
+1636332,457023,G. Diakité,Red Bull Salzburg,AC Milan,Europa League,2026-10-15T16:45:00,local,F,True,30,0.0,0.0,1.0,3.0,0,0
+1636332,444437,Valentin Zabransky,Red Bull Salzburg,AC Milan,Europa League,2026-10-15T16:45:00,local,D,True,90,0.0,0.0,0.0,0.0,1,0
+1636332,28382,H. Tabaković,Red Bull Salzburg,AC Milan,Europa League,2026-10-15T16:45:00,local,F,True,73,0.0,0.0,0.0,0.0,0,0
+1636332,48722,D. Schmid,Red Bull Salzburg,AC Milan,Europa League,2026-10-15T16:45:00,local,D,True,90,0.0,0.0,0.0,1.0,0,0
+1636332,329265,L. Morgalla,Red Bull Salzburg,AC Milan,Europa League,2026-10-15T16:45:00,local,D,True,81,0.0,0.0,0.0,0.0,0,0
+1636332,442544,B. Mazurek,Red Bull Salzburg,AC Milan,Europa League,2026-10-15T16:45:00,local,M,True,90,0.0,0.0,1.0,2.0,0,0
+1636332,15884,J. Lindstrøm,Red Bull Salzburg,AC Milan,Europa League,2026-10-15T16:45:00,local,M,True,73,0.0,0.0,0.0,3.0,0,0
+1636332,288073,S. Kitano,Red Bull Salzburg,AC Milan,Europa League,2026-10-15T16:45:00,local,M,True,60,0.0,0.0,0.0,0.0,0,0
+1636332,174774,K. Boma,Red Bull Salzburg,AC Milan,Europa League,2026-10-15T16:45:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636332,136154,A. Barry,Red Bull Salzburg,AC Milan,Europa League,2026-10-15T16:45:00,local,M,True,90,0.0,0.0,0.0,1.0,0,0
+1636332,418198,A. Camara,Red Bull Salzburg,AC Milan,Europa League,2026-10-15T16:45:00,local,M,True,17,0.0,0.0,0.0,0.0,0,0
+1636332,467860,S. Bocoum,AC Milan,Red Bull Salzburg,Europa League,2026-10-15T16:45:00,visitante,D,True,9,0.0,0.0,0.0,0.0,0,0
+1636332,754,L. Modrić,AC Milan,Red Bull Salzburg,Europa League,2026-10-15T16:45:00,visitante,M,True,29,0.0,0.0,0.0,0.0,0,0
+1636332,17,C. Pulišić,AC Milan,Red Bull Salzburg,Europa League,2026-10-15T16:45:00,visitante,M,True,30,0.0,0.0,0.0,1.0,0,0
+1636332,41585,Gonçalo Ramos,AC Milan,Red Bull Salzburg,Europa League,2026-10-15T16:45:00,visitante,F,True,30,1.0,0.0,1.0,2.0,0,0
+1636332,264472,F. Terracciano,AC Milan,Red Bull Salzburg,Europa League,2026-10-15T16:45:00,visitante,D,True,16,0.0,0.0,0.0,0.0,0,1
+1636332,19209,F. Tomori,AC Milan,Red Bull Salzburg,Europa League,2026-10-15T16:45:00,visitante,D,True,67,0.0,0.0,0.0,0.0,0,0
+1636332,272,A. Rabiot,AC Milan,Red Bull Salzburg,Europa League,2026-10-15T16:45:00,visitante,M,True,61,0.0,1.0,1.0,2.0,0,0
+1636332,45826,S. Pavlović,AC Milan,Red Bull Salzburg,Europa League,2026-10-15T16:45:00,visitante,D,True,81,0.0,0.0,0.0,0.0,0,0
+1636332,2292,R. Loftus-Cheek,AC Milan,Red Bull Salzburg,Europa League,2026-10-15T16:45:00,visitante,M,True,90,0.0,0.0,1.0,1.0,0,0
+1636332,264705,A. Jashari,AC Milan,Red Bull Salzburg,Europa League,2026-10-15T16:45:00,visitante,M,True,90,0.0,0.0,0.0,1.0,0,0
+1636332,284428,O. Hutchinson,AC Milan,Red Bull Salzburg,Europa League,2026-10-15T16:45:00,visitante,M,True,90,0.0,1.0,2.0,3.0,1,0
+1636332,162141,K. De Winter,AC Milan,Red Bull Salzburg,Europa League,2026-10-15T16:45:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636332,359100,A. Cissè,AC Milan,Red Bull Salzburg,Europa League,2026-10-15T16:45:00,visitante,M,True,60,3.0,0.0,4.0,4.0,0,0
+1636332,436260,F. Camarda,AC Milan,Red Bull Salzburg,Europa League,2026-10-15T16:45:00,visitante,F,True,60,0.0,0.0,0.0,0.0,0,0
+1636332,374359,D. Bartesaghi,AC Milan,Red Bull Salzburg,Europa League,2026-10-15T16:45:00,visitante,M,True,90,0.0,1.0,1.0,1.0,0,0
+1636332,22221,M. Maignan,AC Milan,Red Bull Salzburg,Europa League,2026-10-15T16:45:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1636338,161864,J. Surovčík,Sparta Praha,Lillestrom,Europa League,2026-10-15T16:45:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1636338,323899,M. Suchomel,Sparta Praha,Lillestrom,Europa League,2026-10-15T16:45:00,local,D,True,61,0.0,0.0,1.0,1.0,1,0
+1636338,340644,A. Ševínský,Sparta Praha,Lillestrom,Europa League,2026-10-15T16:45:00,local,D,True,90,0.0,0.0,0.0,1.0,0,0
+1636338,314257,T. Guddal,Sparta Praha,Lillestrom,Europa League,2026-10-15T16:45:00,local,D,True,90,0.0,0.0,1.0,1.0,0,0
+1636338,446115,V. Vitályos,Sparta Praha,Lillestrom,Europa League,2026-10-15T16:45:00,local,D,True,90,0.0,0.0,0.0,1.0,0,0
+1636338,237122,J. Mercado,Sparta Praha,Lillestrom,Europa League,2026-10-15T16:45:00,local,F,True,29,0.0,0.0,1.0,1.0,0,0
+1636338,48408,R. Macek,Sparta Praha,Lillestrom,Europa League,2026-10-15T16:45:00,local,M,True,29,0.0,0.0,0.0,0.0,1,0
+1636338,285,K. Hoever,Sparta Praha,Lillestrom,Europa League,2026-10-15T16:45:00,local,D,True,29,0.0,0.0,0.0,0.0,0,0
+1636338,323942,J. Alcócer,Sparta Praha,Lillestrom,Europa League,2026-10-15T16:45:00,local,F,True,45,1.0,0.0,2.0,3.0,0,0
+1636338,153717,Santiago Eneme,Sparta Praha,Lillestrom,Europa League,2026-10-15T16:45:00,local,M,True,5,0.0,0.0,0.0,0.0,0,0
+1636338,555437,H. Sochurek,Sparta Praha,Lillestrom,Europa League,2026-10-15T16:45:00,local,M,True,90,0.0,0.0,1.0,1.0,0,0
+1636338,57443,S. Mannsverk,Sparta Praha,Lillestrom,Europa League,2026-10-15T16:45:00,local,M,True,61,0.0,0.0,0.0,0.0,0,0
+1636338,68466,A. Irving,Sparta Praha,Lillestrom,Europa League,2026-10-15T16:45:00,local,M,True,85,0.0,0.0,0.0,2.0,0,0
+1636338,180305,M. Jurásek,Sparta Praha,Lillestrom,Europa League,2026-10-15T16:45:00,local,M,True,61,0.0,0.0,0.0,0.0,0,0
+1636338,95018,J. Braut Brunes,Sparta Praha,Lillestrom,Europa League,2026-10-15T16:45:00,local,F,True,90,0.0,1.0,1.0,2.0,0,0
+1636338,352525,E. Singhateh,Sparta Praha,Lillestrom,Europa League,2026-10-15T16:45:00,local,M,True,45,0.0,0.0,1.0,2.0,1,0
+1636338,57198,E. Kitolano,Lillestrom,Sparta Praha,Europa League,2026-10-15T16:45:00,visitante,M,True,25,0.0,0.0,0.0,0.0,0,0
+1636338,18790,P. Dahlberg,Lillestrom,Sparta Praha,Europa League,2026-10-15T16:45:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1636338,57194,L. Ranger,Lillestrom,Sparta Praha,Europa League,2026-10-15T16:45:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636338,39038,R. Gabrielsen,Lillestrom,Sparta Praha,Europa League,2026-10-15T16:45:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636338,410596,S. Kristiansen,Lillestrom,Sparta Praha,Europa League,2026-10-15T16:45:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636338,151251,Y. Paintsil,Lillestrom,Sparta Praha,Europa League,2026-10-15T16:45:00,visitante,D,True,73,0.0,0.0,0.0,0.0,0,0
+1636338,39148,Y. Ibrahimaj,Lillestrom,Sparta Praha,Europa League,2026-10-15T16:45:00,visitante,M,True,90,0.0,0.0,1.0,2.0,0,0
+1636338,47770,F. Ottosson,Lillestrom,Sparta Praha,Europa League,2026-10-15T16:45:00,visitante,M,True,90,0.0,0.0,0.0,0.0,0,0
+1636338,531341,G. Nyheim,Lillestrom,Sparta Praha,Europa League,2026-10-15T16:45:00,visitante,M,True,70,0.0,0.0,0.0,0.0,1,0
+1636338,364814,D. Bassi,Lillestrom,Sparta Praha,Europa League,2026-10-15T16:45:00,visitante,F,True,65,0.0,0.0,0.0,0.0,0,0
+1636338,1099,F. Gulbrandsen,Lillestrom,Sparta Praha,Europa League,2026-10-15T16:45:00,visitante,F,True,65,0.0,0.0,0.0,0.0,0,0
+1636338,3322,Vá,Lillestrom,Sparta Praha,Europa League,2026-10-15T16:45:00,visitante,F,True,73,0.0,0.0,0.0,0.0,0,0
+1636338,226691,G. Nordh,Lillestrom,Sparta Praha,Europa League,2026-10-15T16:45:00,visitante,F,True,17,0.0,1.0,0.0,0.0,0,0
+1636338,317446,H. Melland,Lillestrom,Sparta Praha,Europa League,2026-10-15T16:45:00,visitante,M,True,20,0.0,0.0,0.0,1.0,1,0
+1636338,39323,T. Lehne Olsen,Lillestrom,Sparta Praha,Europa League,2026-10-15T16:45:00,visitante,F,True,25,1.0,0.0,1.0,2.0,0,0
+1636338,265641,F. Elkær,Lillestrom,Sparta Praha,Europa League,2026-10-15T16:45:00,visitante,D,True,17,0.0,0.0,0.0,1.0,0,0
+1636328,423866,D. Aquino,Union St. Gilloise,Real Sociedad,Europa League,2026-10-15T16:45:00,local,F,True,19,0.0,0.0,0.0,1.0,0,0
+1636328,22220,H. Koffi,Union St. Gilloise,Real Sociedad,Europa League,2026-10-15T16:45:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1636328,271875,L. Patris,Union St. Gilloise,Real Sociedad,Europa League,2026-10-15T16:45:00,local,M,True,90,0.0,0.0,0.0,0.0,0,0
+1636328,48708,N. Havenaar,Union St. Gilloise,Real Sociedad,Europa League,2026-10-15T16:45:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636328,466871,M. Sylla,Union St. Gilloise,Real Sociedad,Europa League,2026-10-15T16:45:00,local,D,True,90,0.0,0.0,0.0,1.0,0,0
+1636328,383670,N. Chibani,Union St. Gilloise,Real Sociedad,Europa League,2026-10-15T16:45:00,local,D,True,63,0.0,0.0,0.0,0.0,1,0
+1636328,350850,B. Zeneli,Union St. Gilloise,Real Sociedad,Europa League,2026-10-15T16:45:00,local,M,True,90,0.0,0.0,0.0,2.0,0,0
+1636328,340574,K. Van de Perre,Union St. Gilloise,Real Sociedad,Europa League,2026-10-15T16:45:00,local,M,True,90,0.0,0.0,0.0,1.0,0,0
+1636328,43171,D. Olaru,Union St. Gilloise,Real Sociedad,Europa League,2026-10-15T16:45:00,local,M,True,71,0.0,0.0,2.0,3.0,0,0
+1636328,314145,Guilherme Henriques da Silva Carvalho,Union St. Gilloise,Real Sociedad,Europa League,2026-10-15T16:45:00,local,M,True,90,0.0,0.0,0.0,3.0,0,0
+1636328,286895,M. Biondic,Union St. Gilloise,Real Sociedad,Europa League,2026-10-15T16:45:00,local,F,True,84,0.0,0.0,0.0,1.0,0,0
+1636328,414149,R. Mofokeng,Union St. Gilloise,Real Sociedad,Europa League,2026-10-15T16:45:00,local,F,True,90,0.0,0.0,2.0,3.0,1,0
+1636328,304373,D. De Roeve,Union St. Gilloise,Real Sociedad,Europa League,2026-10-15T16:45:00,local,D,True,27,0.0,0.0,0.0,0.0,0,0
+1636328,495651,S. Keita,Union St. Gilloise,Real Sociedad,Europa League,2026-10-15T16:45:00,local,F,True,6,1.0,0.0,1.0,1.0,0,0
+1636328,32862,T. Kubo,Real Sociedad,Union St. Gilloise,Europa League,2026-10-15T16:45:00,visitante,F,True,22,0.0,0.0,0.0,0.0,0,0
+1636328,290106,Pablo Marín,Real Sociedad,Union St. Gilloise,Europa League,2026-10-15T16:45:00,visitante,M,True,11,0.0,0.0,0.0,0.0,0,0
+1636328,61774,O. Óskarsson,Real Sociedad,Union St. Gilloise,Europa League,2026-10-15T16:45:00,visitante,F,True,1,0.0,0.0,0.0,1.0,0,0
+1636328,183744,Beñat Turrientes,Real Sociedad,Union St. Gilloise,Europa League,2026-10-15T16:45:00,visitante,M,True,45,1.0,0.0,1.0,2.0,0,0
+1636328,47317,Barrenetxea,Real Sociedad,Union St. Gilloise,Europa League,2026-10-15T16:45:00,visitante,F,True,11,0.0,0.0,0.0,0.0,0,0
+1636328,47314,Zubeldia,Real Sociedad,Union St. Gilloise,Europa League,2026-10-15T16:45:00,visitante,D,True,90,0.0,0.0,0.0,1.0,0,0
+1636328,7332,L. Sučić,Real Sociedad,Union St. Gilloise,Europa League,2026-10-15T16:45:00,visitante,F,True,68,0.0,0.0,0.0,1.0,0,0
+1636328,276184,M. Sarr,Real Sociedad,Union St. Gilloise,Europa League,2026-10-15T16:45:00,visitante,D,True,90,0.0,0.0,0.0,0.0,1,0
+1636328,47323,Mikel Oyarzabal,Real Sociedad,Union St. Gilloise,Europa League,2026-10-15T16:45:00,visitante,F,True,89,0.0,0.0,0.0,1.0,0,0
+1636328,387139,J. Ochieng,Real Sociedad,Union St. Gilloise,Europa League,2026-10-15T16:45:00,visitante,M,True,79,0.0,0.0,0.0,0.0,0,0
+1636328,405073,Jon Martín,Real Sociedad,Union St. Gilloise,Europa League,2026-10-15T16:45:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636328,2449,Y. Herrera,Real Sociedad,Union St. Gilloise,Europa League,2026-10-15T16:45:00,visitante,M,True,45,0.0,0.0,0.0,0.0,0,0
+1636328,925,Gonçalo Guedes,Real Sociedad,Union St. Gilloise,Europa League,2026-10-15T16:45:00,visitante,M,True,79,0.0,0.0,0.0,0.0,0,0
+1636328,287654,Jon Gorrotxategi,Real Sociedad,Union St. Gilloise,Europa League,2026-10-15T16:45:00,visitante,M,True,90,0.0,0.0,0.0,0.0,0,0
+1636328,23,Sergio Gómez,Real Sociedad,Union St. Gilloise,Europa League,2026-10-15T16:45:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636328,189832,Unai Marrero,Real Sociedad,Union St. Gilloise,Europa League,2026-10-15T16:45:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1636239,144730,A. Dionkou,Celje,Omonia Nicosia,Europa League,2026-10-15T16:45:00,local,D,True,28,0.0,0.0,0.0,0.0,0,0
+1636239,2183,B. Verbič,Celje,Omonia Nicosia,Europa League,2026-10-15T16:45:00,local,M,True,28,0.0,0.0,0.0,0.0,1,0
+1636239,25102,M. Kvesić,Celje,Omonia Nicosia,Europa League,2026-10-15T16:45:00,local,M,True,45,0.0,0.0,0.0,0.0,1,0
+1636239,105871,Ž. Žužek,Celje,Omonia Nicosia,Europa League,2026-10-15T16:45:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636239,278810,M. Avdyli,Celje,Omonia Nicosia,Europa League,2026-10-15T16:45:00,local,D,True,73,0.0,0.0,0.0,1.0,0,0
+1636239,163053,Ł. Bejger,Celje,Omonia Nicosia,Europa League,2026-10-15T16:45:00,local,D,True,62,0.0,0.0,0.0,1.0,1,0
+1636239,301642,Papa Mustapha Daniel,Celje,Omonia Nicosia,Europa League,2026-10-15T16:45:00,local,M,True,62,0.0,0.0,0.0,0.0,0,0
+1636239,6917,Y. Dukuly,Celje,Omonia Nicosia,Europa League,2026-10-15T16:45:00,local,M,True,62,0.0,0.0,0.0,1.0,0,0
+1636239,119780,B. Kramer,Celje,Omonia Nicosia,Europa League,2026-10-15T16:45:00,local,F,True,90,0.0,0.0,0.0,1.0,0,0
+1636239,109987,S. Sešlar,Celje,Omonia Nicosia,Europa League,2026-10-15T16:45:00,local,F,True,90,0.0,0.0,1.0,2.0,0,0
+1636239,325384,A. Tutyškinas,Celje,Omonia Nicosia,Europa League,2026-10-15T16:45:00,local,D,True,90,0.0,0.0,0.0,1.0,1,0
+1636239,131343,M. Zabukovnik,Celje,Omonia Nicosia,Europa League,2026-10-15T16:45:00,local,M,True,90,0.0,0.0,0.0,3.0,0,0
+1636239,70044,A. Kučys,Celje,Omonia Nicosia,Europa League,2026-10-15T16:45:00,local,F,True,28,0.0,0.0,1.0,2.0,0,0
+1636239,128029,L. Tičić,Celje,Omonia Nicosia,Europa League,2026-10-15T16:45:00,local,M,True,45,0.0,0.0,0.0,0.0,0,0
+1636239,284326,Žan-Luk Leban,Celje,Omonia Nicosia,Europa League,2026-10-15T16:45:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1636239,1595,L. Koútris,Celje,Omonia Nicosia,Europa League,2026-10-15T16:45:00,local,D,True,17,0.0,0.0,0.0,0.0,0,0
+1636239,43038,F. Tănase,Omonia Nicosia,Celje,Europa League,2026-10-15T16:45:00,visitante,M,True,21,0.0,0.0,0.0,0.0,0,0
+1636239,15392,A. Kakoullis,Omonia Nicosia,Celje,Europa League,2026-10-15T16:45:00,visitante,F,True,21,0.0,0.0,0.0,0.0,0,0
+1636239,48132,M. Tankovic,Omonia Nicosia,Celje,Europa League,2026-10-15T16:45:00,visitante,M,True,69,1.0,0.0,1.0,3.0,0,0
+1636239,55949,Ľ. Šatka,Omonia Nicosia,Celje,Europa League,2026-10-15T16:45:00,visitante,D,True,90,0.0,0.0,0.0,1.0,0,0
+1636239,347681,J. Montnor,Omonia Nicosia,Celje,Europa League,2026-10-15T16:45:00,visitante,F,True,75,1.0,0.0,2.0,3.0,1,0
+1636239,76868,M. Marić,Omonia Nicosia,Celje,Europa League,2026-10-15T16:45:00,visitante,M,True,90,0.0,0.0,0.0,1.0,0,0
+1636239,20655,J. Duverne,Omonia Nicosia,Celje,Europa League,2026-10-15T16:45:00,visitante,D,True,90,0.0,1.0,0.0,0.0,0,0
+1636239,22100,L. Diony,Omonia Nicosia,Celje,Europa League,2026-10-15T16:45:00,visitante,F,True,69,0.0,0.0,0.0,0.0,0,0
+1636239,21699,S. Coulibaly,Omonia Nicosia,Celje,Europa League,2026-10-15T16:45:00,visitante,D,True,89,1.0,0.0,1.0,1.0,1,0
+1636239,10325,Ewandro,Omonia Nicosia,Celje,Europa League,2026-10-15T16:45:00,visitante,F,True,89,0.0,1.0,1.0,2.0,0,0
+1636239,30918,J. Balkovec,Omonia Nicosia,Celje,Europa League,2026-10-15T16:45:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636239,388757,P. Andreou,Omonia Nicosia,Celje,Europa League,2026-10-15T16:45:00,visitante,M,True,90,0.0,0.0,1.0,2.0,0,0
+1636239,41900,M. Mayambela,Omonia Nicosia,Celje,Europa League,2026-10-15T16:45:00,visitante,F,True,15,0.0,1.0,0.0,1.0,0,0
+1636239,2336,L. Négo,Omonia Nicosia,Celje,Europa League,2026-10-15T16:45:00,visitante,D,True,1,0.0,0.0,0.0,0.0,0,0
+1636239,31077,S. Simič,Omonia Nicosia,Celje,Europa League,2026-10-15T16:45:00,visitante,D,True,1,0.0,0.0,0.0,0.0,0,0
+1636239,370,Fabiano,Omonia Nicosia,Celje,Europa League,2026-10-15T16:45:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1636350,141620,M. Abubakari,Torreense,Sunderland,Europa League,2026-10-15T16:45:00,local,F,True,89,0.0,0.0,0.0,1.0,0,0
+1636350,9943,Lucas Paes,Torreense,Sunderland,Europa League,2026-10-15T16:45:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1636350,371927,K. Zoabi,Torreense,Sunderland,Europa League,2026-10-15T16:45:00,local,M,True,74,0.0,0.0,0.0,0.0,0,0
+1636350,277165,Volnei Feltes,Torreense,Sunderland,Europa League,2026-10-15T16:45:00,local,D,True,90,1.0,0.0,1.0,1.0,0,0
+1636350,2046,Javi Vázquez,Torreense,Sunderland,Europa League,2026-10-15T16:45:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636350,286961,Manu Pozo,Torreense,Sunderland,Europa League,2026-10-15T16:45:00,local,M,True,63,0.0,0.0,0.0,0.0,0,0
+1636350,41760,A. Oudrhiri,Torreense,Sunderland,Europa League,2026-10-15T16:45:00,local,M,True,90,0.0,1.0,0.0,0.0,0,0
+1636350,162209,J. Mutombo,Torreense,Sunderland,Europa League,2026-10-15T16:45:00,local,D,True,63,0.0,0.0,0.0,0.0,1,0
+1636350,392656,M. Diadie,Torreense,Sunderland,Europa League,2026-10-15T16:45:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636350,287583,João Marques,Torreense,Sunderland,Europa League,2026-10-15T16:45:00,local,M,True,73,0.0,0.0,0.0,0.0,0,0
+1636350,332315,Alejandro Alfaro,Torreense,Sunderland,Europa League,2026-10-15T16:45:00,local,M,True,90,0.0,0.0,0.0,0.0,0,0
+1636350,2331,Stopira,Torreense,Sunderland,Europa League,2026-10-15T16:45:00,local,D,True,27,0.0,0.0,0.0,0.0,0,0
+1636350,369481,L. Quintero,Torreense,Sunderland,Europa League,2026-10-15T16:45:00,local,F,True,16,0.0,0.0,0.0,1.0,0,0
+1636350,237292,D. Jean,Torreense,Sunderland,Europa League,2026-10-15T16:45:00,local,F,True,17,0.0,0.0,0.0,0.0,0,0
+1636350,287212,M. Drammeh,Torreense,Sunderland,Europa League,2026-10-15T16:45:00,local,F,True,1,0.0,0.0,0.0,0.0,0,0
+1636350,41436,David Bruno,Torreense,Sunderland,Europa League,2026-10-15T16:45:00,local,D,True,27,0.0,0.0,0.0,0.0,0,0
+1636350,1464,G. Xhaka,Sunderland,Torreense,Europa League,2026-10-15T16:45:00,visitante,M,True,32,0.0,1.0,0.0,1.0,0,0
+1636350,1146,N. Mukiele,Sunderland,Torreense,Europa League,2026-10-15T16:45:00,visitante,D,True,31,0.0,1.0,0.0,1.0,1,0
+1636350,22225,Reinildo,Sunderland,Torreense,Europa League,2026-10-15T16:45:00,visitante,D,True,31,0.0,0.0,0.0,0.0,0,0
+1636350,20638,E. Le Fée,Sunderland,Torreense,Europa League,2026-10-15T16:45:00,visitante,M,True,32,0.0,0.0,0.0,1.0,1,0
+1636350,400033,Timur Tuterov,Sunderland,Torreense,Europa League,2026-10-15T16:45:00,visitante,F,True,90,0.0,0.0,0.0,1.0,0,0
+1636350,365331,N. Sadiki,Sunderland,Torreense,Europa League,2026-10-15T16:45:00,visitante,M,True,90,1.0,0.0,1.0,3.0,0,0
+1636350,339201,C. Rigg,Sunderland,Torreense,Europa League,2026-10-15T16:45:00,visitante,M,True,90,0.0,0.0,0.0,1.0,0,0
+1636350,19911,L. O&apos;Nien,Sunderland,Torreense,Europa League,2026-10-15T16:45:00,visitante,D,True,90,0.0,0.0,0.0,1.0,0,0
+1636350,452697,D. Methalie,Sunderland,Torreense,Europa League,2026-10-15T16:45:00,visitante,D,True,59,0.0,0.0,0.0,0.0,0,0
+1636350,119121,T. Hume,Sunderland,Torreense,Europa League,2026-10-15T16:45:00,visitante,D,True,59,0.0,0.0,0.0,0.0,1,0
+1636350,361348,M. Fofana,Sunderland,Torreense,Europa League,2026-10-15T16:45:00,visitante,M,True,58,0.0,0.0,0.0,1.0,0,0
+1636350,311543,N. Angulo,Sunderland,Torreense,Europa League,2026-10-15T16:45:00,visitante,M,True,58,0.0,0.0,1.0,2.0,0,0
+1636350,6168,O. Alderete,Sunderland,Torreense,Europa League,2026-10-15T16:45:00,visitante,D,True,90,0.0,0.0,1.0,7.0,0,0
+1636350,662488,Jules Ahoka,Sunderland,Torreense,Europa League,2026-10-15T16:45:00,visitante,M,True,90,1.0,0.0,2.0,3.0,0,0
+1636350,194536,R. Roefs,Sunderland,Torreense,Europa League,2026-10-15T16:45:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1636396,129058,Bart Verbruggen,Brighton,Kauno Žalgiris,Conference League,2026-10-15T19:00:00,local,G,True,90,,0.0,,,0,0
+1636396,204037,Costinha,Brighton,Kauno Žalgiris,Conference League,2026-10-15T19:00:00,local,D,True,90,,0.0,1.0,3.0,0,0
+1636396,18963,Lewis Dunk,Brighton,Kauno Žalgiris,Conference League,2026-10-15T19:00:00,local,D,True,45,,0.0,,1.0,0,0
+1636396,7090,Michael Svoboda,Brighton,Kauno Žalgiris,Conference League,2026-10-15T19:00:00,local,D,True,90,,0.0,,1.0,0,0
+1636396,22160,Olivier Boscagli,Brighton,Kauno Žalgiris,Conference League,2026-10-15T19:00:00,local,D,True,45,,0.0,,,0,0
+1636396,18970,Pascal Groß,Brighton,Kauno Žalgiris,Conference League,2026-10-15T19:00:00,local,M,True,57,,0.0,1.0,1.0,0,0
+1636396,410125,Malick Yalcouyé,Brighton,Kauno Žalgiris,Conference League,2026-10-15T19:00:00,local,M,True,90,,0.0,,1.0,0,0
+1636396,305730,Jack Hinshelwood,Brighton,Kauno Žalgiris,Conference League,2026-10-15T19:00:00,local,M,True,57,1.0,0.0,3.0,4.0,0,0
+1636396,19030,Matt O'Riley,Brighton,Kauno Žalgiris,Conference League,2026-10-15T19:00:00,local,F,True,90,1.0,0.0,2.0,3.0,0,0
+1636396,90590,Georginio Rutter,Brighton,Kauno Žalgiris,Conference League,2026-10-15T19:00:00,local,F,True,90,2.0,1.0,2.0,2.0,0,0
+1636396,293643,Ibrahim Osman,Brighton,Kauno Žalgiris,Conference League,2026-10-15T19:00:00,local,F,True,67,,2.0,,3.0,0,0
+1636396,162007,Maxim De Cuyper,Brighton,Kauno Žalgiris,Conference League,2026-10-15T19:00:00,local,D,False,45,,0.0,,,0,0
+1636396,387521,Luka Vušković,Brighton,Kauno Žalgiris,Conference League,2026-10-15T19:00:00,local,D,False,45,,0.0,,1.0,0,0
+1636396,265820,Yasin Ayari,Brighton,Kauno Žalgiris,Conference League,2026-10-15T19:00:00,local,M,False,33,,0.0,,2.0,0,0
+1636396,313353,Promise David,Brighton,Kauno Žalgiris,Conference League,2026-10-15T19:00:00,local,F,False,33,,0.0,,3.0,0,0
+1636396,579114,Younes Ibrahim,Brighton,Kauno Žalgiris,Conference League,2026-10-15T19:00:00,local,M,False,23,,1.0,,,0,0
+1636396,69948,Tomas Švedkauskas,Kauno Žalgiris,Brighton,Conference League,2026-10-15T19:00:00,visitante,G,True,90,,0.0,,,0,0
+1636396,174815,Joris Moutachy,Kauno Žalgiris,Brighton,Conference League,2026-10-15T19:00:00,visitante,D,True,90,,0.0,,,0,0
+1636396,24362,Anton Tolordava,Kauno Žalgiris,Brighton,Conference League,2026-10-15T19:00:00,visitante,D,True,90,,0.0,,,0,0
+1636396,55714,Aldayr Hernández,Kauno Žalgiris,Brighton,Conference League,2026-10-15T19:00:00,visitante,D,True,90,,0.0,,1.0,0,0
+1636396,7183,Nosa Iyobosa Edokpolor,Kauno Žalgiris,Brighton,Conference League,2026-10-15T19:00:00,visitante,D,True,90,,0.0,,,0,0
+1636396,5297,Franco Baldassarra,Kauno Žalgiris,Brighton,Conference League,2026-10-15T19:00:00,visitante,M,True,57,,0.0,,1.0,0,0
+1636396,20610,Fabien Ourega,Kauno Žalgiris,Brighton,Conference League,2026-10-15T19:00:00,visitante,M,True,45,,0.0,,,1,0
+1636396,8752,Amine Benchaib,Kauno Žalgiris,Brighton,Conference League,2026-10-15T19:00:00,visitante,M,True,61,,0.0,,,0,0
+1636396,281035,Yukiyoshi Karashima,Kauno Žalgiris,Brighton,Conference League,2026-10-15T19:00:00,visitante,M,True,90,,0.0,,,0,0
+1636396,237770,Léo Ribeiro,Kauno Žalgiris,Brighton,Conference League,2026-10-15T19:00:00,visitante,M,True,45,,0.0,,,0,0
+1636396,112386,Renan Oliveira,Kauno Žalgiris,Brighton,Conference League,2026-10-15T19:00:00,visitante,F,True,57,,0.0,,,0,0
+1636396,128737,Rokas Lekiatas,Kauno Žalgiris,Brighton,Conference League,2026-10-15T19:00:00,visitante,D,False,45,,0.0,,,0,0
+1636396,14603,Leon Kreković,Kauno Žalgiris,Brighton,Conference League,2026-10-15T19:00:00,visitante,F,False,45,,0.0,1.0,1.0,0,0
+1636396,14342,Anthony Kalik,Kauno Žalgiris,Brighton,Conference League,2026-10-15T19:00:00,visitante,M,False,33,,0.0,,,0,0
+1636396,119277,Gabriel Debeljuh,Kauno Žalgiris,Brighton,Conference League,2026-10-15T19:00:00,visitante,F,False,33,,0.0,,,0,0
+1636396,44850,Vykintas Slivka,Kauno Žalgiris,Brighton,Conference League,2026-10-15T19:00:00,visitante,M,False,29,,0.0,,,0,0
+1636411,329578,Mio Backhaus,SC Freiburg,FK Jablonec,Conference League,2026-10-15T19:00:00,local,G,True,90,,0.0,,,0,0
+1636411,26239,Lukas Kübler,SC Freiburg,FK Jablonec,Conference League,2026-10-15T19:00:00,local,D,True,84,,1.0,,2.0,0,0
+1636411,2915,Matthias Ginter,SC Freiburg,FK Jablonec,Conference League,2026-10-15T19:00:00,local,D,True,90,,0.0,1.0,2.0,0,0
+1636411,202919,Maximilian Rosenfelder,SC Freiburg,FK Jablonec,Conference League,2026-10-15T19:00:00,local,D,True,71,,0.0,,,0,0
+1636411,26236,Christian Günter,SC Freiburg,FK Jablonec,Conference League,2026-10-15T19:00:00,local,D,True,59,,0.0,,,0,0
+1636411,2917,Maximilian Eggestein,SC Freiburg,FK Jablonec,Conference League,2026-10-15T19:00:00,local,M,True,90,1.0,0.0,2.0,2.0,0,0
+1636411,163022,Patrick Osterhage,SC Freiburg,FK Jablonec,Conference League,2026-10-15T19:00:00,local,M,True,90,,0.0,,,1,0
+1636411,431149,Cyriaque Irié,SC Freiburg,FK Jablonec,Conference League,2026-10-15T19:00:00,local,M,True,71,,0.0,1.0,2.0,0,0
+1636411,199143,Yuito Suzuki,SC Freiburg,FK Jablonec,Conference League,2026-10-15T19:00:00,local,M,True,90,,0.0,,,0,0
+1636411,26248,Vincenzo Grifo,SC Freiburg,FK Jablonec,Conference League,2026-10-15T19:00:00,local,M,True,90,1.0,0.0,3.0,3.0,0,0
+1636411,26255,Lucas Höler,SC Freiburg,FK Jablonec,Conference League,2026-10-15T19:00:00,local,F,True,59,,0.0,1.0,2.0,0,0
+1636411,191160,Jordy Makengo,SC Freiburg,FK Jablonec,Conference League,2026-10-15T19:00:00,local,D,False,31,,0.0,1.0,1.0,0,0
+1636411,202696,Igor Matanović,SC Freiburg,FK Jablonec,Conference League,2026-10-15T19:00:00,local,F,False,31,,0.0,,1.0,0,0
+1636411,26240,Philipp Lienhart,SC Freiburg,FK Jablonec,Conference League,2026-10-15T19:00:00,local,D,False,19,,0.0,,,0,0
+1636411,375930,Keisuke Goto,SC Freiburg,FK Jablonec,Conference League,2026-10-15T19:00:00,local,F,False,19,,0.0,,,0,0
+1636411,178769,Philipp Treu,SC Freiburg,FK Jablonec,Conference League,2026-10-15T19:00:00,local,D,False,12,,0.0,,,0,0
+1636411,2249,Jan Hanuš,FK Jablonec,SC Freiburg,Conference League,2026-10-15T19:00:00,visitante,G,True,90,,0.0,,,0,0
+1636411,66303,Martin Cedidla,FK Jablonec,SC Freiburg,Conference League,2026-10-15T19:00:00,visitante,D,True,90,,0.0,,,0,0
+1636411,46022,Nemanja Tekijaški,FK Jablonec,SC Freiburg,Conference League,2026-10-15T19:00:00,visitante,D,True,90,,0.0,,,1,0
+1636411,475578,Dušan Pavlović,FK Jablonec,SC Freiburg,Conference League,2026-10-15T19:00:00,visitante,D,True,90,,0.0,,1.0,0,0
+1636411,66284,Jiří Sláma,FK Jablonec,SC Freiburg,Conference League,2026-10-15T19:00:00,visitante,D,True,90,,1.0,,,0,0
+1636411,323491,Nelson Okeke,FK Jablonec,SC Freiburg,Conference League,2026-10-15T19:00:00,visitante,M,True,66,,0.0,,,1,0
+1636411,38823,Richard Sedláček,FK Jablonec,SC Freiburg,Conference League,2026-10-15T19:00:00,visitante,M,True,76,,0.0,,1.0,0,0
+1636411,55948,Vakhtang Chanturishvili,FK Jablonec,SC Freiburg,Conference League,2026-10-15T19:00:00,visitante,M,True,90,,0.0,,1.0,0,0
+1636411,303107,Saidou Alioum Moubarak,FK Jablonec,SC Freiburg,Conference League,2026-10-15T19:00:00,visitante,M,True,66,,0.0,,1.0,0,0
+1636411,66164,Matěj Polidar,FK Jablonec,SC Freiburg,Conference League,2026-10-15T19:00:00,visitante,M,True,84,,0.0,,,0,0
+1636411,66410,Antonín Růsek,FK Jablonec,SC Freiburg,Conference League,2026-10-15T19:00:00,visitante,F,True,76,1.0,0.0,1.0,1.0,0,0
+1636411,144722,Sebastian Nebyla,FK Jablonec,SC Freiburg,Conference League,2026-10-15T19:00:00,visitante,M,False,24,,0.0,,,0,0
+1636411,349987,Garang Kuol,FK Jablonec,SC Freiburg,Conference League,2026-10-15T19:00:00,visitante,M,False,24,1.0,0.0,1.0,1.0,0,0
+1636411,66222,Daniel Souček,FK Jablonec,SC Freiburg,Conference League,2026-10-15T19:00:00,visitante,D,False,14,,0.0,,,0,0
+1636411,314370,Dominik Hollý,FK Jablonec,SC Freiburg,Conference League,2026-10-15T19:00:00,visitante,M,False,14,,0.0,,1.0,1,0
+1636411,2270,Jan Chramosta,FK Jablonec,SC Freiburg,Conference League,2026-10-15T19:00:00,visitante,F,False,12,,0.0,,,0,0
+1636423,38811,Beau Reus,Heart Of Midlothian,FC Nordsjaelland,Conference League,2026-10-15T19:00:00,local,G,True,90,,0.0,,,0,0
+1636423,57454,Christian Borchgrevink,Heart Of Midlothian,FC Nordsjaelland,Conference League,2026-10-15T19:00:00,local,D,True,90,,0.0,,,0,0
+1636423,154800,Malachi Fagan-Walcott,Heart Of Midlothian,FC Nordsjaelland,Conference League,2026-10-15T19:00:00,local,D,True,90,,0.0,1.0,2.0,0,0
+1636423,45128,Jamie McCart,Heart Of Midlothian,FC Nordsjaelland,Conference League,2026-10-15T19:00:00,local,D,True,90,,1.0,1.0,1.0,0,0
+1636423,138258,Harry Milne,Heart Of Midlothian,FC Nordsjaelland,Conference League,2026-10-15T19:00:00,local,D,True,87,,0.0,,,1,0
+1636423,538503,Laurent Mendy,Heart Of Midlothian,FC Nordsjaelland,Conference League,2026-10-15T19:00:00,local,M,True,90,,0.0,,2.0,0,0
+1636423,138903,Oisin McEntee,Heart Of Midlothian,FC Nordsjaelland,Conference League,2026-10-15T19:00:00,local,M,True,87,1.0,0.0,2.0,3.0,0,0
+1636423,45155,Calvin Miller,Heart Of Midlothian,FC Nordsjaelland,Conference League,2026-10-15T19:00:00,local,M,True,90,,0.0,1.0,1.0,0,0
+1636423,141994,Cláudio Braga,Heart Of Midlothian,FC Nordsjaelland,Conference League,2026-10-15T19:00:00,local,M,True,70,,0.0,,1.0,1,0
+1636423,125694,Josh McPake,Heart Of Midlothian,FC Nordsjaelland,Conference League,2026-10-15T19:00:00,local,M,True,87,,0.0,2.0,3.0,0,0
+1636423,418942,James Wilson,Heart Of Midlothian,FC Nordsjaelland,Conference League,2026-10-15T19:00:00,local,F,True,77,,0.0,,1.0,1,0
+1636423,503078,Sabah Kerjota,Heart Of Midlothian,FC Nordsjaelland,Conference League,2026-10-15T19:00:00,local,F,False,20,,0.0,,,0,0
+1636423,50843,Jerome Williams,Heart Of Midlothian,FC Nordsjaelland,Conference League,2026-10-15T19:00:00,local,F,False,13,,0.0,,1.0,0,0
+1636423,19412,Stephen Kingsley,Heart Of Midlothian,FC Nordsjaelland,Conference League,2026-10-15T19:00:00,local,D,False,3,,0.0,,,0,0
+1636423,431652,Jordi Altena,Heart Of Midlothian,FC Nordsjaelland,Conference League,2026-10-15T19:00:00,local,D,False,3,,0.0,,,0,0
+1636423,351187,Rogers Mato,Heart Of Midlothian,FC Nordsjaelland,Conference League,2026-10-15T19:00:00,local,F,False,3,,0.0,,,0,0
+1636423,16105,Andreas Hansen,FC Nordsjaelland,Heart Of Midlothian,Conference League,2026-10-15T19:00:00,visitante,G,True,90,,0.0,,,0,0
+1636423,15912,Victor Nelsson,FC Nordsjaelland,Heart Of Midlothian,Conference League,2026-10-15T19:00:00,visitante,D,True,83,,0.0,,,1,0
+1636423,39310,Tobias Salquist,FC Nordsjaelland,Heart Of Midlothian,Conference League,2026-10-15T19:00:00,visitante,D,True,90,,0.0,,,0,0
+1636423,425830,Noah Markmann,FC Nordsjaelland,Heart Of Midlothian,Conference League,2026-10-15T19:00:00,visitante,D,True,90,,0.0,,,0,0
+1636423,278551,Runar Robinsonn Norheim,FC Nordsjaelland,Heart Of Midlothian,Conference League,2026-10-15T19:00:00,visitante,M,True,64,,0.0,,,0,0
+1636423,475394,Justin Janssen,FC Nordsjaelland,Heart Of Midlothian,Conference League,2026-10-15T19:00:00,visitante,M,True,90,,0.0,,,0,0
+1636423,15825,Mark Brink,FC Nordsjaelland,Heart Of Midlothian,Conference League,2026-10-15T19:00:00,visitante,M,True,64,,0.0,,,0,0
+1636423,361421,Juho Lähteenmäki,FC Nordsjaelland,Heart Of Midlothian,Conference League,2026-10-15T19:00:00,visitante,M,True,90,,1.0,,,1,0
+1636423,70535,Ibrahim Adel,FC Nordsjaelland,Heart Of Midlothian,Conference League,2026-10-15T19:00:00,visitante,F,True,90,,0.0,,,1,0
+1636423,180982,Alexander Lind,FC Nordsjaelland,Heart Of Midlothian,Conference League,2026-10-15T19:00:00,visitante,F,True,72,,0.0,1.0,1.0,0,0
+1636423,513570,Prince Amoako Junior,FC Nordsjaelland,Heart Of Midlothian,Conference League,2026-10-15T19:00:00,visitante,F,True,90,,0.0,1.0,2.0,0,0
+1636423,15967,Nicklas Røjkjær,FC Nordsjaelland,Heart Of Midlothian,Conference League,2026-10-15T19:00:00,visitante,M,False,26,1.0,0.0,1.0,1.0,0,0
+1636423,631125,Lamine Sadio,FC Nordsjaelland,Heart Of Midlothian,Conference League,2026-10-15T19:00:00,visitante,M,False,26,,0.0,,,0,0
+1636423,513168,Hjalte Boe Rasmussen,FC Nordsjaelland,Heart Of Midlothian,Conference League,2026-10-15T19:00:00,visitante,M,False,18,,0.0,,,0,0
+1636423,498845,Villum Berthelsen,FC Nordsjaelland,Heart Of Midlothian,Conference League,2026-10-15T19:00:00,visitante,M,False,10,,0.0,,,0,0
+1636392,216759,Simen Vidtun Nilsen,Brann,Lincoln Red Imps FC,Conference League,2026-10-15T19:00:00,local,G,True,90,,0.0,,,0,0
+1636392,39239,Thore Pedersen,Brann,Lincoln Red Imps FC,Conference League,2026-10-15T19:00:00,local,D,True,66,,0.0,,,0,0
+1636392,39232,Fredrik Pallesen Knudsen,Brann,Lincoln Red Imps FC,Conference League,2026-10-15T19:00:00,local,D,True,90,,0.0,1.0,2.0,0,0
+1636392,134756,Neraysho Kasanwirjo,Brann,Lincoln Red Imps FC,Conference League,2026-10-15T19:00:00,local,D,True,23,,0.0,,,1,1
+1636392,57445,Joachim Soltvedt,Brann,Lincoln Red Imps FC,Conference League,2026-10-15T19:00:00,local,D,True,90,,0.0,,2.0,0,0
+1636392,89768,Kristall Máni Ingason,Brann,Lincoln Red Imps FC,Conference League,2026-10-15T19:00:00,local,M,True,90,,0.0,2.0,2.0,0,0
+1636392,15832,Jacob Lungi Sørensen,Brann,Lincoln Red Imps FC,Conference League,2026-10-15T19:00:00,local,M,True,90,,0.0,1.0,1.0,0,0
+1636392,197625,Eggert Aron Guðmundsson,Brann,Lincoln Red Imps FC,Conference League,2026-10-15T19:00:00,local,M,True,90,,0.0,,,0,0
+1636392,310076,Niklas Jensen Wassberg,Brann,Lincoln Red Imps FC,Conference League,2026-10-15T19:00:00,local,F,True,71,,0.0,,,0,0
+1636392,61558,Sævar Atli Magnússon,Brann,Lincoln Red Imps FC,Conference League,2026-10-15T19:00:00,local,F,True,90,,0.0,1.0,1.0,0,0
+1636392,57160,Niklas Castro,Brann,Lincoln Red Imps FC,Conference League,2026-10-15T19:00:00,local,F,True,82,2.0,0.0,2.0,2.0,1,0
+1636392,340393,Jonas Torsvik,Brann,Lincoln Red Imps FC,Conference League,2026-10-15T19:00:00,local,D,False,24,,1.0,1.0,1.0,0,0
+1636392,161943,Noah Jean Holm,Brann,Lincoln Red Imps FC,Conference League,2026-10-15T19:00:00,local,F,False,19,,0.0,2.0,3.0,0,0
+1636392,151191,Kristian Eriksen,Brann,Lincoln Red Imps FC,Conference League,2026-10-15T19:00:00,local,M,False,8,,0.0,,,0,0
+1636392,91622,Jaylan Hankins,Lincoln Red Imps FC,Brann,Conference League,2026-10-15T19:00:00,visitante,G,True,90,,0.0,,,0,0
+1636392,203802,Julliani Eersteling,Lincoln Red Imps FC,Brann,Conference League,2026-10-15T19:00:00,visitante,D,True,90,,0.0,,,0,0
+1636392,182692,Joe,Lincoln Red Imps FC,Brann,Conference League,2026-10-15T19:00:00,visitante,D,True,90,,0.0,,,0,0
+1636392,91426,Christian Rutjens,Lincoln Red Imps FC,Brann,Conference League,2026-10-15T19:00:00,visitante,D,True,90,,0.0,,,0,0
+1636392,46907,Nano,Lincoln Red Imps FC,Brann,Conference League,2026-10-15T19:00:00,visitante,D,True,90,,0.0,,1.0,0,0
+1636392,105684,Toni García,Lincoln Red Imps FC,Brann,Conference League,2026-10-15T19:00:00,visitante,M,True,67,,0.0,,,0,0
+1636392,134458,Graeme Torrilla,Lincoln Red Imps FC,Brann,Conference League,2026-10-15T19:00:00,visitante,M,True,90,,0.0,,1.0,0,0
+1636392,6936,Mandi,Lincoln Red Imps FC,Brann,Conference League,2026-10-15T19:00:00,visitante,M,True,84,,0.0,,,0,0
+1636392,108526,Kike Gómez,Lincoln Red Imps FC,Brann,Conference League,2026-10-15T19:00:00,visitante,F,True,67,1.0,0.0,1.0,1.0,0,0
+1636392,47035,Alvaro Romero,Lincoln Red Imps FC,Brann,Conference League,2026-10-15T19:00:00,visitante,F,True,77,,0.0,1.0,1.0,0,0
+1636392,667088,Yussef Flalhi Idrissi,Lincoln Red Imps FC,Brann,Conference League,2026-10-15T19:00:00,visitante,F,False,23,,0.0,,,0,0
+1636392,667087,Manuel Toledano,Lincoln Red Imps FC,Brann,Conference League,2026-10-15T19:00:00,visitante,F,False,23,,0.0,1.0,2.0,0,0
+1636392,217441,Facundo Alvarez,Lincoln Red Imps FC,Brann,Conference League,2026-10-15T19:00:00,visitante,M,False,13,,0.0,,,0,0
+1636392,527680,Nico Pinto,Lincoln Red Imps FC,Brann,Conference League,2026-10-15T19:00:00,visitante,M,False,11,,0.0,,,0,0
+1636406,24894,Diant Ramaj,FC Copenhagen,SC Braga,Conference League,2026-10-15T19:00:00,local,G,True,90,,0.0,,,0,0
+1636406,351014,Junnosuke Suzuki,FC Copenhagen,SC Braga,Conference League,2026-10-15T19:00:00,local,D,True,90,,0.0,1.0,1.0,0,0
+1636406,25312,Felix Beijmo,FC Copenhagen,SC Braga,Conference League,2026-10-15T19:00:00,local,D,True,90,,0.0,,,0,0
+1636406,443849,Ákos Markgráf,FC Copenhagen,SC Braga,Conference League,2026-10-15T19:00:00,local,D,True,90,,0.0,,,1,0
+1636406,1173,Birger Meling,FC Copenhagen,SC Braga,Conference League,2026-10-15T19:00:00,local,D,True,90,,1.0,,,0,0
+1636406,354831,Thapelo Maseko,FC Copenhagen,SC Braga,Conference League,2026-10-15T19:00:00,local,M,True,90,,1.0,1.0,1.0,0,0
+1636406,1234,Alex Král,FC Copenhagen,SC Braga,Conference League,2026-10-15T19:00:00,local,M,True,70,,0.0,,,0,0
+1636406,349212,William Clem,FC Copenhagen,SC Braga,Conference League,2026-10-15T19:00:00,local,M,True,84,,0.0,,1.0,0,0
+1636406,422779,Robert,FC Copenhagen,SC Braga,Conference League,2026-10-15T19:00:00,local,M,True,70,,0.0,,1.0,0,0
+1636406,18946,Mohamed Elyounoussi,FC Copenhagen,SC Braga,Conference League,2026-10-15T19:00:00,local,F,True,62,1.0,0.0,1.0,1.0,0,0
+1636406,426288,Viktor Bjarki Dadason,FC Copenhagen,SC Braga,Conference League,2026-10-15T19:00:00,local,F,True,61,,0.0,1.0,1.0,0,0
+1636406,1274,Andreas Cornelius,FC Copenhagen,SC Braga,Conference League,2026-10-15T19:00:00,local,F,False,29,2.0,0.0,2.0,2.0,0,0
+1636406,529934,Marvin Nasnas,FC Copenhagen,SC Braga,Conference League,2026-10-15T19:00:00,local,M,False,28,,0.0,,,0,0
+1636406,310199,Rodrigo Huescas,FC Copenhagen,SC Braga,Conference League,2026-10-15T19:00:00,local,D,False,20,,0.0,,,0,0
+1636406,15,Thomas Delaney,FC Copenhagen,SC Braga,Conference League,2026-10-15T19:00:00,local,M,False,20,,0.0,,,0,0
+1636406,419587,Hunor Németh,FC Copenhagen,SC Braga,Conference League,2026-10-15T19:00:00,local,M,False,12,,0.0,,,1,0
+1636406,359001,Bernardo Fontes,SC Braga,FC Copenhagen,Conference League,2026-10-15T19:00:00,visitante,G,True,90,,0.0,,,0,0
+1636406,137721,Gustaf Lagerbielke,SC Braga,FC Copenhagen,Conference League,2026-10-15T19:00:00,visitante,D,True,90,,0.0,,,0,0
+1636406,182857,Sergio Barcia,SC Braga,FC Copenhagen,Conference League,2026-10-15T19:00:00,visitante,D,True,75,,0.0,,,0,0
+1636406,162535,Bright Arrey-Mbi,SC Braga,FC Copenhagen,Conference League,2026-10-15T19:00:00,visitante,D,True,90,,0.0,,,0,0
+1636406,336575,Diogo Travassos,SC Braga,FC Copenhagen,Conference League,2026-10-15T19:00:00,visitante,M,True,84,,0.0,1.0,1.0,0,0
+1636406,2677,João Moutinho,SC Braga,FC Copenhagen,Conference League,2026-10-15T19:00:00,visitante,M,True,75,,0.0,,,0,0
+1636406,330295,Jean-Baptiste Gorby,SC Braga,FC Copenhagen,Conference League,2026-10-15T19:00:00,visitante,M,True,90,,0.0,,,0,0
+1636406,41103,Ricardo Horta,SC Braga,FC Copenhagen,Conference League,2026-10-15T19:00:00,visitante,M,True,90,,0.0,,1.0,0,0
+1636406,336570,Demir Ege Tıknaz,SC Braga,FC Copenhagen,Conference League,2026-10-15T19:00:00,visitante,F,True,90,,0.0,,,0,0
+1636406,202838,Denis Huseinbašić,SC Braga,FC Copenhagen,Conference League,2026-10-15T19:00:00,visitante,F,True,60,,0.0,,,0,0
+1636406,1302,Jonas Wind,SC Braga,FC Copenhagen,Conference League,2026-10-15T19:00:00,visitante,F,True,60,,0.0,,,0,0
+1636406,266630,Gabriel Silva,SC Braga,FC Copenhagen,Conference League,2026-10-15T19:00:00,visitante,F,False,30,,0.0,,1.0,0,0
+1636406,263530,Pau Víctor,SC Braga,FC Copenhagen,Conference League,2026-10-15T19:00:00,visitante,F,False,30,,0.0,,,0,0
+1636406,153290,Victor Gómez,SC Braga,FC Copenhagen,Conference League,2026-10-15T19:00:00,visitante,D,False,15,,0.0,,,0,0
+1636406,371911,Jovan Milošević,SC Braga,FC Copenhagen,Conference League,2026-10-15T19:00:00,visitante,F,False,15,,0.0,,,0,0
+1636406,380434,Mario Dorgeles,SC Braga,FC Copenhagen,Conference League,2026-10-15T19:00:00,visitante,M,False,12,,0.0,,1.0,0,0
+1636480,36828,Joël Drommel,Twente,FC Thun,Conference League,2026-10-15T19:00:00,local,G,True,95,,,,,0,0
+1636480,37370,Bart van Rooij,Twente,FC Thun,Conference League,2026-10-15T19:00:00,local,D,True,95,,,,,0,0
+1636480,37254,Robin Pröpper,Twente,FC Thun,Conference League,2026-10-15T19:00:00,local,D,True,95,,,,,0,0
+1636480,494106,Ruud Nijstad,Twente,FC Thun,Conference League,2026-10-15T19:00:00,local,D,True,95,,,,1.0,0,0
+1636480,378966,Aske Adelgaard,Twente,FC Thun,Conference League,2026-10-15T19:00:00,local,D,True,95,,,,,1,0
+1636480,129047,Ramiz Zerrouki,Twente,FC Thun,Conference League,2026-10-15T19:00:00,local,M,True,95,1.0,,1.0,4.0,0,0
+1636480,336562,Daouda Weidmann,Twente,FC Thun,Conference League,2026-10-15T19:00:00,local,M,True,84,,1.0,1.0,2.0,0,0
+1636480,272726,Daan Rots,Twente,FC Thun,Conference League,2026-10-15T19:00:00,local,M,True,67,,,,1.0,0,0
+1636480,328670,Younes Taha,Twente,FC Thun,Conference League,2026-10-15T19:00:00,local,M,True,67,,,1.0,3.0,0,0
+1636480,352730,Sondre Ørjasæter,Twente,FC Thun,Conference League,2026-10-15T19:00:00,local,M,True,78,,,1.0,2.0,0,0
+1636480,25416,Wout Weghorst,Twente,FC Thun,Conference League,2026-10-15T19:00:00,local,F,True,95,,,1.0,2.0,0,0
+1636480,191879,Kristian Hlynsson,Twente,FC Thun,Conference League,2026-10-15T19:00:00,local,M,False,28,,,,,0,0
+1636480,30413,Marko Pjaca,Twente,FC Thun,Conference League,2026-10-15T19:00:00,local,F,False,28,,,,,0,0
+1636480,388327,Filip Thorvaldsen,Twente,FC Thun,Conference League,2026-10-15T19:00:00,local,F,False,17,,,,1.0,0,0
+1636480,36934,Thomas Van den Belt,Twente,FC Thun,Conference League,2026-10-15T19:00:00,local,M,False,11,,,,,0,0
+1636480,163139,Niklas Steffen,FC Thun,Twente,Conference League,2026-10-15T19:00:00,visitante,G,True,95,,,,,0,0
+1636480,180400,Fabio Fehr,FC Thun,Twente,Conference League,2026-10-15T19:00:00,visitante,D,True,95,,,,,1,0
+1636480,48654,Nicolas Bürgy,FC Thun,Twente,Conference League,2026-10-15T19:00:00,visitante,D,True,95,,,,,0,0
+1636480,48507,Jan Bamert,FC Thun,Twente,Conference League,2026-10-15T19:00:00,visitante,D,True,45,,,,,0,0
+1636480,496993,Olivier Mambwa,FC Thun,Twente,Conference League,2026-10-15T19:00:00,visitante,D,True,82,,,,,0,0
+1636480,265753,Nils Reichmuth,FC Thun,Twente,Conference League,2026-10-15T19:00:00,visitante,M,True,67,,,,,0,0
+1636480,125623,Justin Roth,FC Thun,Twente,Conference League,2026-10-15T19:00:00,visitante,M,True,95,,,,,0,0
+1636480,55911,Mattias Käit,FC Thun,Twente,Conference League,2026-10-15T19:00:00,visitante,M,True,95,,,,,0,0
+1636480,357667,Patrik Kristal,FC Thun,Twente,Conference League,2026-10-15T19:00:00,visitante,M,True,60,,0.0,,2.0,0,1
+1636480,21775,Brighton Labeau,FC Thun,Twente,Conference League,2026-10-15T19:00:00,visitante,F,True,81,,,,,0,0
+1636480,339922,Furkan Dursun,FC Thun,Twente,Conference League,2026-10-15T19:00:00,visitante,F,True,66,,,,,0,0
+1636480,335988,Nassim Zoukit,FC Thun,Twente,Conference League,2026-10-15T19:00:00,visitante,M,False,50,,,,,0,0
+1636480,161820,Nico Maier,FC Thun,Twente,Conference League,2026-10-15T19:00:00,visitante,M,False,29,,,,,0,0
+1636480,660753,Louis Passavant ,FC Thun,Twente,Conference League,2026-10-15T19:00:00,visitante,D,False,28,,,,,0,0
+1636480,437094,Riccardo Braschi,FC Thun,Twente,Conference League,2026-10-15T19:00:00,visitante,F,False,14,,,,1.0,0,0
+1636480,156561,Tom Strannegård,FC Thun,Twente,Conference League,2026-10-15T19:00:00,visitante,M,False,13,,,,,0,0
+1636382,30417,Marco Carnesecchi,Atalanta,Pafos,Conference League,2026-10-15T19:00:00,local,G,True,90,,0.0,,,0,0
+1636382,2286,Davide Zappacosta,Atalanta,Pafos,Conference League,2026-10-15T19:00:00,local,D,True,90,,0.0,,,0,0
+1636382,281495,Thomas Kristensen,Atalanta,Pafos,Conference League,2026-10-15T19:00:00,local,D,True,80,,0.0,,1.0,0,0
+1636382,1442,Sead Kolašinac,Atalanta,Pafos,Conference League,2026-10-15T19:00:00,local,D,True,90,,0.0,,,0,0
+1636382,264857,Lorenzo Bernasconi,Atalanta,Pafos,Conference League,2026-10-15T19:00:00,local,D,True,90,,0.0,,,0,0
+1636382,325,Gianluca Gaetano,Atalanta,Pafos,Conference League,2026-10-15T19:00:00,local,M,True,90,,0.0,,1.0,0,0
+1636382,2763,Mario Pašalić,Atalanta,Pafos,Conference League,2026-10-15T19:00:00,local,M,True,67,,0.0,,,0,0
+1636382,1358,Eljif Elmas,Atalanta,Pafos,Conference League,2026-10-15T19:00:00,local,M,True,90,1.0,0.0,2.0,3.0,0,0
+1636382,30543,Giacomo Raspadori,Atalanta,Pafos,Conference League,2026-10-15T19:00:00,local,M,True,21,1.0,1.0,2.0,2.0,0,0
+1636382,203474,Nicola Zalewski,Atalanta,Pafos,Conference League,2026-10-15T19:00:00,local,M,True,67,,0.0,1.0,1.0,0,0
+1636382,30544,Gianluca Scamacca,Atalanta,Pafos,Conference League,2026-10-15T19:00:00,local,F,True,90,1.0,0.0,2.0,4.0,0,0
+1636382,147859,Charles De Ketelaere,Atalanta,Pafos,Conference League,2026-10-15T19:00:00,local,F,False,69,,1.0,,3.0,0,0
+1636382,178749,Lazar Samardžić,Atalanta,Pafos,Conference League,2026-10-15T19:00:00,local,M,False,23,,0.0,,1.0,0,0
+1636382,10097,Éderson,Atalanta,Pafos,Conference League,2026-10-15T19:00:00,local,M,False,23,,0.0,,,0,0
+1636382,484411,Javison Idele,Atalanta,Pafos,Conference League,2026-10-15T19:00:00,local,M,False,10,,0.0,,,0,0
+1636382,40384,Radosław Majecki,Pafos,Atalanta,Conference League,2026-10-15T19:00:00,visitante,G,True,90,,0.0,,,0,0
+1636382,26669,Bruno,Pafos,Atalanta,Conference League,2026-10-15T19:00:00,visitante,D,True,45,,0.0,,,0,0
+1636382,8503,Samy Mmaee,Pafos,Atalanta,Conference League,2026-10-15T19:00:00,visitante,D,True,90,,0.0,,,0,0
+1636382,2283,David Luiz,Pafos,Atalanta,Conference League,2026-10-15T19:00:00,visitante,D,True,37,,0.0,,,0,0
+1636382,15281,Nikolas Ioannou,Pafos,Atalanta,Conference League,2026-10-15T19:00:00,visitante,D,True,90,,0.0,,,0,0
+1636382,31397,Vlad Dragomir,Pafos,Atalanta,Conference League,2026-10-15T19:00:00,visitante,M,True,90,,0.0,1.0,1.0,0,0
+1636382,1324,Ivan Šunjić,Pafos,Atalanta,Conference League,2026-10-15T19:00:00,visitante,M,True,90,,0.0,,,0,0
+1636382,41155,Pêpê,Pafos,Atalanta,Conference League,2026-10-15T19:00:00,visitante,M,True,69,,0.0,,1.0,0,0
+1636382,18807,Domingos Quina,Pafos,Atalanta,Conference League,2026-10-15T19:00:00,visitante,F,True,45,,0.0,,,0,0
+1636382,350153,Lelê,Pafos,Atalanta,Conference League,2026-10-15T19:00:00,visitante,F,True,69,,0.0,,2.0,0,0
+1636382,305817,Biel,Pafos,Atalanta,Conference League,2026-10-15T19:00:00,visitante,F,True,90,1.0,0.0,3.0,3.0,0,0
+1636382,2860,Ken Sema,Pafos,Atalanta,Conference League,2026-10-15T19:00:00,visitante,M,False,53,,0.0,,,0,0
+1636382,430774,Alexandre Brito,Pafos,Atalanta,Conference League,2026-10-15T19:00:00,visitante,M,False,45,,0.0,,,0,0
+1636382,41994,João Correia,Pafos,Atalanta,Conference League,2026-10-15T19:00:00,visitante,D,False,45,,0.0,,,0,0
+1636382,26779,Guga,Pafos,Atalanta,Conference League,2026-10-15T19:00:00,visitante,M,False,21,,0.0,,,0,0
+1636382,41560,Anderson Silva,Pafos,Atalanta,Conference League,2026-10-15T19:00:00,visitante,F,False,21,,1.0,1.0,1.0,0,0
+1636471,162482,Léo Kokubo,St. Truiden,FC Iberia 1999,Conference League,2026-10-15T19:00:00,local,G,True,90,,0.0,,,0,0
+1636471,381316,Robert-Jan Vanwesemael,St. Truiden,FC Iberia 1999,Conference League,2026-10-15T19:00:00,local,D,True,90,1.0,0.0,2.0,2.0,0,0
+1636471,32954,Shogo Taniguchi,St. Truiden,FC Iberia 1999,Conference League,2026-10-15T19:00:00,local,D,True,90,,0.0,,,0,0
+1636471,105474,Visar Musliu,St. Truiden,FC Iberia 1999,Conference League,2026-10-15T19:00:00,local,D,True,90,,0.0,,,0,0
+1636471,37671,Joedrick Pupe,St. Truiden,FC Iberia 1999,Conference League,2026-10-15T19:00:00,local,D,True,90,,0.0,,1.0,0,0
+1636471,20839,Abdoulaye Sissako,St. Truiden,FC Iberia 1999,Conference League,2026-10-15T19:00:00,local,M,True,90,,0.0,,2.0,0,0
+1636471,356714,Nelson Ishiwatari,St. Truiden,FC Iberia 1999,Conference League,2026-10-15T19:00:00,local,M,True,90,,0.0,1.0,2.0,1,0
+1636471,129670,Nathanaël Mbuku,St. Truiden,FC Iberia 1999,Conference League,2026-10-15T19:00:00,local,M,True,84,,0.0,1.0,4.0,0,0
+1636471,274277,Ryan Merlen,St. Truiden,FC Iberia 1999,Conference League,2026-10-15T19:00:00,local,M,True,90,,0.0,,,0,0
+1636471,342652,Ilias Sebaoui,St. Truiden,FC Iberia 1999,Conference League,2026-10-15T19:00:00,local,M,True,89,1.0,0.0,1.0,3.0,0,0
+1636471,314377,Samed Baždar,St. Truiden,FC Iberia 1999,Conference League,2026-10-15T19:00:00,local,F,True,79,,1.0,,2.0,0,0
+1636471,361349,Frederic Soelle Soelle,St. Truiden,FC Iberia 1999,Conference League,2026-10-15T19:00:00,local,F,False,11,,1.0,,,0,0
+1636471,415721,Kaito Matsuzawa,St. Truiden,FC Iberia 1999,Conference League,2026-10-15T19:00:00,local,F,False,10,,0.0,,,0,0
+1636471,510415,Shion Shinkawa,St. Truiden,FC Iberia 1999,Conference League,2026-10-15T19:00:00,local,M,False,1,,0.0,,,0,0
+1636471,41379,Giorgi Makaridze,FC Iberia 1999,St. Truiden,Conference League,2026-10-15T19:00:00,visitante,G,True,90,,0.0,,,0,0
+1636471,395823,Aleksandre Amisulashvili,FC Iberia 1999,St. Truiden,Conference League,2026-10-15T19:00:00,visitante,D,True,90,,0.0,,,0,0
+1636471,156990,Phillip Čančar,FC Iberia 1999,St. Truiden,Conference League,2026-10-15T19:00:00,visitante,D,True,84,,0.0,,,0,0
+1636471,1875,Vahid Selimović,FC Iberia 1999,St. Truiden,Conference League,2026-10-15T19:00:00,visitante,D,True,90,,0.0,,,0,0
+1636471,24550,Jemali Giorgi Jinjolava,FC Iberia 1999,St. Truiden,Conference League,2026-10-15T19:00:00,visitante,D,True,90,,0.0,1.0,2.0,0,0
+1636471,292336,Lucas Cafe,FC Iberia 1999,St. Truiden,Conference League,2026-10-15T19:00:00,visitante,M,True,71,,0.0,,,0,0
+1636471,410304,Nikoloz Dadiani,FC Iberia 1999,St. Truiden,Conference League,2026-10-15T19:00:00,visitante,M,True,84,,0.0,,,0,0
+1636471,24609,Bakar Kardava,FC Iberia 1999,St. Truiden,Conference League,2026-10-15T19:00:00,visitante,M,True,90,,0.0,,,0,0
+1636471,87729,Zviad Natchkebia,FC Iberia 1999,St. Truiden,Conference League,2026-10-15T19:00:00,visitante,M,True,71,,0.0,,,0,0
+1636471,306190,Amiran Dzagania,FC Iberia 1999,St. Truiden,Conference League,2026-10-15T19:00:00,visitante,F,True,79,,0.0,,,0,0
+1636471,311864,Nika Sikharulashvili,FC Iberia 1999,St. Truiden,Conference League,2026-10-15T19:00:00,visitante,F,True,90,,0.0,,1.0,0,0
+1636471,163530,Jean-Marc Tiboue,FC Iberia 1999,St. Truiden,Conference League,2026-10-15T19:00:00,visitante,D,False,19,,0.0,,,0,0
+1636471,636874,Stephen Ende,FC Iberia 1999,St. Truiden,Conference League,2026-10-15T19:00:00,visitante,F,False,19,,0.0,,1.0,0,0
+1636471,494364,Andria Bartishvili,FC Iberia 1999,St. Truiden,Conference League,2026-10-15T19:00:00,visitante,M,False,11,,0.0,,,0,0
+1636471,24461,Giorgi Kobuladze,FC Iberia 1999,St. Truiden,Conference League,2026-10-15T19:00:00,visitante,M,False,10,,0.0,,,0,0
+1636471,24676,Giorgi Kutsia,FC Iberia 1999,St. Truiden,Conference League,2026-10-15T19:00:00,visitante,M,False,10,,0.0,,,0,0
+1636236,407806,Rayan,Bournemouth,Sturm Graz,Europa League,2026-10-15T19:00:00,local,F,True,20,1.0,0.0,1.0,1.0,0,0
+1636236,792,J. Kluivert,Bournemouth,Sturm Graz,Europa League,2026-10-15T19:00:00,local,F,True,20,0.0,0.0,1.0,2.0,0,0
+1636236,20093,J. Hill,Bournemouth,Sturm Graz,Europa League,2026-10-15T19:00:00,local,D,True,28,0.0,0.0,0.0,3.0,0,0
+1636236,129682,A. Adli,Bournemouth,Sturm Graz,Europa League,2026-10-15T19:00:00,local,F,True,6,0.0,0.0,0.0,1.0,0,0
+1636236,1125,R. Christie,Bournemouth,Sturm Graz,Europa League,2026-10-15T19:00:00,local,M,True,21,0.0,0.0,0.0,1.0,0,0
+1636236,118307,Đ. Petrović,Bournemouth,Sturm Graz,Europa League,2026-10-15T19:00:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1636236,18869,A. Smith,Bournemouth,Sturm Graz,Europa League,2026-10-15T19:00:00,local,D,True,62,0.0,1.0,0.0,0.0,0,0
+1636236,331832,António Silva,Bournemouth,Sturm Graz,Europa League,2026-10-15T19:00:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636236,22136,B. Diakité,Bournemouth,Sturm Graz,Europa League,2026-10-15T19:00:00,local,D,True,90,0.0,0.0,0.0,0.0,1,0
+1636236,363333,J. Soler,Bournemouth,Sturm Graz,Europa League,2026-10-15T19:00:00,local,D,True,90,0.0,0.0,0.0,1.0,1,0
+1636236,19245,M. Tavernier,Bournemouth,Sturm Graz,Europa League,2026-10-15T19:00:00,local,M,True,70,0.0,0.0,0.0,3.0,0,0
+1636236,18872,L. Cook,Bournemouth,Sturm Graz,Europa League,2026-10-15T19:00:00,local,M,True,90,0.0,0.0,0.0,1.0,0,0
+1636236,1150,T. Adams,Bournemouth,Sturm Graz,Europa League,2026-10-15T19:00:00,local,M,True,69,0.0,0.0,0.0,0.0,0,0
+1636236,343576,B. Doak,Bournemouth,Sturm Graz,Europa League,2026-10-15T19:00:00,local,M,True,84,0.0,0.0,0.0,2.0,0,0
+1636236,343202,Á. Rodríguez,Bournemouth,Sturm Graz,Europa League,2026-10-15T19:00:00,local,F,True,90,1.0,0.0,2.0,4.0,0,0
+1636236,152856,Evanilson,Bournemouth,Sturm Graz,Europa League,2026-10-15T19:00:00,local,F,True,70,1.0,0.0,3.0,4.0,1,0
+1636236,176023,S. Seidl,Sturm Graz,Bournemouth,Europa League,2026-10-15T19:00:00,visitante,F,True,75,0.0,0.0,0.0,1.0,0,0
+1636236,1088,A. Vallci,Sturm Graz,Bournemouth,Europa League,2026-10-15T19:00:00,visitante,D,True,15,0.0,0.0,0.0,0.0,1,0
+1636236,7701,P. Koller,Sturm Graz,Bournemouth,Europa League,2026-10-15T19:00:00,visitante,D,True,7,0.0,0.0,0.0,0.0,0,0
+1636236,427260,A. Kayombo,Sturm Graz,Bournemouth,Europa League,2026-10-15T19:00:00,visitante,F,True,15,0.0,0.0,0.0,0.0,0,0
+1636236,322987,J. Halwachs,Sturm Graz,Bournemouth,Europa League,2026-10-15T19:00:00,visitante,M,True,15,0.0,0.0,0.0,0.0,1,0
+1636236,334429,O. Diakité,Sturm Graz,Bournemouth,Europa League,2026-10-15T19:00:00,visitante,F,True,29,0.0,0.0,0.0,1.0,0,0
+1636236,334353,J. Quarshie,Sturm Graz,Bournemouth,Europa League,2026-10-15T19:00:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636236,443800,P. Petrović,Sturm Graz,Bournemouth,Europa League,2026-10-15T19:00:00,visitante,D,True,75,0.0,0.0,0.0,0.0,0,0
+1636236,395191,V. Matoshi,Sturm Graz,Bournemouth,Europa League,2026-10-15T19:00:00,visitante,M,True,90,0.0,0.0,0.0,0.0,0,0
+1636236,409670,A. Malic,Sturm Graz,Bournemouth,Europa League,2026-10-15T19:00:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636236,7757,J. Heil,Sturm Graz,Bournemouth,Europa League,2026-10-15T19:00:00,visitante,D,True,90,0.0,0.0,0.0,1.0,0,0
+1636236,19041,J. Gorenc Stankovič,Sturm Graz,Bournemouth,Europa League,2026-10-15T19:00:00,visitante,M,True,90,0.0,0.0,0.0,2.0,0,0
+1636236,357424,B. Beganović,Sturm Graz,Bournemouth,Europa League,2026-10-15T19:00:00,visitante,F,True,61,0.0,0.0,0.0,0.0,1,0
+1636236,422408,L. Balbo,Sturm Graz,Bournemouth,Europa League,2026-10-15T19:00:00,visitante,D,True,83,0.0,0.0,0.0,0.0,0,0
+1636236,451425,Jacob Peter Hödl,Sturm Graz,Bournemouth,Europa League,2026-10-15T19:00:00,visitante,M,True,75,0.0,0.0,1.0,1.0,0,0
+1636236,281989,D. Khudyakov,Sturm Graz,Bournemouth,Europa League,2026-10-15T19:00:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1636295,1138,T. Weah,Marseille,Olympiakos Piraeus,Europa League,2026-10-15T19:00:00,local,D,True,90,0.0,0.0,1.0,1.0,0,0
+1636295,193501,B. Meité,Marseille,Olympiakos Piraeus,Europa League,2026-10-15T19:00:00,local,D,True,90,0.0,0.0,0.0,1.0,1,0
+1636295,21694,N. Aguerd,Marseille,Olympiakos Piraeus,Europa League,2026-10-15T19:00:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636295,2284,Emerson,Marseille,Olympiakos Piraeus,Europa League,2026-10-15T19:00:00,local,D,True,62,0.0,0.0,0.0,0.0,0,0
+1636295,354298,T. Nnadi,Marseille,Olympiakos Piraeus,Europa League,2026-10-15T19:00:00,local,M,True,62,0.0,0.0,0.0,0.0,0,0
+1636295,896,A. Gomes,Marseille,Olympiakos Piraeus,Europa League,2026-10-15T19:00:00,local,M,True,75,0.0,0.0,0.0,0.0,0,0
+1636295,20692,H. Abdelli,Marseille,Olympiakos Piraeus,Europa League,2026-10-15T19:00:00,local,M,True,90,0.0,0.0,0.0,0.0,0,0
+1636295,449158,K. Abdallah,Marseille,Olympiakos Piraeus,Europa League,2026-10-15T19:00:00,local,M,True,80,0.0,0.0,1.0,3.0,1,0
+1636295,19364,N. Maupay,Marseille,Olympiakos Piraeus,Europa League,2026-10-15T19:00:00,local,F,True,62,0.0,0.0,0.0,0.0,0,0
+1636295,9363,Igor Paixão,Marseille,Olympiakos Piraeus,Europa League,2026-10-15T19:00:00,local,M,True,90,0.0,0.0,2.0,4.0,0,0
+1636295,36827,J. de Lange,Marseille,Olympiakos Piraeus,Europa League,2026-10-15T19:00:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1636295,943,U. Garcia,Marseille,Olympiakos Piraeus,Europa League,2026-10-15T19:00:00,local,D,True,28,0.0,0.0,0.0,0.0,0,0
+1636295,85041,A. Gouiri,Marseille,Olympiakos Piraeus,Europa League,2026-10-15T19:00:00,local,F,True,28,0.0,0.0,0.0,0.0,0,0
+1636295,412,A. Harit,Marseille,Olympiakos Piraeus,Europa League,2026-10-15T19:00:00,local,M,True,28,0.0,0.0,1.0,2.0,0,0
+1636295,926,G. Kondogbia,Marseille,Olympiakos Piraeus,Europa League,2026-10-15T19:00:00,local,M,True,10,0.0,0.0,0.0,0.0,0,0
+1636295,102447,F. Moumbagna,Marseille,Olympiakos Piraeus,Europa League,2026-10-15T19:00:00,local,F,True,15,0.0,0.0,0.0,0.0,0,0
+1636295,27157,M. Saliakas,Olympiakos Piraeus,Marseille,Europa League,2026-10-15T19:00:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636295,971,P. Retsos,Olympiakos Piraeus,Marseille,Europa League,2026-10-15T19:00:00,visitante,D,True,90,0.0,0.0,0.0,0.0,1,0
+1636295,134431,L. Pirola,Olympiakos Piraeus,Marseille,Europa League,2026-10-15T19:00:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636295,278196,S. Onyemaechi,Olympiakos Piraeus,Marseille,Europa League,2026-10-15T19:00:00,visitante,D,True,73,0.0,0.0,0.0,0.0,1,0
+1636295,324034,G. Puerta,Olympiakos Piraeus,Marseille,Europa League,2026-10-15T19:00:00,visitante,M,True,67,0.0,0.0,0.0,0.0,0,0
+1636295,195929,S. Hezze,Olympiakos Piraeus,Marseille,Europa League,2026-10-15T19:00:00,visitante,M,True,90,1.0,0.0,2.0,2.0,0,0
+1636295,118,Gelson Martins,Olympiakos Piraeus,Marseille,Europa League,2026-10-15T19:00:00,visitante,M,True,90,0.0,0.0,1.0,1.0,0,0
+1636295,41130,Chiquinho,Olympiakos Piraeus,Marseille,Europa League,2026-10-15T19:00:00,visitante,M,True,82,0.0,1.0,0.0,1.0,0,0
+1636295,141901,Jota Silva,Olympiakos Piraeus,Marseille,Europa League,2026-10-15T19:00:00,visitante,M,True,72,0.0,0.0,0.0,3.0,0,0
+1636295,8493,R. Yaremchuk,Olympiakos Piraeus,Marseille,Europa League,2026-10-15T19:00:00,visitante,F,True,67,0.0,0.0,0.0,0.0,0,0
+1636295,25004,S. Ortega,Olympiakos Piraeus,Marseille,Europa League,2026-10-15T19:00:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1636295,1609,K. Fortounis,Olympiakos Piraeus,Marseille,Europa League,2026-10-15T19:00:00,visitante,M,True,18,0.0,0.0,0.0,0.0,0,0
+1636295,2807,R. Freuler,Olympiakos Piraeus,Marseille,Europa League,2026-10-15T19:00:00,visitante,M,True,23,0.0,0.0,0.0,0.0,0,0
+1636295,291713,A. González,Olympiakos Piraeus,Marseille,Europa League,2026-10-15T19:00:00,visitante,F,True,23,0.0,0.0,1.0,2.0,0,0
+1636295,379985,Gustavo Sá,Olympiakos Piraeus,Marseille,Europa League,2026-10-15T19:00:00,visitante,M,True,8,0.0,0.0,0.0,0.0,0,0
+1636295,841,N. Tiknizyan,Olympiakos Piraeus,Marseille,Europa League,2026-10-15T19:00:00,visitante,D,True,17,0.0,0.0,0.0,0.0,0,0
+1636326,417830,A. Ait Boudlal,Rennes,OFI,Europa League,2026-10-15T19:00:00,local,D,True,90,1.0,0.0,1.0,3.0,1,0
+1636326,21497,L. Blas,Rennes,OFI,Europa League,2026-10-15T19:00:00,local,F,True,67,0.0,0.0,1.0,1.0,0,0
+1636326,24147,M. Camara,Rennes,OFI,Europa League,2026-10-15T19:00:00,local,M,True,90,0.0,0.0,0.0,1.0,1,0
+1636326,278392,C. Cresswell,Rennes,OFI,Europa League,2026-10-15T19:00:00,local,D,True,90,0.0,0.0,1.0,2.0,0,0
+1636326,3007,P. Frankowski,Rennes,OFI,Europa League,2026-10-15T19:00:00,local,D,True,77,0.0,0.0,0.0,1.0,0,0
+1636326,163004,E. Lepaul,Rennes,OFI,Europa League,2026-10-15T19:00:00,local,F,True,90,0.0,0.0,1.0,3.0,0,0
+1636326,438281,M. Nagida,Rennes,OFI,Europa League,2026-10-15T19:00:00,local,D,True,90,1.0,0.0,3.0,5.0,0,0
+1636326,21102,V. Rongier,Rennes,OFI,Europa League,2026-10-15T19:00:00,local,M,True,67,0.0,0.0,1.0,2.0,0,0
+1636326,40403,S. Szymański,Rennes,OFI,Europa League,2026-10-15T19:00:00,local,M,True,77,0.0,0.0,0.0,1.0,0,0
+1636326,15286,Mousa Tamari,Rennes,OFI,Europa League,2026-10-15T19:00:00,local,F,True,77,0.0,0.0,0.0,2.0,0,0
+1636326,21628,B. Samba,Rennes,OFI,Europa League,2026-10-15T19:00:00,local,G,True,90,0.0,0.0,0.0,0.0,1,0
+1636326,156465,I. Soumaré,Rennes,OFI,Europa League,2026-10-15T19:00:00,local,F,True,13,0.0,0.0,1.0,1.0,0,0
+1636326,51144,B. Reynolds,Rennes,OFI,Europa League,2026-10-15T19:00:00,local,D,True,13,0.0,0.0,0.0,0.0,0,0
+1636326,349799,Eliezer Mayenda,Rennes,OFI,Europa League,2026-10-15T19:00:00,local,F,True,23,0.0,0.0,0.0,2.0,0,0
+1636326,22015,B. Dia,Rennes,OFI,Europa League,2026-10-15T19:00:00,local,F,True,23,0.0,0.0,0.0,0.0,0,0
+1636326,343792,D. Cissé,Rennes,OFI,Europa League,2026-10-15T19:00:00,local,M,True,13,0.0,0.0,0.0,1.0,0,0
+1636326,26741,A. Poungouras,OFI,Rennes,Europa League,2026-10-15T19:00:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636326,170077,T. Nuss,OFI,Rennes,Europa League,2026-10-15T19:00:00,visitante,F,True,80,0.0,0.0,0.0,0.0,0,0
+1636326,31045,D. Nikolaou,OFI,Rennes,Europa League,2026-10-15T19:00:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636326,14361,K. Krizmanić,OFI,Rennes,Europa League,2026-10-15T19:00:00,visitante,D,True,90,0.0,0.0,0.0,0.0,1,0
+1636326,47292,K. Kodro,OFI,Rennes,Europa League,2026-10-15T19:00:00,visitante,F,True,68,0.0,0.0,0.0,0.0,0,0
+1636326,7625,T. Fountas,OFI,Rennes,Europa League,2026-10-15T19:00:00,visitante,F,True,45,1.0,0.0,1.0,1.0,0,0
+1636326,30857,L. Dickmann,OFI,Rennes,Europa League,2026-10-15T19:00:00,visitante,M,True,83,0.0,0.0,0.0,0.0,1,0
+1636326,1603,A. Bouchalakis,OFI,Rennes,Europa League,2026-10-15T19:00:00,visitante,M,True,67,0.0,0.0,0.0,0.0,0,0
+1636326,310442,N. Athanasiou,OFI,Rennes,Europa League,2026-10-15T19:00:00,visitante,M,True,90,0.0,1.0,0.0,0.0,0,0
+1636326,1602,T. Androutsos,OFI,Rennes,Europa League,2026-10-15T19:00:00,visitante,M,True,90,0.0,0.0,0.0,0.0,0,0
+1636326,122040,N. Christogeorgos,OFI,Rennes,Europa League,2026-10-15T19:00:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1636326,36848,Aitor Cantalapiedra,OFI,Rennes,Europa League,2026-10-15T19:00:00,visitante,F,True,22,0.0,0.0,0.0,0.0,0,0
+1636326,92525,Borja González,OFI,Rennes,Europa League,2026-10-15T19:00:00,visitante,D,True,7,0.0,0.0,0.0,1.0,0,0
+1636326,26952,Z. Karachalios,OFI,Rennes,Europa League,2026-10-15T19:00:00,visitante,M,True,23,0.0,0.0,0.0,0.0,0,0
+1636326,349497,G. Apostolakis,OFI,Rennes,Europa League,2026-10-15T19:00:00,visitante,M,True,45,0.0,0.0,0.0,0.0,0,0
+1636326,382218,G. Theodosoulakis,OFI,Rennes,Europa League,2026-10-15T19:00:00,visitante,F,True,10,0.0,0.0,0.0,0.0,0,0
+1636268,279905,B. Conté,1899 Hoffenheim,Beşiktaş,Europa League,2026-10-15T19:00:00,local,M,True,18,0.0,0.0,0.0,2.0,0,0
+1636268,202501,F. Asllani,1899 Hoffenheim,Beşiktaş,Europa League,2026-10-15T19:00:00,local,M,True,90,1.0,0.0,1.0,3.0,1,0
+1636268,390586,L. Avdullahu,1899 Hoffenheim,Beşiktaş,Europa League,2026-10-15T19:00:00,local,M,True,90,0.0,0.0,1.0,1.0,0,0
+1636268,18964,Bernardo,1899 Hoffenheim,Beşiktaş,Europa League,2026-10-15T19:00:00,local,D,True,90,0.0,0.0,0.0,1.0,0,0
+1636268,37153,W. Burger,1899 Hoffenheim,Beşiktaş,Europa League,2026-10-15T19:00:00,local,M,True,72,0.0,0.0,0.0,1.0,0,0
+1636268,1231,V. Coufal,1899 Hoffenheim,Beşiktaş,Europa League,2026-10-15T19:00:00,local,D,True,90,0.0,1.0,0.0,0.0,1,0
+1636268,362564,A. Daghim,1899 Hoffenheim,Beşiktaş,Europa League,2026-10-15T19:00:00,local,M,True,59,0.0,0.0,0.0,0.0,0,0
+1636268,66019,A. Hložek,1899 Hoffenheim,Beşiktaş,Europa League,2026-10-15T19:00:00,local,F,True,59,0.0,0.0,0.0,1.0,0,0
+1636268,26300,O. Kabak,1899 Hoffenheim,Beşiktaş,Europa League,2026-10-15T19:00:00,local,D,True,85,0.0,0.0,0.0,0.0,1,0
+1636268,726,A. Kramarić,1899 Hoffenheim,Beşiktaş,Europa League,2026-10-15T19:00:00,local,M,True,72,0.0,0.0,0.0,0.0,0,0
+1636268,33067,K. Machida,1899 Hoffenheim,Beşiktaş,Europa League,2026-10-15T19:00:00,local,D,True,90,1.0,0.0,1.0,2.0,1,0
+1636268,702,O. Baumann,1899 Hoffenheim,Beşiktaş,Europa League,2026-10-15T19:00:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1636268,453903,Nathan De Cat,1899 Hoffenheim,Beşiktaş,Europa League,2026-10-15T19:00:00,local,M,True,18,0.0,0.0,0.0,2.0,0,0
+1636268,162964,R. Hranáč,1899 Hoffenheim,Beşiktaş,Europa League,2026-10-15T19:00:00,local,D,True,5,0.0,0.0,0.0,0.0,0,0
+1636268,203040,T. Lemperle,1899 Hoffenheim,Beşiktaş,Europa League,2026-10-15T19:00:00,local,F,True,31,0.0,1.0,0.0,0.0,1,0
+1636268,7327,A. Prass,1899 Hoffenheim,Beşiktaş,Europa League,2026-10-15T19:00:00,local,D,True,31,0.0,0.0,0.0,0.0,0,0
+1636268,135068,E. Agbadou,Beşiktaş,1899 Hoffenheim,Europa League,2026-10-15T19:00:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636268,446824,I. Fakili,Beşiktaş,1899 Hoffenheim,Europa League,2026-10-15T19:00:00,visitante,M,True,90,0.0,1.0,0.0,1.0,0,0
+1636268,37155,O. Kökçü,Beşiktaş,1899 Hoffenheim,Europa League,2026-10-15T19:00:00,visitante,M,True,45,0.0,0.0,0.0,1.0,0,0
+1636268,2973,A. Murillo,Beşiktaş,1899 Hoffenheim,Europa League,2026-10-15T19:00:00,visitante,D,True,90,1.0,0.0,1.0,2.0,0,0
+1636268,18786,W. Ndidi,Beşiktaş,1899 Hoffenheim,Europa League,2026-10-15T19:00:00,visitante,M,True,89,0.0,0.0,0.0,0.0,0,0
+1636268,34710,Oh Hyeon-Gyu,Beşiktaş,1899 Hoffenheim,Europa League,2026-10-15T19:00:00,visitante,F,True,85,2.0,1.0,2.0,7.0,1,0
+1636268,316904,J. Olaitan,Beşiktaş,1899 Hoffenheim,Europa League,2026-10-15T19:00:00,visitante,M,True,78,0.0,1.0,1.0,2.0,0,0
+1636268,333137,K. Ouattara,Beşiktaş,1899 Hoffenheim,Europa League,2026-10-15T19:00:00,visitante,D,True,89,0.0,0.0,0.0,0.0,0,0
+1636268,50046,E. Topçu,Beşiktaş,1899 Hoffenheim,Europa League,2026-10-15T19:00:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636268,1946,L. Trossard,Beşiktaş,1899 Hoffenheim,Europa League,2026-10-15T19:00:00,visitante,M,True,90,0.0,0.0,0.0,3.0,0,0
+1636268,367637,Ü. Akdağ,Beşiktaş,1899 Hoffenheim,Europa League,2026-10-15T19:00:00,visitante,D,True,1,0.0,0.0,0.0,0.0,0,0
+1636268,399,A. Nübel,Beşiktaş,1899 Hoffenheim,Europa League,2026-10-15T19:00:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1636268,336567,S. Kılıçsoy,Beşiktaş,1899 Hoffenheim,Europa League,2026-10-15T19:00:00,visitante,F,True,5,0.0,0.0,0.0,1.0,0,0
+1636268,181808,F. Miretti,Beşiktaş,1899 Hoffenheim,Europa League,2026-10-15T19:00:00,visitante,M,True,45,0.0,0.0,1.0,1.0,0,0
+1636268,24807,S. Özcan,Beşiktaş,1899 Hoffenheim,Europa League,2026-10-15T19:00:00,visitante,M,True,12,0.0,0.0,0.0,1.0,0,0
+1636268,1987,R. Yılmaz,Beşiktaş,1899 Hoffenheim,Europa League,2026-10-15T19:00:00,visitante,D,True,1,0.0,0.0,0.0,0.0,0,0
+1636228,161939,Tomás Araújo,Benfica,Celtic,Europa League,2026-10-15T19:00:00,local,D,True,90,0.0,1.0,0.0,3.0,0,0
+1636228,675,A. Trubin,Benfica,Celtic,Europa League,2026-10-15T19:00:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1636228,301528,A. Schjelderup,Benfica,Celtic,Europa League,2026-10-15T19:00:00,local,F,True,22,0.0,0.0,0.0,2.0,0,0
+1636228,36798,V. Pavlidis,Benfica,Celtic,Europa League,2026-10-15T19:00:00,local,F,True,23,1.0,0.0,1.0,2.0,0,0
+1636228,127803,S. El Karouani,Benfica,Celtic,Europa League,2026-10-15T19:00:00,local,D,True,26,0.0,0.0,0.0,0.0,0,0
+1636228,414385,C. Echeverri,Benfica,Celtic,Europa League,2026-10-15T19:00:00,local,M,True,26,0.0,0.0,0.0,0.0,0,0
+1636228,348568,A. Circati,Benfica,Celtic,Europa League,2026-10-15T19:00:00,local,D,True,10,0.0,0.0,0.0,0.0,0,0
+1636228,161945,H. Sudakov,Benfica,Celtic,Europa League,2026-10-15T19:00:00,local,M,True,64,0.0,0.0,0.0,2.0,0,0
+1636228,362755,G. Prestianni,Benfica,Celtic,Europa League,2026-10-15T19:00:00,local,M,True,90,0.0,2.0,3.0,7.0,0,0
+1636228,41104,João Palhinha,Benfica,Celtic,Europa League,2026-10-15T19:00:00,local,M,True,90,0.0,0.0,0.0,1.0,1,0
+1636228,25458,D. Lukebakio,Benfica,Celtic,Europa League,2026-10-15T19:00:00,local,M,True,68,0.0,0.0,0.0,2.0,0,0
+1636228,133,C. Lenglet,Benfica,Celtic,Europa League,2026-10-15T19:00:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636228,13489,J. Durán,Benfica,Celtic,Europa League,2026-10-15T19:00:00,local,F,True,67,2.0,0.0,2.0,5.0,0,0
+1636228,135505,S. Dahl,Benfica,Celtic,Europa League,2026-10-15T19:00:00,local,D,True,64,0.0,0.0,0.0,0.0,1,0
+1636228,15623,A. Bah,Benfica,Celtic,Europa League,2026-10-15T19:00:00,local,D,True,80,1.0,0.0,1.0,1.0,1,0
+1636228,39043,F. Aursnes,Benfica,Celtic,Europa League,2026-10-15T19:00:00,local,M,True,90,0.0,0.0,0.0,1.0,0,0
+1636228,20844,H. Hassan,Celtic,Benfica,Europa League,2026-10-15T19:00:00,visitante,F,True,45,0.0,1.0,2.0,2.0,0,0
+1636228,945,J. Lotomba,Celtic,Benfica,Europa League,2026-10-15T19:00:00,visitante,D,True,13,0.0,0.0,0.0,0.0,0,0
+1636228,48002,B. Nygren,Celtic,Benfica,Europa League,2026-10-15T19:00:00,visitante,F,True,33,0.0,0.0,0.0,0.0,0,0
+1636228,297,A. Oxlade-Chamberlain,Celtic,Benfica,Europa League,2026-10-15T19:00:00,visitante,M,True,33,0.0,0.0,0.0,0.0,0,0
+1636228,50737,A. Trusty,Celtic,Benfica,Europa League,2026-10-15T19:00:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636228,57518,S. Tounekti,Celtic,Benfica,Europa League,2026-10-15T19:00:00,visitante,M,True,45,0.0,0.0,0.0,1.0,0,0
+1636228,1117,K. Tierney,Celtic,Benfica,Europa League,2026-10-15T19:00:00,visitante,D,True,90,0.0,0.0,1.0,1.0,0,0
+1636228,161569,O. Sørensen,Celtic,Benfica,Europa League,2026-10-15T19:00:00,visitante,M,True,57,0.0,0.0,0.0,0.0,0,0
+1636228,311820,D. Murray,Celtic,Benfica,Europa League,2026-10-15T19:00:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636228,1129,C. McGregor,Celtic,Benfica,Europa League,2026-10-15T19:00:00,visitante,M,True,90,0.0,0.0,0.0,0.0,0,0
+1636228,15704,K. Høgh,Celtic,Benfica,Europa League,2026-10-15T19:00:00,visitante,F,True,45,0.0,0.0,1.0,2.0,0,0
+1636228,454968,C. Durán,Celtic,Benfica,Europa League,2026-10-15T19:00:00,visitante,M,True,90,1.0,0.0,2.0,4.0,0,0
+1636228,451314,Colby Donovan,Celtic,Benfica,Europa League,2026-10-15T19:00:00,visitante,D,True,77,0.0,0.0,0.0,0.0,0,0
+1636228,328035,M. Baur,Celtic,Benfica,Europa League,2026-10-15T19:00:00,visitante,M,True,57,0.0,0.0,1.0,1.0,0,0
+1636228,169291,V. Sinisalo,Celtic,Benfica,Europa League,2026-10-15T19:00:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1636228,339172,C. Osmand,Celtic,Benfica,Europa League,2026-10-15T19:00:00,visitante,F,True,45,0.0,0.0,0.0,3.0,0,0
+1636274,40858,K. Szmyt,Jagiellonia,Ararat-Armenia,Europa League,2026-10-15T19:00:00,local,M,True,79,0.0,0.0,0.0,1.0,0,0
+1636274,41566,Rodrigo Conceição,Jagiellonia,Ararat-Armenia,Europa League,2026-10-15T19:00:00,local,D,True,90,1.0,0.0,1.0,2.0,0,0
+1636274,277166,Bernardo Vital,Jagiellonia,Ararat-Armenia,Europa League,2026-10-15T19:00:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636274,33236,Y. Kobayashi,Jagiellonia,Ararat-Armenia,Europa League,2026-10-15T19:00:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636274,122259,B. Wdowik,Jagiellonia,Ararat-Armenia,Europa League,2026-10-15T19:00:00,local,D,True,90,0.0,0.0,0.0,1.0,0,0
+1636274,264692,A. Klynge,Jagiellonia,Ararat-Armenia,Europa League,2026-10-15T19:00:00,local,M,True,90,0.0,1.0,0.0,0.0,0,0
+1636274,40482,T. Romanczuk,Jagiellonia,Ararat-Armenia,Europa League,2026-10-15T19:00:00,local,M,True,80,0.0,0.0,0.0,0.0,1,0
+1636274,40485,Jesús Imaz,Jagiellonia,Ararat-Armenia,Europa League,2026-10-15T19:00:00,local,F,True,68,0.0,1.0,0.0,1.0,0,0
+1636274,40559,K. Jóźwiak,Jagiellonia,Ararat-Armenia,Europa League,2026-10-15T19:00:00,local,M,True,68,1.0,0.0,2.0,3.0,0,0
+1636274,394784,O. Sow,Jagiellonia,Ararat-Armenia,Europa League,2026-10-15T19:00:00,local,F,True,66,1.0,0.0,2.0,2.0,0,0
+1636274,341375,S. Abramowicz,Jagiellonia,Ararat-Armenia,Europa League,2026-10-15T19:00:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1636274,386852,J. Agbonifo,Jagiellonia,Ararat-Armenia,Europa League,2026-10-15T19:00:00,local,F,True,24,0.0,0.0,0.0,2.0,0,0
+1636274,152786,A. Ćirković,Jagiellonia,Ararat-Armenia,Europa League,2026-10-15T19:00:00,local,F,True,11,0.0,0.0,0.0,0.0,0,0
+1636274,182150,Sergio Lozano,Jagiellonia,Ararat-Armenia,Europa League,2026-10-15T19:00:00,local,M,True,10,0.0,0.0,0.0,1.0,0,0
+1636274,109762,D. Stojinović,Jagiellonia,Ararat-Armenia,Europa League,2026-10-15T19:00:00,local,D,True,22,0.0,0.0,0.0,0.0,1,0
+1636274,491470,Eryk Kozlowski,Jagiellonia,Ararat-Armenia,Europa League,2026-10-15T19:00:00,local,M,True,22,0.0,0.0,0.0,0.0,1,0
+1636274,294599,Hugo Oliveira,Ararat-Armenia,Jagiellonia,Europa League,2026-10-15T19:00:00,visitante,M,True,90,0.0,0.0,0.0,1.0,0,0
+1636274,41969,Bruno Wilson,Ararat-Armenia,Jagiellonia,Europa League,2026-10-15T19:00:00,visitante,D,True,90,0.0,0.0,0.0,1.0,1,0
+1636274,271956,Luís Felipe,Ararat-Armenia,Jagiellonia,Europa League,2026-10-15T19:00:00,visitante,D,True,68,0.0,0.0,0.0,0.0,0,0
+1636274,130806,E. Grigoryan,Ararat-Armenia,Jagiellonia,Europa League,2026-10-15T19:00:00,visitante,M,True,90,0.0,0.0,0.0,0.0,0,0
+1636274,57818,J. Balanta,Ararat-Armenia,Jagiellonia,Europa League,2026-10-15T19:00:00,visitante,M,True,90,0.0,0.0,0.0,0.0,0,0
+1636274,21252,M. Carlier,Ararat-Armenia,Jagiellonia,Europa League,2026-10-15T19:00:00,visitante,D,True,90,0.0,1.0,0.0,0.0,0,0
+1636274,24562,A. Tera,Ararat-Armenia,Jagiellonia,Europa League,2026-10-15T19:00:00,visitante,M,True,68,0.0,0.0,0.0,1.0,1,0
+1636274,269533,A. Serobyan,Ararat-Armenia,Jagiellonia,Europa League,2026-10-15T19:00:00,visitante,F,True,76,0.0,0.0,1.0,5.0,0,0
+1636274,41624,Sandro Lima,Ararat-Armenia,Jagiellonia,Europa League,2026-10-15T19:00:00,visitante,F,True,76,0.0,0.0,0.0,1.0,0,0
+1636274,96576,Zidane Banjaqui,Ararat-Armenia,Jagiellonia,Europa League,2026-10-15T19:00:00,visitante,F,True,17,1.0,0.0,1.0,2.0,0,0
+1636274,141575,João Bravim,Ararat-Armenia,Jagiellonia,Europa League,2026-10-15T19:00:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1636274,390563,A. Eloyan,Ararat-Armenia,Jagiellonia,Europa League,2026-10-15T19:00:00,visitante,M,True,14,0.0,0.0,0.0,1.0,0,0
+1636274,9856,França,Ararat-Armenia,Jagiellonia,Europa League,2026-10-15T19:00:00,visitante,F,True,14,0.0,0.0,0.0,0.0,0,0
+1636274,65477,K. Muradyan,Ararat-Armenia,Jagiellonia,Europa League,2026-10-15T19:00:00,visitante,M,True,22,0.0,0.0,0.0,1.0,0,0
+1636274,65374,Z. Shaghoyan,Ararat-Armenia,Jagiellonia,Europa League,2026-10-15T19:00:00,visitante,F,True,73,0.0,0.0,1.0,1.0,0,0
+1636300,554,D. Tadić,NEC Nijmegen,Levski Sofia,Europa League,2026-10-15T19:00:00,local,F,True,84,0.0,0.0,2.0,4.0,0,0
+1636300,441958,Clement Bischoff,NEC Nijmegen,Levski Sofia,Europa League,2026-10-15T19:00:00,local,M,True,84,0.0,0.0,0.0,0.0,0,0
+1636300,336683,Gabriel Brás,NEC Nijmegen,Levski Sofia,Europa League,2026-10-15T19:00:00,local,D,True,89,0.0,0.0,0.0,0.0,0,0
+1636300,50120,T. Chery,NEC Nijmegen,Levski Sofia,Europa League,2026-10-15T19:00:00,local,F,True,90,1.0,0.0,3.0,5.0,0,0
+1636300,353808,Deveron Fonville,NEC Nijmegen,Levski Sofia,Europa League,2026-10-15T19:00:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636300,635838,Kevin Kers,NEC Nijmegen,Levski Sofia,Europa League,2026-10-15T19:00:00,local,M,True,90,0.0,0.0,1.0,3.0,0,0
+1636300,330315,N. Lebreton,NEC Nijmegen,Levski Sofia,Europa League,2026-10-15T19:00:00,local,M,True,89,0.0,0.0,1.0,1.0,1,0
+1636300,37134,B. Linssen,NEC Nijmegen,Levski Sofia,Europa League,2026-10-15T19:00:00,local,F,True,90,0.0,0.0,1.0,1.0,0,0
+1636300,14343,D. Nejašmić,NEC Nijmegen,Levski Sofia,Europa League,2026-10-15T19:00:00,local,M,True,90,0.0,0.0,0.0,2.0,0,0
+1636300,535,P. Schuurs,NEC Nijmegen,Levski Sofia,Europa League,2026-10-15T19:00:00,local,D,True,75,0.0,0.0,0.0,0.0,0,0
+1636300,129054,G. Crettaz,NEC Nijmegen,Levski Sofia,Europa League,2026-10-15T19:00:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1636300,718,D. Geiger,NEC Nijmegen,Levski Sofia,Europa League,2026-10-15T19:00:00,local,M,True,6,0.0,0.0,1.0,1.0,0,0
+1636300,394667,Almugera Raouf Mohammed Kabar,NEC Nijmegen,Levski Sofia,Europa League,2026-10-15T19:00:00,local,D,True,1,0.0,0.0,0.0,0.0,0,0
+1636300,278159,A. Kaplan,NEC Nijmegen,Levski Sofia,Europa League,2026-10-15T19:00:00,local,D,True,15,0.0,0.0,0.0,1.0,0,0
+1636300,528298,Y. Moslih,NEC Nijmegen,Levski Sofia,Europa League,2026-10-15T19:00:00,local,D,True,1,0.0,0.0,0.0,0.0,0,0
+1636300,2320,W. Willumsson,NEC Nijmegen,Levski Sofia,Europa League,2026-10-15T19:00:00,local,M,True,6,0.0,0.0,0.0,0.0,0,0
+1636300,279580,Serginho,Levski Sofia,NEC Nijmegen,Europa League,2026-10-15T19:00:00,visitante,M,True,90,0.0,0.0,0.0,0.0,0,0
+1636300,11074,K. Dimitrov,Levski Sofia,NEC Nijmegen,Europa League,2026-10-15T19:00:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636300,25350,M. Grujić,Levski Sofia,NEC Nijmegen,Europa League,2026-10-15T19:00:00,visitante,M,True,75,0.0,0.0,0.0,0.0,0,0
+1636300,480403,David Kusso,Levski Sofia,NEC Nijmegen,Europa League,2026-10-15T19:00:00,visitante,F,True,62,0.0,0.0,0.0,2.0,0,0
+1636300,56290,C. Makoun,Levski Sofia,NEC Nijmegen,Europa League,2026-10-15T19:00:00,visitante,D,True,90,0.0,0.0,0.0,1.0,0,0
+1636300,194736,E. El Moubarik,Levski Sofia,NEC Nijmegen,Europa League,2026-10-15T19:00:00,visitante,M,True,62,0.0,0.0,0.0,0.0,0,0
+1636300,286910,Aldair,Levski Sofia,NEC Nijmegen,Europa League,2026-10-15T19:00:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636300,9650,Reinaldo,Levski Sofia,NEC Nijmegen,Europa League,2026-10-15T19:00:00,visitante,F,True,89,1.0,0.0,1.0,4.0,0,0
+1636300,11292,S. Vutsov,Levski Sofia,NEC Nijmegen,Europa League,2026-10-15T19:00:00,visitante,G,True,90,0.0,1.0,0.0,0.0,0,0
+1636300,914,Álex Centelles,Levski Sofia,NEC Nijmegen,Europa League,2026-10-15T19:00:00,visitante,D,True,1,0.0,0.0,0.0,0.0,0,0
+1636300,1131,A. Oko-Flex,Levski Sofia,NEC Nijmegen,Europa League,2026-10-15T19:00:00,visitante,F,True,28,0.0,0.0,1.0,1.0,0,0
+1636300,21157,M. Soula,Levski Sofia,NEC Nijmegen,Europa League,2026-10-15T19:00:00,visitante,F,True,15,0.0,0.0,0.0,0.0,0,0
+1636300,109864,G. Trdin,Levski Sofia,NEC Nijmegen,Europa League,2026-10-15T19:00:00,visitante,M,True,28,0.0,0.0,0.0,0.0,0,0
+1636300,352778,J. Perea,Levski Sofia,NEC Nijmegen,Europa League,2026-10-15T19:00:00,visitante,F,True,15,0.0,0.0,0.0,0.0,0,0
+1636300,367528,Maicon,Levski Sofia,NEC Nijmegen,Europa League,2026-10-15T19:00:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636300,160077,Everton Bala,Levski Sofia,NEC Nijmegen,Europa League,2026-10-15T19:00:00,visitante,F,True,75,0.0,0.0,0.0,0.0,0,0
+1636243,182661,Álvaro Núñez,Celta Vigo,Juventus,Europa League,2026-10-15T19:00:00,local,D,True,5,0.0,0.0,0.0,0.0,0,0
+1636243,2278,Marcos Alonso,Celta Vigo,Juventus,Europa League,2026-10-15T19:00:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636243,329720,Hugo Álvarez,Celta Vigo,Juventus,Europa League,2026-10-15T19:00:00,local,F,True,85,1.0,0.0,1.0,2.0,0,0
+1636243,157988,Sergio Carreira,Celta Vigo,Juventus,Europa League,2026-10-15T19:00:00,local,M,True,90,0.0,0.0,0.0,1.0,0,0
+1636243,46711,Aleix Febas,Celta Vigo,Juventus,Europa League,2026-10-15T19:00:00,local,M,True,75,0.0,0.0,0.0,0.0,0,0
+1636243,122734,Ferran Jutglà,Celta Vigo,Juventus,Europa League,2026-10-15T19:00:00,local,F,True,75,0.0,0.0,0.0,2.0,0,0
+1636243,329722,Yoel Lago,Celta Vigo,Juventus,Europa League,2026-10-15T19:00:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636243,162123,I. Moriba,Celta Vigo,Juventus,Europa League,2026-10-15T19:00:00,local,M,True,90,0.0,0.0,0.0,0.0,1,0
+1636243,384135,Javi Rodríguez,Celta Vigo,Juventus,Europa League,2026-10-15T19:00:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636243,179955,Javi Rueda,Celta Vigo,Juventus,Europa League,2026-10-15T19:00:00,local,M,True,85,0.0,0.0,0.0,1.0,0,0
+1636243,269163,W. Swedberg,Celta Vigo,Juventus,Europa League,2026-10-15T19:00:00,local,F,True,62,0.0,1.0,1.0,1.0,1,0
+1636243,30765,I. Radu,Celta Vigo,Juventus,Europa League,2026-10-15T19:00:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1636243,47445,Iago Aspas,Celta Vigo,Juventus,Europa League,2026-10-15T19:00:00,local,F,True,15,0.0,0.0,0.0,0.0,0,0
+1636243,560930,H. Burcio,Celta Vigo,Juventus,Europa League,2026-10-15T19:00:00,local,M,True,15,0.0,0.0,0.0,1.0,0,0
+1636243,272543,C. Driouech,Celta Vigo,Juventus,Europa League,2026-10-15T19:00:00,local,F,True,28,0.0,0.0,0.0,1.0,0,0
+1636243,161875,Hugo González,Celta Vigo,Juventus,Europa League,2026-10-15T19:00:00,local,F,True,5,0.0,0.0,0.0,0.0,0,0
+1636243,31354,G. Vicario,Juventus,Celta Vigo,Europa League,2026-10-15T19:00:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1636243,395559,Kerim-Sam Alajbegović,Juventus,Celta Vigo,Europa League,2026-10-15T19:00:00,visitante,M,True,64,0.0,0.0,0.0,3.0,0,0
+1636243,127011,A. Cambiaso,Juventus,Celta Vigo,Europa League,2026-10-15T19:00:00,visitante,M,True,90,0.0,1.0,0.0,1.0,0,0
+1636243,161585,Francisco Conceição,Juventus,Celta Vigo,Europa League,2026-10-15T19:00:00,visitante,M,True,64,0.0,0.0,2.0,3.0,0,0
+1636243,268341,F. Gatti,Juventus,Celta Vigo,Europa League,2026-10-15T19:00:00,visitante,D,True,70,0.0,0.0,0.0,1.0,0,0
+1636243,162188,P. Kalulu,Juventus,Celta Vigo,Europa League,2026-10-15T19:00:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636243,19263,L. Kelly,Juventus,Celta Vigo,Europa League,2026-10-15T19:00:00,visitante,D,True,70,0.0,0.0,0.0,1.0,1,0
+1636243,36899,T. Koopmeiners,Juventus,Celta Vigo,Europa League,2026-10-15T19:00:00,visitante,M,True,82,0.0,0.0,1.0,1.0,0,0
+1636243,415,W. McKennie,Juventus,Celta Vigo,Europa League,2026-10-15T19:00:00,visitante,M,True,90,0.0,0.0,0.0,0.0,0,0
+1636243,237129,P. Sarr,Juventus,Celta Vigo,Europa League,2026-10-15T19:00:00,visitante,M,True,90,0.0,0.0,1.0,3.0,0,0
+1636243,158054,N. Woltemade,Juventus,Celta Vigo,Europa League,2026-10-15T19:00:00,visitante,F,True,90,1.0,0.0,1.0,4.0,0,0
+1636243,30497,Bremer,Juventus,Celta Vigo,Europa League,2026-10-15T19:00:00,visitante,D,True,20,0.0,0.0,0.0,2.0,0,0
+1636243,47522,Douglas Luiz,Juventus,Celta Vigo,Europa League,2026-10-15T19:00:00,visitante,M,True,8,0.0,0.0,0.0,0.0,0,0
+1636243,26315,N. González,Juventus,Celta Vigo,Europa League,2026-10-15T19:00:00,visitante,F,True,26,0.0,0.0,0.0,1.0,0,0
+1636243,21104,R. Kolo Muani,Juventus,Celta Vigo,Europa League,2026-10-15T19:00:00,visitante,F,True,26,1.0,0.0,1.0,2.0,0,0
+1636243,1929,J. Lucumí,Juventus,Celta Vigo,Europa League,2026-10-15T19:00:00,visitante,D,True,20,0.0,0.0,0.0,0.0,1,0
+1636256,389602,Iker Almena,Dinamo Zagreb,Anderlecht,Europa League,2026-10-15T19:00:00,local,M,True,62,0.0,0.0,0.0,1.0,0,0
+1636256,182434,D. Beljo,Dinamo Zagreb,Anderlecht,Europa League,2026-10-15T19:00:00,local,F,True,90,1.0,0.0,1.0,1.0,0,0
+1636256,396624,Sergi Domínguez,Dinamo Zagreb,Anderlecht,Europa League,2026-10-15T19:00:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636256,263476,N. Galešić,Dinamo Zagreb,Anderlecht,Europa League,2026-10-15T19:00:00,local,D,True,62,0.0,0.0,0.0,1.0,1,0
+1636256,105993,A. Hoxha,Dinamo Zagreb,Anderlecht,Europa League,2026-10-15T19:00:00,local,M,True,90,0.0,0.0,1.0,3.0,0,0
+1636256,14394,L. Ivanušec,Dinamo Zagreb,Anderlecht,Europa League,2026-10-15T19:00:00,local,M,True,90,0.0,0.0,0.0,2.0,0,0
+1636256,2373,J. Mišić,Dinamo Zagreb,Anderlecht,Europa League,2026-10-15T19:00:00,local,M,True,90,0.0,0.0,0.0,0.0,1,0
+1636256,338947,Olof Matteo Perez Vinlöf,Dinamo Zagreb,Anderlecht,Europa League,2026-10-15T19:00:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636256,14301,S. Radeljić,Dinamo Zagreb,Anderlecht,Europa League,2026-10-15T19:00:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636256,308814,L. Stojković,Dinamo Zagreb,Anderlecht,Europa League,2026-10-15T19:00:00,local,M,True,68,0.0,0.0,0.0,3.0,0,0
+1636256,524,D. Kotarski,Dinamo Zagreb,Anderlecht,Europa League,2026-10-15T19:00:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1636256,310135,L. Kačavenda,Dinamo Zagreb,Anderlecht,Europa League,2026-10-15T19:00:00,local,M,True,22,0.0,0.0,0.0,0.0,0,0
+1636256,371912,Dani Rodríguez,Dinamo Zagreb,Anderlecht,Europa League,2026-10-15T19:00:00,local,F,True,28,0.0,0.0,1.0,2.0,0,0
+1636256,288319,M. Valinčić,Dinamo Zagreb,Anderlecht,Europa League,2026-10-15T19:00:00,local,D,True,28,0.0,0.0,0.0,0.0,0,0
+1636256,15906,O. Antman,Anderlecht,Dinamo Zagreb,Europa League,2026-10-15T19:00:00,visitante,F,True,3,0.0,0.0,0.0,0.0,0,0
+1636256,277930,T. Aasgaard,Anderlecht,Dinamo Zagreb,Europa League,2026-10-15T19:00:00,visitante,M,True,90,0.0,0.0,1.0,2.0,0,0
+1636256,327641,L. Ambros,Anderlecht,Dinamo Zagreb,Europa League,2026-10-15T19:00:00,visitante,M,True,65,0.0,0.0,0.0,0.0,0,0
+1636256,396220,K. Barry,Anderlecht,Dinamo Zagreb,Europa League,2026-10-15T19:00:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636256,398190,M. CvetkoviÄ,Anderlecht,Dinamo Zagreb,Europa League,2026-10-15T19:00:00,visitante,F,True,77,0.0,0.0,0.0,2.0,0,0
+1636256,400844,T. Degreef,Anderlecht,Dinamo Zagreb,Europa League,2026-10-15T19:00:00,visitante,M,True,77,0.0,0.0,2.0,2.0,1,0
+1636256,147835,A. Omobamidele,Anderlecht,Dinamo Zagreb,Europa League,2026-10-15T19:00:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636256,157146,L. Pétrot,Anderlecht,Dinamo Zagreb,Europa League,2026-10-15T19:00:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636256,41724,O. Reabciuk,Anderlecht,Dinamo Zagreb,Europa League,2026-10-15T19:00:00,visitante,D,True,90,0.0,0.0,2.0,2.0,0,0
+1636256,296455,M. Stroeykens,Anderlecht,Dinamo Zagreb,Europa League,2026-10-15T19:00:00,visitante,M,True,87,0.0,0.0,0.0,0.0,0,0
+1636256,202614,M. Winkler,Anderlecht,Dinamo Zagreb,Europa League,2026-10-15T19:00:00,visitante,M,True,87,0.0,0.0,1.0,2.0,1,0
+1636256,350854,R. Amané,Anderlecht,Dinamo Zagreb,Europa League,2026-10-15T19:00:00,visitante,M,True,3,0.0,0.0,0.0,0.0,0,0
+1636256,8469,C. Coosemans,Anderlecht,Dinamo Zagreb,Europa League,2026-10-15T19:00:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1636256,303485,T. Bentayeb,Anderlecht,Dinamo Zagreb,Europa League,2026-10-15T19:00:00,visitante,F,True,25,0.0,0.0,0.0,0.0,0,0
+1636256,129126,A. Bertaccini,Anderlecht,Dinamo Zagreb,Europa League,2026-10-15T19:00:00,visitante,F,True,13,0.0,0.0,0.0,0.0,0,0
+1636256,107303,D. Sikan,Anderlecht,Dinamo Zagreb,Europa League,2026-10-15T19:00:00,visitante,F,True,13,0.0,0.0,0.0,0.0,0,0
+1636260,1121,D. Arzani,Ferencvarosi TC,Plzen,Europa League,2026-10-15T19:00:00,local,F,True,26,0.0,0.0,0.0,0.0,0,0
+1636260,19272,C. O&apos;Dowda,Ferencvarosi TC,Plzen,Europa League,2026-10-15T19:00:00,local,M,True,6,0.0,0.0,0.0,0.0,0,0
+1636260,20531,H. Maïga,Ferencvarosi TC,Plzen,Europa League,2026-10-15T19:00:00,local,M,True,6,0.0,0.0,0.0,0.0,1,0
+1636260,48072,J. Levi,Ferencvarosi TC,Plzen,Europa League,2026-10-15T19:00:00,local,F,True,1,0.0,0.0,0.0,0.0,0,0
+1636260,424461,Dániel István Radnóti,Ferencvarosi TC,Plzen,Europa League,2026-10-15T19:00:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1636260,28467,A. Osváth,Ferencvarosi TC,Plzen,Europa League,2026-10-15T19:00:00,local,D,True,90,0.0,0.0,1.0,1.0,1,0
+1636260,76109,M. Gómez,Ferencvarosi TC,Plzen,Europa League,2026-10-15T19:00:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636260,153287,T. Raemaekers,Ferencvarosi TC,Plzen,Europa League,2026-10-15T19:00:00,local,D,True,90,0.0,0.0,0.0,0.0,1,0
+1636260,216553,Cadu,Ferencvarosi TC,Plzen,Europa League,2026-10-15T19:00:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636260,2027,K. Zachariassen,Ferencvarosi TC,Plzen,Europa League,2026-10-15T19:00:00,local,M,True,89,2.0,0.0,3.0,4.0,0,0
+1636260,30481,Á. Nagy,Ferencvarosi TC,Plzen,Europa League,2026-10-15T19:00:00,local,M,True,90,0.0,0.0,0.0,1.0,0,0
+1636260,130148,M. Corbu,Ferencvarosi TC,Plzen,Europa League,2026-10-15T19:00:00,local,M,True,89,0.0,0.0,0.0,1.0,0,0
+1636260,45804,V. Birmančević,Ferencvarosi TC,Plzen,Europa League,2026-10-15T19:00:00,local,M,True,84,0.0,1.0,2.0,2.0,0,0
+1636260,342442,K. Lisztes,Ferencvarosi TC,Plzen,Europa League,2026-10-15T19:00:00,local,F,True,64,0.0,0.0,0.0,2.0,0,0
+1636260,199779,B. Yusuf,Ferencvarosi TC,Plzen,Europa League,2026-10-15T19:00:00,local,M,True,84,0.0,0.0,0.0,1.0,0,0
+1636260,162194,L. Červ,Plzen,Ferencvarosi TC,Europa League,2026-10-15T19:00:00,visitante,M,True,26,0.0,0.0,1.0,1.0,1,0
+1636260,406418,B. Faal,Plzen,Ferencvarosi TC,Europa League,2026-10-15T19:00:00,visitante,F,True,26,0.0,0.0,0.0,1.0,0,0
+1636260,66253,T. Ladra,Plzen,Ferencvarosi TC,Europa League,2026-10-15T19:00:00,visitante,F,True,26,0.0,0.0,0.0,1.0,0,0
+1636260,419778,S. Lawal,Plzen,Ferencvarosi TC,Europa League,2026-10-15T19:00:00,visitante,F,True,12,0.0,0.0,0.0,0.0,0,0
+1636260,290212,D. Višinský,Plzen,Ferencvarosi TC,Europa League,2026-10-15T19:00:00,visitante,M,True,12,1.0,0.0,1.0,1.0,0,0
+1636260,386837,A. Sojka,Plzen,Ferencvarosi TC,Europa League,2026-10-15T19:00:00,visitante,M,True,78,0.0,0.0,0.0,0.0,0,0
+1636260,181824,F. Prebsl,Plzen,Ferencvarosi TC,Europa League,2026-10-15T19:00:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636260,340621,S. PirgiÄ,Plzen,Ferencvarosi TC,Europa League,2026-10-15T19:00:00,visitante,M,True,90,0.0,0.0,0.0,0.0,0,0
+1636260,449656,Jiří Maxim Panoš,Plzen,Ferencvarosi TC,Europa League,2026-10-15T19:00:00,visitante,M,True,64,0.0,0.0,0.0,0.0,0,0
+1636260,322101,A. Memić,Plzen,Ferencvarosi TC,Europa League,2026-10-15T19:00:00,visitante,M,True,78,0.0,0.0,1.0,4.0,0,0
+1636260,271869,C. Kabongo,Plzen,Ferencvarosi TC,Europa League,2026-10-15T19:00:00,visitante,F,True,64,0.0,0.0,1.0,3.0,0,0
+1636260,807,P. Hrošovský,Plzen,Ferencvarosi TC,Europa League,2026-10-15T19:00:00,visitante,M,True,64,0.0,0.0,0.0,1.0,0,0
+1636260,287565,A. Gabriel,Plzen,Ferencvarosi TC,Europa League,2026-10-15T19:00:00,visitante,D,True,90,0.0,0.0,1.0,3.0,0,0
+1636260,317825,S. Dweh,Plzen,Ferencvarosi TC,Europa League,2026-10-15T19:00:00,visitante,D,True,90,0.0,0.0,2.0,3.0,0,0
+1636260,271444,Merchas Doski,Plzen,Ferencvarosi TC,Europa League,2026-10-15T19:00:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636260,355829,D. Ťapaj,Plzen,Ferencvarosi TC,Europa League,2026-10-15T19:00:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1493190,516757,L. Mora,Huracan,Gimnasia L.P.,Liga Profesional Argentina,2026-10-15T23:00:00,local,F,True,1,0.0,0.0,0.0,0.0,0,0
+1493190,304389,F. Bisanz,Huracan,Gimnasia L.P.,Liga Profesional Argentina,2026-10-15T23:00:00,local,F,True,20,0.0,0.0,0.0,0.0,0,0
+1493190,196005,B. Barticciotto,Huracan,Gimnasia L.P.,Liga Profesional Argentina,2026-10-15T23:00:00,local,F,True,1,0.0,0.0,0.0,0.0,0,0
+1493190,16380,H. Galíndez,Huracan,Gimnasia L.P.,Liga Profesional Argentina,2026-10-15T23:00:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1493190,5626,L. Blondel,Huracan,Gimnasia L.P.,Liga Profesional Argentina,2026-10-15T23:00:00,local,D,True,90,0.0,0.0,1.0,3.0,1,0
+1493190,5201,F. Pereyra,Huracan,Gimnasia L.P.,Liga Profesional Argentina,2026-10-15T23:00:00,local,D,True,90,0.0,0.0,0.0,2.0,0,0
+1493190,500831,Máximo Palazzo,Huracan,Gimnasia L.P.,Liga Profesional Argentina,2026-10-15T23:00:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1493190,68011,C. Ibáñez,Huracan,Gimnasia L.P.,Liga Profesional Argentina,2026-10-15T23:00:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1493190,70590,R. Fernández,Huracan,Gimnasia L.P.,Liga Profesional Argentina,2026-10-15T23:00:00,local,M,True,90,0.0,0.0,0.0,1.0,1,0
+1493190,51640,F. Waller,Huracan,Gimnasia L.P.,Liga Profesional Argentina,2026-10-15T23:00:00,local,M,True,89,0.0,0.0,1.0,3.0,1,0
+1493190,351923,Ó. Cortés,Huracan,Gimnasia L.P.,Liga Profesional Argentina,2026-10-15T23:00:00,local,M,True,69,0.0,0.0,1.0,1.0,1,0
+1493190,6511,L. Gil,Huracan,Gimnasia L.P.,Liga Profesional Argentina,2026-10-15T23:00:00,local,M,True,53,0.0,0.0,0.0,1.0,1,0
+1493190,516763,F. Kalinger,Huracan,Gimnasia L.P.,Liga Profesional Argentina,2026-10-15T23:00:00,local,M,True,53,0.0,0.0,0.0,0.0,0,0
+1493190,16590,J. Caicedo,Huracan,Gimnasia L.P.,Liga Profesional Argentina,2026-10-15T23:00:00,local,F,True,90,1.0,0.0,1.0,2.0,1,0
+1493190,30812,I. Pussetto,Huracan,Gimnasia L.P.,Liga Profesional Argentina,2026-10-15T23:00:00,local,F,True,37,0.0,0.0,0.0,3.0,0,0
+1493190,516760,T. Peralta,Huracan,Gimnasia L.P.,Liga Profesional Argentina,2026-10-15T23:00:00,local,M,True,37,0.0,0.0,0.0,1.0,0,0
+1493190,59574,H. Castillo,Gimnasia L.P.,Huracan,Liga Profesional Argentina,2026-10-15T23:00:00,visitante,G,True,90,0.0,0.0,0.0,0.0,1,0
+1493190,378938,A. Steimbach,Gimnasia L.P.,Huracan,Liga Profesional Argentina,2026-10-15T23:00:00,visitante,D,True,90,0.0,0.0,1.0,2.0,0,0
+1493190,559,G. Conti,Gimnasia L.P.,Huracan,Liga Profesional Argentina,2026-10-15T23:00:00,visitante,D,True,90,1.0,0.0,1.0,1.0,0,0
+1493190,51600,E. Martínez,Gimnasia L.P.,Huracan,Liga Profesional Argentina,2026-10-15T23:00:00,visitante,D,True,90,0.0,0.0,0.0,1.0,0,0
+1493190,51335,P. Silva,Gimnasia L.P.,Huracan,Liga Profesional Argentina,2026-10-15T23:00:00,visitante,D,True,90,0.0,1.0,0.0,0.0,0,0
+1493190,357139,M. Seoane,Gimnasia L.P.,Huracan,Liga Profesional Argentina,2026-10-15T23:00:00,visitante,M,True,90,0.0,0.0,0.0,1.0,0,0
+1493190,291503,I. Miramón,Gimnasia L.P.,Huracan,Liga Profesional Argentina,2026-10-15T23:00:00,visitante,M,True,90,0.0,0.0,1.0,1.0,0,0
+1493190,5997,I. Fernández,Gimnasia L.P.,Huracan,Liga Profesional Argentina,2026-10-15T23:00:00,visitante,M,True,90,1.0,1.0,1.0,2.0,0,0
+1493190,6161,L. Janson,Gimnasia L.P.,Huracan,Liga Profesional Argentina,2026-10-15T23:00:00,visitante,M,True,61,0.0,0.0,0.0,0.0,0,0
+1493190,59306,A. Auzmendi,Gimnasia L.P.,Huracan,Liga Profesional Argentina,2026-10-15T23:00:00,visitante,F,True,90,0.0,0.0,2.0,2.0,0,0
+1493190,6391,M. Torres,Gimnasia L.P.,Huracan,Liga Profesional Argentina,2026-10-15T23:00:00,visitante,F,True,87,0.0,0.0,0.0,1.0,0,0
+1493190,5678,A. Max,Gimnasia L.P.,Huracan,Liga Profesional Argentina,2026-10-15T23:00:00,visitante,M,True,29,0.0,0.0,0.0,0.0,0,0
+1493190,322328,F. Torres,Gimnasia L.P.,Huracan,Liga Profesional Argentina,2026-10-15T23:00:00,visitante,F,True,3,0.0,0.0,0.0,0.0,0,0
+1640555,277771,M. Monsalve,Estudiantes L.P.,Flamengo,Copa Libertadores,2026-10-16T00:30:00,local,M,True,15,0.0,0.0,0.0,0.0,0,0
+1640555,1854,J. Correa,Estudiantes L.P.,Flamengo,Copa Libertadores,2026-10-16T00:30:00,local,F,True,22,0.0,0.0,0.0,0.0,0,0
+1640555,94599,E. Cetré,Estudiantes L.P.,Flamengo,Copa Libertadores,2026-10-16T00:30:00,local,F,True,16,0.0,0.0,1.0,2.0,0,0
+1640555,429,F. Muslera,Estudiantes L.P.,Flamengo,Copa Libertadores,2026-10-16T00:30:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1640555,311070,E. Mancuso,Estudiantes L.P.,Flamengo,Copa Libertadores,2026-10-16T00:30:00,local,D,True,90,0.0,0.0,0.0,1.0,0,0
+1640555,346270,S. Núñez,Estudiantes L.P.,Flamengo,Copa Libertadores,2026-10-16T00:30:00,local,D,True,90,0.0,0.0,2.0,4.0,0,0
+1640555,1688,R. Funes Mori,Estudiantes L.P.,Flamengo,Copa Libertadores,2026-10-16T00:30:00,local,D,True,90,0.0,0.0,0.0,1.0,0,0
+1640555,289472,G. Benedetti,Estudiantes L.P.,Flamengo,Copa Libertadores,2026-10-16T00:30:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1640555,5275,Lucas Ezequiel Piovi,Estudiantes L.P.,Flamengo,Copa Libertadores,2026-10-16T00:30:00,local,M,True,90,0.0,0.0,0.0,1.0,1,0
+1640555,5942,A. Castro,Estudiantes L.P.,Flamengo,Copa Libertadores,2026-10-16T00:30:00,local,M,True,90,0.0,0.0,0.0,0.0,1,0
+1640555,363341,B. Gallego,Estudiantes L.P.,Flamengo,Copa Libertadores,2026-10-16T00:30:00,local,M,True,75,0.0,0.0,1.0,4.0,0,0
+1640555,206984,T. Palacios,Estudiantes L.P.,Flamengo,Copa Libertadores,2026-10-16T00:30:00,local,F,True,68,0.0,0.0,1.0,5.0,0,0
+1640555,463852,J. Burgos,Estudiantes L.P.,Flamengo,Copa Libertadores,2026-10-16T00:30:00,local,M,True,74,0.0,0.0,0.0,1.0,0,0
+1640555,47421,G. Carrillo,Estudiantes L.P.,Flamengo,Copa Libertadores,2026-10-16T00:30:00,local,F,True,90,0.0,0.0,1.0,2.0,0,0
+1640555,10321,Pedro,Flamengo,Estudiantes L.P.,Copa Libertadores,2026-10-16T00:30:00,visitante,F,True,10,0.0,0.0,0.0,0.0,0,0
+1640555,560314,J. Freitas,Flamengo,Estudiantes L.P.,Copa Libertadores,2026-10-16T00:30:00,visitante,F,True,5,0.0,0.0,0.0,0.0,0,0
+1640555,16369,G. Plata,Flamengo,Estudiantes L.P.,Copa Libertadores,2026-10-16T00:30:00,visitante,F,True,10,0.0,0.0,0.0,0.0,0,0
+1640555,11756,A. Rossi,Flamengo,Estudiantes L.P.,Copa Libertadores,2026-10-16T00:30:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1640555,1566,Emerson Royal,Flamengo,Estudiantes L.P.,Copa Libertadores,2026-10-16T00:30:00,visitante,D,True,90,0.0,0.0,0.0,1.0,0,0
+1640555,9458,Léo Ortiz,Flamengo,Estudiantes L.P.,Copa Libertadores,2026-10-16T00:30:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1640555,10124,Léo Pereira,Flamengo,Estudiantes L.P.,Copa Libertadores,2026-10-16T00:30:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1640555,860,Alex Sandro,Flamengo,Estudiantes L.P.,Copa Libertadores,2026-10-16T00:30:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1640555,2560,E. Pulgar,Flamengo,Estudiantes L.P.,Copa Libertadores,2026-10-16T00:30:00,visitante,M,True,90,0.0,0.0,0.0,0.0,0,0
+1640555,48,Saúl,Flamengo,Estudiantes L.P.,Copa Libertadores,2026-10-16T00:30:00,visitante,M,True,90,0.0,0.0,0.0,1.0,0,0
+1640555,5994,J. Carrascal,Flamengo,Estudiantes L.P.,Copa Libertadores,2026-10-16T00:30:00,visitante,M,True,90,0.0,0.0,0.0,1.0,1,0
+1640555,1646,Lucas Paquetá,Flamengo,Estudiantes L.P.,Copa Libertadores,2026-10-16T00:30:00,visitante,M,True,85,0.0,0.0,0.0,0.0,1,0
+1640555,126936,Samuel Lino,Flamengo,Estudiantes L.P.,Copa Libertadores,2026-10-16T00:30:00,visitante,M,True,80,0.0,0.0,0.0,0.0,0,0
+1640555,10180,Bruno Henrique,Flamengo,Estudiantes L.P.,Copa Libertadores,2026-10-16T00:30:00,visitante,F,True,80,0.0,0.0,0.0,2.0,0,0
