@@ -126,6 +126,8 @@ def main():
                         help="No hace pedidos: muestra el objetivo por liga y el presupuesto de hoy.")
     parser.add_argument("--antes-del-cron", action="store_true",
                         help="Permite correr antes del cron de hoy reservando ademas RESERVA_CRON. Solo para pruebas chicas.")
+    parser.add_argument("--hasta", default=None,
+                        help="Solo partidos con fecha anterior a esta (YYYY-MM-DD, UTC). Sirve para dejarle al cron los recien terminados.")
     args = parser.parse_args()
 
     ahora = datetime.now(timezone.utc)
@@ -177,6 +179,9 @@ def main():
         & df["fixture_id"].notna()
         & ~df["fixture_id"].isin(ya_procesados)
     ].copy()
+    if args.hasta:
+        terminados = terminados[terminados["fecha_dt"] < pd.Timestamp(args.hasta, tz="UTC")]
+        print(f"--hasta {args.hasta}: solo partidos anteriores a esa fecha")
     terminados["anotado"] = terminados["fixture_id"].astype(int).astype(str).isin(sin_dato.keys())
     terminados["con_ids"] = (terminados["equipo_local"].map(cache_ids).notna()
                              & terminados["equipo_visitante"].map(cache_ids).notna())
