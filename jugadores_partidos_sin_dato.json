@@ -1,4 +1,9 @@
 {
+ "1396524": {
+  "consultado": "2026-10-15",
+  "liga": "Primeira Liga",
+  "motivo": "ids_no_coinciden"
+ },
  "1396533": {
   "consultado": "2026-10-14",
   "liga": "Primeira Liga",
@@ -184,6 +189,11 @@
   "liga": "Premier League Egipto",
   "motivo": "ids_no_coinciden"
  },
+ "1536975": {
+  "consultado": "2026-10-15",
+  "liga": "Pro League Belgica",
+  "motivo": "ids_no_coinciden"
+ },
  "1536976": {
   "consultado": "2026-10-14",
   "liga": "Pro League Belgica",
@@ -193,6 +203,21 @@
   "consultado": "2026-10-14",
   "liga": "Copa do Brasil",
   "motivo": "ids_no_coinciden"
+ },
+ "1538359": {
+  "consultado": "2026-10-15",
+  "liga": "Primera Division Bolivia",
+  "motivo": "sin_respuesta"
+ },
+ "1538362": {
+  "consultado": "2026-10-15",
+  "liga": "Primera Division Bolivia",
+  "motivo": "sin_respuesta"
+ },
+ "1538363": {
+  "consultado": "2026-10-15",
+  "liga": "Primera Division Bolivia",
+  "motivo": "sin_respuesta"
  },
  "1538367": {
   "consultado": "2026-10-14",
@@ -249,9 +274,19 @@
   "liga": "Copa Egipto",
   "motivo": "sin_respuesta"
  },
+ "1540775": {
+  "consultado": "2026-10-15",
+  "liga": "King Cup Arabia Saudita",
+  "motivo": "sin_respuesta"
+ },
  "1542352": {
   "consultado": "2026-10-14",
   "liga": "Friendlies Clubs",
+  "motivo": "sin_respuesta"
+ },
+ "1543677": {
+  "consultado": "2026-10-15",
+  "liga": "Eredivisie",
   "motivo": "sin_respuesta"
  },
  "1543867": {
@@ -267,6 +302,16 @@
  "1543869": {
   "consultado": "2026-10-14",
   "liga": "US Open Cup",
+  "motivo": "sin_respuesta"
+ },
+ "1544645": {
+  "consultado": "2026-10-15",
+  "liga": "Eerste Divisie",
+  "motivo": "sin_respuesta"
+ },
+ "1544646": {
+  "consultado": "2026-10-15",
+  "liga": "Eerste Divisie",
   "motivo": "sin_respuesta"
  },
  "1544647": {
@@ -582,6 +627,16 @@
  "1584366": {
   "consultado": "2026-10-14",
   "liga": "Copa Ecuador",
+  "motivo": "sin_respuesta"
+ },
+ "1585171": {
+  "consultado": "2026-10-15",
+  "liga": "National League",
+  "motivo": "sin_respuesta"
+ },
+ "1588382": {
+  "consultado": "2026-10-15",
+  "liga": "National League - South",
   "motivo": "sin_respuesta"
  },
  "1589334": {
