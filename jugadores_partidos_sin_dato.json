@@ -1,4 +1,119 @@
 {
+ "1387688": {
+  "consultado": "2026-10-16",
+  "liga": "Primera B Metropolitana",
+  "motivo": "sin_respuesta"
+ },
+ "1392627": {
+  "consultado": "2026-10-16",
+  "liga": "Challenger Pro League",
+  "motivo": "sin_respuesta"
+ },
+ "1395030": {
+  "consultado": "2026-10-16",
+  "liga": "Challenger Pro League",
+  "motivo": "sin_respuesta"
+ },
+ "1395031": {
+  "consultado": "2026-10-16",
+  "liga": "Challenger Pro League",
+  "motivo": "sin_respuesta"
+ },
+ "1395327": {
+  "consultado": "2026-10-16",
+  "liga": "Taça da Liga Portugal",
+  "motivo": "sin_respuesta"
+ },
+ "1395329": {
+  "consultado": "2026-10-16",
+  "liga": "Taça da Liga Portugal",
+  "motivo": "sin_respuesta"
+ },
+ "1396314": {
+  "consultado": "2026-10-16",
+  "liga": "Primeira Liga",
+  "motivo": "ids_no_coinciden"
+ },
+ "1396326": {
+  "consultado": "2026-10-16",
+  "liga": "Primeira Liga",
+  "motivo": "ids_no_coinciden"
+ },
+ "1396353": {
+  "consultado": "2026-10-16",
+  "liga": "Primeira Liga",
+  "motivo": "ids_no_coinciden"
+ },
+ "1396361": {
+  "consultado": "2026-10-16",
+  "liga": "Primeira Liga",
+  "motivo": "ids_no_coinciden"
+ },
+ "1396369": {
+  "consultado": "2026-10-16",
+  "liga": "Primeira Liga",
+  "motivo": "ids_no_coinciden"
+ },
+ "1396374": {
+  "consultado": "2026-10-16",
+  "liga": "Primeira Liga",
+  "motivo": "ids_no_coinciden"
+ },
+ "1396398": {
+  "consultado": "2026-10-16",
+  "liga": "Primeira Liga",
+  "motivo": "ids_no_coinciden"
+ },
+ "1396403": {
+  "consultado": "2026-10-16",
+  "liga": "Primeira Liga",
+  "motivo": "ids_no_coinciden"
+ },
+ "1396416": {
+  "consultado": "2026-10-16",
+  "liga": "Primeira Liga",
+  "motivo": "ids_no_coinciden"
+ },
+ "1396417": {
+  "consultado": "2026-10-16",
+  "liga": "Primeira Liga",
+  "motivo": "ids_no_coinciden"
+ },
+ "1396438": {
+  "consultado": "2026-10-16",
+  "liga": "Primeira Liga",
+  "motivo": "ids_no_coinciden"
+ },
+ "1396460": {
+  "consultado": "2026-10-16",
+  "liga": "Primeira Liga",
+  "motivo": "ids_no_coinciden"
+ },
+ "1396470": {
+  "consultado": "2026-10-16",
+  "liga": "Primeira Liga",
+  "motivo": "ids_no_coinciden"
+ },
+ "1396472": {
+  "consultado": "2026-10-16",
+  "liga": "Primeira Liga",
+  "motivo": "ids_no_coinciden"
+ },
+ "1396489": {
+  "consultado": "2026-10-16",
+  "liga": "Primeira Liga",
+  "motivo": "ids_no_coinciden"
+ },
+ "1396502": {
+  "consultado": "2026-10-16",
+  "liga": "Primeira Liga",
+  "motivo": "ids_no_coinciden"
+ },
+ "1396515": {
+  "consultado": "2026-10-16",
+  "liga": "Primeira Liga",
+  "motivo": "ids_no_coinciden"
+ },
  "1396524": {
   "consultado": "2026-10-15",
   "liga": "Primeira Liga",
@@ -19,6 +134,221 @@
   "liga": "Segunda Liga",
   "motivo": "sin_respuesta"
  },
+ "1399768": {
+  "consultado": "2026-10-16",
+  "liga": "National League",
+  "motivo": "sin_respuesta"
+ },
+ "1399788": {
+  "consultado": "2026-10-16",
+  "liga": "National League",
+  "motivo": "sin_respuesta"
+ },
+ "1399851": {
+  "consultado": "2026-10-16",
+  "liga": "National League",
+  "motivo": "sin_respuesta"
+ },
+ "1399862": {
+  "consultado": "2026-10-16",
+  "liga": "National League",
+  "motivo": "sin_respuesta"
+ },
+ "1401639": {
+  "consultado": "2026-10-16",
+  "liga": "National League - South",
+  "motivo": "sin_respuesta"
+ },
+ "1401865": {
+  "consultado": "2026-10-16",
+  "liga": "National League - South",
+  "motivo": "sin_respuesta"
+ },
+ "1401933": {
+  "consultado": "2026-10-16",
+  "liga": "National League - South",
+  "motivo": "sin_respuesta"
+ },
+ "1427846": {
+  "consultado": "2026-10-16",
+  "liga": "Non League Premier - Southern Central",
+  "motivo": "sin_respuesta"
+ },
+ "1428033": {
+  "consultado": "2026-10-16",
+  "liga": "Non League Premier - Southern Central",
+  "motivo": "sin_respuesta"
+ },
+ "1428373": {
+  "consultado": "2026-10-16",
+  "liga": "Non League Premier - Southern South",
+  "motivo": "sin_respuesta"
+ },
+ "1428505": {
+  "consultado": "2026-10-16",
+  "liga": "Non League Premier - Southern South",
+  "motivo": "sin_respuesta"
+ },
+ "1440880": {
+  "consultado": "2026-10-16",
+  "liga": "Second League",
+  "motivo": "sin_respuesta"
+ },
+ "1440906": {
+  "consultado": "2026-10-16",
+  "liga": "Second League Egipto",
+  "motivo": "sin_respuesta"
+ },
+ "1440916": {
+  "consultado": "2026-10-16",
+  "liga": "Second League Egipto",
+  "motivo": "sin_respuesta"
+ },
+ "1445457": {
+  "consultado": "2026-10-16",
+  "liga": "Liga Pro Serie B",
+  "motivo": "sin_respuesta"
+ },
+ "1482498": {
+  "consultado": "2026-10-16",
+  "liga": "Primera Division Bolivia",
+  "motivo": "sin_respuesta"
+ },
+ "1482499": {
+  "consultado": "2026-10-16",
+  "liga": "Primera Division Bolivia",
+  "motivo": "sin_respuesta"
+ },
+ "1482702": {
+  "consultado": "2026-10-16",
+  "liga": "Super Cup",
+  "motivo": "sin_respuesta"
+ },
+ "1482753": {
+  "consultado": "2026-10-16",
+  "liga": "Primera Division Bolivia",
+  "motivo": "sin_respuesta"
+ },
+ "1482754": {
+  "consultado": "2026-10-16",
+  "liga": "Primera Division Bolivia",
+  "motivo": "sin_respuesta"
+ },
+ "1482755": {
+  "consultado": "2026-10-16",
+  "liga": "Primera Division Bolivia",
+  "motivo": "sin_respuesta"
+ },
+ "1482756": {
+  "consultado": "2026-10-16",
+  "liga": "Primera Division Bolivia",
+  "motivo": "sin_respuesta"
+ },
+ "1482928": {
+  "consultado": "2026-10-16",
+  "liga": "Segunda División",
+  "motivo": "sin_respuesta"
+ },
+ "1483701": {
+  "consultado": "2026-10-16",
+  "liga": "Segunda División",
+  "motivo": "sin_respuesta"
+ },
+ "1483703": {
+  "consultado": "2026-10-16",
+  "liga": "Segunda División",
+  "motivo": "sin_respuesta"
+ },
+ "1484756": {
+  "consultado": "2026-10-16",
+  "liga": "Copa Paraguay",
+  "motivo": "sin_respuesta"
+ },
+ "1484853": {
+  "consultado": "2026-10-16",
+  "liga": "Taça da Liga Portugal",
+  "motivo": "sin_respuesta"
+ },
+ "1485073": {
+  "consultado": "2026-10-16",
+  "liga": "King Cup Arabia Saudita",
+  "motivo": "sin_respuesta"
+ },
+ "1485074": {
+  "consultado": "2026-10-16",
+  "liga": "King Cup Arabia Saudita",
+  "motivo": "sin_respuesta"
+ },
+ "1485589": {
+  "consultado": "2026-10-16",
+  "liga": "Primera B",
+  "motivo": "sin_respuesta"
+ },
+ "1485619": {
+  "consultado": "2026-10-16",
+  "liga": "Super Cup",
+  "motivo": "sin_respuesta"
+ },
+ "1486094": {
+  "consultado": "2026-10-16",
+  "liga": "Copa Paraguay",
+  "motivo": "sin_respuesta"
+ },
+ "1486234": {
+  "consultado": "2026-10-16",
+  "liga": "Copa Ecuador",
+  "motivo": "sin_respuesta"
+ },
+ "1487983": {
+  "consultado": "2026-10-16",
+  "liga": "Primera B",
+  "motivo": "sin_respuesta"
+ },
+ "1488391": {
+  "consultado": "2026-10-16",
+  "liga": "Copa Egipto",
+  "motivo": "sin_respuesta"
+ },
+ "1488596": {
+  "consultado": "2026-10-16",
+  "liga": "King Cup Arabia Saudita",
+  "motivo": "sin_respuesta"
+ },
+ "1488597": {
+  "consultado": "2026-10-16",
+  "liga": "King Cup Arabia Saudita",
+  "motivo": "sin_respuesta"
+ },
+ "1488804": {
+  "consultado": "2026-10-16",
+  "liga": "Copa de la División Profesional",
+  "motivo": "sin_respuesta"
+ },
+ "1488805": {
+  "consultado": "2026-10-16",
+  "liga": "Copa de la División Profesional",
+  "motivo": "sin_respuesta"
+ },
+ "1488806": {
+  "consultado": "2026-10-16",
+  "liga": "Copa de la División Profesional",
+  "motivo": "sin_respuesta"
+ },
+ "1489083": {
+  "consultado": "2026-10-16",
+  "liga": "Copa Ecuador",
+  "motivo": "sin_respuesta"
+ },
+ "1489237": {
+  "consultado": "2026-10-16",
+  "liga": "Taça da Liga Portugal",
+  "motivo": "sin_respuesta"
+ },
+ "1489297": {
+  "consultado": "2026-10-16",
+  "liga": "Primera Division Bolivia",
+  "motivo": "sin_respuesta"
+ },
  "1490362": {
   "consultado": "2026-10-14",
   "liga": "MLS",
@@ -32,6 +362,16 @@
  "1490411": {
   "consultado": "2026-10-14",
   "liga": "MLS",
+  "motivo": "sin_respuesta"
+ },
+ "1491823": {
+  "consultado": "2026-10-16",
+  "liga": "Liga Profesional Argentina",
+  "motivo": "sin_respuesta"
+ },
+ "1491831": {
+  "consultado": "2026-10-16",
+  "liga": "Liga Profesional Argentina",
   "motivo": "sin_respuesta"
  },
  "1492290": {
@@ -49,6 +389,11 @@
   "liga": "Brasileirao",
   "motivo": "ids_no_coinciden"
  },
+ "1492804": {
+  "consultado": "2026-10-16",
+  "liga": "Trofeo de Campeones de la Superliga",
+  "motivo": "sin_respuesta"
+ },
  "1493071": {
   "consultado": "2026-10-14",
   "liga": "Liga Profesional Argentina",
@@ -57,6 +402,16 @@
  "1493086": {
   "consultado": "2026-10-14",
   "liga": "Liga Profesional Argentina",
+  "motivo": "sin_respuesta"
+ },
+ "1494363": {
+  "consultado": "2026-10-16",
+  "liga": "Copa de la División Profesional",
+  "motivo": "sin_respuesta"
+ },
+ "1494364": {
+  "consultado": "2026-10-16",
+  "liga": "Copa de la División Profesional",
   "motivo": "sin_respuesta"
  },
  "1495772": {
@@ -114,6 +469,31 @@
   "liga": "Primera C Argentina",
   "motivo": "sin_respuesta"
  },
+ "1500436": {
+  "consultado": "2026-10-16",
+  "liga": "Paranaense - 1",
+  "motivo": "sin_respuesta"
+ },
+ "1500670": {
+  "consultado": "2026-10-16",
+  "liga": "Baiano - 1",
+  "motivo": "sin_respuesta"
+ },
+ "1500770": {
+  "consultado": "2026-10-16",
+  "liga": "Gaúcho - 1",
+  "motivo": "sin_respuesta"
+ },
+ "1503637": {
+  "consultado": "2026-10-16",
+  "liga": "Taça da Liga Portugal",
+  "motivo": "sin_respuesta"
+ },
+ "1505065": {
+  "consultado": "2026-10-16",
+  "liga": "Division Profesional Paraguay",
+  "motivo": "sin_respuesta"
+ },
  "1505077": {
   "consultado": "2026-10-14",
   "liga": "Division Profesional Paraguay",
@@ -169,6 +549,131 @@
   "liga": "Primera Division Chile",
   "motivo": "sin_respuesta"
  },
+ "1505727": {
+  "consultado": "2026-10-16",
+  "liga": "Primera Division Peru",
+  "motivo": "sin_respuesta"
+ },
+ "1505729": {
+  "consultado": "2026-10-16",
+  "liga": "Primera Division Peru",
+  "motivo": "ids_no_coinciden"
+ },
+ "1505934": {
+  "consultado": "2026-10-16",
+  "liga": "Copa De La Liga Auf",
+  "motivo": "sin_respuesta"
+ },
+ "1507514": {
+  "consultado": "2026-10-16",
+  "liga": "Superliga Colombia",
+  "motivo": "sin_respuesta"
+ },
+ "1507515": {
+  "consultado": "2026-10-16",
+  "liga": "Superliga Colombia",
+  "motivo": "sin_respuesta"
+ },
+ "1507960": {
+  "consultado": "2026-10-16",
+  "liga": "Super Cup Chile",
+  "motivo": "sin_respuesta"
+ },
+ "1507961": {
+  "consultado": "2026-10-16",
+  "liga": "Super Cup Chile",
+  "motivo": "sin_respuesta"
+ },
+ "1508097": {
+  "consultado": "2026-10-16",
+  "liga": "Cup",
+  "motivo": "sin_respuesta"
+ },
+ "1508098": {
+  "consultado": "2026-10-16",
+  "liga": "Cup",
+  "motivo": "sin_respuesta"
+ },
+ "1508102": {
+  "consultado": "2026-10-16",
+  "liga": "Copa De La Liga Auf",
+  "motivo": "sin_respuesta"
+ },
+ "1508353": {
+  "consultado": "2026-10-16",
+  "liga": "Copa Egipto",
+  "motivo": "sin_respuesta"
+ },
+ "1509671": {
+  "consultado": "2026-10-16",
+  "liga": "Copa De La Liga Auf",
+  "motivo": "sin_respuesta"
+ },
+ "1509767": {
+  "consultado": "2026-10-16",
+  "liga": "Copa De La Liga Auf",
+  "motivo": "sin_respuesta"
+ },
+ "1510040": {
+  "consultado": "2026-10-16",
+  "liga": "The Atlantic Cup",
+  "motivo": "sin_respuesta"
+ },
+ "1510519": {
+  "consultado": "2026-10-16",
+  "liga": "League Cup",
+  "motivo": "sin_respuesta"
+ },
+ "1510521": {
+  "consultado": "2026-10-16",
+  "liga": "League Cup",
+  "motivo": "sin_respuesta"
+ },
+ "1511469": {
+  "consultado": "2026-10-16",
+  "liga": "Super Cup Chile",
+  "motivo": "sin_respuesta"
+ },
+ "1511729": {
+  "consultado": "2026-10-16",
+  "liga": "Supercopa do Brasil",
+  "motivo": "sin_respuesta"
+ },
+ "1511853": {
+  "consultado": "2026-10-16",
+  "liga": "Primera B",
+  "motivo": "sin_respuesta"
+ },
+ "1511946": {
+  "consultado": "2026-10-16",
+  "liga": "Primera B",
+  "motivo": "sin_respuesta"
+ },
+ "1513679": {
+  "consultado": "2026-10-16",
+  "liga": "Copa De La Liga Auf",
+  "motivo": "sin_respuesta"
+ },
+ "1515684": {
+  "consultado": "2026-10-16",
+  "liga": "Super Copa Uruguay",
+  "motivo": "sin_respuesta"
+ },
+ "1517958": {
+  "consultado": "2026-10-16",
+  "liga": "Recopa Sudamericana",
+  "motivo": "sin_respuesta"
+ },
+ "1517959": {
+  "consultado": "2026-10-16",
+  "liga": "Recopa Sudamericana",
+  "motivo": "sin_respuesta"
+ },
+ "1519248": {
+  "consultado": "2026-10-16",
+  "liga": "Cup",
+  "motivo": "sin_respuesta"
+ },
  "1519400": {
   "consultado": "2026-10-14",
   "liga": "Liga Pro Ecuador",
@@ -179,14 +684,84 @@
   "liga": "Liga Pro Ecuador",
   "motivo": "sin_respuesta"
  },
+ "1521529": {
+  "consultado": "2026-10-16",
+  "liga": "Primera División",
+  "motivo": "sin_respuesta"
+ },
  "1522577": {
   "consultado": "2026-10-14",
   "liga": "Cup",
   "motivo": "sin_respuesta"
  },
+ "1526260": {
+  "consultado": "2026-10-16",
+  "liga": "Torneo Amistoso de Verano",
+  "motivo": "sin_respuesta"
+ },
+ "1526261": {
+  "consultado": "2026-10-16",
+  "liga": "Torneo Amistoso de Verano",
+  "motivo": "sin_respuesta"
+ },
+ "1526262": {
+  "consultado": "2026-10-16",
+  "liga": "Torneo Amistoso de Verano",
+  "motivo": "sin_respuesta"
+ },
+ "1526433": {
+  "consultado": "2026-10-16",
+  "liga": "Gaúcho - 1",
+  "motivo": "sin_respuesta"
+ },
+ "1526434": {
+  "consultado": "2026-10-16",
+  "liga": "Gaúcho - 1",
+  "motivo": "sin_respuesta"
+ },
+ "1528823": {
+  "consultado": "2026-10-16",
+  "liga": "Baiano - 1",
+  "motivo": "sin_respuesta"
+ },
+ "1528826": {
+  "consultado": "2026-10-16",
+  "liga": "Torneo Amistoso de Verano",
+  "motivo": "sin_respuesta"
+ },
+ "1528827": {
+  "consultado": "2026-10-16",
+  "liga": "Torneo Amistoso de Verano",
+  "motivo": "sin_respuesta"
+ },
  "1533657": {
   "consultado": "2026-10-14",
   "liga": "Premier League Egipto",
+  "motivo": "ids_no_coinciden"
+ },
+ "1534569": {
+  "consultado": "2026-10-16",
+  "liga": "Cup",
+  "motivo": "sin_respuesta"
+ },
+ "1536967": {
+  "consultado": "2026-10-16",
+  "liga": "Pro League Belgica",
+  "motivo": "ids_no_coinciden"
+ },
+ "1536969": {
+  "consultado": "2026-10-16",
+  "liga": "Pro League Belgica",
+  "motivo": "ids_no_coinciden"
+ },
+ "1536970": {
+  "consultado": "2026-10-16",
+  "liga": "Pro League Belgica",
+  "motivo": "ids_no_coinciden"
+ },
+ "1536972": {
+  "consultado": "2026-10-16",
+  "liga": "Pro League Belgica",
   "motivo": "ids_no_coinciden"
  },
  "1536975": {
@@ -203,6 +778,61 @@
   "consultado": "2026-10-14",
   "liga": "Copa do Brasil",
   "motivo": "ids_no_coinciden"
+ },
+ "1537039": {
+  "consultado": "2026-10-16",
+  "liga": "Copa do Brasil",
+  "motivo": "ids_no_coinciden"
+ },
+ "1538325": {
+  "consultado": "2026-10-16",
+  "liga": "Primera Division Bolivia",
+  "motivo": "sin_respuesta"
+ },
+ "1538326": {
+  "consultado": "2026-10-16",
+  "liga": "Primera Division Bolivia",
+  "motivo": "sin_respuesta"
+ },
+ "1538327": {
+  "consultado": "2026-10-16",
+  "liga": "Primera Division Bolivia",
+  "motivo": "sin_respuesta"
+ },
+ "1538330": {
+  "consultado": "2026-10-16",
+  "liga": "Primera Division Bolivia",
+  "motivo": "sin_respuesta"
+ },
+ "1538333": {
+  "consultado": "2026-10-16",
+  "liga": "Primera Division Bolivia",
+  "motivo": "sin_respuesta"
+ },
+ "1538334": {
+  "consultado": "2026-10-16",
+  "liga": "Primera Division Bolivia",
+  "motivo": "sin_respuesta"
+ },
+ "1538335": {
+  "consultado": "2026-10-16",
+  "liga": "Primera Division Bolivia",
+  "motivo": "sin_respuesta"
+ },
+ "1538337": {
+  "consultado": "2026-10-16",
+  "liga": "Primera Division Bolivia",
+  "motivo": "sin_respuesta"
+ },
+ "1538338": {
+  "consultado": "2026-10-16",
+  "liga": "Primera Division Bolivia",
+  "motivo": "sin_respuesta"
+ },
+ "1538339": {
+  "consultado": "2026-10-16",
+  "liga": "Primera Division Bolivia",
+  "motivo": "sin_respuesta"
  },
  "1538359": {
   "consultado": "2026-10-15",
@@ -279,6 +909,16 @@
   "liga": "King Cup Arabia Saudita",
   "motivo": "sin_respuesta"
  },
+ "1541758": {
+  "consultado": "2026-10-16",
+  "liga": "Pro League Belgica",
+  "motivo": "ids_no_coinciden"
+ },
+ "1541761": {
+  "consultado": "2026-10-16",
+  "liga": "Pro League Belgica",
+  "motivo": "ids_no_coinciden"
+ },
  "1542352": {
   "consultado": "2026-10-14",
   "liga": "Friendlies Clubs",
@@ -302,6 +942,26 @@
  "1543869": {
   "consultado": "2026-10-14",
   "liga": "US Open Cup",
+  "motivo": "sin_respuesta"
+ },
+ "1544249": {
+  "consultado": "2026-10-16",
+  "liga": "Eerste Divisie",
+  "motivo": "sin_respuesta"
+ },
+ "1544642": {
+  "consultado": "2026-10-16",
+  "liga": "Eerste Divisie",
+  "motivo": "sin_respuesta"
+ },
+ "1544643": {
+  "consultado": "2026-10-16",
+  "liga": "Eerste Divisie",
+  "motivo": "sin_respuesta"
+ },
+ "1544644": {
+  "consultado": "2026-10-16",
+  "liga": "Eerste Divisie",
   "motivo": "sin_respuesta"
  },
  "1544645": {
@@ -1532,6 +2192,11 @@
  "1644258": {
   "consultado": "2026-10-14",
   "liga": "Copa Colombia",
+  "motivo": "sin_respuesta"
+ },
+ "9999002": {
+  "consultado": "2026-10-16",
+  "liga": "Liga Profesional Argentina",
   "motivo": "sin_respuesta"
  }
 }
