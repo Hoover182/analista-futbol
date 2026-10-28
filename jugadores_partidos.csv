@@ -231271,3 +231271,812 @@
 1549822,13364,Nilson Castrillón,Bucaramanga,Santa Fe,Liga Colombia,2026-10-27T01:05:00,visitante,D,False,11,0.0,0.0,0.0,,0,0
 1549822,9873,Martín Rea,Bucaramanga,Santa Fe,Liga Colombia,2026-10-27T01:05:00,visitante,D,False,1,0.0,0.0,0.0,,0,0
 1549822,59463,Aldair Zárate,Bucaramanga,Santa Fe,Liga Colombia,2026-10-27T01:05:00,visitante,F,False,1,0.0,0.0,0.0,,0,0
+1603035,442321,Abdulkarim Darisi,Abha,Al-Faisaly FC,Pro League Arabia,2026-10-27T12:40:00,local,F,True,76,0.0,0.0,1.0,2.0,0,0
+1603035,44330,Mohammed Al Dossary,Abha,Al-Faisaly FC,Pro League Arabia,2026-10-27T12:40:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1603035,36857,J. Gaari,Abha,Al-Faisaly FC,Pro League Arabia,2026-10-27T12:40:00,local,D,True,90,0.0,0.0,0.0,2.0,1,0
+1603035,44530,Abdullah Al Fahad,Abha,Al-Faisaly FC,Pro League Arabia,2026-10-27T12:40:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1603035,20704,A. Gory,Abha,Al-Faisaly FC,Pro League Arabia,2026-10-27T12:40:00,local,M,True,90,0.0,0.0,2.0,3.0,0,0
+1603035,668,N. Fekir,Abha,Al-Faisaly FC,Pro League Arabia,2026-10-27T12:40:00,local,M,True,89,0.0,0.0,1.0,2.0,0,0
+1603035,44443,Firas Al-Ghamdi,Abha,Al-Faisaly FC,Pro League Arabia,2026-10-27T12:40:00,local,M,True,76,0.0,0.0,0.0,1.0,0,0
+1603035,113,G. Nkoudou,Abha,Al-Faisaly FC,Pro League Arabia,2026-10-27T12:40:00,local,M,True,89,0.0,0.0,0.0,1.0,0,0
+1603035,20542,D. Léon,Abha,Al-Faisaly FC,Pro League Arabia,2026-10-27T12:40:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1603035,399703,Safwan Saud,Abha,Al-Faisaly FC,Pro League Arabia,2026-10-27T12:40:00,local,D,True,1,0.0,0.0,0.0,0.0,0,0
+1603035,442416,Koshaim Al Karani,Abha,Al-Faisaly FC,Pro League Arabia,2026-10-27T12:40:00,local,F,True,14,0.0,0.0,0.0,1.0,0,0
+1603035,576181,M. Al-Zaid,Abha,Al-Faisaly FC,Pro League Arabia,2026-10-27T12:40:00,local,M,True,80,0.0,0.0,0.0,0.0,0,0
+1603035,630779,Kamil Boumedmed,Abha,Al-Faisaly FC,Pro League Arabia,2026-10-27T12:40:00,local,F,True,1,0.0,0.0,0.0,3.0,0,0
+1603035,42003,L. Rosier,Abha,Al-Faisaly FC,Pro League Arabia,2026-10-27T12:40:00,local,M,True,14,0.0,0.0,0.0,0.0,0,0
+1603035,607580,K. Al Shamrani,Abha,Al-Faisaly FC,Pro League Arabia,2026-10-27T12:40:00,local,D,True,10,0.0,0.0,0.0,0.0,0,0
+1603035,44399,Nasser Al-Daajani,Abha,Al-Faisaly FC,Pro League Arabia,2026-10-27T12:40:00,local,M,True,90,0.0,0.0,0.0,0.0,0,0
+1603035,44604,Abdulaziz Al Bishi,Al-Faisaly FC,Abha,Pro League Arabia,2026-10-27T12:40:00,visitante,F,True,76,0.0,1.0,2.0,3.0,0,0
+1603035,47532,A. Ba,Al-Faisaly FC,Abha,Pro League Arabia,2026-10-27T12:40:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1603035,8450,A. Seck,Al-Faisaly FC,Abha,Pro League Arabia,2026-10-27T12:40:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1603035,21097,Andrei Girotto,Al-Faisaly FC,Abha,Pro League Arabia,2026-10-27T12:40:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1603035,44600,Yaseen Barnawi,Al-Faisaly FC,Abha,Pro League Arabia,2026-10-27T12:40:00,visitante,M,True,90,0.0,0.0,0.0,0.0,0,0
+1603035,10033,Flávio,Al-Faisaly FC,Abha,Pro League Arabia,2026-10-27T12:40:00,visitante,M,True,90,1.0,0.0,1.0,1.0,1,0
+1603035,44543,Abdullah Almuqrin,Al-Faisaly FC,Abha,Pro League Arabia,2026-10-27T12:40:00,visitante,M,True,95,0.0,0.0,0.0,2.0,0,0
+1603035,44300,Mohammed Ali Al Shanqiti,Al-Faisaly FC,Abha,Pro League Arabia,2026-10-27T12:40:00,visitante,M,True,86,0.0,0.0,0.0,0.0,0,0
+1603035,8627,T. Bongonda,Al-Faisaly FC,Abha,Pro League Arabia,2026-10-27T12:40:00,visitante,F,True,76,0.0,0.0,0.0,0.0,0,0
+1603035,21506,Alexandre Mendy,Al-Faisaly FC,Abha,Pro League Arabia,2026-10-27T12:40:00,visitante,F,True,90,0.0,0.0,0.0,1.0,0,0
+1603035,47352,Fernando Pacheco,Al-Faisaly FC,Abha,Pro League Arabia,2026-10-27T12:40:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1603035,432033,Eid Al Muwallad,Al-Faisaly FC,Abha,Pro League Arabia,2026-10-27T12:40:00,visitante,M,True,4,0.0,0.0,0.0,0.0,0,0
+1603035,134766,Abdulrahman Al Safari,Al-Faisaly FC,Abha,Pro League Arabia,2026-10-27T12:40:00,visitante,M,True,1,0.0,0.0,0.0,0.0,0,0
+1603035,755,Jaime Seoane,Al-Faisaly FC,Abha,Pro League Arabia,2026-10-27T12:40:00,visitante,M,True,14,0.0,0.0,0.0,0.0,0,0
+1603035,561378,A. Ella,Al-Faisaly FC,Abha,Pro League Arabia,2026-10-27T12:40:00,visitante,F,True,14,0.0,0.0,0.0,0.0,0,0
+1638566,278408,M. Adeline,Hamburger SV,Eintracht Frankfurt,DFB Pokal,2026-10-27T17:00:00,local,M,True,90,0.0,0.0,0.0,2.0,0,0
+1638566,1098,P. Daka,Hamburger SV,Eintracht Frankfurt,DFB Pokal,2026-10-27T17:00:00,local,F,True,16,0.0,0.0,2.0,3.0,0,0
+1638566,668671,J. Bissi Mouelle,Hamburger SV,Eintracht Frankfurt,DFB Pokal,2026-10-27T17:00:00,local,D,True,45,0.0,0.0,0.0,1.0,0,0
+1638566,355176,Kofi Jeremy Amoako,Hamburger SV,Eintracht Frankfurt,DFB Pokal,2026-10-27T17:00:00,local,M,True,17,0.0,0.0,0.0,0.0,0,0
+1638566,470282,Alexander Røssing-Lelesiit,Hamburger SV,Eintracht Frankfurt,DFB Pokal,2026-10-27T17:00:00,local,F,True,8,0.0,0.0,0.0,0.0,0,0
+1638566,444962,Otto Emerson Stange,Hamburger SV,Eintracht Frankfurt,DFB Pokal,2026-10-27T17:00:00,local,F,True,17,0.0,0.0,0.0,0.0,0,0
+1638566,264378,S. Tangvik,Hamburger SV,Eintracht Frankfurt,DFB Pokal,2026-10-27T17:00:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1638566,265782,D. Møller Wolfe,Hamburger SV,Eintracht Frankfurt,DFB Pokal,2026-10-27T17:00:00,local,M,True,90,0.0,0.0,0.0,0.0,0,0
+1638566,1408,S. Bornauw,Hamburger SV,Eintracht Frankfurt,DFB Pokal,2026-10-27T17:00:00,local,D,True,45,0.0,0.0,0.0,1.0,0,0
+1638566,283252,Z. El Ouahdi,Hamburger SV,Eintracht Frankfurt,DFB Pokal,2026-10-27T17:00:00,local,M,True,90,0.0,0.0,1.0,2.0,0,0
+1638566,263177,A. Grønbæk,Hamburger SV,Eintracht Frankfurt,DFB Pokal,2026-10-27T17:00:00,local,M,True,73,0.0,0.0,1.0,2.0,0,0
+1638566,1427,A. Sambi Lokonga,Hamburger SV,Eintracht Frankfurt,DFB Pokal,2026-10-27T17:00:00,local,M,True,73,0.0,0.0,0.0,0.0,0,0
+1638566,69971,T. Moffi,Hamburger SV,Eintracht Frankfurt,DFB Pokal,2026-10-27T17:00:00,local,F,True,82,1.0,0.0,1.0,2.0,0,0
+1638566,48489,M. Muheim,Hamburger SV,Eintracht Frankfurt,DFB Pokal,2026-10-27T17:00:00,local,M,True,74,0.0,0.0,1.0,1.0,0,0
+1638566,480452,S. Nandja,Hamburger SV,Eintracht Frankfurt,DFB Pokal,2026-10-27T17:00:00,local,D,True,90,0.0,0.0,0.0,1.0,0,0
+1638566,162265,W. Omari,Hamburger SV,Eintracht Frankfurt,DFB Pokal,2026-10-27T17:00:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1638566,496976,L. Arrhov,Eintracht Frankfurt,Hamburger SV,DFB Pokal,2026-10-27T17:00:00,visitante,M,True,1,0.0,0.0,0.0,0.0,0,0
+1638566,342171,N. Aséko Nkili,Eintracht Frankfurt,Hamburger SV,DFB Pokal,2026-10-27T17:00:00,visitante,M,True,18,0.0,0.0,0.0,0.0,0,0
+1638566,409190,Y. Ebnoutalib,Eintracht Frankfurt,Hamburger SV,DFB Pokal,2026-10-27T17:00:00,visitante,F,True,18,1.0,0.0,1.0,1.0,0,0
+1638566,423789,K. Kosugi,Eintracht Frankfurt,Hamburger SV,DFB Pokal,2026-10-27T17:00:00,visitante,D,True,40,0.0,0.0,0.0,0.0,0,0
+1638566,339887,C. Uzun,Eintracht Frankfurt,Hamburger SV,DFB Pokal,2026-10-27T17:00:00,visitante,F,True,90,0.0,0.0,1.0,2.0,0,0
+1638566,162219,R. Onyedika,Eintracht Frankfurt,Hamburger SV,DFB Pokal,2026-10-27T17:00:00,visitante,M,True,90,0.0,0.0,0.0,0.0,1,0
+1638566,585451,J. Maluze,Eintracht Frankfurt,Hamburger SV,DFB Pokal,2026-10-27T17:00:00,visitante,D,True,90,0.0,0.0,0.0,1.0,1,0
+1638566,26238,R. Koch,Eintracht Frankfurt,Hamburger SV,DFB Pokal,2026-10-27T17:00:00,visitante,D,True,90,1.0,0.0,1.0,1.0,0,0
+1638566,16,M. Götze,Eintracht Frankfurt,Hamburger SV,DFB Pokal,2026-10-27T17:00:00,visitante,M,True,72,0.0,1.0,0.0,0.0,1,0
+1638566,2598,R. Dōan,Eintracht Frankfurt,Hamburger SV,DFB Pokal,2026-10-27T17:00:00,visitante,M,True,89,0.0,0.0,0.0,2.0,0,0
+1638566,269531,N. Collins,Eintracht Frankfurt,Hamburger SV,DFB Pokal,2026-10-27T17:00:00,visitante,D,True,50,0.0,0.0,0.0,0.0,1,0
+1638566,276670,F. Chaïbi,Eintracht Frankfurt,Hamburger SV,DFB Pokal,2026-10-27T17:00:00,visitante,M,True,90,0.0,1.0,1.0,1.0,0,0
+1638566,25926,J. Burkardt,Eintracht Frankfurt,Hamburger SV,DFB Pokal,2026-10-27T17:00:00,visitante,F,True,72,1.0,1.0,1.0,2.0,0,0
+1638566,382492,Elias Baum,Eintracht Frankfurt,Hamburger SV,DFB Pokal,2026-10-27T17:00:00,visitante,D,True,90,0.0,0.0,0.0,2.0,0,0
+1638566,178768,N. Atubolu,Eintracht Frankfurt,Hamburger SV,DFB Pokal,2026-10-27T17:00:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1638560,667880,L. Sawas,VfL Bochum,FSV Mainz 05,DFB Pokal,2026-10-27T17:00:00,local,D,True,9,0.0,0.0,0.0,0.0,0,0
+1638560,380547,M. Ouro-Tagba,VfL Bochum,FSV Mainz 05,DFB Pokal,2026-10-27T17:00:00,local,F,True,19,0.0,0.0,0.0,0.0,0,0
+1638560,33019,K. Miyoshi,VfL Bochum,FSV Mainz 05,DFB Pokal,2026-10-27T17:00:00,local,M,True,27,0.0,0.0,0.0,0.0,0,0
+1638560,667881,L. Isbruch,VfL Bochum,FSV Mainz 05,DFB Pokal,2026-10-27T17:00:00,local,M,True,9,0.0,0.0,0.0,0.0,1,0
+1638560,26287,P. Hofmann,VfL Bochum,FSV Mainz 05,DFB Pokal,2026-10-27T17:00:00,local,F,True,27,1.0,0.0,1.0,1.0,0,0
+1638560,24785,T. Horn,VfL Bochum,FSV Mainz 05,DFB Pokal,2026-10-27T17:00:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1638560,37171,S. Klaiber,VfL Bochum,FSV Mainz 05,DFB Pokal,2026-10-27T17:00:00,local,D,True,90,0.0,0.0,0.0,0.0,1,0
+1638560,7653,M. Steinwender,VfL Bochum,FSV Mainz 05,DFB Pokal,2026-10-27T17:00:00,local,D,True,90,0.0,0.0,0.0,1.0,0,0
+1638560,48142,K. Mets,VfL Bochum,FSV Mainz 05,DFB Pokal,2026-10-27T17:00:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1638560,25151,M. Wittek,VfL Bochum,FSV Mainz 05,DFB Pokal,2026-10-27T17:00:00,local,D,True,81,0.0,0.0,0.0,0.0,0,0
+1638560,585698,T. Meyer,VfL Bochum,FSV Mainz 05,DFB Pokal,2026-10-27T17:00:00,local,M,True,90,0.0,0.0,0.0,0.0,1,0
+1638560,336224,M. Pannewig,VfL Bochum,FSV Mainz 05,DFB Pokal,2026-10-27T17:00:00,local,M,True,90,0.0,0.0,0.0,3.0,0,0
+1638560,297581,J. Steuckers,VfL Bochum,FSV Mainz 05,DFB Pokal,2026-10-27T17:00:00,local,M,True,81,0.0,1.0,0.0,0.0,0,0
+1638560,24856,B. Taz,VfL Bochum,FSV Mainz 05,DFB Pokal,2026-10-27T17:00:00,local,M,True,63,0.0,0.0,0.0,0.0,0,0
+1638560,25919,G. Holtmann,VfL Bochum,FSV Mainz 05,DFB Pokal,2026-10-27T17:00:00,local,M,True,71,0.0,1.0,0.0,1.0,0,0
+1638560,161886,C. Rasmussen,VfL Bochum,FSV Mainz 05,DFB Pokal,2026-10-27T17:00:00,local,F,True,63,1.0,0.0,2.0,2.0,0,0
+1638560,22244,A. Caci,FSV Mainz 05,VfL Bochum,DFB Pokal,2026-10-27T17:00:00,visitante,D,True,27,0.0,0.0,0.0,0.0,0,0
+1638560,162946,B. Hollerbach,FSV Mainz 05,VfL Bochum,DFB Pokal,2026-10-27T17:00:00,visitante,F,True,6,0.0,0.0,0.0,1.0,0,0
+1638560,199897,S. Kawasaki,FSV Mainz 05,VfL Bochum,DFB Pokal,2026-10-27T17:00:00,visitante,M,True,6,0.0,0.0,0.0,0.0,0,0
+1638560,162773,R. Königsdörffer,FSV Mainz 05,VfL Bochum,DFB Pokal,2026-10-27T17:00:00,visitante,F,True,27,0.0,0.0,0.0,0.0,1,0
+1638560,162480,E. Martel,FSV Mainz 05,VfL Bochum,DFB Pokal,2026-10-27T17:00:00,visitante,M,True,27,0.0,0.0,1.0,1.0,0,0
+1638560,26234,A. Schwolow,FSV Mainz 05,VfL Bochum,DFB Pokal,2026-10-27T17:00:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1638560,1812,D. da Costa,FSV Mainz 05,VfL Bochum,DFB Pokal,2026-10-27T17:00:00,visitante,D,True,84,0.0,0.0,0.0,0.0,0,0
+1638560,711,S. Posch,FSV Mainz 05,VfL Bochum,DFB Pokal,2026-10-27T17:00:00,visitante,D,True,90,0.0,0.0,1.0,1.0,0,0
+1638560,442546,K. Potulski,FSV Mainz 05,VfL Bochum,DFB Pokal,2026-10-27T17:00:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1638560,48378,S. Widmer,FSV Mainz 05,VfL Bochum,DFB Pokal,2026-10-27T17:00:00,visitante,M,True,63,0.0,0.0,1.0,1.0,0,0
+1638560,202736,P. Nebel,FSV Mainz 05,VfL Bochum,DFB Pokal,2026-10-27T17:00:00,visitante,M,True,84,0.0,0.0,0.0,1.0,0,0
+1638560,33889,K. Sano,FSV Mainz 05,VfL Bochum,DFB Pokal,2026-10-27T17:00:00,visitante,M,True,90,0.0,0.0,0.0,0.0,0,0
+1638560,2906,Lee Jae-Sung,FSV Mainz 05,VfL Bochum,DFB Pokal,2026-10-27T17:00:00,visitante,M,True,63,0.0,0.0,0.0,1.0,0,0
+1638560,25915,P. Mwene,FSV Mainz 05,VfL Bochum,DFB Pokal,2026-10-27T17:00:00,visitante,M,True,90,0.0,0.0,0.0,1.0,0,0
+1638560,37938,S. Becker,FSV Mainz 05,VfL Bochum,DFB Pokal,2026-10-27T17:00:00,visitante,F,True,90,0.0,0.0,2.0,2.0,0,0
+1638560,26171,P. Tietz,FSV Mainz 05,VfL Bochum,DFB Pokal,2026-10-27T17:00:00,visitante,F,True,63,0.0,0.0,0.0,0.0,0,0
+1638565,280327,T. Rossmann,SG Sonnenhof Grossaspach,FC Augsburg,DFB Pokal,2026-10-27T17:00:00,local,M,True,90,0.0,0.0,1.0,2.0,0,0
+1638565,26294,A. Aidonis,SG Sonnenhof Grossaspach,FC Augsburg,DFB Pokal,2026-10-27T17:00:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1638565,91165,F. Eisele,SG Sonnenhof Grossaspach,FC Augsburg,DFB Pokal,2026-10-27T17:00:00,local,F,True,68,0.0,0.0,0.0,0.0,0,0
+1638565,26561,M. Reule,SG Sonnenhof Grossaspach,FC Augsburg,DFB Pokal,2026-10-27T17:00:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1638565,162731,N. Zografakis,SG Sonnenhof Grossaspach,FC Augsburg,DFB Pokal,2026-10-27T17:00:00,local,F,True,10,0.0,0.0,0.0,1.0,0,0
+1638565,526408,L. Stoppel,SG Sonnenhof Grossaspach,FC Augsburg,DFB Pokal,2026-10-27T17:00:00,local,M,True,10,0.0,0.0,0.0,0.0,0,0
+1638565,202908,C. Mistl,SG Sonnenhof Grossaspach,FC Augsburg,DFB Pokal,2026-10-27T17:00:00,local,M,True,22,0.0,0.0,0.0,0.0,0,0
+1638565,376542,Leon Maier,SG Sonnenhof Grossaspach,FC Augsburg,DFB Pokal,2026-10-27T17:00:00,local,D,True,5,0.0,0.0,0.0,0.0,0,0
+1638565,416365,Marlon Freddy Faß,SG Sonnenhof Grossaspach,FC Augsburg,DFB Pokal,2026-10-27T17:00:00,local,F,True,5,0.0,0.0,0.0,0.0,0,0
+1638565,202948,Jan Elias Rahn,SG Sonnenhof Grossaspach,FC Augsburg,DFB Pokal,2026-10-27T17:00:00,local,D,True,85,0.0,0.0,0.0,0.0,0,0
+1638565,526402,A. Nuraj,SG Sonnenhof Grossaspach,FC Augsburg,DFB Pokal,2026-10-27T17:00:00,local,D,True,80,0.0,0.0,0.0,0.0,0,0
+1638565,526406,L. Molinari,SG Sonnenhof Grossaspach,FC Augsburg,DFB Pokal,2026-10-27T17:00:00,local,D,True,90,1.0,1.0,1.0,1.0,0,0
+1638565,376543,Loris Maier,SG Sonnenhof Grossaspach,FC Augsburg,DFB Pokal,2026-10-27T17:00:00,local,M,True,85,0.0,0.0,0.0,0.0,0,0
+1638565,526404,M. Kunde,SG Sonnenhof Grossaspach,FC Augsburg,DFB Pokal,2026-10-27T17:00:00,local,M,True,90,0.0,0.0,1.0,2.0,0,0
+1638565,392727,Volkan Celiktas,SG Sonnenhof Grossaspach,FC Augsburg,DFB Pokal,2026-10-27T17:00:00,local,M,True,90,1.0,0.0,1.0,4.0,1,0
+1638565,526405,N. Pollex,SG Sonnenhof Grossaspach,FC Augsburg,DFB Pokal,2026-10-27T17:00:00,local,F,True,80,0.0,1.0,0.0,1.0,1,0
+1638565,197985,Seol Young-Woo,FC Augsburg,SG Sonnenhof Grossaspach,DFB Pokal,2026-10-27T17:00:00,visitante,M,True,65,0.0,0.0,0.0,0.0,0,0
+1638565,449509,Abdulay Bah,FC Augsburg,SG Sonnenhof Grossaspach,DFB Pokal,2026-10-27T17:00:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1638565,353143,Hennes Behrens,FC Augsburg,SG Sonnenhof Grossaspach,DFB Pokal,2026-10-27T17:00:00,visitante,M,True,90,0.0,3.0,0.0,2.0,0,0
+1638565,143831,R. Fellhauer,FC Augsburg,SG Sonnenhof Grossaspach,DFB Pokal,2026-10-27T17:00:00,visitante,M,True,90,0.0,1.0,2.0,4.0,0,0
+1638565,178093,Y. Keitel,FC Augsburg,SG Sonnenhof Grossaspach,DFB Pokal,2026-10-27T17:00:00,visitante,D,True,87,0.0,0.0,0.0,0.0,0,0
+1638565,348888,M. Kömür,FC Augsburg,SG Sonnenhof Grossaspach,DFB Pokal,2026-10-27T17:00:00,visitante,M,True,65,0.0,0.0,1.0,1.0,0,0
+1638565,110,H. Massengo,FC Augsburg,SG Sonnenhof Grossaspach,DFB Pokal,2026-10-27T17:00:00,visitante,M,True,90,0.0,0.0,0.0,1.0,0,0
+1638565,163039,C. Matsima,FC Augsburg,SG Sonnenhof Grossaspach,DFB Pokal,2026-10-27T17:00:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1638565,341641,Rodrigo Ribeiro,FC Augsburg,SG Sonnenhof Grossaspach,DFB Pokal,2026-10-27T17:00:00,visitante,F,True,74,2.0,0.0,2.0,4.0,0,0
+1638565,163032,F. Rieder,FC Augsburg,SG Sonnenhof Grossaspach,DFB Pokal,2026-10-27T17:00:00,visitante,M,True,87,0.0,0.0,0.0,3.0,0,0
+1638565,25903,F. Dahmen,FC Augsburg,SG Sonnenhof Grossaspach,DFB Pokal,2026-10-27T17:00:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1638565,25290,J. Gouweleeuw,FC Augsburg,SG Sonnenhof Grossaspach,DFB Pokal,2026-10-27T17:00:00,visitante,D,True,3,0.0,0.0,0.0,0.0,0,0
+1638565,25297,M. Gregoritsch,FC Augsburg,SG Sonnenhof Grossaspach,DFB Pokal,2026-10-27T17:00:00,visitante,F,True,16,0.0,0.0,1.0,1.0,0,0
+1638565,327897,A. Ibrahimović,FC Augsburg,SG Sonnenhof Grossaspach,DFB Pokal,2026-10-27T17:00:00,visitante,M,True,25,1.0,0.0,1.0,1.0,1,0
+1638565,279993,A. Kade,FC Augsburg,SG Sonnenhof Grossaspach,DFB Pokal,2026-10-27T17:00:00,visitante,M,True,25,1.0,0.0,1.0,1.0,0,0
+1638565,585671,T. Schnitzer,FC Augsburg,SG Sonnenhof Grossaspach,DFB Pokal,2026-10-27T17:00:00,visitante,M,True,3,0.0,0.0,1.0,1.0,0,0
+1638571,202487,J. Sietan,Rot-Weiß Essen,RB Leipzig,DFB Pokal,2026-10-27T17:00:00,local,M,True,90,0.0,0.0,0.0,0.0,0,0
+1638571,194682,D. Abiama,Rot-Weiß Essen,RB Leipzig,DFB Pokal,2026-10-27T17:00:00,local,M,True,80,0.0,0.0,0.0,0.0,1,0
+1638571,204049,J. Ríos Alonso,Rot-Weiß Essen,RB Leipzig,DFB Pokal,2026-10-27T17:00:00,local,D,True,90,0.0,0.0,0.0,1.0,0,0
+1638571,363219,F. Bouebari,Rot-Weiß Essen,RB Leipzig,DFB Pokal,2026-10-27T17:00:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1638571,26007,L. Brumme,Rot-Weiß Essen,RB Leipzig,DFB Pokal,2026-10-27T17:00:00,local,F,True,65,1.0,0.0,1.0,2.0,0,0
+1638571,260882,J. Hofmann,Rot-Weiß Essen,RB Leipzig,DFB Pokal,2026-10-27T17:00:00,local,M,True,90,0.0,0.0,0.0,0.0,0,0
+1638571,162575,M. Kostka,Rot-Weiß Essen,RB Leipzig,DFB Pokal,2026-10-27T17:00:00,local,D,True,74,0.0,0.0,0.0,0.0,0,0
+1638571,334092,Noah Pesch,Rot-Weiß Essen,RB Leipzig,DFB Pokal,2026-10-27T17:00:00,local,M,True,80,0.0,0.0,0.0,2.0,0,0
+1638571,259429,R. Reisig,Rot-Weiß Essen,RB Leipzig,DFB Pokal,2026-10-27T17:00:00,local,M,True,90,0.0,0.0,0.0,1.0,0,0
+1638571,125264,J. Golz,Rot-Weiß Essen,RB Leipzig,DFB Pokal,2026-10-27T17:00:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1638571,260780,N. Bätzner,Rot-Weiß Essen,RB Leipzig,DFB Pokal,2026-10-27T17:00:00,local,M,True,16,0.0,0.0,0.0,0.0,1,0
+1638571,178162,L. Bazzoli,Rot-Weiß Essen,RB Leipzig,DFB Pokal,2026-10-27T17:00:00,local,D,True,10,0.0,0.0,0.0,1.0,0,0
+1638571,128812,E. Çelebi,Rot-Weiß Essen,RB Leipzig,DFB Pokal,2026-10-27T17:00:00,local,D,True,25,0.0,0.0,0.0,0.0,0,0
+1638571,334136,Ben Vincent Hüning,Rot-Weiß Essen,RB Leipzig,DFB Pokal,2026-10-27T17:00:00,local,D,True,90,0.0,0.0,0.0,1.0,0,0
+1638571,98,B. Henrichs,RB Leipzig,Rot-Weiß Essen,DFB Pokal,2026-10-27T17:00:00,visitante,D,True,3,0.0,0.0,0.0,0.0,0,0
+1638571,328225,B. Gruda,RB Leipzig,Rot-Weiß Essen,DFB Pokal,2026-10-27T17:00:00,visitante,F,True,45,0.0,0.0,0.0,0.0,0,0
+1638571,314511,A. Nusa,RB Leipzig,Rot-Weiß Essen,DFB Pokal,2026-10-27T17:00:00,visitante,M,True,28,0.0,1.0,0.0,1.0,0,0
+1638571,715,C. Baumgartner,RB Leipzig,Rot-Weiß Essen,DFB Pokal,2026-10-27T17:00:00,visitante,M,True,28,2.0,0.0,2.0,3.0,1,0
+1638571,277003,N. El Aynaoui,RB Leipzig,Rot-Weiß Essen,DFB Pokal,2026-10-27T17:00:00,visitante,M,True,45,0.0,0.0,0.0,0.0,1,0
+1638571,19172,Ø. Nyland,RB Leipzig,Rot-Weiß Essen,DFB Pokal,2026-10-27T17:00:00,visitante,G,True,90,0.0,0.0,0.0,0.0,1,0
+1638571,25917,R. Baku,RB Leipzig,Rot-Weiß Essen,DFB Pokal,2026-10-27T17:00:00,visitante,D,True,62,0.0,0.0,0.0,0.0,0,0
+1638571,1148,W. Orbán,RB Leipzig,Rot-Weiß Essen,DFB Pokal,2026-10-27T17:00:00,visitante,D,True,90,0.0,0.0,0.0,2.0,0,0
+1638571,162761,C. Lukeba,RB Leipzig,Rot-Weiß Essen,DFB Pokal,2026-10-27T17:00:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1638571,25158,D. Raum,RB Leipzig,Rot-Weiß Essen,DFB Pokal,2026-10-27T17:00:00,visitante,D,True,90,0.0,1.0,0.0,0.0,0,0
+1638571,7328,N. Seiwald,RB Leipzig,Rot-Weiß Essen,DFB Pokal,2026-10-27T17:00:00,visitante,M,True,44,0.0,0.0,0.0,0.0,0,1
+1638571,343286,E. Banzuzi,RB Leipzig,Rot-Weiß Essen,DFB Pokal,2026-10-27T17:00:00,visitante,M,True,62,0.0,0.0,0.0,0.0,0,0
+1638571,398192,A. MaksimoviÄ,RB Leipzig,Rot-Weiß Essen,DFB Pokal,2026-10-27T17:00:00,visitante,M,True,45,0.0,0.0,0.0,1.0,0,0
+1638571,203007,R. Reitz,RB Leipzig,Rot-Weiß Essen,DFB Pokal,2026-10-27T17:00:00,visitante,M,True,45,0.0,0.0,0.0,0.0,0,0
+1638571,383665,T. Gomis,RB Leipzig,Rot-Weiß Essen,DFB Pokal,2026-10-27T17:00:00,visitante,M,True,90,0.0,0.0,0.0,3.0,0,0
+1638571,326102,Rômulo,RB Leipzig,Rot-Weiß Essen,DFB Pokal,2026-10-27T17:00:00,visitante,F,True,87,0.0,0.0,0.0,1.0,0,0
+1550174,30519,S. Turati,Sassuolo,Lazio,Serie A,2026-10-27T17:30:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1550174,39143,K. Thorstvedt,Sassuolo,Lazio,Serie A,2026-10-27T17:30:00,local,M,True,31,0.0,0.0,0.0,1.0,0,1
+1550174,127802,C. Odenthal,Sassuolo,Lazio,Serie A,2026-10-27T17:30:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1550174,343562,L. Lipani,Sassuolo,Lazio,Serie A,2026-10-27T17:30:00,local,M,True,90,0.0,0.0,0.0,0.0,0,0
+1550174,2215,A. Laurienté,Sassuolo,Lazio,Serie A,2026-10-27T17:30:00,local,F,True,70,0.0,0.0,0.0,4.0,0,0
+1550174,215,S. Esposito,Sassuolo,Lazio,Serie A,2026-10-27T17:30:00,local,F,True,63,1.0,0.0,1.0,1.0,0,0
+1550174,135526,J. Doig,Sassuolo,Lazio,Serie A,2026-10-27T17:30:00,local,D,True,90,0.0,0.0,0.0,1.0,0,0
+1550174,382448,S. Cinquegrano,Sassuolo,Lazio,Serie A,2026-10-27T17:30:00,local,D,True,90,0.0,1.0,0.0,0.0,0,0
+1550174,1902,D. Ćaleta-Car,Sassuolo,Lazio,Serie A,2026-10-27T17:30:00,local,D,True,82,0.0,0.0,0.0,0.0,0,0
+1550174,30537,D. Berardi,Sassuolo,Lazio,Serie A,2026-10-27T17:30:00,local,F,True,63,0.0,0.0,0.0,0.0,1,0
+1550174,455245,D. Bakola,Sassuolo,Lazio,Serie A,2026-10-27T17:30:00,local,M,True,45,0.0,0.0,0.0,2.0,0,0
+1550174,40582,S. Walukiewicz,Sassuolo,Lazio,Serie A,2026-10-27T17:30:00,local,D,True,8,0.0,0.0,0.0,0.0,0,0
+1550174,68407,A. Ghion,Sassuolo,Lazio,Serie A,2026-10-27T17:30:00,local,M,True,20,0.0,0.0,0.0,0.0,0,0
+1550174,353609,I. Sulemana,Sassuolo,Lazio,Serie A,2026-10-27T17:30:00,local,M,True,45,0.0,0.0,0.0,0.0,0,0
+1550174,41371,Fali Candé,Sassuolo,Lazio,Serie A,2026-10-27T17:30:00,local,D,True,27,0.0,0.0,0.0,0.0,0,0
+1550174,126690,K. Bowie,Sassuolo,Lazio,Serie A,2026-10-27T17:30:00,local,F,True,27,0.0,0.0,0.0,0.0,0,0
+1550174,26644,C. Mandas,Lazio,Sassuolo,Serie A,2026-10-27T17:30:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1550174,30937,M. Zaccagni,Lazio,Sassuolo,Serie A,2026-10-27T17:30:00,visitante,F,True,90,1.0,2.0,2.0,5.0,0,0
+1550174,38749,K. Taylor,Lazio,Sassuolo,Serie A,2026-10-27T17:30:00,visitante,M,True,45,1.0,1.0,1.0,1.0,1,0
+1550174,41577,Nuno Tavares,Lazio,Sassuolo,Serie A,2026-10-27T17:30:00,visitante,D,True,63,0.0,0.0,0.0,0.0,0,0
+1550174,14701,J. Šutalo,Lazio,Sassuolo,Serie A,2026-10-27T17:30:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1550174,133729,T. Noslin,Lazio,Sassuolo,Serie A,2026-10-27T17:30:00,visitante,F,True,71,2.0,0.0,2.0,4.0,0,0
+1550174,376,Diogo Leite,Lazio,Sassuolo,Serie A,2026-10-27T17:30:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1550174,135519,G. Isaksen,Lazio,Sassuolo,Serie A,2026-10-27T17:30:00,visitante,F,True,63,1.0,1.0,1.0,1.0,0,0
+1550174,31173,D. Frattesi,Lazio,Sassuolo,Serie A,2026-10-27T17:30:00,visitante,M,True,90,0.0,0.0,1.0,1.0,0,0
+1550174,342651,R. Floriani Mussolini,Lazio,Sassuolo,Serie A,2026-10-27T17:30:00,visitante,D,True,62,1.0,0.0,1.0,1.0,0,0
+1550174,333116,R. Belahyane,Lazio,Sassuolo,Serie A,2026-10-27T17:30:00,visitante,M,True,90,0.0,0.0,0.0,0.0,0,0
+1550174,286474,M. Cancellieri,Lazio,Sassuolo,Serie A,2026-10-27T17:30:00,visitante,F,True,27,0.0,0.0,0.0,2.0,0,0
+1550174,144740,F. Dele-Bashiru,Lazio,Sassuolo,Serie A,2026-10-27T17:30:00,visitante,M,True,45,0.0,1.0,0.0,1.0,0,0
+1550174,31094,A. Pinamonti,Lazio,Sassuolo,Serie A,2026-10-27T17:30:00,visitante,F,True,19,0.0,0.0,0.0,0.0,0,0
+1550174,1702,Pedraza,Lazio,Sassuolo,Serie A,2026-10-27T17:30:00,visitante,D,True,27,0.0,0.0,0.0,0.0,0,0
+1550174,30866,M. Lazzari,Lazio,Sassuolo,Serie A,2026-10-27T17:30:00,visitante,M,True,28,0.0,0.0,0.0,0.0,0,0
+1644378,182640,Ander Iru,Sestao River,Espanyol,Copa del Rey,2026-10-27T18:00:00,local,G,True,120,0.0,0.0,0.0,,0,0
+1644378,47125,Markel Etxeberria,Sestao River,Espanyol,Copa del Rey,2026-10-27T18:00:00,local,D,True,120,0.0,0.0,0.0,1.0,0,0
+1644378,271671,Anton Efremov,Sestao River,Espanyol,Copa del Rey,2026-10-27T18:00:00,local,D,True,120,0.0,0.0,0.0,,0,0
+1644378,131549,Andoni Ugarte,Sestao River,Espanyol,Copa del Rey,2026-10-27T18:00:00,local,D,True,120,1.0,0.0,2.0,2.0,0,0
+1644378,182598,Jon Rojo,Sestao River,Espanyol,Copa del Rey,2026-10-27T18:00:00,local,D,True,120,1.0,0.0,1.0,3.0,0,0
+1644378,584427,Andoni Arzak,Sestao River,Espanyol,Copa del Rey,2026-10-27T18:00:00,local,M,True,57,0.0,0.0,0.0,,0,0
+1644378,135356,Josemi Castañeda,Sestao River,Espanyol,Copa del Rey,2026-10-27T18:00:00,local,M,True,73,0.0,0.0,1.0,1.0,1,0
+1644378,162057,Eneko Delgado Ginés,Sestao River,Espanyol,Copa del Rey,2026-10-27T18:00:00,local,M,True,42,0.0,2.0,0.0,,0,0
+1644378,330432,Adri Carrión,Sestao River,Espanyol,Copa del Rey,2026-10-27T18:00:00,local,M,True,57,1.0,0.0,1.0,2.0,0,0
+1644378,554000,Ander Bengoetxea Uriarte,Sestao River,Espanyol,Copa del Rey,2026-10-27T18:00:00,local,F,True,73,0.0,0.0,1.0,1.0,0,0
+1644378,288382,Ander Laka,Sestao River,Espanyol,Copa del Rey,2026-10-27T18:00:00,local,F,True,120,1.0,0.0,1.0,3.0,0,0
+1644378,119234,Pau Miguélez,Sestao River,Espanyol,Copa del Rey,2026-10-27T18:00:00,local,F,False,78,0.0,1.0,0.0,,0,0
+1644378,639285,Gaizka Argente,Sestao River,Espanyol,Copa del Rey,2026-10-27T18:00:00,local,D,False,63,0.0,0.0,1.0,1.0,0,0
+1644378,579343,Ander Castillo,Sestao River,Espanyol,Copa del Rey,2026-10-27T18:00:00,local,F,False,63,0.0,0.0,0.0,,0,0
+1644378,614088,Gonzalo Zorrilla,Sestao River,Espanyol,Copa del Rey,2026-10-27T18:00:00,local,M,False,47,0.0,1.0,0.0,1.0,0,0
+1644378,2813,Marko Dmitrović,Espanyol,Sestao River,Copa del Rey,2026-10-27T18:00:00,visitante,G,True,120,0.0,0.0,0.0,,0,0
+1644378,286601,Omar El Hilali,Espanyol,Sestao River,Copa del Rey,2026-10-27T18:00:00,visitante,D,True,120,0.0,0.0,0.0,,1,0
+1644378,282054,Clemens Riedel,Espanyol,Sestao River,Copa del Rey,2026-10-27T18:00:00,visitante,D,True,120,0.0,0.0,0.0,,0,0
+1644378,47249,Leandro Cabrera,Espanyol,Sestao River,Copa del Rey,2026-10-27T18:00:00,visitante,D,True,120,0.0,0.0,2.0,2.0,1,0
+1644378,450716,Roger Hinojo,Espanyol,Sestao River,Copa del Rey,2026-10-27T18:00:00,visitante,D,True,117,0.0,0.0,0.0,,0,0
+1644378,183699,Urko González,Espanyol,Sestao River,Copa del Rey,2026-10-27T18:00:00,visitante,M,True,64,0.0,0.0,0.0,,0,0
+1644378,127426,Pol Lozano,Espanyol,Sestao River,Copa del Rey,2026-10-27T18:00:00,visitante,M,True,75,0.0,0.0,0.0,1.0,0,0
+1644378,286038,Álex Calatrava,Espanyol,Sestao River,Copa del Rey,2026-10-27T18:00:00,visitante,M,True,45,0.0,0.0,0.0,,0,0
+1644378,388495,Javier Hernández,Espanyol,Sestao River,Copa del Rey,2026-10-27T18:00:00,visitante,M,True,64,0.0,0.0,0.0,1.0,1,0
+1644378,273732,Tyrhys Dolan,Espanyol,Sestao River,Copa del Rey,2026-10-27T18:00:00,visitante,M,True,64,0.0,0.0,0.0,,1,0
+1644378,347885,Marcos Fernández,Espanyol,Sestao River,Copa del Rey,2026-10-27T18:00:00,visitante,F,True,120,1.0,0.0,1.0,3.0,0,0
+1644378,312990,Roberto Fernández,Espanyol,Sestao River,Copa del Rey,2026-10-27T18:00:00,visitante,F,False,75,1.0,0.0,2.0,3.0,0,0
+1644378,438284,Rafael Bauzà,Espanyol,Sestao River,Copa del Rey,2026-10-27T18:00:00,visitante,M,False,56,0.0,0.0,0.0,,0,0
+1644378,415089,Gabriel Moscardo,Espanyol,Sestao River,Copa del Rey,2026-10-27T18:00:00,visitante,M,False,56,1.0,0.0,1.0,2.0,0,0
+1644378,286639,Bryan Zaragoza,Espanyol,Sestao River,Copa del Rey,2026-10-27T18:00:00,visitante,F,False,56,0.0,1.0,0.0,1.0,0,0
+1644378,46799,Edu Expósito,Espanyol,Sestao River,Copa del Rey,2026-10-27T18:00:00,visitante,M,False,45,0.0,0.0,0.0,,0,0
+1644378,375915,Quilindschy Hartman,Espanyol,Sestao River,Copa del Rey,2026-10-27T18:00:00,visitante,D,False,3,0.0,0.0,0.0,,0,0
+1641984,280456,Justin Treichel,Roda,De Graafschap,KNVB Beker,2026-10-27T19:00:00,local,G,True,90,0.0,0.0,0.0,,0,0
+1641984,37743,Marco Tol,Roda,De Graafschap,KNVB Beker,2026-10-27T19:00:00,local,D,True,90,0.0,0.0,0.0,,0,0
+1641984,37259,Dario Van Den Buijs,Roda,De Graafschap,KNVB Beker,2026-10-27T19:00:00,local,D,True,82,0.0,0.0,0.0,,0,0
+1641984,162554,Lucas Beerten,Roda,De Graafschap,KNVB Beker,2026-10-27T19:00:00,local,D,True,45,0.0,0.0,0.0,1.0,0,0
+1641984,453794,Guilherme Peixoto,Roda,De Graafschap,KNVB Beker,2026-10-27T19:00:00,local,M,True,90,0.0,0.0,1.0,2.0,0,0
+1641984,38767,Jerome Deom,Roda,De Graafschap,KNVB Beker,2026-10-27T19:00:00,local,M,True,90,0.0,0.0,0.0,,0,0
+1641984,7049,Joshua Nisbet,Roda,De Graafschap,KNVB Beker,2026-10-27T19:00:00,local,M,True,90,0.0,0.0,0.0,,0,0
+1641984,455049,Bram Marsman,Roda,De Graafschap,KNVB Beker,2026-10-27T19:00:00,local,M,True,90,0.0,0.0,0.0,,0,0
+1641984,493409,Jeremiah Mensah,Roda,De Graafschap,KNVB Beker,2026-10-27T19:00:00,local,F,True,68,0.0,0.0,1.0,2.0,0,0
+1641984,38784,Anthony van den Hurk,Roda,De Graafschap,KNVB Beker,2026-10-27T19:00:00,local,F,True,69,0.0,0.0,0.0,,0,0
+1641984,297883,Cain Seedorf,Roda,De Graafschap,KNVB Beker,2026-10-27T19:00:00,local,F,True,45,0.0,0.0,0.0,2.0,0,0
+1641984,468421,Luuk Verheij,Roda,De Graafschap,KNVB Beker,2026-10-27T19:00:00,local,M,False,45,0.0,0.0,0.0,,0,0
+1641984,61414,Joey Sleegers,Roda,De Graafschap,KNVB Beker,2026-10-27T19:00:00,local,F,False,45,0.0,0.0,0.0,,0,0
+1641984,37075,Mitchell Paulissen,Roda,De Graafschap,KNVB Beker,2026-10-27T19:00:00,local,M,False,22,0.0,0.0,0.0,,0,0
+1641984,610625,Fynn Schenten,Roda,De Graafschap,KNVB Beker,2026-10-27T19:00:00,local,F,False,21,0.0,0.0,0.0,1.0,0,0
+1641984,392584,Mokrane Bentoumi,Roda,De Graafschap,KNVB Beker,2026-10-27T19:00:00,local,M,False,8,1.0,0.0,1.0,1.0,0,0
+1641984,392258,Paul Reverson,De Graafschap,Roda,KNVB Beker,2026-10-27T19:00:00,visitante,G,True,90,0.0,0.0,0.0,,0,0
+1641984,177714,Jannes Wieckhoff,De Graafschap,Roda,KNVB Beker,2026-10-27T19:00:00,visitante,D,True,60,0.0,0.0,0.0,,1,0
+1641984,376671,Rowan Besselink,De Graafschap,Roda,KNVB Beker,2026-10-27T19:00:00,visitante,D,True,90,0.0,0.0,0.0,,1,0
+1641984,373790,Joran Hardeman,De Graafschap,Roda,KNVB Beker,2026-10-27T19:00:00,visitante,D,True,90,0.0,0.0,0.0,1.0,0,0
+1641984,452717,Gijs Bolk,De Graafschap,Roda,KNVB Beker,2026-10-27T19:00:00,visitante,D,True,90,0.0,0.0,1.0,1.0,1,0
+1641984,392499,Nart Ahmeti,De Graafschap,Roda,KNVB Beker,2026-10-27T19:00:00,visitante,M,True,71,0.0,0.0,0.0,1.0,1,0
+1641984,361502,Kaya Symons,De Graafschap,Roda,KNVB Beker,2026-10-27T19:00:00,visitante,M,True,60,0.0,0.0,0.0,1.0,1,0
+1641984,353536,Nathan Kaninda,De Graafschap,Roda,KNVB Beker,2026-10-27T19:00:00,visitante,M,True,86,0.0,0.0,2.0,3.0,0,0
+1641984,161885,Donny Warmerdam,De Graafschap,Roda,KNVB Beker,2026-10-27T19:00:00,visitante,M,True,90,0.0,0.0,0.0,,0,0
+1641984,444974,Toivo Mero,De Graafschap,Roda,KNVB Beker,2026-10-27T19:00:00,visitante,M,True,90,0.0,0.0,1.0,1.0,0,0
+1641984,427588,Julian Kania,De Graafschap,Roda,KNVB Beker,2026-10-27T19:00:00,visitante,F,True,86,0.0,0.0,3.0,4.0,0,0
+1641984,342946,Nolan Martens,De Graafschap,Roda,KNVB Beker,2026-10-27T19:00:00,visitante,D,False,30,0.0,0.0,0.0,,0,0
+1641984,37710,Thomas Kok,De Graafschap,Roda,KNVB Beker,2026-10-27T19:00:00,visitante,D,False,30,0.0,0.0,0.0,,0,0
+1641984,37012,Mark Diemers,De Graafschap,Roda,KNVB Beker,2026-10-27T19:00:00,visitante,M,False,19,0.0,0.0,0.0,1.0,0,0
+1641984,507861,Bjorn van Zijl,De Graafschap,Roda,KNVB Beker,2026-10-27T19:00:00,visitante,F,False,9,0.0,0.0,0.0,,0,0
+1641984,502046,Kyano Kwint,De Graafschap,Roda,KNVB Beker,2026-10-27T19:00:00,visitante,F,False,9,0.0,0.0,0.0,,0,0
+1641968,193295,Jort Borgmans,FC Eindhoven,FC Volendam,KNVB Beker,2026-10-27T19:00:00,local,G,True,90,0.0,0.0,0.0,,0,0
+1641968,432021,Luc Netten,FC Eindhoven,FC Volendam,KNVB Beker,2026-10-27T19:00:00,local,D,True,72,0.0,0.0,1.0,1.0,0,0
+1641968,525548,Owen Renfrum,FC Eindhoven,FC Volendam,KNVB Beker,2026-10-27T19:00:00,local,D,True,90,0.0,0.0,0.0,,0,0
+1641968,314747,Junior Poortvliet,FC Eindhoven,FC Volendam,KNVB Beker,2026-10-27T19:00:00,local,D,True,90,0.0,0.0,0.0,,0,0
+1641968,439828,Raf van de Riet,FC Eindhoven,FC Volendam,KNVB Beker,2026-10-27T19:00:00,local,D,True,90,0.0,0.0,1.0,2.0,0,0
+1641968,283540,Guus Beaumont,FC Eindhoven,FC Volendam,KNVB Beker,2026-10-27T19:00:00,local,M,True,90,0.0,1.0,0.0,,0,0
+1641968,346141,Niek Munsters,FC Eindhoven,FC Volendam,KNVB Beker,2026-10-27T19:00:00,local,M,True,79,0.0,0.0,0.0,,0,0
+1641968,423491,Rayan Buifrahi,FC Eindhoven,FC Volendam,KNVB Beker,2026-10-27T19:00:00,local,M,True,87,1.0,1.0,3.0,3.0,0,0
+1641968,379608,Hugo Deenen,FC Eindhoven,FC Volendam,KNVB Beker,2026-10-27T19:00:00,local,M,True,79,0.0,0.0,0.0,1.0,0,0
+1641968,162953,Vicente Besuijen,FC Eindhoven,FC Volendam,KNVB Beker,2026-10-27T19:00:00,local,M,True,45,1.0,0.0,1.0,1.0,0,0
+1641968,526670,Siegert Baartmans,FC Eindhoven,FC Volendam,KNVB Beker,2026-10-27T19:00:00,local,F,True,90,2.0,0.0,4.0,6.0,0,0
+1641968,455129,Tyrese Simons,FC Eindhoven,FC Volendam,KNVB Beker,2026-10-27T19:00:00,local,D,False,45,0.0,0.0,1.0,3.0,0,0
+1641968,37001,Clint Essers,FC Eindhoven,FC Volendam,KNVB Beker,2026-10-27T19:00:00,local,D,False,18,0.0,0.0,0.0,,0,0
+1641968,394983,Antonio Baždarić,FC Eindhoven,FC Volendam,KNVB Beker,2026-10-27T19:00:00,local,M,False,11,0.0,0.0,0.0,,0,0
+1641968,162061,Xander Blomme,FC Eindhoven,FC Volendam,KNVB Beker,2026-10-27T19:00:00,local,M,False,11,0.0,0.0,0.0,,0,0
+1641968,491986,Rens Boon,FC Eindhoven,FC Volendam,KNVB Beker,2026-10-27T19:00:00,local,D,False,8,0.0,0.0,0.0,,1,0
+1641968,330623,Roy Steur,FC Volendam,FC Eindhoven,KNVB Beker,2026-10-27T19:00:00,visitante,G,True,90,0.0,0.0,0.0,,0,0
+1641968,272835,Deron Payne,FC Volendam,FC Eindhoven,KNVB Beker,2026-10-27T19:00:00,visitante,D,True,90,0.0,1.0,0.0,,0,0
+1641968,485955,Luca Blondeau,FC Volendam,FC Eindhoven,KNVB Beker,2026-10-27T19:00:00,visitante,D,True,90,0.0,0.0,0.0,1.0,0,0
+1641968,68330,Mawouna Amevor,FC Volendam,FC Eindhoven,KNVB Beker,2026-10-27T19:00:00,visitante,D,True,45,0.0,0.0,0.0,,1,0
+1641968,467813,Daan Bisschops,FC Volendam,FC Eindhoven,KNVB Beker,2026-10-27T19:00:00,visitante,D,True,63,0.0,0.0,0.0,,0,0
+1641968,37746,Alex Plat,FC Volendam,FC Eindhoven,KNVB Beker,2026-10-27T19:00:00,visitante,M,True,90,0.0,0.0,0.0,,0,0
+1641968,427259,Nordin Bukala,FC Volendam,FC Eindhoven,KNVB Beker,2026-10-27T19:00:00,visitante,M,True,74,0.0,0.0,0.0,1.0,0,0
+1641968,412868,Kayden Wolff,FC Volendam,FC Eindhoven,KNVB Beker,2026-10-27T19:00:00,visitante,M,True,63,0.0,0.0,1.0,1.0,0,0
+1641968,37302,Reuven Niemeijer,FC Volendam,FC Eindhoven,KNVB Beker,2026-10-27T19:00:00,visitante,M,True,90,2.0,1.0,2.0,4.0,0,0
+1641968,667736,Mohammed Belfqih,FC Volendam,FC Eindhoven,KNVB Beker,2026-10-27T19:00:00,visitante,M,True,74,1.0,0.0,1.0,1.0,0,0
+1641968,265671,Frederik Ihler,FC Volendam,FC Eindhoven,KNVB Beker,2026-10-27T19:00:00,visitante,F,True,90,0.0,0.0,1.0,2.0,0,0
+1641968,580544,Jaïr Haakmat,FC Volendam,FC Eindhoven,KNVB Beker,2026-10-27T19:00:00,visitante,D,False,45,0.0,0.0,0.0,,0,0
+1641968,412882,Precious Ugwu,FC Volendam,FC Eindhoven,KNVB Beker,2026-10-27T19:00:00,visitante,D,False,27,0.0,0.0,0.0,,0,0
+1641968,37758,Nick Doodeman,FC Volendam,FC Eindhoven,KNVB Beker,2026-10-27T19:00:00,visitante,F,False,27,0.0,0.0,0.0,,0,0
+1641968,272729,Daan Huisman,FC Volendam,FC Eindhoven,KNVB Beker,2026-10-27T19:00:00,visitante,M,False,16,0.0,0.0,0.0,,0,0
+1641968,451593,Younes Jaber el Maftahi,FC Volendam,FC Eindhoven,KNVB Beker,2026-10-27T19:00:00,visitante,M,False,16,0.0,0.0,1.0,1.0,0,0
+1641974,37629,Menno Bergsen,Helmond Sport,Willem II,KNVB Beker,2026-10-27T19:00:00,local,G,True,90,0.0,0.0,0.0,,0,0
+1641974,24928,Brian Koglin,Helmond Sport,Willem II,KNVB Beker,2026-10-27T19:00:00,local,D,True,74,0.0,0.0,0.0,2.0,1,0
+1641974,367877,Lovro Golič,Helmond Sport,Willem II,KNVB Beker,2026-10-27T19:00:00,local,D,True,90,0.0,0.0,0.0,,0,0
+1641974,640931,Tijn Landheer,Helmond Sport,Willem II,KNVB Beker,2026-10-27T19:00:00,local,D,True,90,0.0,0.0,0.0,,0,0
+1641974,340598,Sem Dekkers,Helmond Sport,Willem II,KNVB Beker,2026-10-27T19:00:00,local,M,True,90,0.0,0.0,0.0,1.0,0,0
+1641974,334106,Michel Ludwig,Helmond Sport,Willem II,KNVB Beker,2026-10-27T19:00:00,local,M,True,90,1.0,1.0,3.0,4.0,0,0
+1641974,615928,Xander van der Velde,Helmond Sport,Willem II,KNVB Beker,2026-10-27T19:00:00,local,M,True,90,0.0,0.0,0.0,1.0,0,0
+1641974,194836,Thomas Poll,Helmond Sport,Willem II,KNVB Beker,2026-10-27T19:00:00,local,M,True,45,0.0,0.0,0.0,,0,0
+1641974,126758,Dean Huiberts,Helmond Sport,Willem II,KNVB Beker,2026-10-27T19:00:00,local,F,True,56,0.0,0.0,0.0,,0,0
+1641974,512733,Mauro Lenaerts,Helmond Sport,Willem II,KNVB Beker,2026-10-27T19:00:00,local,F,True,90,0.0,0.0,0.0,2.0,0,0
+1641974,360033,Tarik Essakkati,Helmond Sport,Willem II,KNVB Beker,2026-10-27T19:00:00,local,F,True,56,0.0,1.0,0.0,,0,0
+1641974,278307,Joep van der Sluijs,Helmond Sport,Willem II,KNVB Beker,2026-10-27T19:00:00,local,M,False,45,0.0,0.0,0.0,1.0,1,0
+1641974,374563,Helgi Fróði Ingason,Helmond Sport,Willem II,KNVB Beker,2026-10-27T19:00:00,local,M,False,34,0.0,0.0,0.0,,0,0
+1641974,340228,Labinot Bajrami,Helmond Sport,Willem II,KNVB Beker,2026-10-27T19:00:00,local,F,False,39,2.0,,2.0,4.0,0,0
+1641974,144325,Flor Van Den Eynden,Helmond Sport,Willem II,KNVB Beker,2026-10-27T19:00:00,local,D,False,16,0.0,0.0,0.0,1.0,0,0
+1641974,38714,Maxime Delanghe,Willem II,Helmond Sport,KNVB Beker,2026-10-27T19:00:00,visitante,G,True,90,0.0,0.0,0.0,,0,0
+1641974,30798,Hidde ter Avest,Willem II,Helmond Sport,KNVB Beker,2026-10-27T19:00:00,visitante,D,True,58,0.0,1.0,0.0,,0,0
+1641974,319915,Finn Stam,Willem II,Helmond Sport,KNVB Beker,2026-10-27T19:00:00,visitante,D,True,90,0.0,1.0,0.0,1.0,0,0
+1641974,341917,Mats Lemmens,Willem II,Helmond Sport,KNVB Beker,2026-10-27T19:00:00,visitante,D,True,90,0.0,0.0,0.0,,1,0
+1641974,129066,Nathan Tjoe-A-On,Willem II,Helmond Sport,KNVB Beker,2026-10-27T19:00:00,visitante,D,True,90,0.0,0.0,0.0,,0,0
+1641974,277922,Calvin Twigt,Willem II,Helmond Sport,KNVB Beker,2026-10-27T19:00:00,visitante,M,True,90,0.0,0.0,0.0,,0,0
+1641974,480309,Anass Zarrouk,Willem II,Helmond Sport,KNVB Beker,2026-10-27T19:00:00,visitante,M,True,45,0.0,0.0,0.0,,0,0
+1641974,453717,Eser Gürbüz,Willem II,Helmond Sport,KNVB Beker,2026-10-27T19:00:00,visitante,M,True,83,2.0,1.0,2.0,4.0,1,0
+1641974,37712,Jari Schuurman,Willem II,Helmond Sport,KNVB Beker,2026-10-27T19:00:00,visitante,M,True,58,0.0,0.0,0.0,,0,0
+1641974,36937,Vito van Crooij,Willem II,Helmond Sport,KNVB Beker,2026-10-27T19:00:00,visitante,M,True,90,0.0,0.0,0.0,1.0,0,0
+1641974,306701,Devin Haen,Willem II,Helmond Sport,KNVB Beker,2026-10-27T19:00:00,visitante,F,True,66,1.0,1.0,1.0,2.0,0,0
+1641974,37157,Tonny Vilhena,Willem II,Helmond Sport,KNVB Beker,2026-10-27T19:00:00,visitante,M,False,45,1.0,0.0,1.0,2.0,0,0
+1641974,162463,Amine Et-Taïbi,Willem II,Helmond Sport,KNVB Beker,2026-10-27T19:00:00,visitante,D,False,32,0.0,0.0,0.0,,0,0
+1641974,361487,Jaden Slory,Willem II,Helmond Sport,KNVB Beker,2026-10-27T19:00:00,visitante,F,False,20,0.0,0.0,0.0,1.0,0,1
+1641974,389309,Chido Obi-Martin,Willem II,Helmond Sport,KNVB Beker,2026-10-27T19:00:00,visitante,F,False,24,0.0,0.0,0.0,,0,0
+1641974,480393,Per van Loon,Willem II,Helmond Sport,KNVB Beker,2026-10-27T19:00:00,visitante,M,False,12,0.0,0.0,0.0,,0,0
+1641986,37817,Ronald Koeman Jr,Telstar,Almere City FC,KNVB Beker,2026-10-27T19:00:00,local,G,True,90,0.0,0.0,0.0,,0,0
+1641986,194810,Gabi Caschili,Telstar,Almere City FC,KNVB Beker,2026-10-27T19:00:00,local,D,True,78,0.0,0.0,0.0,,0,0
+1641986,314510,Sem Valk,Telstar,Almere City FC,KNVB Beker,2026-10-27T19:00:00,local,D,True,90,0.0,0.0,0.0,,0,0
+1641986,193428,Abdelnour Soualhia,Telstar,Almere City FC,KNVB Beker,2026-10-27T19:00:00,local,D,True,90,0.0,0.0,0.0,1.0,0,0
+1641986,93060,Marvin Peersman,Telstar,Almere City FC,KNVB Beker,2026-10-27T19:00:00,local,D,True,90,0.0,0.0,0.0,,0,0
+1641986,480854,Isaiah Ahmed,Telstar,Almere City FC,KNVB Beker,2026-10-27T19:00:00,local,M,True,90,0.0,0.0,0.0,2.0,0,0
+1641986,349560,Nils Rossen,Telstar,Almere City FC,KNVB Beker,2026-10-27T19:00:00,local,M,True,78,0.0,0.0,0.0,,0,0
+1641986,428077,Harrie Kuster,Telstar,Almere City FC,KNVB Beker,2026-10-27T19:00:00,local,M,True,71,0.0,0.0,0.0,1.0,0,0
+1641986,149225,Tyrone Owusu,Telstar,Almere City FC,KNVB Beker,2026-10-27T19:00:00,local,M,True,90,0.0,0.0,0.0,3.0,0,0
+1641986,194815,Patrick Brouwer,Telstar,Almere City FC,KNVB Beker,2026-10-27T19:00:00,local,M,True,90,0.0,0.0,0.0,,0,0
+1641986,28786,Nökkvi Þórisson,Telstar,Almere City FC,KNVB Beker,2026-10-27T19:00:00,local,F,True,90,0.0,0.0,1.0,3.0,0,0
+1641986,391283,Emirhan Demircan,Telstar,Almere City FC,KNVB Beker,2026-10-27T19:00:00,local,F,False,19,0.0,0.0,0.0,,0,0
+1641986,37252,Jeff Hardeveld,Telstar,Almere City FC,KNVB Beker,2026-10-27T19:00:00,local,D,False,12,0.0,0.0,0.0,,0,0
+1641986,502436,Jelani Seedorf,Telstar,Almere City FC,KNVB Beker,2026-10-27T19:00:00,local,F,False,12,0.0,0.0,0.0,1.0,0,0
+1641986,193292,Wessel Speel,Almere City FC,Telstar,KNVB Beker,2026-10-27T19:00:00,visitante,G,True,90,0.0,0.0,0.0,,0,0
+1641986,38815,Joey Jacobs,Almere City FC,Telstar,KNVB Beker,2026-10-27T19:00:00,visitante,D,True,90,0.0,0.0,0.0,,0,0
+1641986,37777,Damian van Bruggen,Almere City FC,Telstar,KNVB Beker,2026-10-27T19:00:00,visitante,D,True,90,0.0,0.0,0.0,,0,0
+1641986,1412,James Lawrence,Almere City FC,Telstar,KNVB Beker,2026-10-27T19:00:00,visitante,D,True,90,0.0,0.0,0.0,1.0,0,0
+1641986,38744,Teun Bijleveld,Almere City FC,Telstar,KNVB Beker,2026-10-27T19:00:00,visitante,D,True,90,1.0,0.0,1.0,1.0,0,0
+1641986,314007,Milan de Haan,Almere City FC,Telstar,KNVB Beker,2026-10-27T19:00:00,visitante,M,True,77,0.0,0.0,0.0,1.0,0,0
+1641986,272728,Enzo Cornelisse,Almere City FC,Telstar,KNVB Beker,2026-10-27T19:00:00,visitante,M,True,90,0.0,0.0,0.0,1.0,0,0
+1641986,444792,Emanuel Poku,Almere City FC,Telstar,KNVB Beker,2026-10-27T19:00:00,visitante,M,True,57,0.0,0.0,0.0,,0,0
+1641986,38819,Jamie Jacobs,Almere City FC,Telstar,KNVB Beker,2026-10-27T19:00:00,visitante,M,True,57,0.0,0.0,0.0,1.0,0,0
+1641986,127806,Byron Burgering,Almere City FC,Telstar,KNVB Beker,2026-10-27T19:00:00,visitante,M,True,57,0.0,0.0,0.0,,0,0
+1641986,37377,Ferdy Druijf,Almere City FC,Telstar,KNVB Beker,2026-10-27T19:00:00,visitante,F,True,57,0.0,0.0,0.0,,0,0
+1641986,434204,Marley  Dors,Almere City FC,Telstar,KNVB Beker,2026-10-27T19:00:00,visitante,F,False,33,0.0,1.0,0.0,,0,0
+1641986,357182,Hamza El Dahri,Almere City FC,Telstar,KNVB Beker,2026-10-27T19:00:00,visitante,M,False,33,0.0,0.0,2.0,2.0,0,0
+1641986,493505,Bas Huisman,Almere City FC,Telstar,KNVB Beker,2026-10-27T19:00:00,visitante,F,False,33,0.0,0.0,0.0,,0,0
+1641986,345155,Jochem Ritmeester van de Kamp,Almere City FC,Telstar,KNVB Beker,2026-10-27T19:00:00,visitante,M,False,33,1.0,0.0,1.0,1.0,0,0
+1641986,36898,Mees Hoedemakers,Almere City FC,Telstar,KNVB Beker,2026-10-27T19:00:00,visitante,M,False,13,0.0,0.0,0.0,,0,0
+1641982,330531,Tobias Van der Kleij,Rijnsburgse Boys,Den Bosch,KNVB Beker,2026-10-27T19:00:00,local,G,True,90,0.0,0.0,0.0,,0,0
+1641982,275916,Calvin Tureaij,Rijnsburgse Boys,Den Bosch,KNVB Beker,2026-10-27T19:00:00,local,D,True,86,0.0,0.0,0.0,,0,0
+1641982,37804,Bram Ros,Rijnsburgse Boys,Den Bosch,KNVB Beker,2026-10-27T19:00:00,local,D,True,90,0.0,0.0,0.0,,1,0
+1641982,93814,Rob Zandbergen,Rijnsburgse Boys,Den Bosch,KNVB Beker,2026-10-27T19:00:00,local,D,True,90,0.0,0.0,0.0,,0,0
+1641982,336584,Chahine Van Bohemen,Rijnsburgse Boys,Den Bosch,KNVB Beker,2026-10-27T19:00:00,local,D,True,86,1.0,0.0,1.0,1.0,0,0
+1641982,344640,Nino Klaver,Rijnsburgse Boys,Den Bosch,KNVB Beker,2026-10-27T19:00:00,local,M,True,90,0.0,0.0,0.0,1.0,0,0
+1641982,487448,Younes Tufi,Rijnsburgse Boys,Den Bosch,KNVB Beker,2026-10-27T19:00:00,local,M,True,70,0.0,0.0,0.0,1.0,0,0
+1641982,38460,Steff van Rooijen,Rijnsburgse Boys,Den Bosch,KNVB Beker,2026-10-27T19:00:00,local,M,True,90,0.0,1.0,1.0,1.0,0,0
+1641982,449948,Jeffrey Buitenweg,Rijnsburgse Boys,Den Bosch,KNVB Beker,2026-10-27T19:00:00,local,F,True,90,1.0,1.0,1.0,1.0,0,0
+1641982,434207,Ilias Kariouh,Rijnsburgse Boys,Den Bosch,KNVB Beker,2026-10-27T19:00:00,local,F,True,90,0.0,1.0,0.0,1.0,0,0
+1641982,93861,Bram de Bruin,Rijnsburgse Boys,Den Bosch,KNVB Beker,2026-10-27T19:00:00,local,M,False,20,0.0,0.0,0.0,,0,0
+1641982,344212,Sel Bastmeijer,Rijnsburgse Boys,Den Bosch,KNVB Beker,2026-10-27T19:00:00,local,F,False,9,0.0,0.0,0.0,,1,0
+1641982,435726,Mitch van Kempen,Rijnsburgse Boys,Den Bosch,KNVB Beker,2026-10-27T19:00:00,local,D,False,8,0.0,0.0,0.0,,1,0
+1641982,379886,João Simões,Rijnsburgse Boys,Den Bosch,KNVB Beker,2026-10-27T19:00:00,local,F,False,8,0.0,0.0,0.0,,0,0
+1641982,290538,Pepijn van de Merbel,Den Bosch,Rijnsburgse Boys,KNVB Beker,2026-10-27T19:00:00,visitante,G,True,90,0.0,0.0,0.0,,0,0
+1641982,37885,Jeffrey Fortes,Den Bosch,Rijnsburgse Boys,KNVB Beker,2026-10-27T19:00:00,visitante,D,True,90,1.0,0.0,1.0,1.0,0,0
+1641982,425822,Mees Laros,Den Bosch,Rijnsburgse Boys,KNVB Beker,2026-10-27T19:00:00,visitante,D,True,90,0.0,0.0,0.0,,0,0
+1641982,280673,Stan Maas,Den Bosch,Rijnsburgse Boys,KNVB Beker,2026-10-27T19:00:00,visitante,D,True,90,0.0,0.0,1.0,2.0,0,0
+1641982,401917,Sheddy Barglan,Den Bosch,Rijnsburgse Boys,KNVB Beker,2026-10-27T19:00:00,visitante,M,True,90,0.0,1.0,0.0,1.0,0,0
+1641982,427645,Bohao Wang,Den Bosch,Rijnsburgse Boys,KNVB Beker,2026-10-27T19:00:00,visitante,M,True,71,0.0,0.0,0.0,,0,0
+1641982,538742,Hessel Eikelboom,Den Bosch,Rijnsburgse Boys,KNVB Beker,2026-10-27T19:00:00,visitante,M,True,90,0.0,0.0,0.0,,0,0
+1641982,405381,Emian-Johar Semedo,Den Bosch,Rijnsburgse Boys,KNVB Beker,2026-10-27T19:00:00,visitante,M,True,86,0.0,0.0,0.0,,0,0
+1641982,453902,Devon De Corte,Den Bosch,Rijnsburgse Boys,KNVB Beker,2026-10-27T19:00:00,visitante,F,True,90,1.0,2.0,2.0,3.0,0,0
+1641982,667799,Lorenzo Hoffman,Den Bosch,Rijnsburgse Boys,KNVB Beker,2026-10-27T19:00:00,visitante,F,True,71,1.0,0.0,3.0,4.0,0,0
+1641982,102402,Jack De Vries,Den Bosch,Rijnsburgse Boys,KNVB Beker,2026-10-27T19:00:00,visitante,F,True,86,1.0,0.0,3.0,4.0,0,0
+1641982,418578,Ilias Boumassaoudi,Den Bosch,Rijnsburgse Boys,KNVB Beker,2026-10-27T19:00:00,visitante,F,False,19,0.0,0.0,0.0,,0,0
+1641982,551139,Rafi Wolters,Den Bosch,Rijnsburgse Boys,KNVB Beker,2026-10-27T19:00:00,visitante,F,False,19,1.0,0.0,1.0,1.0,0,0
+1641982,657676,Sufyan van Daalen,Den Bosch,Rijnsburgse Boys,KNVB Beker,2026-10-27T19:00:00,visitante,M,False,8,0.0,0.0,0.0,,0,0
+1641982,546675,Genrich Sillé,Den Bosch,Rijnsburgse Boys,KNVB Beker,2026-10-27T19:00:00,visitante,F,False,8,0.0,0.0,0.0,,0,0
+1641966,93850,Bradley van der Meer,Barendrecht,Waalwijk,KNVB Beker,2026-10-27T19:00:00,local,G,True,120,0.0,0.0,0.0,,1,0
+1641966,273129,Jay Brand,Barendrecht,Waalwijk,KNVB Beker,2026-10-27T19:00:00,local,D,True,120,0.0,1.0,0.0,,0,0
+1641966,158315,Timo de Graaf,Barendrecht,Waalwijk,KNVB Beker,2026-10-27T19:00:00,local,D,True,120,1.0,0.0,2.0,3.0,1,0
+1641966,93868,Danny Monster,Barendrecht,Waalwijk,KNVB Beker,2026-10-27T19:00:00,local,D,True,120,0.0,0.0,0.0,,0,0
+1641966,349285,Kevin Rook,Barendrecht,Waalwijk,KNVB Beker,2026-10-27T19:00:00,local,D,True,90,0.0,0.0,0.0,,0,0
+1641966,275939,Olek Mrowicki,Barendrecht,Waalwijk,KNVB Beker,2026-10-27T19:00:00,local,M,True,120,0.0,0.0,0.0,,0,0
+1641966,432984,Taner  Bayram,Barendrecht,Waalwijk,KNVB Beker,2026-10-27T19:00:00,local,M,True,78,0.0,0.0,0.0,,0,0
+1641966,37965,Redouan Omar Ouali,Barendrecht,Waalwijk,KNVB Beker,2026-10-27T19:00:00,local,M,True,66,0.0,0.0,0.0,,1,0
+1641966,203783,Aness Serghini,Barendrecht,Waalwijk,KNVB Beker,2026-10-27T19:00:00,local,M,True,110,1.0,0.0,1.0,1.0,0,0
+1641966,314376,Brent Vugts,Barendrecht,Waalwijk,KNVB Beker,2026-10-27T19:00:00,local,F,True,98,0.0,0.0,1.0,3.0,1,0
+1641966,128828,Marouane Bakour,Barendrecht,Waalwijk,KNVB Beker,2026-10-27T19:00:00,local,F,False,54,0.0,0.0,1.0,3.0,0,0
+1641966,272804,Constantijn Schop,Barendrecht,Waalwijk,KNVB Beker,2026-10-27T19:00:00,local,M,False,42,0.0,0.0,0.0,1.0,1,0
+1641966,546663,Joshua Kieboom,Barendrecht,Waalwijk,KNVB Beker,2026-10-27T19:00:00,local,M,False,30,0.0,1.0,0.0,,0,0
+1641966,37601,Mark Spenkelink,Waalwijk,Barendrecht,KNVB Beker,2026-10-27T19:00:00,visitante,G,True,120,0.0,0.0,0.0,,0,0
+1641966,38733,Navajo Bakboord,Waalwijk,Barendrecht,KNVB Beker,2026-10-27T19:00:00,visitante,D,True,120,0.0,0.0,0.0,,0,0
+1641966,419628,Sven van der Plas,Waalwijk,Barendrecht,KNVB Beker,2026-10-27T19:00:00,visitante,D,True,120,0.0,0.0,0.0,,0,0
+1641966,38742,Liam Van Gelderen,Waalwijk,Barendrecht,KNVB Beker,2026-10-27T19:00:00,visitante,D,True,120,0.0,0.0,0.0,1.0,0,0
+1641966,411290,Nazjir Held,Waalwijk,Barendrecht,KNVB Beker,2026-10-27T19:00:00,visitante,D,True,120,0.0,0.0,0.0,1.0,0,0
+1641966,128308,Azzedine Dkidak,Waalwijk,Barendrecht,KNVB Beker,2026-10-27T19:00:00,visitante,M,True,65,0.0,0.0,0.0,1.0,0,0
+1641966,551155,Jochem Nap,Waalwijk,Barendrecht,KNVB Beker,2026-10-27T19:00:00,visitante,M,True,86,0.0,1.0,0.0,,0,0
+1641966,343291,Rein van Hedel,Waalwijk,Barendrecht,KNVB Beker,2026-10-27T19:00:00,visitante,M,True,73,0.0,0.0,0.0,2.0,0,0
+1641966,437455,Yoram van der Veen,Waalwijk,Barendrecht,KNVB Beker,2026-10-27T19:00:00,visitante,M,True,65,0.0,0.0,0.0,,1,0
+1641966,401916,Jesse van de Haar,Waalwijk,Barendrecht,KNVB Beker,2026-10-27T19:00:00,visitante,F,True,120,1.0,0.0,2.0,6.0,1,0
+1641966,37028,Finn Stokkers,Waalwijk,Barendrecht,KNVB Beker,2026-10-27T19:00:00,visitante,F,True,45,0.0,0.0,0.0,1.0,0,0
+1641966,275353,Ryan Fage,Waalwijk,Barendrecht,KNVB Beker,2026-10-27T19:00:00,visitante,M,False,45,1.0,0.0,1.0,2.0,0,0
+1641966,666569,Haye Van Gemert,Waalwijk,Barendrecht,KNVB Beker,2026-10-27T19:00:00,visitante,F,False,55,0.0,0.0,1.0,1.0,0,0
+1641966,496429,Keyan Varela,Waalwijk,Barendrecht,KNVB Beker,2026-10-27T19:00:00,visitante,F,False,48,0.0,0.0,2.0,2.0,0,0
+1641966,340712,Loek Postma,Waalwijk,Barendrecht,KNVB Beker,2026-10-27T19:00:00,visitante,D,False,47,0.0,0.0,0.0,,1,0
+1641966,138817,Juan Familia-Castillo,Waalwijk,Barendrecht,KNVB Beker,2026-10-27T19:00:00,visitante,D,False,34,0.0,0.0,0.0,,0,0
+1641966,272731,Roy Kuijpers,Waalwijk,Barendrecht,KNVB Beker,2026-10-27T19:00:00,visitante,F,False,30,0.0,1.0,1.0,1.0,0,0
+1638559,327646,L. Ullrich,Borussia Mönchengladbach,Karlsruher SC,DFB Pokal,2026-10-27T19:45:00,local,D,True,45,1.0,0.0,1.0,1.0,0,0
+1638559,621893,M. Nguefack,Borussia Mönchengladbach,Karlsruher SC,DFB Pokal,2026-10-27T19:45:00,local,M,True,18,0.0,0.0,0.0,0.0,0,0
+1638559,501906,W. Mohya,Borussia Mönchengladbach,Karlsruher SC,DFB Pokal,2026-10-27T19:45:00,local,M,True,4,0.0,0.0,0.0,0.0,0,0
+1638559,38114,K. Itakura,Borussia Mönchengladbach,Karlsruher SC,DFB Pokal,2026-10-27T19:45:00,local,D,True,13,0.0,0.0,1.0,1.0,0,0
+1638559,90829,D. Batz,Borussia Mönchengladbach,Karlsruher SC,DFB Pokal,2026-10-27T19:45:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1638559,24969,P. Sander,Borussia Mönchengladbach,Karlsruher SC,DFB Pokal,2026-10-27T19:45:00,local,D,True,39,0.0,0.0,0.0,0.0,0,1
+1638559,125418,Y. Konoplya,Borussia Mönchengladbach,Karlsruher SC,DFB Pokal,2026-10-27T19:45:00,local,M,True,90,0.0,0.0,0.0,0.0,0,0
+1638559,322627,F. Chiarodia,Borussia Mönchengladbach,Karlsruher SC,DFB Pokal,2026-10-27T19:45:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1638559,50852,J. Scally,Borussia Mönchengladbach,Karlsruher SC,DFB Pokal,2026-10-27T19:45:00,local,D,True,90,0.0,1.0,0.0,0.0,0,0
+1638559,351084,Z. Uno,Borussia Mönchengladbach,Karlsruher SC,DFB Pokal,2026-10-27T19:45:00,local,M,True,72,0.0,0.0,0.0,0.0,0,0
+1638559,25461,K. Stöger,Borussia Mönchengladbach,Karlsruher SC,DFB Pokal,2026-10-27T19:45:00,local,M,True,90,0.0,0.0,0.0,0.0,0,0
+1638559,162536,D. Herold,Borussia Mönchengladbach,Karlsruher SC,DFB Pokal,2026-10-27T19:45:00,local,M,True,90,0.0,0.0,0.0,0.0,0,0
+1638559,335095,H. Bolin,Borussia Mönchengladbach,Karlsruher SC,DFB Pokal,2026-10-27T19:45:00,local,M,True,45,0.0,0.0,0.0,0.0,0,0
+1638559,725,R. Hack,Borussia Mönchengladbach,Karlsruher SC,DFB Pokal,2026-10-27T19:45:00,local,M,True,86,1.0,1.0,1.0,2.0,0,0
+1638559,106851,S. Machino,Borussia Mönchengladbach,Karlsruher SC,DFB Pokal,2026-10-27T19:45:00,local,F,True,77,0.0,0.0,0.0,0.0,0,0
+1638559,550839,D. H. Zor,Karlsruher SC,Borussia Mönchengladbach,DFB Pokal,2026-10-27T19:45:00,visitante,M,True,21,0.0,0.0,0.0,0.0,0,0
+1638559,432547,Louey Ben Farhat,Karlsruher SC,Borussia Mönchengladbach,DFB Pokal,2026-10-27T19:45:00,visitante,M,True,29,0.0,0.0,0.0,0.0,0,0
+1638559,100021,V. Bergh,Karlsruher SC,Borussia Mönchengladbach,DFB Pokal,2026-10-27T19:45:00,visitante,D,True,4,0.0,0.0,0.0,0.0,0,0
+1638559,375581,N. Eichinger,Karlsruher SC,Borussia Mönchengladbach,DFB Pokal,2026-10-27T19:45:00,visitante,M,True,30,0.0,0.0,0.0,1.0,0,0
+1638559,479086,J. Ponente,Karlsruher SC,Borussia Mönchengladbach,DFB Pokal,2026-10-27T19:45:00,visitante,F,True,45,0.0,0.0,0.0,0.0,0,0
+1638559,15842,H. Bernat,Karlsruher SC,Borussia Mönchengladbach,DFB Pokal,2026-10-27T19:45:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1638559,26091,C. Kobald,Karlsruher SC,Borussia Mönchengladbach,DFB Pokal,2026-10-27T19:45:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1638559,25036,M. Franke,Karlsruher SC,Borussia Mönchengladbach,DFB Pokal,2026-10-27T19:45:00,visitante,D,True,90,0.0,0.0,0.0,2.0,0,0
+1638559,274248,S. Trémoulet,Karlsruher SC,Borussia Mönchengladbach,DFB Pokal,2026-10-27T19:45:00,visitante,D,True,45,0.0,0.0,0.0,0.0,0,0
+1638559,567867,D. Ofli,Karlsruher SC,Borussia Mönchengladbach,DFB Pokal,2026-10-27T19:45:00,visitante,M,True,86,0.0,0.0,0.0,1.0,0,0
+1638559,179567,L. Egloff,Karlsruher SC,Borussia Mönchengladbach,DFB Pokal,2026-10-27T19:45:00,visitante,M,True,60,0.0,0.0,0.0,0.0,0,0
+1638559,55410,S. Väänänen,Karlsruher SC,Borussia Mönchengladbach,DFB Pokal,2026-10-27T19:45:00,visitante,M,True,69,0.0,0.0,0.0,1.0,0,0
+1638559,420463,Rafael Pinto Pedrosa,Karlsruher SC,Borussia Mönchengladbach,DFB Pokal,2026-10-27T19:45:00,visitante,M,True,90,0.0,0.0,1.0,2.0,0,0
+1638559,202811,T. Civeja,Karlsruher SC,Borussia Mönchengladbach,DFB Pokal,2026-10-27T19:45:00,visitante,M,True,61,0.0,0.0,0.0,0.0,0,0
+1638559,26107,M. Wanitzek,Karlsruher SC,Borussia Mönchengladbach,DFB Pokal,2026-10-27T19:45:00,visitante,M,True,90,0.0,0.0,3.0,8.0,0,0
+1638559,405112,S. Fukuda,Karlsruher SC,Borussia Mönchengladbach,DFB Pokal,2026-10-27T19:45:00,visitante,F,True,90,0.0,0.0,0.0,0.0,0,0
+1638561,25368,W. Anton,Borussia Dortmund,Werder Bremen,DFB Pokal,2026-10-27T19:45:00,local,D,True,90,0.0,0.0,0.0,1.0,0,0
+1638561,25282,G. Kobel,Borussia Dortmund,Werder Bremen,DFB Pokal,2026-10-27T19:45:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1638561,198654,D. Svensson,Borussia Dortmund,Werder Bremen,DFB Pokal,2026-10-27T19:45:00,local,D,True,19,0.0,0.0,0.0,1.0,0,0
+1638561,129791,Fábio Silva,Borussia Dortmund,Werder Bremen,DFB Pokal,2026-10-27T19:45:00,local,F,True,6,0.0,0.0,0.0,0.0,0,0
+1638561,1159,M. Sabitzer,Borussia Dortmund,Werder Bremen,DFB Pokal,2026-10-27T19:45:00,local,M,True,19,1.0,0.0,1.0,1.0,0,0
+1638561,313236,E. Nwaneri,Borussia Dortmund,Werder Bremen,DFB Pokal,2026-10-27T19:45:00,local,M,True,19,0.0,0.0,0.0,0.0,0,0
+1638561,26243,N. Schlotterbeck,Borussia Dortmund,Werder Bremen,DFB Pokal,2026-10-27T19:45:00,local,D,True,90,0.0,0.0,0.0,1.0,0,0
+1638561,24845,J. Ryerson,Borussia Dortmund,Werder Bremen,DFB Pokal,2026-10-27T19:45:00,local,M,True,71,0.0,1.0,0.0,0.0,1,0
+1638561,637,F. Nmecha,Borussia Dortmund,Werder Bremen,DFB Pokal,2026-10-27T19:45:00,local,M,True,90,0.0,0.0,1.0,2.0,0,0
+1638561,21393,S. Guirassy,Borussia Dortmund,Werder Bremen,DFB Pokal,2026-10-27T19:45:00,local,F,True,84,1.0,0.0,1.0,2.0,0,0
+1638561,409215,Kouakou Joane Gadou,Borussia Dortmund,Werder Bremen,DFB Pokal,2026-10-27T19:45:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1638561,138935,C. Chukwuemeka,Borussia Dortmund,Werder Bremen,DFB Pokal,2026-10-27T19:45:00,local,M,True,71,1.0,0.0,1.0,1.0,0,0
+1638561,326757,J. Bellingham,Borussia Dortmund,Werder Bremen,DFB Pokal,2026-10-27T19:45:00,local,M,True,90,0.0,1.0,0.0,1.0,0,0
+1638561,158644,M. Beier,Borussia Dortmund,Werder Bremen,DFB Pokal,2026-10-27T19:45:00,local,M,True,90,0.0,0.0,0.0,1.0,0,0
+1638561,37749,J. Veerman,Borussia Dortmund,Werder Bremen,DFB Pokal,2026-10-27T19:45:00,local,M,True,71,0.0,0.0,0.0,1.0,1,0
+1638561,323507,Dariusz Stalmach,Werder Bremen,Borussia Dortmund,DFB Pokal,2026-10-27T19:45:00,visitante,M,True,59,0.0,0.0,0.0,0.0,0,0
+1638561,25391,N. Füllkrug,Werder Bremen,Borussia Dortmund,DFB Pokal,2026-10-27T19:45:00,visitante,F,True,31,2.0,0.0,2.0,2.0,0,0
+1638561,38798,S. Lynen,Werder Bremen,Borussia Dortmund,DFB Pokal,2026-10-27T19:45:00,visitante,M,True,31,0.0,0.0,0.0,0.0,0,0
+1638561,38124,L. Reis,Werder Bremen,Borussia Dortmund,DFB Pokal,2026-10-27T19:45:00,visitante,M,True,31,0.0,0.0,0.0,0.0,0,0
+1638561,973,M. Weiser,Werder Bremen,Borussia Dortmund,DFB Pokal,2026-10-27T19:45:00,visitante,D,True,31,0.0,0.0,0.0,1.0,0,0
+1638561,444984,Mick Schmetgens,Werder Bremen,Borussia Dortmund,DFB Pokal,2026-10-27T19:45:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1638561,161883,Y. Regeer,Werder Bremen,Borussia Dortmund,DFB Pokal,2026-10-27T19:45:00,visitante,M,True,90,0.0,1.0,1.0,2.0,0,0
+1638561,25011,A. Pieper,Werder Bremen,Borussia Dortmund,DFB Pokal,2026-10-27T19:45:00,visitante,D,True,90,0.0,0.0,0.0,1.0,1,0
+1638561,48497,C. Itten,Werder Bremen,Borussia Dortmund,DFB Pokal,2026-10-27T19:45:00,visitante,F,True,59,0.0,0.0,2.0,3.0,0,0
+1638561,7073,M. Grüll,Werder Bremen,Borussia Dortmund,DFB Pokal,2026-10-27T19:45:00,visitante,M,True,59,0.0,0.0,1.0,3.0,0,0
+1638561,25314,M. Friedl,Werder Bremen,Borussia Dortmund,DFB Pokal,2026-10-27T19:45:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1638561,202526,E. Dinkçi,Werder Bremen,Borussia Dortmund,DFB Pokal,2026-10-27T19:45:00,visitante,M,True,59,0.0,0.0,0.0,0.0,0,0
+1638561,331004,Chuky San José,Werder Bremen,Borussia Dortmund,DFB Pokal,2026-10-27T19:45:00,visitante,M,True,90,0.0,0.0,0.0,0.0,0,0
+1638561,352375,Arthur,Werder Bremen,Borussia Dortmund,DFB Pokal,2026-10-27T19:45:00,visitante,D,True,90,0.0,0.0,0.0,0.0,1,0
+1638561,169295,K. Hein,Werder Bremen,Borussia Dortmund,DFB Pokal,2026-10-27T19:45:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1638563,25242,M. Bülter,1. FC Köln,Union Berlin,DFB Pokal,2026-10-27T19:45:00,local,F,True,90,0.0,2.0,1.0,2.0,0,0
+1638563,8641,A. Castro-Montes,1. FC Köln,Union Berlin,DFB Pokal,2026-10-27T19:45:00,local,M,True,63,0.0,0.0,0.0,1.0,0,0
+1638563,432310,S. El Mala,1. FC Köln,Union Berlin,DFB Pokal,2026-10-27T19:45:00,local,M,True,81,2.0,1.0,2.0,4.0,0,0
+1638563,1156,T. Krauß,1. FC Köln,Union Berlin,DFB Pokal,2026-10-27T19:45:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1638563,25380,L. Maina,1. FC Köln,Union Berlin,DFB Pokal,2026-10-27T19:45:00,local,M,True,71,1.0,1.0,2.0,2.0,0,0
+1638563,380690,M. Moore,1. FC Köln,Union Berlin,DFB Pokal,2026-10-27T19:45:00,local,M,True,72,0.0,0.0,0.0,0.0,0,0
+1638563,441269,Paul Michael Junior Okon-Engstler,1. FC Köln,Union Berlin,DFB Pokal,2026-10-27T19:45:00,local,M,True,90,0.0,0.0,0.0,0.0,0,0
+1638563,48765,J. Schmied,1. FC Köln,Union Berlin,DFB Pokal,2026-10-27T19:45:00,local,D,True,90,0.0,0.0,0.0,1.0,0,0
+1638563,404656,Jahmai Simpson-Pusey,1. FC Köln,Union Berlin,DFB Pokal,2026-10-27T19:45:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1638563,181908,J. Thielmann,1. FC Köln,Union Berlin,DFB Pokal,2026-10-27T19:45:00,local,M,True,19,0.0,0.0,1.0,1.0,0,0
+1638563,191740,S. Sebulonsen,1. FC Köln,Union Berlin,DFB Pokal,2026-10-27T19:45:00,local,D,True,27,1.0,0.0,1.0,1.0,1,0
+1638563,7578,G. Mensah,1. FC Köln,Union Berlin,DFB Pokal,2026-10-27T19:45:00,local,D,True,9,0.0,0.0,0.0,0.0,0,0
+1638563,48198,Í. Bergmann Jóhannesson,1. FC Köln,Union Berlin,DFB Pokal,2026-10-27T19:45:00,local,M,True,18,1.0,0.0,1.0,1.0,0,0
+1638563,448969,Reigan Heskey,1. FC Köln,Union Berlin,DFB Pokal,2026-10-27T19:45:00,local,F,True,9,0.0,1.0,0.0,1.0,0,0
+1638563,26303,B. Sosa,1. FC Köln,Union Berlin,DFB Pokal,2026-10-27T19:45:00,local,M,True,81,0.0,0.0,0.0,0.0,0,0
+1638563,15871,M. Schwäbe,1. FC Köln,Union Berlin,DFB Pokal,2026-10-27T19:45:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1638563,24910,T. Skarke,Union Berlin,1. FC Köln,DFB Pokal,2026-10-27T19:45:00,visitante,F,True,57,0.0,0.0,1.0,3.0,0,0
+1638563,292218,M. LjubiÄiÄ,Union Berlin,1. FC Köln,DFB Pokal,2026-10-27T19:45:00,visitante,F,True,15,0.0,0.0,0.0,0.0,1,0
+1638563,32137,E. Latte Lath,Union Berlin,1. FC Köln,DFB Pokal,2026-10-27T19:45:00,visitante,F,True,32,0.0,0.0,0.0,2.0,0,0
+1638563,128853,D. Köhn,Union Berlin,1. FC Köln,DFB Pokal,2026-10-27T19:45:00,visitante,D,True,45,0.0,0.0,1.0,2.0,0,0
+1638563,327831,A. Kemlein,Union Berlin,1. FC Köln,DFB Pokal,2026-10-27T19:45:00,visitante,M,True,22,0.0,0.0,0.0,0.0,0,0
+1638563,430354,Livan Burcu,Union Berlin,1. FC Köln,DFB Pokal,2026-10-27T19:45:00,visitante,F,True,33,0.0,0.0,1.0,3.0,1,0
+1638563,303679,Z. Van Den Bosch,Union Berlin,1. FC Köln,DFB Pokal,2026-10-27T19:45:00,visitante,D,True,90,0.0,0.0,1.0,1.0,0,0
+1638563,30785,A. Schäfer,Union Berlin,1. FC Köln,DFB Pokal,2026-10-27T19:45:00,visitante,M,True,68,0.0,0.0,0.0,1.0,0,0
+1638563,324957,T. Rothe,Union Berlin,1. FC Köln,DFB Pokal,2026-10-27T19:45:00,visitante,D,True,45,0.0,0.0,0.0,0.0,0,0
+1638563,288206,L. Querfeld,Union Berlin,1. FC Köln,DFB Pokal,2026-10-27T19:45:00,visitante,D,True,90,0.0,0.0,0.0,2.0,1,0
+1638563,25300,R. Khedira,Union Berlin,1. FC Köln,DFB Pokal,2026-10-27T19:45:00,visitante,M,True,90,0.0,0.0,0.0,1.0,0,0
+1638563,26249,J. Haberer,Union Berlin,1. FC Köln,DFB Pokal,2026-10-27T19:45:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1638563,631244,M. Gray,Union Berlin,1. FC Köln,DFB Pokal,2026-10-27T19:45:00,visitante,F,True,58,0.0,0.0,0.0,1.0,0,0
+1638563,951,M. Aebischer,Union Berlin,1. FC Köln,DFB Pokal,2026-10-27T19:45:00,visitante,M,True,90,0.0,0.0,0.0,1.0,0,0
+1638563,262815,M. Raab,Union Berlin,1. FC Köln,DFB Pokal,2026-10-27T19:45:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1638563,512,Jeong Woo-Yeong,Union Berlin,1. FC Köln,DFB Pokal,2026-10-27T19:45:00,visitante,M,True,75,0.0,0.0,0.0,0.0,0,0
+1638562,26642,L. Schnellbacher,SV Elversberg,SV Darmstadt 98,DFB Pokal,2026-10-27T19:45:00,local,M,True,26,0.0,0.0,0.0,1.0,0,0
+1638562,392254,Francis-Ikechukwu Onyeka,SV Elversberg,SV Darmstadt 98,DFB Pokal,2026-10-27T19:45:00,local,M,True,7,0.0,0.0,0.0,0.0,0,0
+1638562,350047,D. Mokwa,SV Elversberg,SV Darmstadt 98,DFB Pokal,2026-10-27T19:45:00,local,F,True,13,0.0,0.0,1.0,2.0,0,0
+1638562,342170,M. Krattenmacher,SV Elversberg,SV Darmstadt 98,DFB Pokal,2026-10-27T19:45:00,local,M,True,26,0.0,0.0,0.0,1.0,0,0
+1638562,280070,F. Keidel,SV Elversberg,SV Darmstadt 98,DFB Pokal,2026-10-27T19:45:00,local,D,True,26,0.0,0.0,0.0,1.0,0,0
+1638562,178194,N. Kristof,SV Elversberg,SV Darmstadt 98,DFB Pokal,2026-10-27T19:45:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1638562,177509,L. Sirch,SV Elversberg,SV Darmstadt 98,DFB Pokal,2026-10-27T19:45:00,local,D,True,64,0.0,0.0,0.0,0.0,0,0
+1638562,177731,L. Pinckert,SV Elversberg,SV Darmstadt 98,DFB Pokal,2026-10-27T19:45:00,local,D,True,90,0.0,0.0,0.0,2.0,0,0
+1638562,21333,F. Le Joncour,SV Elversberg,SV Darmstadt 98,DFB Pokal,2026-10-27T19:45:00,local,D,True,83,0.0,0.0,1.0,3.0,0,0
+1638562,162079,L. Günther,SV Elversberg,SV Darmstadt 98,DFB Pokal,2026-10-27T19:45:00,local,D,True,90,0.0,0.0,1.0,1.0,1,0
+1638562,90695,A. Condé,SV Elversberg,SV Darmstadt 98,DFB Pokal,2026-10-27T19:45:00,local,M,True,90,0.0,0.0,0.0,1.0,0,0
+1638562,40533,Ł. Poręba,SV Elversberg,SV Darmstadt 98,DFB Pokal,2026-10-27T19:45:00,local,M,True,64,0.0,0.0,0.0,2.0,0,0
+1638562,177452,L. Petkov,SV Elversberg,SV Darmstadt 98,DFB Pokal,2026-10-27T19:45:00,local,M,True,90,0.0,0.0,0.0,6.0,0,0
+1638562,203260,F. Schmahl,SV Elversberg,SV Darmstadt 98,DFB Pokal,2026-10-27T19:45:00,local,M,True,90,0.0,0.0,1.0,1.0,0,0
+1638562,328617,William Cole Campbell,SV Elversberg,SV Darmstadt 98,DFB Pokal,2026-10-27T19:45:00,local,M,True,77,0.0,0.0,2.0,4.0,0,0
+1638562,196500,N. Futkeu,SV Elversberg,SV Darmstadt 98,DFB Pokal,2026-10-27T19:45:00,local,F,True,64,0.0,0.0,0.0,1.0,0,0
+1638562,202844,N. Weißhaupt,SV Darmstadt 98,SV Elversberg,DFB Pokal,2026-10-27T19:45:00,visitante,M,True,18,0.0,0.0,0.0,1.0,0,0
+1638562,202783,L. Kehl,SV Darmstadt 98,SV Elversberg,DFB Pokal,2026-10-27T19:45:00,visitante,M,True,86,1.0,0.0,1.0,1.0,0,0
+1638562,177802,F. Lakenmacher,SV Darmstadt 98,SV Elversberg,DFB Pokal,2026-10-27T19:45:00,visitante,F,True,2,0.0,0.0,0.0,0.0,0,0
+1638562,302632,W. Mikelbrencis,SV Darmstadt 98,SV Elversberg,DFB Pokal,2026-10-27T19:45:00,visitante,D,True,18,0.0,0.0,0.0,0.0,0,0
+1638562,25169,M. Schuhen,SV Darmstadt 98,SV Elversberg,DFB Pokal,2026-10-27T19:45:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1638562,177451,C. Lannert,SV Darmstadt 98,SV Elversberg,DFB Pokal,2026-10-27T19:45:00,visitante,M,True,72,0.0,0.0,0.0,0.0,0,0
+1638562,108475,P. Pfeiffer,SV Darmstadt 98,SV Elversberg,DFB Pokal,2026-10-27T19:45:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1638562,203269,Y. Lührs,SV Darmstadt 98,SV Elversberg,DFB Pokal,2026-10-27T19:45:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1638562,48375,R. Petretta,SV Darmstadt 98,SV Elversberg,DFB Pokal,2026-10-27T19:45:00,visitante,D,True,90,0.0,0.0,0.0,0.0,1,0
+1638562,26073,K. Klefisch,SV Darmstadt 98,SV Elversberg,DFB Pokal,2026-10-27T19:45:00,visitante,M,True,90,0.0,0.0,0.0,1.0,0,0
+1638562,260773,F. Kleinhansl,SV Darmstadt 98,SV Elversberg,DFB Pokal,2026-10-27T19:45:00,visitante,M,True,90,0.0,0.0,0.0,0.0,0,0
+1638562,441047,N. Verkooijen,SV Darmstadt 98,SV Elversberg,DFB Pokal,2026-10-27T19:45:00,visitante,M,True,4,0.0,0.0,0.0,0.0,0,0
+1638562,362568,M. Smit,SV Darmstadt 98,SV Elversberg,DFB Pokal,2026-10-27T19:45:00,visitante,F,True,72,1.0,0.0,1.0,2.0,1,0
+1638562,92977,L. Duijvestijn,SV Darmstadt 98,SV Elversberg,DFB Pokal,2026-10-27T19:45:00,visitante,M,True,90,0.0,1.0,0.0,1.0,0,0
+1638562,304972,Lee Ho-Jae,SV Darmstadt 98,SV Elversberg,DFB Pokal,2026-10-27T19:45:00,visitante,F,True,88,0.0,0.0,0.0,1.0,0,0
+1640384,292350,W. Swan,Bradford,Peterborough,EFL Cup Inglaterra,2026-10-27T19:45:00,local,F,True,29,0.0,0.0,0.0,1.0,0,0
+1640384,37711,A. Phillips,Bradford,Peterborough,EFL Cup Inglaterra,2026-10-27T19:45:00,local,M,True,30,1.0,0.0,2.0,3.0,0,0
+1640384,396628,Kieran Morgan,Bradford,Peterborough,EFL Cup Inglaterra,2026-10-27T19:45:00,local,M,True,21,0.0,0.0,0.0,1.0,1,0
+1640384,19744,K. Jackson,Bradford,Peterborough,EFL Cup Inglaterra,2026-10-27T19:45:00,local,F,True,37,0.0,0.0,0.0,0.0,0,0
+1640384,82047,A. Baldwin,Bradford,Peterborough,EFL Cup Inglaterra,2026-10-27T19:45:00,local,D,True,37,0.0,0.0,0.0,0.0,0,0
+1640384,275576,J. McCracken,Bradford,Peterborough,EFL Cup Inglaterra,2026-10-27T19:45:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1640384,19728,M. Pennington,Bradford,Peterborough,EFL Cup Inglaterra,2026-10-27T19:45:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1640384,284327,R. Welch,Bradford,Peterborough,EFL Cup Inglaterra,2026-10-27T19:45:00,local,D,True,53,0.0,0.0,0.0,0.0,1,0
+1640384,17656,M. Gillesphey,Bradford,Peterborough,EFL Cup Inglaterra,2026-10-27T19:45:00,local,D,True,90,1.0,0.0,1.0,2.0,1,0
+1640384,82031,C. O&apos;Keeffe,Bradford,Peterborough,EFL Cup Inglaterra,2026-10-27T19:45:00,local,M,True,53,0.0,0.0,0.0,0.0,0,0
+1640384,20411,A. Sarcevic,Bradford,Peterborough,EFL Cup Inglaterra,2026-10-27T19:45:00,local,M,True,69,0.0,0.0,0.0,0.0,0,0
+1640384,19689,C. Connolly,Bradford,Peterborough,EFL Cup Inglaterra,2026-10-27T19:45:00,local,M,True,90,0.0,1.0,0.0,0.0,1,0
+1640384,18121,I. Touray,Bradford,Peterborough,EFL Cup Inglaterra,2026-10-27T19:45:00,local,M,True,90,0.0,0.0,2.0,2.0,0,0
+1640384,19832,G. Lapslie,Bradford,Peterborough,EFL Cup Inglaterra,2026-10-27T19:45:00,local,M,True,60,0.0,0.0,0.0,0.0,1,0
+1640384,388536,B. Pointon,Bradford,Peterborough,EFL Cup Inglaterra,2026-10-27T19:45:00,local,M,True,61,0.0,0.0,1.0,2.0,1,0
+1640384,87869,J. Beesley,Bradford,Peterborough,EFL Cup Inglaterra,2026-10-27T19:45:00,local,F,True,90,0.0,1.0,2.0,4.0,0,0
+1640384,383826,James Dornelly,Peterborough,Bradford,EFL Cup Inglaterra,2026-10-27T19:45:00,visitante,D,True,33,0.0,0.0,0.0,0.0,0,0
+1640384,180455,M. Garbett,Peterborough,Bradford,EFL Cup Inglaterra,2026-10-27T19:45:00,visitante,M,True,33,0.0,0.0,0.0,1.0,0,0
+1640384,330640,Harrison Jones,Peterborough,Bradford,EFL Cup Inglaterra,2026-10-27T19:45:00,visitante,M,True,24,0.0,0.0,0.0,0.0,0,0
+1640384,519875,Bolu Shofowoke,Peterborough,Bradford,EFL Cup Inglaterra,2026-10-27T19:45:00,visitante,F,True,33,0.0,0.0,0.0,1.0,0,0
+1640384,19844,A. Bass,Peterborough,Bradford,EFL Cup Inglaterra,2026-10-27T19:45:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1640384,152697,C. Johnston,Peterborough,Bradford,EFL Cup Inglaterra,2026-10-27T19:45:00,visitante,D,True,57,0.0,0.0,0.0,0.0,0,0
+1640384,498379,Lucca Mendonça,Peterborough,Bradford,EFL Cup Inglaterra,2026-10-27T19:45:00,visitante,D,True,90,0.0,0.0,0.0,0.0,1,0
+1640384,312118,Joshua Feeney,Peterborough,Bradford,EFL Cup Inglaterra,2026-10-27T19:45:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1640384,434012,Harley Mills,Peterborough,Bradford,EFL Cup Inglaterra,2026-10-27T19:45:00,visitante,D,True,90,0.0,0.0,0.0,2.0,1,0
+1640384,444292,Harry Ashfield,Peterborough,Bradford,EFL Cup Inglaterra,2026-10-27T19:45:00,visitante,M,True,57,0.0,0.0,0.0,1.0,0,0
+1640384,328078,B. Khela,Peterborough,Bradford,EFL Cup Inglaterra,2026-10-27T19:45:00,visitante,M,True,66,0.0,0.0,0.0,2.0,0,0
+1640384,167314,O. Edwards,Peterborough,Bradford,EFL Cup Inglaterra,2026-10-27T19:45:00,visitante,M,True,68,0.0,0.0,1.0,2.0,0,0
+1640384,365664,Ethan Williams,Peterborough,Bradford,EFL Cup Inglaterra,2026-10-27T19:45:00,visitante,M,True,90,0.0,0.0,2.0,4.0,0,0
+1640384,459224,Vernon Masara,Peterborough,Bradford,EFL Cup Inglaterra,2026-10-27T19:45:00,visitante,M,True,57,0.0,0.0,0.0,2.0,0,0
+1550168,311067,S. Castro,AS Roma,Cagliari,Serie A,2026-10-27T19:45:00,local,F,True,56,0.0,0.0,1.0,2.0,0,0
+1550168,778,B. Cristante,AS Roma,Cagliari,Serie A,2026-10-27T19:45:00,local,M,True,90,0.0,0.0,0.0,2.0,0,0
+1550168,30432,M. de Roon,AS Roma,Cagliari,Serie A,2026-10-27T19:45:00,local,M,True,56,0.0,0.0,0.0,0.0,0,0
+1550168,162409,K. Koulierakis,AS Roma,Cagliari,Serie A,2026-10-27T19:45:00,local,D,True,90,0.0,0.0,0.0,2.0,0,0
+1550168,598615,E. Lulli,AS Roma,Cagliari,Serie A,2026-10-27T19:45:00,local,M,True,76,1.0,1.0,1.0,2.0,0,0
+1550168,30425,G. Mancini,AS Roma,Cagliari,Serie A,2026-10-27T19:45:00,local,D,True,82,0.0,0.0,1.0,1.0,0,0
+1550168,6503,N. Molina,AS Roma,Cagliari,Serie A,2026-10-27T19:45:00,local,M,True,45,0.0,1.0,0.0,1.0,0,0
+1550168,1807,E. Ndicka,AS Roma,Cagliari,Serie A,2026-10-27T19:45:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1550168,356888,N. Pisilli,AS Roma,Cagliari,Serie A,2026-10-27T19:45:00,local,M,True,90,1.0,0.0,1.0,2.0,0,0
+1550168,323936,M. Soulé,AS Roma,Cagliari,Serie A,2026-10-27T19:45:00,local,F,True,90,0.0,0.0,2.0,3.0,0,0
+1550168,30418,P. Gollini,AS Roma,Cagliari,Serie A,2026-10-27T19:45:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1550168,349001,Wesley,AS Roma,Cagliari,Serie A,2026-10-27T19:45:00,local,D,True,45,0.0,0.0,0.0,0.0,0,0
+1550168,162452,D. Rensch,AS Roma,Cagliari,Serie A,2026-10-27T19:45:00,local,D,True,14,0.0,0.0,0.0,0.0,0,0
+1550168,249,D. Malen,AS Roma,Cagliari,Serie A,2026-10-27T19:45:00,local,F,True,34,1.0,0.0,1.0,4.0,0,0
+1550168,342019,D. Ghilardi,AS Roma,Cagliari,Serie A,2026-10-27T19:45:00,local,D,True,8,0.0,1.0,0.0,0.0,0,0
+1550168,404097,Rodrigo Mora,AS Roma,Cagliari,Serie A,2026-10-27T19:45:00,local,M,True,34,1.0,0.0,1.0,1.0,0,0
+1550168,32887,Y. Sugawara,Cagliari,AS Roma,Serie A,2026-10-27T19:45:00,visitante,M,True,89,0.0,0.0,0.0,1.0,0,0
+1550168,394183,A. Romano,Cagliari,AS Roma,Serie A,2026-10-27T19:45:00,visitante,M,True,90,0.0,0.0,0.0,1.0,0,0
+1550168,415155,J. Rodríguez,Cagliari,AS Roma,Serie A,2026-10-27T19:45:00,visitante,D,True,90,0.0,0.0,1.0,1.0,1,0
+1550168,41964,Zé Pedro,Cagliari,AS Roma,Serie A,2026-10-27T19:45:00,visitante,D,True,90,0.0,0.0,0.0,1.0,0,0
+1550168,321744,A. Obert,Cagliari,AS Roma,Serie A,2026-10-27T19:45:00,visitante,M,True,90,0.0,1.0,0.0,0.0,0,0
+1550168,31318,M&apos;Bala Nzola,Cagliari,AS Roma,Serie A,2026-10-27T19:45:00,visitante,F,True,63,1.0,0.0,1.0,5.0,0,0
+1550168,2484,Y. Mina,Cagliari,AS Roma,Serie A,2026-10-27T19:45:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1550168,263699,A. Fadera,Cagliari,AS Roma,Serie A,2026-10-27T19:45:00,visitante,M,True,76,0.0,0.0,1.0,2.0,0,0
+1550168,30561,A. Deiola,Cagliari,AS Roma,Serie A,2026-10-27T19:45:00,visitante,M,True,76,0.0,0.0,0.0,1.0,0,0
+1550168,30505,M. Adopo,Cagliari,AS Roma,Serie A,2026-10-27T19:45:00,visitante,M,True,89,0.0,0.0,2.0,4.0,0,0
+1550168,30731,E. Caprile,Cagliari,AS Roma,Serie A,2026-10-27T19:45:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1550168,584116,Y. Trepy,Cagliari,AS Roma,Serie A,2026-10-27T19:45:00,visitante,F,True,1,0.0,0.0,1.0,1.0,0,0
+1550168,417892,J. Liteta,Cagliari,AS Roma,Serie A,2026-10-27T19:45:00,visitante,M,True,14,0.0,0.0,0.0,0.0,0,0
+1550168,134926,D. Maldini,Cagliari,AS Roma,Serie A,2026-10-27T19:45:00,visitante,F,True,14,1.0,0.0,1.0,1.0,0,0
+1550168,326177,Y. Massolin,Cagliari,AS Roma,Serie A,2026-10-27T19:45:00,visitante,M,True,1,0.0,0.0,0.0,0.0,0,0
+1550168,626704,P. Mendy,Cagliari,AS Roma,Serie A,2026-10-27T19:45:00,visitante,F,True,27,0.0,0.0,1.0,1.0,0,0
+1550175,161859,G. Oristanio,Torino,Como,Serie A,2026-10-27T19:45:00,local,M,True,1,0.0,0.0,0.0,0.0,0,0
+1550175,138417,N. Patterson,Torino,Como,Serie A,2026-10-27T19:45:00,local,D,True,35,0.0,0.0,0.0,0.0,0,0
+1550175,336573,E. İlkhan,Torino,Como,Serie A,2026-10-27T19:45:00,local,M,True,1,0.0,0.0,0.0,0.0,0,0
+1550175,40405,S. Kulenović,Torino,Como,Serie A,2026-10-27T19:45:00,local,F,True,16,0.0,0.0,0.0,0.0,0,0
+1550175,343189,G. Gineitis,Torino,Como,Serie A,2026-10-27T19:45:00,local,M,True,35,0.0,0.0,1.0,1.0,0,0
+1550175,80296,Lucas Perri,Torino,Como,Serie A,2026-10-27T19:45:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1550175,122468,Saúl Coco,Torino,Como,Serie A,2026-10-27T19:45:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1550175,14329,A. Ismajli,Torino,Como,Serie A,2026-10-27T19:45:00,local,D,True,90,0.0,0.0,0.0,1.0,0,0
+1550175,396637,P. Comuzzo,Torino,Como,Serie A,2026-10-27T19:45:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1550175,303362,R. Belghali,Torino,Como,Serie A,2026-10-27T19:45:00,local,M,True,89,0.0,0.0,1.0,2.0,1,0
+1550175,36895,K. Fitz-Jim,Torino,Como,Serie A,2026-10-27T19:45:00,local,M,True,55,0.0,1.0,0.0,0.0,0,0
+1550175,41892,Daniel Bragança,Torino,Como,Serie A,2026-10-27T19:45:00,local,M,True,89,0.0,0.0,0.0,0.0,0,0
+1550175,842,N. Vlašić,Torino,Como,Serie A,2026-10-27T19:45:00,local,M,True,90,0.0,0.0,1.0,3.0,0,0
+1550175,471040,A. Cacciamani,Torino,Como,Serie A,2026-10-27T19:45:00,local,M,True,55,0.0,0.0,0.0,0.0,0,0
+1550175,30414,G. Simeone,Torino,Como,Serie A,2026-10-27T19:45:00,local,F,True,74,0.0,0.0,1.0,3.0,0,0
+1550175,19524,C. Adams,Torino,Como,Serie A,2026-10-27T19:45:00,local,F,True,90,1.0,0.0,1.0,1.0,0,0
+1550175,295026,M. Baturina,Como,Torino,Serie A,2026-10-27T19:45:00,visitante,M,True,32,1.0,0.0,1.0,1.0,0,0
+1550175,354533,J. Addai,Como,Torino,Serie A,2026-10-27T19:45:00,visitante,F,True,20,0.0,0.0,0.0,0.0,0,0
+1550175,31056,S. Ricci,Como,Torino,Serie A,2026-10-27T19:45:00,visitante,M,True,12,0.0,0.0,0.0,0.0,0,0
+1550175,309792,Kaiki,Como,Torino,Serie A,2026-10-27T19:45:00,visitante,D,True,20,0.0,0.0,0.0,0.0,0,0
+1550175,18959,Robert Sánchez,Como,Torino,Serie A,2026-10-27T19:45:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1550175,197448,Yan Couto,Como,Torino,Serie A,2026-10-27T19:45:00,visitante,D,True,90,0.0,1.0,0.0,1.0,0,0
+1550175,386305,Jacobo Ramón Naveros,Como,Torino,Serie A,2026-10-27T19:45:00,visitante,D,True,90,1.0,0.0,2.0,3.0,0,0
+1550175,26301,M. Kempf,Como,Torino,Serie A,2026-10-27T19:45:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1550175,336560,Álex Valle,Como,Torino,Serie A,2026-10-27T19:45:00,visitante,D,True,70,0.0,0.0,0.0,0.0,0,0
+1550175,288699,M. Perrone,Como,Torino,Serie A,2026-10-27T19:45:00,visitante,M,True,58,0.0,0.0,0.0,0.0,0,0
+1550175,47085,Luis Milla,Como,Torino,Serie A,2026-10-27T19:45:00,visitante,M,True,78,0.0,0.0,0.0,1.0,0,0
+1550175,162266,L. da Cunha,Como,Torino,Serie A,2026-10-27T19:45:00,visitante,M,True,90,0.0,0.0,0.0,2.0,0,0
+1550175,350037,N. Paz,Como,Torino,Serie A,2026-10-27T19:45:00,visitante,M,True,90,1.0,1.0,1.0,6.0,0,0
+1550175,659,M. Caqueret,Como,Torino,Serie A,2026-10-27T19:45:00,visitante,M,True,58,0.0,0.0,1.0,2.0,0,0
+1550175,26845,T. Douvikas,Como,Torino,Serie A,2026-10-27T19:45:00,visitante,F,True,90,0.0,0.0,0.0,2.0,0,0
+1550175,14266,I. Smolčić,Como,Torino,Serie A,2026-10-27T19:45:00,visitante,,True,12,0.0,0.0,0.0,0.0,0,0
+1644372,295989,Néstor Senra,Recreativo Huelva,Rayo Vallecano,Copa del Rey,2026-10-27T20:00:00,local,D,True,120,0.0,0.0,0.0,,0,0
+1644372,139011,Manuel Bonaque,Recreativo Huelva,Rayo Vallecano,Copa del Rey,2026-10-27T20:00:00,local,D,True,120,0.0,0.0,0.0,,0,0
+1644372,208103,Roan Riera,Recreativo Huelva,Rayo Vallecano,Copa del Rey,2026-10-27T20:00:00,local,D,True,41,0.0,0.0,0.0,1.0,0,1
+1644372,127348,Nacho Ruiz,Recreativo Huelva,Rayo Vallecano,Copa del Rey,2026-10-27T20:00:00,local,D,True,120,0.0,0.0,0.0,,0,0
+1644372,486298,Samu Cortes,Recreativo Huelva,Rayo Vallecano,Copa del Rey,2026-10-27T20:00:00,local,M,True,60,0.0,0.0,0.0,,0,0
+1644372,329729,Lulo Dasilva,Recreativo Huelva,Rayo Vallecano,Copa del Rey,2026-10-27T20:00:00,local,M,True,34,0.0,1.0,0.0,,0,0
+1644372,181248,Alex Bernal,Recreativo Huelva,Rayo Vallecano,Copa del Rey,2026-10-27T20:00:00,local,M,True,102,0.0,0.0,0.0,,0,0
+1644372,64192,Pol Prats,Recreativo Huelva,Rayo Vallecano,Copa del Rey,2026-10-27T20:00:00,local,M,True,78,0.0,0.0,0.0,1.0,0,0
+1644372,285263,Ale Marín,Recreativo Huelva,Rayo Vallecano,Copa del Rey,2026-10-27T20:00:00,local,F,True,60,1.0,0.0,1.0,1.0,1,0
+1644372,46889,Aitor García,Recreativo Huelva,Rayo Vallecano,Copa del Rey,2026-10-27T20:00:00,local,F,True,46,0.0,0.0,0.0,,0,0
+1644372,361146,Mateo Izaguirre,Recreativo Huelva,Rayo Vallecano,Copa del Rey,2026-10-27T20:00:00,local,M,False,86,0.0,0.0,1.0,1.0,1,0
+1644372,585498,Paolo Romero,Recreativo Huelva,Rayo Vallecano,Copa del Rey,2026-10-27T20:00:00,local,M,False,60,1.0,0.0,1.0,1.0,0,0
+1644372,623794,David Pecellín,Recreativo Huelva,Rayo Vallecano,Copa del Rey,2026-10-27T20:00:00,local,F,False,60,0.0,0.0,1.0,1.0,0,0
+1644372,371738,Charbel Wehbe,Recreativo Huelva,Rayo Vallecano,Copa del Rey,2026-10-27T20:00:00,local,D,False,42,0.0,0.0,0.0,,1,0
+1644372,47161,José Carlos Ramírez,Recreativo Huelva,Rayo Vallecano,Copa del Rey,2026-10-27T20:00:00,local,D,False,18,0.0,0.0,1.0,1.0,0,0
+1644372,156488,Dani Cárdenas,Rayo Vallecano,Recreativo Huelva,Copa del Rey,2026-10-27T20:00:00,visitante,G,True,120,0.0,0.0,0.0,,0,0
+1644372,619508,Ivan Alonso Martin,Rayo Vallecano,Recreativo Huelva,Copa del Rey,2026-10-27T20:00:00,visitante,D,True,46,0.0,0.0,0.0,,1,0
+1644372,333292,Pelayo Fernández,Rayo Vallecano,Recreativo Huelva,Copa del Rey,2026-10-27T20:00:00,visitante,D,True,120,0.0,0.0,0.0,1.0,0,0
+1644372,30924,Marash Kumbulla,Rayo Vallecano,Recreativo Huelva,Copa del Rey,2026-10-27T20:00:00,visitante,D,True,80,0.0,0.0,1.0,2.0,0,0
+1644372,314006,Jozhua Vertrouwd,Rayo Vallecano,Recreativo Huelva,Copa del Rey,2026-10-27T20:00:00,visitante,D,True,57,0.0,0.0,1.0,3.0,0,0
+1644372,47109,Óscar Valentín,Rayo Vallecano,Recreativo Huelva,Copa del Rey,2026-10-27T20:00:00,visitante,M,True,120,0.0,0.0,0.0,,0,0
+1644372,548809,Gnangoro Bouaré,Rayo Vallecano,Recreativo Huelva,Copa del Rey,2026-10-27T20:00:00,visitante,M,True,120,0.0,0.0,0.0,1.0,0,0
+1644372,2181,Giorgi Tsitaishvili,Rayo Vallecano,Recreativo Huelva,Copa del Rey,2026-10-27T20:00:00,visitante,M,True,120,0.0,0.0,1.0,6.0,1,0
+1644372,443668,Rayane Belaid,Rayo Vallecano,Recreativo Huelva,Copa del Rey,2026-10-27T20:00:00,visitante,M,True,57,0.0,0.0,0.0,,0,0
+1644372,162931,Fran Pérez,Rayo Vallecano,Recreativo Huelva,Copa del Rey,2026-10-27T20:00:00,visitante,M,True,57,0.0,0.0,0.0,1.0,0,0
+1644372,91745,Alemão,Rayo Vallecano,Recreativo Huelva,Copa del Rey,2026-10-27T20:00:00,visitante,F,True,120,2.0,0.0,3.0,4.0,1,0
+1644372,20520,Iván Balliu,Rayo Vallecano,Recreativo Huelva,Copa del Rey,2026-10-27T20:00:00,visitante,D,False,74,0.0,0.0,0.0,,0,0
+1644372,47543,Álvaro García,Rayo Vallecano,Recreativo Huelva,Copa del Rey,2026-10-27T20:00:00,visitante,M,False,63,0.0,2.0,0.0,1.0,1,0
+1644372,52,Sergio Camello,Rayo Vallecano,Recreativo Huelva,Copa del Rey,2026-10-27T20:00:00,visitante,F,False,45,0.0,0.0,0.0,4.0,0,0
+1644372,128582,Jorge de Frutos,Rayo Vallecano,Recreativo Huelva,Copa del Rey,2026-10-27T20:00:00,visitante,F,False,63,1.0,0.0,2.0,3.0,0,0
+1644372,122657,Randy Nteka,Rayo Vallecano,Recreativo Huelva,Copa del Rey,2026-10-27T20:00:00,visitante,M,False,40,0.0,0.0,0.0,1.0,0,0
+1644372,18895,Florian Lejeune,Rayo Vallecano,Recreativo Huelva,Copa del Rey,2026-10-27T20:00:00,visitante,D,False,6,0.0,0.0,0.0,,0,1
+1640386,319385,A. Murphy,Fleetwood Town,Arsenal,EFL Cup Inglaterra,2026-10-27T20:00:00,local,M,True,24,0.0,0.0,0.0,0.0,0,0
+1640386,428629,W. Davies,Fleetwood Town,Arsenal,EFL Cup Inglaterra,2026-10-27T20:00:00,local,F,True,8,0.0,0.0,1.0,1.0,0,0
+1640386,69381,R. Coughlan,Fleetwood Town,Arsenal,EFL Cup Inglaterra,2026-10-27T20:00:00,local,F,True,24,0.0,0.0,0.0,0.0,0,0
+1640386,19859,A. Cannon,Fleetwood Town,Arsenal,EFL Cup Inglaterra,2026-10-27T20:00:00,local,M,True,16,0.0,0.0,0.0,1.0,1,0
+1640386,18173,J. Lynch,Fleetwood Town,Arsenal,EFL Cup Inglaterra,2026-10-27T20:00:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1640386,45132,S. Rooney,Fleetwood Town,Arsenal,EFL Cup Inglaterra,2026-10-27T20:00:00,local,M,True,90,0.0,0.0,0.0,0.0,0,0
+1640386,593011,Conor Haughey,Fleetwood Town,Arsenal,EFL Cup Inglaterra,2026-10-27T20:00:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1640386,400349,F. Potter,Fleetwood Town,Arsenal,EFL Cup Inglaterra,2026-10-27T20:00:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1640386,328421,H. Neal,Fleetwood Town,Arsenal,EFL Cup Inglaterra,2026-10-27T20:00:00,local,M,True,90,0.0,1.0,0.0,0.0,0,0
+1640386,284363,R. Bennett,Fleetwood Town,Arsenal,EFL Cup Inglaterra,2026-10-27T20:00:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1640386,440043,C. McLean,Fleetwood Town,Arsenal,EFL Cup Inglaterra,2026-10-27T20:00:00,local,M,True,66,0.0,0.0,0.0,0.0,1,0
+1640386,153431,M. Helm,Fleetwood Town,Arsenal,EFL Cup Inglaterra,2026-10-27T20:00:00,local,M,True,74,0.0,0.0,0.0,0.0,0,0
+1640386,304301,Jake Thomas Batty,Fleetwood Town,Arsenal,EFL Cup Inglaterra,2026-10-27T20:00:00,local,M,True,90,0.0,0.0,0.0,0.0,1,0
+1640386,20091,C. Evans,Fleetwood Town,Arsenal,EFL Cup Inglaterra,2026-10-27T20:00:00,local,F,True,66,0.0,0.0,0.0,0.0,0,0
+1640386,329327,A. Loupalo-Bi,Fleetwood Town,Arsenal,EFL Cup Inglaterra,2026-10-27T20:00:00,local,F,True,82,1.0,0.0,1.0,1.0,0,0
+1640386,37127,M. Ødegaard,Arsenal,Fleetwood Town,EFL Cup Inglaterra,2026-10-27T20:00:00,visitante,M,True,45,0.0,0.0,1.0,1.0,0,0
+1640386,19586,E. Eze,Arsenal,Fleetwood Town,EFL Cup Inglaterra,2026-10-27T20:00:00,visitante,M,True,24,0.0,0.0,0.0,2.0,0,0
+1640386,10135,Bruno Guimarães,Arsenal,Fleetwood Town,EFL Cup Inglaterra,2026-10-27T20:00:00,visitante,M,True,8,0.0,0.0,0.0,0.0,0,0
+1640386,19354,E. Konsa,Arsenal,Fleetwood Town,EFL Cup Inglaterra,2026-10-27T20:00:00,visitante,D,True,8,0.0,0.0,0.0,0.0,0,0
+1640386,19959,B. White,Arsenal,Fleetwood Town,EFL Cup Inglaterra,2026-10-27T20:00:00,visitante,D,True,45,0.0,0.0,1.0,1.0,0,0
+1640386,20619,I. Meslier,Arsenal,Fleetwood Town,EFL Cup Inglaterra,2026-10-27T20:00:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1640386,38746,J. Timber,Arsenal,Fleetwood Town,EFL Cup Inglaterra,2026-10-27T20:00:00,visitante,D,True,45,0.0,0.0,0.0,2.0,0,0
+1640386,333682,Cristhian Mosquera,Arsenal,Fleetwood Town,EFL Cup Inglaterra,2026-10-27T20:00:00,visitante,D,True,90,0.0,0.0,0.0,1.0,0,0
+1640386,482903,M. Salmon,Arsenal,Fleetwood Town,EFL Cup Inglaterra,2026-10-27T20:00:00,visitante,D,True,45,0.0,0.0,0.0,0.0,0,0
+1640386,127817,P. Hincapié,Arsenal,Fleetwood Town,EFL Cup Inglaterra,2026-10-27T20:00:00,visitante,D,True,90,0.0,0.0,0.0,1.0,0,0
+1640386,47315,Martín Zubimendi,Arsenal,Fleetwood Town,EFL Cup Inglaterra,2026-10-27T20:00:00,visitante,M,True,82,0.0,0.0,0.0,0.0,0,0
+1640386,313245,M. Lewis-Skelly,Arsenal,Fleetwood Town,EFL Cup Inglaterra,2026-10-27T20:00:00,visitante,M,True,82,0.0,0.0,0.0,4.0,0,0
+1640386,446017,C. O’Neill,Arsenal,Fleetwood Town,EFL Cup Inglaterra,2026-10-27T20:00:00,visitante,M,True,66,0.0,0.0,0.0,1.0,0,0
+1640386,442044,M. Dowman,Arsenal,Fleetwood Town,EFL Cup Inglaterra,2026-10-27T20:00:00,visitante,M,True,85,0.0,0.0,2.0,3.0,0,1
+1640386,978,K. Havertz,Arsenal,Fleetwood Town,EFL Cup Inglaterra,2026-10-27T20:00:00,visitante,M,True,90,0.0,0.0,1.0,7.0,0,0
+1640386,18979,V. Gyökeres,Arsenal,Fleetwood Town,EFL Cup Inglaterra,2026-10-27T20:00:00,visitante,F,True,90,1.0,0.0,2.0,3.0,0,0
+1549532,414376,M. RodrÃ­guez,Juan Pablo II College,Sport Huancayo,Primera Division Peru,2026-10-27T20:00:00,local,F,True,31,0.0,1.0,0.0,0.0,1,0
+1549532,39554,E. Ramírez,Juan Pablo II College,Sport Huancayo,Primera Division Peru,2026-10-27T20:00:00,local,F,True,31,1.0,0.0,1.0,1.0,1,0
+1549532,307512,C. Flores,Juan Pablo II College,Sport Huancayo,Primera Division Peru,2026-10-27T20:00:00,local,M,True,24,0.0,0.0,0.0,0.0,0,0
+1549532,39839,H. Bazán,Juan Pablo II College,Sport Huancayo,Primera Division Peru,2026-10-27T20:00:00,local,M,True,23,0.0,0.0,0.0,0.0,0,0
+1549532,39455,J. Durán,Juan Pablo II College,Sport Huancayo,Primera Division Peru,2026-10-27T20:00:00,local,M,True,31,1.0,0.0,1.0,1.0,0,0
+1549532,71571,M. Vega,Juan Pablo II College,Sport Huancayo,Primera Division Peru,2026-10-27T20:00:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1549532,39985,H. Ancajima,Juan Pablo II College,Sport Huancayo,Primera Division Peru,2026-10-27T20:00:00,local,D,True,90,0.0,0.0,1.0,1.0,0,0
+1549532,67843,A. Sánchez,Juan Pablo II College,Sport Huancayo,Primera Division Peru,2026-10-27T20:00:00,local,M,True,59,0.0,0.0,0.0,0.0,0,0
+1549532,39699,P. Míguez,Juan Pablo II College,Sport Huancayo,Primera Division Peru,2026-10-27T20:00:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1549532,39510,J. Toledo,Juan Pablo II College,Sport Huancayo,Primera Division Peru,2026-10-27T20:00:00,local,D,True,90,0.0,0.0,1.0,2.0,0,0
+1549532,39639,P. Reyna,Juan Pablo II College,Sport Huancayo,Primera Division Peru,2026-10-27T20:00:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1549532,404581,J. Carhuallanqui,Juan Pablo II College,Sport Huancayo,Primera Division Peru,2026-10-27T20:00:00,local,M,True,66,0.0,0.0,0.0,0.0,1,0
+1549532,373774,Á. Rojas,Juan Pablo II College,Sport Huancayo,Primera Division Peru,2026-10-27T20:00:00,local,M,True,90,0.0,0.0,0.0,0.0,0,0
+1549532,363130,J. Goicochea,Juan Pablo II College,Sport Huancayo,Primera Division Peru,2026-10-27T20:00:00,local,M,True,67,0.0,0.0,0.0,0.0,0,0
+1549532,39647,J. Pósito,Juan Pablo II College,Sport Huancayo,Primera Division Peru,2026-10-27T20:00:00,local,F,True,59,0.0,0.0,1.0,1.0,0,0
+1549532,412414,N. Ramírez,Juan Pablo II College,Sport Huancayo,Primera Division Peru,2026-10-27T20:00:00,local,F,True,59,0.0,0.0,0.0,0.0,0,0
+1549532,363140,J. Giménez,Sport Huancayo,Juan Pablo II College,Primera Division Peru,2026-10-27T20:00:00,visitante,F,True,15,0.0,0.0,0.0,0.0,0,0
+1549532,95652,R. Huaccha,Sport Huancayo,Juan Pablo II College,Primera Division Peru,2026-10-27T20:00:00,visitante,F,True,8,0.0,0.0,0.0,1.0,0,0
+1549532,431653,J. MartÃ­nez,Sport Huancayo,Juan Pablo II College,Primera Division Peru,2026-10-27T20:00:00,visitante,F,True,23,0.0,0.0,0.0,0.0,0,0
+1549532,70835,A. Quiñónez,Sport Huancayo,Juan Pablo II College,Primera Division Peru,2026-10-27T20:00:00,visitante,M,True,15,0.0,0.0,0.0,1.0,0,0
+1549532,39540,J. Rostaing,Sport Huancayo,Juan Pablo II College,Primera Division Peru,2026-10-27T20:00:00,visitante,D,True,23,0.0,0.0,0.0,1.0,0,0
+1549532,39893,Á. Zamudio,Sport Huancayo,Juan Pablo II College,Primera Division Peru,2026-10-27T20:00:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1549532,95809,J. Falconí,Sport Huancayo,Juan Pablo II College,Primera Division Peru,2026-10-27T20:00:00,visitante,D,True,90,0.0,0.0,0.0,1.0,0,0
+1549532,278615,M. Gaona,Sport Huancayo,Juan Pablo II College,Primera Division Peru,2026-10-27T20:00:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1549532,39661,J. Valoyes,Sport Huancayo,Juan Pablo II College,Primera Division Peru,2026-10-27T20:00:00,visitante,D,True,90,0.0,0.0,0.0,2.0,0,0
+1549532,39765,R. Salcedo,Sport Huancayo,Juan Pablo II College,Primera Division Peru,2026-10-27T20:00:00,visitante,M,True,75,0.0,0.0,0.0,1.0,1,0
+1549532,39568,D. Carabaño,Sport Huancayo,Juan Pablo II College,Primera Division Peru,2026-10-27T20:00:00,visitante,M,True,75,0.0,0.0,0.0,2.0,0,0
+1549532,65940,Javier Andrés Sanguinetti,Sport Huancayo,Juan Pablo II College,Primera Division Peru,2026-10-27T20:00:00,visitante,M,True,82,0.0,0.0,0.0,1.0,0,0
+1549532,314660,P. Magallanes,Sport Huancayo,Juan Pablo II College,Primera Division Peru,2026-10-27T20:00:00,visitante,M,True,67,0.0,0.0,1.0,1.0,0,0
+1549532,5337,N. Luján,Sport Huancayo,Juan Pablo II College,Primera Division Peru,2026-10-27T20:00:00,visitante,M,True,90,0.0,0.0,0.0,6.0,0,0
+1549532,79405,D. Porozo,Sport Huancayo,Juan Pablo II College,Primera Division Peru,2026-10-27T20:00:00,visitante,F,True,67,0.0,0.0,0.0,1.0,0,0
+1493198,414515,K. Coronel,Argentinos JRS,Independ. Rivadavia,Liga Profesional Argentina,2026-10-27T22:00:00,local,D,True,8,0.0,0.0,0.0,0.0,1,0
+1493198,2548,B. Cortés,Argentinos JRS,Independ. Rivadavia,Liga Profesional Argentina,2026-10-27T22:00:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1493198,129879,F. Paredes,Argentinos JRS,Independ. Rivadavia,Liga Profesional Argentina,2026-10-27T22:00:00,local,D,True,90,0.0,0.0,0.0,2.0,0,0
+1493198,6533,F. Álvarez,Argentinos JRS,Independ. Rivadavia,Liga Profesional Argentina,2026-10-27T22:00:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1493198,414516,F. Vázquez,Argentinos JRS,Independ. Rivadavia,Liga Profesional Argentina,2026-10-27T22:00:00,local,D,True,29,0.0,0.0,0.0,0.0,0,0
+1493198,5546,S. Prieto,Argentinos JRS,Independ. Rivadavia,Liga Profesional Argentina,2026-10-27T22:00:00,local,D,True,90,1.0,0.0,1.0,1.0,0,0
+1493198,613327,Facundo Carrizo,Argentinos JRS,Independ. Rivadavia,Liga Profesional Argentina,2026-10-27T22:00:00,local,M,True,82,0.0,0.0,0.0,1.0,1,0
+1493198,6314,K. Gutiérrez,Argentinos JRS,Independ. Rivadavia,Liga Profesional Argentina,2026-10-27T22:00:00,local,M,True,90,0.0,0.0,0.0,1.0,0,0
+1493198,11832,N. Oroz,Argentinos JRS,Independ. Rivadavia,Liga Profesional Argentina,2026-10-27T22:00:00,local,M,True,90,0.0,0.0,2.0,5.0,1,0
+1493198,463830,D. Porcel,Argentinos JRS,Independ. Rivadavia,Liga Profesional Argentina,2026-10-27T22:00:00,local,F,True,90,0.0,0.0,0.0,1.0,1,0
+1493198,6737,G. Verón,Argentinos JRS,Independ. Rivadavia,Liga Profesional Argentina,2026-10-27T22:00:00,local,F,True,82,0.0,1.0,2.0,3.0,1,0
+1493198,6558,M. Giménez,Argentinos JRS,Independ. Rivadavia,Liga Profesional Argentina,2026-10-27T22:00:00,local,F,True,74,0.0,0.0,0.0,2.0,0,0
+1493198,75989,T. Molina,Argentinos JRS,Independ. Rivadavia,Liga Profesional Argentina,2026-10-27T22:00:00,local,F,True,16,0.0,0.0,1.0,2.0,0,0
+1493198,405315,M. Mendoza,Argentinos JRS,Independ. Rivadavia,Liga Profesional Argentina,2026-10-27T22:00:00,local,D,True,8,0.0,0.0,0.0,0.0,1,0
+1493198,51278,É. Godoy,Argentinos JRS,Independ. Rivadavia,Liga Profesional Argentina,2026-10-27T22:00:00,local,D,True,61,0.0,0.0,0.0,0.0,0,0
+1493198,613326,Nicolás Bolcato,Independ. Rivadavia,Argentinos JRS,Liga Profesional Argentina,2026-10-27T22:00:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1493198,6645,A. Vigo,Independ. Rivadavia,Argentinos JRS,Liga Profesional Argentina,2026-10-27T22:00:00,visitante,D,True,90,0.0,0.0,1.0,1.0,0,0
+1493198,51419,L. Costa,Independ. Rivadavia,Argentinos JRS,Liga Profesional Argentina,2026-10-27T22:00:00,visitante,D,True,90,0.0,0.0,0.0,1.0,0,0
+1493198,355301,A. Osella,Independ. Rivadavia,Argentinos JRS,Liga Profesional Argentina,2026-10-27T22:00:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1493198,58362,J. Elordi,Independ. Rivadavia,Argentinos JRS,Liga Profesional Argentina,2026-10-27T22:00:00,visitante,D,True,78,0.0,0.0,0.0,1.0,0,0
+1493198,119809,J. Florentín,Independ. Rivadavia,Argentinos JRS,Liga Profesional Argentina,2026-10-27T22:00:00,visitante,M,True,90,0.0,0.0,0.0,1.0,1,0
+1493198,362740,R. Atencio,Independ. Rivadavia,Argentinos JRS,Liga Profesional Argentina,2026-10-27T22:00:00,visitante,F,True,12,0.0,0.0,0.0,0.0,0,0
+1493198,288705,L. Bucca,Independ. Rivadavia,Argentinos JRS,Liga Profesional Argentina,2026-10-27T22:00:00,visitante,M,True,23,0.0,0.0,0.0,0.0,1,0
+1493198,354677,F. Sartori,Independ. Rivadavia,Argentinos JRS,Liga Profesional Argentina,2026-10-27T22:00:00,visitante,F,True,12,0.0,0.0,0.0,0.0,0,0
+1493198,167651,L. Sequeira,Independ. Rivadavia,Argentinos JRS,Liga Profesional Argentina,2026-10-27T22:00:00,visitante,M,True,20,0.0,0.0,0.0,1.0,0,0
+1493198,292885,T. Bottari,Independ. Rivadavia,Argentinos JRS,Liga Profesional Argentina,2026-10-27T22:00:00,visitante,M,True,78,0.0,0.0,0.0,0.0,0,0
+1493198,194899,G. Ríos,Independ. Rivadavia,Argentinos JRS,Liga Profesional Argentina,2026-10-27T22:00:00,visitante,M,True,67,0.0,0.0,1.0,1.0,0,0
+1493198,133614,M. Fernández,Independ. Rivadavia,Argentinos JRS,Liga Profesional Argentina,2026-10-27T22:00:00,visitante,M,True,90,0.0,0.0,0.0,3.0,1,0
+1493198,170829,M. Reali,Independ. Rivadavia,Argentinos JRS,Liga Profesional Argentina,2026-10-27T22:00:00,visitante,M,True,70,0.0,0.0,1.0,2.0,0,0
+1493198,95460,A. Arce,Independ. Rivadavia,Argentinos JRS,Liga Profesional Argentina,2026-10-27T22:00:00,visitante,F,True,90,0.0,0.0,0.0,2.0,0,0
+1549727,566614,Federico Abadía,Cucuta,Águilas Doradas,Liga Colombia,2026-10-27T23:00:00,local,G,True,90,0.0,0.0,0.0,,0,0
+1549727,16349,Sebastián Tamara,Cucuta,Águilas Doradas,Liga Colombia,2026-10-27T23:00:00,local,D,True,79,0.0,0.0,0.0,,0,0
+1549727,70581,Hernán Lópes,Cucuta,Águilas Doradas,Liga Colombia,2026-10-27T23:00:00,local,D,True,90,0.0,0.0,0.0,,0,0
+1549727,419766,Jhon Quiñónes,Cucuta,Águilas Doradas,Liga Colombia,2026-10-27T23:00:00,local,D,True,79,0.0,0.0,0.0,,0,0
+1549727,159163,Brayan Montaño,Cucuta,Águilas Doradas,Liga Colombia,2026-10-27T23:00:00,local,D,True,90,0.0,0.0,0.0,,0,0
+1549727,52787,Victor Mejia,Cucuta,Águilas Doradas,Liga Colombia,2026-10-27T23:00:00,local,M,True,90,0.0,0.0,0.0,,1,0
+1549727,6626,Gustavo Torres,Cucuta,Águilas Doradas,Liga Colombia,2026-10-27T23:00:00,local,M,True,65,0.0,0.0,1.0,1.0,0,0
+1549727,6124,Lucas Ríos,Cucuta,Águilas Doradas,Liga Colombia,2026-10-27T23:00:00,local,M,True,56,0.0,0.0,1.0,1.0,0,0
+1549727,13369,Carlos Rentería,Cucuta,Águilas Doradas,Liga Colombia,2026-10-27T23:00:00,local,M,True,90,0.0,0.0,0.0,,0,0
+1549727,555163,Dayan Pérez,Cucuta,Águilas Doradas,Liga Colombia,2026-10-27T23:00:00,local,M,True,65,0.0,0.0,0.0,,0,0
+1549727,427330,Jaime Peralta,Cucuta,Águilas Doradas,Liga Colombia,2026-10-27T23:00:00,local,F,True,90,0.0,0.0,2.0,9.0,1,0
+1549727,13344,Jhonatan Agudelo,Cucuta,Águilas Doradas,Liga Colombia,2026-10-27T23:00:00,local,F,False,34,0.0,0.0,1.0,2.0,1,0
+1549727,325996,Marlon Carabali,Cucuta,Águilas Doradas,Liga Colombia,2026-10-27T23:00:00,local,F,False,25,0.0,0.0,0.0,,0,0
+1549727,554914,Cristian Córdoba,Cucuta,Águilas Doradas,Liga Colombia,2026-10-27T23:00:00,local,F,False,25,0.0,0.0,0.0,,0,0
+1549727,295512,Diego Calcaterra,Cucuta,Águilas Doradas,Liga Colombia,2026-10-27T23:00:00,local,D,False,11,0.0,0.0,0.0,,0,0
+1549727,425364,Jader Manyoma,Cucuta,Águilas Doradas,Liga Colombia,2026-10-27T23:00:00,local,M,False,11,0.0,0.0,0.0,1.0,0,0
+1549727,79249,Jorge Soto,Águilas Doradas,Cucuta,Liga Colombia,2026-10-27T23:00:00,visitante,G,True,90,0.0,0.0,0.0,,0,0
+1549727,344164,Dylan Lozano,Águilas Doradas,Cucuta,Liga Colombia,2026-10-27T23:00:00,visitante,D,True,90,0.0,0.0,0.0,,1,0
+1549727,35483,Andrés Mosquera,Águilas Doradas,Cucuta,Liga Colombia,2026-10-27T23:00:00,visitante,D,True,90,1.0,0.0,1.0,2.0,0,0
+1549727,13605,John García,Águilas Doradas,Cucuta,Liga Colombia,2026-10-27T23:00:00,visitante,D,True,90,0.0,0.0,1.0,1.0,1,0
+1549727,119811,John Ontaneda,Águilas Doradas,Cucuta,Liga Colombia,2026-10-27T23:00:00,visitante,D,True,90,0.0,0.0,0.0,,0,0
+1549727,59469,Frank Lozano,Águilas Doradas,Cucuta,Liga Colombia,2026-10-27T23:00:00,visitante,M,True,90,0.0,0.0,0.0,,0,0
+1549727,13482,Iván Rojas,Águilas Doradas,Cucuta,Liga Colombia,2026-10-27T23:00:00,visitante,M,True,86,0.0,0.0,0.0,,0,0
+1549727,5451,Matías Ramírez,Águilas Doradas,Cucuta,Liga Colombia,2026-10-27T23:00:00,visitante,M,True,76,0.0,0.0,2.0,3.0,0,0
+1549727,13520,Andrés Ricaurte,Águilas Doradas,Cucuta,Liga Colombia,2026-10-27T23:00:00,visitante,M,True,90,1.0,1.0,1.0,3.0,0,0
+1549727,441050,Javier Mena,Águilas Doradas,Cucuta,Liga Colombia,2026-10-27T23:00:00,visitante,M,True,65,0.0,0.0,0.0,,0,0
+1549727,330400,Anthony Vásquez,Águilas Doradas,Cucuta,Liga Colombia,2026-10-27T23:00:00,visitante,F,True,86,0.0,0.0,2.0,3.0,0,0
+1549727,408371,Eduar Arízalas,Águilas Doradas,Cucuta,Liga Colombia,2026-10-27T23:00:00,visitante,F,False,25,0.0,0.0,0.0,1.0,0,0
+1549727,362520,Andrés Carreño,Águilas Doradas,Cucuta,Liga Colombia,2026-10-27T23:00:00,visitante,F,False,14,0.0,0.0,0.0,,0,0
+1549727,59526,Juan Camilo Roa,Águilas Doradas,Cucuta,Liga Colombia,2026-10-27T23:00:00,visitante,M,False,9,0.0,0.0,0.0,,0,0
+1549727,351926,Juan Ávalo,Águilas Doradas,Cucuta,Liga Colombia,2026-10-27T23:00:00,visitante,M,False,9,0.0,0.0,0.0,,0,0
+1549726,13276,David Agudelo,Chico,Junior,Liga Colombia,2026-10-28T01:05:00,local,G,True,90,0.0,0.0,0.0,,0,0
+1549726,426552,Sander Navarro,Chico,Junior,Liga Colombia,2026-10-28T01:05:00,local,D,True,85,0.0,0.0,0.0,,0,0
+1549726,350809,Daniel Polanco,Chico,Junior,Liga Colombia,2026-10-28T01:05:00,local,D,True,90,0.0,0.0,0.0,1.0,0,0
+1549726,59430,Jhonier Alomía,Chico,Junior,Liga Colombia,2026-10-28T01:05:00,local,D,True,90,1.0,0.0,1.0,2.0,1,0
+1549726,13291,Cristian Blanco,Chico,Junior,Liga Colombia,2026-10-28T01:05:00,local,D,True,90,0.0,1.0,0.0,,0,0
+1549726,200142,Estiven Sarria,Chico,Junior,Liga Colombia,2026-10-28T01:05:00,local,M,True,85,0.0,0.0,1.0,1.0,0,0
+1549726,683159,Jesús Cárdenas,Chico,Junior,Liga Colombia,2026-10-28T01:05:00,local,M,True,90,0.0,0.0,0.0,,0,0
+1549726,475702,Sebastián Viveros,Chico,Junior,Liga Colombia,2026-10-28T01:05:00,local,M,True,65,0.0,0.0,0.0,,0,0
+1549726,363885,Santiago Mera,Chico,Junior,Liga Colombia,2026-10-28T01:05:00,local,M,True,90,0.0,0.0,1.0,2.0,0,0
+1549726,593711,Alejandro Maya,Chico,Junior,Liga Colombia,2026-10-28T01:05:00,local,F,True,85,0.0,0.0,0.0,1.0,0,0
+1549726,195988,Jacobo Pimentel,Chico,Junior,Liga Colombia,2026-10-28T01:05:00,local,F,True,71,0.0,0.0,0.0,,0,0
+1549726,13783,Sebastian Salazar,Chico,Junior,Liga Colombia,2026-10-28T01:05:00,local,M,False,25,0.0,0.0,0.0,,1,0
+1549726,137128,Delio Ramírez,Chico,Junior,Liga Colombia,2026-10-28T01:05:00,local,M,False,19,0.0,0.0,0.0,,0,0
+1549726,672169,Junior Palacios,Chico,Junior,Liga Colombia,2026-10-28T01:05:00,local,D,False,12,0.0,0.0,0.0,1.0,0,0
+1549726,59461,Cristián Mosquera,Chico,Junior,Liga Colombia,2026-10-28T01:05:00,local,M,False,12,0.0,0.0,0.0,,0,0
+1549726,306641,Isaac Camargo,Chico,Junior,Liga Colombia,2026-10-28T01:05:00,local,F,False,12,0.0,0.0,0.0,,0,0
+1549726,51764,Mauro Silveira,Junior,Chico,Liga Colombia,2026-10-28T01:05:00,visitante,G,True,90,0.0,0.0,0.0,,0,0
+1549726,642908,Daniel Socarras,Junior,Chico,Liga Colombia,2026-10-28T01:05:00,visitante,D,True,90,0.0,0.0,0.0,,0,0
+1549726,13803,Jermein Peña,Junior,Chico,Liga Colombia,2026-10-28T01:05:00,visitante,D,True,90,0.0,0.0,0.0,,0,0
+1549726,59634,Daniel Rivera,Junior,Chico,Liga Colombia,2026-10-28T01:05:00,visitante,D,True,90,0.0,0.0,0.0,,0,0
+1549726,59441,Yeison Suárez,Junior,Chico,Liga Colombia,2026-10-28T01:05:00,visitante,D,True,90,0.0,0.0,0.0,,0,0
+1549726,13152,Juan David Ríos,Junior,Chico,Liga Colombia,2026-10-28T01:05:00,visitante,M,True,90,0.0,0.0,0.0,,1,0
+1549726,6648,Guillermo Celis,Junior,Chico,Liga Colombia,2026-10-28T01:05:00,visitante,M,True,75,0.0,0.0,0.0,,0,0
+1549726,13709,Cristian Barrios,Junior,Chico,Liga Colombia,2026-10-28T01:05:00,visitante,M,True,63,0.0,0.0,1.0,1.0,0,0
+1549726,2492,Yimmi Chará,Junior,Chico,Liga Colombia,2026-10-28T01:05:00,visitante,M,True,63,0.0,0.0,0.0,,0,0
+1549726,13408,Déiber Caicedo,Junior,Chico,Liga Colombia,2026-10-28T01:05:00,visitante,M,True,63,0.0,0.0,0.0,,0,0
+1549726,53128,Guillermo Paiva,Junior,Chico,Liga Colombia,2026-10-28T01:05:00,visitante,F,True,75,0.0,0.0,1.0,2.0,0,0
+1549726,13524,Bryan Castrillón,Junior,Chico,Liga Colombia,2026-10-28T01:05:00,visitante,F,False,27,0.0,0.0,0.0,,1,0
+1549726,153065,Kevin Pérez,Junior,Chico,Liga Colombia,2026-10-28T01:05:00,visitante,F,False,27,0.0,0.0,0.0,,0,0
+1549726,431436,Joel Canchimbo,Junior,Chico,Liga Colombia,2026-10-28T01:05:00,visitante,F,False,27,0.0,0.0,0.0,1.0,0,0
+1549726,13756,Jesús Rivas,Junior,Chico,Liga Colombia,2026-10-28T01:05:00,visitante,M,False,15,1.0,0.0,1.0,1.0,0,0
+1549726,2493,Luis Muriel,Junior,Chico,Liga Colombia,2026-10-28T01:05:00,visitante,F,False,15,0.0,0.0,0.0,,0,0
