@@ -240447,3 +240447,583 @@
 1549537,95839,A. Robles,Cienciano,Alianza Lima,Primera Division Peru,2026-11-04T01:00:00,visitante,M,True,60,0.0,0.0,0.0,0.0,1,0
 1549537,11582,N. Bandiera,Cienciano,Alianza Lima,Primera Division Peru,2026-11-04T01:00:00,visitante,F,True,90,0.0,0.0,0.0,1.0,0,0
 1549537,16454,C. Garcés,Cienciano,Alianza Lima,Primera Division Peru,2026-11-04T01:00:00,visitante,F,True,90,0.0,0.0,0.0,0.0,0,0
+1636324,21628,B. Samba,Rennes,Olympiakos Piraeus,Europa League,2026-11-04T15:30:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1636324,22015,B. Dia,Rennes,Olympiakos Piraeus,Europa League,2026-11-04T15:30:00,local,F,True,81,0.0,0.0,0.0,0.0,0,0
+1636324,15286,Mousa Tamari,Rennes,Olympiakos Piraeus,Europa League,2026-11-04T15:30:00,local,F,True,80,0.0,0.0,2.0,3.0,0,0
+1636324,24147,M. Camara,Rennes,Olympiakos Piraeus,Europa League,2026-11-04T15:30:00,local,M,True,90,0.0,0.0,0.0,0.0,0,0
+1636324,22261,A. Thomasson,Rennes,Olympiakos Piraeus,Europa League,2026-11-04T15:30:00,local,M,True,81,0.0,0.0,0.0,0.0,0,0
+1636324,40403,S. Szymański,Rennes,Olympiakos Piraeus,Europa League,2026-11-04T15:30:00,local,M,True,60,0.0,0.0,0.0,1.0,0,0
+1636324,438281,M. Nagida,Rennes,Olympiakos Piraeus,Europa League,2026-11-04T15:30:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636324,400525,Gonçalo Oliveira,Rennes,Olympiakos Piraeus,Europa League,2026-11-04T15:30:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636324,278392,C. Cresswell,Rennes,Olympiakos Piraeus,Europa League,2026-11-04T15:30:00,local,D,True,90,0.0,0.0,1.0,1.0,0,0
+1636324,129681,A. Rouault,Rennes,Olympiakos Piraeus,Europa League,2026-11-04T15:30:00,local,D,True,90,0.0,0.0,0.0,1.0,0,0
+1636324,51144,B. Reynolds,Rennes,Olympiakos Piraeus,Europa League,2026-11-04T15:30:00,local,D,True,90,0.0,0.0,0.0,1.0,0,0
+1636324,21102,V. Rongier,Rennes,Olympiakos Piraeus,Europa League,2026-11-04T15:30:00,local,M,True,30,0.0,0.0,1.0,2.0,1,0
+1636324,349799,Eliezer Mayenda,Rennes,Olympiakos Piraeus,Europa League,2026-11-04T15:30:00,local,F,True,9,0.0,0.0,0.0,0.0,0,0
+1636324,21497,L. Blas,Rennes,Olympiakos Piraeus,Europa League,2026-11-04T15:30:00,local,F,True,10,0.0,0.0,0.0,0.0,0,0
+1636324,343792,D. Cissé,Rennes,Olympiakos Piraeus,Europa League,2026-11-04T15:30:00,local,M,True,9,0.0,0.0,0.0,0.0,0,0
+1636324,25004,S. Ortega,Olympiakos Piraeus,Rennes,Europa League,2026-11-04T15:30:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1636324,291713,A. González,Olympiakos Piraeus,Rennes,Europa League,2026-11-04T15:30:00,visitante,F,True,59,0.0,0.0,0.0,1.0,0,0
+1636324,1609,K. Fortounis,Olympiakos Piraeus,Rennes,Europa League,2026-11-04T15:30:00,visitante,M,True,90,0.0,0.0,0.0,2.0,0,0
+1636324,379985,Gustavo Sá,Olympiakos Piraeus,Rennes,Europa League,2026-11-04T15:30:00,visitante,M,True,79,0.0,0.0,0.0,1.0,0,0
+1636324,983,L. Bailey,Olympiakos Piraeus,Rennes,Europa League,2026-11-04T15:30:00,visitante,M,True,59,0.0,0.0,1.0,1.0,0,0
+1636324,195929,S. Hezze,Olympiakos Piraeus,Rennes,Europa League,2026-11-04T15:30:00,visitante,M,True,90,0.0,0.0,0.0,0.0,0,0
+1636324,324034,G. Puerta,Olympiakos Piraeus,Rennes,Europa League,2026-11-04T15:30:00,visitante,M,True,90,0.0,0.0,0.0,2.0,0,0
+1636324,278196,S. Onyemaechi,Olympiakos Piraeus,Rennes,Europa League,2026-11-04T15:30:00,visitante,D,True,82,0.0,0.0,0.0,0.0,0,0
+1636324,41970,David Carmo,Olympiakos Piraeus,Rennes,Europa League,2026-11-04T15:30:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1636324,971,P. Retsos,Olympiakos Piraeus,Rennes,Europa League,2026-11-04T15:30:00,visitante,D,True,90,0.0,0.0,0.0,1.0,0,0
+1636324,27157,M. Saliakas,Olympiakos Piraeus,Rennes,Europa League,2026-11-04T15:30:00,visitante,D,True,45,0.0,0.0,0.0,1.0,0,0
+1636324,8493,R. Yaremchuk,Olympiakos Piraeus,Rennes,Europa League,2026-11-04T15:30:00,visitante,F,True,31,0.0,0.0,0.0,1.0,0,0
+1636324,41130,Chiquinho,Olympiakos Piraeus,Rennes,Europa League,2026-11-04T15:30:00,visitante,M,True,11,0.0,0.0,0.0,0.0,0,0
+1636324,841,N. Tiknizyan,Olympiakos Piraeus,Rennes,Europa League,2026-11-04T15:30:00,visitante,D,True,8,0.0,0.0,0.0,0.0,0,0
+1636324,39362,M. Pedersen,Olympiakos Piraeus,Rennes,Europa League,2026-11-04T15:30:00,visitante,D,True,45,0.0,0.0,0.0,0.0,0,0
+1636324,118,Gelson Martins,Olympiakos Piraeus,Rennes,Europa League,2026-11-04T15:30:00,visitante,M,True,31,0.0,0.0,2.0,2.0,0,0
+1635606,31538,A. Brignoli,AEK Athens FC,Real Madrid,Champions League,2026-11-04T17:45:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1635606,125239,K. Arriaga,AEK Athens FC,Real Madrid,Champions League,2026-11-04T17:45:00,local,M,True,90,0.0,0.0,0.0,0.0,1,0
+1635606,1818,M. Gaćinović,AEK Athens FC,Real Madrid,Champions League,2026-11-04T17:45:00,local,F,True,60,0.0,0.0,1.0,1.0,0,0
+1635606,1828,L. Jović,AEK Athens FC,Real Madrid,Champions League,2026-11-04T17:45:00,local,F,True,88,0.0,1.0,1.0,1.0,0,0
+1635606,55404,K. Kairinen,AEK Athens FC,Real Madrid,Champions League,2026-11-04T17:45:00,local,M,True,60,0.0,0.0,0.0,0.0,0,0
+1635606,8543,A. Koita,AEK Athens FC,Real Madrid,Champions League,2026-11-04T17:45:00,local,M,True,90,1.0,1.0,1.0,3.0,0,1
+1635606,1321,L. Majer,AEK Athens FC,Real Madrid,Champions League,2026-11-04T17:45:00,local,M,True,53,0.0,0.0,0.0,0.0,0,0
+1635606,20689,H. Moukoudi,AEK Athens FC,Real Madrid,Champions League,2026-11-04T17:45:00,local,D,True,90,0.0,0.0,1.0,1.0,0,0
+1635606,105320,O. Zubkov,AEK Athens FC,Real Madrid,Champions League,2026-11-04T17:45:00,local,M,True,2,0.0,0.0,0.0,0.0,0,0
+1635606,237121,Zini,AEK Athens FC,Real Madrid,Champions League,2026-11-04T17:45:00,local,F,True,37,0.0,0.0,0.0,0.0,0,0
+1635606,7398,B. Varga,AEK Athens FC,Real Madrid,Champions League,2026-11-04T17:45:00,local,F,True,30,0.0,0.0,0.0,0.0,0,0
+1635606,2118,R. Marin,AEK Athens FC,Real Madrid,Champions League,2026-11-04T17:45:00,local,M,True,30,0.0,0.0,0.0,2.0,0,0
+1635606,61257,L. Rota,AEK Athens FC,Real Madrid,Champions League,2026-11-04T17:45:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1635606,141841,Filipe Relvas,AEK Athens FC,Real Madrid,Champions League,2026-11-04T17:45:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1635606,26936,S. Pilios,AEK Athens FC,Real Madrid,Champions League,2026-11-04T17:45:00,local,D,True,90,1.0,0.0,1.0,1.0,0,0
+1635606,284300,Álvaro Fernández,Real Madrid,AEK Athens FC,Champions League,2026-11-04T17:45:00,visitante,D,True,9,0.0,0.0,0.0,0.0,0,0
+1635606,744,Brahim Díaz,Real Madrid,AEK Athens FC,Champions League,2026-11-04T17:45:00,visitante,M,True,9,0.0,1.0,0.0,1.0,0,0
+1635606,377122,Endrick,Real Madrid,AEK Athens FC,Champions League,2026-11-04T17:45:00,visitante,F,True,23,0.0,0.0,0.0,2.0,0,0
+1635606,450497,Carlos Espí,Real Madrid,AEK Athens FC,Champions League,2026-11-04T17:45:00,visitante,F,True,4,0.0,0.0,0.0,0.0,0,0
+1635606,756,F. Valverde,Real Madrid,AEK Athens FC,Champions League,2026-11-04T17:45:00,visitante,M,True,23,1.0,0.0,1.0,1.0,0,0
+1635606,762,Vinícius Júnior,Real Madrid,AEK Athens FC,Champions League,2026-11-04T17:45:00,visitante,M,True,81,0.0,0.0,0.0,3.0,0,0
+1635606,636,Bernardo Silva,Real Madrid,AEK Athens FC,Champions League,2026-11-04T17:45:00,visitante,M,True,67,0.0,0.0,0.0,1.0,0,0
+1635606,2285,A. Rüdiger,Real Madrid,AEK Athens FC,Champions League,2026-11-04T17:45:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1635606,278,Kylian Mbappé,Real Madrid,AEK Athens FC,Champions League,2026-11-04T17:45:00,visitante,F,True,90,1.0,0.0,3.0,7.0,0,0
+1635606,372,Éder Militão,Real Madrid,AEK Athens FC,Champions League,2026-11-04T17:45:00,visitante,D,True,90,0.0,0.0,1.0,2.0,0,0
+1635606,226,D. Dumfries,Real Madrid,AEK Athens FC,Champions League,2026-11-04T17:45:00,visitante,D,True,90,0.0,1.0,1.0,1.0,0,0
+1635606,513776,Y. Diomande,Real Madrid,AEK Athens FC,Champions League,2026-11-04T17:45:00,visitante,M,True,67,0.0,0.0,0.0,1.0,0,0
+1635606,47380,Marc Cucurella,Real Madrid,AEK Athens FC,Champions League,2026-11-04T17:45:00,visitante,D,True,81,0.0,1.0,1.0,2.0,1,0
+1635606,2207,E. Camavinga,Real Madrid,AEK Athens FC,Champions League,2026-11-04T17:45:00,visitante,M,True,90,0.0,0.0,0.0,0.0,0,0
+1635606,129718,J. Bellingham,Real Madrid,AEK Athens FC,Champions League,2026-11-04T17:45:00,visitante,M,True,86,1.0,0.0,1.0,3.0,0,0
+1635606,730,T. Courtois,Real Madrid,AEK Athens FC,Champions League,2026-11-04T17:45:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1635658,142959,K. Aktürkoğlu,Fenerbahçe,Liverpool,Champions League,2026-11-04T17:45:00,local,F,True,15,0.0,0.0,0.0,1.0,0,0
+1635658,50048,V. Muriqi,Fenerbahçe,Liverpool,Champions League,2026-11-04T17:45:00,local,F,True,27,1.0,0.0,1.0,1.0,0,0
+1635658,1719,M. Müldür,Fenerbahçe,Liverpool,Champions League,2026-11-04T17:45:00,local,D,True,16,0.0,0.0,0.0,0.0,0,0
+1635658,134590,O. Aydın,Fenerbahçe,Liverpool,Champions League,2026-11-04T17:45:00,local,F,True,1,0.0,0.0,0.0,0.0,0,0
+1635658,617,Ederson,Fenerbahçe,Liverpool,Champions League,2026-11-04T17:45:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1635658,49857,İ. Kahveci,Fenerbahçe,Liverpool,Champions League,2026-11-04T17:45:00,local,F,True,75,0.0,0.0,0.0,1.0,0,0
+1635658,907,R. Lukaku,Fenerbahçe,Liverpool,Champions League,2026-11-04T17:45:00,local,F,True,63,0.0,0.0,1.0,1.0,0,0
+1635658,897,M. Greenwood,Fenerbahçe,Liverpool,Champions League,2026-11-04T17:45:00,local,F,True,89,1.0,0.0,2.0,4.0,0,0
+1635658,214463,İ. Yüksek,Fenerbahçe,Liverpool,Champions League,2026-11-04T17:45:00,local,M,True,90,0.0,0.0,0.0,1.0,0,0
+1635658,2290,N. Kanté,Fenerbahçe,Liverpool,Champions League,2026-11-04T17:45:00,local,M,True,90,0.0,0.0,0.0,1.0,0,0
+1635658,1454,M. Guendouzi,Fenerbahçe,Liverpool,Champions League,2026-11-04T17:45:00,local,M,True,90,0.0,0.0,0.0,3.0,0,0
+1635658,161661,A. Brown,Fenerbahçe,Liverpool,Champions League,2026-11-04T17:45:00,local,D,True,90,1.0,1.0,2.0,3.0,1,0
+1635658,404172,K. Peprah Oppong,Fenerbahçe,Liverpool,Champions League,2026-11-04T17:45:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1635658,198,M. Škriniar,Fenerbahçe,Liverpool,Champions League,2026-11-04T17:45:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1635658,130,Nélson Semedo,Fenerbahçe,Liverpool,Champions League,2026-11-04T17:45:00,local,D,True,74,0.0,0.0,0.0,1.0,0,0
+1635658,161904,B. Barcola,Liverpool,Fenerbahçe,Champions League,2026-11-04T17:45:00,visitante,F,True,90,0.0,0.0,1.0,3.0,0,0
+1635658,452685,R. Ngumoha,Liverpool,Fenerbahçe,Champions League,2026-11-04T17:45:00,visitante,M,True,66,0.0,0.0,0.0,2.0,0,0
+1635658,1096,D. Szoboszlai,Liverpool,Fenerbahçe,Champions League,2026-11-04T17:45:00,visitante,M,True,90,0.0,0.0,0.0,2.0,0,0
+1635658,338751,Víctor Muñoz,Liverpool,Fenerbahçe,Champions League,2026-11-04T17:45:00,visitante,M,True,66,0.0,0.0,0.0,3.0,0,0
+1635658,397997,T. Nyoni,Liverpool,Fenerbahçe,Champions League,2026-11-04T17:45:00,visitante,M,True,85,1.0,0.0,1.0,1.0,0,0
+1635658,6716,A. Mac Allister,Liverpool,Fenerbahçe,Champions League,2026-11-04T17:45:00,visitante,M,True,90,0.0,0.0,1.0,1.0,1,0
+1635658,1600,K. Tsimikas,Liverpool,Fenerbahçe,Champions League,2026-11-04T17:45:00,visitante,D,True,76,0.0,0.0,0.0,0.0,0,0
+1635658,290,V. van Dijk,Liverpool,Fenerbahçe,Champions League,2026-11-04T17:45:00,visitante,D,True,90,0.0,0.0,2.0,3.0,0,0
+1635658,367636,J. Jacquet,Liverpool,Fenerbahçe,Champions League,2026-11-04T17:45:00,visitante,D,True,90,0.0,0.0,0.0,2.0,0,0
+1635658,284,J. Gomez,Liverpool,Fenerbahçe,Champions League,2026-11-04T17:45:00,visitante,D,True,66,0.0,0.0,0.0,1.0,0,0
+1635658,280,Alisson Becker,Liverpool,Fenerbahçe,Champions League,2026-11-04T17:45:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1635658,247,C. Gakpo,Liverpool,Fenerbahçe,Champions League,2026-11-04T17:45:00,visitante,F,True,24,0.0,1.0,0.0,1.0,0,0
+1635658,2864,A. Isak,Liverpool,Fenerbahçe,Champions League,2026-11-04T17:45:00,visitante,F,True,24,1.0,0.0,1.0,3.0,0,0
+1635658,206254,M. Kerkez,Liverpool,Fenerbahçe,Champions League,2026-11-04T17:45:00,visitante,D,True,14,0.0,0.0,0.0,0.0,0,0
+1635658,328107,L. Koumas,Liverpool,Fenerbahçe,Champions League,2026-11-04T17:45:00,visitante,F,True,5,0.0,0.0,0.0,0.0,0,0
+1635658,203224,F. Wirtz,Liverpool,Fenerbahçe,Champions League,2026-11-04T17:45:00,visitante,M,True,24,0.0,0.0,0.0,0.0,0,0
+1558657,46043,Marko Ilić,Kortrijk,KV Mechelen,Pro League Belgica,2026-11-04T19:30:00,local,G,True,90,0.0,0.0,0.0,,0,0
+1558657,515771,Mohamed Fofana,Kortrijk,KV Mechelen,Pro League Belgica,2026-11-04T19:30:00,local,D,True,90,0.0,1.0,0.0,1.0,1,0
+1558657,191138,Axel Drouhin,Kortrijk,KV Mechelen,Pro League Belgica,2026-11-04T19:30:00,local,D,True,90,0.0,0.0,0.0,,1,0
+1558657,379116,James Ndjeungoue,Kortrijk,KV Mechelen,Pro League Belgica,2026-11-04T19:30:00,local,D,True,66,0.0,0.0,0.0,,0,1
+1558657,332737,Matthew Anderson,Kortrijk,KV Mechelen,Pro League Belgica,2026-11-04T19:30:00,local,D,True,90,0.0,0.0,0.0,,1,0
+1558657,8482,Brecht Dejaegere,Kortrijk,KV Mechelen,Pro League Belgica,2026-11-04T19:30:00,local,M,True,79,0.0,0.0,0.0,,0,0
+1558657,364048,Harrison Murray-Campbell,Kortrijk,KV Mechelen,Pro League Belgica,2026-11-04T19:30:00,local,M,True,86,0.0,0.0,0.0,2.0,0,0
+1558657,643492,Anthony Philips,Kortrijk,KV Mechelen,Pro League Belgica,2026-11-04T19:30:00,local,M,True,90,0.0,0.0,1.0,1.0,0,0
+1558657,430077,Shandre Campbell,Kortrijk,KV Mechelen,Pro League Belgica,2026-11-04T19:30:00,local,F,True,69,0.0,0.0,0.0,1.0,0,0
+1558657,20817,Goduine Koyalipou,Kortrijk,KV Mechelen,Pro League Belgica,2026-11-04T19:30:00,local,F,True,79,0.0,0.0,0.0,3.0,0,0
+1558657,20673,Thierry Ambrose,Kortrijk,KV Mechelen,Pro League Belgica,2026-11-04T19:30:00,local,F,True,78,1.0,0.0,1.0,1.0,0,0
+1558657,128362,Boris Lambert,Kortrijk,KV Mechelen,Pro League Belgica,2026-11-04T19:30:00,local,M,False,21,0.0,0.0,0.0,,0,0
+1558657,8790,Jellert Van Landschoot,Kortrijk,KV Mechelen,Pro League Belgica,2026-11-04T19:30:00,local,F,False,12,0.0,0.0,0.0,1.0,0,0
+1558657,335387,Rok Štorman,Kortrijk,KV Mechelen,Pro League Belgica,2026-11-04T19:30:00,local,M,False,11,0.0,0.0,0.0,,1,0
+1558657,405719,Sixtus Ogbuehi,Kortrijk,KV Mechelen,Pro League Belgica,2026-11-04T19:30:00,local,F,False,11,0.0,0.0,0.0,,0,0
+1558657,321747,Nayel Mehssatou,Kortrijk,KV Mechelen,Pro League Belgica,2026-11-04T19:30:00,local,M,False,10,0.0,0.0,0.0,,0,0
+1558657,8741,Ortwin De Wolf,KV Mechelen,Kortrijk,Pro League Belgica,2026-11-04T19:30:00,visitante,G,True,90,0.0,0.0,0.0,,0,0
+1558657,381841,Kobe Corbanie,KV Mechelen,Kortrijk,Pro League Belgica,2026-11-04T19:30:00,visitante,D,True,90,0.0,0.0,0.0,,0,0
+1558657,37735,Mike Eerdhuijzen,KV Mechelen,Kortrijk,Pro League Belgica,2026-11-04T19:30:00,visitante,D,True,82,0.0,0.0,1.0,1.0,1,0
+1558657,162562,José Marsà,KV Mechelen,Kortrijk,Pro League Belgica,2026-11-04T19:30:00,visitante,D,True,90,0.0,0.0,0.0,,0,0
+1558657,322561,Simion Michez,KV Mechelen,Kortrijk,Pro League Belgica,2026-11-04T19:30:00,visitante,M,True,90,0.0,0.0,2.0,4.0,0,0
+1558657,100279,Fredrik Hammar,KV Mechelen,Kortrijk,Pro League Belgica,2026-11-04T19:30:00,visitante,M,True,90,0.0,0.0,0.0,1.0,0,0
+1558657,653004,Marco Decherf,KV Mechelen,Kortrijk,Pro League Belgica,2026-11-04T19:30:00,visitante,M,True,59,0.0,0.0,0.0,,0,0
+1558657,327692,Thérence Koudou,KV Mechelen,Kortrijk,Pro League Belgica,2026-11-04T19:30:00,visitante,M,True,90,0.0,0.0,0.0,1.0,1,0
+1558657,287797,Myron Van Brederode,KV Mechelen,Kortrijk,Pro League Belgica,2026-11-04T19:30:00,visitante,F,True,90,1.0,0.0,2.0,2.0,0,0
+1558657,25467,Benito Raman,KV Mechelen,Kortrijk,Pro League Belgica,2026-11-04T19:30:00,visitante,F,True,59,0.0,0.0,0.0,1.0,0,0
+1558657,624613,Malcolm Lohunanu-Mbasi,KV Mechelen,Kortrijk,Pro League Belgica,2026-11-04T19:30:00,visitante,F,True,82,0.0,0.0,0.0,,0,0
+1558657,436997,Cedric Jan Van Meirvenne,KV Mechelen,Kortrijk,Pro League Belgica,2026-11-04T19:30:00,visitante,F,False,31,0.0,0.0,1.0,1.0,0,0
+1558657,2925,Dennis Praet,KV Mechelen,Kortrijk,Pro League Belgica,2026-11-04T19:30:00,visitante,M,False,31,0.0,0.0,0.0,,0,0
+1558657,287793,Luc Marijnissen,KV Mechelen,Kortrijk,Pro League Belgica,2026-11-04T19:30:00,visitante,D,False,8,0.0,0.0,0.0,,0,0
+1558657,361359,Halil Özdemir,KV Mechelen,Kortrijk,Pro League Belgica,2026-11-04T19:30:00,visitante,F,False,8,0.0,0.0,2.0,2.0,0,0
+1635681,44594,Saud Abdulhamid,Lens,Como,Champions League,2026-11-04T20:00:00,local,D,True,45,0.0,0.0,0.0,0.0,0,0
+1635681,660571,M. Soares,Lens,Como,Champions League,2026-11-04T20:00:00,local,M,True,45,0.0,0.0,0.0,0.0,0,0
+1635681,161620,J. Kadile,Lens,Como,Champions League,2026-11-04T20:00:00,local,F,True,20,0.0,0.0,0.0,1.0,0,0
+1635681,347211,R. Risser,Lens,Como,Champions League,2026-11-04T20:00:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1635681,20525,M. Udol,Lens,Como,Champions League,2026-11-04T20:00:00,local,M,True,90,0.0,0.0,0.0,2.0,0,0
+1635681,1922,F. Thauvin,Lens,Como,Champions League,2026-11-04T20:00:00,local,M,True,70,0.0,1.0,1.0,1.0,0,0
+1635681,40809,M. Skóraś,Lens,Como,Champions League,2026-11-04T20:00:00,local,M,True,45,0.0,0.0,0.0,0.0,0,0
+1635681,202951,F. Ivanović,Lens,Como,Champions League,2026-11-04T20:00:00,local,F,True,45,0.0,0.0,1.0,1.0,0,0
+1635681,2929,T. Hazard,Lens,Como,Champions League,2026-11-04T20:00:00,local,M,True,90,0.0,0.0,0.0,3.0,0,0
+1635681,1153,A. Haidara,Lens,Como,Champions League,2026-11-04T20:00:00,local,M,True,70,0.0,0.0,0.0,1.0,0,0
+1635681,25634,M. Cuisance,Lens,Como,Champions League,2026-11-04T20:00:00,local,M,True,90,0.0,0.0,0.0,1.0,1,0
+1635681,322984,S. Baidoo,Lens,Como,Champions League,2026-11-04T20:00:00,local,D,True,90,0.0,0.0,0.0,0.0,1,0
+1635681,441264,K. Antonio,Lens,Como,Champions League,2026-11-04T20:00:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1635681,21568,R. Aguilar,Lens,Como,Champions League,2026-11-04T20:00:00,local,D,True,90,1.0,0.0,1.0,1.0,0,0
+1635681,394950,A. Bulatović,Lens,Como,Champions League,2026-11-04T20:00:00,local,M,True,20,0.0,0.0,0.0,0.0,0,0
+1635681,14266,I. Smolčić,Como,Lens,Champions League,2026-11-04T20:00:00,visitante,D,True,18,0.0,0.0,0.0,0.0,0,0
+1635681,336560,Álex Valle,Como,Lens,Champions League,2026-11-04T20:00:00,visitante,D,True,90,0.0,1.0,0.0,0.0,0,0
+1635681,386305,Jacobo Ramón Naveros,Como,Lens,Champions League,2026-11-04T20:00:00,visitante,D,True,90,0.0,1.0,0.0,0.0,0,0
+1635681,288699,M. Perrone,Como,Lens,Champions League,2026-11-04T20:00:00,visitante,M,True,90,0.0,1.0,1.0,2.0,0,0
+1635681,350037,N. Paz,Como,Lens,Champions League,2026-11-04T20:00:00,visitante,M,True,58,1.0,2.0,2.0,4.0,0,0
+1635681,47085,Luis Milla,Como,Lens,Champions League,2026-11-04T20:00:00,visitante,M,True,58,0.0,1.0,0.0,0.0,0,0
+1635681,26301,M. Kempf,Como,Lens,Champions League,2026-11-04T20:00:00,visitante,D,True,72,1.0,0.0,1.0,1.0,0,0
+1635681,26845,T. Douvikas,Como,Lens,Champions League,2026-11-04T20:00:00,visitante,F,True,61,3.0,1.0,3.0,3.0,0,0
+1635681,162266,L. da Cunha,Como,Lens,Champions League,2026-11-04T20:00:00,visitante,M,True,58,1.0,0.0,2.0,3.0,0,0
+1635681,197448,Yan Couto,Como,Lens,Champions League,2026-11-04T20:00:00,visitante,D,True,90,0.0,0.0,0.0,2.0,0,0
+1635681,659,M. Caqueret,Como,Lens,Champions League,2026-11-04T20:00:00,visitante,M,True,90,0.0,0.0,0.0,0.0,0,0
+1635681,295026,M. Baturina,Como,Lens,Champions League,2026-11-04T20:00:00,visitante,M,True,32,1.0,0.0,1.0,1.0,0,0
+1635681,31056,S. Ricci,Como,Lens,Champions League,2026-11-04T20:00:00,visitante,M,True,32,0.0,0.0,0.0,0.0,0,0
+1635681,410396,M. Liberali,Como,Lens,Champions League,2026-11-04T20:00:00,visitante,M,True,32,1.0,2.0,1.0,1.0,0,0
+1635681,8574,J. Butez,Como,Lens,Champions League,2026-11-04T20:00:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1635651,25368,W. Anton,Borussia Dortmund,Real Betis,Champions League,2026-11-04T20:00:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1635651,326757,J. Bellingham,Borussia Dortmund,Real Betis,Champions League,2026-11-04T20:00:00,local,M,True,90,0.0,0.0,2.0,4.0,1,0
+1635651,2194,R. Bensebaïni,Borussia Dortmund,Real Betis,Champions League,2026-11-04T20:00:00,local,D,True,75,0.0,0.0,0.0,0.0,1,0
+1635651,21393,S. Guirassy,Borussia Dortmund,Real Betis,Champions League,2026-11-04T20:00:00,local,F,True,34,0.0,0.0,0.0,1.0,0,0
+1635651,637,F. Nmecha,Borussia Dortmund,Real Betis,Champions League,2026-11-04T20:00:00,local,M,True,75,0.0,0.0,0.0,2.0,0,0
+1635651,24845,J. Ryerson,Borussia Dortmund,Real Betis,Champions League,2026-11-04T20:00:00,local,M,True,74,0.0,0.0,0.0,0.0,1,0
+1635651,26243,N. Schlotterbeck,Borussia Dortmund,Real Betis,Champions League,2026-11-04T20:00:00,local,D,True,90,0.0,0.0,0.0,1.0,0,0
+1635651,129791,Fábio Silva,Borussia Dortmund,Real Betis,Champions League,2026-11-04T20:00:00,local,M,True,89,1.0,1.0,1.0,1.0,0,0
+1635651,198654,D. Svensson,Borussia Dortmund,Real Betis,Champions League,2026-11-04T20:00:00,local,M,True,90,0.0,0.0,1.0,2.0,0,0
+1635651,37749,J. Veerman,Borussia Dortmund,Real Betis,Champions League,2026-11-04T20:00:00,local,M,True,90,0.0,0.0,0.0,1.0,1,0
+1635651,25282,G. Kobel,Borussia Dortmund,Real Betis,Champions League,2026-11-04T20:00:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1635651,158644,M. Beier,Borussia Dortmund,Real Betis,Champions League,2026-11-04T20:00:00,local,F,True,16,0.0,0.0,0.0,0.0,0,0
+1635651,138935,C. Chukwuemeka,Borussia Dortmund,Real Betis,Champions League,2026-11-04T20:00:00,local,M,True,15,0.0,0.0,0.0,0.0,0,0
+1635651,409215,Kouakou Joane Gadou,Borussia Dortmund,Real Betis,Champions League,2026-11-04T20:00:00,local,D,True,15,0.0,0.0,0.0,0.0,0,0
+1635651,404891,K. Karetsas,Borussia Dortmund,Real Betis,Champions League,2026-11-04T20:00:00,local,M,True,56,1.0,0.0,2.0,3.0,0,0
+1635651,313236,E. Nwaneri,Borussia Dortmund,Real Betis,Champions League,2026-11-04T20:00:00,local,M,True,1,0.0,0.0,0.0,0.0,0,0
+1635651,9971,Antony,Real Betis,Borussia Dortmund,Champions League,2026-11-04T20:00:00,visitante,M,True,62,0.0,0.0,0.0,1.0,0,0
+1635651,316519,F. Bernal,Real Betis,Borussia Dortmund,Champions League,2026-11-04T20:00:00,visitante,M,True,78,0.0,0.0,0.0,1.0,0,0
+1635651,748,Dani Ceballos,Real Betis,Borussia Dortmund,Champions League,2026-11-04T20:00:00,visitante,M,True,62,0.0,0.0,0.0,0.0,0,0
+1635651,300885,N. Deossa,Real Betis,Borussia Dortmund,Champions League,2026-11-04T20:00:00,visitante,M,True,90,0.0,0.0,1.0,3.0,0,0
+1635651,181421,A. Ezzalzouli,Real Betis,Borussia Dortmund,Champions League,2026-11-04T20:00:00,visitante,M,True,90,0.0,1.0,1.0,2.0,0,0
+1635651,355004,V. Gómez,Real Betis,Borussia Dortmund,Champions League,2026-11-04T20:00:00,visitante,D,True,70,0.0,0.0,0.0,0.0,1,0
+1635651,47302,Diego Llorente,Real Betis,Borussia Dortmund,Champions League,2026-11-04T20:00:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1635651,195100,Natan,Real Betis,Borussia Dortmund,Champions League,2026-11-04T20:00:00,visitante,D,True,90,0.0,0.0,0.0,0.0,1,0
+1635651,334574,Ángel Ortiz,Real Betis,Borussia Dortmund,Champions League,2026-11-04T20:00:00,visitante,D,True,90,0.0,0.0,1.0,1.0,1,0
+1635651,149551,T. Parrott,Real Betis,Borussia Dortmund,Champions League,2026-11-04T20:00:00,visitante,F,True,78,0.0,0.0,0.0,0.0,0,0
+1635651,46990,Álvaro Vallés,Real Betis,Borussia Dortmund,Champions League,2026-11-04T20:00:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1635651,736,Fran García,Real Betis,Borussia Dortmund,Champions League,2026-11-04T20:00:00,visitante,D,True,20,0.0,0.0,0.0,0.0,0,0
+1635651,745,Isco,Real Betis,Borussia Dortmund,Champions League,2026-11-04T20:00:00,visitante,M,True,28,0.0,0.0,0.0,0.0,1,0
+1635651,544644,J. A. Morante,Real Betis,Borussia Dortmund,Champions League,2026-11-04T20:00:00,visitante,F,True,12,0.0,0.0,0.0,0.0,0,0
+1635651,47341,Marc Roca,Real Betis,Borussia Dortmund,Champions League,2026-11-04T20:00:00,visitante,M,True,12,0.0,0.0,0.0,1.0,0,0
+1635651,47119,Aitor Ruibal,Real Betis,Borussia Dortmund,Champions League,2026-11-04T20:00:00,visitante,F,True,28,1.0,0.0,1.0,2.0,0,0
+1635710,7328,N. Seiwald,RB Leipzig,Manchester City,Champions League,2026-11-04T20:00:00,local,M,True,16,0.0,0.0,0.0,0.0,0,0
+1635710,203007,R. Reitz,RB Leipzig,Manchester City,Champions League,2026-11-04T20:00:00,local,M,True,17,0.0,0.0,0.0,1.0,0,0
+1635710,269,C. Nkunku,RB Leipzig,Manchester City,Champions League,2026-11-04T20:00:00,local,F,True,33,0.0,1.0,0.0,0.0,0,0
+1635710,25158,D. Raum,RB Leipzig,Manchester City,Champions League,2026-11-04T20:00:00,local,D,True,90,0.0,0.0,0.0,1.0,1,0
+1635710,25917,R. Baku,RB Leipzig,Manchester City,Champions League,2026-11-04T20:00:00,local,D,True,74,1.0,0.0,2.0,2.0,1,0
+1635710,343286,E. Banzuzi,RB Leipzig,Manchester City,Champions League,2026-11-04T20:00:00,local,M,True,90,0.0,0.0,0.0,2.0,0,0
+1635710,715,C. Baumgartner,RB Leipzig,Manchester City,Champions League,2026-11-04T20:00:00,local,M,True,57,0.0,0.0,1.0,3.0,1,0
+1635710,277003,N. El Aynaoui,RB Leipzig,Manchester City,Champions League,2026-11-04T20:00:00,local,M,True,74,0.0,0.0,0.0,0.0,1,0
+1635710,328225,B. Gruda,RB Leipzig,Manchester City,Champions League,2026-11-04T20:00:00,local,F,True,90,0.0,1.0,1.0,2.0,0,0
+1635710,162761,C. Lukeba,RB Leipzig,Manchester City,Champions League,2026-11-04T20:00:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1635710,314511,A. Nusa,RB Leipzig,Manchester City,Champions League,2026-11-04T20:00:00,local,F,True,73,1.0,0.0,2.0,2.0,0,0
+1635710,1148,W. Orbán,RB Leipzig,Manchester City,Champions League,2026-11-04T20:00:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1635710,326102,Rômulo,RB Leipzig,Manchester City,Champions League,2026-11-04T20:00:00,local,F,True,67,0.0,0.0,0.0,0.0,0,0
+1635710,1924,M. Vandevoordt,RB Leipzig,Manchester City,Champions League,2026-11-04T20:00:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1635710,383665,T. Gomis,RB Leipzig,Manchester City,Champions League,2026-11-04T20:00:00,local,F,True,23,0.0,0.0,0.0,1.0,0,0
+1635710,98,B. Henrichs,RB Leipzig,Manchester City,Champions League,2026-11-04T20:00:00,local,D,True,16,0.0,0.0,0.0,0.0,0,0
+1635710,425714,Allan,Manchester City,RB Leipzig,Champions League,2026-11-04T20:00:00,visitante,F,True,7,0.0,0.0,0.0,0.0,0,0
+1635710,307123,N. O&apos;Reilly,Manchester City,RB Leipzig,Champions League,2026-11-04T20:00:00,visitante,D,True,90,0.0,0.0,0.0,1.0,0,0
+1635710,41621,Matheus Nunes,Manchester City,RB Leipzig,Champions League,2026-11-04T20:00:00,visitante,D,True,79,0.0,0.0,0.0,0.0,0,0
+1635710,18592,I. Ndiaye,Manchester City,RB Leipzig,Champions League,2026-11-04T20:00:00,visitante,M,True,83,0.0,1.0,0.0,0.0,0,0
+1635710,360114,A. Khusanov,Manchester City,RB Leipzig,Champions League,2026-11-04T20:00:00,visitante,D,True,90,0.0,0.0,0.0,0.0,1,0
+1635710,1100,E. Haaland,Manchester City,RB Leipzig,Champions League,2026-11-04T20:00:00,visitante,F,True,90,1.0,0.0,3.0,3.0,0,0
+1635710,67971,M. Guéhi,Manchester City,RB Leipzig,Champions League,2026-11-04T20:00:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1635710,631,P. Foden,Manchester City,RB Leipzig,Champions League,2026-11-04T20:00:00,visitante,M,True,64,0.0,0.0,0.0,1.0,0,0
+1635710,5996,E. Fernández,Manchester City,RB Leipzig,Champions League,2026-11-04T20:00:00,visitante,M,True,83,1.0,0.0,1.0,1.0,0,0
+1635710,156477,R. Cherki,Manchester City,RB Leipzig,Champions League,2026-11-04T20:00:00,visitante,M,True,90,0.0,0.0,1.0,4.0,0,0
+1635710,138908,E. Anderson,Manchester City,RB Leipzig,Champions League,2026-11-04T20:00:00,visitante,M,True,83,0.0,1.0,0.0,1.0,0,0
+1635710,1622,G. Donnarumma,Manchester City,RB Leipzig,Champions League,2026-11-04T20:00:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1635710,438688,A. Bouaddi,Manchester City,RB Leipzig,Champions League,2026-11-04T20:00:00,visitante,M,True,7,0.0,0.0,0.0,0.0,0,0
+1635710,567,Rúben Dias,Manchester City,RB Leipzig,Champions League,2026-11-04T20:00:00,visitante,D,True,11,0.0,0.0,0.0,0.0,0,0
+1635710,1422,J. Doku,Manchester City,RB Leipzig,Champions League,2026-11-04T20:00:00,visitante,F,True,26,0.0,0.0,0.0,1.0,1,0
+1635710,2291,M. Kovačić,Manchester City,RB Leipzig,Champions League,2026-11-04T20:00:00,visitante,M,True,7,0.0,0.0,0.0,0.0,0,0
+1635707,329409,E. Bajraktarevic,PSV Eindhoven,Club Brugge KV,Champions League,2026-11-04T20:00:00,local,F,True,6,0.0,0.0,1.0,2.0,0,0
+1635707,73868,R. Pepi,PSV Eindhoven,Club Brugge KV,Champions League,2026-11-04T20:00:00,local,F,True,21,0.0,0.0,0.0,2.0,0,0
+1635707,508061,M. Hansen,PSV Eindhoven,Club Brugge KV,Champions League,2026-11-04T20:00:00,local,F,True,1,0.0,0.0,0.0,0.0,0,0
+1635707,138804,M. Kovář,PSV Eindhoven,Club Brugge KV,Champions League,2026-11-04T20:00:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1635707,38735,S. Dest,PSV Eindhoven,Club Brugge KV,Champions League,2026-11-04T20:00:00,local,D,True,90,0.0,0.0,3.0,5.0,0,0
+1635707,37143,L. Geertruida,PSV Eindhoven,Club Brugge KV,Champions League,2026-11-04T20:00:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1635707,228,A. Obispo,PSV Eindhoven,Club Brugge KV,Champions League,2026-11-04T20:00:00,local,D,True,90,0.0,0.0,0.0,2.0,0,0
+1635707,1821,F. Kostić,PSV Eindhoven,Club Brugge KV,Champions League,2026-11-04T20:00:00,local,D,True,84,0.0,0.0,0.0,1.0,0,0
+1635707,354506,K. Sano,PSV Eindhoven,Club Brugge KV,Champions League,2026-11-04T20:00:00,local,M,True,90,1.0,0.0,1.0,1.0,0,0
+1635707,37438,S. Mijnans,PSV Eindhoven,Club Brugge KV,Champions League,2026-11-04T20:00:00,local,M,True,89,0.0,0.0,2.0,6.0,0,0
+1635707,233,Mauro Júnior,PSV Eindhoven,Club Brugge KV,Champions League,2026-11-04T20:00:00,local,M,True,90,0.0,0.0,0.0,2.0,0,0
+1635707,207,I. Perišić,PSV Eindhoven,Club Brugge KV,Champions League,2026-11-04T20:00:00,local,M,True,90,0.0,0.0,0.0,2.0,0,0
+1635707,36905,G. Til,PSV Eindhoven,Club Brugge KV,Champions League,2026-11-04T20:00:00,local,F,True,90,0.0,0.0,1.0,2.0,0,0
+1635707,365018,R. van Bommel,PSV Eindhoven,Club Brugge KV,Champions League,2026-11-04T20:00:00,local,M,True,69,0.0,0.0,1.0,2.0,0,0
+1635707,386481,M. Diakhon,Club Brugge KV,PSV Eindhoven,Champions League,2026-11-04T20:00:00,visitante,F,True,9,0.0,0.0,0.0,0.0,0,0
+1635707,325594,F. Lemaréchal,Club Brugge KV,PSV Eindhoven,Champions League,2026-11-04T20:00:00,visitante,M,True,54,0.0,0.0,0.0,2.0,0,0
+1635707,290213,H. Siquet,Club Brugge KV,PSV Eindhoven,Champions League,2026-11-04T20:00:00,visitante,D,True,3,0.0,0.0,0.0,0.0,0,0
+1635707,2802,Y. Sommer,Club Brugge KV,PSV Eindhoven,Champions League,2026-11-04T20:00:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1635707,301322,K. Sabbe,Club Brugge KV,PSV Eindhoven,Champions League,2026-11-04T20:00:00,visitante,D,True,90,0.0,0.0,0.0,1.0,0,0
+1635707,304984,J. Spileers,Club Brugge KV,PSV Eindhoven,Champions League,2026-11-04T20:00:00,visitante,D,True,90,0.0,0.0,0.0,1.0,1,0
+1635707,69,B. Mechele,Club Brugge KV,PSV Eindhoven,Champions League,2026-11-04T20:00:00,visitante,D,True,90,0.0,0.0,0.0,1.0,0,0
+1635707,375974,J. Seys,Club Brugge KV,PSV Eindhoven,Champions League,2026-11-04T20:00:00,visitante,D,True,90,0.0,2.0,0.0,0.0,0,0
+1635707,284446,F. Potts,Club Brugge KV,PSV Eindhoven,Champions League,2026-11-04T20:00:00,visitante,M,True,90,0.0,0.0,0.0,0.0,0,0
+1635707,282126,Carlos Forbs,Club Brugge KV,PSV Eindhoven,Champions League,2026-11-04T20:00:00,visitante,M,True,87,1.0,0.0,2.0,3.0,1,0
+1635707,39291,H. Vetlesen,Club Brugge KV,PSV Eindhoven,Champions League,2026-11-04T20:00:00,visitante,M,True,81,0.0,0.0,0.0,0.0,1,0
+1635707,78,H. Vanaken,Club Brugge KV,PSV Eindhoven,Champions League,2026-11-04T20:00:00,visitante,M,True,90,0.0,0.0,0.0,0.0,0,0
+1635707,491248,Jan Virgili,Club Brugge KV,PSV Eindhoven,Champions League,2026-11-04T20:00:00,visitante,M,True,36,0.0,0.0,0.0,0.0,0,0
+1635707,287923,N. Tresoldi,Club Brugge KV,PSV Eindhoven,Champions League,2026-11-04T20:00:00,visitante,F,True,81,1.0,0.0,1.0,2.0,0,0
+1635707,271276,R. Vermant,Club Brugge KV,PSV Eindhoven,Champions League,2026-11-04T20:00:00,visitante,F,True,9,0.0,0.0,0.0,0.0,0,0
+1635656,2063,André Silva,FC Porto,Napoli,Champions League,2026-11-04T20:00:00,local,F,True,56,0.0,0.0,0.0,0.0,0,0
+1635656,2901,Hwang In-Beom,FC Porto,Napoli,Champions League,2026-11-04T20:00:00,local,M,True,12,0.0,1.0,0.0,0.0,0,0
+1635656,94562,S. Giménez,FC Porto,Napoli,Champions League,2026-11-04T20:00:00,local,F,True,23,0.0,1.0,1.0,1.0,0,0
+1635656,30807,S. Fofana,FC Porto,Napoli,Champions League,2026-11-04T20:00:00,local,M,True,12,0.0,0.0,0.0,0.0,0,0
+1635656,358628,Samu,FC Porto,Napoli,Champions League,2026-11-04T20:00:00,local,F,True,34,1.0,0.0,2.0,2.0,0,0
+1635656,126899,Z. Sanusi,FC Porto,Napoli,Champions League,2026-11-04T20:00:00,local,D,True,23,0.0,0.0,0.0,0.0,0,0
+1635656,2999,J. Bednarek,FC Porto,Napoli,Champions League,2026-11-04T20:00:00,local,D,True,90,1.0,0.0,1.0,2.0,0,0
+1635656,330419,Alberto Baio,FC Porto,Napoli,Champions League,2026-11-04T20:00:00,local,D,True,90,0.0,0.0,0.0,2.0,0,0
+1635656,336596,Martim Fernandes,FC Porto,Napoli,Champions League,2026-11-04T20:00:00,local,D,True,67,0.0,0.0,0.0,1.0,0,0
+1635656,388872,Victor Mow Froholdt,FC Porto,Napoli,Champions League,2026-11-04T20:00:00,local,M,True,90,0.0,0.0,0.0,1.0,0,0
+1635656,369,Diogo Costa,FC Porto,Napoli,Champions League,2026-11-04T20:00:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1635656,182504,Gabri Veiga,FC Porto,Napoli,Champions League,2026-11-04T20:00:00,local,M,True,78,1.0,1.0,2.0,4.0,1,0
+1635656,133453,Borja Sainz,FC Porto,Napoli,Champions League,2026-11-04T20:00:00,local,F,True,67,0.0,0.0,0.0,2.0,0,0
+1635656,240,P. Rosario,FC Porto,Napoli,Champions League,2026-11-04T20:00:00,local,M,True,90,0.0,0.0,1.0,1.0,0,0
+1635656,10500,Pepê Aquino,FC Porto,Napoli,Champions League,2026-11-04T20:00:00,local,F,True,78,0.0,0.0,0.0,1.0,0,0
+1635656,61431,J. Kiwior,FC Porto,Napoli,Champions League,2026-11-04T20:00:00,local,D,True,90,1.0,0.0,1.0,2.0,0,0
+1635656,199089,L. Lucca,Napoli,FC Porto,Champions League,2026-11-04T20:00:00,visitante,F,True,9,0.0,0.0,0.0,0.0,0,0
+1635656,312615,Giovane,Napoli,FC Porto,Champions League,2026-11-04T20:00:00,visitante,F,True,12,0.0,0.0,0.0,0.0,0,0
+1635656,544,N. Lang,Napoli,FC Porto,Champions League,2026-11-04T20:00:00,visitante,F,True,12,0.0,0.0,1.0,1.0,0,0
+1635656,347395,A. Vergara,Napoli,FC Porto,Champions League,2026-11-04T20:00:00,visitante,M,True,78,0.0,0.0,1.0,1.0,1,0
+1635656,1314,Amir Rrahmani,Napoli,FC Porto,Champions League,2026-11-04T20:00:00,visitante,D,True,90,0.0,0.0,0.0,0.0,1,0
+1635656,219,M. Politano,Napoli,FC Porto,Champions League,2026-11-04T20:00:00,visitante,M,True,81,0.0,0.0,1.0,1.0,0,0
+1635656,903,S. McTominay,Napoli,FC Porto,Champions League,2026-11-04T20:00:00,visitante,M,True,90,1.0,0.0,2.0,3.0,1,0
+1635656,237066,Rafa Marín,Napoli,FC Porto,Champions League,2026-11-04T20:00:00,visitante,D,True,88,0.0,0.0,0.0,1.0,0,1
+1635656,288006,R. Højlund,Napoli,FC Porto,Champions League,2026-11-04T20:00:00,visitante,F,True,90,0.0,0.0,1.0,3.0,0,0
+1635656,130423,B. Gilmour,Napoli,FC Porto,Champions League,2026-11-04T20:00:00,visitante,M,True,90,0.0,0.0,0.0,1.0,0,0
+1635656,629,K. De Bruyne,Napoli,FC Porto,Champions League,2026-11-04T20:00:00,visitante,F,True,90,0.0,0.0,0.0,0.0,0,0
+1635656,37604,S. Beukema,Napoli,FC Porto,Champions League,2026-11-04T20:00:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1635656,3406,A. Zambo Anguissa,Napoli,FC Porto,Champions League,2026-11-04T20:00:00,visitante,M,True,78,0.0,0.0,0.0,0.0,1,0
+1635656,312,A. Meret,Napoli,FC Porto,Champions League,2026-11-04T20:00:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1635726,337740,Š. Chaloupek,Slavia Praha,Arsenal,Champions League,2026-11-04T20:00:00,local,D,True,9,0.0,0.0,0.0,1.0,0,0
+1635726,365840,E. Ayaosi,Slavia Praha,Arsenal,Champions League,2026-11-04T20:00:00,local,M,True,71,0.0,0.0,0.0,2.0,0,0
+1635726,2252,T. Holeš,Slavia Praha,Arsenal,Champions League,2026-11-04T20:00:00,local,D,True,90,0.0,0.0,0.0,1.0,0,0
+1635726,400679,D. Moses,Slavia Praha,Arsenal,Champions League,2026-11-04T20:00:00,local,M,True,81,0.0,0.0,0.0,0.0,1,0
+1635726,368737,W. Nowak,Slavia Praha,Arsenal,Champions League,2026-11-04T20:00:00,local,F,True,90,1.0,0.0,2.0,2.0,0,0
+1635726,241,M. Sadílek,Slavia Praha,Arsenal,Champions League,2026-11-04T20:00:00,local,M,True,90,0.0,0.0,0.0,0.0,0,0
+1635726,135273,D. Šturm,Slavia Praha,Arsenal,Champions League,2026-11-04T20:00:00,local,M,True,45,0.0,0.0,0.0,0.0,0,0
+1635726,1236,T. Vlček,Slavia Praha,Arsenal,Champions League,2026-11-04T20:00:00,local,D,True,61,0.0,0.0,0.0,0.0,0,0
+1635726,128772,D. Zima,Slavia Praha,Arsenal,Champions League,2026-11-04T20:00:00,local,D,True,90,0.0,0.0,0.0,2.0,0,0
+1635726,431177,N. Domchak,Slavia Praha,Arsenal,Champions League,2026-11-04T20:00:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1635726,66275,M. Chytil,Slavia Praha,Arsenal,Champions League,2026-11-04T20:00:00,local,F,True,45,0.0,0.0,1.0,1.0,0,0
+1635726,128793,D. Jurásek,Slavia Praha,Arsenal,Champions League,2026-11-04T20:00:00,local,D,True,19,0.0,1.0,0.0,1.0,0,0
+1635726,388774,M. Konečný,Slavia Praha,Arsenal,Champions League,2026-11-04T20:00:00,local,D,True,29,0.0,0.0,1.0,3.0,0,0
+1635726,276551,A. N&apos;Guessan,Slavia Praha,Arsenal,Champions League,2026-11-04T20:00:00,local,D,True,45,0.0,0.0,0.0,1.0,0,0
+1635726,551776,M. E. Suleiman,Slavia Praha,Arsenal,Champions League,2026-11-04T20:00:00,local,M,True,45,0.0,0.0,0.0,0.0,0,0
+1635726,524412,O. Kubiak,Slavia Praha,Arsenal,Champions League,2026-11-04T20:00:00,local,D,True,90,0.0,0.0,2.0,4.0,0,0
+1635726,19586,E. Eze,Arsenal,Slavia Praha,Champions League,2026-11-04T20:00:00,visitante,M,True,62,0.0,0.0,0.0,1.0,0,0
+1635726,22224,Gabriel Magalhães,Arsenal,Slavia Praha,Champions League,2026-11-04T20:00:00,visitante,D,True,90,0.0,0.0,0.0,1.0,0,0
+1635726,18979,V. Gyökeres,Arsenal,Slavia Praha,Champions League,2026-11-04T20:00:00,visitante,F,True,78,1.0,1.0,1.0,2.0,0,0
+1635726,127817,P. Hincapié,Arsenal,Slavia Praha,Champions League,2026-11-04T20:00:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1635726,19354,E. Konsa,Arsenal,Slavia Praha,Champions League,2026-11-04T20:00:00,visitante,D,True,62,0.0,0.0,0.0,0.0,1,0
+1635726,136723,N. Madueke,Arsenal,Slavia Praha,Champions League,2026-11-04T20:00:00,visitante,M,True,89,1.0,0.0,2.0,2.0,0,0
+1635726,47311,Mikel Merino,Arsenal,Slavia Praha,Champions League,2026-11-04T20:00:00,visitante,M,True,90,0.0,1.0,2.0,3.0,0,0
+1635726,2937,D. Rice,Arsenal,Slavia Praha,Champions League,2026-11-04T20:00:00,visitante,M,True,90,0.0,0.0,0.0,0.0,1,0
+1635726,19959,B. White,Arsenal,Slavia Praha,Champions League,2026-11-04T20:00:00,visitante,D,True,78,0.0,0.0,0.0,0.0,0,0
+1635726,47315,Martín Zubimendi,Arsenal,Slavia Praha,Champions League,2026-11-04T20:00:00,visitante,M,True,90,0.0,0.0,0.0,0.0,0,0
+1635726,19465,David Raya,Arsenal,Slavia Praha,Champions League,2026-11-04T20:00:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1635726,442044,M. Dowman,Arsenal,Slavia Praha,Champions League,2026-11-04T20:00:00,visitante,F,True,1,0.0,0.0,0.0,0.0,0,0
+1635726,333682,Cristhian Mosquera,Arsenal,Slavia Praha,Champions League,2026-11-04T20:00:00,visitante,D,True,28,0.0,0.0,0.0,0.0,0,0
+1635726,37127,M. Ødegaard,Arsenal,Slavia Praha,Champions League,2026-11-04T20:00:00,visitante,M,True,12,0.0,0.0,0.0,1.0,0,0
+1635726,38746,J. Timber,Arsenal,Slavia Praha,Champions League,2026-11-04T20:00:00,visitante,D,True,12,0.0,0.0,0.0,1.0,0,0
+1635726,161800,C. Tzolis,Arsenal,Slavia Praha,Champions League,2026-11-04T20:00:00,visitante,F,True,28,0.0,0.0,0.0,1.0,0,0
+1635745,39285,K. Askildsen,Viking,Sabah FA,Champions League,2026-11-04T20:00:00,local,M,True,90,0.0,0.0,0.0,1.0,0,0
+1635745,8626,H. Bjørdal,Viking,Sabah FA,Champions League,2026-11-04T20:00:00,local,M,True,56,0.0,0.0,0.0,0.0,0,0
+1635745,1188,E. Botheim,Viking,Sabah FA,Champions League,2026-11-04T20:00:00,local,F,True,90,2.0,0.0,2.0,4.0,0,0
+1635745,180937,H. Falchener,Viking,Sabah FA,Champions League,2026-11-04T20:00:00,local,D,True,90,1.0,0.0,1.0,2.0,0,0
+1635745,39040,K. Haugen,Viking,Sabah FA,Champions League,2026-11-04T20:00:00,local,D,True,66,0.0,1.0,0.0,0.0,1,0
+1635745,264710,H. Heggheim,Viking,Sabah FA,Champions League,2026-11-04T20:00:00,local,D,True,56,0.0,0.0,0.0,0.0,0,0
+1635745,318591,S. Kvia-Egeskog,Viking,Sabah FA,Champions League,2026-11-04T20:00:00,local,M,True,86,0.0,0.0,1.0,2.0,0,0
+1635745,464563,T. Moi,Viking,Sabah FA,Champions League,2026-11-04T20:00:00,local,M,True,86,0.0,0.0,0.0,0.0,0,0
+1635745,6937,G. Stensness,Viking,Sabah FA,Champions League,2026-11-04T20:00:00,local,D,True,90,0.0,0.0,0.0,2.0,1,0
+1635745,39145,Z. Tripić,Viking,Sabah FA,Champions League,2026-11-04T20:00:00,local,M,True,90,1.0,1.0,3.0,5.0,0,0
+1635745,450965,Vetle Auklend,Viking,Sabah FA,Champions League,2026-11-04T20:00:00,local,D,True,24,0.0,0.0,0.0,1.0,0,0
+1635745,1170,A. Østbø,Viking,Sabah FA,Champions League,2026-11-04T20:00:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1635745,15622,P. Christiansen,Viking,Sabah FA,Champions League,2026-11-04T20:00:00,local,F,True,34,0.0,1.0,1.0,3.0,0,0
+1635745,465702,N. Fuglestad,Viking,Sabah FA,Champions League,2026-11-04T20:00:00,local,F,True,4,0.0,0.0,0.0,1.0,0,0
+1635745,457199,J. Hansen,Viking,Sabah FA,Champions League,2026-11-04T20:00:00,local,M,True,4,0.0,0.0,0.0,0.0,0,0
+1635745,191732,H. Haugen,Viking,Sabah FA,Champions League,2026-11-04T20:00:00,local,D,True,34,0.0,0.0,0.0,0.0,0,0
+1635745,123366,R. Daşdəmirov,Sabah FA,Viking,Champions League,2026-11-04T20:00:00,visitante,D,True,11,0.0,0.0,0.0,0.0,0,0
+1635745,271724,A. Xaybulayev,Sabah FA,Viking,Champions League,2026-11-04T20:00:00,visitante,M,True,71,0.0,0.0,0.0,2.0,0,0
+1635745,14285,I. Lepinjica,Sabah FA,Viking,Champions League,2026-11-04T20:00:00,visitante,M,True,90,0.0,0.0,0.0,1.0,0,0
+1635745,191322,P. Mbina,Sabah FA,Viking,Champions League,2026-11-04T20:00:00,visitante,F,True,70,1.0,0.0,1.0,2.0,0,0
+1635745,349345,A. McCarthy,Sabah FA,Viking,Champions League,2026-11-04T20:00:00,visitante,D,True,77,0.0,0.0,0.0,1.0,0,1
+1635745,461130,C. Nwachukwu,Sabah FA,Viking,Champions League,2026-11-04T20:00:00,visitante,M,True,71,0.0,0.0,0.0,0.0,0,0
+1635745,40984,T. Puchacz,Sabah FA,Viking,Champions League,2026-11-04T20:00:00,visitante,D,True,90,0.0,0.0,1.0,3.0,0,0
+1635745,328759,U. Rahmonaliyev,Sabah FA,Viking,Champions League,2026-11-04T20:00:00,visitante,M,True,79,0.0,1.0,1.0,2.0,1,0
+1635745,360,V. Simić,Sabah FA,Viking,Champions League,2026-11-04T20:00:00,visitante,M,True,33,0.0,0.0,0.0,0.0,0,0
+1635745,21233,A. Zedadka,Sabah FA,Viking,Champions League,2026-11-04T20:00:00,visitante,D,True,90,0.0,0.0,0.0,2.0,0,0
+1635745,56074,S. Pokatilov,Sabah FA,Viking,Champions League,2026-11-04T20:00:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1635745,321432,Du Queiroz,Sabah FA,Viking,Champions League,2026-11-04T20:00:00,visitante,M,True,19,0.0,0.0,0.0,0.0,0,0
+1635745,127602,J. Mickels,Sabah FA,Viking,Champions League,2026-11-04T20:00:00,visitante,F,True,57,0.0,0.0,1.0,2.0,1,0
+1635745,308839,X. Severina,Sabah FA,Viking,Champions League,2026-11-04T20:00:00,visitante,M,True,19,0.0,0.0,0.0,0.0,0,0
+1635745,174827,S. Solvet,Sabah FA,Viking,Champions League,2026-11-04T20:00:00,visitante,D,True,90,0.0,0.0,0.0,1.0,0,0
+1492445,11756,Agustín Rossi,Flamengo,Gremio,Brasileirao,2026-11-04T22:30:00,local,G,True,90,0.0,0.0,0.0,,0,0
+1492445,1290,Guillermo Varela,Flamengo,Gremio,Brasileirao,2026-11-04T22:30:00,local,D,True,90,0.0,0.0,0.0,,0,0
+1492445,9458,Léo Ortiz,Flamengo,Gremio,Brasileirao,2026-11-04T22:30:00,local,D,True,90,0.0,0.0,0.0,,0,0
+1492445,10124,Léo Pereira,Flamengo,Gremio,Brasileirao,2026-11-04T22:30:00,local,D,True,90,0.0,0.0,1.0,3.0,0,0
+1492445,1771,Ayrton Lucas,Flamengo,Gremio,Brasileirao,2026-11-04T22:30:00,local,D,True,45,0.0,0.0,0.0,,0,0
+1492445,2560,Erick Pulgar,Flamengo,Gremio,Brasileirao,2026-11-04T22:30:00,local,M,True,90,0.0,0.0,1.0,1.0,0,0
+1492445,2289,Jorginho,Flamengo,Gremio,Brasileirao,2026-11-04T22:30:00,local,M,True,90,0.0,0.0,0.0,,0,0
+1492445,5994,Jorge Carrascal,Flamengo,Gremio,Brasileirao,2026-11-04T22:30:00,local,M,True,45,0.0,1.0,0.0,,0,0
+1492445,2612,Giorgian de Arrascaeta,Flamengo,Gremio,Brasileirao,2026-11-04T22:30:00,local,M,True,75,0.0,0.0,0.0,1.0,0,0
+1492445,126936,Samuel Lino,Flamengo,Gremio,Brasileirao,2026-11-04T22:30:00,local,M,True,86,1.0,0.0,3.0,4.0,0,0
+1492445,10321,Pedro Guilherme,Flamengo,Gremio,Brasileirao,2026-11-04T22:30:00,local,F,True,89,2.0,0.0,3.0,6.0,0,0
+1492445,1566,Emerson Royal,Flamengo,Gremio,Brasileirao,2026-11-04T22:30:00,local,D,False,45,0.0,0.0,0.0,,0,0
+1492445,22238,Luiz Araújo,Flamengo,Gremio,Brasileirao,2026-11-04T22:30:00,local,F,False,45,0.0,0.0,0.0,,0,0
+1492445,10180,Bruno Henrique,Flamengo,Gremio,Brasileirao,2026-11-04T22:30:00,local,F,False,15,0.0,0.0,0.0,,0,0
+1492445,560314,Joaquín Freitas,Flamengo,Gremio,Brasileirao,2026-11-04T22:30:00,local,F,False,8,0.0,0.0,0.0,,0,0
+1492445,48,Saúl Ñíguez,Flamengo,Gremio,Brasileirao,2026-11-04T22:30:00,local,M,False,1,0.0,0.0,0.0,,0,0
+1492445,309634,Gabriel Grando,Gremio,Flamengo,Brasileirao,2026-11-04T22:30:00,visitante,G,True,90,0.0,0.0,0.0,,0,0
+1492445,9916,Marcos Rocha,Gremio,Flamengo,Brasileirao,2026-11-04T22:30:00,visitante,D,True,45,0.0,0.0,0.0,,0,0
+1492445,304867,Gustavo Martins,Gremio,Flamengo,Brasileirao,2026-11-04T22:30:00,visitante,D,True,90,0.0,0.0,0.0,,0,0
+1492445,2466,Walter Kannemann,Gremio,Flamengo,Brasileirao,2026-11-04T22:30:00,visitante,D,True,75,0.0,0.0,0.0,,1,0
+1492445,647516,Pedro Gabriel,Gremio,Flamengo,Brasileirao,2026-11-04T22:30:00,visitante,D,True,45,0.0,0.0,0.0,,0,0
+1492445,199141,Erick Noriega,Gremio,Flamengo,Brasileirao,2026-11-04T22:30:00,visitante,M,True,90,0.0,0.0,0.0,,0,0
+1492445,691,Tetê,Gremio,Flamengo,Brasileirao,2026-11-04T22:30:00,visitante,M,True,45,0.0,0.0,0.0,,0,0
+1492445,70566,Mathias Villasanti,Gremio,Flamengo,Brasileirao,2026-11-04T22:30:00,visitante,M,True,90,0.0,0.0,0.0,,1,0
+1492445,10314,Dodi,Gremio,Flamengo,Brasileirao,2026-11-04T22:30:00,visitante,M,True,90,0.0,0.0,0.0,,0,0
+1492445,10527,Caio Paulista,Gremio,Flamengo,Brasileirao,2026-11-04T22:30:00,visitante,M,True,90,0.0,0.0,1.0,1.0,0,0
+1492445,2737,Martin Braithwaite,Gremio,Flamengo,Brasileirao,2026-11-04T22:30:00,visitante,F,True,86,0.0,0.0,2.0,2.0,0,0
+1492445,374,João Pedro,Gremio,Flamengo,Brasileirao,2026-11-04T22:30:00,visitante,D,False,45,0.0,0.0,0.0,,0,0
+1492445,1431,Francis Amuzu,Gremio,Flamengo,Brasileirao,2026-11-04T22:30:00,visitante,F,False,45,1.0,0.0,1.0,3.0,0,0
+1492445,13616,José Enamorado,Gremio,Flamengo,Brasileirao,2026-11-04T22:30:00,visitante,F,False,45,0.0,0.0,0.0,,0,0
+1492445,574,Filip Krovinović,Gremio,Flamengo,Brasileirao,2026-11-04T22:30:00,visitante,M,False,15,0.0,0.0,0.0,,0,0
+1492445,269441,Matheus Nascimento,Gremio,Flamengo,Brasileirao,2026-11-04T22:30:00,visitante,F,False,8,0.0,0.0,0.0,,0,0
+1492440,321646,Mycael,Atletico Paranaense,Vasco DA Gama,Brasileirao,2026-11-04T22:30:00,local,G,True,90,0.0,0.0,0.0,,0,0
+1492440,408987,Dantas,Atletico Paranaense,Vasco DA Gama,Brasileirao,2026-11-04T22:30:00,local,D,True,90,0.0,0.0,0.0,,1,0
+1492440,36258,Juan Felipe Aguirre,Atletico Paranaense,Vasco DA Gama,Brasileirao,2026-11-04T22:30:00,local,D,True,69,0.0,0.0,0.0,,0,0
+1492440,457420,Arthur Dias,Atletico Paranaense,Vasco DA Gama,Brasileirao,2026-11-04T22:30:00,local,D,True,90,0.0,0.0,0.0,,1,0
+1492440,58577,Gastón Benavídez,Atletico Paranaense,Vasco DA Gama,Brasileirao,2026-11-04T22:30:00,local,M,True,87,0.0,0.0,0.0,,0,0
+1492440,10091,Jádson,Atletico Paranaense,Vasco DA Gama,Brasileirao,2026-11-04T22:30:00,local,M,True,69,0.0,0.0,0.0,,1,0
+1492440,1909,Luiz Gustavo,Atletico Paranaense,Vasco DA Gama,Brasileirao,2026-11-04T22:30:00,local,M,True,90,0.0,1.0,0.0,,0,0
+1492440,288704,Lucas Esquivel,Atletico Paranaense,Vasco DA Gama,Brasileirao,2026-11-04T22:30:00,local,M,True,90,0.0,0.0,1.0,3.0,0,0
+1492440,21394,Steven Mendoza,Atletico Paranaense,Vasco DA Gama,Brasileirao,2026-11-04T22:30:00,local,F,True,45,1.0,0.0,3.0,3.0,0,0
+1492440,323800,Kerwin Vargas,Atletico Paranaense,Vasco DA Gama,Brasileirao,2026-11-04T22:30:00,local,F,True,86,0.0,0.0,0.0,1.0,0,0
+1492440,13198,Kevin Viveros,Atletico Paranaense,Vasco DA Gama,Brasileirao,2026-11-04T22:30:00,local,F,True,77,0.0,0.0,0.0,,0,1
+1492440,414661,João Cruz,Atletico Paranaense,Vasco DA Gama,Brasileirao,2026-11-04T22:30:00,local,M,False,45,0.0,0.0,0.0,,0,0
+1492440,13151,Juan Portilla,Atletico Paranaense,Vasco DA Gama,Brasileirao,2026-11-04T22:30:00,local,M,False,21,0.0,0.0,0.0,,0,0
+1492440,408145,Leozinho,Atletico Paranaense,Vasco DA Gama,Brasileirao,2026-11-04T22:30:00,local,F,False,21,0.0,0.0,0.0,1.0,0,0
+1492440,393877,Jorge Rivaldo,Atletico Paranaense,Vasco DA Gama,Brasileirao,2026-11-04T22:30:00,local,F,False,9,0.0,0.0,0.0,1.0,0,0
+1492440,10305,Gilberto,Atletico Paranaense,Vasco DA Gama,Brasileirao,2026-11-04T22:30:00,local,D,False,8,0.0,0.0,0.0,,0,0
+1492440,41169,Léo Jardim,Vasco DA Gama,Atletico Paranaense,Brasileirao,2026-11-04T22:30:00,visitante,G,True,90,0.0,0.0,0.0,,0,0
+1492440,159511,Gabriel Pereira,Vasco DA Gama,Atletico Paranaense,Brasileirao,2026-11-04T22:30:00,visitante,D,True,90,1.0,0.0,1.0,1.0,0,0
+1492440,310774,Alan Saldivia,Vasco DA Gama,Atletico Paranaense,Brasileirao,2026-11-04T22:30:00,visitante,D,True,90,0.0,0.0,0.0,,0,0
+1492440,359372,Robert Renan,Vasco DA Gama,Atletico Paranaense,Brasileirao,2026-11-04T22:30:00,visitante,D,True,90,0.0,0.0,0.0,,0,0
+1492440,51426,Puma Rodríguez,Vasco DA Gama,Atletico Paranaense,Brasileirao,2026-11-04T22:30:00,visitante,M,True,89,0.0,1.0,1.0,1.0,0,0
+1492440,358383,Alan Lescano,Vasco DA Gama,Atletico Paranaense,Brasileirao,2026-11-04T22:30:00,visitante,M,True,75,0.0,0.0,0.0,,1,0
+1492440,6006,Santiago Sosa,Vasco DA Gama,Atletico Paranaense,Brasileirao,2026-11-04T22:30:00,visitante,M,True,45,0.0,0.0,0.0,,0,0
+1492440,22232,Thiago Mendes,Vasco DA Gama,Atletico Paranaense,Brasileirao,2026-11-04T22:30:00,visitante,M,True,90,0.0,0.0,0.0,,0,0
+1492440,353034,Cuiabano,Vasco DA Gama,Atletico Paranaense,Brasileirao,2026-11-04T22:30:00,visitante,M,True,90,0.0,0.0,0.0,2.0,0,0
+1492440,345748,Andrés Gómez,Vasco DA Gama,Atletico Paranaense,Brasileirao,2026-11-04T22:30:00,visitante,F,True,75,0.0,0.0,0.0,1.0,0,0
+1492440,9975,Brenner,Vasco DA Gama,Atletico Paranaense,Brasileirao,2026-11-04T22:30:00,visitante,F,True,45,0.0,0.0,0.0,,0,0
+1492440,214,Facundo Colidio,Vasco DA Gama,Atletico Paranaense,Brasileirao,2026-11-04T22:30:00,visitante,F,False,45,0.0,1.0,0.0,,0,0
+1492440,63475,Bruno Duarte,Vasco DA Gama,Atletico Paranaense,Brasileirao,2026-11-04T22:30:00,visitante,F,False,45,1.0,0.0,1.0,1.0,0,0
+1492440,614200,Ramon Rique,Vasco DA Gama,Atletico Paranaense,Brasileirao,2026-11-04T22:30:00,visitante,M,False,15,0.0,0.0,0.0,,0,0
+1492440,9890,Jair,Vasco DA Gama,Atletico Paranaense,Brasileirao,2026-11-04T22:30:00,visitante,M,False,15,0.0,0.0,0.0,,0,0
+1492440,133910,Paulo Henrique,Vasco DA Gama,Atletico Paranaense,Brasileirao,2026-11-04T22:30:00,visitante,D,False,1,0.0,0.0,0.0,,0,0
+1648266,643856,M. Aguilar,Venados FC,Monarcas,Liga de Expansion MX,2026-11-04T23:00:00,local,D,True,45,0.0,0.0,0.0,0.0,1,0
+1648266,345701,J. Moreno,Venados FC,Monarcas,Liga de Expansion MX,2026-11-04T23:00:00,local,D,True,86,0.0,0.0,0.0,1.0,1,1
+1648266,551482,S. Montiel,Venados FC,Monarcas,Liga de Expansion MX,2026-11-04T23:00:00,local,D,True,57,0.0,1.0,0.0,0.0,1,0
+1648266,35905,I. Domínguez,Venados FC,Monarcas,Liga de Expansion MX,2026-11-04T23:00:00,local,D,True,90,0.0,0.0,0.0,1.0,0,0
+1648266,35718,A. Domínguez,Venados FC,Monarcas,Liga de Expansion MX,2026-11-04T23:00:00,local,M,True,76,0.0,0.0,0.0,1.0,0,0
+1648266,136509,S. Naveda,Venados FC,Monarcas,Liga de Expansion MX,2026-11-04T23:00:00,local,M,True,90,0.0,0.0,0.0,2.0,1,0
+1648266,94566,D. Tejeda,Venados FC,Monarcas,Liga de Expansion MX,2026-11-04T23:00:00,local,F,True,83,1.0,0.0,1.0,3.0,0,0
+1648266,656156,P. Kilani,Venados FC,Monarcas,Liga de Expansion MX,2026-11-04T23:00:00,local,F,True,90,0.0,0.0,1.0,3.0,0,0
+1648266,157765,J. Reyes,Venados FC,Monarcas,Liga de Expansion MX,2026-11-04T23:00:00,local,F,True,90,0.0,0.0,0.0,0.0,0,0
+1648266,416164,S. Perez-Meraz,Venados FC,Monarcas,Liga de Expansion MX,2026-11-04T23:00:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1648266,641444,L. Macias,Venados FC,Monarcas,Liga de Expansion MX,2026-11-04T23:00:00,local,M,True,7,0.0,0.0,0.0,0.0,0,0
+1648266,630288,M. Montelongo,Venados FC,Monarcas,Liga de Expansion MX,2026-11-04T23:00:00,local,D,True,33,0.0,0.0,0.0,0.0,0,0
+1648266,550186,Ochoa Brandon,Venados FC,Monarcas,Liga de Expansion MX,2026-11-04T23:00:00,local,D,True,14,0.0,0.0,0.0,0.0,0,0
+1648266,35782,D. de Buen,Monarcas,Venados FC,Liga de Expansion MX,2026-11-04T23:00:00,visitante,M,True,89,0.0,0.0,0.0,3.0,0,0
+1648266,35703,R. Pasquel,Monarcas,Venados FC,Liga de Expansion MX,2026-11-04T23:00:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1648266,35875,J. Van Rankin,Monarcas,Venados FC,Liga de Expansion MX,2026-11-04T23:00:00,visitante,D,True,90,1.0,0.0,1.0,2.0,1,0
+1648266,237244,G. Martínez,Monarcas,Venados FC,Liga de Expansion MX,2026-11-04T23:00:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1648266,36166,R. Sandoval,Monarcas,Venados FC,Liga de Expansion MX,2026-11-04T23:00:00,visitante,D,True,90,0.0,1.0,0.0,1.0,0,0
+1648266,237212,J. Martínez,Monarcas,Venados FC,Liga de Expansion MX,2026-11-04T23:00:00,visitante,M,True,89,0.0,0.0,1.0,3.0,1,0
+1648266,141154,A. Andrade,Monarcas,Venados FC,Liga de Expansion MX,2026-11-04T23:00:00,visitante,M,True,90,0.0,0.0,0.0,2.0,0,0
+1648266,35572,M. Domínguez,Monarcas,Venados FC,Liga de Expansion MX,2026-11-04T23:00:00,visitante,M,True,16,0.0,0.0,0.0,0.0,0,0
+1648266,163012,R. del Campo,Monarcas,Venados FC,Liga de Expansion MX,2026-11-04T23:00:00,visitante,F,True,78,0.0,0.0,1.0,2.0,0,0
+1648266,153152,O. Botello,Monarcas,Venados FC,Liga de Expansion MX,2026-11-04T23:00:00,visitante,M,True,1,0.0,0.0,0.0,0.0,0,0
+1648266,127233,M. Rodríguez,Monarcas,Venados FC,Liga de Expansion MX,2026-11-04T23:00:00,visitante,F,True,74,0.0,0.0,2.0,3.0,0,0
+1549845,566614,Federico Abadía,Cucuta,Santa Fe,Liga Colombia,2026-11-04T23:30:00,local,G,True,90,0.0,0.0,0.0,,0,0
+1549845,70581,Hernán Lópes,Cucuta,Santa Fe,Liga Colombia,2026-11-04T23:30:00,local,D,True,90,0.0,0.0,0.0,,0,0
+1549845,159163,Brayan Montaño,Cucuta,Santa Fe,Liga Colombia,2026-11-04T23:30:00,local,D,True,90,0.0,0.0,0.0,,0,0
+1549845,13323,Mauricio Duarte,Cucuta,Santa Fe,Liga Colombia,2026-11-04T23:30:00,local,D,True,90,0.0,0.0,0.0,,0,0
+1549845,306733,Leider Berdugo,Cucuta,Santa Fe,Liga Colombia,2026-11-04T23:30:00,local,M,True,90,1.0,0.0,1.0,2.0,0,0
+1549845,295512,Diego Calcaterra,Cucuta,Santa Fe,Liga Colombia,2026-11-04T23:30:00,local,M,True,68,0.0,0.0,1.0,1.0,0,0
+1549845,13369,Carlos Rentería,Cucuta,Santa Fe,Liga Colombia,2026-11-04T23:30:00,local,M,True,90,0.0,0.0,0.0,,0,0
+1549845,555163,Dayan Pérez,Cucuta,Santa Fe,Liga Colombia,2026-11-04T23:30:00,local,F,True,82,0.0,0.0,0.0,,0,0
+1549845,6626,Gustavo Torres,Cucuta,Santa Fe,Liga Colombia,2026-11-04T23:30:00,local,F,True,57,0.0,0.0,0.0,3.0,0,0
+1549845,325996,Marlon Carabali,Cucuta,Santa Fe,Liga Colombia,2026-11-04T23:30:00,local,F,True,82,0.0,0.0,0.0,,0,0
+1549845,299728,Yair Joao Abonia Vasquez,Cucuta,Santa Fe,Liga Colombia,2026-11-04T23:30:00,local,D,False,33,0.0,0.0,0.0,,0,0
+1549845,427330,Jaime Peralta,Cucuta,Santa Fe,Liga Colombia,2026-11-04T23:30:00,local,F,False,33,0.0,1.0,0.0,1.0,1,0
+1549845,52787,Victor Mejia,Cucuta,Santa Fe,Liga Colombia,2026-11-04T23:30:00,local,M,False,22,0.0,0.0,0.0,,0,0
+1549845,126093,Juan Ceballos,Cucuta,Santa Fe,Liga Colombia,2026-11-04T23:30:00,local,M,False,8,0.0,0.0,0.0,,0,0
+1549845,13344,Jhonatan Agudelo,Cucuta,Santa Fe,Liga Colombia,2026-11-04T23:30:00,local,F,False,8,0.0,0.0,0.0,,0,0
+1549845,13494,Weimar Asprilla,Santa Fe,Cucuta,Liga Colombia,2026-11-04T23:30:00,visitante,G,True,90,0.0,0.0,0.0,,0,0
+1549845,2486,Helibelton Palacios,Santa Fe,Cucuta,Liga Colombia,2026-11-04T23:30:00,visitante,D,True,73,0.0,0.0,0.0,,0,0
+1549845,6639,Emanuel Olivera,Santa Fe,Cucuta,Liga Colombia,2026-11-04T23:30:00,visitante,D,True,90,0.0,0.0,0.0,,0,0
+1549845,13258,Victor Moreno,Santa Fe,Cucuta,Liga Colombia,2026-11-04T23:30:00,visitante,D,True,90,0.0,0.0,0.0,1.0,0,0
+1549845,59514,Mateo Puerta,Santa Fe,Cucuta,Liga Colombia,2026-11-04T23:30:00,visitante,D,True,43,0.0,0.0,0.0,,1,0
+1549845,13755,Jader Obrian,Santa Fe,Cucuta,Liga Colombia,2026-11-04T23:30:00,visitante,M,True,76,0.0,0.0,0.0,,0,0
+1549845,46720,Daniel Torres,Santa Fe,Cucuta,Liga Colombia,2026-11-04T23:30:00,visitante,M,True,73,0.0,0.0,0.0,,1,0
+1549845,379104,Jhojan Torres,Santa Fe,Cucuta,Liga Colombia,2026-11-04T23:30:00,visitante,M,True,90,0.0,0.0,0.0,,0,0
+1549845,136097,Emerson Rodríguez,Santa Fe,Cucuta,Liga Colombia,2026-11-04T23:30:00,visitante,M,True,90,0.0,0.0,2.0,3.0,0,0
+1549845,13485,Alexis Zapata,Santa Fe,Cucuta,Liga Colombia,2026-11-04T23:30:00,visitante,F,True,90,0.0,0.0,2.0,3.0,0,0
+1549845,49892,Hugo Rodallega,Santa Fe,Cucuta,Liga Colombia,2026-11-04T23:30:00,visitante,F,True,90,0.0,0.0,2.0,5.0,0,0
+1549845,323288,Luis Angel Palacios,Santa Fe,Cucuta,Liga Colombia,2026-11-04T23:30:00,visitante,F,False,47,0.0,0.0,0.0,1.0,0,0
+1549845,13287,Christian Mafla,Santa Fe,Cucuta,Liga Colombia,2026-11-04T23:30:00,visitante,D,False,17,0.0,0.0,0.0,,0,0
+1549845,6523,Maximiliano Lovera,Santa Fe,Cucuta,Liga Colombia,2026-11-04T23:30:00,visitante,F,False,17,0.0,0.0,0.0,,0,0
+1549845,35751,Omar Fernández,Santa Fe,Cucuta,Liga Colombia,2026-11-04T23:30:00,visitante,F,False,14,0.0,0.0,0.0,,0,0
+1492441,10152,Gabriel Batista,Botafogo,Atletico-MG,Brasileirao,2026-11-05T00:30:00,local,G,True,90,0.0,0.0,0.0,,0,0
+1492441,2440,Nahuel Ferraresi,Botafogo,Atletico-MG,Brasileirao,2026-11-05T00:30:00,local,D,True,90,0.0,0.0,0.0,2.0,0,0
+1492441,544707,Gabriel Justino,Botafogo,Atletico-MG,Brasileirao,2026-11-05T00:30:00,local,D,True,90,0.0,0.0,0.0,,0,0
+1492441,652,Marçal,Botafogo,Atletico-MG,Brasileirao,2026-11-05T00:30:00,local,D,True,90,0.0,0.0,0.0,,1,0
+1492441,8661,Vitinho,Botafogo,Atletico-MG,Brasileirao,2026-11-05T00:30:00,local,M,True,90,0.0,1.0,0.0,,0,0
+1492441,10387,Edenilson,Botafogo,Atletico-MG,Brasileirao,2026-11-05T00:30:00,local,M,True,55,1.0,0.0,1.0,2.0,0,0
+1492441,505409,Huguinho,Botafogo,Atletico-MG,Brasileirao,2026-11-05T00:30:00,local,M,True,90,0.0,0.0,0.0,,0,0
+1492441,237186,Cristian Medina,Botafogo,Atletico-MG,Brasileirao,2026-11-05T00:30:00,local,M,True,76,0.0,0.0,0.0,,1,0
+1492441,10016,Paulinho,Botafogo,Atletico-MG,Brasileirao,2026-11-05T00:30:00,local,M,True,64,0.0,0.0,0.0,,0,0
+1492441,553,Danilo Pereira,Botafogo,Atletico-MG,Brasileirao,2026-11-05T00:30:00,local,F,True,55,0.0,0.0,0.0,1.0,0,0
+1492441,390,Tiquinho Soares,Botafogo,Atletico-MG,Brasileirao,2026-11-05T00:30:00,local,F,True,76,0.0,0.0,0.0,4.0,0,0
+1492441,378,Alex Telles,Botafogo,Atletico-MG,Brasileirao,2026-11-05T00:30:00,local,D,False,35,0.0,0.0,0.0,,0,0
+1492441,305821,Matheus Martins,Botafogo,Atletico-MG,Brasileirao,2026-11-05T00:30:00,local,F,False,35,0.0,0.0,1.0,2.0,0,0
+1492441,413140,Kauan Toledo,Botafogo,Atletico-MG,Brasileirao,2026-11-05T00:30:00,local,M,False,26,0.0,0.0,1.0,1.0,0,0
+1492441,237165,Domingos Andrade,Botafogo,Atletico-MG,Brasileirao,2026-11-05T00:30:00,local,M,False,14,0.0,0.0,0.0,,0,0
+1492441,9938,Arthur Cabral,Botafogo,Atletico-MG,Brasileirao,2026-11-05T00:30:00,local,F,False,14,0.0,0.0,0.0,,0,0
+1492441,9978,Everson,Atletico-MG,Botafogo,Brasileirao,2026-11-05T00:30:00,visitante,G,True,90,0.0,0.0,0.0,,0,0
+1492441,2583,Ángelo Preciado,Atletico-MG,Botafogo,Brasileirao,2026-11-05T00:30:00,visitante,D,True,90,0.0,0.0,0.0,1.0,0,0
+1492441,515668,Vitão,Atletico-MG,Botafogo,Brasileirao,2026-11-05T00:30:00,visitante,D,True,89,0.0,0.0,0.0,,0,0
+1492441,10160,Léo Duarte,Atletico-MG,Botafogo,Brasileirao,2026-11-05T00:30:00,visitante,D,True,90,0.0,0.0,0.0,,0,0
+1492441,609544,Kauã Pascini,Atletico-MG,Botafogo,Brasileirao,2026-11-05T00:30:00,visitante,D,True,90,0.0,0.0,1.0,1.0,1,0
+1492441,414544,Tomás Pérez,Atletico-MG,Botafogo,Brasileirao,2026-11-05T00:30:00,visitante,M,True,68,0.0,0.0,0.0,,1,0
+1492441,615196,Mamady Cissé,Atletico-MG,Botafogo,Brasileirao,2026-11-05T00:30:00,visitante,M,True,85,0.0,0.0,0.0,1.0,0,0
+1492441,9926,Gustavo Scarpa,Atletico-MG,Botafogo,Brasileirao,2026-11-05T00:30:00,visitante,M,True,90,0.0,0.0,0.0,2.0,0,0
+1492441,363323,Alexsander,Atletico-MG,Botafogo,Brasileirao,2026-11-05T00:30:00,visitante,M,True,90,0.0,0.0,1.0,1.0,0,0
+1492441,9939,Dudu,Atletico-MG,Botafogo,Brasileirao,2026-11-05T00:30:00,visitante,M,True,90,0.0,0.0,1.0,3.0,0,0
+1492441,609519,Cauã Campos Soares,Atletico-MG,Botafogo,Brasileirao,2026-11-05T00:30:00,visitante,F,True,90,0.0,0.0,0.0,2.0,0,0
+1492441,570399,Gutte,Atletico-MG,Botafogo,Brasileirao,2026-11-05T00:30:00,visitante,M,False,22,0.0,0.0,0.0,,0,0
+1492441,659457,João Gabriel Castro Santos,Atletico-MG,Botafogo,Brasileirao,2026-11-05T00:30:00,visitante,F,False,9,0.0,0.0,0.0,,0,0
+1492441,30398,Vitor Hugo,Atletico-MG,Botafogo,Brasileirao,2026-11-05T00:30:00,visitante,D,False,1,0.0,0.0,0.0,,0,0
+1492448,10081,Rafael,Sao Paulo,Corinthians,Brasileirao,2026-11-05T00:30:00,local,G,True,90,0.0,0.0,0.0,,0,0
+1492448,449245,Pedro Lima,Sao Paulo,Corinthians,Brasileirao,2026-11-05T00:30:00,local,D,True,90,0.0,0.0,1.0,3.0,1,0
+1492448,2571,Robert Arboleda,Sao Paulo,Corinthians,Brasileirao,2026-11-05T00:30:00,local,D,True,90,0.0,0.0,0.0,1.0,0,0
+1492448,30429,Rafael Tolói,Sao Paulo,Corinthians,Brasileirao,2026-11-05T00:30:00,local,D,True,90,0.0,0.0,0.0,,0,0
+1492448,10375,Iago Borduchi,Sao Paulo,Corinthians,Brasileirao,2026-11-05T00:30:00,local,D,True,90,0.0,0.0,0.0,,0,0
+1492448,277169,Newton,Sao Paulo,Corinthians,Brasileirao,2026-11-05T00:30:00,local,M,True,90,0.0,0.0,0.0,1.0,1,0
+1492448,10040,Artur,Sao Paulo,Corinthians,Brasileirao,2026-11-05T00:30:00,local,M,True,45,0.0,0.0,2.0,2.0,0,0
+1492448,612911,Djhordney,Sao Paulo,Corinthians,Brasileirao,2026-11-05T00:30:00,local,M,True,45,0.0,0.0,0.0,,1,0
+1492448,195107,Damián Bobadilla,Sao Paulo,Corinthians,Brasileirao,2026-11-05T00:30:00,local,M,True,86,0.0,0.0,0.0,,0,0
+1492448,178,Lucas Moura,Sao Paulo,Corinthians,Brasileirao,2026-11-05T00:30:00,local,M,True,71,0.0,0.0,0.0,1.0,0,0
+1492448,10323,Luciano,Sao Paulo,Corinthians,Brasileirao,2026-11-05T00:30:00,local,F,True,85,0.0,0.0,1.0,5.0,1,0
+1492448,313732,Pablo Maia,Sao Paulo,Corinthians,Brasileirao,2026-11-05T00:30:00,local,M,False,45,0.0,0.0,0.0,,0,0
+1492448,47368,Jonathan Calleri,Sao Paulo,Corinthians,Brasileirao,2026-11-05T00:30:00,local,F,False,45,0.0,0.0,0.0,1.0,0,0
+1492448,106510,Ferreirinha,Sao Paulo,Corinthians,Brasileirao,2026-11-05T00:30:00,local,F,False,19,0.0,0.0,1.0,1.0,1,0
+1492448,607347,Gustavo Santana,Sao Paulo,Corinthians,Brasileirao,2026-11-05T00:30:00,local,F,False,10,0.0,0.0,0.0,,0,0
+1492448,505992,Pedro Ferreira,Sao Paulo,Corinthians,Brasileirao,2026-11-05T00:30:00,local,M,False,9,0.0,0.0,0.0,,0,0
+1492448,123759,Hugo Souza,Corinthians,Sao Paulo,Brasileirao,2026-11-05T00:30:00,visitante,G,True,90,0.0,0.0,0.0,,0,0
+1492448,182025,Pedro Milans,Corinthians,Sao Paulo,Brasileirao,2026-11-05T00:30:00,visitante,D,True,84,0.0,0.0,1.0,1.0,1,0
+1492448,1085,André Ramalho,Corinthians,Sao Paulo,Brasileirao,2026-11-05T00:30:00,visitante,D,True,90,0.0,0.0,0.0,,1,0
+1492448,9992,Gustavo Henrique,Corinthians,Sao Paulo,Brasileirao,2026-11-05T00:30:00,visitante,D,True,90,0.0,0.0,0.0,1.0,0,0
+1492448,5987,Fabrizio Angileri,Corinthians,Sao Paulo,Brasileirao,2026-11-05T00:30:00,visitante,D,True,90,0.0,0.0,0.0,,0,0
+1492448,544679,André Luiz,Corinthians,Sao Paulo,Brasileirao,2026-11-05T00:30:00,visitante,M,True,62,0.0,0.0,0.0,2.0,0,0
+1492448,363693,Breno Bidon,Corinthians,Sao Paulo,Brasileirao,2026-11-05T00:30:00,visitante,M,True,84,0.0,0.0,0.0,,0,0
+1492448,380435,Kaio César,Corinthians,Sao Paulo,Brasileirao,2026-11-05T00:30:00,visitante,M,True,62,0.0,0.0,0.0,,0,0
+1492448,5794,Rodrigo Garro,Corinthians,Sao Paulo,Brasileirao,2026-11-05T00:30:00,visitante,M,True,41,0.0,0.0,0.0,1.0,0,0
+1492448,9742,Matheus Bidu,Corinthians,Sao Paulo,Brasileirao,2026-11-05T00:30:00,visitante,M,True,90,0.0,0.0,0.0,1.0,0,0
+1492448,10007,Yuri Alberto,Corinthians,Sao Paulo,Brasileirao,2026-11-05T00:30:00,visitante,F,True,82,0.0,0.0,2.0,2.0,0,1
+1492448,10177,Vitinho,Corinthians,Sao Paulo,Brasileirao,2026-11-05T00:30:00,visitante,F,False,49,0.0,0.0,1.0,2.0,0,0
+1492448,2426,André Carrillo,Corinthians,Sao Paulo,Brasileirao,2026-11-05T00:30:00,visitante,M,False,28,0.0,0.0,0.0,,0,0
+1492448,667,Memphis Depay,Corinthians,Sao Paulo,Brasileirao,2026-11-05T00:30:00,visitante,F,False,28,0.0,0.0,0.0,,1,0
+1492448,415085,João Pedro Tchoca,Corinthians,Sao Paulo,Brasileirao,2026-11-05T00:30:00,visitante,D,False,11,0.0,0.0,0.0,,0,0
+1492448,9577,Charles,Corinthians,Sao Paulo,Brasileirao,2026-11-05T00:30:00,visitante,M,False,11,0.0,0.0,0.0,,0,0
+1549851,16408,Javier Burrai,Millonarios,America de Cali,Liga Colombia,2026-11-05T01:30:00,local,G,True,90,0.0,0.0,0.0,,0,0
+1549851,538273,Samuel Martín,Millonarios,America de Cali,Liga Colombia,2026-11-05T01:30:00,local,D,True,90,0.0,0.0,0.0,1.0,0,0
+1549851,35654,Stiven Barreiro,Millonarios,America de Cali,Liga Colombia,2026-11-05T01:30:00,local,D,True,90,0.0,0.0,0.0,,0,0
+1549851,13359,Sergio Mosquera,Millonarios,America de Cali,Liga Colombia,2026-11-05T01:30:00,local,D,True,90,0.0,0.0,0.0,,0,0
+1549851,356058,Sebastián Valencia,Millonarios,America de Cali,Liga Colombia,2026-11-05T01:30:00,local,D,True,90,0.0,0.0,1.0,2.0,0,0
+1549851,11805,Rodrigo Ureña,Millonarios,America de Cali,Liga Colombia,2026-11-05T01:30:00,local,M,True,90,0.0,0.0,0.0,2.0,1,0
+1549851,59660,Mateo García,Millonarios,America de Cali,Liga Colombia,2026-11-05T01:30:00,local,M,True,90,0.0,0.0,1.0,2.0,0,0
+1549851,59635,Daniel Ruiz,Millonarios,America de Cali,Liga Colombia,2026-11-05T01:30:00,local,M,True,90,0.0,0.0,0.0,1.0,0,0
+1549851,13656,David Macalister Silva,Millonarios,America de Cali,Liga Colombia,2026-11-05T01:30:00,local,M,True,74,0.0,0.0,3.0,4.0,0,0
+1549851,866,Juan Cuadrado,Millonarios,America de Cali,Liga Colombia,2026-11-05T01:30:00,local,M,True,64,0.0,0.0,1.0,3.0,0,0
+1549851,35637,Rodrigo Contreras,Millonarios,America de Cali,Liga Colombia,2026-11-05T01:30:00,local,F,True,64,0.0,0.0,1.0,1.0,0,0
+1549851,13525,Leonardo Castro,Millonarios,America de Cali,Liga Colombia,2026-11-05T01:30:00,local,F,False,26,0.0,0.0,0.0,1.0,0,0
+1549851,13435,Andrey Estupiñán,Millonarios,America de Cali,Liga Colombia,2026-11-05T01:30:00,local,F,False,26,0.0,0.0,1.0,2.0,0,0
+1549851,13613,Francisco Chaverra,Millonarios,America de Cali,Liga Colombia,2026-11-05T01:30:00,local,M,False,16,0.0,0.0,0.0,1.0,0,0
+1549851,9942,Jean Fernandes,America de Cali,Millonarios,Liga Colombia,2026-11-05T01:30:00,visitante,G,True,90,0.0,0.0,0.0,,0,0
+1549851,375842,Mateo Castillo Márquez,America de Cali,Millonarios,Liga Colombia,2026-11-05T01:30:00,visitante,D,True,90,0.0,0.0,0.0,,0,0
+1549851,81631,Cristian Tovar,America de Cali,Millonarios,Liga Colombia,2026-11-05T01:30:00,visitante,D,True,90,0.0,0.0,0.0,,0,0
+1549851,13282,Brayan Córdoba,America de Cali,Millonarios,Liga Colombia,2026-11-05T01:30:00,visitante,D,True,45,0.0,0.0,0.0,,0,0
+1549851,13286,Nicolás Hernández,America de Cali,Millonarios,Liga Colombia,2026-11-05T01:30:00,visitante,D,True,90,0.0,0.0,0.0,,1,0
+1549851,35531,Luis Quiñones,America de Cali,Millonarios,Liga Colombia,2026-11-05T01:30:00,visitante,M,True,90,0.0,0.0,0.0,1.0,1,0
+1549851,13363,Rafael Carrascal,America de Cali,Millonarios,Liga Colombia,2026-11-05T01:30:00,visitante,M,True,90,0.0,0.0,0.0,,0,0
+1549851,506561,José Cavadia,America de Cali,Millonarios,Liga Colombia,2026-11-05T01:30:00,visitante,M,True,45,0.0,0.0,0.0,,0,0
+1549851,538255,Tilman Palacios,America de Cali,Millonarios,Liga Colombia,2026-11-05T01:30:00,visitante,M,True,74,0.0,0.0,0.0,,0,0
+1549851,297577,Tomás Ángel,America de Cali,Millonarios,Liga Colombia,2026-11-05T01:30:00,visitante,F,True,62,0.0,0.0,2.0,2.0,0,0
+1549851,13491,Yeison Guzmán,America de Cali,Millonarios,Liga Colombia,2026-11-05T01:30:00,visitante,F,True,90,0.0,0.0,0.0,,0,0
+1549851,13634,Omar Bertel,America de Cali,Millonarios,Liga Colombia,2026-11-05T01:30:00,visitante,D,False,45,0.0,0.0,0.0,,0,0
+1549851,59863,Yani Quintero,America de Cali,Millonarios,Liga Colombia,2026-11-05T01:30:00,visitante,M,False,45,0.0,0.0,0.0,,1,0
+1549851,16790,Daniel Valencia,America de Cali,Millonarios,Liga Colombia,2026-11-05T01:30:00,visitante,F,False,28,0.0,0.0,0.0,,0,0
+1549851,2451,Jhon Murillo,America de Cali,Millonarios,Liga Colombia,2026-11-05T01:30:00,visitante,F,False,16,0.0,0.0,0.0,,0,0
+1549535,107197,B. Reyna,Universitario,Sport Boys,Primera Division Peru,2026-11-05T01:30:00,local,F,True,45,0.0,0.0,0.0,1.0,0,0
+1549535,307513,P. Quispe,Universitario,Sport Boys,Primera Division Peru,2026-11-05T01:30:00,local,M,True,25,0.0,0.0,0.0,0.0,0,0
+1549535,57803,J. Gutiérrez,Universitario,Sport Boys,Primera Division Peru,2026-11-05T01:30:00,local,D,True,29,0.0,0.0,0.0,0.0,0,0
+1549535,6628,H. Fértoli,Universitario,Sport Boys,Primera Division Peru,2026-11-05T01:30:00,local,M,True,25,0.0,0.0,0.0,0.0,0,0
+1549535,6343,Lisandro Joel Alzugaray,Universitario,Sport Boys,Primera Division Peru,2026-11-05T01:30:00,local,F,True,5,0.0,0.0,0.0,1.0,0,0
+1549535,11783,M. Vargas,Universitario,Sport Boys,Primera Division Peru,2026-11-05T01:30:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1549535,5426,C. Fara,Universitario,Sport Boys,Primera Division Peru,2026-11-05T01:30:00,local,D,True,90,1.0,0.0,2.0,2.0,0,0
+1549535,16451,W. Riveros,Universitario,Sport Boys,Primera Division Peru,2026-11-05T01:30:00,local,D,True,90,0.0,0.0,0.0,0.0,0,0
+1549535,2423,A. Santamaría,Universitario,Sport Boys,Primera Division Peru,2026-11-05T01:30:00,local,D,True,61,0.0,0.0,0.0,1.0,0,0
+1549535,2436,A. Polo,Universitario,Sport Boys,Primera Division Peru,2026-11-05T01:30:00,local,M,True,90,0.0,1.0,0.0,2.0,0,0
+1549535,2429,É. Flores,Universitario,Sport Boys,Primera Division Peru,2026-11-05T01:30:00,local,M,True,60,0.0,0.0,0.0,0.0,0,0
+1549535,39790,H. Calcaterra,Universitario,Sport Boys,Primera Division Peru,2026-11-05T01:30:00,local,M,True,90,0.0,0.0,0.0,0.0,1,0
+1549535,39849,J. Concha,Universitario,Sport Boys,Primera Division Peru,2026-11-05T01:30:00,local,M,True,65,0.0,0.0,1.0,2.0,0,0
+1549535,350935,C. Inga,Universitario,Sport Boys,Primera Division Peru,2026-11-05T01:30:00,local,M,True,45,0.0,0.0,0.0,0.0,0,0
+1549535,30790,G. Lapadula,Universitario,Sport Boys,Primera Division Peru,2026-11-05T01:30:00,local,F,True,90,0.0,1.0,2.0,2.0,0,0
+1549535,196678,A. Valera,Universitario,Sport Boys,Primera Division Peru,2026-11-05T01:30:00,local,F,True,90,1.0,0.0,3.0,7.0,0,0
+1549535,75001,R. Alfani,Sport Boys,Universitario,Primera Division Peru,2026-11-05T01:30:00,visitante,D,True,16,0.0,0.0,0.0,0.0,0,0
+1549535,39542,R. Díaz,Sport Boys,Universitario,Primera Division Peru,2026-11-05T01:30:00,visitante,F,True,8,0.0,1.0,0.0,1.0,0,0
+1549535,39806,P. Liza,Sport Boys,Universitario,Primera Division Peru,2026-11-05T01:30:00,visitante,F,True,30,1.0,0.0,1.0,1.0,0,0
+1549535,2424,M. Trauco,Sport Boys,Universitario,Primera Division Peru,2026-11-05T01:30:00,visitante,D,True,16,0.0,0.0,0.0,0.0,0,0
+1549535,51679,D. Melián,Sport Boys,Universitario,Primera Division Peru,2026-11-05T01:30:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1549535,195113,E. Saba,Sport Boys,Universitario,Primera Division Peru,2026-11-05T01:30:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1549535,48379,C. Zambrano,Sport Boys,Universitario,Primera Division Peru,2026-11-05T01:30:00,visitante,D,True,74,0.0,0.0,0.0,0.0,1,0
+1549535,39414,H. Riojas,Sport Boys,Universitario,Primera Division Peru,2026-11-05T01:30:00,visitante,D,True,90,0.0,0.0,0.0,1.0,1,0
+1549535,196693,M. Llontop,Sport Boys,Universitario,Primera Division Peru,2026-11-05T01:30:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1549535,39855,O. Mora,Sport Boys,Universitario,Primera Division Peru,2026-11-05T01:30:00,visitante,M,True,90,0.0,0.0,1.0,2.0,0,0
+1549535,59026,F. Illanes,Sport Boys,Universitario,Primera Division Peru,2026-11-05T01:30:00,visitante,M,True,74,0.0,0.0,0.0,1.0,0,0
+1549535,51753,L. Urruti,Sport Boys,Universitario,Primera Division Peru,2026-11-05T01:30:00,visitante,M,True,90,0.0,0.0,0.0,2.0,0,0
+1549535,307525,J. Alarcón,Sport Boys,Universitario,Primera Division Peru,2026-11-05T01:30:00,visitante,M,True,90,0.0,0.0,0.0,0.0,1,0
+1549535,2428,C. Cueva,Sport Boys,Universitario,Primera Division Peru,2026-11-05T01:30:00,visitante,M,True,60,1.0,0.0,1.0,1.0,1,0
+1549535,403604,P. Erustes,Sport Boys,Universitario,Primera Division Peru,2026-11-05T01:30:00,visitante,F,True,82,0.0,0.0,1.0,1.0,0,0
