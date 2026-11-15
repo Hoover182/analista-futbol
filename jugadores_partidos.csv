@@ -247727,3 +247727,345 @@
 1549869,35751,Omar Fernández,Santa Fe,Internacional de Bogota,Liga Colombia,2026-11-14T01:30:00,visitante,F,False,16,0.0,0.0,1.0,1.0,0,0
 1549869,323288,Luis Angel Palacios,Santa Fe,Internacional de Bogota,Liga Colombia,2026-11-14T01:30:00,visitante,F,False,15,0.0,0.0,0.0,,0,0
 1549869,13485,Alexis Zapata,Santa Fe,Internacional de Bogota,Liga Colombia,2026-11-14T01:30:00,visitante,M,False,9,0.0,0.0,0.0,,0,0
+1549871,16408,Javier Burrai,Millonarios,Alianza Valledupar,Liga Colombia,2026-11-14T20:30:00,local,G,True,90,0.0,0.0,0.0,,0,0
+1549871,538273,Samuel Martín,Millonarios,Alianza Valledupar,Liga Colombia,2026-11-14T20:30:00,local,D,True,83,0.0,0.0,0.0,,0,0
+1549871,35654,Stiven Barreiro,Millonarios,Alianza Valledupar,Liga Colombia,2026-11-14T20:30:00,local,D,True,90,0.0,0.0,0.0,1.0,1,0
+1549871,70753,Jorge Arias,Millonarios,Alianza Valledupar,Liga Colombia,2026-11-14T20:30:00,local,D,True,90,0.0,0.0,0.0,,0,0
+1549871,13613,Francisco Chaverra,Millonarios,Alianza Valledupar,Liga Colombia,2026-11-14T20:30:00,local,D,True,84,0.0,0.0,0.0,,1,0
+1549871,866,Juan Cuadrado,Millonarios,Alianza Valledupar,Liga Colombia,2026-11-14T20:30:00,local,M,True,90,0.0,0.0,0.0,1.0,1,0
+1549871,59660,Mateo García,Millonarios,Alianza Valledupar,Liga Colombia,2026-11-14T20:30:00,local,M,True,89,1.0,0.0,1.0,1.0,0,0
+1549871,11805,Rodrigo Ureña,Millonarios,Alianza Valledupar,Liga Colombia,2026-11-14T20:30:00,local,M,True,90,0.0,0.0,1.0,1.0,0,0
+1549871,13435,Andrey Estupiñán,Millonarios,Alianza Valledupar,Liga Colombia,2026-11-14T20:30:00,local,M,True,77,0.0,0.0,1.0,2.0,0,0
+1549871,13656,David Macalister Silva,Millonarios,Alianza Valledupar,Liga Colombia,2026-11-14T20:30:00,local,F,True,77,0.0,0.0,1.0,1.0,0,0
+1549871,35637,Rodrigo Contreras,Millonarios,Alianza Valledupar,Liga Colombia,2026-11-14T20:30:00,local,F,True,90,0.0,2.0,1.0,2.0,1,0
+1549871,303134,Julian Angulo,Millonarios,Alianza Valledupar,Liga Colombia,2026-11-14T20:30:00,local,F,False,13,0.0,0.0,0.0,,0,0
+1549871,51164,Darwin Quintero,Millonarios,Alianza Valledupar,Liga Colombia,2026-11-14T20:30:00,local,M,False,13,1.0,0.0,1.0,1.0,0,0
+1549871,353428,Jhonier Guerrero,Millonarios,Alianza Valledupar,Liga Colombia,2026-11-14T20:30:00,local,D,False,11,0.0,0.0,0.0,,0,0
+1549871,13362,Danovis Banguero,Millonarios,Alianza Valledupar,Liga Colombia,2026-11-14T20:30:00,local,D,False,10,0.0,0.0,0.0,,0,0
+1549871,463943,Sebastián del Castillo,Millonarios,Alianza Valledupar,Liga Colombia,2026-11-14T20:30:00,local,M,False,1,0.0,0.0,0.0,,0,0
+1549871,498256,Antonio Simancas,Alianza Valledupar,Millonarios,Liga Colombia,2026-11-14T20:30:00,visitante,G,True,90,0.0,0.0,0.0,,0,0
+1549871,13699,Israel Alba,Alianza Valledupar,Millonarios,Liga Colombia,2026-11-14T20:30:00,visitante,D,True,90,0.0,0.0,1.0,1.0,0,0
+1549871,13168,Pedro Franco,Alianza Valledupar,Millonarios,Liga Colombia,2026-11-14T20:30:00,visitante,D,True,90,0.0,0.0,0.0,,0,0
+1549871,498967,Sebastián Quiñones,Alianza Valledupar,Millonarios,Liga Colombia,2026-11-14T20:30:00,visitante,D,True,90,0.0,0.0,0.0,,1,0
+1549871,406079,Juan Viveros,Alianza Valledupar,Millonarios,Liga Colombia,2026-11-14T20:30:00,visitante,D,True,85,0.0,0.0,0.0,,0,0
+1549871,554971,Leyner Palacios,Alianza Valledupar,Millonarios,Liga Colombia,2026-11-14T20:30:00,visitante,D,True,74,0.0,0.0,0.0,,0,0
+1549871,51339,Wiston Fernández,Alianza Valledupar,Millonarios,Liga Colombia,2026-11-14T20:30:00,visitante,M,True,90,0.0,0.0,0.0,1.0,0,0
+1549871,59781,Jair Castillo,Alianza Valledupar,Millonarios,Liga Colombia,2026-11-14T20:30:00,visitante,M,True,90,0.0,0.0,0.0,1.0,0,0
+1549871,681450,Brayan Viafara,Alianza Valledupar,Millonarios,Liga Colombia,2026-11-14T20:30:00,visitante,M,True,24,0.0,0.0,0.0,,1,0
+1549871,35722,Felipe Pardo,Alianza Valledupar,Millonarios,Liga Colombia,2026-11-14T20:30:00,visitante,F,True,90,0.0,0.0,0.0,3.0,0,0
+1549871,358460,Jesús Muñoz,Alianza Valledupar,Millonarios,Liga Colombia,2026-11-14T20:30:00,visitante,F,True,74,0.0,0.0,0.0,1.0,0,0
+1549871,13336,Ever Meza,Alianza Valledupar,Millonarios,Liga Colombia,2026-11-14T20:30:00,visitante,M,False,60,0.0,0.0,0.0,1.0,0,0
+1549871,538322,Josy Pérez,Alianza Valledupar,Millonarios,Liga Colombia,2026-11-14T20:30:00,visitante,M,False,16,0.0,0.0,0.0,,0,0
+1549871,385694,Cristian Andres Vergara Rivas,Alianza Valledupar,Millonarios,Liga Colombia,2026-11-14T20:30:00,visitante,F,False,16,0.0,0.0,0.0,,0,0
+1549871,657171,Samuel Nieto,Alianza Valledupar,Millonarios,Liga Colombia,2026-11-14T20:30:00,visitante,F,False,10,0.0,0.0,0.0,,0,0
+1549871,670240,Howen Rada,Alianza Valledupar,Millonarios,Liga Colombia,2026-11-14T20:30:00,visitante,F,False,9,0.0,0.0,0.0,1.0,0,0
+1549867,306716,Alejandro Rodríguez,Deportivo Cali,Deportes Tolima,Liga Colombia,2026-11-14T20:30:00,local,G,True,90,0.0,0.0,0.0,,0,0
+1549867,59546,Léyser Chaverra,Deportivo Cali,Deportes Tolima,Liga Colombia,2026-11-14T20:30:00,local,D,True,90,0.0,0.0,0.0,1.0,0,0
+1549867,200150,José Caldera,Deportivo Cali,Deportes Tolima,Liga Colombia,2026-11-14T20:30:00,local,D,True,90,0.0,0.0,0.0,2.0,1,0
+1549867,323586,Fernando Álvarez,Deportivo Cali,Deportes Tolima,Liga Colombia,2026-11-14T20:30:00,local,D,True,90,0.0,0.0,0.0,,0,0
+1549867,13676,Edwin Velasco,Deportivo Cali,Deportes Tolima,Liga Colombia,2026-11-14T20:30:00,local,D,True,90,0.0,0.0,0.0,,1,0
+1549867,13436,Daniel Giraldo,Deportivo Cali,Deportes Tolima,Liga Colombia,2026-11-14T20:30:00,local,M,True,67,0.0,0.0,0.0,,1,0
+1549867,2488,Gustavo Cuéllar,Deportivo Cali,Deportes Tolima,Liga Colombia,2026-11-14T20:30:00,local,M,True,90,0.0,0.0,0.0,1.0,1,0
+1549867,383800,Johan Martínez,Deportivo Cali,Deportes Tolima,Liga Colombia,2026-11-14T20:30:00,local,M,True,75,0.0,0.0,2.0,2.0,0,0
+1549867,5977,Emanuel Reynoso,Deportivo Cali,Deportes Tolima,Liga Colombia,2026-11-14T20:30:00,local,M,True,67,0.0,0.0,0.0,1.0,0,0
+1549867,197542,Alexis Manyoma,Deportivo Cali,Deportes Tolima,Liga Colombia,2026-11-14T20:30:00,local,M,True,85,0.0,1.0,1.0,2.0,0,0
+1549867,13409,Juan Dinenno,Deportivo Cali,Deportes Tolima,Liga Colombia,2026-11-14T20:30:00,local,F,True,45,1.0,0.0,2.0,4.0,1,0
+1549867,13530,Steven Rodríguez,Deportivo Cali,Deportes Tolima,Liga Colombia,2026-11-14T20:30:00,local,F,False,45,1.0,0.0,2.0,3.0,0,0
+1549867,13429,Fabián Viáfara,Deportivo Cali,Deportes Tolima,Liga Colombia,2026-11-14T20:30:00,local,D,False,23,0.0,0.0,0.0,,0,0
+1549867,35554,Avilés Hurtado,Deportivo Cali,Deportes Tolima,Liga Colombia,2026-11-14T20:30:00,local,F,False,23,0.0,0.0,0.0,1.0,0,0
+1549867,1706,Carlos Bacca,Deportivo Cali,Deportes Tolima,Liga Colombia,2026-11-14T20:30:00,local,F,False,15,0.0,0.0,0.0,,0,0
+1549867,659444,Kevin Suárez,Deportivo Cali,Deportes Tolima,Liga Colombia,2026-11-14T20:30:00,local,M,False,15,0.0,0.0,1.0,1.0,0,0
+1549867,35508,Miguel Ortega,Deportes Tolima,Deportivo Cali,Liga Colombia,2026-11-14T20:30:00,visitante,G,True,90,0.0,0.0,0.0,,0,0
+1549867,371249,Jan Ángulo,Deportes Tolima,Deportivo Cali,Liga Colombia,2026-11-14T20:30:00,visitante,D,True,90,0.0,0.0,0.0,,0,0
+1549867,79170,Anderson Angulo,Deportes Tolima,Deportivo Cali,Liga Colombia,2026-11-14T20:30:00,visitante,D,True,90,0.0,0.0,0.0,1.0,0,0
+1549867,311428,Juan Mera,Deportes Tolima,Deportivo Cali,Liga Colombia,2026-11-14T20:30:00,visitante,D,True,57,0.0,0.0,0.0,,2,1
+1549867,127601,Junior Hernández,Deportes Tolima,Deportivo Cali,Liga Colombia,2026-11-14T20:30:00,visitante,D,True,90,0.0,0.0,0.0,,0,0
+1549867,13584,Homer Martinez,Deportes Tolima,Deportivo Cali,Liga Colombia,2026-11-14T20:30:00,visitante,M,True,72,0.0,0.0,1.0,2.0,0,0
+1549867,13304,Brayan Rovira,Deportes Tolima,Deportivo Cali,Liga Colombia,2026-11-14T20:30:00,visitante,M,True,87,0.0,0.0,0.0,,0,0
+1549867,373765,Kelvin Florez,Deportes Tolima,Deportivo Cali,Liga Colombia,2026-11-14T20:30:00,visitante,M,True,45,0.0,0.0,0.0,1.0,0,0
+1549867,13522,Ever Valencia,Deportes Tolima,Deportivo Cali,Liga Colombia,2026-11-14T20:30:00,visitante,M,True,72,0.0,1.0,0.0,1.0,0,0
+1549867,308161,Jorge Hurtado,Deportes Tolima,Deportivo Cali,Liga Colombia,2026-11-14T20:30:00,visitante,M,True,45,0.0,0.0,0.0,1.0,0,0
+1549867,59642,Adrián Parra,Deportes Tolima,Deportivo Cali,Liga Colombia,2026-11-14T20:30:00,visitante,F,True,90,0.0,0.0,0.0,,0,0
+1549867,13189,Luis Sánchez,Deportes Tolima,Deportivo Cali,Liga Colombia,2026-11-14T20:30:00,visitante,M,False,45,0.0,1.0,0.0,,0,0
+1549867,59414,Luis Sandoval,Deportes Tolima,Deportivo Cali,Liga Colombia,2026-11-14T20:30:00,visitante,F,False,45,2.0,0.0,2.0,4.0,1,0
+1549867,200156,Daniel Pedrozo,Deportes Tolima,Deportivo Cali,Liga Colombia,2026-11-14T20:30:00,visitante,D,False,18,0.0,0.0,0.0,,0,0
+1549867,13372,Cristian Trujillo,Deportes Tolima,Deportivo Cali,Liga Colombia,2026-11-14T20:30:00,visitante,M,False,18,0.0,0.0,0.0,,0,0
+1549867,6417,Edwar López,Deportes Tolima,Deportivo Cali,Liga Colombia,2026-11-14T20:30:00,visitante,F,False,13,0.0,0.0,0.0,,1,0
+1549865,13598,Diego Novoa,Bucaramanga,Fortaleza FC,Liga Colombia,2026-11-14T20:30:00,local,G,True,90,0.0,0.0,0.0,,0,0
+1549865,59887,Aldair Gutiérrez,Bucaramanga,Fortaleza FC,Liga Colombia,2026-11-14T20:30:00,local,D,True,90,0.0,0.0,0.0,1.0,0,0
+1549865,59475,Carlos Romaña,Bucaramanga,Fortaleza FC,Liga Colombia,2026-11-14T20:30:00,local,D,True,90,0.0,0.0,0.0,,0,0
+1549865,13439,José Ortiz,Bucaramanga,Fortaleza FC,Liga Colombia,2026-11-14T20:30:00,local,D,True,90,0.0,0.0,0.0,,0,0
+1549865,13583,Freddy Hinestroza,Bucaramanga,Fortaleza FC,Liga Colombia,2026-11-14T20:30:00,local,D,True,73,0.0,0.0,0.0,,0,0
+1549865,13294,Felix Charrupí,Bucaramanga,Fortaleza FC,Liga Colombia,2026-11-14T20:30:00,local,M,True,64,0.0,0.0,1.0,1.0,0,0
+1549865,59463,Aldair Zárate,Bucaramanga,Fortaleza FC,Liga Colombia,2026-11-14T20:30:00,local,M,True,90,0.0,0.0,1.0,2.0,0,0
+1549865,462154,Nilzo Ramírez,Bucaramanga,Fortaleza FC,Liga Colombia,2026-11-14T20:30:00,local,M,True,55,0.0,0.0,0.0,1.0,0,0
+1549865,13725,Fredy Salazar,Bucaramanga,Fortaleza FC,Liga Colombia,2026-11-14T20:30:00,local,F,True,64,0.0,0.0,1.0,3.0,0,0
+1549865,13281,Brandon Caicedo,Bucaramanga,Fortaleza FC,Liga Colombia,2026-11-14T20:30:00,local,F,True,90,1.0,0.0,2.0,3.0,1,0
+1549865,52584,Leonardo Flores,Bucaramanga,Fortaleza FC,Liga Colombia,2026-11-14T20:30:00,local,F,True,73,0.0,0.0,1.0,2.0,0,0
+1549865,13681,Kevin Londoño,Bucaramanga,Fortaleza FC,Liga Colombia,2026-11-14T20:30:00,local,M,False,35,0.0,0.0,1.0,1.0,0,0
+1549865,13580,Víctor Cantillo,Bucaramanga,Fortaleza FC,Liga Colombia,2026-11-14T20:30:00,local,M,False,26,0.0,0.0,0.0,,0,0
+1549865,326883,Juan Mosquera,Bucaramanga,Fortaleza FC,Liga Colombia,2026-11-14T20:30:00,local,D,False,26,0.0,0.0,0.0,,0,0
+1549865,353407,José García,Bucaramanga,Fortaleza FC,Liga Colombia,2026-11-14T20:30:00,local,D,False,17,0.0,0.0,0.0,,0,0
+1549865,13355,Omar Albornoz,Bucaramanga,Fortaleza FC,Liga Colombia,2026-11-14T20:30:00,local,D,False,17,0.0,0.0,0.0,1.0,0,0
+1549865,289461,Williams Barlasina,Fortaleza FC,Bucaramanga,Liga Colombia,2026-11-14T20:30:00,visitante,G,True,90,0.0,0.0,0.0,,0,0
+1549865,352284,Joan Cajares,Fortaleza FC,Bucaramanga,Liga Colombia,2026-11-14T20:30:00,visitante,D,True,90,0.0,0.0,0.0,,0,0
+1549865,13515,Yesid Díaz,Fortaleza FC,Bucaramanga,Liga Colombia,2026-11-14T20:30:00,visitante,D,True,90,0.0,0.0,0.0,,1,0
+1549865,641004,Andres Copete,Fortaleza FC,Bucaramanga,Liga Colombia,2026-11-14T20:30:00,visitante,D,True,90,0.0,0.0,0.0,,0,0
+1549865,375858,Santiago Cuero,Fortaleza FC,Bucaramanga,Liga Colombia,2026-11-14T20:30:00,visitante,D,True,90,0.0,0.0,0.0,1.0,0,0
+1549865,13586,Leonardo Pico,Fortaleza FC,Bucaramanga,Liga Colombia,2026-11-14T20:30:00,visitante,M,True,90,0.0,0.0,0.0,,1,0
+1549865,612959,Santiago Vivas,Fortaleza FC,Bucaramanga,Liga Colombia,2026-11-14T20:30:00,visitante,M,True,84,0.0,0.0,0.0,1.0,1,0
+1549865,636712,Julio Sinisterra,Fortaleza FC,Bucaramanga,Liga Colombia,2026-11-14T20:30:00,visitante,M,True,65,0.0,0.0,0.0,,0,0
+1549865,13638,Sebastián Navarro,Fortaleza FC,Bucaramanga,Liga Colombia,2026-11-14T20:30:00,visitante,M,True,90,0.0,0.0,0.0,1.0,0,0
+1549865,13445,Mariano Vázquez,Fortaleza FC,Bucaramanga,Liga Colombia,2026-11-14T20:30:00,visitante,M,True,90,0.0,0.0,0.0,,0,0
+1549865,136250,Franco Pulicastro,Fortaleza FC,Bucaramanga,Liga Colombia,2026-11-14T20:30:00,visitante,F,True,76,0.0,0.0,0.0,1.0,0,0
+1549865,506649,Edwin Cabezas,Fortaleza FC,Bucaramanga,Liga Colombia,2026-11-14T20:30:00,visitante,D,False,25,0.0,0.0,0.0,,0,0
+1549865,119584,Italo Montaño Cortes,Fortaleza FC,Bucaramanga,Liga Colombia,2026-11-14T20:30:00,visitante,F,False,14,0.0,0.0,1.0,1.0,1,0
+1549865,555218,Brandon Mejía,Fortaleza FC,Bucaramanga,Liga Colombia,2026-11-14T20:30:00,visitante,M,False,16,0.0,0.0,0.0,,0,0
+1549864,306717,Luis Marquinez,Atletico Nacional,Once Caldas,Liga Colombia,2026-11-14T20:30:00,local,G,True,90,0.0,0.0,0.0,,0,0
+1549864,306718,Yeicar Perlaza,Atletico Nacional,Once Caldas,Liga Colombia,2026-11-14T20:30:00,local,D,True,76,0.0,0.0,0.0,,0,0
+1549864,13289,Andres Reyes,Atletico Nacional,Once Caldas,Liga Colombia,2026-11-14T20:30:00,local,D,True,90,0.0,0.0,0.0,,0,0
+1549864,2487,William Tesillo,Atletico Nacional,Once Caldas,Liga Colombia,2026-11-14T20:30:00,local,D,True,90,0.0,0.0,0.0,2.0,0,0
+1549864,5988,Milton Casco,Atletico Nacional,Once Caldas,Liga Colombia,2026-11-14T20:30:00,local,D,True,90,0.0,0.0,0.0,,1,0
+1549864,2491,Matheus Uribe,Atletico Nacional,Once Caldas,Liga Colombia,2026-11-14T20:30:00,local,M,True,60,0.0,0.0,1.0,1.0,0,0
+1549864,13469,Juan Zapata,Atletico Nacional,Once Caldas,Liga Colombia,2026-11-14T20:30:00,local,M,True,45,0.0,0.0,0.0,,1,0
+1549864,324615,Nicolás Rodríguez,Atletico Nacional,Once Caldas,Liga Colombia,2026-11-14T20:30:00,local,M,True,45,0.0,0.0,0.0,,0,0
+1549864,35655,Edwin Cardona,Atletico Nacional,Once Caldas,Liga Colombia,2026-11-14T20:30:00,local,M,True,90,0.0,0.0,2.0,4.0,0,0
+1549864,356517,Kevin Parra,Atletico Nacional,Once Caldas,Liga Colombia,2026-11-14T20:30:00,local,M,True,90,1.0,0.0,2.0,2.0,1,0
+1549864,685188,Emanuel Benitez,Atletico Nacional,Once Caldas,Liga Colombia,2026-11-14T20:30:00,local,F,True,59,0.0,0.0,1.0,1.0,0,0
+1549864,517,James Rodríguez,Atletico Nacional,Once Caldas,Liga Colombia,2026-11-14T20:30:00,local,M,False,45,0.0,0.0,0.0,,0,0
+1549864,362753,Elías Cabrera,Atletico Nacional,Once Caldas,Liga Colombia,2026-11-14T20:30:00,local,M,False,45,0.0,0.0,0.0,,0,0
+1549864,35794,Marlos Moreno,Atletico Nacional,Once Caldas,Liga Colombia,2026-11-14T20:30:00,local,F,False,31,0.0,0.0,0.0,1.0,0,0
+1549864,1761,Alfredo Morelos,Atletico Nacional,Once Caldas,Liga Colombia,2026-11-14T20:30:00,local,F,False,30,0.0,0.0,2.0,2.0,1,0
+1549864,574172,Xavi Rios,Atletico Nacional,Once Caldas,Liga Colombia,2026-11-14T20:30:00,local,M,False,14,0.0,0.0,0.0,,0,0
+1549864,195721,Felipe Parra,Once Caldas,Atletico Nacional,Liga Colombia,2026-11-14T20:30:00,visitante,G,True,90,0.0,0.0,0.0,,0,0
+1549864,59615,Juan David Cuesta,Once Caldas,Atletico Nacional,Liga Colombia,2026-11-14T20:30:00,visitante,D,True,90,0.0,0.0,0.0,,0,0
+1549864,81333,Jorge Cardona,Once Caldas,Atletico Nacional,Liga Colombia,2026-11-14T20:30:00,visitante,D,True,90,0.0,0.0,0.0,,0,0
+1549864,81033,Daniel Londoño,Once Caldas,Atletico Nacional,Liga Colombia,2026-11-14T20:30:00,visitante,D,True,90,0.0,0.0,1.0,1.0,0,0
+1549864,13368,Juan Patiño,Once Caldas,Atletico Nacional,Liga Colombia,2026-11-14T20:30:00,visitante,D,True,68,0.0,0.0,0.0,,0,0
+1549864,13682,Juan Pablo Nieto,Once Caldas,Atletico Nacional,Liga Colombia,2026-11-14T20:30:00,visitante,M,True,82,0.0,0.0,0.0,,0,0
+1549864,51131,Michael Barrios,Once Caldas,Atletico Nacional,Liga Colombia,2026-11-14T20:30:00,visitante,M,True,90,0.0,1.0,0.0,,0,0
+1549864,13397,Andres Colorado,Once Caldas,Atletico Nacional,Liga Colombia,2026-11-14T20:30:00,visitante,M,True,90,0.0,0.0,0.0,,0,0
+1549864,59564,Jader Quinones,Once Caldas,Atletico Nacional,Liga Colombia,2026-11-14T20:30:00,visitante,M,True,63,0.0,0.0,0.0,1.0,0,0
+1549864,126094,Pipe Gómez,Once Caldas,Atletico Nacional,Liga Colombia,2026-11-14T20:30:00,visitante,M,True,63,1.0,0.0,1.0,1.0,0,0
+1549864,59637,Jefry Zapata,Once Caldas,Atletico Nacional,Liga Colombia,2026-11-14T20:30:00,visitante,F,True,63,0.0,0.0,0.0,1.0,0,0
+1549864,6184,Andrés Roa,Once Caldas,Atletico Nacional,Liga Colombia,2026-11-14T20:30:00,visitante,M,False,27,0.0,0.0,0.0,,0,0
+1549864,6250,Dayro Moreno,Once Caldas,Atletico Nacional,Liga Colombia,2026-11-14T20:30:00,visitante,F,False,27,0.0,0.0,0.0,1.0,1,0
+1549864,633970,Helieyker Guzman,Once Caldas,Atletico Nacional,Liga Colombia,2026-11-14T20:30:00,visitante,F,False,27,0.0,0.0,0.0,,0,0
+1549864,13604,Andres Correa,Once Caldas,Atletico Nacional,Liga Colombia,2026-11-14T20:30:00,visitante,D,False,22,0.0,0.0,0.0,,0,0
+1549864,13156,Edwin Torres,Once Caldas,Atletico Nacional,Liga Colombia,2026-11-14T20:30:00,visitante,F,False,8,0.0,0.0,0.0,1.0,0,0
+1549863,79249,Jorge Soto,Águilas Doradas,Independiente Medellin,Liga Colombia,2026-11-14T20:30:00,local,G,True,90,0.0,0.0,1.0,1.0,0,0
+1549863,59469,Frank Lozano,Águilas Doradas,Independiente Medellin,Liga Colombia,2026-11-14T20:30:00,local,D,True,90,0.0,0.0,0.0,,0,0
+1549863,13605,John García,Águilas Doradas,Independiente Medellin,Liga Colombia,2026-11-14T20:30:00,local,D,True,90,0.0,0.0,0.0,,0,0
+1549863,119811,John Ontaneda,Águilas Doradas,Independiente Medellin,Liga Colombia,2026-11-14T20:30:00,local,D,True,90,0.0,0.0,0.0,,0,0
+1549863,441050,Javier Mena,Águilas Doradas,Independiente Medellin,Liga Colombia,2026-11-14T20:30:00,local,D,True,85,0.0,0.0,0.0,,0,0
+1549863,59526,Juan Camilo Roa,Águilas Doradas,Independiente Medellin,Liga Colombia,2026-11-14T20:30:00,local,M,True,85,0.0,0.0,0.0,2.0,0,0
+1549863,13482,Iván Rojas,Águilas Doradas,Independiente Medellin,Liga Colombia,2026-11-14T20:30:00,local,M,True,45,0.0,0.0,1.0,1.0,0,0
+1549863,13520,Andrés Ricaurte,Águilas Doradas,Independiente Medellin,Liga Colombia,2026-11-14T20:30:00,local,M,True,90,0.0,0.0,0.0,1.0,0,0
+1549863,5451,Matías Ramírez,Águilas Doradas,Independiente Medellin,Liga Colombia,2026-11-14T20:30:00,local,F,True,45,0.0,0.0,1.0,2.0,0,0
+1549863,330400,Anthony Vásquez,Águilas Doradas,Independiente Medellin,Liga Colombia,2026-11-14T20:30:00,local,F,True,90,0.0,0.0,0.0,,0,0
+1549863,408371,Eduar Arízalas,Águilas Doradas,Independiente Medellin,Liga Colombia,2026-11-14T20:30:00,local,F,True,89,0.0,0.0,0.0,,0,0
+1549863,351926,Juan Ávalo,Águilas Doradas,Independiente Medellin,Liga Colombia,2026-11-14T20:30:00,local,M,False,45,0.0,0.0,0.0,,0,0
+1549863,362520,Andrés Carreño,Águilas Doradas,Independiente Medellin,Liga Colombia,2026-11-14T20:30:00,local,F,False,45,0.0,0.0,0.0,,0,0
+1549863,59617,Jhon Meléndez,Águilas Doradas,Independiente Medellin,Liga Colombia,2026-11-14T20:30:00,local,D,False,10,0.0,0.0,0.0,,1,0
+1549863,637681,Carlos Londoño,Águilas Doradas,Independiente Medellin,Liga Colombia,2026-11-14T20:30:00,local,M,False,10,0.0,0.0,0.0,1.0,0,0
+1549863,675396,Angel Cortes,Águilas Doradas,Independiente Medellin,Liga Colombia,2026-11-14T20:30:00,local,M,False,1,0.0,0.0,0.0,,0,0
+1549863,13696,Eder Chaux,Independiente Medellin,Águilas Doradas,Liga Colombia,2026-11-14T20:30:00,visitante,G,True,90,0.0,0.0,0.0,,0,0
+1549863,521710,Halam Loboa,Independiente Medellin,Águilas Doradas,Liga Colombia,2026-11-14T20:30:00,visitante,D,True,90,0.0,0.0,0.0,,0,0
+1549863,348906,Luis Escorcia,Independiente Medellin,Águilas Doradas,Liga Colombia,2026-11-14T20:30:00,visitante,D,True,90,0.0,0.0,0.0,,0,0
+1549863,59402,Alfonso Simarra,Independiente Medellin,Águilas Doradas,Liga Colombia,2026-11-14T20:30:00,visitante,D,True,90,0.0,0.0,0.0,,0,0
+1549863,5963,Frank Fabra,Independiente Medellin,Águilas Doradas,Liga Colombia,2026-11-14T20:30:00,visitante,D,True,90,0.0,0.0,0.0,1.0,1,0
+1549863,46804,Didier Moreno,Independiente Medellin,Águilas Doradas,Liga Colombia,2026-11-14T20:30:00,visitante,M,True,90,0.0,0.0,2.0,2.0,1,0
+1549863,13259,Diego Moreno,Independiente Medellin,Águilas Doradas,Liga Colombia,2026-11-14T20:30:00,visitante,M,True,11,0.0,0.0,0.0,,0,0
+1549863,646328,Keiner Klinger,Independiente Medellin,Águilas Doradas,Liga Colombia,2026-11-14T20:30:00,visitante,M,True,60,0.0,0.0,0.0,,0,0
+1549863,13366,Daniel Cataño,Independiente Medellin,Águilas Doradas,Liga Colombia,2026-11-14T20:30:00,visitante,M,True,60,0.0,0.0,0.0,1.0,0,0
+1549863,414333,John Edwin Montaño,Independiente Medellin,Águilas Doradas,Liga Colombia,2026-11-14T20:30:00,visitante,M,True,60,0.0,0.0,0.0,,0,0
+1549863,13196,Jeison Medina,Independiente Medellin,Águilas Doradas,Liga Colombia,2026-11-14T20:30:00,visitante,F,True,79,0.0,0.0,2.0,3.0,0,0
+1549863,13779,Baldomero Perlaza,Independiente Medellin,Águilas Doradas,Liga Colombia,2026-11-14T20:30:00,visitante,M,False,79,0.0,0.0,0.0,,0,0
+1549863,10328,Yony González,Independiente Medellin,Águilas Doradas,Liga Colombia,2026-11-14T20:30:00,visitante,F,False,30,0.0,1.0,1.0,1.0,0,0
+1549863,59779,Léider Berrío,Independiente Medellin,Águilas Doradas,Liga Colombia,2026-11-14T20:30:00,visitante,M,False,30,1.0,0.0,1.0,3.0,0,0
+1549863,41373,Jackson Martínez,Independiente Medellin,Águilas Doradas,Liga Colombia,2026-11-14T20:30:00,visitante,F,False,30,0.0,0.0,1.0,1.0,0,0
+1549863,538299,Jhan Mena,Independiente Medellin,Águilas Doradas,Liga Colombia,2026-11-14T20:30:00,visitante,D,False,11,0.0,0.0,0.0,,0,0
+1549872,81034,Yimy Gómez,Deportivo Pereira,America de Cali,Liga Colombia,2026-11-14T20:30:00,local,G,True,90,0.0,0.0,0.0,,0,0
+1549872,59471,Jordy Monroy,Deportivo Pereira,America de Cali,Liga Colombia,2026-11-14T20:30:00,local,D,True,90,0.0,0.0,0.0,,0,0
+1549872,367815,Sebastián Urrea,Deportivo Pereira,America de Cali,Liga Colombia,2026-11-14T20:30:00,local,D,True,90,0.0,0.0,0.0,2.0,1,0
+1549872,70726,Danilo Ortiz,Deportivo Pereira,America de Cali,Liga Colombia,2026-11-14T20:30:00,local,D,True,90,0.0,0.0,0.0,1.0,1,0
+1549872,59507,Fabio Delgado,Deportivo Pereira,America de Cali,Liga Colombia,2026-11-14T20:30:00,local,D,True,90,0.0,0.0,0.0,,0,0
+1549872,13607,Walmer Pacheco,Deportivo Pereira,America de Cali,Liga Colombia,2026-11-14T20:30:00,local,M,True,76,0.0,0.0,0.0,,1,0
+1549872,59593,Jorge Bermúdez,Deportivo Pereira,America de Cali,Liga Colombia,2026-11-14T20:30:00,local,M,True,45,0.0,0.0,0.0,,0,0
+1549872,10148,Anderson Plata,Deportivo Pereira,America de Cali,Liga Colombia,2026-11-14T20:30:00,local,M,True,76,0.0,0.0,0.0,,0,0
+1549872,352334,Felipe Mosquera,Deportivo Pereira,America de Cali,Liga Colombia,2026-11-14T20:30:00,local,M,True,47,0.0,0.0,1.0,1.0,0,1
+1549872,460753,Miguel Palacios,Deportivo Pereira,America de Cali,Liga Colombia,2026-11-14T20:30:00,local,M,True,45,0.0,0.0,0.0,,0,0
+1549872,348333,Jhon Largacha,Deportivo Pereira,America de Cali,Liga Colombia,2026-11-14T20:30:00,local,F,True,82,0.0,0.0,1.0,2.0,0,0
+1549872,309389,Yuber Quiñones,Deportivo Pereira,America de Cali,Liga Colombia,2026-11-14T20:30:00,local,F,False,45,0.0,0.0,1.0,1.0,1,0
+1549872,612965,Miguel Aguirre,Deportivo Pereira,America de Cali,Liga Colombia,2026-11-14T20:30:00,local,M,False,45,0.0,0.0,0.0,,0,0
+1549872,306783,Eber Moreno,Deportivo Pereira,America de Cali,Liga Colombia,2026-11-14T20:30:00,local,D,False,14,0.0,0.0,0.0,,0,0
+1549872,651182,Juan Morales,Deportivo Pereira,America de Cali,Liga Colombia,2026-11-14T20:30:00,local,F,False,14,0.0,0.0,0.0,,0,0
+1549872,126096,Juan Montoya,America de Cali,Deportivo Pereira,Liga Colombia,2026-11-14T20:30:00,visitante,G,True,90,0.0,0.0,0.0,,0,0
+1549872,81631,Cristian Tovar,America de Cali,Deportivo Pereira,Liga Colombia,2026-11-14T20:30:00,visitante,D,True,82,0.0,0.0,0.0,,0,0
+1549872,13177,Marlon Torres,America de Cali,Deportivo Pereira,Liga Colombia,2026-11-14T20:30:00,visitante,D,True,90,0.0,0.0,1.0,2.0,0,0
+1549872,13286,Nicolás Hernández,America de Cali,Deportivo Pereira,Liga Colombia,2026-11-14T20:30:00,visitante,D,True,90,0.0,0.0,0.0,1.0,0,0
+1549872,375842,Mateo Castillo Márquez,America de Cali,Deportivo Pereira,Liga Colombia,2026-11-14T20:30:00,visitante,D,True,90,0.0,0.0,0.0,,0,0
+1549872,434034,Josen Escobar,America de Cali,Deportivo Pereira,Liga Colombia,2026-11-14T20:30:00,visitante,M,True,90,0.0,1.0,0.0,1.0,0,0
+1549872,52552,Edson Tortolero,America de Cali,Deportivo Pereira,Liga Colombia,2026-11-14T20:30:00,visitante,M,True,90,1.0,0.0,1.0,1.0,0,0
+1549872,13363,Rafael Carrascal,America de Cali,Deportivo Pereira,Liga Colombia,2026-11-14T20:30:00,visitante,M,True,61,0.0,0.0,1.0,1.0,0,0
+1549872,506561,José Cavadia,America de Cali,Deportivo Pereira,Liga Colombia,2026-11-14T20:30:00,visitante,M,True,73,0.0,0.0,0.0,,0,0
+1549872,538255,Tilman Palacios,America de Cali,Deportivo Pereira,Liga Colombia,2026-11-14T20:30:00,visitante,M,True,61,0.0,0.0,0.0,1.0,0,0
+1549872,297577,Tomás Ángel,America de Cali,Deportivo Pereira,Liga Colombia,2026-11-14T20:30:00,visitante,F,True,73,1.0,0.0,3.0,3.0,0,0
+1549872,59863,Yani Quintero,America de Cali,Deportivo Pereira,Liga Colombia,2026-11-14T20:30:00,visitante,M,False,29,0.0,0.0,0.0,1.0,0,0
+1549872,2451,Jhon Murillo,America de Cali,Deportivo Pereira,Liga Colombia,2026-11-14T20:30:00,visitante,F,False,29,0.0,0.0,0.0,,0,0
+1549872,521170,Juan Aponzá,America de Cali,Deportivo Pereira,Liga Colombia,2026-11-14T20:30:00,visitante,M,False,17,0.0,0.0,0.0,,0,0
+1549872,46695,Adrián Ramos,America de Cali,Deportivo Pereira,Liga Colombia,2026-11-14T20:30:00,visitante,F,False,17,0.0,0.0,0.0,,0,0
+1549872,13634,Omar Bertel,America de Cali,Deportivo Pereira,Liga Colombia,2026-11-14T20:30:00,visitante,D,False,8,0.0,0.0,0.0,,0,0
+1549866,566614,Federico Abadía,Cucuta,Jaguares,Liga Colombia,2026-11-14T20:30:00,local,G,True,90,0.0,0.0,0.0,,0,0
+1549866,295512,Diego Calcaterra,Cucuta,Jaguares,Liga Colombia,2026-11-14T20:30:00,local,D,True,56,0.0,0.0,1.0,1.0,0,0
+1549866,70581,Hernán Lópes,Cucuta,Jaguares,Liga Colombia,2026-11-14T20:30:00,local,D,True,90,0.0,1.0,0.0,1.0,0,0
+1549866,555182,Leison Ochoa,Cucuta,Jaguares,Liga Colombia,2026-11-14T20:30:00,local,D,True,90,0.0,0.0,0.0,,0,0
+1549866,13323,Mauricio Duarte,Cucuta,Jaguares,Liga Colombia,2026-11-14T20:30:00,local,D,True,90,0.0,0.0,0.0,,0,0
+1549866,306733,Leider Berdugo,Cucuta,Jaguares,Liga Colombia,2026-11-14T20:30:00,local,M,True,85,0.0,0.0,0.0,,0,0
+1549866,555184,Jairo Castellanos,Cucuta,Jaguares,Liga Colombia,2026-11-14T20:30:00,local,M,True,56,0.0,0.0,0.0,,0,0
+1549866,13369,Carlos Rentería,Cucuta,Jaguares,Liga Colombia,2026-11-14T20:30:00,local,M,True,68,0.0,0.0,0.0,,1,0
+1549866,555163,Dayan Pérez,Cucuta,Jaguares,Liga Colombia,2026-11-14T20:30:00,local,F,True,45,1.0,0.0,2.0,2.0,0,0
+1549866,427330,Jaime Peralta,Cucuta,Jaguares,Liga Colombia,2026-11-14T20:30:00,local,F,True,90,0.0,0.0,4.0,4.0,1,0
+1549866,6626,Gustavo Torres,Cucuta,Jaguares,Liga Colombia,2026-11-14T20:30:00,local,F,True,90,1.0,0.0,2.0,2.0,0,0
+1549866,325996,Marlon Carabali,Cucuta,Jaguares,Liga Colombia,2026-11-14T20:30:00,local,F,False,45,0.0,1.0,0.0,1.0,0,0
+1549866,425364,Jader Manyoma,Cucuta,Jaguares,Liga Colombia,2026-11-14T20:30:00,local,M,False,34,0.0,0.0,0.0,,0,0
+1549866,52787,Victor Mejia,Cucuta,Jaguares,Liga Colombia,2026-11-14T20:30:00,local,M,False,34,0.0,0.0,0.0,,0,0
+1549866,13344,Jhonatan Agudelo,Cucuta,Jaguares,Liga Colombia,2026-11-14T20:30:00,local,F,False,22,0.0,0.0,1.0,1.0,1,0
+1549866,126093,Juan Ceballos,Cucuta,Jaguares,Liga Colombia,2026-11-14T20:30:00,local,M,False,9,0.0,0.0,0.0,,0,0
+1549866,13760,Diego Martínez,Jaguares,Cucuta,Liga Colombia,2026-11-14T20:30:00,visitante,G,True,90,0.0,0.0,0.0,,0,0
+1549866,301781,Juan Franco,Jaguares,Cucuta,Liga Colombia,2026-11-14T20:30:00,visitante,D,True,68,0.0,0.0,0.0,,0,0
+1549866,59405,Royscer Colpa,Jaguares,Cucuta,Liga Colombia,2026-11-14T20:30:00,visitante,D,True,90,0.0,0.0,0.0,,0,0
+1549866,13765,Carlos Henao,Jaguares,Cucuta,Liga Colombia,2026-11-14T20:30:00,visitante,D,True,13,0.0,0.0,0.0,,0,0
+1549866,538269,Juan Pérez,Jaguares,Cucuta,Liga Colombia,2026-11-14T20:30:00,visitante,D,True,90,0.0,0.0,0.0,,0,0
+1549866,686079,Jose Yanez,Jaguares,Cucuta,Liga Colombia,2026-11-14T20:30:00,visitante,M,True,90,0.0,0.0,0.0,,0,0
+1549866,125220,Rafael Bustamante,Jaguares,Cucuta,Liga Colombia,2026-11-14T20:30:00,visitante,M,True,90,0.0,0.0,1.0,1.0,1,0
+1549866,57718,Faber Andrés Gil,Jaguares,Cucuta,Liga Colombia,2026-11-14T20:30:00,visitante,M,True,90,0.0,0.0,0.0,,0,0
+1549866,128779,Johan Beltrán,Jaguares,Cucuta,Liga Colombia,2026-11-14T20:30:00,visitante,M,True,60,,,1.0,1.0,0,0
+1549866,13488,Wilfrido De la Rosa,Jaguares,Cucuta,Liga Colombia,2026-11-14T20:30:00,visitante,M,True,60,0.0,0.0,1.0,1.0,0,0
+1549866,324035,Johar Mejía,Jaguares,Cucuta,Liga Colombia,2026-11-14T20:30:00,visitante,F,True,60,0.0,0.0,0.0,1.0,0,0
+1549866,555189,Jonathan Lovera,Jaguares,Cucuta,Liga Colombia,2026-11-14T20:30:00,visitante,M,False,77,0.0,0.0,0.0,1.0,1,0
+1549866,129954,Duvan Rodríguez,Jaguares,Cucuta,Liga Colombia,2026-11-14T20:30:00,visitante,F,False,30,0.0,0.0,1.0,1.0,0,0
+1549866,647815,Faber Gracia,Jaguares,Cucuta,Liga Colombia,2026-11-14T20:30:00,visitante,M,False,30,0.0,0.0,0.0,,0,0
+1549866,80987,Darwin Lopez,Jaguares,Cucuta,Liga Colombia,2026-11-14T20:30:00,visitante,F,False,30,0.0,0.0,0.0,,0,0
+1492455,10226,Walter,Mirassol,Atletico-MG,Brasileirao,2026-11-14T21:30:00,local,G,True,97,,,,,0,0
+1492455,156191,Igor Formiga,Mirassol,Atletico-MG,Brasileirao,2026-11-14T21:30:00,local,D,True,97,,,,,0,0
+1492455,115525,João Victor,Mirassol,Atletico-MG,Brasileirao,2026-11-14T21:30:00,local,D,True,97,,,,,0,0
+1492455,9308,Lucas Oliveira,Mirassol,Atletico-MG,Brasileirao,2026-11-14T21:30:00,local,D,True,97,,,,1.0,0,0
+1492455,9946,Reinaldo,Mirassol,Atletico-MG,Brasileirao,2026-11-14T21:30:00,local,D,True,97,,,1.0,1.0,0,0
+1492455,9613,Neto Moura,Mirassol,Atletico-MG,Brasileirao,2026-11-14T21:30:00,local,M,True,45,,,,,1,0
+1492455,276452,Denilson,Mirassol,Atletico-MG,Brasileirao,2026-11-14T21:30:00,local,M,True,81,,,1.0,2.0,0,0
+1492455,9935,Carlos Eduardo,Mirassol,Atletico-MG,Brasileirao,2026-11-14T21:30:00,local,M,True,56,,,,1.0,0,0
+1492455,10025,Shaylon,Mirassol,Atletico-MG,Brasileirao,2026-11-14T21:30:00,local,M,True,64,,,,,0,0
+1492455,9429,Alesson,Mirassol,Atletico-MG,Brasileirao,2026-11-14T21:30:00,local,M,True,64,,,,1.0,1,0
+1492455,159843,Bruno Santos,Mirassol,Atletico-MG,Brasileirao,2026-11-14T21:30:00,local,F,True,97,,,,1.0,0,0
+1492455,133183,José Aldo,Mirassol,Atletico-MG,Brasileirao,2026-11-14T21:30:00,local,M,False,52,,,,,1,0
+1492455,54238,Edson Carioca,Mirassol,Atletico-MG,Brasileirao,2026-11-14T21:30:00,local,F,False,40,0.0,0.0,0.0,,0,1
+1492455,77680,Fernandinho,Mirassol,Atletico-MG,Brasileirao,2026-11-14T21:30:00,local,F,False,33,,,,,0,0
+1492455,44348,Eduardo,Mirassol,Atletico-MG,Brasileirao,2026-11-14T21:30:00,local,M,False,33,,,,1.0,0,0
+1492455,80474,Chico,Mirassol,Atletico-MG,Brasileirao,2026-11-14T21:30:00,local,M,False,16,,,,,0,0
+1492455,9978,Everson,Atletico-MG,Mirassol,Brasileirao,2026-11-14T21:30:00,visitante,G,True,97,,,,,0,0
+1492455,197450,Natanael,Atletico-MG,Mirassol,Brasileirao,2026-11-14T21:30:00,visitante,D,True,97,,,,,1,0
+1492455,10160,Léo Duarte,Atletico-MG,Mirassol,Brasileirao,2026-11-14T21:30:00,visitante,D,True,97,,,,,0,0
+1492455,152857,Ruan,Atletico-MG,Mirassol,Brasileirao,2026-11-14T21:30:00,visitante,D,True,82,,,,,0,0
+1492455,10122,Renan Lodi,Atletico-MG,Mirassol,Brasileirao,2026-11-14T21:30:00,visitante,D,True,97,,,,,0,0
+1492455,9967,Igor Gomes,Atletico-MG,Mirassol,Brasileirao,2026-11-14T21:30:00,visitante,M,True,69,,,,,0,0
+1492455,289592,Kevin Castaño,Atletico-MG,Mirassol,Brasileirao,2026-11-14T21:30:00,visitante,M,True,97,,,,,0,0
+1492455,6031,Tomás Cuello,Atletico-MG,Mirassol,Brasileirao,2026-11-14T21:30:00,visitante,M,True,69,,,,,0,0
+1492455,905,Fred,Atletico-MG,Mirassol,Brasileirao,2026-11-14T21:30:00,visitante,M,True,64,,,,,0,0
+1492455,18761,Bernard,Atletico-MG,Mirassol,Brasileirao,2026-11-14T21:30:00,visitante,M,True,64,,,,1.0,0,0
+1492455,5923,Mateo Cassierra,Atletico-MG,Mirassol,Brasileirao,2026-11-14T21:30:00,visitante,F,True,97,,,,3.0,0,0
+1492455,363323,Alexsander,Atletico-MG,Mirassol,Brasileirao,2026-11-14T21:30:00,visitante,M,False,33,,,,1.0,0,0
+1492455,615196,Mamady Cissé,Atletico-MG,Mirassol,Brasileirao,2026-11-14T21:30:00,visitante,M,False,33,,,,,0,0
+1492455,9926,Gustavo Scarpa,Atletico-MG,Mirassol,Brasileirao,2026-11-14T21:30:00,visitante,M,False,28,,,,1.0,0,0
+1492455,9939,Dudu,Atletico-MG,Mirassol,Brasileirao,2026-11-14T21:30:00,visitante,F,False,28,,,1.0,3.0,0,0
+1492455,30398,Vitor Hugo,Atletico-MG,Mirassol,Brasileirao,2026-11-14T21:30:00,visitante,D,False,15,,,,,0,0
+1550951,58836,L. Abascia,Club Queretaro,Monterrey,Liga MX,2026-11-14T23:00:00,local,D,True,90,0.0,0.0,0.0,2.0,1,0
+1550951,438947,J. Arellano,Club Queretaro,Monterrey,Liga MX,2026-11-14T23:00:00,local,M,True,90,0.0,0.0,0.0,0.0,0,0
+1550951,237098,A. Ávila,Club Queretaro,Monterrey,Liga MX,2026-11-14T23:00:00,local,F,True,77,0.0,0.0,0.0,2.0,0,0
+1550951,288800,Iker Benito,Club Queretaro,Monterrey,Liga MX,2026-11-14T23:00:00,local,F,True,55,0.0,0.0,1.0,2.0,0,0
+1550951,58478,M. Coronel,Club Queretaro,Monterrey,Liga MX,2026-11-14T23:00:00,local,M,True,90,0.0,0.0,1.0,3.0,0,0
+1550951,184196,Carlo Adriano,Club Queretaro,Monterrey,Liga MX,2026-11-14T23:00:00,local,M,True,77,0.0,0.0,0.0,0.0,0,0
+1550951,70700,E. Giménez,Club Queretaro,Monterrey,Liga MX,2026-11-14T23:00:00,local,D,True,90,0.0,0.0,0.0,1.0,0,0
+1550951,35540,D. Parra,Club Queretaro,Monterrey,Liga MX,2026-11-14T23:00:00,local,D,True,56,0.0,0.0,0.0,2.0,1,0
+1550951,2875,D. Reyes,Club Queretaro,Monterrey,Liga MX,2026-11-14T23:00:00,local,D,True,90,0.0,0.0,0.0,0.0,1,0
+1550951,35876,C. Villanueva,Club Queretaro,Monterrey,Liga MX,2026-11-14T23:00:00,local,D,True,67,0.0,0.0,0.0,0.0,0,0
+1550951,35557,G. Allison,Club Queretaro,Monterrey,Liga MX,2026-11-14T23:00:00,local,G,True,51,0.0,0.0,0.0,0.0,0,1
+1550951,36524,E. Pérez,Club Queretaro,Monterrey,Liga MX,2026-11-14T23:00:00,local,F,True,3,0.0,0.0,0.0,0.0,0,1
+1550951,238338,Paulo Victor,Club Queretaro,Monterrey,Liga MX,2026-11-14T23:00:00,local,D,True,34,0.0,0.0,0.0,0.0,0,0
+1550951,403620,D. Muñoz,Club Queretaro,Monterrey,Liga MX,2026-11-14T23:00:00,local,M,True,23,0.0,0.0,0.0,0.0,1,0
+1550951,313023,W. Madrid,Club Queretaro,Monterrey,Liga MX,2026-11-14T23:00:00,local,M,True,13,0.0,0.0,0.0,0.0,0,0
+1550951,35828,J. Hernández,Club Queretaro,Monterrey,Liga MX,2026-11-14T23:00:00,local,G,True,35,0.0,0.0,0.0,0.0,0,0
+1550951,51045,D. Rossi,Monterrey,Club Queretaro,Liga MX,2026-11-14T23:00:00,visitante,M,True,76,1.0,0.0,2.0,2.0,0,0
+1550951,35576,O. Pineda,Monterrey,Club Queretaro,Liga MX,2026-11-14T23:00:00,visitante,M,True,90,0.0,0.0,0.0,0.0,0,0
+1550951,1911,L. Ocampos,Monterrey,Club Queretaro,Liga MX,2026-11-14T23:00:00,visitante,M,True,90,0.0,0.0,0.0,4.0,0,0
+1550951,129943,V. Guzmán,Monterrey,Club Queretaro,Liga MX,2026-11-14T23:00:00,visitante,D,True,90,0.0,0.0,1.0,2.0,0,0
+1550951,445419,Cesar Garza Cantu,Monterrey,Club Queretaro,Liga MX,2026-11-14T23:00:00,visitante,M,True,45,0.0,0.0,1.0,1.0,0,0
+1550951,35669,R. de la Rosa,Monterrey,Club Queretaro,Liga MX,2026-11-14T23:00:00,visitante,F,True,65,0.0,0.0,1.0,1.0,1,0
+1550951,36471,R. Chávez,Monterrey,Club Queretaro,Liga MX,2026-11-14T23:00:00,visitante,D,True,45,0.0,0.0,0.0,0.0,1,0
+1550951,35774,G. Arteaga,Monterrey,Club Queretaro,Liga MX,2026-11-14T23:00:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1550951,35648,É. Aguirre,Monterrey,Club Queretaro,Liga MX,2026-11-14T23:00:00,visitante,M,True,90,0.0,0.0,0.0,1.0,0,0
+1550951,290648,A. Aceves,Monterrey,Club Queretaro,Liga MX,2026-11-14T23:00:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1550951,2462,E. Andrada,Monterrey,Club Queretaro,Liga MX,2026-11-14T23:00:00,visitante,G,True,90,0.0,0.0,0.0,0.0,0,0
+1550951,167014,F. Ambríz,Monterrey,Club Queretaro,Liga MX,2026-11-14T23:00:00,visitante,M,True,25,0.0,0.0,0.0,0.0,0,0
+1550951,6063,L. Orellano,Monterrey,Club Queretaro,Liga MX,2026-11-14T23:00:00,visitante,F,True,45,0.0,0.0,0.0,2.0,0,0
+1550951,6369,J. Rodríguez,Monterrey,Club Queretaro,Liga MX,2026-11-14T23:00:00,visitante,M,True,14,0.0,0.0,0.0,1.0,1,0
+1550951,599454,A. De Nigris,Monterrey,Club Queretaro,Liga MX,2026-11-14T23:00:00,visitante,F,True,45,0.0,0.0,0.0,2.0,0,0
+1492312,352217,Gabriel Werner,Chapecoense-sc,Vasco DA Gama,Brasileirao,2026-11-14T23:30:00,local,G,True,90,0.0,0.0,0.0,,0,0
+1492312,10384,Heitor,Chapecoense-sc,Vasco DA Gama,Brasileirao,2026-11-14T23:30:00,local,D,True,90,0.0,0.0,0.0,1.0,0,0
+1492312,9666,Victor Caetano,Chapecoense-sc,Vasco DA Gama,Brasileirao,2026-11-14T23:30:00,local,D,True,89,0.0,0.0,0.0,1.0,0,0
+1492312,352220,Kauan,Chapecoense-sc,Vasco DA Gama,Brasileirao,2026-11-14T23:30:00,local,D,True,90,0.0,0.0,0.0,1.0,0,0
+1492312,10192,Bruno Pacheco,Chapecoense-sc,Vasco DA Gama,Brasileirao,2026-11-14T23:30:00,local,D,True,90,0.0,0.0,0.0,,1,0
+1492312,63998,Camilo,Chapecoense-sc,Vasco DA Gama,Brasileirao,2026-11-14T23:30:00,local,M,True,90,0.0,0.0,0.0,,1,0
+1492312,10348,Yago Felipe,Chapecoense-sc,Vasco DA Gama,Brasileirao,2026-11-14T23:30:00,local,M,True,45,0.0,0.0,0.0,1.0,0,0
+1492312,306213,Max,Chapecoense-sc,Vasco DA Gama,Brasileirao,2026-11-14T23:30:00,local,M,True,76,0.0,0.0,1.0,1.0,0,0
+1492312,10356,Giovanni Augusto,Chapecoense-sc,Vasco DA Gama,Brasileirao,2026-11-14T23:30:00,local,M,True,89,0.0,0.0,0.0,,0,0
+1492312,13771,Dylan Borrero,Chapecoense-sc,Vasco DA Gama,Brasileirao,2026-11-14T23:30:00,local,M,True,57,0.0,0.0,0.0,1.0,1,0
+1492312,403060,Tulio Eduardo,Chapecoense-sc,Vasco DA Gama,Brasileirao,2026-11-14T23:30:00,local,F,True,90,0.0,0.0,1.0,2.0,0,0
+1492312,544990,David Antunes,Chapecoense-sc,Vasco DA Gama,Brasileirao,2026-11-14T23:30:00,local,M,False,45,0.0,0.0,0.0,,0,0
+1492312,182015,Fernando,Chapecoense-sc,Vasco DA Gama,Brasileirao,2026-11-14T23:30:00,local,D,False,33,0.0,0.0,0.0,,0,0
+1492312,631034,Rodrigo Endrio,Chapecoense-sc,Vasco DA Gama,Brasileirao,2026-11-14T23:30:00,local,F,False,14,0.0,0.0,0.0,,0,0
+1492312,638546,Vinícius Eduardo de Almeida,Chapecoense-sc,Vasco DA Gama,Brasileirao,2026-11-14T23:30:00,local,D,False,1,0.0,0.0,0.0,,0,0
+1492312,337009,Miguel Carvalho,Chapecoense-sc,Vasco DA Gama,Brasileirao,2026-11-14T23:30:00,local,M,False,1,0.0,0.0,0.0,,0,0
+1492312,41169,Léo Jardim,Vasco DA Gama,Chapecoense-sc,Brasileirao,2026-11-14T23:30:00,visitante,G,True,90,0.0,0.0,0.0,,0,0
+1492312,51426,Puma Rodríguez,Vasco DA Gama,Chapecoense-sc,Brasileirao,2026-11-14T23:30:00,visitante,D,True,90,0.0,0.0,0.0,,0,0
+1492312,310774,Alan Saldivia,Vasco DA Gama,Chapecoense-sc,Brasileirao,2026-11-14T23:30:00,visitante,D,True,90,0.0,0.0,0.0,,0,0
+1492312,359372,Robert Renan,Vasco DA Gama,Chapecoense-sc,Brasileirao,2026-11-14T23:30:00,visitante,D,True,60,0.0,0.0,0.0,,1,0
+1492312,10234,Lucas Piton,Vasco DA Gama,Chapecoense-sc,Brasileirao,2026-11-14T23:30:00,visitante,D,True,72,0.0,0.0,0.0,,0,0
+1492312,9890,Jair,Vasco DA Gama,Chapecoense-sc,Brasileirao,2026-11-14T23:30:00,visitante,M,True,90,0.0,0.0,0.0,,0,0
+1492312,64134,Marino Hinestroza,Vasco DA Gama,Chapecoense-sc,Brasileirao,2026-11-14T23:30:00,visitante,M,True,62,0.0,0.0,1.0,1.0,0,0
+1492312,358383,Alan Lescano,Vasco DA Gama,Chapecoense-sc,Brasileirao,2026-11-14T23:30:00,visitante,M,True,90,0.0,0.0,0.0,,0,0
+1492312,214,Facundo Colidio,Vasco DA Gama,Chapecoense-sc,Brasileirao,2026-11-14T23:30:00,visitante,M,True,72,0.0,0.0,0.0,3.0,0,0
+1492312,345748,Andrés Gómez,Vasco DA Gama,Chapecoense-sc,Brasileirao,2026-11-14T23:30:00,visitante,M,True,90,0.0,1.0,2.0,6.0,0,0
+1492312,63475,Bruno Duarte,Vasco DA Gama,Chapecoense-sc,Brasileirao,2026-11-14T23:30:00,visitante,F,True,82,2.0,0.0,2.0,3.0,0,0
+1492312,286962,Lucas Freitas,Vasco DA Gama,Chapecoense-sc,Brasileirao,2026-11-14T23:30:00,visitante,D,False,30,0.0,0.0,0.0,,0,0
+1492312,614200,Ramon Rique,Vasco DA Gama,Chapecoense-sc,Brasileirao,2026-11-14T23:30:00,visitante,M,False,28,0.0,0.0,0.0,,0,0
+1492312,353034,Cuiabano,Vasco DA Gama,Chapecoense-sc,Brasileirao,2026-11-14T23:30:00,visitante,D,False,18,0.0,0.0,0.0,,0,0
+1492312,289306,Loide Augusto,Vasco DA Gama,Chapecoense-sc,Brasileirao,2026-11-14T23:30:00,visitante,F,False,18,0.0,1.0,0.0,,0,0
+1492312,9975,Brenner,Vasco DA Gama,Chapecoense-sc,Brasileirao,2026-11-14T23:30:00,visitante,F,False,8,0.0,0.0,0.0,,0,0
+1649519,92581,U. Zurita,CA La Paz,Piratas,Liga de Expansion MX,2026-11-15T03:00:00,local,D,True,78,0.0,0.0,0.0,0.0,0,0
+1649519,35960,G. Alcalá,CA La Paz,Piratas,Liga de Expansion MX,2026-11-15T03:00:00,local,G,True,90,0.0,0.0,0.0,0.0,0,0
+1649519,554814,S. Vazquez,CA La Paz,Piratas,Liga de Expansion MX,2026-11-15T03:00:00,local,D,True,4,0.0,0.0,0.0,0.0,0,0
+1649519,127231,O. Millán,CA La Paz,Piratas,Liga de Expansion MX,2026-11-15T03:00:00,local,F,True,21,0.0,0.0,0.0,0.0,0,0
+1649519,405883,I. Larios,CA La Paz,Piratas,Liga de Expansion MX,2026-11-15T03:00:00,local,F,True,12,1.0,0.0,1.0,1.0,0,0
+1649519,275582,D. Hernández,CA La Paz,Piratas,Liga de Expansion MX,2026-11-15T03:00:00,local,M,True,4,0.0,0.0,0.0,0.0,0,0
+1649519,35634,M. Barragán,CA La Paz,Piratas,Liga de Expansion MX,2026-11-15T03:00:00,local,F,True,90,0.0,0.0,1.0,2.0,0,0
+1649519,157905,Á. Robles,CA La Paz,Piratas,Liga de Expansion MX,2026-11-15T03:00:00,local,F,True,86,0.0,1.0,2.0,5.0,0,0
+1649519,113588,Jordi Ferrer,CA La Paz,Piratas,Liga de Expansion MX,2026-11-15T03:00:00,local,F,True,69,0.0,0.0,1.0,2.0,0,0
+1649519,35499,J. Alonzo,CA La Paz,Piratas,Liga de Expansion MX,2026-11-15T03:00:00,local,F,True,90,0.0,0.0,0.0,2.0,0,0
+1649519,127235,M. García,CA La Paz,Piratas,Liga de Expansion MX,2026-11-15T03:00:00,local,M,True,69,0.0,0.0,1.0,2.0,0,0
+1649519,35625,F. Illescas,CA La Paz,Piratas,Liga de Expansion MX,2026-11-15T03:00:00,local,M,True,86,0.0,0.0,1.0,2.0,1,0
+1649519,444022,Yahir Del Aguila,CA La Paz,Piratas,Liga de Expansion MX,2026-11-15T03:00:00,local,D,True,90,0.0,0.0,0.0,1.0,0,0
+1649519,35653,H. Torres,CA La Paz,Piratas,Liga de Expansion MX,2026-11-15T03:00:00,local,D,True,90,0.0,0.0,1.0,2.0,1,0
+1649519,36231,É. Alaffita,CA La Paz,Piratas,Liga de Expansion MX,2026-11-15T03:00:00,local,M,True,21,0.0,0.0,0.0,0.0,0,0
+1649519,35918,B. Figueroa,Piratas,CA La Paz,Liga de Expansion MX,2026-11-15T03:00:00,visitante,F,True,10,0.0,0.0,0.0,0.0,0,0
+1649519,652401,R. Palomares,Piratas,CA La Paz,Liga de Expansion MX,2026-11-15T03:00:00,visitante,D,True,16,0.0,0.0,0.0,1.0,0,0
+1649519,35987,Daniel Lajud,Piratas,CA La Paz,Liga de Expansion MX,2026-11-15T03:00:00,visitante,F,True,80,0.0,0.0,0.0,0.0,0,0
+1649519,125607,J. Gamboa,Piratas,CA La Paz,Liga de Expansion MX,2026-11-15T03:00:00,visitante,F,True,80,0.0,0.0,0.0,0.0,0,0
+1649519,575731,C. Fernandez,Piratas,CA La Paz,Liga de Expansion MX,2026-11-15T03:00:00,visitante,,True,90,0.0,0.0,0.0,2.0,1,0
+1649519,108542,J. Venegas,Piratas,CA La Paz,Liga de Expansion MX,2026-11-15T03:00:00,visitante,M,True,90,0.0,0.0,0.0,0.0,0,0
+1649519,107372,O. Soto,Piratas,CA La Paz,Liga de Expansion MX,2026-11-15T03:00:00,visitante,M,True,56,0.0,0.0,0.0,0.0,1,0
+1649519,35737,D. Cruz,Piratas,CA La Paz,Liga de Expansion MX,2026-11-15T03:00:00,visitante,D,True,74,0.0,1.0,1.0,1.0,1,0
+1649519,195226,U. García,Piratas,CA La Paz,Liga de Expansion MX,2026-11-15T03:00:00,visitante,D,True,90,0.0,0.0,0.0,0.0,1,0
+1649519,670032,A. Lopez,Piratas,CA La Paz,Liga de Expansion MX,2026-11-15T03:00:00,visitante,M,True,90,0.0,0.0,0.0,0.0,0,0
+1649519,36443,Rolando González,Piratas,CA La Paz,Liga de Expansion MX,2026-11-15T03:00:00,visitante,D,True,90,0.0,0.0,0.0,0.0,0,0
+1649519,36353,H. Hernández,Piratas,CA La Paz,Liga de Expansion MX,2026-11-15T03:00:00,visitante,F,True,90,0.0,0.0,0.0,0.0,0,0
